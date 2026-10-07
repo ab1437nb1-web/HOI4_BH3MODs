@@ -1,0 +1,65 @@
+spriteTypes = {
+	########## UI ##########
+	spriteType = {
+		name = "GFX_BH3_Intro_title_BG"
+		textureFile = "gfx/interface/misc_gui/BH3_Intro_title_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Intro_Window_BG"
+		texturefile = "gfx/interface/misc_gui/BH3_Intro_Window_BG.dds"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_BH3_Intro_Window_Border"
+		texturefile = "gfx/interface/misc_gui/BH3_Intro_Window_Border.dds"
+		size= { x=77 y=38 }
+		borderSize = { x=14 y=14 }
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_Intro_Update_BG"
+		textureFile = "gfx/interface/misc_gui/BH3_Intro_Update_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Intro_200x50_alpha_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Intro_200x50_alpha_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Intro_400x50_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Intro_400x50_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Intro_yes_200x50_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Intro_yes_200x50_btn.dds"
+	}
+
+	## 滑轮 ##
+	corneredTileSpriteType = {
+		name = "GFX_BH3_scrollbar_vertical_bg"
+		size= { x=18 y=156 }
+		texturefile = "gfx/interface/misc_gui/BH3_scrollbar_vertical_bg.dds"
+		borderSize = { x=0 y=52 }
+		tilingCenter = yes
+	}
+	corneredTileSpriteType = {
+		name = "GFX_BH3_scroll_track"
+		size= {x =12 y = 12 }
+		texturefile = "gfx/interface/misc_gui/BH3_scroll_track.dds"
+		borderSize = { x=4 y=4 }
+	}
+	spriteType = {
+		name = "GFX_BH3_scroll_drager"
+		texturefile = "gfx/interface/misc_gui/BH3_scroll_drager.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_scroll_up"
+		texturefile = "gfx/interface/misc_gui/BH3_scroll_up.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_scroll_down"
+		texturefile = "gfx/interface/misc_gui/BH3_scroll_down.dds"
+	}
+}
+	

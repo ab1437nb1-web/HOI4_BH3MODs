@@ -1,0 +1,167 @@
+technologies = {
+
+	############################################
+	################## 崩坏兽 ##################
+	############################################
+
+	##############死士##################
+	SishiBHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			SishiBHS_equipment_0
+		}
+		enable_subunits = {
+			SishiBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############突进级崩坏兽##################
+	Tujin1BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			TujinBHS_equipment_0
+			TujinBHS_air2air_equipment_0
+		}
+		enable_subunits = {
+			TujinBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Tujin2BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			TujinBHS_equipment_1
+		}
+		enable_subunits = {
+			TujinBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############骑士级崩坏兽##################
+	Qishi1BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			QishiBHS_equipment_0
+		}
+		enable_subunits = {
+			QishiBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Qishi2BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			QishiBHS_equipment_1
+		}
+		enable_subunits = {
+			QishiBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############战车级崩坏兽##################
+	Zhanche1BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			ZhancheBHS_equipment_0
+		}
+		enable_subunits = {
+			ZhancheBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Zhanche2BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			ZhancheBHS_equipment_1
+		}
+		enable_subunits = {
+			ZhancheBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############圣殿级崩坏兽##################
+	Shengdian1BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			ShengdianBHS_equipment_0
+		}
+		enable_subunits = {
+			ShengdianBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Shengdian2BHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			ShengdianBHS_equipment_1
+		}
+		enable_subunits = {
+			ShengdianBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############帝王级崩坏兽迦尼萨##################
+	JianisaBHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			JianisaBHS_equipment_0
+		}
+		enable_subunits = {
+			JianisaBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############帝王级崩坏兽贝纳勒斯##################
+	BeinalesiBHS_Research = {
+		research_cost = 1
+		enable_equipments = {
+			BeinalesiBHS_equipment_0
+			BeinalesiBHS_air2ground_equipment_0
+			BeinalesiBHS_air2air_equipment_0
+		}
+		enable_subunits = {
+			BeinalesiBHS
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

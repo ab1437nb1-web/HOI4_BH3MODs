@@ -1,0 +1,83 @@
+
+############添加一个飞机装备就进入千禧黎明就闪退，不理解
+
+# equipments = {
+
+# 	Honkai_Fission_Bomb_equipment = {
+
+# 		allow_mission_type = {
+# 			drop_nuke
+# 		}
+
+# 		is_archetype = yes
+# 		is_buildable = no
+# 		can_license = no
+# 		type = nuclear_missile
+# 		group_by = type
+# 		sprite = HonkaiBomb
+# 		air_map_icon_frame = 23
+		
+# 		interface_category = interface_category_air
+				
+# 		reliability = 0.8
+
+# 		# Air vs Navy - high damage / low hit chance / hard to hurt
+# 		naval_strike_attack = 1.5
+# 		naval_strike_targetting = 0.6
+
+# 		#Space taken in convoy
+# 		lend_lease_cost = 1.5
+		
+# 		build_cost_ic = 10000
+
+# 		fuel_consumption = 0
+# 	}
+# 	Honkai_Fission_Bomb_equipment_0 = {
+# 		archetype = Honkai_Fission_Bomb_equipment
+# 		is_buildable = yes
+# 		# one_use_only = yes
+
+# 		air_range = 20000
+# 		maximum_speed = 10000
+# 		air_agility = 10
+# 		air_bombing = 500
+# 	}
+# }
+
+
+# equipments = {
+# 	Honkai_Fission_Bomb_equipment = {
+# 		allow_mission_type = {
+# 			paradrop
+# 			air_supply
+# 		}
+# 		is_archetype = yes
+# 		is_convertable = yes
+# 		picture = archetype_strat_bomber_equipment			
+# 		type = air_transport
+# 		group_by = archetype
+# 		sprite = medium_plane
+# 		air_map_icon_frame = 12
+
+		
+# 		interface_category = interface_category_air
+		
+# 		# Transport
+# 		interface_overview_category_index = 6
+		
+# 		air_superiority = 0
+# 		reliability = 0.9
+# 		air_range = 20000
+# 		maximum_speed = 1000
+# 		air_agility = 10
+# 		air_defence = 2000
+
+# 		build_cost_ic = 500
+# 		manpower = 80
+# 		fuel_consumption = 0
+# 	}
+# 	Honkai_Fission_Bomb_equipment_0 = {
+# 		archetype = Honkai_Fission_Bomb_equipment
+# 		priority = 100
+# 	}
+# }

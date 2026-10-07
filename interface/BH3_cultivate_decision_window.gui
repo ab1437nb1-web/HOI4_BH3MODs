@@ -1,0 +1,94 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "BH3_cultivate_decision_window"
+		position = { x = 0 y = -5 }
+		size = { width = 100% height = 220 }
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_KianaKaslana"
+			position = { x = 10 y = -5 }
+			spriteType = GFX_BH3_unit_leader_10_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_KianaKaslana_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_RaidenMei"
+			position = { x = 92 y = -5 }
+			spriteType = GFX_BH3_unit_leader_20_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_RaidenMei_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_BronyaZaych"
+			position = { x = 174 y = -5 }
+			spriteType = GFX_BH3_unit_leader_30_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_BronyaZaych_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_SeeleVollerei"
+			position = { x = 256 y = -5 }
+			spriteType = GFX_BH3_unit_leader_40_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_SeeleVollerei_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_SeeleVollereiBlack"
+			position = { x = 338 y = -5 }
+			spriteType = GFX_BH3_unit_leader_50_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_SeeleVollereiBlack_tt"
+		}
+		
+		buttonType = {
+			name = "BH3_cultivate_decision_window_TheresaApocalypse"
+			position = { x = 420 y = -5 }
+			spriteType = GFX_BH3_unit_leader_60_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_TheresaApocalypse_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_TheresaLunar"
+			position = { x = 10 y = 105 }
+			spriteType = GFX_BH3_unit_leader_70_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_TheresaLunar_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_TheresaStarlitAstrologos"
+			position = { x = 92 y = 105 }
+			spriteType = GFX_BH3_unit_leader_80_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_TheresaStarlitAstrologos_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_Fuka"
+			position = { x = 174 y = 105 }
+			spriteType = GFX_BH3_unit_leader_90_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_Fuka_tt"
+		}
+
+		
+		buttonType = {
+			name = "BH3_cultivate_decision_window_BiankaDurandalAtaegina"
+			position = { x = 256 y = 105 }
+			spriteType = GFX_BH3_unit_leader_100_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_BiankaDurandalAtaegina_tt"
+		}
+
+		buttonType = {
+			name = "BH3_cultivate_decision_window_RitaRossweisse"
+			position = { x = 338 y = 105 }
+			spriteType = GFX_BH3_unit_leader_110_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_RitaRossweisse_tt"
+		}
+		
+		buttonType = {
+			name = "BH3_cultivate_decision_window_Eden"
+			position = { x = 420 y = 105 }
+			spriteType = GFX_BH3_unit_leader_120_medium
+			pdx_tooltip = "BH3_cultivate_decision_window_Eden_tt"
+		}
+	}
+}
+

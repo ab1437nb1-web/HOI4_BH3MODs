@@ -1,0 +1,30 @@
+light = {
+	name = "BH3_nuke_light"
+	
+	color = { 
+		r = { 1.0 }
+		g = { 0.3 }
+		b = { 1.0 }
+	}
+	
+	intensity = 70,fade #10 for snow
+	radius = 20
+	falloff = 40
+	
+	position = { x = 0 y = 0 z = 0 }
+
+	animation = {
+		name = "fade"
+		start = 0.1
+		duration = 20
+		repeat = no
+		op = "MUL" # "MUL"/"ADD"/"ABS"
+		minValue = 0
+		maxValue = 1
+		curve = { 
+			0	0
+			0.1	1
+			1	0
+		}
+	}	
+}

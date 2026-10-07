@@ -1,0 +1,62 @@
+# 往事乐土·刻印图标（官方刻印标记，来自用户提供的游戏内截图，抠图去底）
+# 引擎会给 idea 的 picture 自动加 GFX_idea_ 前缀，故必须以 GFX_idea_ 开头命名。
+# 画布 60x68，与官方国家精神图标一致；白色图案 + 透明底。
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Savior"
+		texturefile = "gfx/interface/elysianrealm/signet_Savior.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Setsuna"
+		texturefile = "gfx/interface/elysianrealm/signet_Setsuna.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Bodhi"
+		texturefile = "gfx/interface/elysianrealm/signet_Bodhi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Gold"
+		texturefile = "gfx/interface/elysianrealm/signet_Gold.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Kalpas"
+		texturefile = "gfx/interface/elysianrealm/signet_Kalpas.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Fusheng"
+		texturefile = "gfx/interface/elysianrealm/signet_Fusheng.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Aponia"
+		texturefile = "gfx/interface/elysianrealm/signet_Aponia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Spiral"
+		texturefile = "gfx/interface/elysianrealm/signet_Spiral.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Mobius"
+		texturefile = "gfx/interface/elysianrealm/signet_Mobius.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Kosma"
+		texturefile = "gfx/interface/elysianrealm/signet_Kosma.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Griseo"
+		texturefile = "gfx/interface/elysianrealm/signet_Griseo.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Pardofelis"
+		texturefile = "gfx/interface/elysianrealm/signet_Pardofelis.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Elysia_GER"
+		texturefile = "gfx/interface/elysianrealm/signet_Elysia.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_ER_Elysia_SOV"
+		texturefile = "gfx/interface/elysianrealm/signet_Elysia.png"
+	}
+}

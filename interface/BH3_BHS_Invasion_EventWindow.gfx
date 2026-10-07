@@ -1,0 +1,121 @@
+spriteTypes = {
+	########## Event ##########
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_Event_window_BG"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_Event_window.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_Event_window_alpha"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_Event_window_alpha.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_yes_200x35_btn"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_yes_200x35_btn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI1_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI1_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI1_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI1_Beaten.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI1_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI1_Reward.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI2_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI2_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI2_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI2_Beaten.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI2_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI2_Reward.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI3_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI3_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI3_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI3_Beaten.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI3_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI3_Reward.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI6_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI6_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI6_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI6_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI6_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI6_Reward.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI7_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI7_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI7_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI7_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HI7_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HI7_Reward.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HH2_Come"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HH2_Come.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HH2_Beaten"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HH2_Beaten.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_HH2_Reward"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HH2_Reward.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_MoonBattleStart1"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_MoonBattleStart1.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_MoonBattleStart2"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_MoonBattleStart2.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_MoonBattleStart3"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_MoonBattleStart3.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_MoonBattleWin"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_MoonBattleWin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_MoonBattleLose"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_MoonBattleLose.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_EnterHive"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_EnterHive.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BHS_Invasion_Victory"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_Victory.dds"
+	}
+}
+	

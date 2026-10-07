@@ -1,0 +1,266 @@
+on_actions = {
+	
+	on_startup = {
+		effect = {
+			#计算全球SSS级女武神数量
+			set_variable = { global.BH3_World_SSS_Valkyire_num = 0 }
+			#计算全球总战力
+			set_variable = { global.BH3_World_Valkyire_Score = 0 }
+			#计算全球最强女武神,初始化
+			set_variable = { global.BH3_World_Strongest_Valkyire = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Temp = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Temp_Prev = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Score = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Score_Temp = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Score_Temp_Prev = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Country = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Country_Temp = 0 }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Country_Temp_Prev = 0 }
+			resize_array = { 
+				array = global.BH3_World_Strongest_Valkyire_Array
+				size = 0
+			}
+			resize_array = { 
+				array = global.BH3_World_Strongest_Valkyire_Score_Array
+				size = 0
+			}
+			resize_array = { 
+				array = global.BH3_World_Strongest_Valkyire_Country_Array
+				size = 0
+			}
+			
+			every_possible_country = {
+				# 决议面板切换头像功能变量初始化
+				set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 10 }
+				set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 20 }
+				set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 30 }
+				set_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 40 }
+				set_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 50 }
+				set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 60 }
+				set_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 70 }
+				set_variable = { BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 80 }
+				set_variable = { BH3_cultivate_decision_window_Fuka_img = 90 }
+				set_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 100 }
+				set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 110 }
+				set_variable = { BH3_cultivate_decision_window_Eden_img = 120 }
+				#本国最强女武神计算数据初始化
+				set_variable = { BH3_Country_Strongest_Valkyire = 0 }
+				set_variable = { BH3_Country_Strongest_Valkyire_index = 0 }
+				set_variable = { BH3_Country_Strongest_Valkyire_Score = 0 }
+				###### 总得分，数组中顺序按琪亚娜、芽衣、板鸭、希儿、黑希、德丽莎、月下、观星、符华、幽兰戴尔、丽塔、伊甸
+				resize_array = { 
+					array = BH3_Country_Strongest_Valkyire_Array
+					size = 12
+				}
+				#随机一个女武神为本国最强，并加入最强比选
+				random_character = {
+					limit = { has_trait = BH3_traits_valkyrie }
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS } 
+					add_trait = { trait = BH3_trait_CountryStrongestValkyrie }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = 0
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+		}
+	}
+
+
+	# 升级加1000
+	on_unit_leader_level_up = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { has_country_flag = BH3_Valkyrie_Score_System_on }
+					PREV = {
+						if = {
+							limit = { is_character = BH3_Character_KianaKaslana }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^0 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RaidenMei }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^1 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BronyaZaych }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^2 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollerei}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^3 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollereiBlack }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^4 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaApocalypse}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^5 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaLunar }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^6 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaStarlitAstrologos }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^7 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Fuka }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^8 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BiankaDurandalAtaegina }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^9 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RitaRossweisse }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^10 = 1000 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Eden}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^11 = 1000 }
+						}
+					}
+				}
+			}
+		}
+	}
+	# 打输加1战力
+	on_army_leader_lost_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { has_country_flag = BH3_Valkyrie_Score_System_on }
+					PREV = {
+						if = {
+							limit = { is_character = BH3_Character_KianaKaslana }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^0 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RaidenMei }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^1 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BronyaZaych }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^2 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollerei}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^3 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollereiBlack }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^4 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaApocalypse}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^5 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaLunar }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^6 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaStarlitAstrologos }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^7 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Fuka }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^8 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BiankaDurandalAtaegina }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^9 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RitaRossweisse }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^10 = 1 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Eden}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^11 = 1 }
+						}
+					}
+				}
+				BH3_Country_Strongest_Valkyrie_Solve = yes
+				BH3_World_Strongest_Valkyrie_Solve = yes
+				BH3_Valkyrie_SSS_and_Socore_Solve = yes
+			}
+		}
+	}
+	# 打赢加10战力
+	on_army_leader_won_combat = {
+		effect = {
+			FROM = {
+				if = {
+					limit = { has_country_flag = BH3_Valkyrie_Score_System_on }
+					PREV = {
+						if = {
+							limit = { is_character = BH3_Character_KianaKaslana }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^0 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RaidenMei }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^1 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BronyaZaych }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^2 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollerei}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^3 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_SeeleVollereiBlack }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^4 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaApocalypse}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^5 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaLunar }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^6 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_TheresaStarlitAstrologos }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^7 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Fuka }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^8 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_BiankaDurandalAtaegina }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^9 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_RitaRossweisse }
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^10 = 10 }
+						}
+						if = {
+							limit = { is_character = BH3_Character_Eden}
+							add_to_variable = { FROM.BH3_Country_Strongest_Valkyire_Array^11 = 10 }
+						}
+					}
+				}
+				BH3_Country_Strongest_Valkyrie_Solve = yes
+				BH3_World_Strongest_Valkyrie_Solve = yes
+				BH3_Valkyrie_SSS_and_Socore_Solve = yes
+			}
+
+		}
+	}
+}

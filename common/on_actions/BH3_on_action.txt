@@ -1,0 +1,826 @@
+on_actions = {
+    on_startup = {
+		effect = {
+			every_country = {
+				if = {
+					limit = { is_ai = no }
+					set_variable = { BH3_Intro_window_visible = 1 } 
+					set_country_flag = BH3_Intro_Window_show
+				}
+			}
+			#开局计算
+			every_country = {
+				country_event = {
+					id = BH3_tech.2
+				}
+			}
+			set_variable = { BH3_tech_Herrscher_lock = 0 }
+			set_variable = { global.BHS_month_counts = 0 }
+			#用于新闻的初始化
+			set_variable = { global.bhs_beat_country = 0 }
+			set_variable = { global.bhs_beat_country_new = 0 }
+		}
+	}
+	
+
+	#每月检查,崩坏
+    on_monthly_BHS = {
+        effect = {
+			add_to_variable = { global.BHS_month_counts = 1 }#月数
+			#核心抢完后，貌似不能弹投降和和谈来增加紧张度,有时推太快或者宣了阵营，会导致紧张度比较低
+			add_threat = 1.5
+			#补充装备
+			every_country = {
+				limit = { is_in_faction_with = BHS }
+				if = {
+					limit = { check_variable = { num_equipment@SishiBHS_equipment < 10000 } }
+					add_equipment_to_stockpile = { type = SishiBHS_equipment_0 amount = 100000 }
+				}	
+				if = {
+					limit = { check_variable = { num_equipment@SishiBHS_equipment < 10000 } }
+					if = {
+						limit = { has_tech = Tujin2BHS_Research }
+						add_equipment_to_stockpile = { type = TujinBHS_equipment_1 amount = 50000 }
+					}
+					else = {
+						add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+					}
+				}
+				if = {
+					limit = { check_variable = { num_equipment@QishiBHS_equipment < 10000 } }
+					if = {
+						limit = { has_tech = Qishi2BHS_Research }
+						add_equipment_to_stockpile = { type = QishiBHS_equipment_1 amount = 50000 }
+					}
+					else = {
+						add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+					}
+				}
+				if = {
+					limit = { check_variable = { num_equipment@ZhancheBHS < 10000 } }
+					if = {
+						limit = { has_tech = Zhanche2BHS_Research }
+						add_equipment_to_stockpile = { type = ZhancheBHS_equipment_1 amount = 50000 }
+					}
+					else = {
+						add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+					}
+				}
+				if = {
+					limit = { check_variable = { num_equipment@ShengdianBHS < 10000 } }
+					if = {
+						limit = { has_tech = Shengdian2BHS_Research }
+						add_equipment_to_stockpile = { type = ShengdianBHS_equipment_1 amount = 50000 }
+					}
+					else = {
+						add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+					}
+				}
+				if = {
+					limit = { check_variable = { num_equipment@JianisaBHS_equipment < 1000 } }
+					add_equipment_to_stockpile = { type = JianisaBHS_equipment_0 amount = 10000 }
+				}
+				if = {
+					limit = { check_variable = { num_equipment@BeinalesiBHS_equipment < 1000 } }
+					add_equipment_to_stockpile = { type = BeinalesiBHS_equipment_0 amount = 1000 }
+				}
+				if = {
+					limit = { has_equipment = { convoy_1 < 1000 } }
+					add_equipment_to_stockpile = { type = convoy_1 amount = 1000 }
+				}
+
+				#补充空军
+				if = {
+					limit = {
+						has_deployed_air_force_size = { type = fighter size < 2000 }
+						# check_variable = { num_equipment@TujinBHS_air2air_equipment_0 < 3000 }
+					}
+					add_equipment_to_stockpile = {
+						type = TujinBHS_air2air_equipment_0
+						amount = 2000
+					}
+				}
+				if = {
+					limit = {
+						has_deployed_air_force_size = { type = cas size < 1500 }
+						# check_variable = { num_equipment@BeinalesiBHS_air2ground_equipment_0 < 200 }
+					}
+					add_equipment_to_stockpile = {
+						type = BeinalesiBHS_air2ground_equipment_0
+						amount = 1500
+					}
+				}
+				if = {
+					limit = {
+						has_deployed_air_force_size = { type = heavy_fighter size < 1000 }
+						check_variable = { num_equipment@BeinalesiBHS_air2air_equipment_0 < 50 }
+					}
+					add_equipment_to_stockpile = {
+						type = BeinalesiBHS_air2air_equipment_0
+						amount = 1000
+					}
+				}
+			}
+
+			#选取登陆点，每n个月
+			if = {
+				limit = {
+					OR = {
+						check_variable = { global.BHS_LandingCD = global.BHS_LandingCD_set }
+						check_variable = { global.BHS_LandingCD > global.BHS_LandingCD_set }
+					}
+				}
+				#进入茧后不刷登陆
+				if = {
+					limit = { NOT = { has_global_flag = BHS_has_enter_hive } }
+					BHS_PreLanding = yes
+					#扣除登陆人力
+					add_manpower = -500000
+					set_variable = { global.BHS_LandingCD = 0 }
+					#律者诞生计次加1
+					add_to_variable = { global.BHS_Herrscher_Landing_times = 1 }
+				}
+			}
+			add_to_variable = { global.BHS_LandingCD = 1 }
+
+			##设置崩坏每多少月登陆一次，紧张度越高间隔越小，最低为2
+			set_variable = { BHS_LandingCD_temp =  global.threat }
+			multiply_variable = { BHS_LandingCD_temp = -8 }
+			add_to_variable = { BHS_LandingCD_temp = 8 }
+			round_variable = BHS_LandingCD_temp  #取整
+			clamp_variable = { var = BHS_LandingCD_temp min = 2 max = 8 }
+			set_variable = { global.BHS_LandingCD_set = BHS_LandingCD_temp }#设置登陆间隔
+		
+			#每两个月抽取一级侵略、二级侵略、低活性的民族精神
+			if = {
+				limit = { check_variable = { global.BHS_Refresh_aggressiveCD = 2 } }
+				if = {
+					limit = { has_idea = BHS_aggressive3}
+					every_country = {
+						limit = { is_in_faction_with = BHS }
+						remove_ideas = BHS_aggressive3
+					}
+				}
+				if = {
+					limit = { has_idea = BHS_aggressive2}
+					every_country = {
+						limit = { is_in_faction_with = BHS }
+						remove_ideas = BHS_aggressive2
+					}
+				}
+				if = {
+					limit = { has_idea = BHS_aggressive1}
+					every_country = {
+						limit = { is_in_faction_with = BHS }
+						remove_ideas = BHS_aggressive1
+					}
+				}
+				random_list = {
+					25 = {#高活性
+						every_country = {
+							limit = { is_in_faction_with = BHS }
+							add_ideas = BHS_aggressive3
+						}
+						every_country = { country_event = { id = BHS.13 } }
+					}
+					50 = {#中活性
+						every_country = {
+							limit = { is_in_faction_with = BHS }
+							add_ideas = BHS_aggressive2
+						}
+						every_country = { country_event = { id = BHS.14 } }
+					}
+					25 = {#低活性
+						every_country = {
+							limit = { is_in_faction_with = BHS }
+							add_ideas = BHS_aggressive1
+						}
+						every_country = { country_event = { id = BHS.15 } }
+					}
+				}
+				set_variable = { global.BHS_Refresh_aggressiveCD = 0 }
+			}
+			add_to_variable = { global.BHS_Refresh_aggressiveCD = 1 }
+		
+			#对所有邻国宣战，若无目标，开始随机宣战目标
+			if = {
+				#低活性不宣战
+				limit = { NOT = { has_idea = BHS_aggressive1 } }
+				every_neighbor_country = {
+					limit = {
+						NOT = { 
+							is_in_faction_with = BHS 
+							has_war_with = BHS 
+							TAG = HI1
+							TAG = HI2
+							TAG = HI3
+							TAG = HI6
+							TAG = HI7
+							TAG = HH2
+						}
+					}
+					BHS = { 
+						declare_war_on = { target = PREV type = annex_everything } 
+						add_to_variable = { BHS_WithWarCount = 1 }
+					}
+				}
+				if = {
+					limit = { 
+						check_variable = { BHS_WithWarCount = 0 }
+					}
+					random_country = {
+						limit = {
+							NOT = { 
+								is_in_faction_with = BHS 
+								has_war_with = BHS 
+								TAG = HI1
+								TAG = HI2
+								TAG = HI3
+								TAG = HI6
+								TAG = HI7
+								TAG = HH2
+							}
+						}
+						BHS = { declare_war_on = { target = PREV type = annex_everything } }
+					}
+				}
+				set_variable = { BHS_WithWarCount = 0 }
+			}
+			
+			#生成部队，必须在抽取活性之后，低活性不刷
+			every_country = {
+				limit = { is_in_faction_with = BHS }
+				if = {
+					limit = { NOT = { has_idea = BHS_aggressive1 } }
+					# 律者国家通过决议刷
+					if = {#崩坏过月刷兵
+						limit = { TAG = BHS }
+						if = {#只对ai刷兵
+							limit = { NOT = { has_idea = BHS_Benghuai_idea_Player } }
+							BHS_SpawnBHS = yes
+						}
+					}
+				}
+			}
+			#更新理律权能对人类影响,减科研槽
+			BHS_HerrscherofReson_ReduceResearch = yes
+        }
+    }
+	on_weekly_BHS = {
+		effect = {
+			#禁止加入崩坏阵营,加入变崩坏
+			every_country = {
+				limit = {
+					is_in_faction_with = BHS
+					NOT = { TAG = BHS }
+					NOT = { TAG = HI1 }
+					NOT = { TAG = HI2 }
+					NOT = { TAG = HI3 }
+
+					NOT = { TAG = HI6 }
+					NOT = { TAG = HI7 }
+					NOT = { TAG = HH2 }
+				}
+				BHS = { annex_country = { target = PREV } }
+			}
+			#禁止成为崩坏的傀儡
+			every_country = {
+				limit = { is_puppet_of = BHS }
+				BHS = { annex_country = { target = PREV } }
+			}
+			#禁止傀儡崩坏
+			random_country = {
+				limit = { is_subject_of = BHS }
+				BHS = { annex_country = { target = PREV } }
+			}
+			#更新动态攻防
+			BH3_DynamicBuff_upgrade = yes
+			#更新理律权能对人类影响
+			if = {
+				limit = { 
+					has_global_flag = HI1_set_up 
+					NOT = {	has_global_flag = HI1_has_beaten }
+				}
+				add_to_variable = { global.BHS_HI1_Power_Effect1 = -0.005 }
+				add_to_variable = { global.BHS_HI1_Power_Effect2 = -0.002 }
+			}
+			if = {#空律陨石轰炸
+				limit = { 
+					has_global_flag = HI2_set_up 
+					NOT = {	has_global_flag = HI2_has_beaten }
+				}
+				BHS_HerrscherofVoid_MeteoriteHit = yes
+			}
+			if = {
+				limit = { 
+					has_global_flag = HI3_set_up 
+					NOT = {	has_global_flag = HI3_has_beaten }
+				}
+				add_to_variable = { global.BHS_HI3_Power_Effect = 0.02 }
+			}
+		}
+
+	}
+
+	on_weekly = {
+		effect = {
+			every_country = {
+				limit = { has_country_flag = BH3_Hyperion_enabled }
+				BH3_ValkyrieSoldier_based_on_num_battalions = yes
+			}
+		}
+	}
+
+	on_daily= {
+		effect = {
+			if = { #休伯利安的移动
+				limit = { NOT = { check_variable = { global.BH3_Hyperion_last_tick = global.date } } }
+				set_variable = {  global.BH3_Hyperion_last_tick = global.date }
+				every_country = {
+					if = {
+						limit = {
+							#has_country_flag = BH3_Hyperion_moving
+							has_variable = BH3_Hyperion_target
+						}
+						add_to_variable = { BH3_Hyperion_target_ratio = 0.05 }
+						BH3_Hyperion_move_update = yes
+						if = { 
+							limit = { check_variable = { BH3_Hyperion_target_ratio > 0.999 } }
+							set_variable = { BH3_Hyperion_pos = BH3_Hyperion_target }
+							set_variable = { BH3_Hyperion_target_ratio = 0.0 }
+							clr_country_flag = BH3_Hyperion_moving
+							clear_variable = BH3_Hyperion_target
+							set_entity_position = {
+								id = BH3_Hyperion_id
+								state = BH3_Hyperion_pos
+								z = 50 
+							}
+							set_entity_animation = {
+								id = BH3_Hyperion_id
+								animation = "Idle"
+							}
+						}
+					}
+				}
+			}
+			#示现此世之兽的移动
+			if = {
+				limit = { has_global_flag = BHS_MoonBattleLose }
+				if = { 
+					limit = { NOT = { check_variable = { global.MonsterBossBHS_last_tick = global.date } } }
+					set_variable = {  global.MonsterBossBHS_last_tick = global.date }
+					if = {
+						limit = {
+							has_variable = global.MonsterBossBHS_target_state
+						}
+						#更新位置
+						add_to_variable = { global.MonsterBossBHS_target_state_ratio = 0.01 }
+						set_entity_movement = {
+							id = global.MonsterBossBHS_id
+							start = {
+								state = global.MonsterBossBHS_pos
+								z = 100
+							}
+							target = {
+								state = global.MonsterBossBHS_target_state
+								z = 100
+							}
+							ratio = global.MonsterBossBHS_target_state_ratio
+							rotation = -80.1
+						}
+						if = { 
+							limit = { check_variable = { global.MonsterBossBHS_target_state_ratio > 0.999 } }
+							set_variable = { global.MonsterBossBHS_pos = global.MonsterBossBHS_target_state }
+							set_variable = { global.MonsterBossBHS_target_state_ratio = 0.0 }
+							clear_variable = global.MonsterBossBHS_target_state
+							set_entity_position = {
+								id = global.MonsterBossBHS_id
+								state = global.MonsterBossBHS_pos
+								z = 100 
+							}
+							set_entity_animation = {
+								id = global.MonsterBossBHS_id
+								animation = "Idle"
+							}
+							#触发终焉一击带律者
+							BHS = {
+								declare_war_on = { target = global.MonsterBossBHS_target_country type = annex_everything }
+							}
+							BHS_BHS_MonsterBossBHS_One_Hit = yes
+							country_event = { id= BHS.2 days = 7 }
+						}
+					}
+				}
+			}
+
+			# if = {
+			# 	limit = { has_global_flag = BHS_Started }
+			# 	##### 统计崩坏侵蚀人口
+			# 	set_variable = { global.HonkaiImpact_Cause_Population_Casualty = 0 }
+			# 	every_state = {
+			# 		if = { 
+			# 			limit = { has_dynamic_modifier = { modifier = BHSinvasion_effect } }
+			# 			set_temp_variable = {HonkaiImpact_Cause_Population_Casualty_m = THIS.state_population_k }
+			# 			divide_temp_variable = { HonkaiImpact_Cause_Population_Casualty_m = 1000 } 
+			# 			#统计崩坏侵蚀人口
+			# 			add_to_variable = { global.HonkaiImpact_Cause_Population_Casualty = HonkaiImpact_Cause_Population_Casualty_m }
+			# 			#统计剩余人口（百万人）
+			# 			set_variable = { global.HonkaiImpact_Remain_Population_Casualty = global.HonkaiImpact_Population_Total }
+			# 			subtract_from_variable = { global.HonkaiImpact_Remain_Population_Casualty = global.HonkaiImpact_Cause_Population_Casualty }
+			# 		}
+			# 	}
+			# 	set_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Cause_Population_Casualty }
+			# 	divide_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Population_Total }
+			# 	multiply_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = 100 }
+			# 	if = {
+			# 		limit = { NOT = { has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70 } }
+			# 		if = { 
+			# 			limit = { check_variable = { global.HonkaiImpact_Cause_Population_Casualty_p > 60 } }
+			# 			set_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			# 		}
+			# 	}
+			# }
+		}
+	}
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						NOT = { is_in_faction_with = BHS }
+					}
+					ROOT = {
+						is_in_faction_with = BHS
+					}
+					FROM.FROM = {
+						NOT = { has_dynamic_modifier = { modifier = BHSinvasion_effect } }
+					}
+				}
+				FROM.FROM = {
+					add_core_of = ROOT
+				}
+				# 吃工业
+				every_country = {
+					limit = { is_in_faction_with = BHS }
+					add_offsite_building = { type = arms_factory level = PREV.FROM.FROM.arms_factory_level }
+					add_offsite_building = { type = industrial_complex level = PREV.FROM.FROM.industrial_complex_level }
+					#造船厂吃不到
+					add_offsite_building = { type = dockyard level = PREV.FROM.FROM.building_level@dockyard }
+				}
+				# 拆工业
+				FROM.FROM = {
+					remove_building = {
+						type = arms_factory
+						level = arms_factory_level
+					}
+					remove_building = {
+						type = industrial_complex
+						level = industrial_complex_level
+					}
+					remove_building = {
+						type = dockyard
+						level = building_level@dockyard
+					}
+				}
+				
+				FROM.FROM = {
+					#添加省份debuff
+					add_dynamic_modifier = { modifier = BHSinvasion_effect }
+					# 统计崩坏侵蚀人口
+					set_temp_variable = { HonkaiImpact_Cause_Population_Casualty_m = state_population_k }
+					divide_temp_variable = { HonkaiImpact_Cause_Population_Casualty_m = 1000 } 
+					add_to_variable = { global.HonkaiImpact_Cause_Population_Casualty = HonkaiImpact_Cause_Population_Casualty_m }
+					# 计算当地人口转为崩坏死士,如果没有超过限制数量
+					BHS_SpawnSishiBHS_On_Control_State = yes
+				}
+				#统计剩余人口（百万人）
+				subtract_from_variable = { global.HonkaiImpact_Remain_Population_Casualty = HonkaiImpact_Cause_Population_Casualty_m }
+				# 计算侵蚀人口百分比
+				set_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Cause_Population_Casualty }
+				divide_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Population_Total }
+				multiply_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = 100 }
+				if = {
+					limit = { NOT = { has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70 } }
+					if = { 
+						limit = { check_variable = { global.HonkaiImpact_Cause_Population_Casualty_p > 70 } }
+						set_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+					}
+				}
+			}
+		}
+	}
+
+	on_capitulation_immediate = {
+		effect = {
+			if = {	#当崩坏打投降一个国家，立即吞并
+				limit = { 
+					FROM = { 
+						OR = {
+							tag = BHS 
+							tag = HI1
+							tag = HI2
+							tag = HI3
+
+							tag = HI6
+							tag = HI7
+							tag = HH2
+						}	
+					} 
+					NOT = { is_major = yes}
+				}
+				FROM = {
+					annex_country = {
+						target = ROOT
+					} 
+					#触发新闻,随机触发内容
+					set_variable = { global.bhs_beat_country = ROOT }
+					set_variable = { global.bhs_beat_country_new = 0 }
+					random_list = {
+						25 = { set_variable = { global.bhs_beat_country_new = 1 } }
+						25 = { set_variable = { global.bhs_beat_country_new = 2 } }
+						25 = { set_variable = { global.bhs_beat_country_new = 3 } }
+						25 = { set_variable = { global.bhs_beat_country_new = 4 } }
+					}
+					every_country = {
+						news_event = { id = BHS_news.1 days = 1 }
+					}
+				}
+				add_to_variable = { global.HonkaiImpact_Beat_Country_Num = 1 } #统计崩坏阵营打败国家数量
+				add_to_variable = { global.HonkaiImpact_Cause_Casualty = ROOT.casualties_k } #统计崩坏造成伤亡
+			}
+			#打败理律消除理律权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HI1 }
+					NOT = { has_global_flag = HI1_has_beaten }
+				}
+				set_variable = { global.Who_beat_HI1 = FROM }
+				every_country = {
+					limit = { 
+						has_dynamic_modifier = {
+							modifier = BHS_HI1_Power_EffectHuman
+						} 
+					} 
+					remove_dynamic_modifier = {
+						modifier = BHS_HI1_Power_EffectHuman
+					}
+					#恢复科研槽
+					add_research_slot = 4
+				}
+				BHS = { remove_ideas = BHS_HI1_Power }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HI1_Beaten
+				}
+				country_event = { id = HerrscherCome.102 days = 30 }
+				set_global_flag = HI1_has_beaten
+			}
+			#打败空律消除空律权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HI2 }
+					NOT = { has_global_flag = HI2_has_beaten }
+				}
+				set_variable = { global.Who_beat_HI2 = FROM }
+				every_country = {
+					limit = { 
+						has_idea = BHS_HI2_Power_EffectHuman
+					} 
+					remove_ideas = BHS_HI2_Power_EffectHuman
+				}
+				BHS = { remove_ideas = BHS_HI2_Power }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HI2_Beaten
+				}
+				country_event = { id = HerrscherCome.202 days = 30 }
+				set_global_flag = HI2_has_beaten
+			}
+			#打败雷律消除雷律权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HI3 }
+					NOT = { has_global_flag = HI3_has_beaten }
+				}
+				set_variable = { global.Who_beat_HI3 = FROM }
+				every_country = {
+					limit = { 
+						has_idea = BHS_HI3_Power_EffectHuman
+					} 
+					remove_ideas = BHS_HI3_Power_EffectHuman
+				}
+				BHS = { remove_dynamic_modifier = { modifier = BHS_HI3_Power} }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HI3_Beaten
+				}
+				country_event = { id = HerrscherCome.302 days = 30 }
+				set_global_flag = HI3_has_beaten
+			}
+			#打败死律消除死律权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HI6 }
+					NOT = { has_global_flag = HI6_has_beaten }
+				}
+				set_variable = { global.Who_beat_HI6 = FROM }
+				every_country = {
+					limit = { 
+						has_idea = BHS_HI6_Power_EffectHuman
+					} 
+					remove_ideas = BHS_HI6_Power_EffectHuman
+				}
+				BHS = { remove_ideas = BHS_HI6_Power }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HI6_Beaten
+				}
+				country_event = { id = HerrscherCome.602 days = 30 }
+				set_global_flag = HI6_has_beaten
+			}
+			#打败炎律消除炎律权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HI7 }
+					NOT = { has_global_flag = HI7_has_beaten }
+				}
+				set_variable = { global.Who_beat_HI7 = FROM }
+				BHS = { remove_ideas = BHS_HI7_Power }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HI7_Beaten
+				}
+				country_event = { id = HerrscherCome.702 days = 30 }
+				set_global_flag = HI7_has_beaten
+			}
+			#打败侵蚀之律者消除侵蚀权能影响
+			if = {
+				limit = { 
+					ROOT = { TAG = HH2 }
+					NOT = { has_global_flag = HH2_has_beaten }
+				}
+				set_variable = { global.Who_beat_HH2 = FROM }
+				BHS = { remove_ideas = BHS_HH2_Power }
+				#打开超事件
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				every_country = {
+					limit = { is_ai = no }
+					set_country_flag = BHS_Event_HH2_Beaten
+					if = {
+						limit = { has_country_flag = BHS_HH2_Power_EffectHuman_flag }
+						clr_country_flag = BHS_HH2_Power_EffectHuman_flag
+					}
+				}
+				country_event = { id = HerrscherCome.1202 days = 30 }
+				set_global_flag = HH2_has_beaten
+			}
+
+			if = { #打败崩坏进行结算
+				limit = { 
+					ROOT = { TAG = BHS }
+				}
+				every_country = {
+					limit = { has_war_with = BHS }
+					add_to_variable = { global.HonkaiImpact_Cause_Casualty = THIS.casualties_k } #统计崩坏造成伤亡
+				}
+				divide_variable = { global.HonkaiImpact_Cause_Casualty = 10 } 
+				#统计崩坏造成人口伤亡和人类剩余人口实时计算
+				every_country = {
+					limit = { is_in_faction_with  = BHS }
+					add_to_variable = { global.HonkaiImpact_Casualty = THIS.casualties_k } #统计崩坏伤亡
+				}
+				divide_variable = { global.HonkaiImpact_Casualty = 10 } 
+				set_global_flag = BHS_has_beaten
+			}
+		}
+	}
+
+	on_peaceconference_ended = {
+		effect = {
+				if = { #吞并崩坏触发超事件
+				limit = { 
+					FROM = { TAG = BHS }
+					has_global_flag = BHS_has_beaten
+					NOT = { has_global_flag = BHS_Invasion_Event_End }
+				}
+				every_country = {
+					remove_dynamic_modifier = {
+						modifier = BHS_disaster_effect
+					}
+					remove_ideas = BH3_Finality_disaster_effect
+					if = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_End_event
+					}
+				}
+				#scoped_sound_effect = BHS_Invasion_End
+				play_song = "DaCapo"
+			}
+		}
+	}
+
+	on_annex = {
+		effect = {
+			if = { #当允许AI使用崩坏3mod内容时，被吞并时时移除休伯利安模型
+				limit = { FROM = { has_country_flag= BH3_Hyperion_enabled } }
+				FROM = {
+					destroy_entity = BH3_Hyperion_id
+					var:BH3_Hyperion_pos = {
+						remove_dynamic_modifier = {
+							scope = FROM.BH3_Hyperion_user
+							modifier = BH3_Hyperion_support_effect
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# on_war = {
+	# 	effect = {
+	# 		## 防止内战机制影响崩坏，直接吞并
+	# 		if = {
+	# 			limit = { THIS = { original_tag = BHS } }
+	# 			BHS = { annex_country = { target = PREV transfer_troops = yes } }
+	# 			# 不确定leader会不会分走
+	# 			# every_unit_leader = {set_nationality = UNI} 
+	# 		}
+	# 	}
+	# }
+
+	on_nuke_drop = {
+		effect = {
+			if = {
+				limit = { has_global_flag = BHS_Started }
+				if = {
+					limit = { 
+						OR = {
+							FROM.controller  = { TAG = BHS }
+							FROM.controller  = { TAG = HI1 }
+							FROM.controller  = { TAG = HI2 }
+							FROM.controller  = { TAG = HI3 }
+							FROM.controller  = { TAG = HI6 }
+							FROM.controller  = { TAG = HI7 }
+							FROM.controller  = { TAG = HH2 }
+						}
+					}
+					#核熔蚀抗性
+					if = {
+						limit = { check_variable = { global.BHS_NuclearCorrosionResistance_var < 50 } }
+						add_to_variable = { global.BHS_NuclearCorrosionResistance_var = 5 }
+					}
+					if = {
+						limit = { BHS = { NOT = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }  } } }
+						every_country = {
+							if = {
+								limit = { is_in_faction_with = BHS }
+								add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+							}
+							if = {
+								limit = { is_ai = no }
+								country_event = { id = BHS.25 }
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+}
+

@@ -1,0 +1,57 @@
+# 往事乐土·真我刻印（P3）：公共脚本（供本 mod 预设与 submod 复用）
+#
+# 用法示例（在任务的 complete_effect / timeout_effect 里）：
+#   BH3_ER_elysia_stage_ok = { TAG = GER }
+#   BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_1a }
+#
+# 超时规则（照原版梅福券）：累积计数 → 上限 5 → 惩罚由变量驱动 → 任务重新激活可再来
+
+BH3_ER_elysia_stage_ok = {
+	set_variable = { BH3_ER_$TAG$_delay = 0 }
+	set_variable = { BH3_ER_$TAG$_delay_cg = 0 }
+	set_variable = { BH3_ER_$TAG$_delay_pp = 0 }
+	set_variable = { BH3_ER_$TAG$_delay_stab = 0 }
+}
+
+BH3_ER_elysia_stage_timeout = {
+	if = {
+		limit = { check_variable = { BH3_ER_$TAG$_delay < 5 } }
+		add_to_variable = { BH3_ER_$TAG$_delay = 1 }
+		add_to_variable = { BH3_ER_$TAG$_delay_cg = 0.02 }
+		add_to_variable = { BH3_ER_$TAG$_delay_pp = -0.05 }
+		add_to_variable = { BH3_ER_$TAG$_delay_stab = -0.005 }
+	}
+	activate_mission = $MISSION$
+}
+
+# 授予真我刻印（按国家分支；submod 可仿照新增自己的分支）
+BH3_ER_elysia_grant_GER = {
+	set_variable = { BH3_ER_GER_momentum = 0 }
+	add_ideas = BH3_ER_Elysia_GER
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_delay_dm }
+}
+
+BH3_ER_elysia_grant_SOV = {
+	set_variable = { BH3_ER_SOV_liberation = 0 }
+	add_ideas = BH3_ER_Elysia_SOV
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_depth_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_depth2_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_depth3_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_liberation_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_liberation2_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_liberation3_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_SOV_delay_dm }
+}
+
+# 阶段结束时的节奏结算：提前完成给动量（德国）/ 收复进度给解放（苏联）
+BH3_ER_elysia_momentum_step = {
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+}
+
+BH3_ER_elysia_liberation_step = {
+	add_to_variable = { BH3_ER_SOV_liberation = 25 }
+}

@@ -1,0 +1,75 @@
+######## 为避免英文环境下无法正确显示单位名称，单位名称统一改用英文
+
+division_template = {
+	name = "Honkai Zombie"
+	is_locked = no
+	regiments = {
+		SishiBHS = { x = 0 y = 0 }
+		SishiBHS = { x = 0 y = 1 }
+		SishiBHS = { x = 0 y = 2 }
+		SishiBHS = { x = 1 y = 0 }
+		SishiBHS = { x = 1 y = 1 }
+		SishiBHS = { x = 1 y = 2 }
+		SishiBHS = { x = 2 y = 0 }
+		SishiBHS = { x = 2 y = 1 }
+		SishiBHS = { x = 2 y = 2 }
+	}
+	priority = 100
+}
+
+division_template = {
+	name = "Charger-class Honkai Beast"
+	is_locked = no
+	regiments = {
+		TujinBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Knight-class Honkai Beast"
+	is_locked = no
+	regiments = {
+		QishiBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Chariot-class Honkai Beast"
+	is_locked = no
+	regiments = {
+		ZhancheBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Templar-class Honkai Beast"
+	is_locked = no
+	regiments = {
+		ShengdianBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Ganesha Honkai Beast"
+	is_locked = no
+	regiments = {
+		JianisaBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Benares Honkai Beast"
+	is_locked = no
+	regiments = {
+		BeinalesiBHS = { x = 0 y = 0 }
+	}
+	priority = 100
+}
+division_template = {
+	name = "Herrscher"
+	is_locked = no
+	regiments = {
+		HerrscherVoidKiana = { x = 0 y = 0 }
+	}
+	priority = 100
+}

@@ -1,0 +1,22 @@
+### FACTION ASSETS ###
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BH3_faction_icon_honkai"
+		texturefile = "gfx/interface/factions/faction_logos/BH3_faction_icon_honkai.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_faction_icon_honkai_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/BH3_faction_icon_honkai_miniature.dds"
+	}	
+	spriteType = {
+		name = "GFX_BH3_faction_icon_union"
+		texturefile = "gfx/interface/factions/faction_logos/BH3_faction_icon_union.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_faction_icon_union_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/BH3_faction_icon_union_miniature.dds"
+	}	
+}

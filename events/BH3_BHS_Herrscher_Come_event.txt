@@ -1,0 +1,1396 @@
+add_namespace = HerrscherCome
+
+### 第一个律者在崩坏出现后2天创建 ###
+country_event = {
+	id = HerrscherCome.1
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_temp_variable = {  temp_BH3_herrscher_time =  global.BH3_herrscher_time }
+		set_variable = { global.BHS_Herrscher_Landing_times = temp_BH3_herrscher_time }
+		BHS_PreLanding = yes
+		clear_variable = temp_BH3_herrscher_time
+	}
+}
+### 理之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.100
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_variable = { global.BHS_HI1_Power_Effect1 = -0.5 }#扣科研
+		set_variable = { global.BHS_HI1_Power_Effect2 = -0.1 }#扣生产
+		var:global.BHSLandingPoint = {
+			add_core_of = HI1
+			transfer_state_to = HI1
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HI1
+			}
+		}
+		HI1 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HI1_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_SRHerrscherofReason } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HI1
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HI1 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+	
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#理律权能
+			add_ideas = BHS_HI1_Power
+			BHS = { add_ideas = BHS_HI1_Power }
+			#理律权能对人类影响
+			every_country = {
+				limit = { NOT = { is_in_faction_with = BHS } }
+				add_dynamic_modifier = {
+					modifier = BHS_HI1_Power_EffectHuman
+				}
+			}
+			#给将领
+			BH3_create_HI1_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes
+			BHS = { BH3_create_HI1_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Bronya_HerrscherofReason_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Reason"
+				is_locked = no
+				regiments = {
+					HerrscherReasonBronya = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = {
+				create_unit = {
+					division = "name = \"the Herrscher of Reason\" division_template = \"the Herrscher of Reason\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HI1
+					count = 1
+				}	
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI1_Come
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Come1 }
+				33 = { scoped_sound_effect  = HI_Come2 }
+				33 = { scoped_sound_effect  = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.101 days = 3 }
+		}
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.101
+	title = HerrscherCome.101.t
+	desc = HerrscherCome.101.d
+	picture = GFX_BH3_unit_leader_SRHerrscherofReason
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.101.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.102
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		#给奖励
+		var:global.Who_beat_HI1 = {
+			add_political_power = 500
+			army_experience = 350
+			add_ideas = BHS_HI1_Power
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI1_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+
+### 空之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.200
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		#set_variable = { global.BHS_HI2_Power_Effect = 0 }
+		var:global.BHSLandingPoint = {
+			add_core_of = HI2
+			transfer_state_to = HI2
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HI2
+			}
+		}
+		HI2 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HI2_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_BHSHerrscherofVoidSR } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HI2
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HI2 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+	
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#空律权能
+			add_ideas = BHS_HI2_Power
+			BHS = { add_ideas = BHS_HI2_Power }
+			#空律权能对人类影响
+			every_country = {
+				limit = { NOT = { is_in_faction_with = BHS } }
+				add_ideas = BHS_HI2_Power_EffectHuman
+			}
+			#给将领
+			BH3_create_HI2_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes
+			BHS = { BH3_create_HI2_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Kiana_HerrscherofVoid_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Void"
+				is_locked = no
+				regiments = {
+					herrscherVoidKiana = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = {
+				create_unit = {
+					division = "name = \"the Herrscher of Void\" division_template = \"the Herrscher of Void\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HI2
+					count = 1
+				}
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI2_Come
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Come1 }
+				33 = { scoped_sound_effect  = HI_Come2 }
+				33 = { scoped_sound_effect  = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.201 days = 3 }
+		}
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.201
+	title = HerrscherCome.201.t
+	desc = HerrscherCome.201.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.201.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.202
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.Who_beat_HI2 = {
+			add_political_power = 500
+			army_experience = 350
+			add_ideas = BHS_HI2_Power
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI2_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+#天穹流星
+country_event = {
+	id = HerrscherCome.203
+	title = HerrscherCome.203.t
+	desc = HerrscherCome.203.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+	is_triggered_only = yes
+	option = {
+		name = HerrscherCome.203.a
+	}
+	option = {
+		name = HerrscherCome.203.b
+		set_country_flag = HerrscherCome203b
+	}
+}
+
+### 雷之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.300
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_variable = { global.BHS_HI3_Power_Effect = 0.15 }
+		var:global.BHSLandingPoint = {
+			add_core_of = HI3
+			transfer_state_to = HI3
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HI3
+			}
+		}
+		HI3 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HI3_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_BHSHerrscherofThunderSR } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HI3
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HI3 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+	
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#空律权能
+			add_dynamic_modifier = {
+				modifier = BHS_HI3_Power
+			}
+			BHS = { 				
+				add_dynamic_modifier = {
+					modifier = BHS_HI3_Power
+				} 
+			}
+			#空律权能对人类影响
+			every_country = {
+				limit = { NOT = { is_in_faction_with = BHS } }
+				add_ideas = BHS_HI3_Power_EffectHuman
+			}
+	
+			#给将领
+			BH3_create_HI3_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes			
+			BHS = { BH3_create_HI3_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Mei_HerrscherofThunder_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Thunder"
+				is_locked = no
+				regiments = {
+					HerrscherthunderMei = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Thunder\" division_template = \"the Herrscher of Thunder\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HI3
+					count = 1
+				}	
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI3_Come
+			random_list = {
+				33 = { scoped_sound_effect = HI_Come1 }
+				33 = { scoped_sound_effect = HI_Come2 }
+				33 = { scoped_sound_effect = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.301 days = 3 }
+		}
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.301
+	title = HerrscherCome.301.t
+	desc = HerrscherCome.301.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.301.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.302
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.Who_beat_HI3 = {
+			add_political_power = 500
+			army_experience = 350
+			set_variable = { global.BHS_HI3_Power_Effect = 0.25 }
+			add_dynamic_modifier = {
+				modifier = BHS_HI3_Power
+			}
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI3_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+
+
+### 死之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.600
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			add_core_of = HI6
+			transfer_state_to = HI6
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HI6
+			}
+		}
+		HI6 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HI6_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_BHSHerrscherofRebirth } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HI6
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HI6 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+	
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#权能
+			add_ideas = BHS_HI6_Power
+			BHS = { 				
+				add_ideas = BHS_HI6_Power
+			}
+			#权能对人类影响,以事件形式
+	
+			#给将领
+			BH3_create_HI6_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes			
+			BHS = { BH3_create_HI6_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Seele_HerrscherofRebirth_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Rebirth"
+				is_locked = no
+				regiments = {
+					HerrscherRebirthSeele = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Rebirth\" division_template = \"the Herrscher of Rebirth\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HI6
+					count = 1
+				}	
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI6_Come
+			random_list = {
+				33 = { scoped_sound_effect = HI_Come1 }
+				33 = { scoped_sound_effect = HI_Come2 }
+				33 = { scoped_sound_effect = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.601 days = 3 }
+		}
+		#开启权能debuff
+		country_event = {
+			id = HerrscherCome.603
+			days = 3
+		}
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.601
+	title = HerrscherCome.601.t
+	desc = HerrscherCome.601.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.601.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.602
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.Who_beat_HI6 = {
+			add_political_power = 500
+			army_experience = 350
+			add_ideas = BHS_HI6_Power
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI6_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+#触发权能，死亡凋零，随机交战国挂上限时debuff，给交战省份随机挂省份崩坏debuff
+country_event = {
+	id = HerrscherCome.603
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = HI6_has_beaten }
+			}
+			BHS_HerrscherofRebirth_BHSinvasion_effect = yes
+			country_event = {
+				id = HerrscherCome.603
+				days = 50
+			}
+		}
+	}
+}
+#触发死亡凋零提示
+country_event = {
+	id = HerrscherCome.604
+	title = HerrscherCome.604.t
+	desc = HerrscherCome.604.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+	is_triggered_only = yes
+	option = {
+		name = HerrscherCome.604.a
+	}
+	option = {
+		name = HerrscherCome.604.b
+		set_country_flag = HerrscherCome604b
+	}
+}
+
+### 炎之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.700
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			add_core_of = HI7
+			transfer_state_to = HI7
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HI7
+			}
+		}
+		HI7 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HI7_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_BHSHerrscherofFlamescion } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HI7
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HI7 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+	
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#权能
+			add_ideas = BHS_HI7_Power
+			BHS = { 				
+				add_ideas = BHS_HI7_Power
+			}
+			#天火圣裁
+			add_timed_idea = {
+				idea = BHS_HI7_1_Power
+				days = 7
+			}
+			#给将领
+			BH3_create_HI7_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes			
+			BHS = { BH3_create_HI7_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Kiana_HerrscherofFlamescion_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Flamescion"
+				is_locked = no
+				regiments = {
+					HerrscherFlamescionKiana = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Flamescion\" division_template = \"the Herrscher of Flamescion\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HI7
+					count = 1
+				}	
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI7_Come
+			random_list = {
+				33 = { scoped_sound_effect = HI_Come1 }
+				33 = { scoped_sound_effect = HI_Come2 }
+				33 = { scoped_sound_effect = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.701 days = 3 }
+		}
+		#开启限时权能，触发
+		country_event = { id = HerrscherCome.703 days = 20 }
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.701
+	title = HerrscherCome.701.t
+	desc = HerrscherCome.701.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.701.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.702
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.Who_beat_HI7 = {
+			add_political_power = 500
+			army_experience = 350
+			add_ideas = BHS_HI7_Power
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HI7_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+#触发天火圣裁，给炎律挂上限时buff
+country_event = {
+	id = HerrscherCome.703
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = HI7_has_beaten }
+			}
+			BHS_HerrscherofFlamescion_BHSinvasion_effect = yes
+			country_event = {
+				id = HerrscherCome.703
+				days = 20
+			}
+		}
+	}
+}
+#触发天火圣裁提示
+country_event = {
+	id = HerrscherCome.704
+	title = HerrscherCome.704.t
+	desc = HerrscherCome.704.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+	is_triggered_only = yes
+	option = {
+		name = HerrscherCome.704.a
+	}
+	option = {
+		name = HerrscherCome.704.b
+		set_country_flag = HerrscherCome704b
+	}
+}
+
+
+### 侵蚀之律者 ###
+#创建国家
+country_event = {
+	id = HerrscherCome.1200
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			add_core_of = HH2
+			transfer_state_to = HH2
+			add_dynamic_modifier = {
+				modifier = BHS_High_Honkai_area 
+				scope = HH2
+			}
+		}
+		HH2 = { 
+			set_major = yes
+			set_capital = { state = var:global.BHSLandingPoint }
+			#重设领导人头像和名字
+			var:country_leader = {
+				meta_effect = {
+					text = {
+						set_character_name = HH2_country_leader
+						set_portraits = { civilian = { large = GFX_BH3_unit_leader_BHSHerrscherofErosion } }
+					}
+					debug = yes
+				}
+			}
+			load_oob = "BHS_UnitPool"
+			#禁止自由出兵
+			country_lock_all_division_template = yes
+			add_threat = 5
+			#天使轮投资
+			add_manpower = 6000000
+			add_fuel = 999999
+			# 避免部分脑瘫mod替换了country文件夹
+			set_technology = {
+				SishiBHS_Research = 1
+				Tujin1BHS_Research = 1
+				Qishi1BHS_Research = 1
+				Zhanche1BHS_Research = 1
+				Shengdian1BHS_Research = 1
+				JianisaBHS_Research = 1
+				BeinalesiBHS_Research = 1
+			}
+			add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+			add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+			#加入阵营
+			BHS = {
+				add_to_faction = HH2
+			}
+			every_country = {
+				limit = { has_war_with = BHS }
+				HH2 = { 
+					declare_war_on = { target = PREV type = annex_everything } 
+				}
+			}
+			### 崩坏阶段 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_level1_idea } } 
+				add_ideas = BHS_level1_idea
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_level2_idea } } 
+				add_ideas = BHS_level2_idea
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_level3_idea } } 
+				add_ideas = BHS_level3_idea
+			}
+			#阶段4
+			if = {
+				limit = { BHS = { has_idea = BHS_level4_idea } } 
+				add_ideas = BHS_level4_idea
+			}
+			#阶段5
+			if = {
+				limit = { BHS = { has_idea = BHS_level5_idea } } 
+				add_ideas = BHS_level5_idea
+			}
+	
+			### 崩坏活性 ###
+			#阶段1
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive1 } } 
+				add_ideas = BHS_aggressive1
+			}
+			#阶段2
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive2 } } 
+				add_ideas = BHS_aggressive2
+			}
+			#阶段3
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive3 } } 
+				add_ideas = BHS_aggressive3
+			}
+
+			### 崩坏律者单位加强 ###
+			#加强
+			if = {
+				limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+				add_ideas = BHS_herrscher_enhance_idea
+			}
+
+			### 核熔蚀抗性 ###
+			if = {
+				limit = { BHS = { has_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } } } 
+				add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect }
+			}
+
+			### 杂项，多选 ###
+			#崩坏加强
+			if = {
+				limit = { BHS = { has_idea = BHS_aggressive0 } } 
+				add_ideas = BHS_aggressive0
+			}
+			#权能
+			add_ideas = BHS_HH2_Power
+			BHS = { 				
+				add_ideas = BHS_HH2_Power
+				create_intelligence_agency = yes
+			}
+			create_intelligence_agency = yes
+
+			#给将领
+			BH3_create_HH2_leader = yes
+			#情报人员
+			BH3_create_BHS_operative_leader = yes			
+			BHS = { BH3_create_HH2_leader = yes }
+			#刷开局兵
+			BHS_StartTroop_Herrscher = yes
+			#给律者师
+			set_technology = {
+				Elysia_HerrscherofErosion_Research = 1
+			}
+			division_template = {
+				name = "the Herrscher of Erosion"
+				is_locked = no
+				regiments = {
+					HerrscherErosionElysia = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Erosion\" division_template = \"the Herrscher of Erosion\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = HH2
+					count = 1
+				}	
+			}
+		}
+		#打开超事件
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HH2_Come
+			random_list = {
+				33 = { scoped_sound_effect = HI_Come1 }
+				33 = { scoped_sound_effect = HI_Come2 }
+				33 = { scoped_sound_effect = HI_Come3 }
+			}
+			country_event = { id = HerrscherCome.1201 days = 3 }
+		}
+		#开启触发权能
+		country_event = { id = HerrscherCome.1203 days = 20 }
+	}
+}
+#触发律者权能提示
+country_event = {
+	id = HerrscherCome.1201
+	title = HerrscherCome.1201.t
+	desc = HerrscherCome.1201.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofErosion
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = HerrscherCome.1201.a
+	}
+}
+#触发律者权能奖励
+country_event = {
+	id = HerrscherCome.1202
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		var:global.Who_beat_HH2 = {
+			add_political_power = 500
+			army_experience = 350
+			add_ideas = BHS_HH2_Power
+		}
+		every_country = {
+			limit = { is_ai = no }
+			set_country_flag = BHS_Event_HH2_Reward
+			random_list = {
+				33 = { scoped_sound_effect  = HI_Beaten1 }
+				33 = { scoped_sound_effect  = HI_Beaten2 }
+				33 = { scoped_sound_effect  = HI_Beaten3 }
+			}
+		}
+	}
+}
+#触发侵蚀权能
+country_event = {
+	id = HerrscherCome.1203
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_global_flag = HH2_has_beaten }
+			}
+			BHS_HerrscherofErosion_BHSinvasion_effect = yes
+
+		}
+	}
+}
+#触发权能提示
+country_event = {
+	id = HerrscherCome.1204
+	title = HerrscherCome.1204.t
+	desc = HerrscherCome.1204.d
+	picture = GFX_BH3_unit_leader_BHSHerrscherofErosion
+	is_triggered_only = yes
+	option = {
+		name = HerrscherCome.1204.a
+	}
+	option = {
+		name = HerrscherCome.1204.b
+		set_country_flag = HerrscherCome1204b
+	}
+}

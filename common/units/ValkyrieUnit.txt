@@ -1,0 +1,1176 @@
+sub_units = {
+
+	ValkyrieArmorUnit = {
+		abbreviation = "VAU"
+		sprite = ValkyrieArmorUnit
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieArmor
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 30
+		max_organisation = 20
+		default_morale = 1.5
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 2
+		supply_consumption = 0.1
+		#supply_consumption_factor = -0.1
+		initiative = 0.15
+		need = {
+			BH3_ValkyrieArmor_classis = 6
+			ValkyrieSoldier_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieComprehensiveKiana = {
+		abbreviation = "VCK"
+		sprite = ValkyrieComprehensiveKiana
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieComprehensive
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 100
+		max_organisation = 85
+		default_morale = 1.5
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 2
+		supply_consumption = 0.1
+		#supply_consumption_factor = -0.1
+		initiative = 0.15
+		need = {
+			Valkyrie_Kiana_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieComprehensiveTheresa = {
+		abbreviation = "VCT"
+		sprite = ValkyrieComprehensiveTheresa
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieComprehensive
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 125
+		max_organisation = 75
+		default_morale = 1.5
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 1
+		supply_consumption = 0.06
+		#supply_consumption_factor = -0.1
+		initiative = 0.1
+		need = {
+			Valkyrie_Theresa_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+	
+	ValkyrieComprehensiveEden = {
+		abbreviation = "VCE"
+		sprite = ValkyrieComprehensiveEden
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieComprehensive
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 115
+		max_organisation = 80
+		default_morale = 2.5
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 1.5
+		supply_consumption = 0.1
+
+		initiative = 0.1
+		need = {
+			Valkyrie_Eden_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieMeeleMei = {
+		abbreviation = "VMM"
+		sprite = ValkyrieMeeleMei
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieMeele
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 90
+		max_organisation = 55
+		default_morale = 1.2
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 0
+		supply_consumption = 0.06
+		supply_consumption_factor = -0.1
+		initiative = 0.05
+		need = {
+			Valkyrie_Mei_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieMeeleSeele = {
+		abbreviation = "VMS"
+		sprite = ValkyrieMeeleSeele
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieMeele
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 100
+		max_organisation = 50
+		default_morale = 1
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 0.5
+		supply_consumption = 0.04
+		#supply_consumption_factor = -0.1
+		initiative = 0.10
+		need = {
+			Valkyrie_Seele_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieMeeleFuka = {
+		abbreviation = "VMF"
+		sprite = ValkyrieMeeleFuka
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieMeele
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 130
+		max_organisation = 65
+		default_morale = 0.8
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 0.25
+		supply_consumption = 0.06
+		#supply_consumption_factor = -0.1
+		initiative = 0.15
+		need = {
+			Valkyrie_Fuka_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	ValkyrieArtilleryBronya = {
+		abbreviation = "VAB"
+		sprite = ValkyrieArtilleryBronya
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+			category_ValkyrieArtillery
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 100
+		max_organisation = 75
+		default_morale = 1
+		manpower = 6
+
+		#Misc Abilities
+		training_time = 180
+		suppression = 10
+		weight = 0.2
+		recon = 0.8
+		supply_consumption = 0.04
+		#supply_consumption_factor = -0.1
+		initiative = 0.25
+		need = {
+			Valkyrie_Bronya_equipment = 6
+		}
+		can_be_parachuted = yes
+
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherVoidKiana = {
+		abbreviation = "HVK"
+		sprite = HerrscherVoidKiana
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 10
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.3
+		initiative = 1
+		recon = 10
+		reliability_factor = 0.3
+		need = {
+			HerrscherVoid_Kiana_equipment = 100
+		}
+
+		can_be_parachuted = yes
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherFlamescionKiana = {
+		abbreviation = "HFK"
+		sprite = HerrscherFlamescionKiana
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 10
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 80
+		weight = 0.2
+		
+		supply_consumption = 0.3
+		initiative = 1
+		recon = 20
+		reliability_factor = 0.3
+		need = {
+			HerrscherFlamescion_Kiana_equipment = 100
+		}
+
+		can_be_parachuted = yes
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherThunderMei = {
+		abbreviation = "HTM"
+		sprite = HerrscherThunderMei
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 10000
+		default_morale = 13
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.2
+		initiative = 1
+		recon = 6
+		reliability_factor = 0.3
+		need = {
+			HerrscherThunder_Mei_equipment = 100
+		}
+
+		can_be_parachuted = yes
+
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherReasonBronya = {
+		abbreviation = "HRB"
+		sprite = HerrscherReasonBronya
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 10
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.4
+		initiative = 1
+		recon = 10
+		reliability_factor = 0.3
+		need = {
+			HerrscherReason_Bronya_equipment = 100
+		}
+
+		can_be_parachuted = yes
+
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherRebirthSeele = {
+		abbreviation = "HRS"
+		sprite = HerrscherRebirthSeele
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 10
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.4
+		initiative = 1
+		recon = 10
+		reliability_factor = 0.3
+		need = {
+			HerrscherRebirth_Seele_equipment = 100
+		}
+
+		can_be_parachuted = yes
+
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherHumanElysia = {
+		abbreviation = "HHE"
+		sprite = HerrscherHumanElysia
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 15
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.4
+		initiative = 1
+		recon = 7
+		reliability_factor = 0.3
+		need = {
+			HerrscherHuman_Elysia_equipment = 100
+		}
+
+		can_be_parachuted = yes
+
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+	HerrscherErosionElysia = {
+		abbreviation = "HEE"
+		sprite = HerrscherErosionElysia
+		map_icon_category = infantry
+		special_forces = yes
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_special_forces
+			category_AllHerrscher
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.20
+		
+		#Size Definitions
+		max_strength = 20000
+		max_organisation = 1000
+		default_morale = 15
+		manpower = 1
+
+		#Misc Abilities
+		training_time = 245
+		suppression = 45
+		weight = 0.2
+		
+		supply_consumption = 0.4
+		initiative = 1
+		recon = 7
+		reliability_factor = 0.3
+		need = {
+			HerrscherErosion_Elysia_equipment = 100
+		}
+
+		can_be_parachuted = yes
+
+		urban = {
+			movement = 2
+			attack = 3
+			defence = 3
+		}
+		forest = {
+			attack = 0.1
+			movement = 0.1
+		}
+		hills = {
+			attack = 0.1
+			movement = 0.05
+		}
+		mountain = {
+			attack = 0.4
+			movement = 0.1
+		}
+		jungle = {
+			attack = 0.2
+			movement = 0.1
+		}
+		marsh = {
+			attack = 0.2
+			movement = 0.05
+		}
+		fort = {
+			attack = 0.05
+		}
+		river = {
+			attack = 0.3
+			movement = 0.3
+		}
+		amphibious = {
+			attack = 0.5
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+
+BH3_mio_cat_ValkyrieComprehensive = {
+   equipment_type = {
+      ValkyrieComprehensiveKiana_equipment
+      ValkyrieComprehensiveTheresa_equipment
+      ValkyrieComprehensiveEden_equipment
+   }
+}
+
+BH3_mio_cat_ValkyrieMeele = {
+   equipment_type = {
+      ValkyrieMeeleMei_equipment
+      ValkyrieMeeleSeele_equipment
+      ValkyrieMeeleFuka_equipment
+   }
+}
+
+BH3_mio_cat_ValkyrieArtillery = {
+   equipment_type = {
+      ValkyrieArtilleryBronya_equipment
+   }
+}

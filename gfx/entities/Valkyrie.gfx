@@ -1,0 +1,558 @@
+objectTypes = {
+#############################
+########### Kiana ###########
+#############################
+
+########### Kiana_WhiteComet ###########
+	pdxmesh = {
+		name = "Kiana_WhiteComet_pdx"
+		file = "gfx/models/units/Kiana/Kiana_WhiteComet.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_WhiteComet_Idle1_animation"}
+		animation = { id = "Idle2_1"	type = "Kiana_WhiteComet_Idle2_1_animation"}
+		animation = { id = "Idle2_2"	type = "Kiana_WhiteComet_Idle2_2_animation"}
+		animation = { id = "Idle3"	type = "Kiana_WhiteComet_Idle3_animation"}
+		animation = { id = "Idle4"	type = "Kiana_WhiteComet_Idle4_animation"}
+		animation = { id = "MoveFast"	type = "Kiana_WhiteComet_MoveFast_animation"}
+		animation = { id = "Move"	type = "Kiana_WhiteComet_Move_animation"}
+		animation = { id = "Training"	type = "Kiana_WhiteComet_Training_animation"}
+		animation = { id = "RightHandAttack1"	type = "Kiana_WhiteComet_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Kiana_WhiteComet_RightHandAttack2_animation"}
+		animation = { id = "RightHandFire"	type = "Kiana_WhiteComet_RightHandFire_animation"}
+		animation = { id = "LeftHandAttack1"	type = "Kiana_WhiteComet_LeftHandAttack1_animation"}
+		animation = { id = "Kick"	type = "Kiana_WhiteComet_Kick_animation"}
+		animation = { id = "JumpAttack"	type = "Kiana_WhiteComet_JumpAttack_animation"}
+		animation = { id = "DoubleHandAttack"	type = "Kiana_WhiteComet_DoubleHandAttack_animation"}
+	}
+
+########### Kiana_VoidDrifter ###########
+	pdxmesh = {
+		name = "Kiana_VoidDrifter_pdx"
+		file = "gfx/models/units/Kiana/Kiana_VoidDrifter.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_VoidDrifter_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Kiana_VoidDrifter_Idle2_animation"}
+		animation = { id = "Move"	type = "Kiana_VoidDrifter_Move_animation"}
+		animation = { id = "Attack1"	type = "Kiana_VoidDrifter_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Kiana_VoidDrifter_Attack2_animation"}
+		animation = { id = "Ultra"	type = "Kiana_VoidDrifter_Ultra_animation"}
+	}
+
+########### Kiana_KnightMoonbeam ###########
+	pdxmesh = {
+		name = "Kiana_KnightMoonbeam_pdx"
+		file = "gfx/models/units/Kiana/Kiana_KnightMoonbeam.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_KnightMoonbeam_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Kiana_KnightMoonbeam_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Kiana_KnightMoonbeam_Idle3_animation"}
+		animation = { id = "Move"	type = "Kiana_KnightMoonbeam_Move_animation"}
+		animation = { id = "Attack1"	type = "Kiana_KnightMoonbeam_Attack1_animation"}
+		animation = { id = "QTE"	type = "Kiana_KnightMoonbeam_QTE_animation"}
+		animation = { id = "SKILL"	type = "Kiana_KnightMoonbeam_SKILL_animation"}
+	}
+
+#############################
+############ Mei ############
+#############################
+
+########### Mei_CrimsonImpuls ###########
+	pdxmesh = {
+		name = "Mei_CrimsonImpuls_pdx"
+		file = "gfx/models/units/Mei/Mei_CrimsonImpuls.mesh"
+
+		animation = { id = "Idle1"	type = "Mei_CrimsonImpuls_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_CrimsonImpuls_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Mei_CrimsonImpuls_Idle3_animation"}
+		animation = { id = "Idle4"	type = "Mei_CrimsonImpuls_Idle4_animation"}
+		animation = { id = "MoveFast"	type = "Mei_CrimsonImpuls_MoveFast_animation"}
+		animation = { id = "Move"	type = "Mei_CrimsonImpuls_Move_animation"}
+		animation = { id = "RightHandAttack1"	type = "Mei_CrimsonImpuls_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Mei_CrimsonImpuls_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Mei_CrimsonImpuls_RightHandAttack3_animation"}
+		animation = { id = "LeftHandAttack1"	type = "Mei_CrimsonImpuls_LeftHandAttack1_animation"}
+		animation = { id = "LeftHandAttack2"	type = "Mei_CrimsonImpuls_LeftHandAttack2_animation"}
+		animation = { id = "JumpAttack"	type = "Mei_CrimsonImpuls_JumpAttack_animation"}
+		animation = { id = "RotateAttack1"	type = "Mei_CrimsonImpuls_RotateAttack1_animation"}
+		animation = { id = "RotateAttack2"	type = "Mei_CrimsonImpuls_RotateAttack2_animation"}
+		animation = { id = "DoubleHandAttack1"	type = "Mei_CrimsonImpuls_DoubleHandAttack1_animation"}
+		animation = { id = "DoubleHandAttack2"	type = "Mei_CrimsonImpuls_DoubleHandAttack2_animation"}
+	}
+	
+########### Mei_StrikerFulminata ###########
+	pdxmesh = {
+		name = "Mei_StrikerFulminata_pdx"
+		file = "gfx/models/units/Mei/Mei_StrikerFulminata.mesh"
+
+		animation = { id = "Idle1"	type = "Mei_StrikerFulminata_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_StrikerFulminata_Idle2_animation"}
+		animation = { id = "Move"	type = "Mei_StrikerFulminata_Move_animation"}
+		animation = { id = "Attack"	type = "Mei_StrikerFulminata_Attack_animation"}
+		animation = { id = "AttackLoop"	type = "Mei_StrikerFulminata_AttackLoop_animation"}
+	}
+
+########### Mei_ShadowDash ###########
+	pdxmesh = {
+		name = "Mei_ShadowDash_pdx"
+		file = "gfx/models/units/Mei/Mei_ShadowDash.mesh"
+
+		animation = { id = "Idle1"	type = "Mei_CrimsonImpuls_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_CrimsonImpuls_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Mei_CrimsonImpuls_Idle3_animation"}
+		animation = { id = "Idle4"	type = "Mei_CrimsonImpuls_Idle4_animation"}
+		animation = { id = "MoveFast"	type = "Mei_CrimsonImpuls_MoveFast_animation"}
+		animation = { id = "Move"	type = "Mei_CrimsonImpuls_Move_animation"}
+		animation = { id = "RightHandAttack1"	type = "Mei_CrimsonImpuls_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Mei_CrimsonImpuls_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Mei_CrimsonImpuls_RightHandAttack3_animation"}
+		animation = { id = "LeftHandAttack1"	type = "Mei_CrimsonImpuls_LeftHandAttack1_animation"}
+		animation = { id = "LeftHandAttack2"	type = "Mei_CrimsonImpuls_LeftHandAttack2_animation"}
+		animation = { id = "JumpAttack"	type = "Mei_CrimsonImpuls_JumpAttack_animation"}
+		animation = { id = "RotateAttack1"	type = "Mei_CrimsonImpuls_RotateAttack1_animation"}
+		animation = { id = "RotateAttack2"	type = "Mei_CrimsonImpuls_RotateAttack2_animation"}
+		animation = { id = "DoubleHandAttack1"	type = "Mei_CrimsonImpuls_DoubleHandAttack1_animation"}
+		animation = { id = "DoubleHandAttack2"	type = "Mei_CrimsonImpuls_DoubleHandAttack2_animation"}
+	}
+
+	
+########### Mei_DanzaiSpectramancer ###########
+	pdxmesh = {
+		name = "Mei_DanzaiSpectramancer_pdx"
+		file = "gfx/models/units/Mei/Mei_DanzaiSpectramancer.mesh"
+
+		animation = { id = "Idle1"	type = "Mei_DanzaiSpectramancer_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_DanzaiSpectramancer_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Mei_DanzaiSpectramancer_Idle3_animation"}
+		animation = { id = "Move"	type = "Mei_DanzaiSpectramancer_Move_animation"}
+		animation = { id = "Attack"	type = "Mei_DanzaiSpectramancer_Attack_animation"}
+		animation = { id = "UltraAtk"	type = "Mei_DanzaiSpectramancer_UltraAtk_animation"}
+	}
+
+########### Mei_LightningEmpress ###########
+	pdxmesh = {
+	name = "Mei_LightningEmpress_pdx"
+	file = "gfx/models/units/Mei/Mei_LightningEmpress.mesh"
+
+		animation = { id = "Idle1"	type = "Mei_CrimsonImpuls_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_CrimsonImpuls_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Mei_CrimsonImpuls_Idle3_animation"}
+		animation = { id = "Idle4"	type = "Mei_CrimsonImpuls_Idle4_animation"}
+		animation = { id = "MoveFast"	type = "Mei_CrimsonImpuls_MoveFast_animation"}
+		animation = { id = "Move"	type = "Mei_CrimsonImpuls_Move_animation"}
+		animation = { id = "RightHandAttack1"	type = "Mei_CrimsonImpuls_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Mei_CrimsonImpuls_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Mei_CrimsonImpuls_RightHandAttack3_animation"}
+		animation = { id = "LeftHandAttack1"	type = "Mei_CrimsonImpuls_LeftHandAttack1_animation"}
+		animation = { id = "LeftHandAttack2"	type = "Mei_CrimsonImpuls_LeftHandAttack2_animation"}
+		animation = { id = "JumpAttack"	type = "Mei_CrimsonImpuls_JumpAttack_animation"}
+		animation = { id = "RotateAttack1"	type = "Mei_CrimsonImpuls_RotateAttack1_animation"}
+		animation = { id = "RotateAttack2"	type = "Mei_CrimsonImpuls_RotateAttack2_animation"}
+		animation = { id = "DoubleHandAttack1"	type = "Mei_CrimsonImpuls_DoubleHandAttack1_animation"}
+		animation = { id = "DoubleHandAttack2"	type = "Mei_CrimsonImpuls_DoubleHandAttack2_animation"}
+	}
+
+	########### Mei_Captain ###########
+	#body
+	pdxmesh = {
+		name = "Mei_Captain_Body_pdx"
+		file = "gfx/models/units/Mei/Mei_Captain_Body.mesh"
+	
+		animation = { id = "Idle1"	type = "Mei_Captain_Body_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_Captain_Body_Idle2_animation"}
+		animation = { id = "Move"	type = "Mei_Captain_Body_Move_animation"}
+		animation = { id = "Attack1"	type = "Mei_Captain_Body_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Mei_Captain_Body_Attack2_animation"}
+	}
+	#Skirt
+	pdxmesh = {
+		name = "Mei_Captain_Skirt_pdx"
+		file = "gfx/models/units/Mei/Mei_Captain_Skirt.mesh"
+	
+		animation = { id = "Idle1"	type = "Mei_Captain_Skirt_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_Captain_Skirt_Idle2_animation"}
+		animation = { id = "Move"	type = "Mei_Captain_Skirt_Move_animation"}
+		animation = { id = "Attack1"	type = "Mei_Captain_Skirt_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Mei_Captain_Skirt_Attack2_animation"}
+	}
+
+#############################
+########### Seele ###########
+#############################
+
+########### Seele_SwallowtailPhantasm ###########
+	pdxmesh = {
+		name = "Seele_SwallowtailPhantasm_pdx"
+		file = "gfx/models/units/Seele/Seele_SwallowtailPhantasm.mesh"
+
+		animation = { id = "Idle1"	type = "Seele_StygianNymph_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Seele_StygianNymph_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Seele_StygianNymph_Idle3_animation"}
+		animation = { id = "Move"	type = "Seele_StygianNymph_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_StygianNymph_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Seele_StygianNymph_Attack2_animation"}
+		animation = { id = "Attack3"	type = "Seele_StygianNymph_Attack3_animation"}
+		animation = { id = "Attack4"	type = "Seele_StygianNymph_Attack4_animation"}
+	}
+
+########### Seele_StygianNymph ###########
+	pdxmesh = {
+		name = "Seele_StygianNymph_pdx"
+		file = "gfx/models/units/Seele/Seele_StygianNymph.mesh"
+
+		animation = { id = "Idle1"	type = "Seele_StygianNymph_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Seele_StygianNymph_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Seele_StygianNymph_Idle3_animation"}
+		animation = { id = "Move"	type = "Seele_StygianNymph_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_StygianNymph_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Seele_StygianNymph_Attack2_animation"}
+		animation = { id = "Attack3"	type = "Seele_StygianNymph_Attack3_animation"}
+		animation = { id = "Attack4"	type = "Seele_StygianNymph_Attack4_animation"}
+	}
+
+########### Seele_StarchasmNyx ###########
+	pdxmesh = {
+		name = "Seele_StarchasmNyx_pdx"
+		file = "gfx/models/units/Seele/Seele_StarchasmNyx.mesh"
+
+		animation = { id = "Idle"	type = "Seele_StarchasmNyx_Idle_animation"}
+		animation = { id = "Move"	type = "Seele_StarchasmNyx_Move_animation"}
+		animation = { id = "Attack"	type = "Seele_StarchasmNyx_Attack_animation"}
+		animation = { id = "ChargeAttack"	type = "Seele_StarchasmNyx_ChargeAttack_animation"}
+		animation = { id = "SKL02"	type = "Seele_StarchasmNyx_SKL02_animation"}
+	}
+
+
+#############################
+########## Bronya ###########
+#############################
+
+########### Bronya_ValkyrieChariot ###########
+	pdxmesh = {
+		name = "Bronya_ValkyrieChariot_pdx"
+		file = "gfx/models/units/Bronya/Bronya_ValkyrieChariot.mesh"
+
+		animation = { id = "Idle1"	type = "Bronya_ValkyrieChariot_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Bronya_ValkyrieChariot_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Bronya_ValkyrieChariot_Idle3_animation"}
+		animation = { id = "Move"	type = "Bronya_ValkyrieChariot_Move_animation"}
+		animation = { id = "MoveFast"	type = "Bronya_ValkyrieChariot_MoveFast_animation"}
+		animation = { id = "RightHandAttack1"	type = "Bronya_ValkyrieChariot_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Bronya_ValkyrieChariot_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Bronya_ValkyrieChariot_RightHandAttack3_animation"}
+		animation = { id = "RightHandAttack4"	type = "Bronya_ValkyrieChariot_RightHandAttack4_animation"}
+		animation = { id = "RightHandAttack5"	type = "Bronya_ValkyrieChariot_RightHandAttack5_animation"}
+		animation = { id = "Fire"	type = "Bronya_ValkyrieChariot_Fire_animation"}
+	}
+
+########### Bronya_YamabukiArmor ###########
+	pdxmesh = {
+		name = "Bronya_YamabukiArmor_pdx"
+		file = "gfx/models/units/Bronya/Bronya_YamabukiArmor.mesh"
+
+		animation = { id = "Idle1"	type = "Bronya_ValkyrieChariot_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Bronya_ValkyrieChariot_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Bronya_ValkyrieChariot_Idle3_animation"}
+		animation = { id = "Move"	type = "Bronya_ValkyrieChariot_Move_animation"}
+		animation = { id = "MoveFast"	type = "Bronya_ValkyrieChariot_MoveFast_animation"}
+		animation = { id = "RightHandAttack1"	type = "Bronya_ValkyrieChariot_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Bronya_ValkyrieChariot_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Bronya_ValkyrieChariot_RightHandAttack3_animation"}
+		animation = { id = "RightHandAttack4"	type = "Bronya_ValkyrieChariot_RightHandAttack4_animation"}
+		animation = { id = "RightHandAttack5"	type = "Bronya_ValkyrieChariot_RightHandAttack5_animation"}
+		animation = { id = "Fire"	type = "Bronya_ValkyrieChariot_Fire_animation"}
+	}
+
+########### Bronya_DimensionBreaker ###########
+	pdxmesh = {
+		name = "Bronya_DimensionBreaker_pdx"
+		file = "gfx/models/units/Bronya/Bronya_DimensionBreaker.mesh"
+
+		animation = { id = "Idle1"	type = "Bronya_ValkyrieChariot_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Bronya_ValkyrieChariot_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Bronya_ValkyrieChariot_Idle3_animation"}
+		animation = { id = "Move"	type = "Bronya_ValkyrieChariot_Move_animation"}
+		animation = { id = "MoveFast"	type = "Bronya_ValkyrieChariot_MoveFast_animation"}
+		animation = { id = "RightHandAttack1"	type = "Bronya_ValkyrieChariot_RightHandAttack1_animation"}
+		animation = { id = "RightHandAttack2"	type = "Bronya_ValkyrieChariot_RightHandAttack2_animation"}
+		animation = { id = "RightHandAttack3"	type = "Bronya_ValkyrieChariot_RightHandAttack3_animation"}
+		animation = { id = "RightHandAttack4"	type = "Bronya_ValkyrieChariot_RightHandAttack4_animation"}
+		animation = { id = "RightHandAttack5"	type = "Bronya_ValkyrieChariot_RightHandAttack5_animation"}
+		animation = { id = "Fire"	type = "Bronya_ValkyrieChariot_Fire_animation"}
+	}
+
+########### Bronya_SilverWingNEX ###########
+	pdxmesh = {
+		name = "Bronya_SilverWingNEX_pdx"
+		file = "gfx/models/units/Bronya/Bronya_SilverWingN-EX.mesh"
+	
+		animation = { id = "Idle1"	type = "Bronya_SilverWingNEX_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Bronya_SilverWingNEX_Idle2_animation"}
+		animation = { id = "Move"	type = "Bronya_SilverWingNEX_Move_animation"}
+		animation = { id = "LeftHandAttack1"	type = "Bronya_SilverWingNEX_LeftHandAttack1_animation"}
+		animation = { id = "LeftHandAttack2"	type = "Bronya_SilverWingNEX_LeftHandAttack2_animation"}
+		animation = { id = "LeftHandAttack3"	type = "Bronya_SilverWingNEX_LeftHandAttack3_animation"}
+		animation = { id = "RotateAttack"	type = "Bronya_SilverWingNEX_RotateAttack_animation"}
+	}
+
+#############################
+########### Fuka ############
+#############################
+
+########### Fuka_ShadowKnight ###########
+	pdxmesh = {
+		name = "Fuka_ShadowKnight_pdx"
+		file = "gfx/models/units/Fuka/Fuka_ShadowKnight.mesh"
+		animation = { id = "Idle"	type = "Fuka_ShadowKnight_Idle_animation"}
+		animation = { id = "Move"	type = "Fuka_ShadowKnight_Move_animation"}
+		animation = { id = "Attack1"	type = "Fuka_ShadowKnight_Attack_Ground_A_animation"}
+		animation = { id = "Attack2"	type = "Fuka_ShadowKnight_Attack_Ground_B_animation"}
+	}
+
+########### Fuka_AzureEmpyrea ###########
+	pdxmesh = {
+		name = "Fuka_AzureEmpyrea_pdx"
+		file = "gfx/models/units/Fuka/Fuka_AzureEmpyrea.mesh"
+
+		animation = { id = "Idle1"	type = "Fuka_AzureEmpyrea_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Fuka_AzureEmpyrea_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Fuka_AzureEmpyrea_Idle3_animation"}
+		animation = { id = "Move"	type = "Fuka_AzureEmpyrea_Move_animation"}
+		animation = { id = "Attack"	type = "Fuka_AzureEmpyrea_Attack_animation"}
+		animation = { id = "Ultra"	type = "Fuka_AzureEmpyrea_Ultra_animation"}
+		animation = { id = "Charge"	type = "Fuka_AzureEmpyrea_Charge_animation"}
+	}
+#############################
+######### Theresa ###########
+#############################
+
+########### StarlitAstrologos ###########
+	pdxmesh = {
+		name = "Theresa_StarlitAstrologos_pdx"
+		file = "gfx/models/units/Theresa/Theresa_StarlitAstrologos.mesh"
+		animation = { id = "Idle1"	type = "Theresa_StarlitAstrologos_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Theresa_StarlitAstrologos_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Theresa_StarlitAstrologos_Idle3_animation"}
+		animation = { id = "Move"	type = "Theresa_StarlitAstrologos_Move_animation"}
+		animation = { id = "Attack"	type = "Theresa_StarlitAstrologos_Attack_animation"}
+		animation = { id = "Ultra"	type = "Theresa_StarlitAstrologos_Ultra_animation"}
+	}
+
+
+########### LunarVowCrimsonLove ###########
+	pdxmesh = {
+		name = "Theresa_LunarVowCrimsonLove_pdx"
+		file = "gfx/models/units/Theresa/Theresa_LunarVowCrimsonLove.mesh"
+		animation = { id = "Idle1"	type = "Theresa_LunarVowCrimsonLove_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Theresa_LunarVowCrimsonLove_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Theresa_LunarVowCrimsonLove_Idle3_animation"}
+		animation = { id = "Move"	type = "Theresa_LunarVowCrimsonLove_Move_animation"}
+		animation = { id = "Attack1"	type = "Theresa_LunarVowCrimsonLove_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Theresa_LunarVowCrimsonLove_Attack2_animation"}
+	}
+
+########### Mars ###########
+	pdxmesh = {
+		name = "Theresa_Mars_pdx"
+		file = "gfx/models/units/Theresa/Theresa_Mars.mesh"
+		animation = { id = "Idle1"	type = "Theresa_Mars_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Theresa_Mars_Idle2_animation"}
+		animation = { id = "Move"	type = "Theresa_Mars_Move_animation"}
+		animation = { id = "Attack"	type = "Theresa_Mars_Attack_animation"}
+		animation = { id = "Ultra"	type = "Theresa_Mars_Ultra_animation"}
+	}
+
+########### 伊甸 ###########
+	pdxmesh = {
+		name = "Eden_GoldenDiva_pdx"
+		file = "gfx/models/units/Eden/Eden_GoldenDiva.mesh"
+		animation = { id = "Idle1"	type = "Eden_GoldenDiva_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Eden_GoldenDiva_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Eden_GoldenDiva_Idle3_animation"}
+		animation = { id = "Move"	type = "Eden_GoldenDiva_Move_animation"}
+		animation = { id = "Attack1"	type = "Eden_GoldenDiva_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Eden_GoldenDiva_Attack2_animation"}
+		animation = { id = "SKL"	type = "Eden_GoldenDiva_SKL_animation"}
+	}
+
+#############################
+######### Herrscher #########
+#############################
+
+########### Kiana_HerrscherofVoid ###########
+	### Old ####
+	# pdxmesh = {
+	# 	name = "Kiana_HerrscherofVoid_pdx"
+	# 	file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofVoid.mesh"
+
+	# 	animation = { id = "Idle1"	type = "Kiana_HerrscherofVoid_Idle1_animation"}
+	# 	animation = { id = "Idle2"	type = "Kiana_HerrscherofVoid_Idle2_animation"}
+	# 	animation = { id = "Idle3"	type = "Kiana_HerrscherofVoid_Idle3_animation"}
+	# 	animation = { id = "Move"	type = "Kiana_HerrscherofVoid_Move_animation"}
+	# 	animation = { id = "Walk"	type = "Kiana_HerrscherofVoid_Walk_animation"}
+	# 	animation = { id = "Attack1"	type = "Kiana_HerrscherofVoid_Attack1_animation"}
+	# 	animation = { id = "Attack2"	type = "Kiana_HerrscherofVoid_Attack2_animation"}
+	# 	animation = { id = "Attack3"	type = "Kiana_HerrscherofVoid_Attack3_animation"}
+	# 	animation = { id = "AttackThree"	type = "Kiana_HerrscherofVoid_AttackThree_animation"}
+	# 	animation = { id = "AllFire"	type = "Kiana_HerrscherofVoid_AllFire_animation"}
+	# }
+	
+	### Rework ####
+	pdxmesh = {
+		name = "Kiana_HerrscherofVoid_Body_pdx"
+		file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofVoid_Body.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_HerrscherofVoid_Body_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Kiana_HerrscherofVoid_Body_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Kiana_HerrscherofVoid_Body_Idle3_animation"}
+		animation = { id = "Move"	type = "Kiana_HerrscherofVoid_Body_Move_animation"}
+		animation = { id = "Attack"	type = "Kiana_HerrscherofVoid_Body_Attack_animation"}
+		animation = { id = "Ultra"	type = "Kiana_HerrscherofVoid_Body_Ultra_animation"}
+		animation = { id = "BranchAttack"	type = "Kiana_HerrscherofVoid_Body_BranchAttack_animation"}
+	}
+	pdxmesh = {
+		name = "Kiana_HerrscherofVoid_BodyAdd_pdx"
+		file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofVoid_BodyAdd.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_HerrscherofVoid_BodyAdd_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Kiana_HerrscherofVoid_BodyAdd_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Kiana_HerrscherofVoid_BodyAdd_Idle3_animation"}
+		animation = { id = "Move"	type = "Kiana_HerrscherofVoid_BodyAdd_Move_animation"}
+		animation = { id = "Attack"	type = "Kiana_HerrscherofVoid_BodyAdd_Attack_animation"}
+		animation = { id = "Ultra"	type = "Kiana_HerrscherofVoid_BodyAdd_Ultra_animation"}
+		animation = { id = "BranchAttack"	type = "Kiana_HerrscherofVoid_BodyAdd_BranchAttack_animation"}
+	}
+
+########### Kiana_HerrscherofFlamescion ###########
+	pdxmesh = {
+		name = "Kiana_HerrscherofFlamescion_pdx"
+		file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofFlamescion.mesh"
+
+		animation = { id = "Idle1"	type = "Kiana_HerrscherofFlamescion_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Kiana_HerrscherofFlamescion_Idle2_animation"}
+		animation = { id = "Move"	type = "Kiana_HerrscherofFlamescion_Move_animation"}
+		animation = { id = "Attack"	type = "Kiana_HerrscherofFlamescion_Attack_animation"}
+		animation = { id = "Ultra"	type = "Kiana_HerrscherofFlamescion_Ultra_animation"}
+		animation = { id = "RulerStart"	type = "Kiana_HerrscherofFlamescion_RulerStart_animation"}
+	}
+
+########### Kiana_HerrscherofFinality_static ###########
+	pdxmesh = {
+		name = "Kiana_HerrscherofFinality_static_pdx"
+		file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofFinality_static.mesh"
+
+		animation = { id = "FallAttack"	type = "Kiana_HerrscherofFinality_static_FallAttack_animation"}
+		animation = { id = "Stop"	type = "Kiana_HerrscherofFinality_static_Stop_animation"}
+	}
+
+########### Mei_HerrscherofThunder ###########
+	pdxmesh = {
+		name = "Mei_HerrscherofThunder_pdx"
+		file = "gfx/models/units/HerrscherMei/Mei_HerrscherofThunder.mesh"
+	
+		animation = { id = "Idle1"	type = "Mei_HerrscherofThunder_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Mei_HerrscherofThunder_Idle2_animation"}
+		animation = { id = "Move"	type = "Mei_HerrscherofThunder_Move_animation"}
+		animation = { id = "Attack1"	type = "Mei_HerrscherofThunder_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Mei_HerrscherofThunder_Attack2_animation"}
+	}
+
+
+########### Bronya_HerrscherofReason ###########
+	pdxmesh = {
+		name = "Bronya_HerrscherofReason_pdx"
+		file = "gfx/models/units/HerrscherBronya/Bronya_HerrscherofReason.mesh"
+	
+		animation = { id = "Idle1"	type = "Bronya_HerrscherofReason_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Bronya_HerrscherofReason_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Bronya_HerrscherofReason_Idle3_animation"}
+		animation = { id = "Move"	type = "Bronya_HerrscherofReason_Move_animation"}
+		animation = { id = "Attack1"	type = "Bronya_HerrscherofReason_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Bronya_HerrscherofReason_Attack2_animation"}
+		animation = { id = "Fire"	type = "Bronya_HerrscherofReason_Fire_animation"}
+	}
+
+########### Seele_HerrscherofRebirth ###########
+	#body
+	pdxmesh = {
+		name = "Seele_HerrscherofRebirth_Body_pdx"
+		file = "gfx/models/units/HerrscherSeele/Seele_HerrscherofRebirth_Body.mesh"
+	
+		animation = { id = "Idle"	type = "Seele_HerrscherofRebirth_Body_Idle_animation"}
+		animation = { id = "Move"	type = "Seele_HerrscherofRebirth_Body_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_HerrscherofRebirth_Body_Attack1_animation"}
+		animation = { id = "BranchAttack"	type = "Seele_HerrscherofRebirth_Body_BranchAttack_animation"}
+		animation = { id = "Attack2"	type = "Seele_HerrscherofRebirth_Body_Attack2_animation"}
+	}
+	#ShortSkirt
+	pdxmesh = {
+		name = "Seele_HerrscherofRebirth_ShortSkirt_pdx"
+		file = "gfx/models/units/HerrscherSeele/Seele_HerrscherofRebirth_ShortSkirt.mesh"
+	
+		animation = { id = "Idle"	type = "Seele_HerrscherofRebirth_ShortSkirt_Idle_animation"}
+		animation = { id = "Move"	type = "Seele_HerrscherofRebirth_ShortSkirt_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_HerrscherofRebirth_ShortSkirt_Attack1_animation"}
+		animation = { id = "BranchAttack"	type = "Seele_HerrscherofRebirth_ShortSkirt_BranchAttack_animation"}
+		animation = { id = "Attack2"	type = "Seele_HerrscherofRebirth_ShortSkirt_Attack2_animation"}
+	}
+	#LongSkirt1
+	pdxmesh = {
+		name = "Seele_HerrscherofRebirth_LongSkirt1_pdx"
+		file = "gfx/models/units/HerrscherSeele/Seele_HerrscherofRebirth_LongSkirt1.mesh"
+	
+		animation = { id = "Idle"	type = "Seele_HerrscherofRebirth_LongSkirt1_Idle_animation"}
+		animation = { id = "Move"	type = "Seele_HerrscherofRebirth_LongSkirt1_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_HerrscherofRebirth_LongSkirt1_Attack1_animation"}
+		animation = { id = "BranchAttack"	type = "Seele_HerrscherofRebirth_LongSkirt1_BranchAttack_animation"}
+		animation = { id = "Attack2"	type = "Seele_HerrscherofRebirth_LongSkirt1_Attack2_animation"}
+	}
+	#LongSkirt2
+	pdxmesh = {
+		name = "Seele_HerrscherofRebirth_LongSkirt2_pdx"
+		file = "gfx/models/units/HerrscherSeele/Seele_HerrscherofRebirth_LongSkirt2.mesh"
+	
+		animation = { id = "Idle"	type = "Seele_HerrscherofRebirth_LongSkirt2_Idle_animation"}
+		animation = { id = "Move"	type = "Seele_HerrscherofRebirth_LongSkirt2_Move_animation"}
+		animation = { id = "Attack1"	type = "Seele_HerrscherofRebirth_LongSkirt2_Attack1_animation"}
+		animation = { id = "BranchAttack"	type = "Seele_HerrscherofRebirth_LongSkirt2_BranchAttack_animation"}
+		animation = { id = "Attack2"	type = "Seele_HerrscherofRebirth_LongSkirt2_Attack2_animation"}
+	}
+	
+########### Elysia_HerrscherofHuman ###########
+	pdxmesh = {
+		name = "Elysia_HerrscherofHuman_pdx"
+		file = "gfx/models/units/HerrscherElysia/Elysia_HerrscherofHuman.mesh"
+	
+		animation = { id = "Idle1"	type = "Elysia_HerrscherofHuman_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Elysia_HerrscherofHuman_Idle2_animation"}
+		animation = { id = "Idle3"	type = "Elysia_HerrscherofHuman_Idle3_animation"}
+		animation = { id = "Move"	type = "Elysia_HerrscherofHuman_Move_animation"}
+		animation = { id = "Move2"	type = "Elysia_HerrscherofHuman_Move2_animation"}
+		animation = { id = "Attack1"	type = "Elysia_HerrscherofHuman_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Elysia_HerrscherofHuman_Attack2_animation"}
+		animation = { id = "Attack3"	type = "Elysia_HerrscherofHuman_Attack3_animation"}
+	}
+
+########### Elysia_MissPinkElf ###########
+	pdxmesh = {
+		name = "Elysia_MissPinkElf_pdx"
+		file = "gfx/models/units/Elysia/Elysia_MissPinkElf.mesh"
+	
+		animation = { id = "Idle1"	type = "Elysia_MissPinkElf_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Elysia_MissPinkElf_Idle2_animation"}
+		animation = { id = "Move"	type = "Elysia_MissPinkElf_Move_animation"}
+		animation = { id = "Attack1"	type = "Elysia_MissPinkElf_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Elysia_MissPinkElf_Attack2_animation"}
+	}
+
+########### Elysia_HerrscherofErosion ###########
+	pdxmesh = {
+		name = "Elysia_HerrscherofErosion_pdx"
+		file = "gfx/models/units/Elysia/Elysia_MissPinkElfA.mesh"
+	
+		animation = { id = "Idle1"	type = "Elysia_MissPinkElf_Idle1_animation"}
+		animation = { id = "Idle2"	type = "Elysia_MissPinkElf_Idle2_animation"}
+		animation = { id = "Move"	type = "Elysia_MissPinkElf_Move_animation"}
+		animation = { id = "Attack1"	type = "Elysia_MissPinkElf_Attack1_animation"}
+		animation = { id = "Attack2"	type = "Elysia_MissPinkElf_Attack2_animation"}
+	}
+}

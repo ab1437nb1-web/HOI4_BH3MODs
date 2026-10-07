@@ -1,0 +1,260 @@
+scripted_gui = {
+
+	BH3_Hyperion_Menu = { 
+		context_type = player_context
+		window_name = "BH3_Hyperion_Menu" 
+		visible = { has_country_flag = BH3_Hyperion_enabled  }
+		
+		effects = {
+			BH3_Hyperion_Menu_btn_click = {
+				set_country_flag = BH3_main_menu_open
+				clr_country_flag = BH3_tech_menu_open
+				clr_country_flag = BH3_Valkyrie_Doctrine_on
+				scoped_sound_effect = CaptainOnTheBridge
+			}
+			BH3_Hyperion_Menu_Secretary_btn_click = {
+				set_country_flag = BH3_main_menu_open
+				clr_country_flag = BH3_tech_menu_open
+				clr_country_flag = BH3_Valkyrie_Doctrine_on
+				if = {
+					limit = { has_country_flag = BH3_Hyperion_Secretary_Elysia }
+					BH3_Secretary_Elysia_sound_effect_OnBridge = yes
+				}
+				else = {
+					scoped_sound_effect = CaptainOnTheBridge
+				}
+			}
+			BH3_Hyperion_Change_Secretary_btn_click = {
+				if = {
+					limit = { has_country_flag = BH3_Hyperion_Change_Secretary_on }
+					clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				}
+				else = {
+					set_country_flag = BH3_Hyperion_Change_Secretary_on
+				}
+			}
+			BH3_Hyperion_Recharge_btn_click = {
+				scoped_sound_effect = Hyperion_Recharge
+				add_fuel = -30000
+				set_country_flag = BH3_Hyperion_charged
+			}
+			BH3_Hyperion_Atk_btn_click = {
+				ROOT = {
+					BH3_Hyperion_attack = yes
+					scoped_sound_effect = Hyperion_Fire
+					set_variable = { bh3_current_fuel_k = fuel_k }
+				}
+			}
+			BH3_Hyperion_Visable_btn_click = {
+				if = {
+					limit = { has_country_flag = BH3_Hyperion_Icon_on }
+					clr_country_flag = BH3_Hyperion_Icon_on
+				}
+				else = {
+					set_country_flag = BH3_Hyperion_Icon_on
+				}
+			}
+
+        }
+		triggers = {
+			BH3_Hyperion_Menu_btn_click_enabled = {
+				NOT = { has_country_flag = BH3_main_menu_open } 
+			}
+			BH3_Hyperion_Menu_btn_visible = {
+				NOT = { has_country_flag = BH3_Hyperion_Secretary_set }
+				has_country_flag =BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Menu_Secretary_btn_visible = {
+				has_country_flag = BH3_Hyperion_Secretary_set
+				has_country_flag = BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Menu_Secretary_img1_visible = {
+				has_country_flag = BH3_Hyperion_Secretary_set
+				has_country_flag = BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Menu_Secretary_img2_visible = {
+				has_country_flag = BH3_Hyperion_Secretary_set
+				has_country_flag = BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Change_Secretary_btn_visible = { 
+				has_country_flag = BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Recharge_btn_visible = {
+				NOT = { has_country_flag = BH3_Hyperion_charged }
+				has_country_flag = BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Recharge_btn_click_enabled = {
+				NOT = { has_country_flag = BH3_Hyperion_charged }
+				has_fuel > 30000
+				is_special_project_completed = sp:BH3_sp_hyperion_stength_fire
+
+			}
+			BH3_Hyperion_Atk_btn_visible = {
+				has_country_flag = BH3_Hyperion_charged
+				has_country_flag =BH3_Hyperion_Icon_on
+			}
+			BH3_Hyperion_Atk_btn_click_enabled = {
+				has_country_flag = BH3_Hyperion_enabled
+				has_country_flag = BH3_Hyperion_charged
+				NOT = {
+					has_country_flag = BH3_Hyperion_moving
+				}
+				is_special_project_completed = sp:BH3_sp_hyperion_stength_fire
+			}
+		}
+		properties = {
+			BH3_Hyperion_Menu_Secretary_img1 = { image = "GFX_BH3_unit_leader_[?BH3_Hyperion_Secretary]_CT1" }
+			BH3_Hyperion_Menu_Secretary_img2 = { image = "GFX_BH3_unit_leader_[?BH3_Hyperion_Secretary]_CT2" }
+		}
+	}
+
+	BH3_Hyperion_Change_Secretary_Menu = { 
+		context_type = player_context
+		window_name = "BH3_Hyperion_Change_Secretary_Menu" 
+		parent_window_name = "BH3_Hyperion_Menu" 
+		visible = { has_country_flag = BH3_Hyperion_Change_Secretary_on  }
+		
+		effects = {
+			BH3_Hyperion_Change_Secretary1_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 101 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				random_list = {
+					40 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice1 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice2 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice3 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice4 }
+				}
+			}
+			BH3_Hyperion_Change_Secretary2_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 110 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice4 }
+				}
+			}
+			BH3_Hyperion_Change_Secretary3_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 120 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice4 }
+				}
+				add_dynamic_modifier = {
+					modifier = modifiers_BH3_Secretary_Buff
+				}
+			}
+			BH3_Hyperion_Change_Secretary4_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 130 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				random_list = {
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice1 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice2 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice3 }
+				}
+			}
+			BH3_Hyperion_Change_Secretary5_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 43 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				random_list = {
+					33 = { scoped_sound_effect = SeeleB_tech_sel_voice1 }
+					33 = { scoped_sound_effect = SeeleB_tech_sel_voice2 }
+					34 = { scoped_sound_effect = SeeleB_tech_sel_voice3 }
+				}
+			}
+			BH3_Hyperion_Change_Secretary6_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 140 }
+				set_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+				BH3_Secretary_Elysia_sound_effect_Set = yes
+			}
+			BH3_Hyperion_Change_Secretary7_btn_click = { 
+				set_variable = { BH3_Hyperion_Secretary = 102 }
+				clr_country_flag = BH3_Hyperion_Secretary_Elysia
+				set_country_flag = BH3_Hyperion_Secretary_set
+				clr_country_flag = BH3_Hyperion_Change_Secretary_on
+			}
+        }
+		triggers = {
+			BH3_Hyperion_Change_Secretary7_btn_visible = {
+				is_debug = yes
+			}
+		}
+	}
+	
+	BH3_Hyperion_Leader_Skill_Ani = {
+		context_type = player_context
+		window_name = "BH3_Hyperion_Leader_Skill_Ani" 
+		visible = { has_country_flag = BH3_Hyperion_Leader_Skill_set  }
+
+		triggers = {
+			BH3_Hyperion_Leader_Skill_img1_visible = {
+				has_country_flag = BH3_Hyperion_Leader_Skill_set
+			}
+			BH3_Hyperion_Leader_Skill_img2_visible = {
+				has_country_flag = BH3_Hyperion_Leader_Skill_set
+			}
+		}
+		properties = {
+			BH3_Hyperion_Leader_Skill_img1 = { image = "GFX_BH3_unit_leader_[?BH3_Hyperion_LeaderSkill]_Skill1" }
+			BH3_Hyperion_Leader_Skill_img2 = { image = "GFX_BH3_unit_leader_[?BH3_Hyperion_LeaderSkill]_Skill2" }
+		}
+	}
+	
+	BH3_Hyperion_AttackMenu = { 
+		context_type = selected_state_context
+		window_name = "BH3_Hyperion_AttackMenu" 
+		parent_window_name = "countrystateview"
+		
+		effects = {
+			BH3_Hyperion_attack_btn_click = {
+				ROOT = {
+					BH3_Hyperion_attack = yes
+					scoped_sound_effect = Hyperion_Fire
+				}
+			}
+			BH3_Hyperion_move_btn_click = {
+				BH3_Hyperion_move = yes
+			}
+        }
+		triggers = {
+			BH3_Hyperion_attack_btn_click_enabled = {
+				ROOT = {
+					has_country_flag = BH3_Hyperion_enabled
+					has_country_flag = BH3_Hyperion_charged
+					NOT = {
+						has_country_flag = BH3_Hyperion_moving
+					}
+				}
+			}
+			BH3_Hyperion_move_btn_visible = {
+				ROOT = {
+					has_country_flag = BH3_Hyperion_enabled
+					NOT = {
+						has_variable = BH3_Hyperion_target
+					}
+				}
+				check_variable = {
+					var = THIS.id
+					value = ROOT.BH3_Hyperion_pos
+					compare = not_equals
+				}
+			}
+		}
+	}
+}

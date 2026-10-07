@@ -1,0 +1,190 @@
+focus_tree = {
+	#崩坏国策
+	id = BHS_Focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BHS
+		}
+	}
+
+	#continuous_focus_position = { x = 10 y = 10 }
+	
+	default = no
+	reset_on_civilwar = no	
+
+	initial_show_position = {
+		x = 0
+	}
+	
+	focus = {
+		id = BHS_HI1_Come
+		icon = GFX_goal_BH3_disaster
+		x = 2
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HI1_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HI1 }
+		}
+	}
+	focus = {
+		id = BHS_HI2_Come
+		icon = GFX_goal_BH3_disaster
+		x = 4
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HI2_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HI2 }
+		}
+	}
+	focus = {
+		id = BHS_HI3_Come
+		icon = GFX_goal_BH3_disaster
+		x = 6
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HI3_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HI3 }
+		}
+	}
+
+	focus = {
+		id = BHS_HI6_Come
+		icon = GFX_goal_BH3_disaster
+		x = 8
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HI6_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HI6 }
+		}
+	}
+
+	focus = {
+		id = BHS_HI7_Come
+		icon = GFX_goal_BH3_disaster
+		x = 10
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HI7_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HI7 }
+		}
+	}
+
+	focus = {
+		id = BHS_HH2_Come
+		icon = GFX_goal_BH3_disaster
+		x = 10
+		y = 2
+		
+		prerequisite = { }
+		mutually_exclusive = { }
+		cost = 1
+		ai_will_do = {
+			factor = 99
+		}
+		available = {
+			NOT = { has_global_flag = BHS_HI_Has_Sel }
+		}
+		bypass = {
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		completion_reward = {
+			set_global_flag = HH2_will_Come
+			set_global_flag = BHS_HI_Has_Sel
+			set_variable = { global.BH3_HIX_Control_State_decision = HH2 }
+		}
+	}
+
+	shared_focus = BHS_Chaotujiji_upgrade
+	shared_focus = BHS_more_diwangji1
+}

@@ -1,0 +1,94 @@
+
+########### Kiana_HerrscherofVoid ###########
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Idle1_animation"
+	file = "Kiana_HerrscherofVoid_Body_Idle1.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Idle2_animation"
+	file = "Kiana_HerrscherofVoid_Body_Idle2.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Idle3_animation"
+	file = "Kiana_HerrscherofVoid_Body_Idle3.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Move_animation"
+	file = "Kiana_HerrscherofVoid_Body_Move.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Attack_animation"
+	file = "Kiana_HerrscherofVoid_Body_Attack.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_Ultra_animation"
+	file = "Kiana_HerrscherofVoid_Body_Ultra.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_Body_BranchAttack_animation"
+	file = "Kiana_HerrscherofVoid_Body_BranchAttack.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Idle1_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Idle1.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Idle2_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Idle2.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Idle3_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Idle3.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Move_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Move.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Attack_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Attack.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_Ultra_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_Ultra.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_BranchAttack_animation"
+	file = "Kiana_HerrscherofVoid_BodyAdd_BranchAttack.anim"
+}
+
+########### Kiana_HerrscherofFlamescion ###########
+animation = {
+	name = "Kiana_HerrscherofFlamescion_Idle1_animation"
+	file = "Kiana_HerrscherofFlamescion_Idle1.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFlamescion_Idle2_animation"
+	file = "Kiana_HerrscherofFlamescion_Idle2.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFlamescion_Move_animation"
+	file = "Kiana_HerrscherofFlamescion_Move.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFlamescion_Attack_animation"
+	file = "Kiana_HerrscherofFlamescion_Attack.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFlamescion_Ultra_animation"
+	file = "Kiana_HerrscherofFlamescion_Ultra.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFlamescion_RulerStart_animation"
+	file = "Kiana_HerrscherofFlamescion_RulerStart.anim"
+}
+
+########### Kiana_HerrscherofFinality_static ###########
+animation = {
+	name = "Kiana_HerrscherofFinality_static_FallAttack_animation"
+	file = "Kiana_HerrscherofFinality_static_FallAttack.anim"
+}
+animation = {
+	name = "Kiana_HerrscherofFinality_static_Stop_animation"
+	file = "Kiana_HerrscherofFinality_static_Stop.anim"
+}

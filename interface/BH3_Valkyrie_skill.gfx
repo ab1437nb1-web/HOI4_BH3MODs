@@ -1,0 +1,145 @@
+spriteTypes = {
+	SpriteType = { #空律大招
+		name = "GFX_ability_ABILITY_BH3_Void" 
+		texturefile = "gfx/interface/abilitylist/ability_Void.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Void_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Void.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Void.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {#薪炎大招
+		name = "GFX_ability_ABILITY_BH3_Flamescion" 
+		texturefile = "gfx/interface/abilitylist/ability_Flamescion.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Flamescion_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Flamescion.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Flamescion.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {#终焉大招
+		name = "GFX_ability_ABILITY_BH3_Finality" 
+		texturefile = "gfx/interface/abilitylist/ability_Finality.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Finality_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Finality.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Finality.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #雷律大招
+	name = "GFX_ability_ABILITY_BH3_Thunder" 
+	texturefile = "gfx/interface/abilitylist/ability_Thunder.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Thunder_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Thunder.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Thunder.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #理律大招
+	name = "GFX_ability_ABILITY_BH3_Reason" 
+	texturefile = "gfx/interface/abilitylist/ability_Reason.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Reason_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Reason.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Reason.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #识律大招
+	name = "GFX_ability_ABILITY_BH3_Sentience" 
+	texturefile = "gfx/interface/abilitylist/ability_Sentience.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Sentience_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Sentience.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Sentience.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #死生律大招1
+	name = "GFX_ability_ABILITY_BH3_Rebirth1" 
+	texturefile = "gfx/interface/abilitylist/ability_Rebirth.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Rebirth1_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Rebirth.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Rebirth.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #死生律大招2
+	name = "GFX_ability_ABILITY_BH3_Rebirth2" 
+	texturefile = "gfx/interface/abilitylist/ability_Rebirth.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Rebirth2_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Rebirth.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Rebirth.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = { #人律大招
+	name = "GFX_ability_ABILITY_BH3_Human" 
+	texturefile = "gfx/interface/abilitylist/ability_Human.dds" 
+	}
+	SpriteType = { 
+		name = "GFX_ability_ABILITY_BH3_Human_animated" 
+		texturefile = "gfx/interface/abilitylist/ability_Human.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = { animationmaskfile = "gfx/interface/abilitylist/ability_Human.dds"
+			animationtexturefile = "gfx/interface/focusview/titlebar/focus_completed_texture.dds" animationrotation = 0.0 animationlooping = yes
+			animationtime = 26.0 animationdelay = 0.0 animationblendmode = "add" animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 } animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

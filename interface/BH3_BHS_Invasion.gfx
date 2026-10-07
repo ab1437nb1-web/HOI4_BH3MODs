@@ -1,0 +1,23 @@
+spriteTypes = {
+	########## UI ##########
+	corneredTileSpriteType = {
+		name = "GFX_BH3_invasion_menu_bg"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_invasion_menu_bg.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_CheakBox_30x30_btn"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_CheakBox_30x30_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_opt_complete_200x50_btn"
+		texturefile = "gfx/interface/technologies/BH3_yes_200x50_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_opt_closebutton"
+		texturefile = "gfx/interface/technologies/BH3_close_btn.dds"
+	}
+}
+	

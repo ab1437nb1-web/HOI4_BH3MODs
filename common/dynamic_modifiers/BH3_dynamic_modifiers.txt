@@ -1,0 +1,206 @@
+#省份受崩坏能侵蚀
+BHSinvasion_effect = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	attacker_modifier = yes
+
+	army_attack_factor = -0.25
+	# special_forces_attack_factor = 0.25
+	air_cas_present_factor = -0.5
+	ground_attack_factor = -0.5
+	recruitable_population_factor = -0.95
+	production_speed_buildings_factor = -0.5
+	local_building_slots_factor = -0.5
+	resistance_growth = -1
+	resistance_target = -1
+	compliance_growth = 1
+	attrition = 0.1
+}
+#崩坏能高浓度地区
+BHS_High_Honkai_area = {
+	icon = GFX_modifiers_High_Honkai_area
+	# attacker_modifier = yes
+	#陆军加成
+	army_attack_factor = 3
+	army_defence_factor = 3
+	attrition = 0.5
+}
+#休伯利安对地块支援
+BH3_Hyperion_support_effect = {
+	icon = GFX_modifiers_Hyperion_effect
+	# attacker_modifier = yes
+	#陆军加成
+	army_attack_factor = 0.15
+	army_defence_factor = 0.30
+	army_attack_speed_factor = 0.25 #陆军师进攻速度
+	local_org_regain = 0.15
+	supply_consumption_factor = -0.25 #补给消耗
+	supply_factor = 2 #补给效率
+	#海军
+	# naval_damage_factor = 0.25
+	# naval_defense_factor = 0.25
+	# spotting_chance = 1
+	# navy_visibility = -0.5
+	# naval_detection = 2
+	# positioning = 0.25
+	# naval_morale_factor = 0.5
+	#空军加成
+	air_detection = 2
+	air_mission_efficiency = 2
+	air_cas_present_factor = 2 #加陆战对地支援
+	ground_attack_factor = 2 #加空军对地支援伤害
+	enemy_army_bonus_air_superiority_factor = -0.75 
+}
+#随浓度增加攻防
+BHS_AtaackDefend ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_AtaackDefend
+	army_attack_factor = global.BHS_Atteack
+	army_defence_factor = global.BHS_Defend
+	army_morale_factor = global.BHS_army_morale_factor
+}
+#随时间增加攻防
+BHS_TimeImprovement ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_TimeImprovement
+	army_attack_factor = global.BHS_TacticalAtteack
+	army_defence_factor = global.BHS_TacticalDefend
+	army_strength_factor = global.BHS_TacticalDefend
+	army_org_factor = global.BHS_TacticalDefend
+}
+#随文明强度增加攻防
+BHS_CivilizationImprovement ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_CivilizationImprovement
+	army_attack_against_major_factor = global.BHS_CivilizationImprovement_ATK
+	army_defence_against_major_factor = global.BHS_CivilizationImprovement_DEF
+	army_strength_factor = global.BHS_CivilizationImprovement_HP  
+	army_org_factor = global.BHS_CivilizationImprovement_ORG	
+}
+#按全球工业计算
+BHS_IC_AtaackDefend ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_ICAtaackDefend
+	army_attack_factor = global.BHS_IC
+	army_defence_factor = global.BHS_IC
+}
+#浓度对生产生活影响
+BHS_disaster_effect ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BH3_disaster
+	consumer_goods_expected_value = global.HUM_ConsumerExpected
+	political_power_gain = global.HUM_PoliticalPpower
+	mobilization_speed = global.HUM_MobilizationSpeed
+	conscription = global.HUM_Conscription
+	industrial_capacity_factory = global.HUM_IC_factory
+	production_speed_buildings_factor  = global.HUM_BuildingSpeed
+	air_cas_present_factor = global.HUM_air_cas_present_factor #陆战对地支援
+	ground_attack_factor = global.HUM_ground_attack_factor #空军对地支援伤害
+	air_accidents_factor = global.HUM_air_accidents_factor #空军事故
+	weekly_manpower = global.HUM_weekly_manpower
+}
+#核熔蚀抗性
+BHS_NuclearCorrosionResistance_effect = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_NuclearCorrosionResistance_effect
+	army_strength_factor = global.BHS_NuclearCorrosionResistance_var
+	army_org_factor = global.BHS_NuclearCorrosionResistance_var
+}
+
+#女武神战力加成
+BH3_Valkyrie_Score_effect ={
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BH3_Valkyrie_Score_effect
+	army_attack_factor = global.BH3_Valkyrie_Score_effect1
+	army_defence_factor =  global.BH3_Valkyrie_Score_effect1
+	army_strength_factor = global.BH3_Valkyrie_Score_effect2
+	army_org_factor = global.BH3_Valkyrie_Score_effect2
+}
+#理律权能影响
+BHS_HI1_Power_EffectHuman = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_HI1_Power_EffectHuman
+	research_speed_factor = global.BHS_HI1_Power_Effect1
+	industrial_capacity_factory =  global.BHS_HI1_Power_Effect2
+	production_speed_buildings_factor =  global.BHS_HI1_Power_Effect2
+}
+#雷律权能
+BHS_HI3_Power = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_HI3_Power
+	army_attack_factor = global.BHS_HI3_Power_Effect
+	terrain_penalty_reduction = 0.15
+	production_speed_buildings_factor = 0.25			#建造速度
+	production_factory_start_efficiency_factor = 0.5	#基础生产效率
+	production_factory_max_efficiency_factor = 0.5
+	industrial_capacity_factory = 0.5					#工厂产出
+}
+
+#犹大对省份效果（废弃）
+modifiers_BH3_sp_OathofJudah_to_enemy = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_modifiers_BH3_sp_OathofJudah_to_enemy
+	army_attack_factor = -9.99
+	army_speed_factor = -9.99
+}
+#犹大对省份效果
+modifiers_BH3_sp_OathofJudah_to_own = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_modifiers_BH3_sp_OathofJudah_to_enemy
+	army_attack_factor = 0.5
+	army_core_defence_factor = 1
+	cas_damage_reduction = 1
+	dig_in_speed_factor = 0.25
+	max_dig_in_factor = 1
+	pocket_penalty = -0.5
+}
+#伊甸之星Debuff效果
+modifiers_BH3_sp_StarofEden_Debuff = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_modifiers_BH3_sp_StarofEden_Debuff
+	army_speed_factor = -9.99
+	state_production_speed_buildings_factor = -9.99				#工厂建造速度
+	state_resources_factor = -9.99	
+}
+
+modifiers_BH3_sp_StarofEden_Buff = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_modifiers_BH3_sp_StarofEden_Buff
+	army_speed_factor = 1
+	state_production_speed_buildings_factor = 5				#工厂建造速度
+	state_resources_factor = 10	
+}
+
+modifiers_BH3_Secretary_Buff = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_idea_BHS_HI1_Power_EffectHuman
+
+	productivity_growth_modifier = 50
+}

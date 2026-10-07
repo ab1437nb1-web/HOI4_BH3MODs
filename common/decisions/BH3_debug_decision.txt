@@ -1,0 +1,447 @@
+
+BH3_debug_decisions_group = {
+	
+	BH3_Debug_Get_Balkyrie_Tech_decisions = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = {
+			is_debug = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			set_technology = {
+				Kiana_WhiteComet_Research = 1
+				Kiana_VoidDrifter_Research = 1
+				Kiana_KnightMoonbeam_Research = 1
+				Mei_CrimsonImpuls_Research = 1
+				Mei_StrikerFulminata_Research = 1
+				Mei_DanzaiSpectramancer_Research = 1
+				Mei_Captain_Research = 1
+				Bronya_ValkyrieChariot_Research = 1
+				Bronya_YamabukiArmor_Research = 1
+				Bronya_DimensionBreaker_Research = 1
+				Bronya_SilverWingNEX_Research = 1
+				Seele_SwallowtailPhantasm_Research = 1
+				Seele_StarchasmNyx_Research = 1
+				Seele_StygianNymph_Research = 1
+				Theresa_StarlitAstrologos_Research = 1
+				Theresa_LunarVowCrimsonLove_Research = 1
+				Theresa_Mars_Research = 1
+				Fuka_ShadowKnight_Research = 1
+				Fuka_AzureEmpyrea_Research = 1
+				Eden_GoldenDiva_Research = 1
+			}
+		}
+	}
+
+	BH3_Debug_Get_ValkyrieSoldier_decisions = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = {
+			is_debug = yes
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			set_technology = {
+				BH3_ValkyrieSoldier_Research = 1
+			}
+			add_equipment_to_stockpile = {
+				type = ValkyrieSoldier_Kiana_B_equipment
+				amount = 99
+			}
+			add_equipment_to_stockpile = {
+				type = ValkyrieSoldier_Kiana_A_equipment
+				amount = 99
+			}
+			add_equipment_to_stockpile = {
+				type = ValkyrieSoldier_Kiana_SS_equipment
+				amount = 99
+			}
+			add_equipment_to_stockpile = {
+				type = ValkyrieSoldier_Kiana_SSS_equipment
+				amount = 99
+			}
+		}
+	}
+	BH3_Debug_Get_ValkyrieArmor_Research_decisions = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = {
+			is_debug = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			set_technology = {
+				BH3_ValkyrieSoldier_Research = 1
+				BH3_ValkyrieArmor_classis_0_tech_Research = 1
+				BH3_ValkyrieArmor_classis_1_tech_Research = 1
+				BH3_ValkyrieArmor_classis_2_tech_Research = 1
+				BH3_ValkyrieArmor_classis_3_tech_Research = 1
+				BH3_debug_ValkyrieArmor_Research = 1
+			}
+		}
+	}
+
+	BH3_Debug_Build_LandFacility_Research_decisions = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = {
+			is_debug = yes
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = { can_construct_building = BH3_Honkai_Research_facility }
+				construct_building_in_random_province = {
+					BH3_Honkai_Research_facility = 1
+				}
+			}
+		}
+	}
+
+	BH3_Debug_Special_Projects_Complete_deciosion = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			
+		}
+		complete_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_Void_Archives
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ThousandKey
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_SevenThundersofRetribution
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_AbyssFlower
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_JudgementofShamash
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_FenghuangDown
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_StarofEden
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_OathofJudah
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_JizoMitama
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_hyperion_stength_fire
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ValkyrieArmor_Engine_HonkaiImproved
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ValkyrieArmor_classis_4
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_Doll
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_Honkai_Fission_Bomb
+			}
+		}
+	}
+
+	BH3_Ddebug_Change_Valkyrie_TraitLevel_to_A = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			every_character = {
+				limit = { has_trait = BH3_traits_valkyrie_b }
+				remove_trait = { trait = BH3_traits_valkyrie_b }
+				add_trait = { trait = BH3_traits_valkyrie_a }
+			}
+		}
+	}
+	BH3_Ddebug_Change_Valkyrie_TraitLevel_to_S = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			every_character = {
+				limit = { has_trait = BH3_traits_valkyrie_a }
+				remove_trait = { trait = BH3_traits_valkyrie_a }
+				add_trait = { trait = BH3_traits_valkyrie_s }
+			}
+		}
+	}
+
+	BH3_Ddebug_Change_Valkyrie_TraitLevel_to_SS = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			every_character = {
+				limit = { has_trait = BH3_traits_valkyrie_s }
+				remove_trait = { trait = BH3_traits_valkyrie_s }
+				add_trait = { trait = BH3_traits_valkyrie_ss }
+			}
+		}
+	}
+
+	BH3_Ddebug_Change_Valkyrie_TraitLevel_to_SSS = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			every_character = {
+				limit = { has_trait = BH3_traits_valkyrie_ss }
+				remove_trait = { trait = BH3_traits_valkyrie_ss }
+				add_trait = { trait = BH3_traits_valkyrie_sss }
+			}
+		}
+	}
+
+
+
+	BH3_cultivate_KianaKaslana_HerrscherPower_Void = {
+		priority = 0
+		available = {
+			is_debug = yes
+			# has_country_flag = BH3_Character_KianaKaslana_On
+			# has_global_flag = BHS_Started
+			# has_tech = Kiana_HerrscherofVoid_Research
+			# has_idea = BHS_HI2_Power
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						add_trait = { trait = BH3_trait_HerrscherofVoid }
+						add_trait = { trait = BH3_traits_valkyrie_sss }
+						set_variable = { PREV.BH3_cultivate_decision_window_KianaKaslana_img = 13 }
+						set_portraits = { 
+							army = {
+								large = GFX_BH3_unit_leader_HerrscherofVoidKiana
+								small = GFX_BH3_unit_leader_HerrscherofVoid_small 
+							} 
+						} 
+					}
+				}
+				log = ""
+			}
+		}
+	}
+
+	#月球之战失败测试-崩坏投降倾向高
+	BH3_BHS_MoonBattle_Lose_Condition_decision_debug1 = {
+		priority = 99
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = no
+		visible = {
+			has_global_flag  = BHS_Started
+			is_debug = yes
+		}
+		available = {
+			NOT= { has_global_flag = BHS_MoonBattleLose }
+			is_debug = yes
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			set_global_flag = BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible_FLAG
+		}
+	}
+
+	#月球之战失败测试-击败所有律者
+	BH3_BHS_MoonBattle_Lose_Condition_decision_debug2 = {
+		priority = 99
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = no
+		visible = {
+			has_global_flag  = BHS_Started
+			is_debug = yes
+		}
+		available = {
+			NOT= { has_global_flag = BHS_MoonBattleLose }
+			is_debug = yes
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			set_global_flag = HI1_has_beaten
+			set_global_flag = HI2_has_beaten
+			set_global_flag = HI3_has_beaten
+			set_global_flag = HI6_has_beaten
+			set_global_flag = HI7_has_beaten
+			set_global_flag = HH2_has_beaten
+		}
+	}
+	
+	#月球之战直接失败-人口损失超限制
+	BH3_BHS_MoonBattle_Lose_Condition_decision_debug3 = {
+		priority = 99
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = no
+		visible = {
+			has_global_flag  = BHS_Started
+			is_debug = yes
+		}
+		available = {
+			NOT= { has_global_flag = BHS_MoonBattleLose }
+			is_debug = yes
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			set_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+		}
+	}
+
+	BH3_Debug_add_idea_nuke_to_bhs = {
+		priority = 0
+		available = {
+			is_debug = yes
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			set_variable = { global.BHS_NuclearCorrosionResistance_var = 10 }
+			BHS = { add_dynamic_modifier = { modifier = BHS_NuclearCorrosionResistance_effect } }
+		}
+	}
+
+	BH3_Debug_deciosion = {
+		priority = 0
+		available = {
+			is_debug = yes
+			# check_variable = { modifier@productivity_growth_modifier > 0.1 } 
+		}
+		visible = { 
+			is_debug = yes
+    	}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			
+		}
+		complete_effect = {
+
+		}
+	}
+
+}

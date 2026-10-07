@@ -1,0 +1,375 @@
+ability = {
+    ABILITY_BH3_Void = { #空律加速
+        name = ABILITY_BH3_Void desc = ABILITY_BH3_Void_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofVoid
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = { 
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Void_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 100 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+        
+        unit_modifiers = {
+            offence = 0.5
+            plains = { movement = 3 }
+            mountain = { movement = 3 }
+            marsh = { movement = 3 }
+            river = { movement = 3 }
+            amphibious = { movement = 3 }
+            forest = { movement = 3 }
+            hills = { movement = 3 }
+            desert = { movement = 3 }
+        }
+        cost = 0.1 duration = 120 cooldown = 120
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+    ABILITY_BH3_Flamescion = { #薪炎拔剑
+        name = ABILITY_BH3_Flamescion desc = ABILITY_BH3_Flamescion_desc type = army_leader
+        allowed = { 
+			#NOT = { FROM = { has_country_flag =  } }
+            has_trait = BH3_trait_HerrscherofFlamescion
+			#is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Flamescion_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 101 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+
+        unit_modifiers = {
+            offence = 10
+        }
+        cost = 0.1 duration = 24 cooldown = 96
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+    ABILITY_BH3_Finality = { #跨越终焉的破决
+        name = ABILITY_BH3_Finality desc = ABILITY_BH3_Finality_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofFinality
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Finality_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 102 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    }
+                }
+            }
+            custom_effect_tooltip = ABILITY_BH3_Finality_tt
+            hidden_effect = {
+                FROM = { add_threat = 5 }
+                HerrscherofFinality_One_Hit = yes
+            } 
+        }
+        unit_modifiers = {
+            org_damage_multiplier = -0.99
+            str_damage_multiplier = -0.99
+            offence = 2
+            defence = 2
+        }
+        cost = 0.0 duration = 120 cooldown = 0
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+
+    ABILITY_BH3_Thunder = { #雷律大招
+        name = ABILITY_BH3_Thunder desc = ABILITY_BH3_Thunder_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofThunder
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Thunder_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 110 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+        
+        unit_modifiers = {
+            offence = 1.5
+            breakthrough_factor = 1
+            defence = 0.25
+        }
+        cost = 0.1 duration = 144 cooldown = 144
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+
+    ABILITY_BH3_Reason = { #理律大招
+        name = ABILITY_BH3_Reason desc = ABILITY_BH3_Reason_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofReason
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Reason_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 120 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+        unit_modifiers = {
+            offence = 0.15
+            defence = 0.25
+            equipment_capture = 5
+            planning_speed = 3
+            max_planning = 1
+        }
+        cost = 0.1 duration = 240 cooldown = 48
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+    
+    ABILITY_BH3_Sentience = { #识律大招
+        name = ABILITY_BH3_Sentience desc = ABILITY_BH3_Sentience_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofSentience
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Sentience_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 150 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+        unit_modifiers = {
+            offence = 1
+            breakthrough_factor = 0.5
+            terrain_penalty_reduction = 1
+        }
+        cost = 0.1 duration = 96 cooldown = 72
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+
+    ABILITY_BH3_Rebirth1 = { #死生律大招1
+        name = ABILITY_BH3_Rebirth1 desc = ABILITY_BH3_Rebirth1_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofRebirth
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Rebirth1_vol 
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 130 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+
+        unit_modifiers = {
+            org_damage_multiplier = -0.25
+            str_damage_multiplier = -0.25
+            defence = 1
+        }
+        cost = 0.02 duration = 120 cooldown = 0
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+    ABILITY_BH3_Rebirth2 = { #死生律大招2
+    name = ABILITY_BH3_Rebirth2 desc = ABILITY_BH3_Rebirth2_desc type = army_leader
+    allowed = { 
+        has_trait = BH3_trait_HerrscherofRebirth
+        #is_leading_army_group = no
+    }
+    one_time_effect = { 
+        if = {
+            limit = { FROM = { is_ai = no } }
+            FROM = { 
+                hidden_effect = { 
+                    scoped_sound_effect = ABILITY_BH3_Rebirth2_vol 
+                    set_country_flag = BH3_Hyperion_Leader_Skill_set
+                    set_variable = { BH3_Hyperion_LeaderSkill = 131 }
+                    country_event = {
+                        id = BH3_misc.4
+                        days = 5
+                    }
+                } 
+            }
+        }
+    }
+    unit_modifiers = {
+        breakthrough_factor = 0.25
+        offence = 0.5
+        terrain_penalty_reduction = 0.25
+        plains = { movement = 0.25 }
+        mountain = { movement = 0.25 }
+        marsh = { movement = 0.25 }
+        river = { movement = 0.25 }
+        amphibious = { movement = 0.25 }
+        forest = { movement = 0.25 }
+        hills = { movement = 0.25 }
+        desert = { movement = 0.25 }
+    }
+    cost = 0.02 duration = 120 cooldown = 0
+    ai_will_do = { 
+        factor = 0 
+        modifier = {
+            FROM = {
+                has_idea = BHS_herrscher_enhance_idea
+            }
+            add = 999
+        }
+    }
+}
+
+    ABILITY_BH3_Human = { #人律大招
+        name = ABILITY_BH3_Human desc = ABILITY_BH3_Human_desc type = army_leader
+        allowed = { 
+            has_trait = BH3_trait_HerrscherofHuman
+            #is_leading_army_group = no
+        }
+        one_time_effect = { 
+            if = {
+                limit = { FROM = { is_ai = no } }
+                FROM = { 
+                    hidden_effect = { 
+                        scoped_sound_effect = ABILITY_BH3_Human_vol
+                        set_country_flag = BH3_Hyperion_Leader_Skill_set
+                        set_variable = { BH3_Hyperion_LeaderSkill = 140 }
+                        country_event = {
+                            id = BH3_misc.4
+                            days = 5
+                        }
+                    } 
+                }
+            }
+        }
+
+        unit_modifiers = {
+            org_damage_multiplier = -0.8
+            str_damage_multiplier = -0.8
+            offence = 1
+            defence = 2
+        }
+        cost = 0.1 duration = 240 cooldown = 120
+        ai_will_do = { 
+            factor = 0 
+            modifier = {
+				FROM = {
+					has_idea = BHS_herrscher_enhance_idea
+				}
+				add = 999
+			}
+        }
+    }
+}

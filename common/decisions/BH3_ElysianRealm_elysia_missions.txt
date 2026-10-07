@@ -1,0 +1,466 @@
+# 往事乐土·真我刻印（P3）：德国与苏联的定制任务链
+#   * selectable_mission = yes 让决策表现为原版任务（有时限、有成败）
+#   * 每阶段给 2~3 个选项，任选其一完成即可；完成后设置阶段旗标，同阶段其它选项随 visible 消失
+#   * 超时走 BH3_ER_elysia_stage_timeout（照梅福券：累积惩罚 + 任务重新激活，可再来）
+#   * 阶段奖励：政治点 + 节奏变量；最后一个阶段额外授予真我刻印本体
+
+BH3_ElysianRealm_elysia_missions = {
+
+	# ===== 四年计划（GER 阶段1）=====
+	BH3_ER_Elysia_GER_1a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { has_completed_focus = GER_the_four_year_plan }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage1
+			add_political_power = 50
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1938.3.12 完成 → 额外节奏
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_1a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 恢复经济（GER 阶段1）=====
+	BH3_ER_Elysia_GER_1b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { has_completed_focus = GER_prioritize_economic_growth }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage1
+			add_political_power = 50
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1938.3.12 完成 → 额外节奏
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_1b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 闪电扩军（GER 阶段1）=====
+	BH3_ER_Elysia_GER_1c = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { has_army_manpower > 1000000 }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage1
+			add_political_power = 50
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1938.3.12 完成 → 额外节奏
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_1c }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 慕尼黑路线（GER 阶段2）=====
+	BH3_ER_Elysia_GER_2a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { has_completed_focus = GER_demand_sudetenland }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage2
+			add_political_power = 100
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1939.9.1 完成 → 额外节奏
+			if = {
+				limit = { date < 1939.9.1 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_2a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 直接摊牌（GER 阶段2）=====
+	BH3_ER_Elysia_GER_2b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { POL = { has_capitulated = yes } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage2
+			add_political_power = 100
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1939.9.1 完成 → 额外节奏
+			if = {
+				limit = { date < 1939.9.1 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_2b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 海狮计划（GER 阶段3）=====
+	BH3_ER_Elysia_GER_3a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { ENG = { has_capitulated = yes } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_country_flag = BH3_ER_GER_stage3 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 660
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage3
+			add_political_power = 150
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1941.6.22 完成 → 额外节奏
+			if = {
+				limit = { date < 1941.6.22 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+			BH3_ER_elysia_grant_GER = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_3a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 巴巴罗萨（GER 阶段3）=====
+	BH3_ER_Elysia_GER_3b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { SOV = { has_capitulated = yes } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_country_flag = BH3_ER_GER_stage3 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 660
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = GER }
+			set_country_flag = BH3_ER_GER_stage3
+			add_political_power = 150
+			BH3_ER_elysia_momentum_step = yes
+			# 历史节点奖励：早于 1941.6.22 完成 → 额外节奏
+			if = {
+				limit = { date < 1941.6.22 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+			BH3_ER_elysia_grant_GER = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = GER MISSION = BH3_ER_Elysia_GER_3b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 结束清洗（左倾路线）（SOV 阶段1）=====
+	BH3_ER_Elysia_SOV_1a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_completed_focus = SOV_left_purges }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_SOV_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 1080
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage1
+			add_political_power = 50
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_1a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 结束清洗（右倾路线）（SOV 阶段1）=====
+	BH3_ER_Elysia_SOV_1b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_completed_focus = SOV_right_purges }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_SOV_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 1080
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage1
+			add_political_power = 50
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_1b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 军队重建（SOV 阶段1）=====
+	BH3_ER_Elysia_SOV_1c = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_army_manpower > 1500000 }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			always = yes
+			NOT = { has_country_flag = BH3_ER_SOV_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 1080
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage1
+			add_political_power = 50
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_1c }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 五年计划（SOV 阶段2）=====
+	BH3_ER_Elysia_SOV_2a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_completed_focus = SOV_finish_the_five_year_plan }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_SOV_stage1
+			NOT = { has_country_flag = BH3_ER_SOV_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 300
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage2
+			add_political_power = 100
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_2a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 工业东迁（SOV 阶段2）=====
+	BH3_ER_Elysia_SOV_2b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_completed_focus = SOV_move_industry_to_the_urals }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_SOV_stage1
+			NOT = { has_country_flag = BH3_ER_SOV_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 300
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage2
+			add_political_power = 100
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_2b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 筑垒地带（SOV 阶段2）=====
+	BH3_ER_Elysia_SOV_2c = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_completed_focus = SOV_improve_the_stalin_line }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_SOV_stage1
+			NOT = { has_country_flag = BH3_ER_SOV_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 300
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage2
+			add_political_power = 100
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_2c }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 坚守核心（SOV 阶段3）=====
+	BH3_ER_Elysia_SOV_3a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { has_war_with = GER  surrender_progress < 0.30 }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_SOV_stage2
+			NOT = { has_country_flag = BH3_ER_SOV_stage3 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 360
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage3
+			add_political_power = 150
+			BH3_ER_elysia_liberation_step = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_3a }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# ===== 反攻柏林（SOV 阶段3）=====
+	BH3_ER_Elysia_SOV_3b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = SOV }
+		available = { GER = { has_capitulated = yes } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_SOV_stage2
+			NOT = { has_country_flag = BH3_ER_SOV_stage3 }
+			NOT = { has_idea = BH3_ER_Elysia_SOV }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 360
+		cancel_if_not_visible = yes
+		complete_effect = {
+			BH3_ER_elysia_stage_ok = { TAG = SOV }
+			set_country_flag = BH3_ER_SOV_stage3
+			add_political_power = 150
+			BH3_ER_elysia_liberation_step = yes
+			BH3_ER_elysia_grant_SOV = yes
+		}
+		timeout_effect = {
+			BH3_ER_elysia_stage_timeout = { TAG = SOV MISSION = BH3_ER_Elysia_SOV_3b }
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

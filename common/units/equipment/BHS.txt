@@ -1,0 +1,413 @@
+equipments = {
+
+	########### 死士 ###########
+	SishiBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 5
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 0.1
+		hard_attack = 0
+		ap_attack = 0
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	SishiBHS_equipment_0 = {
+		archetype = SishiBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	
+
+	########### 突进级崩坏兽 ###########
+	TujinBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 12
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 420
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 28
+		hard_attack = 12
+		ap_attack = 5
+		air_attack = 50
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	TujinBHS_equipment_0 = {
+		archetype = TujinBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	TujinBHS_equipment_1 = {
+	
+		archetype = TujinBHS_equipment
+		parent = TujinBHS_equipment_0
+		priority = 2
+		visual_level = 1
+
+		maximum_speed = 18
+
+		#Defensive Abilities
+		defense = 15
+		breakthrough = 800
+		hardness = 0.1
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 45
+		hard_attack = 25
+		ap_attack = 10
+		air_attack = 80
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+
+	########### 骑士级崩坏兽 ###########
+	QishiBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 300
+		breakthrough = 102
+		hardness = 0.1
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 65
+		hard_attack = 60
+		ap_attack = 15
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	QishiBHS_equipment_0 = {
+		archetype = QishiBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	QishiBHS_equipment_1 = {
+	
+		archetype = QishiBHS_equipment
+		parent = QishiBHS_equipment_0
+		priority = 2
+		visual_level = 1
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 420
+		breakthrough = 160
+		hardness = 0.2
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 105
+		hard_attack = 100
+		ap_attack = 30
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+
+	########### 战车级崩坏兽 ###########
+	ZhancheBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 620
+		breakthrough = 60
+		hardness = 0.5
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 150
+		hard_attack = 210
+		ap_attack = 50
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	ZhancheBHS_equipment_0 = {
+		archetype = ZhancheBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	ZhancheBHS_equipment_1 = {
+	
+		archetype = ZhancheBHS_equipment
+		parent = ZhancheBHS_equipment_0
+		priority = 2
+		visual_level = 1
+
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 720
+		breakthrough = 120
+		hardness = 0.5
+		armor_value = 135
+
+		#Offensive Abilities
+		soft_attack = 200
+		hard_attack = 285
+		ap_attack = 75
+		air_attack = 5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+
+	########### 圣殿级崩坏兽 ###########
+	ShengdianBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 350
+		breakthrough = 300
+		hardness = 0.3
+		armor_value = 45
+
+		#Offensive Abilities
+		soft_attack = 200
+		hard_attack = 190
+		ap_attack = 75
+		air_attack = 12
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	ShengdianBHS_equipment_0 = {
+		archetype = ShengdianBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	ShengdianBHS_equipment_1 = {
+	
+		archetype = ShengdianBHS_equipment
+		parent = ShengdianBHS_equipment_0
+		priority = 2
+		visual_level = 1
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 490
+		breakthrough = 380
+		hardness = 0.4
+		armor_value = 85
+
+		#Offensive Abilities
+		soft_attack = 300
+		hard_attack = 280
+		ap_attack = 110
+		air_attack = 18
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	
+	########### 帝王级崩坏兽 ###########
+	#迦尼萨
+	JianisaBHS_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 650
+		breakthrough = 885
+		hardness = 0.6
+		armor_value = 110
+
+		#Offensive Abilities
+		soft_attack = 580
+		hard_attack = 520
+		ap_attack = 150
+		air_attack = 40
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+	}
+	JianisaBHS_equipment_0 = {
+		archetype = JianisaBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+
+	########### 审判级崩坏兽 ###########
+	#贝纳勒斯
+	BeinalesiBHS_equipment = {
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 16
+
+		#Defensive Abilities
+		defense = 1020
+		breakthrough = 1200
+		hardness = 0.7
+		armor_value = 180
+
+		#Offensive Abilities
+		soft_attack = 670
+		hard_attack = 520
+		ap_attack = 200
+		air_attack = 100
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+
+	}
+	BeinalesiBHS_equipment_0 = {
+		archetype = BeinalesiBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+	
+	#崩坏阵营的律者
+	HerrscherBHS_equipment = {
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 16
+
+		#Defensive Abilities
+		defense = 10000
+		breakthrough = 1200
+		hardness = 0.8
+		armor_value = 500
+
+		#Offensive Abilities
+		soft_attack = 4500
+		hard_attack = 4500
+		ap_attack = 500
+		air_attack = 100
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 10000
+
+	}
+	HerrscherBHS_equipment_0 = {
+		archetype = HerrscherBHS_equipment
+		priority = 1
+		visual_level = 0
+	}
+}

@@ -1,0 +1,418 @@
+######## SishiBHS ########
+entity = {
+	name = "SishiBHS_entity"
+	pdxmesh = "SishiBHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 0.04
+}
+entity = {
+	clone =  "SishiBHS_entity"
+	name = "SishiBHS_0_entity"
+	pdxmesh = "SishiBHS_pdx"
+}
+
+######## TujiBHS ########
+entity = {
+	name = "TujinBHS_entity"
+	pdxmesh = "Tujin1BHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 2.5
+}
+entity = {
+	clone =  "TujinBHS_entity"
+	name = "TujinBHS_0_entity"
+	pdxmesh = "Tujin1BHS_pdx"
+}
+
+entity = {
+	clone =  "TujinBHS_entity"
+	name = "TujinBHS_1_entity"
+	pdxmesh = "Tujin2BHS_pdx"
+}
+
+######## QishiBHS ########
+entity = {
+	name = "QishiBHS_entity"
+	pdxmesh = "Qishi1BHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 3
+}
+entity = {
+	clone =  "QishiBHS_entity"
+	name = "QishiBHS_0_entity"
+	pdxmesh = "Qishi1BHS_pdx"
+}
+
+entity = {
+	clone =  "QishiBHS_entity"
+	name = "QishiBHS_1_entity"
+	pdxmesh = "Qishi2BHS_pdx"
+}
+
+######## ZhancheBHS ########
+entity = {
+	name = "ZhancheBHS_entity"
+	pdxmesh = "Zhanche1BHS_pdx"
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 2.2
+}
+entity = {
+	clone =  "ZhancheBHS_entity"
+	name = "ZhancheBHS_0_entity"
+	pdxmesh = "Zhanche1BHS_pdx"
+}
+
+entity = {
+	clone =  "ZhancheBHS_entity"
+	name = "ZhancheBHS_1_entity"
+	pdxmesh = "Zhanche2BHS_pdx"
+}
+
+######## ShengdianBHS ########
+entity = {
+	name = "ShengdianBHS_entity"
+	pdxmesh = "Shengdian1BHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 2 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 2.5
+}
+entity = {
+	clone =  "ShengdianBHS_entity"
+	name = "ShengdianBHS_0_entity"
+	pdxmesh = "Shengdian1BHS_pdx"
+}
+
+entity = {
+	clone =  "ShengdianBHS_entity"
+	name = "ShengdianBHS_1_entity"
+	pdxmesh = "Shengdian2BHS_pdx"
+}
+
+######## 帝王级崩坏兽 ########
+######## 迦尼萨 ########
+entity = {
+	name = "JianisaBHS_entity"
+	pdxmesh = "JianisaBHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Burst1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Roll1"   animation_blend_time = 0.1  animation_speed = 1.5 looping = no  next_state = "attack"  chance = 2 
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Burst2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Burst2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Burst1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Roll1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Burst2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 3
+}
+entity = {
+	clone =  "JianisaBHS_entity"
+	name = "JianisaBHS_0_entity"
+	pdxmesh = "JianisaBHS_pdx"
+}
+######## 贝纳勒斯 ########
+entity = {
+	name = "BeinalesiBHS_entity"
+	pdxmesh = "BeinalesiBHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1}
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle"  chance = 2}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Roar"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Pounce"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "WingClaw"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Breath"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 2 
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "attack"  animation = "Tornado"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "WingClaw"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "defend"  animation = "Breath"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Roar"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Pounce"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Tornado"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "WingClaw"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "BHS_Attack" } }
+	}
+	#正常比例为4
+	scale = 2.5
+}
+entity = {
+	clone =  "BeinalesiBHS_entity"
+	name = "BeinalesiBHS_0_entity"
+	pdxmesh = "BeinalesiBHS_pdx"
+}
+
+######## 示现此世之兽 ########
+entity = {
+	name = "MonsterBossBHS_entity"
+	pdxmesh = "MonsterBossBHS_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  }
+	#正常比例为4
+	scale = 2.5
+}

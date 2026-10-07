@@ -1,0 +1,1380 @@
+scripted_gui = {
+
+	BH3_cultivate_decision_window = { 
+		context_type = decision_category
+		window_name = "BH3_cultivate_decision_window" 
+		visible = { always = yes }
+
+		effects = {
+			BH3_cultivate_decision_window_KianaKaslana_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_KianaKaslana_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_KianaKaslana_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_KianaKaslana_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+				set_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 10 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 11 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 11 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 12 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 12 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 13 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 13 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 14 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 14 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 15 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 15 }
+						has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_KianaKaslana_img = 10 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_KianaKaslana_img }
+					clr_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_KianaKaslana = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_RaidenMei_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_RaidenMei_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_RaidenMei_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_RaidenMei_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+				set_country_flag = BH3_cultivate_decision_window_RaidenMei_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 20 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 21 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 21 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 22 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 22 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 23 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 23 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 24 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 24 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 25 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 25 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 26 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RaidenMei_img = 26 }
+						has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RaidenMei_img = 20 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RaidenMei_img }
+					clr_country_flag = BH3_cultivate_decision_window_RaidenMei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RaidenMei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_BronyaZaych_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_BronyaZaych_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_BronyaZaych_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_BronyaZaych_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+				set_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 30 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 31 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 31 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 32 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 32 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 33 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 33 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 34 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 34 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 35 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 35 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 36 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 36 }
+						has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BronyaZaych_img = 30 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BronyaZaych_img }
+					clr_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BronyaZaych = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_SeeleVollerei_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollerei_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollerei_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollerei_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+				set_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 40 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 41 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollerei_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollerei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 41 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 42 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollerei_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollerei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 42 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 43 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollerei_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollerei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 43 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollerei_img = 40 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollerei_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollerei = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_SeeleVollereiBlack_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollereiBlack_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollereiBlack_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_SeeleVollereiBlack_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+				set_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 50 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 51 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollereiBlack_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollereiBlack = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 51 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 52 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollereiBlack_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollereiBlack = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 52 }
+						has_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_SeeleVollereiBlack_img = 50 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_SeeleVollereiBlack_img }
+					clr_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_SeeleVollereiBlack = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_TheresaApocalypse_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaApocalypse_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaApocalypse_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaApocalypse_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+				set_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 60 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 61 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaApocalypse_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaApocalypse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										# small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 61 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 62 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaApocalypse_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaApocalypse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										# small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 62 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 63 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaApocalypse_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaApocalypse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										# small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 63 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 64 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaApocalypse_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaApocalypse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										# small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 64 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaApocalypse_img = 60 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaApocalypse_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaApocalypse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										# small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}	
+
+			BH3_cultivate_decision_window_TheresaLunar_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaLunar_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaLunar_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaLunar_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+				set_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 70 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 71 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaLunar_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaLunar = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 71 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 72 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaLunar_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaLunar = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 72 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 73 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaLunar_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaLunar = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 73 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaLunar_img = 70 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaLunar_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaLunar = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_TheresaStarlitAstrologos_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaStarlitAstrologos_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaStarlitAstrologos_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_TheresaStarlitAstrologos_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_flag
+				set_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 80 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 81 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaStarlitAstrologos = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 81 }
+						has_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 80 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img }
+					clr_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_TheresaStarlitAstrologos = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+			}
+
+			BH3_cultivate_decision_window_Fuka_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_Fuka_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_Fuka_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_Fuka_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+				set_country_flag = BH3_cultivate_decision_window_Fuka_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Fuka_img = 90 }
+						has_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Fuka_img = 91 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Fuka_img }
+					clr_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Fuka = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Fuka_img = 91 }
+						has_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Fuka_img = 92 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Fuka_img }
+					clr_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Fuka = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Fuka_img = 92 }
+						has_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Fuka_img = 93 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Fuka_img }
+					clr_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Fuka = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Fuka_img = 93 }
+						has_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Fuka_img = 90 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Fuka_img }
+					clr_country_flag = BH3_cultivate_decision_window_Fuka_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Fuka = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}			
+
+			BH3_cultivate_decision_window_BiankaDurandalAtaegina_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_BiankaDurandalAtaegina_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_BiankaDurandalAtaegina_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_BiankaDurandalAtaegina_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+				set_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 100 }
+						has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 101 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img }
+					clr_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BiankaDurandalAtaegina = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = GFX_BH3_unit_leader_DeaAnchora_small
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 101 }
+						has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 102 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img }
+					clr_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BiankaDurandalAtaegina = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = GFX_BH3_unit_leader_DeaAnchora_small
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 102 }
+						has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 103 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img }
+					clr_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BiankaDurandalAtaegina = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = GFX_BH3_unit_leader_DeaAnchora_small
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 103 }
+						has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 100 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img }
+					clr_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_BiankaDurandalAtaegina = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = GFX_BH3_unit_leader_DeaAnchora_small
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_RitaRossweisse_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_RitaRossweisse_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_RitaRossweisse_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_RitaRossweisse_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+				set_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 110 }
+						has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 111 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RitaRossweisse_img }
+					clr_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RitaRossweisse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 111 }
+						has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 112 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RitaRossweisse_img }
+					clr_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RitaRossweisse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 112 }
+						has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 113 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RitaRossweisse_img }
+					clr_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RitaRossweisse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 113 }
+						has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 114 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RitaRossweisse_img }
+					clr_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RitaRossweisse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 114 }
+						has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_RitaRossweisse_img = 110 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_RitaRossweisse_img }
+					clr_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_RitaRossweisse = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+			}
+
+			BH3_cultivate_decision_window_Eden_click = {
+				custom_effect_tooltip = BH3_cultivate_decision_window_Eden_ttName
+				custom_effect_tooltip = BH3_cultivate_decision_window_Eden_ttDesc
+				custom_effect_tooltip = BH3_cultivate_decision_window_Eden_ttScore
+				custom_effect_tooltip = BH3_cultivate_decision_window_Character_Portraits_tt
+
+				set_country_flag = BH3_cultivate_decision_window_Eden_img_flag
+				set_country_flag = BH3_cultivate_decision_window_Eden_img_locked_flag
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Eden_img = 120 }
+						has_country_flag = BH3_cultivate_decision_window_Eden_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Eden_img = 121 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Eden_img }
+					clr_country_flag = BH3_cultivate_decision_window_Eden_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Eden = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}
+				if = { 
+					limit = { 
+						check_variable = { BH3_cultivate_decision_window_Eden_img = 121 }
+						has_country_flag = BH3_cultivate_decision_window_Eden_img_flag
+					}
+					set_variable = { BH3_cultivate_decision_window_Eden_img = 120 }
+					set_variable = { BH3_cultivate_decision_window_character_img = BH3_cultivate_decision_window_Eden_img }
+					clr_country_flag = BH3_cultivate_decision_window_Eden_img_flag
+					meta_effect = {
+						text = {
+							BH3_Character_Eden = {
+								set_portraits = { 
+									army = { 
+										large = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]"
+										small = "GFX_BH3_unit_leader_[BH3_cultivate_decision_window_character_img]_small"
+									} 
+								} 
+							}	
+						}
+						# debug = yes
+						BH3_cultivate_decision_window_character_img = "[GetBH3CharacterImgName]"
+					}
+				}		
+			}
+		}
+
+		triggers = {
+			BH3_cultivate_decision_window_KianaKaslana_click_enabled = { has_country_flag = BH3_Character_KianaKaslana_On }
+			BH3_cultivate_decision_window_RaidenMei_click_enabled = { has_country_flag = BH3_Character_RaidenMei_On }
+			BH3_cultivate_decision_window_BronyaZaych_click_enabled = { has_country_flag = BH3_Character_BronyaZaych_On }
+			BH3_cultivate_decision_window_SeeleVollerei_click_enabled = { has_country_flag = BH3_Character_SeeleVollerei_On }
+			BH3_cultivate_decision_window_SeeleVollereiBlack_click_enabled = { has_country_flag = BH3_Character_SeeleVollereiBlack_On }
+			BH3_cultivate_decision_window_Fuka_click_enabled = { has_country_flag = BH3_Character_Fuka_On }
+			BH3_cultivate_decision_window_TheresaApocalypse_click_enabled = { has_country_flag = BH3_Character_TheresaApocalypse_On }
+			BH3_cultivate_decision_window_TheresaLunar_click_enabled = { has_country_flag = BH3_Character_TheresaLunar_On }
+			BH3_cultivate_decision_window_TheresaStarlitAstrologos_click_enabled = { has_country_flag = BH3_Character_TheresaStarlitAstrologos_On }
+			BH3_cultivate_decision_window_BiankaDurandalAtaegina_click_enabled = { has_country_flag = BH3_Character_BiankaDurandalAtaegina_On }
+			BH3_cultivate_decision_window_RitaRossweisse_click_enabled = { has_country_flag = BH3_Character_RitaRossweisse_On }
+			BH3_cultivate_decision_window_Eden_click_enabled = { has_country_flag = BH3_Character_Eden_On }
+		}
+
+		properties = {
+			BH3_cultivate_decision_window_KianaKaslana =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_KianaKaslana_img]_medium" }
+			BH3_cultivate_decision_window_RaidenMei =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_RaidenMei_img]_medium" }
+			BH3_cultivate_decision_window_BronyaZaych =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_BronyaZaych_img]_medium" }
+			BH3_cultivate_decision_window_SeeleVollerei =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_SeeleVollerei_img]_medium" }
+			BH3_cultivate_decision_window_SeeleVollereiBlack =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_SeeleVollereiBlack_img]_medium" }
+			BH3_cultivate_decision_window_Fuka =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_Fuka_img]_medium" }
+			BH3_cultivate_decision_window_TheresaApocalypse =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_TheresaApocalypse_img]_medium" }
+			BH3_cultivate_decision_window_TheresaLunar =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_TheresaLunar_img]_medium" }
+			BH3_cultivate_decision_window_TheresaStarlitAstrologos =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_TheresaStarlitAstrologos_img]_medium" }
+			BH3_cultivate_decision_window_BiankaDurandalAtaegina =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_BiankaDurandalAtaegina_img]_medium" }
+			BH3_cultivate_decision_window_RitaRossweisse =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_RitaRossweisse_img]_medium" }
+			BH3_cultivate_decision_window_Eden =  { image = "GFX_BH3_unit_leader_[?BH3_cultivate_decision_window_Eden_img]_medium" }
+		}
+	}
+
+}

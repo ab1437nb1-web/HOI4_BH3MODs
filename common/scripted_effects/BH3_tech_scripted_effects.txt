@@ -1,0 +1,370 @@
+
+#科研
+BH3_start_research = {
+	set_variable = {
+		BH3_researching = 1
+	}
+	country_event = {
+		id = BH3_tech.1
+	}
+	set_variable = {
+		BH3_research_progress_p = -1000
+	}
+	meta_effect = {
+		text = {
+			set_variable = {
+				BH3_tech_days_remain = [time]
+			}
+		}
+		time = "[GetBH3TechTime]"
+	}
+ }
+# 旧版研发，已废弃
+BH3_research_complete = {
+	meta_effect = {
+		text = {
+			set_technology = {
+				[completed_tech]_Research = 1
+				BH3_ValkyrieArmor_[bh3_completed_tech_classis_tech]_tech_Research = 1
+			}
+			if = {
+				limit = { check_variable = { bh3_researching_tech_index < 100 } }
+
+				####老将领不再解锁，律者暂时不影响
+				set_country_flag = BH3_Character_[BH3_character_name]_On
+
+				division_template = {
+					name = [completed_tech_division]
+					is_locked = no
+					regiments = {
+						Valkyrie[completed_tech_subunit] = { x = 0 y = 0 }
+						Valkyrie[completed_tech_subunit] = { x = 0 y = 1 }
+						Valkyrie[completed_tech_subunit] = { x = 1 y = 0 }
+						Valkyrie[completed_tech_subunit] = { x = 1 y = 1 }
+					}
+				}
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+				capital_scope = {
+					create_unit = {
+						division = "name = [completed_tech_division] division_template = [completed_tech_division]  start_experience_factor = 0.5  start_equipment_factor = 0.1"
+						allow_spawning_on_enemy_provs = yes
+						owner = ROOT
+						count = 1
+					}	
+				}
+				add_equipment_to_stockpile = {
+					type = Valkyrie_[completed_tech_equipment]
+					amount = [completed_tech_equipmentNum]
+				}
+			}
+			else = {
+				BH3_create_leader_[completed_tech] = yes
+				division_template = {
+					name = [completed_tech_division]
+					is_locked = no
+					regiments = {
+						Herrscher[completed_tech_subunit] = { x = 0 y = 0 }
+					}
+				}
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+				capital_scope = {
+					create_unit = {
+						division = "name = [completed_tech_division] division_template = [completed_tech_division]  start_experience_factor = 0.5  start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = ROOT
+						count = 1
+					}	
+				}
+				# add_equipment_to_stockpile = {
+				# 	type = Valkyrie_[completed_tech_equipment]
+				# 	amount = [completed_tech_equipmentNum]
+				# }
+			}
+		}
+		BH3_character_name = "[GetBH3CharacterName]"
+		completed_tech = "[GetBH3TechName]"
+		completed_tech_division = "[GetBH3TechNameTranslation]"
+		completed_tech_subunit = "[GetBH3SubunitName]"
+		completed_tech_equipment = "[GetBH3EquipmentName]"
+		completed_tech_equipmentNum = "[GetBH3EquipmentNum]"
+		completed_tech_classis_tech = "[GetBH3ValkyrieArmorTech]"
+	}
+	clear_variable = bh3_researching_tech_index
+	clear_variable = bh3_tech_days_remain
+}
+
+BH3_ValkyrieArmor_research_complete = {
+	meta_effect = {
+		text = {
+			set_technology = {
+				[bh3_completed_tech]_Research = 1
+				BH3_ValkyrieArmor_[bh3_completed_tech_classis_tech]_tech_Research = 1
+			}
+			if = {
+				limit = { check_variable = { bh3_researching_tech_index < 100 } }
+
+				####老将领不再解锁，律者暂时不影响
+				set_country_flag = BH3_Character_[bh3_character_name]_On
+
+                ### 新版女武神装甲 ###
+                create_equipment_variant = {
+                    name = [bh3_completed_tech_division]
+                    type = BH3_ValkyrieArmor_[bh3_completed_tech_classis_tech]
+                    design_team = mio:BH3_MIO_Schicksal_Herheim_Lab #We feed on your tears
+                    parent_version = 0
+                    modules = {
+                        BH3_ValkyrieArmor_StigmataUp_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_stigmata_up]
+                        BH3_ValkyrieArmor_StigmataMid_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_stigmata_mid]
+                        BH3_ValkyrieArmor_MainWeapon_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_weapon]
+                        BH3_ValkyrieArmor_Armor_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_armor]
+                        BH3_ValkyrieArmor_Engine_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_engine]
+                        BH3_ValkyrieArmor_StigmataDown_Slot = BH3_ValkyrieArmor_[bh3_ValkyrieArmor_stigmata_down]
+                    }
+                    icon = "GFX_[bh3_completed_tech]_Research_medium"
+                    model = "[bh3_ValkyrieArmor_model]"
+                }
+                    ### 新版空中女武神装甲（AI 用，按角色形象：武器/引擎/圣痕随角色与代数变化）###
+                    create_equipment_variant = {
+                        name = [bh3_completed_tech_division]
+                        type = BH3_ValkyrieAir_ala_[bh3_ValkyrieAir_tech]
+                        design_team = mio:BH3_MIO_Schicksal_Herheim_Lab
+                        parent_version = 0
+                        modules = {
+                            fixed_main_weapon_slot = [bh3_ValkyrieAir_weapon]
+                            engine_type_slot = [bh3_ValkyrieAir_engine]
+                            BH3_ValkyrieAir_StigmataUp_Slot = [bh3_ValkyrieAir_stigmata_up]
+                            BH3_ValkyrieAir_StigmataMid_Slot = [bh3_ValkyrieAir_stigmata_mid]
+                            BH3_ValkyrieAir_StigmataDown_Slot = [bh3_ValkyrieAir_stigmata_down]
+                        }
+                        icon = "GFX_[bh3_completed_tech]_Research_medium"
+                        model = "BH3_ValkyrieAir_[bh3_ValkyrieAir_tech]_entity"
+                    }
+                    add_equipment_to_stockpile = {
+                        producer = ROOT
+                        type = BH3_ValkyrieAir_ala_[bh3_ValkyrieAir_tech]
+                        amount = 50
+                        variant_name = [bh3_completed_tech_division]
+                    }
+				
+				division_template = {
+					name = [bh3_completed_tech_division]
+					is_locked = no
+					regiments = {
+						ValkyrieArmorUnit = { x = 0 y = 0 }
+						ValkyrieArmorUnit = { x = 0 y = 1 }
+					}
+				}
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+				capital_scope = {
+					create_unit = {
+						division = "name = [bh3_completed_tech_division] division_template = [bh3_completed_tech_division]  start_experience_factor = 0.5  start_equipment_factor = 0.1"
+						allow_spawning_on_enemy_provs = yes
+						owner = ROOT
+						count = 1
+					}	
+				}
+				add_equipment_to_stockpile = {
+					producer = ROOT
+					type = BH3_ValkyrieArmor_[bh3_completed_tech_classis_tech]
+					amount = [bh3_completed_tech_equipmentNum]
+					variant_name = [bh3_completed_tech_division]
+				}
+				add_equipment_to_stockpile = {
+					producer = ROOT
+					type = ValkyrieSoldier_[bh3_valkyrie_soldier]_equipment
+					amount = [bh3_completed_tech_equipmentNum]
+				}
+			}
+			else = {
+				BH3_create_leader_[bh3_completed_tech] = yes
+				division_template = {
+					name = [bh3_completed_tech_division]
+					is_locked = yes
+					regiments = {
+						Herrscher[bh3_completed_tech_subunit] = { x = 0 y = 0 }
+					}
+				}
+				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+				capital_scope = {
+					create_unit = {
+						division = "name = [bh3_completed_tech_division] division_template = [bh3_completed_tech_division]  start_experience_factor = 0.5  start_equipment_factor = 1"
+						allow_spawning_on_enemy_provs = yes
+						owner = ROOT
+						count = 1
+					}	
+				}
+			}
+		}
+		# debug = yes
+		bh3_character_name = "[GetBH3CharacterName]"
+		bh3_completed_tech = "[GetBH3TechName]"
+		bh3_ValkyrieArmor_model = "[GetBH3ValkyrieArmorModel]"
+		bh3_completed_tech_division = "[GetBH3TechNameTranslation]"
+		bh3_completed_tech_subunit = "[GetBH3SubunitName]"
+		bh3_completed_tech_equipmentNum = "[GetBH3EquipmentNum]"
+		bh3_completed_tech_classis_tech = "[GetBH3ValkyrieArmorTech]"
+		bh3_ValkyrieArmor_stigmata_up = "[GetBH3ValkyrieArmorStigmataUp]"
+		bh3_ValkyrieArmor_stigmata_mid = "[GetBH3ValkyrieArmorStigmataMid]"
+		bh3_ValkyrieArmor_stigmata_down = "[GetBH3ValkyrieArmorStigmataDown]"
+		bh3_ValkyrieArmor_weapon = "[GetBH3ValkyrieArmorWeapon]"
+		bh3_ValkyrieArmor_armor = "[GetBH3ValkyrieArmorArmor]"
+		bh3_ValkyrieArmor_engine = "[GetBH3ValkyrieArmorEngine]"
+		bh3_valkyrie_soldier = "[GetBH3ValkyrieSoldier]"
+		bh3_ValkyrieAir_tech = "[GetBH3ValkyrieAirTech]"
+		bh3_ValkyrieAir_weapon = "[GetBH3ValkyrieAirWeapon]"
+		bh3_ValkyrieAir_engine = "[GetBH3ValkyrieAirEngine]"
+		bh3_ValkyrieAir_stigmata_up = "[GetBH3ValkyrieAirStigmataUp]"
+		bh3_ValkyrieAir_stigmata_mid = "[GetBH3ValkyrieAirStigmataMid]"
+		bh3_ValkyrieAir_stigmata_down = "[GetBH3ValkyrieAirStigmataDown]"
+
+	}
+	clear_variable = bh3_researching_tech_index
+	clear_variable = bh3_tech_days_remain
+}
+
+BH3_refresh_tech_progressbar = {
+	meta_effect = {
+		text = {
+			set_temp_variable = {
+				tech_t_day = [days]
+			}
+		}
+		days = "[GetBH3TechTime]"
+	}
+	set_temp_variable = {
+		tech_r_day = BH3_tech_days_remain
+	}
+	#log = "tech_r_day 0 [?tech_r_day]"
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					BH3_tech_days_remain = 0
+				}
+			}
+		}
+		set_temp_variable = {
+			pbl = 1000
+		}
+		divide_temp_variable = {
+			var = tech_r_day
+			value = tech_t_day
+		}
+		#log = "dvd result [?tech_r_day]"
+		multiply_temp_variable = {
+			tech_r_day = pbl
+		}
+		subtract_from_temp_variable = {
+			tech_r_day = pbl
+		}
+		#log = "fal result [?tech_r_day]"
+		set_variable = {
+			BH3_research_progress_p = -1000
+		}
+		subtract_from_variable = {
+			BH3_research_progress_p = tech_r_day
+		}
+	}
+	else = {
+		set_variable = {
+			BH3_research_progress_p = 0
+		}
+	} 
+}
+
+
+
+#女武神部署到休伯利安位置
+# BH3_deploy_valkyrie_to_Hyperion_pos = {
+# 	if = {
+# 		limit = {
+# 			var:BH3_Hyperion_pos = { is_controlled_by = ROOT }
+# 		}
+# 		var:BH3_Hyperion_pos = {
+# 			create_unit = {
+# 				division = "name = [completed_tech] division_template = [completed_tech]  start_experience_factor = 0.5  start_equipment_factor = 0.01"
+# 				allow_spawning_on_enemy_provs = yes
+# 				owner = ROOT
+# 				count = 1
+# 			}	
+# 		}
+# 		else = {
+# 			capital_scope = {
+# 				create_unit = {
+# 					division = "name = [completed_tech] division_template = [completed_tech]  start_experience_factor = 0.5  start_equipment_factor = 0.01"
+# 					allow_spawning_on_enemy_provs = yes
+# 					owner = ROOT
+# 					count = 1
+# 				}	
+# 			}
+# 		}
+
+# 	}
+# }
+#回收女武神到休伯利安
+BH3_Redeploy_valkyrie = {
+	
+}
+
+### 添加崩坏能研究设施 ###
+BH3_Build_HonkaiFacility = {
+	every_country = {
+		if = {
+			limit = { 
+				OR = {
+					has_facility_specialization = specialization_land
+					has_facility_specialization = specialization_air
+					has_facility_specialization = specialization_naval
+					has_facility_specialization = specialization_nuclear
+				}
+			}
+			set_global_flag = BH3_Honkai_Research_facility_on
+		}
+	}
+	if = {
+		limit = { has_global_flag = BH3_Honkai_Research_facility_on }
+		ROOT = {
+			random_owned_controlled_state = {
+				limit = { can_construct_building = BH3_Honkai_Research_facility }
+				construct_building_in_random_province = {
+					BH3_Honkai_Research_facility = 1
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { can_construct_building = BH3_Honkai_Research_facility }
+				construct_building_in_random_province = {
+					BH3_Honkai_Research_facility = 1
+				}
+			}
+		}
+	}
+}
+
+#经验满了就替换特质
+BH3_remove_valkyrie_level = {
+	if = {
+		limit = { has_trait = BH3_traits_valkyrie_b }
+		remove_unit_leader_trait = BH3_traits_valkyrie_b
+		remove_unit_leader_trait = BH3_traits_valkyrie_b2a
+		add_unit_leader_trait = BH3_traits_valkyrie_a
+	}
+	else_if = {
+		limit = { has_trait = BH3_traits_valkyrie_a }
+		remove_unit_leader_trait = BH3_traits_valkyrie_a
+		remove_unit_leader_trait = BH3_traits_valkyrie_a2s
+		add_unit_leader_trait = BH3_traits_valkyrie_s
+	}
+	else_if = {
+		limit = { has_trait = BH3_traits_valkyrie_s }
+		remove_unit_leader_trait = BH3_traits_valkyrie_s
+		remove_unit_leader_trait = BH3_traits_valkyrie_s2ss
+		add_unit_leader_trait = BH3_traits_valkyrie_ss
+	}
+	else_if = {
+		limit = { has_trait = BH3_traits_valkyrie_ss }
+		remove_unit_leader_trait = BH3_traits_valkyrie_ss
+		remove_unit_leader_trait = BH3_traits_valkyrie_ss2sss
+		add_unit_leader_trait = BH3_traits_valkyrie_sss
+	}
+}
+

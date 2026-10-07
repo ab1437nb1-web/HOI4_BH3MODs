@@ -1,0 +1,122 @@
+
+music = {
+    name = "TruE"
+    file = "TruE.ogg"
+    volume = 0.65
+}
+music = {
+    name = "TheSongstressofaCollapsingWorld"
+    file = "TheSongstressofaCollapsingWorld.ogg"
+    volume = 0.65
+}
+music = {
+    name = "TheSongstressofaCollapsingWorld_ver2"
+    file = "TheSongstressofaCollapsingWorld_ver2.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Cyberangel"
+    file = "Cyberangel.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Befall"
+    file = "Befall.ogg"
+    volume = 0.65
+}
+music = {
+    name = "DualEgo"
+    file = "DualEgo.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Starfall"
+    file = "Starfall.ogg"
+    volume = 0.65
+}
+music = {
+    name = "ThousandYearFeathers"
+    file = "ThousandYearFeathers.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Nightglow"
+    file = "Nightglow.ogg"
+    volume = 0.65
+}
+music = {
+    name = "MoonHalo"
+    file = "MoonHalo.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Rubia"
+    file = "Rubia.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Regression"
+    file = "Regression.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Oracle"
+    file = "Oracle.ogg"
+    volume = 0.65
+}
+music = {
+    name = "DaCapo"
+    file = "DaCapo.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Fai2"
+    file = "Fai2.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Oaths"
+    file = "Oaths.ogg"
+    volume = 0.65
+}
+music = {
+    name = "CircleofLife"
+    file = "CircleofLife.ogg"
+    volume = 0.65
+}
+
+music = {
+    name = "Firefly_music"
+    file = "Firefly.ogg"
+    volume = 0.65
+}
+music = {
+    name = "SeeYouInTheNextWorld"
+    file = "SeeYouInTheNextWorld.ogg"
+    volume = 0.65
+}
+music = {
+    name = "Incarnation"
+    file = "Incarnation.ogg"
+    volume = 0.65
+}
+music = {
+    name = "GuiltyAngel"
+    file = "GuiltyAngel.ogg"
+    volume = 0.65
+}
+music = {
+    name = "TerminalBeginning"
+    file = "TerminalBeginning.ogg"
+    volume = 0.65
+}
+music = {
+    name = "GirlInside"
+    file = "GirlInside.ogg"
+    volume = 0.65
+}
+music = {
+    name = "BeforeSettingOut"
+    file = "BeforeSettingOut.ogg"
+    volume = 0.65
+}

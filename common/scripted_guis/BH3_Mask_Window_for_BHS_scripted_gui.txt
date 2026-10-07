@@ -1,0 +1,11 @@
+scripted_gui = {
+    BH3_BHS_invasion_HH2_Mask_Window = {
+        context_type = player_context
+		window_name = "BH3_BHS_invasion_HH2_Mask_Window"
+        
+        
+        visible = {  
+			has_country_flag = BHS_HH2_Power_EffectHuman_flag
+        }
+	}
+}

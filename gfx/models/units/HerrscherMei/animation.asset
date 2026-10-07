@@ -1,0 +1,22 @@
+
+########### Mei_HerrscherofThunder ###########
+animation = {
+	name = "Mei_HerrscherofThunder_Idle1_animation"
+	file = "Mei_HerrscherofThunder_Idle1.anim"
+}
+animation = {
+	name = "Mei_HerrscherofThunder_Idle2_animation"
+	file = "Mei_HerrscherofThunder_Idle2.anim"
+}
+animation = {
+	name = "Mei_HerrscherofThunder_Move_animation"
+	file = "Mei_HerrscherofThunder_Move.anim"
+}
+animation = {
+	name = "Mei_HerrscherofThunder_Attack1_animation"
+	file = "Mei_HerrscherofThunder_Attack1.anim"
+}
+animation = {
+	name = "Mei_HerrscherofThunder_Attack2_animation"
+	file = "Mei_HerrscherofThunder_Attack2.anim"
+}

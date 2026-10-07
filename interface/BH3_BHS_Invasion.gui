@@ -1,0 +1,624 @@
+guiTypes = {
+	containerWindowType = { 
+		name = "BH3_invasion_menu"
+		position = { x = -700 y = -350}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 320	
+		size = { width = 1400 height = 700 }
+		orientation = CENTER
+        moveable = yes
+		
+		#hide_sound = menu_close_window
+		show_sound = menu_open_window
+
+		background = { quadTextureSprite = "GFX_BH3_invasion_menu_bg"}
+
+        instantTextBoxType = {
+            name = "BH3_invasion_menu_title"
+            position = { x = 750 y = 30 } 
+			font = "hoi_36header"
+            text = "BH3_invasion_menu_title"
+            maxWidth = 530 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		### 崩坏爆发地点 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_postion"
+            position = { x = 530 y = 80 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_postion"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#随机地点
+		buttonType = {
+            name = "BH3_invasion_menu_postion1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 110 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_postion1_text"
+            position = { x = 565 y = 115 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_postion1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#柏林
+		buttonType = {
+            name = "BH3_invasion_menu_postion2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 110 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_postion2_text"
+            position = { x = 715 y = 115 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_postion2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#西伯利亚
+		buttonType = {
+            name = "BH3_invasion_menu_postion3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 110 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_postion3_text"
+            position = { x = 865 y = 115 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_postion3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#东京
+		buttonType = {
+            name = "BH3_invasion_menu_postion4_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 110 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_postion4_text"
+            position = { x = 1015 y = 115 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_postion4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		### 崩坏爆发时间 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_time"
+            position = { x = 530 y = 150 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_time"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#现在
+		buttonType = {
+            name = "BH3_invasion_menu_time1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 180 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_time1_text"
+            position = { x = 565 y = 185 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_time1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#一年后
+		buttonType = {
+            name = "BH3_invasion_menu_time2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 180 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_time2_text"
+            position = { x = 715 y = 185 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_time2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#二年后
+		buttonType = {
+            name = "BH3_invasion_menu_time3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 180 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_time3_text"
+            position = { x = 865 y = 185 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_time3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#三年后
+		buttonType = {
+            name = "BH3_invasion_menu_time4_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 180 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_time4_text"
+            position = { x = 1015 y = 185 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_time4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		
+		### 开局崩坏师数量 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_num"
+            position = { x = 530 y = 220 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_army_num"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#200
+		buttonType = {
+            name = "BH3_invasion_menu_army_num1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 250 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_num1_text"
+            position = { x = 565 y = 255 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_num1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#320
+		buttonType = {
+            name = "BH3_invasion_menu_army_num2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 250 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_num2_text"
+            position = { x = 715 y = 255 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_num2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#400
+		buttonType = {
+            name = "BH3_invasion_menu_army_num3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 250 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_num3_text"
+            position = { x = 865 y = 255 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_num3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#530
+		buttonType = {
+            name = "BH3_invasion_menu_army_num4_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 250 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_num4_text"
+            position = { x = 1015 y = 255 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_num4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		### 每月刷兵倍数 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_coefficient"
+            position = { x = 530 y = 290 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_army_coefficient"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#1
+		buttonType = {
+            name = "BH3_invasion_menu_army_coefficient1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 320 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_coefficient1_text"
+            position = { x = 565 y = 325 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_coefficient1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#2
+		buttonType = {
+            name = "BH3_invasion_menu_army_coefficient2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 320 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_coefficient2_text"
+            position = { x = 715 y = 325 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_coefficient2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+        #3
+		buttonType = {
+            name = "BH3_invasion_menu_army_coefficient3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 320 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_army_coefficient3_text"
+            position = { x = 865 y = 325 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_army_coefficient3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		### 玩家是否可以使用律者 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_enable_herrscher"
+            position = { x = 980 y = 290 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_enable_herrscher"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#前文明
+		buttonType = {
+            name = "BH3_invasion_menu_enable_herrscher1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 320 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_enable_herrscher1_text"
+            position = { x = 1015 y = 325 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_enable_herrscher1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#现文明
+		buttonType = {
+            name = "BH3_invasion_menu_enable_herrscher2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 1100 y = 320 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_enable_herrscher2_text"
+            position = { x = 1135 y = 325 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_enable_herrscher2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		
+		### 开局崩坏阶段 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level"
+            position = { x = 530 y = 360 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_level"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#阶段1
+		buttonType = {
+            name = "BH3_invasion_menu_level1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 390 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level1_text"
+            position = { x = 565 y = 395 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_level1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#阶段2
+		buttonType = {
+            name = "BH3_invasion_menu_level2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 390 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level2_text"
+            position = { x = 715 y = 395 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_level2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#阶段3
+		buttonType = {
+            name = "BH3_invasion_menu_level3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 390 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level3_text"
+            position = { x = 865 y = 395 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_level3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#阶段4
+		buttonType = {
+            name = "BH3_invasion_menu_level4_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 390 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level4_text"
+            position = { x = 1015 y = 395 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_level4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#阶段5
+		buttonType = {
+            name = "BH3_invasion_menu_level5_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 1100 y = 390 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_level5_text"
+            position = { x = 1135 y = 395 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_level4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		
+		### 律者诞生间隔 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_time"
+            position = { x = 530 y = 430 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_herrscher_time"
+			maxWidth = 360 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#间隔1次
+		buttonType = {
+            name = "BH3_invasion_menu_herrscher_time1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 460 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_time1_text"
+            position = { x = 565 y = 465 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_herrscher_time1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#间隔2次
+		buttonType = {
+            name = "BH3_invasion_menu_herrscher_time2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 680 y = 460 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_time2_text"
+            position = { x = 715 y = 465 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_herrscher_time2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#间隔3次
+		buttonType = {
+            name = "BH3_invasion_menu_herrscher_time3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 460 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_time3_text"
+            position = { x = 865 y = 465 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_herrscher_time3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		### 崩坏律者单位加强 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_enhance"
+            position = { x = 980 y = 430 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_herrscher_enhance"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#无
+		buttonType = {
+            name = "BH3_invasion_menu_herrscher_enhance0_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 980 y = 460 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_enhance0_text"
+            position = { x = 1015 y = 465 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_herrscher_enhance0_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#加强数值
+		buttonType = {
+            name = "BH3_invasion_menu_herrscher_enhance1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 1100 y = 460 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_herrscher_enhance1_text"
+            position = { x = 1135 y = 465 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_herrscher_enhance1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+		### 杂项，多选 ###
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc"
+            position = { x = 530 y = 500 } 
+			font = "hoi_24header"
+            text = "BH3_invasion_menu_misc"
+			maxWidth = 320 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#为世界上所有的美好而战
+		buttonType = {
+            name = "BH3_invasion_menu_misc1_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 530 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc1_text"
+            position = { x = 565 y = 535 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_misc1_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#主要国家获得所有女武神装甲科技和将领
+		buttonType = {
+            name = "BH3_invasion_menu_misc2_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 530 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc2_text"
+            position = { x = 865 y = 535 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_misc2_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#世界联盟
+		buttonType = {
+            name = "BH3_invasion_menu_misc3_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 1100 y = 530 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc3_text"
+            position = { x = 1135 y = 535 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_misc3_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#崩坏加强2
+		buttonType = {
+            name = "BH3_invasion_menu_misc4_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 530 y = 570 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc4_text"
+            position = { x = 565 y = 575 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_misc4_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+		#崩坏得到加强3
+		buttonType = {
+            name = "BH3_invasion_menu_misc5_btn"
+			spriteType = "GFX_BH3_CheakBox_30x30_btn"
+            position = { x = 830 y = 570 }
+        }
+		instantTextBoxType = {
+            name = "BH3_invasion_menu_misc5_text"
+            position = { x = 865 y = 575 } 
+			font = "hoi_18mbs"
+            text = "BH3_invasion_menu_misc5_text"
+			maxWidth = 200 maxHeight = 40 
+			format = left
+            alwaystransparent = yes
+        }
+
+
+		buttonType = {
+			name = "BH3_invasion_opt_complete_btn"
+			spriteType = "GFX_BH3_opt_complete_200x50_btn"
+			position = { x = 1050 y = 610 }
+			buttonText = "BH3_invasion_opt_complete_btn_tt"
+			buttonfont = "hoi_24header"
+		}
+
+        buttonType = {
+			name = "BH3_invasion_opt_exit_btn"
+			spriteType = "GFX_BH3_opt_closebutton"
+            orientation = UPPER_RIGHT
+			position = { x = -60 y = 0 }
+		}
+	}
+}

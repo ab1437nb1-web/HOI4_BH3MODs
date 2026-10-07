@@ -1,0 +1,474 @@
+# sub_units = {
+
+# 	Void_Archives_unit = {
+# 		abbreviation = "XKU"
+# 		sprite = HerrscherReasonBronya
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			Void_Archives_equipment
+# 		}
+
+# 		need = {
+# 			Void_Archives_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.5
+# 			hard_attack = 1
+# 			ap_attack = 1.1
+# 			armor_value = 1
+# 			maximum_speed = 0.15
+# 			defence = 1.2
+# 			max_organisation = 1
+# 			max_strength = 1
+# 			default_morale = 1.5
+# 			initiative = 1.5
+# 			recon = 1.5
+# 		}
+# 	}
+
+# 	SevenThundersofRetribution_unit = {
+# 		abbreviation = "STU"
+# 		sprite = HerrscherThunderMei
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			SevenThundersofRetribution_equipment
+# 		}
+
+# 		need = {
+# 			SevenThundersofRetribution_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1
+# 			hard_attack = 1.5
+# 			ap_attack = 1.5
+# 			armor_value = 1.3
+# 			maximum_speed = 0.25
+# 			defence = 1
+# 			max_organisation = 2
+# 			max_strength = 2
+# 			default_morale = 1.5
+# 			initiative = 1
+# 			recon = 1
+# 		}
+# 	}
+
+# 	AbyssFlower_unit = {
+# 		abbreviation = "AFU"
+# 		sprite = HerrscherRebirthSeele
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			AbyssFlower_equipment
+# 		}
+
+# 		need = {
+# 			AbyssFlower_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.2
+# 			hard_attack = 1.1
+# 			ap_attack = 1
+# 			armor_value = 1.4
+# 			maximum_speed = 0.25
+# 			defence = 1.5
+# 			max_organisation = 5
+# 			max_strength = 5
+# 			default_morale = 1.5
+# 			initiative = 1.2
+# 			recon = 1
+# 		}
+# 	}
+
+# 	FenghuangDown_unit = {
+# 		abbreviation = "FDU"
+# 		sprite = ValkyrieMeeleFuka
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			FenghuangDown_equipment
+# 		}
+
+# 		need = {
+# 			FenghuangDown_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.3
+# 			hard_attack = 1.3
+# 			ap_attack = 1.4
+# 			armor_value = 1.2
+# 			maximum_speed = 0.15
+# 			defence = 1.2
+# 			max_organisation = 3
+# 			max_strength = 2
+# 			default_morale = 1.5
+# 			initiative = 1.5
+# 			recon = 1.5
+# 		}
+# 	}
+
+# 	JudgementofShamash_unit = {
+# 		abbreviation = "JSU"
+# 		sprite = HerrscherFlamescionKiana
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			JudgementofShamash_equipment
+# 		}
+
+# 		need = {
+# 			JudgementofShamash_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.5
+# 			hard_attack = 1.5
+# 			ap_attack = 1.5
+# 			armor_value = 1
+# 			maximum_speed = 0.25
+# 			defence = 1
+# 			max_organisation = 2
+# 			max_strength = 1
+# 			default_morale = 1
+# 			initiative = 1
+# 			recon = 1
+# 		}
+# 	}
+
+# 	OathofJudah_unit = {
+# 		abbreviation = "OJU"
+# 		sprite = ValkyrieComprehensiveTheresa
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			OathofJudah_equipment
+# 		}
+
+# 		need = {
+# 			OathofJudah_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.2
+# 			hard_attack = 1
+# 			ap_attack = 1
+# 			armor_value = 1.5
+# 			maximum_speed = 0.25
+# 			defence = 1.5
+# 			max_organisation = 1
+# 			max_strength = 4
+# 			default_morale = 1.5
+# 			initiative = 1.2
+# 			recon = 1
+# 		}
+# 	}
+
+# 	StarofEden_unit = {
+# 		abbreviation = "SEU"
+# 		sprite = ValkyrieComprehensiveEden
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			StarofEden_equipment
+# 		}
+
+# 		need = {
+# 			StarofEden_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.4
+# 			hard_attack = 1.2
+# 			ap_attack = 1
+# 			armor_value = 1.2
+# 			maximum_speed = 0.2
+# 			defence = 1.4
+# 			max_organisation = 2
+# 			max_strength = 1
+# 			default_morale = 1.2
+# 			initiative = 1.5
+# 			recon = 1.2
+# 		}
+# 	}
+
+# 	JizoMitama_unit = {
+# 		abbreviation = "JMU"
+# 		sprite = HerrscherThunderMei
+# 		map_icon_category = infantry
+# 		special_forces = yes
+# 		priority = 0
+# 		ai_priority = 0
+# 		active = no
+# 		affects_speed = no
+
+# 		type = {
+# 			infantry
+# 			support
+# 		}
+		
+# 		group = support
+		
+# 		categories = {
+# 			category_support_battalions
+# 		}
+
+	
+# 		combat_width = 0
+	
+# 		#Size Definitions
+# 		max_organisation = 0
+# 		default_morale = 1
+# 		manpower = 10
+# 		training_time = 120
+
+# 		#Misc Abilities
+# 		weight = 0.1
+# 		recon = 1
+# 		can_be_parachuted = yes
+
+# 		essential = {
+# 			JizoMitama_equipment
+# 		}
+
+# 		need = {
+# 			JizoMitama_equipment = 10
+# 		}
+		
+# 		battalion_mult = {
+# 			category = category_AllValkyrieAndHerrscher
+# 			soft_attack = 1.3
+# 			hard_attack = 1.3
+# 			ap_attack = 1.4
+# 			armor_value = 1.2
+# 			maximum_speed = 0.15
+# 			defence = 1.2
+# 			max_organisation = 1
+# 			max_strength = 1
+# 			default_morale = 1.5
+# 			initiative = 1.5
+# 			recon = 1.5
+# 		}
+# 	}
+# }

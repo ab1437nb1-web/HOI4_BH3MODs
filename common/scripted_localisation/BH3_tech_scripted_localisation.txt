@@ -1,0 +1,4039 @@
+########设定女武神科技代号########
+defined_text = { 
+	name = GetBH3TechName
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Kiana_WhiteComet
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Kiana_VoidDrifter
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Kiana_KnightMoonbeam
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Mei_CrimsonImpuls
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Mei_StrikerFulminata
+
+		#localization_key = Mei_ShadowDash
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Mei_DanzaiSpectramancer
+		
+		#localization_key = Mei_LightningEmpress
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Mei_Captain
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Bronya_ValkyrieChariot
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Bronya_YamabukiArmor
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Bronya_DimensionBreaker
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Bronya_SilverWingNEX
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Seele_SwallowtailPhantasm
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Seele_StygianNymph
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Seele_StarchasmNyx
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Theresa_StarlitAstrologos
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Theresa_Mars
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Theresa_LunarVowCrimsonLove
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Fuka_ShadowKnight
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Fuka_AzureEmpyrea
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Eden_GoldenDiva
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Kiana_HerrscherofVoid
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Kiana_HerrscherofFlamescion
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Mei_HerrscherofThunder
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Bronya_HerrscherofReason
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Seele_HerrscherofRebirth
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Elysia_HerrscherofHuman
+	}
+}
+
+########设定女武神key翻译########
+defined_text = { 
+	name = GetBH3TechNameTranslation
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Kiana_WhiteComet_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Kiana_VoidDrifter_T
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Kiana_KnightMoonbeam_T
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Mei_CrimsonImpuls_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Mei_StrikerFulminata_T
+
+		#localization_key = Mei_ShadowDash_T
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Mei_DanzaiSpectramancer_T
+		
+		#localization_key = Mei_LightningEmpress_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Mei_Captain_T
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Bronya_ValkyrieChariot_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Bronya_YamabukiArmor_T
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Bronya_DimensionBreaker_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Bronya_SilverWingNEX_T
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Seele_SwallowtailPhantasm_T
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Seele_StygianNymph_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Seele_StarchasmNyx_T
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Theresa_StarlitAstrologos_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Theresa_Mars_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Theresa_LunarVowCrimsonLove_T
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Fuka_ShadowKnight_T
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Fuka_AzureEmpyrea_T
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Eden_GoldenDiva_T
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Kiana_HerrscherofVoid_T
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Kiana_HerrscherofFlamescion_T
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Mei_HerrscherofThunder_T
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Bronya_HerrscherofReason_T
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Seele_HerrscherofRebirth_T
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Elysia_HerrscherofHuman_T
+	}
+}
+
+########这里控制女武神科研时间########
+defined_text = { 
+	name = GetBH3TechTime
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = 5
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = 60
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = 100
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = 5
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = 60
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = 100
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = 360
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = 5
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = 60
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = 100
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = 360
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = 60
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = 100
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = 100
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = 100
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = 360
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = 360
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = 100
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = 360
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = 360
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = 1
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = 1
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = 1
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = 1
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = 1
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = 1
+	}
+}
+
+########设定完成研发时增送女武神装备种类#######
+defined_text = { 
+	name = GetBH3EquipmentName
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Kiana_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Kiana_equipment_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Kiana_equipment_2
+	}
+	
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Mei_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Mei_equipment_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Mei_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Mei_equipment_3
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Bronya_equipment_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Bronya_equipment_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Bronya_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Bronya_equipment_3
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Seele_equipment_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Seele_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Seele_equipment_3
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Theresa_equipment_1
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Theresa_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Theresa_equipment_3
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Fuka_equipment_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Fuka_equipment_3
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Eden_equipment_0
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = HerrscherVoid_Kiana_equipment_0
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = HerrscherFlamescion_Kiana_equipment_0
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = HerrscherThunder_Mei_equipment_0
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = HerrscherReason_Bronya_equipment_0
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = HerrscherofRebirth_Seele_equipment_0
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = HerrscherHuman_Elysia_equipment_0
+	}
+}
+
+########设定完成研发时增送女武神装备数量########
+defined_text = { 
+	name = GetBH3EquipmentNum
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = 11
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = 11
+	}
+	
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = 11
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = 11
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = 11
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = 11
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = 11
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = 11
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = 11
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = 11
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = 11
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = 11
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = 5
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = 5
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = 5
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = 5
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = 5
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = 5
+	}
+}
+
+########设定完成研发时增送女武神编制类型########
+defined_text = { 
+	name = GetBH3SubunitName
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = ComprehensiveKiana
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = ComprehensiveKiana
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = ComprehensiveKiana
+	}
+	
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = MeeleMei
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = MeeleMei
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = MeeleMei
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = MeeleMei
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = ArtilleryBronya
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = ArtilleryBronya
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = ArtilleryBronya
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = ArtilleryBronya
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = MeeleSeele
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = MeeleSeele
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = MeeleSeele
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = ComprehensiveTheresa
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = ComprehensiveTheresa
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = ComprehensiveTheresa
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = MeeleFuka
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = MeeleFuka
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = ComprehensiveEden
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = VoidKiana
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = FlamescionKiana
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = ThunderMei
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = ReasonBronya
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = RebirthSeele
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = HumanElysia
+	}
+}
+
+########设定完成研发时启用的角色########
+defined_text = { 
+	name = GetBH3CharacterName
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = KianaKaslana
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = KianaKaslana
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = KianaKaslana
+	}
+	
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = RaidenMei
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = RaidenMei
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = RaidenMei
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = RaidenMei
+	}
+
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = BronyaZaych
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = BronyaZaych
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = BronyaZaych
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = BronyaZaych
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = SeeleVollerei
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = SeeleVollerei
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = SeeleVollereiBlack
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = TheresaStarlitAstrologos
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = TheresaApocalypse
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = TheresaLunar
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Fuka
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Fuka
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Eden
+	}
+
+	######## 律者仍然按创建将领方式启用 ########
+	
+}
+
+
+########设定新版女武神将领头像########
+defined_text = { 
+	name = GetBH3CharacterImgName
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 10 }
+		}
+		localization_key = Kiana_WhiteComet
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 11 }
+		}
+		localization_key = Kiana_VoidDrifter
+	}	
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 12 }
+		}
+		localization_key = Kiana_KnightMoonbeam
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 13 }
+		}
+		localization_key = Kiana_HerrscherofVoid2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 14 }
+		}
+		localization_key = Kiana_HerrscherofFlamescion
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 15 }
+		}
+		localization_key = Kiana_HerrscherofFinality
+	}
+
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 20 }
+		}
+		localization_key = Mei_CrimsonImpuls
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 21 }
+		}
+		localization_key = Mei_StrikerFulminata
+	}	
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 22 }
+		}
+		localization_key = Mei_DanzaiSpectramancer
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 23 }
+		}
+		localization_key = Mei_DanzaiSpectramancer2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 24 }
+		}
+		localization_key = Mei_HerrscherofThunder
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 25 }
+		}
+		localization_key = Mei_HerrscherofOrigin
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 26 }
+		}
+		localization_key = Mei_Captain
+	}
+
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 30 }
+		}
+		localization_key = Bronya_ValkyrieChariot
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 31 }
+		}
+		localization_key = Bronya_YamabukiArmor
+	}	
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 32 }
+		}
+		localization_key = Bronya_BlackNucleus
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 33 }
+		}
+		localization_key = Bronya_DimensionBreaker
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 34 }
+		}
+		localization_key = Bronya_HerrscherofReason
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 35 }
+		}
+		localization_key = Bronya_HerrscherofTruth
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 36 }
+		}
+		localization_key = Bronya_SilverWingNEX
+	}
+
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 40 }
+		}
+		localization_key = Seele_SwallowtailPhantasm
+	}	
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 41 }
+		}
+		localization_key = Seele_StygianNymph
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 42 }
+		}
+		localization_key = Seele_StygianNymph2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 43 }
+		}
+		localization_key = Seele_HerrscherofRebirth
+	}
+
+	######## 黑希 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 50 }
+		}
+		localization_key = Seele_StygianNymphBlack
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 51 }
+		}
+		localization_key = Seele_StarchasmNyx
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 52 }
+		}
+		localization_key = Seele_StarchasmNyx2
+	}
+
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 60 }
+		}
+		localization_key = Theresa_ValkyriePledge
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 61 }
+		}
+		localization_key = Theresa_VioletExecuter
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 62 }
+		}
+		localization_key = Theresa_TwilightPaladin
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 63 }
+		}
+		localization_key = Theresa_Bishop
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 64 }
+		}
+		localization_key = Theresa_SchicksalsImperative
+	}
+
+	######## 月下 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 70 }
+		}
+		localization_key = Theresa_LunaKindred
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 71 }
+		}
+		localization_key = Theresa_LunaKindred2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 72 }
+		}
+		localization_key = Theresa_LunarVowCrimsonLove
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 73 }
+		}
+		localization_key = Theresa_LunarVowCrimsonLove2
+	}
+
+	######## 观星 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 80 }
+		}
+		localization_key = Theresa_StarlitAstrologos
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 81 }
+		}
+		localization_key = Theresa_StarlitAstrologos2
+	}
+
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 90 }
+		}
+		localization_key = Fuka_ValkyrieAccipiter
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 91 }
+		}
+		localization_key = Fuka_ShadowKnight
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 92 }
+		}
+		localization_key = Fuka_AzureEmpyrea
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 93 }
+		}
+		localization_key = Fuka_FenghuangofVicissitudes
+	}
+
+	######## 幽兰戴尔 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 100 }
+		}
+		localization_key = Durandal_ValkyrieGloria
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 101 }
+		}
+		localization_key = Durandal_BrightKnightExcelsis
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 102 }
+		}
+		localization_key = Durandal_DeaAnchora
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 103 }
+		}
+		localization_key = Durandal_PalatinusEquinox
+	}
+
+	######## 丽塔 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 110 }
+		}
+		localization_key = Rita_PhantomIron
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 111 }
+		}
+		localization_key = Rita_ArgentKnightArtemis
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 112 }
+		}
+		localization_key = Rita_SpinaAstera
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 113 }
+		}
+		localization_key = Rita_SpinaAstera2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 114 }
+		}
+		localization_key = Rita_NoneName
+	}
+	
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 120 }
+		}
+		localization_key = Eden_GoldenDiva
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_cultivate_decision_window_character_img = 121 }
+		}
+		localization_key = Eden_GoldenDiva2
+	}
+}
+
+########设定女武神解锁底盘代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorTech
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = classis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = classis_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = classis_2
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = classis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = classis_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = classis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = classis_3
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = classis_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = classis_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = classis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = classis_3
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = classis_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = classis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = classis_2
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = classis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = classis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = classis_3
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = classis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = classis_3
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = classis_3
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = classis_3
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = classis_3
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = classis_3
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = classis_3
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = classis_3
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = classis_3
+	}
+}
+
+########设定女武神圣痕上代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorStigmataUp
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Stigmata_HardAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Stigmata_HardAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Stigmata_SoftAttack
+	}
+}
+
+########设定女武神圣痕中代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorStigmataMid
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Stigmata_Balance
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Stigmata_Balance
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Stigmata_Balance
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Stigmata_Balance
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Stigmata_Speed
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Stigmata_Balance
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Stigmata_Balance
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Stigmata_Balance
+	}
+}
+
+########设定女武神圣痕下代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorStigmataDown
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Stigmata_HardAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Stigmata_Breakthrough
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Stigmata_Defense
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Stigmata_APAttack
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Stigmata_ArmorValue
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Stigmata_APAttack
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Stigmata_Defense
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Stigmata_ArmorValue
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Stigmata_ArmorValue
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Stigmata_HardAttack
+	}
+}
+
+########设定女武神武器代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorWeapon
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = MainWeapon_Pistols_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = MainWeapon_Pistols_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = MainWeapon_Pistols_2
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = MainWeapon_Katana_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = MainWeapon_Katana_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = MainWeapon_Katana_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = MainWeapon_Katana_3
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = MainWeapon_Cannon_0
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = MainWeapon_Cannon_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = MainWeapon_Cannon_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = MainWeapon_Cannon_3
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = MainWeapon_Scythe_1
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = MainWeapon_Scythe_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = MainWeapon_Scythe_2
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = MainWeapon_Cross_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = MainWeapon_Fists_2
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = MainWeapon_Fists_3
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = MainWeapon_Pistols_3
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = MainWeapon_Cross_3
+	}
+}
+
+########设定女武神装甲类型代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorArmor
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Armor_None
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Armor_Light
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Armor_Middle
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Armor_None
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Armor_Light
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Armor_Middle
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Armor_None
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Armor_Light
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Armor_Middle
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Armor_Light
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Armor_Middle
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Armor_Middle
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Armor_Middle
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Armor_Heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Armor_Heavy
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Armor_Heavy
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Armor_Heavy
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Armor_Heavy
+	}
+}
+
+########设定女武神引擎代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorEngine
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Engine_Electric
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Engine_Nuclear
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Engine_Electric
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Engine_Nuclear
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Engine_Electric
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Engine_Nuclear
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Engine_Nuclear
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Engine_Honkai
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Engine_Honkai
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Engine_Honkai
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Engine_Honkai
+	}
+}
+
+########设定女武神模型代号########
+defined_text = { 
+	name = GetBH3ValkyrieArmorModel
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = ValkyrieComprehensiveKiana_0_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = ValkyrieComprehensiveKiana_1_entity
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = ValkyrieComprehensiveKiana_2_entity
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = ValkyrieMeeleMei_0_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = ValkyrieMeeleMei_1_entity
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = ValkyrieMeeleMei_2_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = ValkyrieMeeleMei_3_entity
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = ValkyrieArtilleryBronya_0_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = ValkyrieArtilleryBronya_1_entity
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = ValkyrieArtilleryBronya_2_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = ValkyrieArtilleryBronya_3_entity
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = ValkyrieMeeleSeele_1_entity
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = ValkyrieMeeleSeele_2_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = ValkyrieMeeleSeele_3_entity
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = ValkyrieComprehensiveTheresa_1_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = ValkyrieComprehensiveTheresa_2_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = ValkyrieComprehensiveTheresa_3_entity
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = ValkyrieMeeleFuka_2_entity
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = ValkyrieMeeleFuka_3_entity
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = ValkyrieComprehensiveEden_0_entity
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = HerrscherVoidKiana_0_entity
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = HerrscherFlamescionKiana_0_entity
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = HerrscherThunderMei_0_entity
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = HerrscherReasonBronya_0_entity
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = HerrscherRebirthSeele_0_entity
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = HerrscherHumanElysia_0_entity
+	}
+}
+
+########设定女武神士兵代号########
+defined_text = { 
+	name = GetBH3ValkyrieSoldier
+	######## 琪亚娜 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 10 }
+		}
+		localization_key = Kiana_B
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 11 }
+		}
+		localization_key = Kiana_A
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 12 }
+		}
+		localization_key = Kiana_S
+	}
+	######## 芽衣 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 20 }
+		}
+		localization_key = Mei_B
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 21 }
+		}
+		localization_key = Mei_A
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 22 }
+		}
+		localization_key = Mei_S
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 23 }
+		}
+		localization_key = Mei_SS
+	}
+	######## 布洛妮娅 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 30 }
+		}
+		localization_key = Bronya_B
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 31 }
+		}
+		localization_key = Bronya_A
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 32 }
+		}
+		localization_key = Bronya_S
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 33 }
+		}
+		localization_key = Bronya_SS
+	}
+	######## 希儿 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 41 }
+		}
+		localization_key = Seele_A
+	}	
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 42 }
+		}
+		localization_key = Seele_S
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 43 }
+		}
+		localization_key = SeeleBlack_S
+	}
+	######## 德丽莎 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 51 }
+		}
+		localization_key = TheresaStarlitAstrologos_S
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 52 }
+		}
+		localization_key = Theresa_SS
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 53 }
+		}
+		localization_key = TheresaLunar_SS
+	}
+	######## 符华 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 62 }
+		}
+		localization_key = Fuka_S
+	}
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 63 }
+		}
+		localization_key = Fuka_SS
+	}
+	######## 伊甸 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 71 }
+		}
+		localization_key = Eden_SS
+	}
+
+	######## 琪亚娜-空之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 100 }
+		}
+		localization_key = Kiana_SSS
+	}
+	######## 琪亚娜-薪炎之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 101 }
+		}
+		localization_key = Kiana_SSS
+	}
+	######## 芽衣-雷之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 110 }
+		}
+		localization_key = Kiana_SSS
+	}
+	######## 布洛妮娅-理之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 120 }
+		}
+		localization_key = Kiana_SSS
+	}
+	######## 希儿-死生之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 130 }
+		}
+		localization_key = Kiana_SSS
+	}
+	######## 爱莉希雅-人之律者 ########
+	text = {
+		trigger = {
+			check_variable = { bh3_researching_tech_index = 140 }
+		}
+		localization_key = Kiana_SSS
+	}
+}
+
+
+###########测试用，缩短科研时间##################
+# defined_text = { 
+# 	name = GetBH3TechTime
+# 	####### 琪亚娜 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 10 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 11 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 12 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 芽衣 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 20 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 21 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 22 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 23 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 布洛妮娅 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 30 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 31 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 32 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 33 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 希儿 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 41 }
+# 		}
+# 		localization_key = 1
+# 	}	
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 42 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 43 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 德丽莎 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 51 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 52 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 53 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 符华 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 62 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 63 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	####### 伊甸 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 71 }
+# 		}
+# 		localization_key = 1
+# 	}
+
+
+# 	######## 琪亚娜-空之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 100 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	######## 琪亚娜-薪炎之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 101 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	######## 芽衣-雷之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 110 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	######## 布洛妮娅-理之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 120 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	######## 希儿-死生之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 130 }
+# 		}
+# 		localization_key = 1
+# 	}
+# 	######## 爱莉希雅-人之律者 ########
+# 	text = {
+# 		trigger = {
+# 			check_variable = { bh3_researching_tech_index = 140 }
+# 		}
+# 		localization_key = 1
+# 	}
+# }
+	defined_text = {
+		name = GetBH3ValkyrieAirTech
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = 0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = 1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = 0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = 1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = 3
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = 0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = 1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = 3
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = 1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = 3
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = 3
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = 2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = 3
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = 3
+		}
+	}
+
+	defined_text = {
+		name = GetBH3ValkyrieAirWeapon
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Pistols_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Pistols_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Pistols_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Katana_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Katana_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Katana_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Katana_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cannon_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cannon_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cannon_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cannon_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Scythe_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Scythe_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Scythe_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cross_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cross_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Cross_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Fists_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Fists_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = BH3_ValkyrieAir_MainWeapon_Pistols_1
+		}
+	}
+
+	defined_text = {
+		name = GetBH3ValkyrieAirEngine
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Electric_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Nuclear_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Electric_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Nuclear_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Electric_0
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Nuclear_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Nuclear_1
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = BH3_ValkyrieAir_Engine_Honkai_2
+		}
+	}
+
+	defined_text = {
+		name = GetBH3ValkyrieAirStigmataUp
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+	}
+
+	defined_text = {
+		name = GetBH3ValkyrieAirStigmataMid
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Speed
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Balance
+		}
+	}
+
+	defined_text = {
+		name = GetBH3ValkyrieAirStigmataDown
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 10 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 11 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 12 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 20 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 21 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 22 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 23 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Agility
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 30 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 31 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 32 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 33 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 41 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Pierce
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 42 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_ArmorValue
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 43 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Pierce
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 51 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 52 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Defence
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 53 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 62 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_ArmorValue
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 63 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_ArmorValue
+		}
+		text = {
+			trigger = {
+				check_variable = { bh3_researching_tech_index = 71 }
+			}
+			localization_key = BH3_ValkyrieAir_Stigmata_Attack
+		}
+	}

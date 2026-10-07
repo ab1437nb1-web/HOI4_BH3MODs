@@ -1,0 +1,1704 @@
+
+BH3_create_leader_AnaSchariac = {
+	create_corps_commander = {
+		name = "BH3_leader_AnaSchariac"
+		gfx = GFX_BH3_unit_leader_AnaSchariac
+		traits = { BH3_trait_StarsRing BH3_traits_valkyrie_s BH3_traits_valkyrie }
+		can_be_captured = no
+		skill = 5 female = yes
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 6
+		logistics_skill = 6
+	}
+}
+BH3_create_leader_Senadina_DeepspaceAnchorFirst = {
+	create_corps_commander = {
+		name = "BH3_leader_Senadina_DeepspaceAnchorFirst"
+		gfx = GFX_BH3_unit_leader_Senadina_DeepspaceAnchorFirst
+		traits = { BH3_trait_StarsRing BH3_traits_valkyrie_s BH3_traits_valkyrie }
+		can_be_captured = no
+		skill = 5 female = yes
+		attack_skill = 6
+		defense_skill = 6
+		planning_skill = 6
+		logistics_skill = 6
+	}
+}
+BH3_create_leader_Helia_ValkyrieBoltstorm = {
+	create_corps_commander = {
+		name = "BH3_leader_Helia_ValkyrieBoltstorm"
+		gfx = GFX_BH3_unit_leader_Helia_ValkyrieBoltstorm
+		traits = { BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+		can_be_captured = no
+		skill = 5 female = yes
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+}
+BH3_create_leader_Coralie_ValkyrieBlastmetal = {
+	create_corps_commander = {
+		name = "BH3_leader_Coralie_ValkyrieBlastmetal"
+		gfx = GFX_BH3_unit_leader_Coralie_ValkyrieBlastmetal
+		traits = { BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+		can_be_captured = no
+		skill = 5 female = yes
+		attack_skill = 5
+		defense_skill = 5
+		planning_skill = 5
+		logistics_skill = 5
+	}
+}
+
+BH3_create_leader_Kiana_HerrscherofVoid = {
+	create_corps_commander = {
+		name = "BH3_leader_Kiana_HerrscherofVoid"
+		gfx = GFX_BH3_unit_leader_Kiana_HerrscherofVoid
+		traits = { BH3_trait_HerrscherofVoid trait_reckless }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Kiana_HerrscherofFlamescion = {
+	create_corps_commander = {
+		name = "BH3_leader_Kiana_HerrscherofFlamescion"
+		gfx = GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Kiana_HerrscherofFinality = {
+	create_corps_commander = {
+		name = "BH3_leader_Kiana_HerrscherofFinality"
+		gfx = GFX_BH3_unit_leader_Kiana_HerrscherofFinality
+		traits = { BH3_trait_HerrscherofFinality }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+BH3_create_leader_Mei_HerrscherofThunder = {
+	create_corps_commander = {
+		name = "BH3_leader_Mei_HerrscherofThunder"
+		gfx = GFX_BH3_unit_leader_Mei_HerrscherofThunder
+		traits = { BH3_trait_HerrscherofThunder inflexible_strategist }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Bronya_HerrscherofReason = {
+	create_corps_commander = {
+		name = "BH3_leader_Bronya_HerrscherofReason"
+		gfx = GFX_BH3_unit_leader_Bronya_HerrscherofReason
+		traits = { BH3_trait_HerrscherofReason brilliant_strategist }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Seele_HerrscherofRebirth = {
+	create_corps_commander = {
+		name = "BH3_leader_Seele_HerrscherofRebirth"
+		gfx = GFX_BH3_unit_leader_Seele_HerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Fuka_HerrscherofSentience = {
+	create_corps_commander = {
+		name = "BH3_leader_Fuka_HerrscherofSentience"
+		gfx = GFX_BH3_unit_leader_Fuka_HerrscherofSentience
+		traits = { BH3_trait_HerrscherofSentience }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+BH3_create_leader_Elysia_HerrscherofHuman = {
+	create_corps_commander = {
+		name = "BH3_leader_Elysia_HerrscherofHuman"
+		gfx = GFX_BH3_unit_leader_Elysia_HerrscherofHuman
+		traits = { BH3_trait_HerrscherofHuman brilliant_strategist }
+		can_be_captured = no
+		skill = 7 female = yes
+		attack_skill = 8
+		defense_skill = 8
+		planning_skill = 8
+		logistics_skill = 8
+	}
+}
+
+
+#### 崩坏 ###
+BH3_create_bhs_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_BHS01"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_BHS02"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_BHS03"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_BHS1"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS2"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS3"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS4"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS5"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS6"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS7"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS8"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS9"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS10"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS11"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS12"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS13"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS14"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_BHS15"
+		gfx = GFX_Portrait_BHS
+		traits = { BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_hi1_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HI101"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI102"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI103"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HI11"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH2"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI13"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI14"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI15"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI16"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI17"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI18"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI19"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI110"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI111"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI112"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI113"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI114"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI115"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofReasonSR
+		traits = { BH3_trait_HerrscherofReason BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_hi2_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HI201"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI202"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI203"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HI21"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI22"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI23"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI24"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI25"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI26"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI27"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI28"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI29"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI210"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI211"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI212"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI213"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI214"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI215"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofVoidSR
+		traits = { BH3_trait_HerrscherofVoid BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_HI3_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HI301"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI302"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI303"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HI31"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI32"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI33"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI34"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI35"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI36"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI37"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI38"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI39"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI310"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI311"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI312"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI313"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI314"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI315"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofThunderSR
+		traits = { BH3_trait_HerrscherofThunder BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_HI6_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HI601"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI602"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI603"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HI61"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI62"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI63"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI64"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI65"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI66"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI67"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI68"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI69"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI610"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI611"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI612"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI613"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI614"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI615"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofRebirth
+		traits = { BH3_trait_HerrscherofRebirth BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+BH3_create_HI7_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HI701"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI702"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HI703"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HI71"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI72"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI73"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI74"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI75"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI76"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI77"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI78"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI79"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI710"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI711"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI712"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI713"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI714"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HI715"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+		traits = { BH3_trait_HerrscherofFlamescion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_HH2_leader = {
+	create_field_marshal = {
+		name = "BH3_leader_HH201"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HH202"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_field_marshal = {
+		name = "BH3_leader_HH203"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 9
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	} 
+	create_corps_commander = {
+		name = "BH3_leader_HH21"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH22"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH23"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH24"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH25"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH26"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH27"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH28"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH29"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH210"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH211"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH212"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH213"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH214"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+	create_corps_commander = {
+		name = "BH3_leader_HH215"
+		gfx = GFX_BH3_unit_leader_BHSHerrscherofErosion
+		traits = { BH3_trait_HerrscherofErosion BH3_trait_BHS }
+		can_be_captured = no
+		skill = 8 female = yes
+		attack_skill = 9
+		defense_skill = 9
+		planning_skill = 9
+		logistics_skill = 9
+	}
+}
+
+BH3_create_BHS_operative_leader = {
+	create_operative_leader = {
+		name = "BH3_leader_HH21"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH22"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH23"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH24"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH25"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH26"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH27"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH28"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH29"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH210"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH211"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH212"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH213"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH214"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+	create_operative_leader = {
+		name = "BH3_leader_HH215"
+		GFX = GFX_BH3_unit_leader_BHSHerrscherofErosionA
+		traits = {  }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { BHS }
+	}
+}

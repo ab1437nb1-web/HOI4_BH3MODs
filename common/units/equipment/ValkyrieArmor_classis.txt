@@ -1,0 +1,339 @@
+equipments = {
+
+	#######################################
+	############## 女武神装甲 #############
+	#######################################
+	
+	BH3_ValkyrieArmor_classis = {
+		sprite = BH3_VA
+		is_archetype = yes
+		picture = archetype_light_tank_equipment		
+		is_buildable = no
+		type = armor
+		group_by = archetype
+		
+		interface_category = interface_category_armor
+		active = no
+		can_license = no
+
+
+		default_modules = {
+
+		}
+
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_Balance
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_Speed
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_Breakthrough
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_Defense
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_ArmorValue
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_ApAttack
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_SoftAttack
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_Stigmata_HardAttack
+			count < 2
+		}
+
+		module_count_limit = {
+			category = BH3_ValkyrieArmor_TheDivineKeys
+			count < 2
+		}
+		module_count_limit = {
+			category = BH3_ValkyrieArmor_Doll
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_SpecialMod_Sidekick
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_SpecialMod_SimplifyProduction
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement
+			count < 2
+		}
+		upgrades = {
+			# BH3_ValkyrieArmor_Weapon_upgrade
+		}
+		
+	}
+
+	############ 第一代 ############
+	BH3_ValkyrieArmor_classis_0 = {
+		is_buildable = yes
+		# derived_variant_name = Valkyrie_equipment_0
+		visual_level = 0
+		archetype = BH3_ValkyrieArmor_classis
+		priority = 10
+		module_slots = inherit
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 0
+
+		#Defensive Abilities
+		defense = 10
+		breakthrough = 10
+		hardness = 0.2
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 0
+		hard_attack = 0
+		ap_attack = 0
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 20
+
+		module_slots = {
+			# 圣痕上
+			BH3_ValkyrieArmor_StigmataUp_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_Stigmata
+				}
+			}
+			# 圣痕中
+			BH3_ValkyrieArmor_StigmataMid_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_Stigmata
+				}
+			}
+
+			# 主武器
+			BH3_ValkyrieArmor_MainWeapon_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_MainWeapon_Pistols
+					BH3_ValkyrieArmor_MainWeapon_Katana
+					BH3_ValkyrieArmor_MainWeapon_Cannon
+					BH3_ValkyrieArmor_MainWeapon_Scythe
+					BH3_ValkyrieArmor_MainWeapon_Fists
+					BH3_ValkyrieArmor_MainWeapon_Cross
+				}
+			}
+
+			# 装甲类型
+			BH3_ValkyrieArmor_Armor_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_Armor
+				}
+			}
+
+			# 驱动方式
+			BH3_ValkyrieArmor_Engine_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_ElectricEngine
+					BH3_ValkyrieArmor_NuclearEngine
+					BH3_ValkyrieArmor_HonkaiEngine
+				}
+			}
+
+			# 圣痕下
+			BH3_ValkyrieArmor_StigmataDown_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_Stigmata
+				}
+			}
+
+			# 额外装备
+			BH3_ValkyrieArmor_Add1_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_TheDivineKeys
+					BH3_ValkyrieArmor_Doll
+					BH3_ValkyrieArmor_SpecialMod
+				}
+			}
+		}
+	}
+
+	############ 第二代 ############
+	BH3_ValkyrieArmor_classis_1 = {
+		is_buildable = yes
+		# derived_variant_name = Valkyrie_equipment_0
+		visual_level = 1
+		archetype = BH3_ValkyrieArmor_classis
+		parent = BH3_ValkyrieArmor_classis_0
+		priority = 20
+		module_slots = inherit
+
+		#Misc Abilities
+		reliability = 1.3
+		maximum_speed = 0
+
+		#Defensive Abilities
+		defense = 25
+		breakthrough = 25
+		hardness = 0.25
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 25
+		hard_attack = 25
+		ap_attack = 15
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+
+		module_slots = {
+			# 额外装备
+			BH3_ValkyrieArmor_Add2_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_TheDivineKeys
+					BH3_ValkyrieArmor_Doll
+					BH3_ValkyrieArmor_SpecialMod
+				}
+			}
+		}
+	}
+
+	############ 第三代 ############
+	BH3_ValkyrieArmor_classis_2 = {
+		is_buildable = yes
+		# derived_variant_name = Valkyrie_equipment_0
+		visual_level = 2
+		archetype = BH3_ValkyrieArmor_classis
+		parent = BH3_ValkyrieArmor_classis_1
+		priority = 30
+		module_slots = inherit
+
+		#Misc Abilities
+		reliability = 2
+		maximum_speed = 3
+
+		#Defensive Abilities
+		defense = 70
+		breakthrough = 70
+		hardness = 0.3
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 70
+		hard_attack = 70
+		ap_attack = 40
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 120
+
+		module_slots = {
+			# 额外装备
+			BH3_ValkyrieArmor_Add3_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieArmor_TheDivineKeys
+					BH3_ValkyrieArmor_Doll
+					BH3_ValkyrieArmor_SpecialMod
+				}
+			}
+			
+
+		}
+	}
+
+	############ 第四代 ############
+	BH3_ValkyrieArmor_classis_3 = {
+		is_buildable = yes
+		# derived_variant_name = Valkyrie_equipment_0
+		visual_level = 3
+		archetype = BH3_ValkyrieArmor_classis
+		parent = BH3_ValkyrieArmor_classis_2
+		priority = 40
+		module_slots = inherit
+
+		#Misc Abilities
+		reliability = 3
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 150
+		breakthrough = 150
+		hardness = 0.4
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 160
+		hard_attack = 160
+		ap_attack = 70
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 250
+
+	}
+
+	############ 次时代 ############
+	BH3_ValkyrieArmor_classis_4 = {
+		is_buildable = yes
+		# derived_variant_name = Valkyrie_equipment_0
+		visual_level = 3
+		archetype = BH3_ValkyrieArmor_classis
+		parent = BH3_ValkyrieArmor_classis_3
+		priority = 50
+		module_slots = inherit
+
+		#Misc Abilities
+		reliability = 4
+		maximum_speed = 20
+
+		#Defensive Abilities
+		defense = 350
+		breakthrough = 350
+		hardness = 0.5
+		armor_value = 200
+
+		#Offensive Abilities
+		soft_attack = 300
+		hard_attack = 300
+		ap_attack = 140
+		air_attack = 0
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 500
+
+	}
+}

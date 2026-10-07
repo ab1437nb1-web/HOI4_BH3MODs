@@ -1,0 +1,615 @@
+technologies = {
+
+
+	BH3_Valkyrie_Doctrine_0 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_army = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+			armor_value = 0.15
+			ap_attack = 1
+			max_organisation = 50
+			max_strength = 25
+			defense = 1
+		}
+		special_forces_min = 24
+		special_forces_attack_factor = 0.15
+		special_forces_defence_factor = 0.15
+
+		# enable_tactic = tactic_delay
+		
+		doctrine = yes	
+		research_cost = 4.5
+	}
+	
+	BH3_Valkyrie_Doctrine_1_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_ValkyrieMeele = {
+			hard_attack = 0.15
+		}
+		category_ValkyrieComprehensive = {
+			hard_attack = 0.1
+			ap_attack = 0.05
+		}
+		category_ValkyrieArtillery = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+		category_ValkyrieArmor = {
+			hard_attack = 0.05
+			ap_attack = 0.05
+		}
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}	
+
+	BH3_Valkyrie_Doctrine_1_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		army_speed_factor = 0.15
+		planning_speed = 0.25
+		category_AllValkyrie = {
+			breakthrough = 0.15
+		} 
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+		
+	BH3_Valkyrie_Doctrine_1_3 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		org_loss_at_low_org_factor = -0.15
+		category_AllValkyrie = {
+			recon = 0.1
+		} 
+		
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+		
+	BH3_Valkyrie_Doctrine_1_4_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		land_reinforce_rate = 0.03
+		category_army = {
+			breakthrough = 0.15
+		}
+		category_AllValkyrie = {
+			max_organisation = 5
+			breakthrough = 0.1
+		}
+		
+		
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+		
+	BH3_Valkyrie_Doctrine_1_4_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		land_reinforce_rate = 0.03
+		category_army = {
+			defense = 0.25
+			max_organisation = 5
+		}
+		category_AllValkyrie = {
+			maximum_speed = 0.05
+			defense = 0.1
+			max_organisation = 5
+		}
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+		
+	BH3_Valkyrie_Doctrine_1_5_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_ValkyrieMeele = {
+			hard_attack = 0.15
+			soft_attack = 0.15
+			ap_attack = 0.15
+		} 
+		category_ValkyrieComprehensive = {
+			hard_attack = 0.15
+			soft_attack = 0.15
+			ap_attack = 0.15
+		}
+		category_ValkyrieArmor = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+			ap_attack = 0.05
+		}
+	
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_1_5_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_ValkyrieMeele = {
+			max_organisation = 5
+			defense = 0.05
+		} 
+		category_ValkyrieMeele = {
+			max_organisation = 3
+			defense = 0.05
+		}
+		category_ValkyrieArtillery = {
+			max_organisation = 3
+			defense = 0.05
+		}
+		category_ValkyrieArmor = {
+			max_organisation = 3
+			defense = 0.05
+		}
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_1_6_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		max_planning_factor = 0.15
+		land_night_attack = 0.15
+		category_AllValkyrie = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.25
+			default_morale = 0.5
+		}
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_1_6_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		land_reinforce_rate = 0.03
+		planning_speed = 0.25
+		category_army = {
+			max_organisation = 10
+			default_morale = 0.25
+		}
+		
+		# enable_tactic = tactic_delay
+		
+		
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_2_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_ValkyrieMeele = {
+			soft_attack = 0.05
+		} 
+		category_ValkyrieComprehensive = {
+			soft_attack = 0.1
+		} 
+		category_ValkyrieArtillery = {
+			soft_attack = 0.15
+		}
+		category_ValkyrieArmor = {
+			soft_attack = 0.05
+		}
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_2_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		category_ValkyrieMeele = {
+			maximum_speed = 0.05
+			max_organisation = 5
+		} 
+		category_ValkyrieComprehensive = {
+			maximum_speed = 0.05
+			max_organisation = 5
+		} 
+		category_ValkyrieArtillery = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.05
+		}
+		category_ValkyrieArmor = {
+			maximum_speed = 0.05
+		}
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_2_3 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		additional_brigade_column_size = 1
+		max_planning_factor = 0.15
+		category_army = {
+			max_organisation = 5
+		} 
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	
+	BH3_Valkyrie_Doctrine_2_4_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		coordination_bonus = 0.05
+		land_reinforce_rate = 0.05
+		supply_consumption_factor = -0.10
+		category_army = {
+			max_organisation = 5
+		} 
+		modifier = {
+			combat_width_factor = -0.1
+		}
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}	
+
+		
+	BH3_Valkyrie_Doctrine_2_4_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		coordination_bonus = 0.10
+		land_reinforce_rate = 0.05
+		category_army = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		} 
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_2_5_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_army = {
+			soft_attack = 0.3
+			hard_attack = 0.05
+		} 
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	BH3_Valkyrie_Doctrine_2_5_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_army = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			max_organisation = 10
+		} 
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	BH3_Valkyrie_Doctrine_2_6 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		army_bonus_air_superiority_factor = 0.15
+		air_cas_present_factor = 0.15
+		category_ValkyrieArtillery = {
+			soft_attack = 0.1
+			air_attack = 0.2
+			max_organisation = 10
+		}
+		category_ValkyrieArmor = {
+			soft_attack = 0.05
+		}
+		category_army = {
+			air_attack = 0.2
+		} 
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_3_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		special_forces_no_supply_grace = 240
+		out_of_supply_factor = -0.2
+		modifier = {
+			pocket_penalty = -0.2
+		}
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_3_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+		
+		category_AllValkyrie = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_3_3 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		special_forces_no_supply_grace = 240
+		air_cas_present_factor = 0.15
+		modifier = {
+			air_range_factor = 1
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_3_4 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		special_forces_attack_factor = 0.15
+		special_forces_defence_factor = 0.15
+		category_AllValkyrie = {
+			armor_value = 0.15
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+
+	BH3_Valkyrie_Doctrine_3_5_1 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		additional_brigade_column_size = 1
+		special_forces_min = 24
+		modifier = {
+			combat_width_factor = -0.2
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	BH3_Valkyrie_Doctrine_3_5_2 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		category_AllValkyrie = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+			armor_value = 0.15
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	BH3_Valkyrie_Doctrine_3_6 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		coordination_bonus = 0.1
+		supply_consumption_factor = -0.05
+		category_army = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			maximum_speed = 0.1
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+
+
+		
+	}
+	BH3_Valkyrie_Doctrine_10 = {
+
+		xp_research_type = army
+		xp_unlock_cost = 100
+
+		category_AllValkyrie = {
+			soft_attack = 0.5
+			hard_attack = 0.5
+			armor_value = 0.5
+			defense = 1
+			max_organisation = 25
+			default_morale = 0.5
+		}
+		category_AllHerrscher = {
+			hard_attack = 1
+			soft_attack = 1
+			defense = 1
+			max_organisation = 1000
+			default_morale = 1
+		} 
+		category_army = {
+			soft_attack = 1
+			hard_attack = 1
+			maximum_speed = 0.25
+			ap_attack = 1
+			armor_value = 0.5
+			breakthrough = 1
+			defense = 1
+			max_organisation = 100
+			default_morale = 1
+		}
+
+		# enable_tactic = tactic_delay
+
+		doctrine = yes	
+		research_cost = 4.5
+		
+	}
+}

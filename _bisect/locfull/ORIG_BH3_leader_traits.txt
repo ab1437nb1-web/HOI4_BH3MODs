@@ -1,0 +1,544 @@
+leader_traits = {
+	BH3_trait_CaptainJZ = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.15
+			defence = 0.15
+			max_planning = 0.25
+			planning_speed = 1
+		}
+		field_marshal_modifier = {
+			max_army_group_size = 5
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_NavalCaptainJZ = {
+		type = navy
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			naval_damage_factor = 0.15
+			naval_defense_factor = 0.15
+			naval_morale = 1
+			navy_org = 1
+			naval_speed_factor = 0.15
+			positioning = 0.25
+			spotting_chance = 1
+			navy_visibility = -0.25
+			navy_submarine_detection_factor = 0.5
+			naval_critical_score_chance_factor = 0.5
+			sortie_efficiency = 1
+
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_traits_valkyrie = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 3
+			wounded_chance_factor = -100
+			promote_cost_factor = 1
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	
+	BH3_traits_valkyrie_b = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.02
+			defence = 0.02
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	#用于提供B晋升A的经验
+	BH3_traits_valkyrie_b2a = {
+	    type = corps_commander
+		trait_type = basic_trait
+		gain_xp = {
+			check_variable = { num_units > 1 }
+			has_trait = BH3_traits_valkyrie_b
+		}
+		custom_gain_xp_trigger_tooltip = valkyrie_traits_gain_xp
+		cost = 650
+		on_add = {
+			BH3_remove_valkyrie_level = yes
+			BH3_Character_Portraits_Change = yes
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_traits_valkyrie_a = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.05
+			defence = 0.05
+			army_morale_factor = 0.05
+			breakthrough_factor = 0.05
+			planning_speed = 0.1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	#用于提供A晋升S的经验
+	BH3_traits_valkyrie_a2s = {
+	    type = corps_commander
+		trait_type = basic_trait
+		gain_xp = {
+			check_variable = { num_units > 1 }
+			has_trait = BH3_traits_valkyrie_a
+		}
+		custom_gain_xp_trigger_tooltip = valkyrie_traits_gain_xp
+		cost = 700
+		on_add = {
+			BH3_remove_valkyrie_level = yes
+			BH3_Character_Portraits_Change = yes
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_traits_valkyrie_s = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.1
+			defence = 0.1
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.05
+			modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.05
+			army_morale_factor = 0.1
+			breakthrough_factor = 0.1
+			max_planning = 0.1
+			planning_speed = 0.1
+			recon_factor = 0.1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	#用于提供S晋升SS的经验
+	BH3_traits_valkyrie_s2ss = {
+	    type = corps_commander
+		trait_type = basic_trait
+		gain_xp = {
+			check_variable = { num_units > 1 }
+			has_trait = BH3_traits_valkyrie_s
+		}
+		custom_gain_xp_trigger_tooltip = valkyrie_traits_gain_xp
+		cost = 800
+		on_add = {
+			BH3_remove_valkyrie_level = yes
+			BH3_Character_Portraits_Change = yes
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_traits_valkyrie_ss = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.15
+			defence = 0.15
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.1
+			modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.1
+			army_morale_factor = 0.2
+			breakthrough_factor = 0.2
+			terrain_penalty_reduction = 0.15
+			org_loss_when_moving = -0.15
+			max_planning = 0.2
+			planning_speed = 0.2
+			recon_factor = 0.2
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	#用于提供SS晋升SSS的经验
+	BH3_traits_valkyrie_ss2sss = {
+	    type = corps_commander
+		trait_type = basic_trait
+		gain_xp = {
+			check_variable = { num_units > 1 }
+			has_trait = BH3_traits_valkyrie_ss
+		}
+		custom_gain_xp_trigger_tooltip = valkyrie_traits_gain_xp
+		cost = 1200
+		on_add = {
+			BH3_remove_valkyrie_level = yes
+			BH3_Character_Portraits_Change = yes
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_traits_valkyrie_sss = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.2
+			defence = 0.2
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.15
+			modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.15
+			army_morale_factor = 0.3
+			breakthrough_factor = 0.3
+			terrain_penalty_reduction = 0.3
+			supply_consumption_factor = -0.3
+			org_loss_when_moving = -0.3
+			max_planning = 0.3
+			planning_speed = 0.3
+			recon_factor = 0.3
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_StarsRing = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			modifier_army_sub_unit_category_AllValkyrie_breakthrough_factor = 0.1
+			army_morale_factor = 0.1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_CountryStrongestValkyrie = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.10
+			defence = 0.10
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.1
+			modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.1
+			org_loss_when_moving = -0.25
+			army_morale_factor = 0.25
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_WroldStrongestValkyrie = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.4
+			defence = 0.4
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.5
+			modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.5
+			org_loss_when_moving = -0.8
+			army_morale_factor = 1
+			org_loss_at_low_org_factor = -0.25
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_HerrscherofVoid = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.5
+			defence = 0.5
+			army_morale_factor = 0.5
+			recon_factor = 0.3
+			terrain_penalty_reduction = 0.2
+			supply_consumption_factor = -0.5
+			breakthrough_factor = 0.5
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofFlamescion = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.6
+			defence = 0.4
+			breakthrough_factor = 0.6
+			terrain_penalty_reduction = 0.35
+			planning_speed = 0.35
+			army_morale_factor = 0.3
+			org_loss_when_moving = -0.3
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofFinality = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 2
+			defence = 2
+			breakthrough_factor = 1
+			terrain_penalty_reduction = 1
+			supply_consumption_factor = -0.8
+			max_planning = 0.15
+			planning_speed = 0.35
+			army_morale_factor = 1
+			org_loss_when_moving = -0.5
+			land_reinforce_rate = 0.15
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofThunder = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.9
+			defence = 0.2
+			terrain_penalty_reduction = 0.6
+			supply_consumption_factor = -0.8
+			breakthrough_factor = 1.5
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_HerrscherofReason = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.4
+			defence = 0.5
+			supply_consumption_factor = -0.5
+			max_planning = 1
+			planning_speed = 1
+			equipment_capture = 0.5
+			land_reinforce_rate = 0.15
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_HerrscherofHuman = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.8
+			defence = 1
+			org_loss_when_moving = -0.5
+			supply_consumption_factor = -0.8
+			breakthrough_factor = 0.5
+			terrain_penalty_reduction = 0.5
+			max_planning = 0.5
+			planning_speed = 0.5
+			army_morale_factor = 1
+			recon_factor = 0.35
+			land_reinforce_rate = 0.5
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_HerrscherofWind = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.3
+			defence = 0.7
+			org_loss_when_moving = -0.5
+			terrain_penalty_reduction = 0.3
+			army_morale_factor = 0.3
+			recon_factor = 0.35
+			land_reinforce_rate = 0.1
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofIce = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.5
+			defence = 0.5
+			org_loss_when_moving = -0.5
+			supply_consumption_factor = -0.4
+			terrain_penalty_reduction = 0.7
+			max_planning = 0.5
+			army_morale_factor = 0.3
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofDominate = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.4
+			defence = 0.3
+			org_loss_when_moving = -0.5
+			breakthrough_factor = 0.15
+			max_planning = 1
+			planning_speed = 1
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofErosion = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.4
+			defence = 0.3
+			breakthrough_factor = 0.2
+			max_planning = 0.5
+			planning_speed = 1.2
+			army_morale_factor = 0.6
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofRebirth = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.5
+			defence = 0.5
+			army_morale_factor = 1
+			recon_factor = 0.3
+			max_planning = 0.3
+			terrain_penalty_reduction = 0.5
+			supply_consumption_factor = -0.5
+			breakthrough_factor = 0.6
+			org_loss_when_moving = -0.35
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofSentience = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 1.2
+			defence = 0.2
+			terrain_penalty_reduction = 1
+			planning_speed = 1
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+	BH3_trait_HerrscherofVoidSirin = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			offence = 0.6
+			defence = 0.5
+			army_morale_factor = 0.5
+			recon_factor = 0.3
+			terrain_penalty_reduction = 0.5
+			supply_consumption_factor = -0.5
+			breakthrough_factor = 0.5
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_BHS = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+		    experience_gain_factor = 5
+			wounded_chance_factor = -100
+			max_army_group_size = 10
+			max_commander_army_size = 200
+			reassignment_duration_factor = -1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_HonkaiImpactSick = {
+		type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		non_shared_modifier = {
+			skill_bonus_factor = -0.5
+			cannot_use_abilities = 1
+		}
+		new_commander_weight = { factor = 0 }
+	}
+
+	BH3_trait_SeeleWake = {
+	    type = all
+		trait_type = basic_trait
+		gain_xp = { always = no }
+		modifier = {
+			offence = 0.25
+			defence = 0.25
+			max_planning = 0.15
+			planning_speed = 0.35
+		}
+		new_commander_weight = { factor = 0 }
+	}
+}
+# supply_consumption_factor = -0.2
+# experience_gain_factor = 1
+# wounded_chance_factor = -1
+# offence = 0.15
+# defence = 0.25
+# breakthrough_factor = 0.25
+# max_dig_in = 5
+# army_org_Factor = 0.1 无效
+# army_morale_factor = 0.1
+# recon_factor = 0.3
+# terrain_penalty_reduction = 0.15
+# out_of_supply_factor = -0.3
+# army_attack_factor = 0.25
+# land_reinforce_rate = 0.15  #增援率
+# army_defence_factor = 0.35
+# max_commander_army_size = -6
+# attrition = -0.5
+# army_speed_factor = 0.3 作为将领无效
+# org_loss_when_moving = -0.25
+# max_planning = 0.15
+# planning_speed = 0.35

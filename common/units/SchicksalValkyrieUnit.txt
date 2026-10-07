@@ -1,0 +1,84 @@
+sub_units = {
+
+	SchicksalValkyrieMeele = {
+		abbreviation = "SVM"
+		sprite = SchicksalValkyrieMeele
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 50
+		max_organisation = 150
+		default_morale = 2
+		manpower = 12
+
+		#Misc Abilities
+		training_time = 90
+		suppression = 10
+		weight = 0.2
+		recon = 0.8
+		supply_consumption = 0.08
+
+		initiative = 0.1
+		need = {
+			SchicksalValkyrieMeele_equipment = 12
+		}
+	}
+
+	SchicksalValkyrieArtillery = {
+		abbreviation = "SVA"
+		sprite = SchicksalValkyrieArtillery
+		map_icon_category = infantry
+		special_forces = no
+		priority = 2000
+		ai_priority = 2000
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_AllValkyrie
+			category_AllValkyrieAndHerrscher
+		}
+		
+		combat_width = 0.2
+		
+		#Size Definitions
+		max_strength = 50
+		max_organisation = 150
+		default_morale = 2
+		manpower = 12
+
+		#Misc Abilities
+		training_time = 90
+		suppression = 10
+		weight = 0.2
+		recon = 0.8
+		supply_consumption = 0.08
+
+		initiative = 0.1
+		need = {
+			SchicksalValkyrieArtillery_equipment = 12
+		}
+	}
+}

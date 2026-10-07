@@ -1,0 +1,9 @@
+sub_unit_categories = {
+	category_ValkyrieArmor
+	category_AllValkyrie
+	category_AllHerrscher
+	category_AllValkyrieAndHerrscher
+	category_ValkyrieComprehensive
+	category_ValkyrieMeele
+	category_ValkyrieArtillery
+}

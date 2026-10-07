@@ -1,0 +1,104 @@
+BH3_BHS_bad = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	#志愿军倾向
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = BHS
+		value = -1000
+	}
+	#敌对
+	ai_strategy = {
+		type = antagonize
+		id = BHS
+		value = 2000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = BHS
+		target = non_aggression_pact
+		value = -2000
+	}
+}
+
+BH3_BHS_rush = {
+	allowed = {
+		always = yes
+	}
+	#冲击倾向
+	enable = {
+		tag = BHS
+		has_army_size = {
+			size > 100
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		area = BHS_area
+
+		ratio = 0.6
+
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		#卫戍
+		type = garrison
+		value = -1000
+	}
+
+}
+
+# BHS_unit_production = {
+# 	allowed = { 
+# 		original_tag = BHS 
+# 		original_tag = HI1 
+# 		original_tag = HI2 
+# 		original_tag = HI3 
+# 		original_tag = HI6 
+# 		original_tag = HI7 
+# 	}
+# 	enable = {
+# 		always = yes
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+	
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = BeinalesiBHS
+# 		value = 999
+# 	}
+
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = BeinalesiBHS
+# 		value = 999
+# 	}
+# 	ai_strategy = {
+# 		type = equipment_production_factor
+# 		id = BeinalesiBHS_equipment
+# 		value = 999
+# 	}
+# 	ai_strategy = { 
+# 		type = build_army 
+# 		id = BeinalesiBHS_BHS
+# 		value = 999
+# 	}
+# }
+

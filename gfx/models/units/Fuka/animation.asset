@@ -1,0 +1,48 @@
+########### Fuka_ShadowKnight ###########
+animation = {
+	name = "Fuka_ShadowKnight_Idle_animation"
+	file = "Fuka_ShadowKnight_Idle.anim"
+}
+animation = {
+	name = "Fuka_ShadowKnight_Move_animation"
+	file = "Fuka_ShadowKnight_Move.anim"
+}
+animation = {
+	name = "Fuka_ShadowKnight_Attack_Ground_A_animation"
+	file = "Fuka_ShadowKnight_Attack_Ground_A.anim"
+}
+animation = {
+	name = "Fuka_ShadowKnight_Attack_Ground_B_animation"
+	file = "Fuka_ShadowKnight_Attack_Ground_B.anim"
+}
+
+
+########### Fuka_AzureEmpyrea ###########
+animation = {
+	name = "Fuka_AzureEmpyrea_Idle1_animation"
+	file = "Fuka_AzureEmpyrea_Idle1.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Idle2_animation"
+	file = "Fuka_AzureEmpyrea_Idle2.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Idle3_animation"
+	file = "Fuka_AzureEmpyrea_Idle3.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Move_animation"
+	file = "Fuka_AzureEmpyrea_Move.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Attack_animation"
+	file = "Fuka_AzureEmpyrea_Attack.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Ultra_animation"
+	file = "Fuka_AzureEmpyrea_Ultra.anim"
+}
+animation = {
+	name = "Fuka_AzureEmpyrea_Charge_animation"
+	file = "Fuka_AzureEmpyrea_Charge.anim"
+}

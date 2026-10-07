@@ -1,0 +1,913 @@
+
+BH3_BHS_Invasion_decisions_group = {#崩坏降临倒计时
+	#开启崩坏入侵
+	BH3_honkai_invasion_decision = {
+		priority = 100
+		icon = GFX_decision_Kiana_WhiteComet
+		visible = {
+			NOT = { has_global_flag = BHS_Invasion_GUI_Settings }
+			is_ai = no
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		complete_effect = {
+			set_variable = { BH3_invasion_menu_open = 1 }
+			BH3_BHS_Invasion_GUI_Ini_Settings = yes
+		}
+	}
+	BH3_honkai_invasion_dayleft = {
+		priority = 100
+		#icon = 
+		visible = {
+			has_global_flag = BH3_honkai_invasion_dayleft_active
+		}
+		activation	= {
+			has_global_flag = BH3_honkai_invasion_dayleft_active
+		}
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			hidden_effect = {
+				clr_global_flag = BH3_honkai_invasion_dayleft_active
+			}
+		}
+		days_mission_timeout = global.BH3_honkai_invasion_dayleft
+		is_good = no
+	}
+
+	#在开启世界联盟情况下，停止人类内战
+	BH3_Stop_War_decision = {
+		priority = 100
+		available = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			has_war = yes
+			NOT = {
+				is_in_faction_with = BHS
+				has_war_with = BHS
+			}
+		}
+		visible = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			has_war = yes
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+ 		ai_will_do = { 
+			base = 0
+		}
+		complete_effect = {
+			every_enemy_country = {
+				limit = { NOT = { is_in_faction_with = BHS } }
+				white_peace = ROOT
+			}
+		}
+	}
+	#开启世界联盟情况下，主要国家并加入逐火之蛾
+	BH3_Join_AntiHonkai_Faction_decision = {
+		priority = 99
+		available = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			NOT = {  is_in_faction_with = BHS }
+			NOT = {  is_in_faction_with = global.BH3_Anti_Honkai_faction_leader }
+			OR = {
+				is_major = yes
+				is_ai = no
+			}
+		}
+		visible = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			NOT = {  is_in_faction_with = BHS }
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+ 		ai_will_do = { 
+			base = 0
+			modifier = {
+				has_global_flag = BH3_AntiHonkai_Faction_Allow
+				add = 999
+			}
+
+		}
+		complete_effect = {
+			var:global.BH3_Anti_Honkai_faction_leader = {
+				add_to_faction = ROOT
+			}
+		}
+	}
+
+	#开启世界联盟情况下，邀请所有阵营外国家加入
+	BH3_invite_AntiHonkai_Faction_decision = {
+		priority = 98
+		available = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			tag = global.BH3_Anti_Honkai_faction_leader
+		}
+		visible = {
+			has_global_flag = BH3_AntiHonkai_Faction_Allow
+			has_global_flag = BHS_Started
+			tag = global.BH3_Anti_Honkai_faction_leader
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+ 		ai_will_do = { 
+			base = 0
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					NOT = {  
+						is_in_faction_with = BHS 
+						is_in_faction_with = global.BH3_Anti_Honkai_faction_leader
+					}
+				}
+				var:global.BH3_Anti_Honkai_faction_leader = {
+					add_to_faction = PREV
+				}
+			}
+			
+		}
+	}
+
+
+	#在限定时间内完整控制登陆区域，触发律者诞生
+	BH3_HIX_Control_State = {
+		priority = 98
+		#icon = 
+		visible = {
+			has_global_flag = BHS_decison_Control_State_Flag
+			OR = {
+				has_global_flag = HI1_has_Come
+				has_global_flag = HI2_has_Come
+				has_global_flag = HI3_has_Come
+
+				has_global_flag = HI6_has_Come
+				has_global_flag = HI7_has_Come
+
+				has_global_flag = HH2_has_Come
+			}
+		}
+		activation	= {
+			has_global_flag = BHS_decison_Control_State_Flag
+			OR = {
+				has_global_flag = HI1_has_Come
+				has_global_flag = HI2_has_Come
+				has_global_flag = HI3_has_Come
+
+				has_global_flag = HI6_has_Come
+				has_global_flag = HI7_has_Come
+
+				has_global_flag = HH2_has_Come
+			}
+		}
+		available = {
+			var:global.BHS_Herrscher_LandingPoint  = {
+				OR = {
+					is_controlled_by = BHS
+					is_controlled_by = HI1
+					is_controlled_by = HI2
+					is_controlled_by = HI3
+
+					is_controlled_by = HI6
+					is_controlled_by = HI7
+
+					is_controlled_by = HH2
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = BH3_HIX_Control_State_ctt
+			hidden_effect = {
+				clr_global_flag = BHS_HI_Has_Sel
+				#判定此次诞生律者为理律
+				if = {
+					limit = { 
+						has_global_flag = HI1_has_Come
+						NOT = { 
+							has_global_flag = HI1_set_up 
+							has_global_flag = HI1_has_beaten
+						}
+					}
+					set_global_flag = HI1_set_up
+					clr_global_flag = HI1_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.100 days = 1} 
+				}
+				#判定此次诞生律者为空律
+				if = {
+					limit = { 
+						has_global_flag = HI2_has_Come
+						NOT = { 
+							has_global_flag = HI2_set_up 
+							has_global_flag = HI2_has_beaten
+						}
+					}
+					set_global_flag = HI2_set_up
+					clr_global_flag = HI2_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.200 days = 1} 
+				}
+				#判定此次诞生律者为雷律
+				if = {
+					limit = { 
+						has_global_flag = HI3_has_Come
+						NOT = { 
+							has_global_flag = HI3_set_up 
+							has_global_flag = HI3_has_beaten
+						}
+					}
+					set_global_flag = HI3_set_up
+					clr_global_flag = HI3_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.300 days = 1} 
+				}
+
+
+				#判定此次诞生律者为死律
+				if = {
+					limit = { 
+						has_global_flag = HI6_has_Come
+						NOT = { 
+							has_global_flag = HI6_set_up 
+							has_global_flag = HI6_has_beaten
+						}
+					}
+					set_global_flag = HI6_set_up
+					clr_global_flag = HI6_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.600 days = 1} 
+				}
+				#判定此次诞生律者为炎律
+				if = {
+					limit = { 
+						has_global_flag = HI7_has_Come
+						NOT = { 
+							has_global_flag = HI7_set_up 
+							has_global_flag = HI7_has_beaten
+						}
+					}
+					set_global_flag = HI7_set_up
+					clr_global_flag = HI7_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.700 days = 1} 
+				}
+
+				#判定此次诞生律者为侵蚀律者
+				if = {
+					limit = { 
+						has_global_flag = HH2_has_Come
+						NOT = { 
+							has_global_flag = HH2_set_up 
+							has_global_flag = HH2_has_beaten
+						}
+					}
+					set_global_flag = HH2_set_up
+					clr_global_flag = HH2_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					country_event = { id = HerrscherCome.1200 days = 1} 
+				}
+			}
+		}
+		timeout_effect = {
+			#律者诞生受到压制，我们消灭了还在襁褓中的律者
+			custom_effect_tooltip = BH3_HIX_Control_State_ftt
+			clr_global_flag = BHS_HI_Has_Sel
+			hidden_effect = {
+				random_list = {
+					33 = { scoped_sound_effect  = HI_Beaten1 }
+					33 = { scoped_sound_effect  = HI_Beaten2 }
+					33 = { scoped_sound_effect  = HI_Beaten3 }
+				}
+				#判定此次诞生律者为理律
+				if = {
+					limit = { 
+						has_global_flag = HI1_has_Come
+						NOT = { 
+							has_global_flag = HI1_set_up 
+							has_global_flag = HI1_has_beaten
+						}
+					}
+					set_global_flag = HI1_has_beaten
+					clr_global_flag = HI1_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HI1 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					country_event = { id = HerrscherCome.102 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI1_Beaten
+					}
+				}
+				#判定此次诞生律者为空律
+				if = {
+					limit = { 
+						has_global_flag = HI2_has_Come
+						NOT = { 
+							has_global_flag = HI2_set_up 
+							has_global_flag = HI2_has_beaten
+						}
+					}
+					set_global_flag = HI2_has_beaten
+					clr_global_flag = HI2_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HI2 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					country_event = { id = HerrscherCome.202 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI2_Beaten
+					}
+				}
+				#判定此次诞生律者为雷律
+				if = {
+					limit = { 
+						has_global_flag = HI3_has_Come
+						NOT = { 
+							has_global_flag = HI3_set_up 
+							has_global_flag = HI3_has_beaten
+						}
+					}
+					set_global_flag = HI3_has_beaten
+					clr_global_flag = HI3_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HI3 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					country_event = { id = HerrscherCome.302 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI3_Beaten
+					}
+				}
+
+				#判定此次诞生律者为死律
+				if = {
+					limit = { 
+						has_global_flag = HI6_has_Come
+						NOT = { 
+							has_global_flag = HI6_set_up 
+							has_global_flag = HI6_has_beaten
+						}
+					}
+					set_global_flag = HI6_has_beaten
+					clr_global_flag = HI6_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HI6 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					country_event = { id = HerrscherCome.602 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI6_Beaten
+					}
+				}
+
+				#判定此次诞生律者为炎律
+				if = {
+					limit = { 
+						has_global_flag = HI7_has_Come
+						NOT = { 
+							has_global_flag = HI7_set_up 
+							has_global_flag = HI7_has_beaten
+						}
+					}
+					set_global_flag = HI7_has_beaten
+					clr_global_flag = HI7_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HI7 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					set_country_flag = BHS_Event_HI7_Beaten
+					country_event = { id = HerrscherCome.702 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI6_Beaten
+					}
+				}
+
+				#判定此次诞生律者为侵蚀
+				if = {
+					limit = { 
+						has_global_flag = HH2_has_Come
+						NOT = { 
+							has_global_flag = HH2_set_up 
+							has_global_flag = HH2_has_beaten
+						}
+					}
+					set_global_flag = HH2_has_beaten
+					clr_global_flag = HH2_will_Come
+					clr_global_flag = BHS_decison_Control_State_Flag
+					#计算谁获取律者权能
+					BHS_Who_Beat_HIX_Solve_OneState = yes
+					set_variable = { global.Who_beat_HH2 = global.BHS_Who_Beat_HIX }
+					#打开超事件,同时出发奖励权能
+					set_country_flag = BHS_Event_HH2_Beaten
+					country_event = { id = HerrscherCome.1202 days = 30 }
+					every_country = {
+						limit = { is_ai = no }
+						set_country_flag = BHS_Event_HI6_Beaten
+					}
+				}
+			}
+
+		}
+		days_mission_timeout = 30
+		is_good = no
+	}
+
+	#终焉一击和月球之战触发条件显示
+	BH3_BHS_MoonBattle_Condition_decision = {
+		priority = 97
+		#icon = GFX_BHSinvasion_effect
+		visible = {
+			has_global_flag  = BHS_Started
+		}
+		available = {
+			NOT = {
+				has_global_flag = BHS_MoonBattle_happened 
+			}
+			OR = {
+				surrender_progress > 0.7
+				AND = {
+					has_global_flag = HI1_has_beaten
+					has_global_flag = HI2_has_beaten
+					has_global_flag = HI3_has_beaten
+					has_global_flag = HI6_has_beaten
+					has_global_flag = HI7_has_beaten
+					has_global_flag = HH2_has_beaten
+				}
+			}	
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	#终焉一击和月球之战成功条件显示
+	BH3_BHS_MoonBattle_Win_Condition_decision = {
+		priority = 96
+		#icon = GFX_BHSinvasion_effect
+		visible = {
+			has_global_flag  = BHS_Started
+		}
+		available = {
+			has_global_flag = BH3_World_SSS_Valkyire_more_than_9
+			has_global_flag = BH3_World_Valkyire_Score_more_than_100k
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+	#终焉一击和月球之战失败条件显示
+	BH3_BHS_MoonBattle_Lose_Condition_decision = {
+		priority = 95
+		#icon = GFX_BHSinvasion_effect
+		visible = {
+			has_global_flag  = BHS_Started
+		}
+		available = {
+			NOT = {
+				has_global_flag = BHS_MoonBattle_happened 
+			}
+			has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	#终焉一击和月球之战
+	BH3_BHS_MoonBattle_decision = {
+		priority = 94
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = yes
+		visible = {
+			has_global_flag  = BHS_Started
+			TAG = BHS
+		}
+		available = {
+			NOT = {
+				has_global_flag = BHS_MoonBattle_happened 
+			}
+			OR = {
+				surrender_progress > 0.7
+				AND = {
+					has_global_flag = HI1_has_beaten
+					has_global_flag = HI2_has_beaten
+					has_global_flag = HI3_has_beaten
+					has_global_flag = HI6_has_beaten
+					has_global_flag = HI7_has_beaten
+					has_global_flag = HH2_has_beaten
+				}
+			}	
+		}
+		ai_will_do = {
+			base = 999
+		}
+		complete_effect = {
+			every_country = {
+				limit = { 
+					NOT = { 
+						is_in_faction_with = BHS
+					}
+				}
+				set_country_flag = BHS_Event_MoonBattleStart
+			}
+			set_global_flag = BHS_MoonBattle_happened
+		}
+		remove_effect = {
+			#月球之战成功
+			if = {
+				limit = {
+					has_global_flag = BH3_World_SSS_Valkyire_more_than_9
+					has_global_flag = BH3_World_Valkyire_Score_more_than_100k
+				}
+				BHS_MoonBattle_Win = yes
+				set_global_flag = BHS_MoonBattleWin
+				every_country = {
+					limit = { is_ai = no}
+					set_country_flag = BHS_Event_MoonBattleWin
+					play_song = "TerminalBeginning"
+				}
+			}
+			# 月球之战失败
+			else = {
+				BHS_MoonBattle_Lose = yes
+				set_global_flag = BHS_MoonBattleLose
+				every_country = {
+					limit = { 
+						NOT = { 
+							is_in_faction_with = BHS
+						}
+					}
+					set_country_flag = BHS_Event_MoonBattleLose
+					play_song = "SeeYouInTheNextWorld"
+					random_character = {
+						limit = { has_trait = BH3_trait_CountryStrongestValkyrie }
+						PREV = { 
+							set_variable = { BH3_Character_event_1_target = PREV }
+						}
+						unit_leader_event = BH3_Character_event.1
+					}
+					retire_character = BH3_Character_event_1_target
+				}
+			}
+		}
+	}
+
+	#终焉一击和月球之战直接失败
+	BH3_BHS_MoonBattle_Lose_decision = {
+		priority = 93
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = yes
+		visible = {
+			has_global_flag  = BHS_Started
+			TAG = BHS
+		}
+		available = {
+			NOT = {
+				has_global_flag = BHS_MoonBattle_happened 
+			}
+			has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+		}
+		ai_will_do = {
+			base = 999
+		}
+		days_remove = 5
+		complete_effect = {
+			every_country = {
+				limit = { 
+					NOT = { 
+						is_in_faction_with = BHS
+					}
+				}
+				set_country_flag = BHS_Event_MoonBattleStart
+				set_global_flag = BHS_MoonBattle_happened
+				play_song = "SeeYouInTheNextWorld"
+			}
+		}
+		remove_effect = {
+			# 月球之战失败
+			BHS_MoonBattle_Lose = yes
+			set_global_flag = BHS_MoonBattleLose
+			every_country = {
+				limit = { 
+					NOT = { 
+						is_in_faction_with = BHS
+					}
+				}
+				set_country_flag = BHS_Event_MoonBattleLose
+				random_character = {
+					limit = { has_trait = BH3_trait_CountryStrongestValkyrie }
+					PREV = { 
+						set_variable = { BH3_Character_event_1_target = PREV }
+					}
+					unit_leader_event = BH3_Character_event.1
+				}
+				retire_character = BH3_Character_event_1_target
+			}
+		}
+	}
+
+	#月球之战胜利后，触发重启文明，必须进入茧
+	BH3_BHS_Final_Time_dayleft = {
+		priority = 92
+		#icon = 
+		fire_only_once = yes
+		visible = {
+			has_global_flag = BHS_Final_Time_flag
+		}
+		activation	= {
+			has_global_flag = BHS_Final_Time_flag
+		}
+		available = {
+			NOT = {
+				var:global.MonsterBossBHS_pos = {
+					is_controlled_by = BHS 
+				}
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip = BH3_BHS_Final_Time_dayleft_tt
+			every_country = {
+				limit = {
+					NOT = { is_in_faction_with = BHS }
+				}
+				BHS = { annex_country = { target = PREV } }
+			}
+
+		}
+		complete_effect = {
+			hidden_effect = {
+				destroy_entity = global.MonsterBossBHS_id
+				set_country_flag = BHS_Event_EnterHive
+				set_global_flag = BHS_has_enter_hive
+				play_song = "TruE"
+			}
+		}
+		days_mission_timeout = 180
+		is_good = no
+	}
+
+	#终结崩坏
+	BH3_BHS_invasion_end_dayleft = {
+		priority = 91
+		#icon = 
+		fire_only_once = yes
+		visible = {
+			has_global_flag = BHS_has_enter_hive
+		}
+		activation	= {
+			has_global_flag = BHS_has_enter_hive
+		}
+		available = {
+			BHS = { exists = no }
+		}
+		timeout_effect = {
+		}
+		complete_effect = {
+		}
+		days_mission_timeout = 2000
+		is_good = no
+	}
+
+	#进入结算，节约跑地时间
+	BH3_BHS_end_war_decision = {
+		priority = 90
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = yes
+		visible = {
+			has_global_flag = BHS_Started
+			TAG = BHS
+		}
+		available = {
+			TAG = BHS
+			surrender_progress > 0.95
+			has_global_flag = BHS_has_enter_hive
+		}
+		ai_will_do = {
+			base = 999
+		}
+		complete_effect = {
+			add_war_support = -999
+			remove_ideas = BHS_Benghuai_idea
+		}
+	}
+
+	#减少紧张度
+	BH3_honkai_reduceHI_decision = {
+		priority = 89
+		icon = GFX_decision_HonkaiImpactEffect
+		visible = {
+			has_global_flag  = BHS_Started
+			NOT = { is_in_faction_with = BHS }
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 150
+		days_remove = 30
+		remove_effect = {
+			add_threat = -6
+		}
+	}
+
+	BH3_BHS_Spawn_Troop_decision_1 = {
+		priority = 88
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = no
+		visible = {
+			has_global_flag = BHS_Started
+			is_in_faction_with = BHS
+		}
+		available = {
+			is_in_faction_with = BHS
+			num_divisions < 200
+		}
+		ai_will_do = {
+			base = 999
+		}
+		cost = 0
+		days_remove = 180
+		complete_effect = {
+			ROOT= { BHS_StartTroop = yes }
+		}
+	}
+	BH3_BHS_Spawn_Troop_decision_2 = {
+		priority = 87
+		#icon = GFX_BHSinvasion_effect
+		fire_only_once = no
+		visible = {
+			has_global_flag = BHS_Started
+			is_in_faction_with = BHS
+		}
+		available = {
+			TAG = BHS
+			surrender_progress > 0.5
+			num_divisions < global.BHS_StartDivisionNum
+		}
+		ai_will_do = {
+			base = 999
+		}
+		cost = 0
+		days_remove = 7
+		complete_effect = {
+			ROOT= { BHS_StartTroop = yes }
+		}
+	}
+
+	#从阶段1到阶段2
+	BH3_honkai_LevelI2LevelII_decision = {
+		priority = 1
+		icon = GFX_decision_HonkaiImpactEffect
+		visible = {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level1_idea
+			TAG = BHS
+			threat > 0.2
+		}
+		activation	= {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level1_idea
+			TAG = BHS
+			threat > 0.2
+		}
+		available = {
+			surrender_progress > 0.10
+		}
+		fire_only_once = yes
+		days_mission_timeout = 90
+		is_good = no
+		timeout_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelII = yes
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelII = yes
+			}
+		}
+	}
+
+	BH3_honkai_LevelII2LevelIII_decision = {
+		priority = 2
+		icon = GFX_decision_HonkaiImpactEffect
+		visible = {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level2_idea
+			TAG = BHS
+			threat > 0.4
+		}
+		activation	= {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level2_idea
+			TAG = BHS
+			threat > 0.4
+		}
+		available = {
+			surrender_progress > 0.20
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		is_good = no
+		timeout_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelIII = yes
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelIII = yes
+			}
+		}
+	}
+
+	BH3_honkai_LevelIII2LevelIV_decision = {
+		priority = 3
+		icon = GFX_decision_HonkaiImpactEffect
+		visible = {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level3_idea
+			TAG = BHS
+			threat > 0.4
+		}
+		activation	= {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level3_idea
+			TAG = BHS
+			threat > 0.4
+		}
+		available = {
+			surrender_progress > 0.30
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		is_good = no
+		timeout_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelIV = yes
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelIV = yes
+			}
+		}
+	}
+
+	BH3_honkai_LevelIV2LevelV_decision = {
+		priority = 4
+		icon = GFX_decision_HonkaiImpactEffect
+		visible = {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level4_idea
+			TAG = BHS
+			threat > 0.4
+		}
+		activation	= {
+			has_global_flag  = BHS_Started
+			has_idea = BHS_level4_idea
+			TAG = BHS
+			TAG = BHS
+			threat > 0.4
+		}
+		available = {
+			surrender_progress > 0.50
+		}
+		fire_only_once = yes
+		days_mission_timeout = 180
+		is_good = no
+		timeout_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelV = yes
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				BHS_honkai_Change_LevelV = yes
+			}
+		}
+	}
+
+}

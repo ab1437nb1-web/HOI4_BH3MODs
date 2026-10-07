@@ -1,0 +1,890 @@
+
+BH3_TheDivineKeys_decisions_group = {
+
+	BH3_debug_Get_TheDivineKeys_decisions = {
+		priority = 9999
+		icon = GFX_decision_Void_Archives
+		visible = {
+			is_debug = yes
+		}
+		available = {
+			is_debug = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_Void_Archives
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ThousandKey
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_SevenThundersofRetribution
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_AbyssFlower
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_JudgementofShamash
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_FenghuangDown
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_StarofEden
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_OathofJudah
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_JizoMitama
+			}
+		}
+	}
+
+	BH3_get_TheDivineKey1_decisions = {
+		priority = 9998
+		allowed = {
+			always = yes
+		}
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 360
+		remove_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_Void_Archives
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_StarofEden
+			}
+			set_country_flag = BH3_get_TheDivineKey1_decisions_completed
+		} 
+	}
+
+	BH3_get_TheDivineKey2_decisions = {
+		priority = 9997
+		allowed = {
+			always = yes
+		}
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+			has_country_flag = BH3_get_TheDivineKey1_decisions_completed
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 360
+		remove_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_SevenThundersofRetribution
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_AbyssFlower
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ThousandKey
+			}	
+			set_country_flag = BH3_get_TheDivineKey2_decisions_completed
+		} 
+	}
+
+	BH3_get_TheDivineKey3_decisions = {
+		priority = 9996
+		allowed = {
+			always = yes
+		}
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+			has_country_flag = BH3_get_TheDivineKey2_decisions_completed
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 360
+		remove_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_JudgementofShamash
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_FenghuangDown
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_OathofJudah
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_JizoMitama
+			}
+			set_country_flag = BH3_get_TheDivineKey3_decisions_completed
+		} 
+	}
+
+	BH3_get_OtherHonkaiTech_decisions = {
+		priority = 9995
+		allowed = {
+			always = yes
+		}
+		available = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+			has_country_flag = BH3_get_TheDivineKey3_decisions_completed
+		}
+		visible = {
+			OR = {
+				AND = {
+					has_global_flag = BH3_More_Honkai_Content
+					has_country_flag = BH3_Hyperion_enabled
+					is_ai = yes
+				}
+				NOT = { has_global_flag = BH3_Honkai_Research_facility_on }
+				# is_debug = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 360
+		remove_effect = {
+			complete_special_project = {
+				project = sp:BH3_sp_hyperion_stength_fire
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ValkyrieArmor_Engine_HonkaiImproved
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_ValkyrieArmor_classis_4
+			}
+			complete_special_project = {
+				project = sp:BH3_sp_Doll
+			}
+
+		} 
+	}
+
+	BH3_Void_Archives_decision = {
+		priority = 100
+		icon = GFX_decision_Void_Archives
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_Void_Archives_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				is_ai = yes
+				AND = {
+					has_equipment = { Void_Archives_equipment > 98 }
+					has_stability > 0.5
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			research_speed_factor = 10
+			industrial_capacity_factory = 2
+			production_factory_efficiency_gain_factor = 5	#生产效率增长
+			production_factory_max_efficiency_factor = 1 	#生产效率上限
+			production_lack_of_resource_penalty_factor = -2		#缺乏战略资源惩罚
+			stability_weekly = -0.05
+			political_power_gain = -1
+			experience_gain_army_factor = -0.2
+			productivity_growth_modifier = -10
+			expected_mil_modifier = 1
+		}
+		days_remove = 180
+		complete_effect = {
+			add_stability = -0.15
+			add_equipment_to_stockpile = {
+				type = Void_Archives_equipment
+				amount = -100
+			}
+		}
+	}
+
+	BH3_ThousandKey_decision = {
+		priority = 99
+		icon = GFX_decision_ThousandKey
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_ThousandKey_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				has_equipment = { ThousandKey_equipment > 49 }
+				is_ai = yes
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			supply_consumption_factor = 0.5
+			supply_node_range = 10
+			army_speed_factor = 0.5
+			naval_speed_factor = 0.5
+			production_speed_buildings_factor = 1
+			productivity_growth_modifier = 100
+			expected_mil_modifier = 1
+		}
+		days_remove = 60
+		complete_effect = {
+			custom_effect_tooltip = BH3_ThousandKey_decision_tt
+			# 只刮生产率
+			if = {
+				limit = { has_dynamic_modifier = no_fuel_penalties_modifier }
+				hidden_effect = {
+					set_variable = { ROOT.BH3_productivity_state_var_SUM = 0 }
+					every_controlled_state = {
+						add_to_variable = {  ROOT.BH3_productivity_state_var_SUM = productivity_state_var }
+						set_variable = { productivity_state_var = 0 }
+					}
+					capital_scope = {
+						set_variable = { productivity_state_var =  ROOT.BH3_productivity_state_var_SUM }
+					}
+				}
+			}
+			# 没有该modify，就刮人口
+			else = {
+				hidden_effect = {
+					set_variable = { ROOT.BH3_population_state_var_SUM = 0 }
+					every_controlled_state = {
+						add_to_variable = {  ROOT.BH3_population_state_var_SUM = THIS.state_population }
+						add_manpower = -999999999
+					}
+					capital_scope = {
+						add_manpower = ROOT.BH3_population_state_var_SUM
+					}
+				}
+			}
+
+			
+			every_controlled_state = {
+				limit = {  THIS = {  arms_factory > 0 } }
+				ROOT = {
+					add_offsite_building = {
+						type = arms_factory
+						level = PREV.arms_factory_level
+					}
+				}
+                THIS = {
+                    set_building_level = {
+                        type = arms_factory
+                        level = 0
+                    }
+                }
+			}
+			every_controlled_state = {
+				limit = {  THIS = {  industrial_complex > 0 } }
+				ROOT = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = PREV.industrial_complex_level
+					}
+				}
+                THIS = {
+                    set_building_level = {
+                        type = industrial_complex
+                        level = 0
+                    }
+                }
+			}
+			every_controlled_state = {
+				limit = {  THIS = {  dockyard > 0 } }
+				ROOT = {
+					add_offsite_building = {
+						type = dockyard
+						level = PREV.building_level@dockyard
+					}
+				}
+                THIS = {
+                    set_building_level = {
+                        type = dockyard
+                        level = 0
+                    }
+                }
+			}
+			add_equipment_to_stockpile = {
+				type = ThousandKey_equipment
+				amount = -50
+			}
+		}
+	}
+
+	BH3_SevenThundersofRetribution_decision = {
+		priority = 98
+		icon = GFX_decision_SevenThundersofRetribution
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_SevenThundersofRetribution_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				has_equipment = { SevenThundersofRetribution_equipment > 98 }
+				is_ai = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			army_attack_factor = 0.25
+			modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.25
+			air_attack_factor = 1
+			naval_damage_factor = 1
+			energy_gain_multiplier = 10
+			expected_mil_modifier = 1
+		}
+		days_remove = 180
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = SevenThundersofRetribution_equipment
+				amount = -100
+			}
+		}
+	}
+
+	BH3_AbyssFlower_decision = {
+		priority = 97
+		icon = GFX_decision_AbyssFlower
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_AbyssFlower_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				has_equipment = { AbyssFlower_equipment > 29 }
+				is_ai = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			wounded_chance_factor = -9.99
+			army_org_factor = 1
+			army_strength_factor = 1
+			org_loss_at_low_org_factor = -0.1
+			expected_mil_modifier = 1
+		}
+		days_remove = 30
+		complete_effect = {
+			add_manpower = 80000
+			add_stability = 0.2
+			add_war_support = 0.2
+			every_army_leader = {
+				limit = { has_trait = sick } 
+				remove_trait = { trait = sick }
+			}
+			every_army_leader = {
+				limit = { has_trait = wounded }
+				remove_trait = { trait = wounded }
+			}
+			every_army_leader = {
+				limit = { has_trait = BH3_trait_HonkaiImpactSick }
+				remove_trait = { trait = BH3_trait_HonkaiImpactSick  }
+			}
+			add_equipment_to_stockpile = {
+				type = AbyssFlower_equipment
+				amount = -30
+			}
+		}
+	}
+
+	BH3_JudgementofShamash_decision = {
+		priority = 96
+		icon = GFX_decision_JudgementofShamash
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_JudgementofShamash_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				has_equipment = { JudgementofShamash_equipment > 98 }
+				is_ai = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			army_attack_factor = 1.5
+			land_night_attack = 1
+			expected_mil_modifier = 1
+		}
+		days_remove = 10
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = JudgementofShamash_equipment
+				amount = -100
+			}
+		}
+	}
+
+	BH3_FenghuangDown_decision = {
+		priority = 95
+		icon = GFX_decision_FenghuangDown
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_FenghuangDown_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			has_equipment = { FenghuangDown_equipment > 99 }
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			expected_mil_modifier = 1
+
+		}
+		days_remove = 60
+		complete_effect = {
+			custom_effect_tooltip = BH3_FenghuangDown_decision_effect
+			every_controlled_state = {
+				limit = { NOT = { is_core_of = ROOT } }
+				add_core_of = ROOT
+			}
+			add_equipment_to_stockpile = {
+				type = FenghuangDown_equipment
+				amount = -100
+			}
+		}
+	}
+
+	BH3_StarofEden_decision = {
+		priority = 94
+		icon = GFX_decision_StarofEden
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_StarofEden_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = BH3_StarofEden_decision_on }
+				clr_country_flag = BH3_StarofEden_decision_on
+			}
+			else = { set_country_flag = BH3_StarofEden_decision_on }
+		}
+	}
+
+	BH3_StarofEden_to_state_debuff_decision = {
+		priority = 94
+		icon = GFX_decision_StarofEden_Debuff
+		available = {
+			has_country_flag = BH3_StarofEden_decision_on
+			has_idea = BH3_sp_StarofEden_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			has_equipment = { StarofEden_equipment > 19 }
+		}
+		visible = {
+			has_country_flag = BH3_StarofEden_decision_on
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			expected_mil_modifier = 1
+		}
+		days_remove = 30
+		state_target = yes
+		on_map_mode = map_only
+		complete_effect = {
+			# set_country_flag = BH3_OathofJudah_effect_on
+			# clr_country_flag = BH3_OathofJudah_decision_on
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = modifiers_BH3_sp_StarofEden_Debuff
+					scope = ROOT
+					days = 30
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = StarofEden_equipment
+				amount = -20
+			}
+		}
+	}
+
+	BH3_StarofEden_to_state_buff_decision = {
+		priority = 94
+		icon = GFX_decision_StarofEden_Buff
+		available = {
+			has_country_flag = BH3_StarofEden_decision_on
+			has_idea = BH3_sp_StarofEden_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			has_equipment = { StarofEden_equipment > 19 }
+		}
+		visible = {
+			has_country_flag = BH3_StarofEden_decision_on
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			expected_mil_modifier = 1
+		}
+		days_remove = 120
+		state_target = yes
+		on_map_mode = map_only
+		complete_effect = {
+			# set_country_flag = BH3_OathofJudah_effect_on
+			# clr_country_flag = BH3_OathofJudah_decision_on
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = modifiers_BH3_sp_StarofEden_Buff
+					scope = ROOT
+					days = 120
+				}
+				add_to_variable = { productivity_state_var = 100 }
+			}
+			add_equipment_to_stockpile = {
+				type = StarofEden_equipment
+				amount = -20
+			}
+		}
+	}
+
+	BH3_OathofJudah_decision = {
+		priority = 93
+		icon = GFX_decision_OathofJudah
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_OathofJudah_idea
+			NOT = { 
+				has_country_flag = BH3_OathofJudah_effect_on 
+				has_idea = BH3_disaster
+			}
+			threat > 0.4
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+		}
+		days_remove = 0
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = BH3_OathofJudah_decision_on }
+				clr_country_flag = BH3_OathofJudah_decision_on
+			}
+			else = { set_country_flag = BH3_OathofJudah_decision_on }
+		}
+	}
+
+	BH3_OathofJudah_to_state_decision = {
+		priority = 93
+		icon = GFX_decision_OathofJudah
+		# visible = {
+		# 	NOT = {
+		# 		is_in_faction_with = BHS
+		# 	}
+		# }
+		available = {
+			has_country_flag = BH3_OathofJudah_decision_on
+			NOT = { 
+				has_country_flag = BH3_OathofJudah_effect_on 
+				has_idea = BH3_disaster
+			}
+			has_idea = BH3_sp_OathofJudah_idea
+			threat > 0.4
+			has_equipment = { OathofJudah_equipment > 4 }
+		}
+		visible = {
+			has_country_flag = BH3_OathofJudah_decision_on
+		}
+		ai_will_do = {
+			base = 0
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			expected_mil_modifier = 1
+		}
+		days_remove = 30
+		state_target = yes
+		on_map_mode = map_only
+		# target_trigger = {
+		# 	FROM = {
+		# 		or = {
+		# 			is_controlled_by = ROOT
+		# 			controller = {
+		# 				has_war_with = ROOT
+		# 			}
+		# 		}
+		# 	}
+		# }
+		complete_effect = {
+			set_country_flag = BH3_OathofJudah_effect_on
+			clr_country_flag = BH3_OathofJudah_decision_on
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = modifiers_BH3_sp_OathofJudah_to_own
+					scope = ROOT
+					days = 30
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = OathofJudah_equipment
+				amount = -5
+			}
+			hidden_effect = {
+				set_variable = { BH3_OathofJudah_id = THIS.id }
+				add_to_variable = { BH3_OathofJudah_id = FROM.id }
+				create_entity = {
+					entity = BH3_OathofJudah_entity
+					id = BH3_OathofJudah_id
+					state = FROM
+					min_zoom = 1000
+					scale = 12
+					z = 10
+				}
+				country_event = { id = BH3_misc.3 days = 30 }
+			}
+		}
+	}
+
+	BH3_JizoMitama_decision = {
+		priority = 92
+		icon = GFX_decision_JizoMitama
+		visible = {
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		available = {
+			has_idea = BH3_sp_JizoMitama_idea
+			threat > 0.4
+			NOT = { has_idea = BH3_disaster }
+			OR = {
+				has_equipment = { JizoMitama_equipment > 98 }
+				is_ai = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		fire_only_once = no
+		cost = 0
+		modifier = {
+			army_intel_factor = 99.99
+			navy_intel_factor = 99.99
+			airforce_intel_factor = 99.99
+			civilian_intel_factor = 99.99
+			productivity_growth_modifier = 15
+			stability_weekly = 0.03
+			political_power_gain = 1
+			expected_mil_modifier = 1
+		}
+		days_remove = 180
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = JizoMitama_equipment
+				amount = -100
+			}
+			# 千禧特化
+			set_temp_variable = { percent_change = 20 }
+			set_temp_variable = { tag_index = ROOT }
+			every_country = {
+				limit = { 
+					NOT = { 
+						TAG = ROOT 
+					}
+					is_neighbor_of = ROOT
+					is_ai = yes
+	
+				}
+				set_temp_variable = { influence_target = THIS }
+				change_influence_percentage = yes
+			}
+
+		}
+	}
+}

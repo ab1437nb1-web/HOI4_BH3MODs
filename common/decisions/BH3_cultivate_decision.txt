@@ -1,0 +1,1444 @@
+
+BH3_cultivate_decisions_group = {#养成系统
+	
+	BH3_cultivate_leader_decisions = {
+		priority = 102
+		icon = GFX_decision_Ai_Hyperion
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+    	}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = BH3_Character_KianaKaslana_On
+				set_country_flag = BH3_Character_RaidenMei_On
+				set_country_flag = BH3_Character_BronyaZaych_On
+				set_country_flag = BH3_Character_SeeleVollerei_On
+				
+				set_country_flag = BH3_Character_Fuka_On
+				set_country_flag = BH3_Character_TheresaApocalypse_On
+				set_country_flag = BH3_Character_TheresaLunar_On
+				set_country_flag = BH3_Character_TheresaStarlitAstrologos_On
+				set_country_flag = BH3_Character_BiankaDurandalAtaegina_On
+				set_country_flag = BH3_Character_RitaRossweisse_On
+				set_country_flag = BH3_Character_Eden_On
+
+				if = {
+					limit = { 
+						is_debug = yes
+					}
+					set_country_flag = BH3_Character_SeeleVollereiBlack_On
+					BH3_create_leader_Kiana_HerrscherofVoid = yes
+					BH3_create_leader_Kiana_HerrscherofFlamescion = yes
+					BH3_create_leader_Kiana_HerrscherofFinality = yes 
+					BH3_create_leader_Mei_HerrscherofThunder = yes
+					BH3_create_leader_Bronya_HerrscherofReason = yes
+					BH3_create_leader_Fuka_HerrscherofSentience = yes
+					BH3_create_leader_Seele_HerrscherofRebirth = yes
+					BH3_create_leader_Elysia_HerrscherofHuman = yes
+					BH3_create_leader_AnaSchariac = yes
+					BH3_create_leader_Senadina_DeepspaceAnchorFirst = yes
+					BH3_create_leader_Helia_ValkyrieBoltstorm = yes
+					BH3_create_leader_Coralie_ValkyrieBlastmetal = yes
+				}
+			}
+		}
+	}
+	BH3_cultivate_leader_Other_decisions = {
+		priority = 102
+		icon = GFX_decision_Ai_Hyperion
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+			is_ai = no
+		}
+		visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+    	}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			BH3_create_leader_Kiana_HerrscherofFinality = yes 
+			BH3_create_leader_Fuka_HerrscherofSentience = yes
+			BH3_create_leader_AnaSchariac = yes
+			BH3_create_leader_Senadina_DeepspaceAnchorFirst = yes
+			BH3_create_leader_Helia_ValkyrieBoltstorm = yes
+			BH3_create_leader_Coralie_ValkyrieBlastmetal = yes
+		}
+	}
+
+	BH3_cultivate_ValkyrieSoldier_Tips_decision = {
+		priority = 101
+		icon = GFX_decision_BH3_cultivate_Expand_ValkyrieSoldier_School
+		allowed = {
+			always = yes
+		}
+		available = {
+			# num_of_civilian_factories > 15
+			always = yes
+		}
+		visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+    	}
+		# modifier = {
+		# 	civilian_factory_use = 15
+		# }
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		complete_effect = {
+			custom_effect_tooltip = BH3_cultivate_ValkyrieSoldier_Tips_decision_TT
+		}
+	}
+
+	BH3_cultivate_ValkyrieSoldierB_GoBattle_decision = {
+		priority = 100
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldierB_GoBattle
+		visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+			NOT = { has_country_flag = BH3_cultivate_ValkyrieSoldierB_GoBattle  }
+    	}
+		available = {
+			always = yes
+		}
+		days_remove = 1
+        days_re_enable = 135
+		fire_only_once = no
+		remove_effect = {	
+			set_country_flag = BH3_cultivate_ValkyrieSoldierB_GoBattle
+        }
+	}
+
+	BH3_cultivate_ValkyrieSoldier_B_Train = {
+		priority = 99
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldier_B_Train
+		allowed = {
+			always = yes
+		}
+		activation	= {
+			has_tech = BH3_ValkyrieSoldier_Research
+		}
+		available = {
+			always = no
+		}
+		visible = { 
+			has_tech = BH3_ValkyrieSoldier_Research
+    	}
+		cancel_trigger = {
+        	has_country_flag = BH3_cultivate_ValkyrieSoldierB_GoBattle
+    	}
+		cancel_effect = {
+			clr_country_flag = BH3_cultivate_ValkyrieSoldierB_GoBattle
+			add_war_support = -0.05
+
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = 	BH3_cultivate_ValkyrieSoldier_B_Train
+		}
+
+		modifier = {
+
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		days_mission_timeout = 180
+		
+		timeout_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_b
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_B_equipment
+									amount = ValkyrieSoldier_B_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = 	BH3_cultivate_ValkyrieSoldier_B_Train
+		} 
+	}
+
+	BH3_cultivate_ValkyrieSoldier_A_Train = {
+		priority = 97
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldier_A_Train
+		allowed = {
+			always = yes
+		}
+		activation	= {
+			has_tech = BH3_ValkyrieSoldier_Research
+		}
+		available = {
+			always = no
+		}
+		visible = { 
+			has_tech = BH3_ValkyrieSoldier_Research
+    	}
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_mission_timeout = 150
+		timeout_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollerei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Seele_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaApocalypse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Theresa_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaLunar = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaLunar_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaStarlitAstrologos = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_Fuka = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Fuka_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_BiankaDurandalAtaegina = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_RitaRossweisse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_RitaRossweisse_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+					BH3_Character_Eden = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_a
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Eden_A_equipment
+									amount = ValkyrieSoldier_A_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = 	BH3_cultivate_ValkyrieSoldier_A_Train
+		} 
+	}
+
+	BH3_cultivate_ValkyrieSoldier_S_Train = {
+		priority = 96
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldier_S_Train
+		allowed = {
+			always = yes
+		}
+		activation	= {
+			has_tech = BH3_ValkyrieSoldier_Research
+		}
+		available = {
+			always = no
+		}
+		visible = { 
+			has_tech = BH3_ValkyrieSoldier_Research
+    	}
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_mission_timeout = 90
+		timeout_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollerei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Seele_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollereiBlack = {
+						if = {
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								ROOT = { has_country_flag = BH3_Character_SeeleVollereiBlack_On }
+							}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_SeeleBlack_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaApocalypse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Theresa_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaLunar = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaLunar_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaStarlitAstrologos = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_Fuka = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Fuka_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_BiankaDurandalAtaegina = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_RitaRossweisse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_RitaRossweisse_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+					BH3_Character_Eden = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_s
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Eden_S_equipment
+									amount = ValkyrieSoldier_S_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = 	BH3_cultivate_ValkyrieSoldier_S_Train
+		} 
+	}
+
+	BH3_cultivate_ValkyrieSoldier_SS_Train = {
+		priority = 95
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldier_SS_Train
+		allowed = {
+			always = yes
+		}
+		activation	= {
+			has_tech = BH3_ValkyrieSoldier_Research
+		}
+		available = {
+			always = no
+		}
+		visible = { 
+			has_tech = BH3_ValkyrieSoldier_Research
+    	}
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_mission_timeout = 90
+		timeout_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollerei = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Seele_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollereiBlack = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_SeeleBlack_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaApocalypse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Theresa_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaLunar = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaLunar_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaStarlitAstrologos = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_Fuka = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Fuka_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_BiankaDurandalAtaegina = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_RitaRossweisse = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_RitaRossweisse_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+					BH3_Character_Eden = {
+						if = {
+							limit = { 
+								OR = {
+									has_trait = BH3_traits_valkyrie_ss
+									has_trait = BH3_traits_valkyrie_sss
+								}
+						 	}
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Eden_SS_equipment
+									amount = ValkyrieSoldier_SS_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = BH3_cultivate_ValkyrieSoldier_SS_Train
+		} 
+	}
+
+	BH3_cultivate_ValkyrieSoldier_SSS_Train = {
+		priority = 94
+		icon = GFX_decision_BH3_cultivate_ValkyrieSoldier_SSS_Train
+		allowed = {
+			always = yes
+		}
+		activation	= {
+			has_tech = BH3_ValkyrieSoldier_Research
+		}
+		available = {
+			always = no
+		}
+		visible = { 
+			has_tech = BH3_ValkyrieSoldier_Research
+    	}
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		days_mission_timeout = 90
+		timeout_effect = {
+			meta_effect = {
+				text = {
+					BH3_Character_KianaKaslana = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Kiana_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_RaidenMei = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Mei_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_BronyaZaych = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Bronya_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollerei = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Seele_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_SeeleVollereiBlack = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_SeeleBlack_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaApocalypse = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Theresa_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaLunar = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaLunar_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_TheresaStarlitAstrologos = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_Fuka = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Fuka_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_BiankaDurandalAtaegina = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_RitaRossweisse = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_RitaRossweisse_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+					BH3_Character_Eden = {
+						if = {
+							limit = { has_trait = BH3_traits_valkyrie_sss }
+							ROOT = {
+								add_equipment_to_stockpile = {
+									type = ValkyrieSoldier_Eden_SSS_equipment
+									amount = ValkyrieSoldier_SSS_num
+								}
+							}
+						}
+					}
+				}
+				log = ""
+			}
+			activate_mission = BH3_cultivate_ValkyrieSoldier_SSS_Train
+		} 
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_0_decision = {
+		priority = 1000
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 50
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -50
+			set_variable = { BH3_Valkyrie_Doctrine_0_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_0 = 1 }
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_1_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_0
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_1_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_1 = 1 }
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_2_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_1
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_2_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_2 = 1 }
+		}
+	}
+	
+	BH3_cultivate_Valkyrie_Doctrine_3_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_2
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_3_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_3_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_3_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_3 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_3 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_3 = 1 }
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_4_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_3
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 60
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_4_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_1_4_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_4_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_4_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_4_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_4_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_4_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_4_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_4_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_4 = 1 }	
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_5_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_4_1
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 60
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_5_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_1_5_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_5_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_5_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_5_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_5_2_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_5_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_5_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_5_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_5_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_5_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_5_2 = 1 }
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_6_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_5_1
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 30
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_6_1_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_1_6_2_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_2_6_btn_frame = 2 }
+			set_variable = { BH3_Valkyrie_Doctrine_3_6_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_6_1 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_1_6_2 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_2_6 = 1 }
+			set_technology = { BH3_Valkyrie_Doctrine_3_6 = 1 }
+		}
+	}
+
+	BH3_cultivate_Valkyrie_Doctrine_7_decision = {
+		priority = 999
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+			has_army_experience > 100
+			has_tech = BH3_Valkyrie_Doctrine_1_5_1
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 180
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		complete_effect = {
+			army_experience = -100
+		}
+		remove_effect = {
+			set_variable = { BH3_Valkyrie_Doctrine_1_10_btn_frame = 2 }
+			set_technology = { BH3_Valkyrie_Doctrine_10 = 1 }
+		}
+	}
+}

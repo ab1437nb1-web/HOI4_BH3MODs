@@ -1,0 +1,734 @@
+##### 生成的科学家没有visible判定
+##### generate出来的内阁无法使用add_ideas添加
+
+every_possible_country = {
+	###### 舰长 ######
+	generate_character = {
+		token_base = BH3_leader_CaptainJZ
+		name = BH3_leader_CaptainJZ
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_CaptainJZ
+				small = GFX_BH3_unit_leader_CaptainJZ_small
+			} 
+		}
+		field_marshal = {
+			traits = { BH3_trait_CaptainJZ BH3_traits_valkyrie_s }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 9
+			visible = { has_country_flag = leader_CaptainJZ_on }
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = BH3_leader_CaptainJZ
+			traits = { BH3_trait_idea_CaptainJZ }
+			
+			visible = { has_country_flag = leader_CaptainJZ_on }
+		} 
+	}
+
+	generate_character = {
+		token_base = BH3_leader_NavalCaptainJZ
+		name = BH3_leader_NavalCaptainJZ
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_CaptainJZ
+				small = GFX_BH3_unit_leader_CaptainJZ_small
+			} 
+		}
+		navy_leader = {
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			maneuvering_skill = 6
+			coordination_skill = 6
+			traits = { BH3_trait_NavalCaptainJZ }
+			visible = { has_country_flag = leader_CaptainJZ_on }
+		}
+		advisor = {
+			cost = 100
+			slot = navy_chief
+			idea_token = BH3_leader_NavalCaptainJZ
+			traits = { BH3_trait_idea_NavalCaptainJZ }
+			
+			visible = { has_country_flag = leader_CaptainJZ_on }
+		} 
+	}
+	generate_character = { 
+		token_base = BH3_leader_CaptainJZgirl
+		name = BH3_leader_CaptainJZgirl
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_CaptainJZgirl
+				small = GFX_BH3_unit_leader_CaptainJZgirl_small
+			} 
+		}
+		field_marshal = {
+			traits = { BH3_trait_CaptainJZ BH3_traits_valkyrie_s }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 6
+			logistics_skill = 9
+			visible = { has_country_flag = leader_CaptainJZgirl_on }
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			idea_token = BH3_leader_CaptainJZgirl
+			traits = { BH3_trait_idea_CaptainJZ }
+		
+			visible = { has_country_flag = leader_CaptainJZgirl_on }
+			ai_will_do = {
+				base = 10
+			}
+		} 
+	}
+	generate_character = {
+		token_base = BH3_leader_NavalCaptainJZgirl
+		name = BH3_leader_NavalCaptainJZgirl
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_CaptainJZgirl
+				small = GFX_BH3_unit_leader_CaptainJZgirl_small
+			} 
+		}
+		navy_leader = {
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			maneuvering_skill = 6
+			coordination_skill = 6
+			traits = { BH3_trait_NavalCaptainJZ }
+			visible = { has_country_flag = leader_CaptainJZgirl_on }
+		}
+		advisor = {
+			cost = 100
+			slot = navy_chief
+			idea_token = BH3_leader_NavalCaptainJZgirl
+			traits = { BH3_trait_idea_NavalCaptainJZ }
+			
+			visible = { has_country_flag = leader_CaptainJZgirl_on }
+			ai_will_do = {
+				base = 999
+			}
+		} 
+	}
+	###### 长光 ######
+	generate_character = {
+		token_base = BH3_Character_ChangGuang
+		name = BH3_Character_ChangGuang
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_ChangGuang
+				small = GFX_BH3_Char_Portrait_ChangGuang_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_ChangGuang
+			traits = { BH3_trait_idea_ChangGuang }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level1 BH3_scientist_trait_BH3_ValkyrieArmor }
+			skills = { BH3_Honkai_specialization = 3 }
+			
+		}
+	}
+		
+	###### 爱因斯坦 ######
+	generate_character = {
+		token_base = BH3_Character_Einstein
+		name = BH3_Character_Einstein
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_Einstein
+				small = GFX_BH3_Char_Portrait_Einstein_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_Einstein
+			traits = { BH3_trait_idea_Einstein }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level2 }
+			skills = { BH3_Honkai_specialization = 4 }
+		}
+	}
+	###### 梅博士 ######
+	generate_character = {
+		token_base = BH3_Character_DoctorMei
+		name = BH3_Character_DoctorMei
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_Mei
+				small = GFX_BH3_Char_Portrait_Mei_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_DoctorMei
+			traits = { BH3_trait_idea_DoctorMei }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }	
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level3 BH3_scientist_trait_BH3_TheDivineKeys BH3_scientist_trait_BH3_ValkyrieArmor }
+			skills = { BH3_Honkai_specialization = 4 }
+		}
+	}
+	###### 梅比乌斯 ######
+	generate_character = {
+		token_base = BH3_Character_Mobius
+		name = BH3_Character_Mobius
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_Mobius
+				small = GFX_BH3_Char_Portrait_Mobius_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_Mobius
+			traits = { BH3_trait_idea_Mobius }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level2 }
+			skills = { BH3_Honkai_specialization = 4 }
+		}
+	}
+	###### 维尔薇 ######
+	generate_character = {
+		token_base = BH3_Character_VillV
+		name = BH3_Character_VillV
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_VillV
+				small = GFX_BH3_Char_Portrait_VillV_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_VillV
+			traits = { BH3_trait_idea_VillV }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level3 BH3_scientist_trait_BH3_TheDivineKeys BH3_scientist_trait_BH3_ValkyrieArmor_Doll }
+			skills = { BH3_Honkai_specialization = 4 }
+		}
+	}
+	###### 特斯拉 ######
+	generate_character = {
+		token_base = BH3_Character_Tesla
+		name = BH3_Character_Tesla
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_Tesla
+				small = GFX_BH3_Char_Portrait_Tesla_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = political_advisor
+			idea_token = BH3_Character_Tesla
+			traits = { BH3_trait_idea_Tesla }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 10
+			}
+		}  
+		scientist = {
+			traits = { BH3_scientist_trait_level2 }
+			skills = { BH3_Honkai_specialization = 4 }
+		}
+	}
+	###### 爱莉希雅 ######
+	generate_character = {
+		token_base = BH3_Character_Elysia
+		name = BH3_Character_Elysia
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_Char_Portrait_Elysia
+				small = GFX_BH3_Char_Portrait_Elysia_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = BH3_Character_Elysia
+			traits = { BH3_trait_idea_Elysia }
+			
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		}  
+	}
+
+	###### 琪亚娜 ######
+	generate_character = {
+		token_base = BH3_Character_KianaKaslana
+		name = BH3_Character_KianaKaslana
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Kiana_WhiteComet
+				small = GFX_BH3_unit_leader_Kiana_WhiteComet_small
+			}
+		}
+		# advisor = {
+		# 	cost = 0
+		# 	slot = high_command
+		# 	idea_token = BH3_Character_Elysia
+		# 	traits = { BH3_trait_idea_Elysia }
+		# 	
+		# 	visible = { has_country_flag = BH3_Hyperion_enabled }
+		# 	available = { has_tech = Elysia_HerrscherofHuman_Research }
+		# }  
+		corps_commander = {
+			traits = { trait_reckless BH3_trait_StarsRing BH3_traits_valkyrie_b BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_KianaKaslana_ttDescAdd
+			visible = { has_country_flag = BH3_Character_KianaKaslana_On }
+		}
+	}
+
+	###### 芽衣 ######
+	generate_character = {
+		token_base = BH3_Character_RaidenMei
+		name = BH3_Character_RaidenMei
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Mei_CrimsonImpuls
+				small = GFX_BH3_unit_leader_Mei_CrimsonImpuls_small
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious BH3_trait_StarsRing BH3_traits_valkyrie_b BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_RaidenMei_ttDescAdd
+			visible = { has_country_flag = BH3_Character_RaidenMei_On }
+		}
+	}
+
+	###### 布洛妮娅 ######
+	generate_character = {
+		token_base = BH3_Character_BronyaZaych
+		name = BH3_Character_BronyaZaych
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Bronya_ValkyrieChariot
+				small = GFX_BH3_unit_leader_Bronya_ValkyrieChariot_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			traits = { BH3_trait_idea_Bronya }
+			desc = BH3_cultivate_decision_window_BronyaZaych_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		}  		
+		corps_commander = {
+			traits = { brilliant_strategist BH3_trait_StarsRing BH3_traits_valkyrie_b BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_BronyaZaych_ttDescAdd
+			visible = { has_country_flag = BH3_Character_BronyaZaych_On }
+		}
+	}
+
+	###### 希儿 ######
+	generate_character = {
+		token_base = BH3_Character_SeeleVollerei
+		name = BH3_Character_SeeleVollerei
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Seele_SwallowtailPhantasm
+				small = GFX_BH3_unit_leader_Seele_SwallowtailPhantasm_small
+			}
+		}
+		corps_commander = {
+			traits = { trait_cautious BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_SeeleVollerei_ttDescAdd
+			visible = { has_country_flag = BH3_Character_SeeleVollerei_On }
+		}
+	}
+
+	###### 希儿(黑) ######
+	generate_character = {
+		token_base = BH3_Character_SeeleVollereiBlack
+		name = BH3_Character_SeeleVollereiBlack
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Seele_StygianNymphBlack
+				small = GFX_BH3_unit_leader_Seele_StygianNymphBlack_small
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless BH3_trait_StarsRing BH3_traits_valkyrie_s BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_SeeleVollereiBlack_ttDescAdd
+			visible = { has_country_flag = BH3_Character_SeeleVollereiBlack_On }
+		}
+	}
+
+	###### 德丽莎·阿波卡利斯 ######
+	generate_character = {
+		token_base = BH3_Character_TheresaApocalypse
+		name = BH3_Character_TheresaApocalypse
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Theresa_ValkyriePledge
+				small = GFX_BH3_unit_leader_Theresa_Bishop_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = army_chief
+			#idea_token = BH3_Character_TheresaMars
+			traits = { BH3_trait_idea_TheresaMars }
+			desc = BH3_cultivate_decision_window_TheresaApocalypse_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { 
+				OR = { 
+					has_country_flag = BH3_Character_event_63_ad_true 
+					is_ai = yes 
+				} 
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					OR = {
+						TAG = PRC
+						TAG = CHI
+						TAG = SOV
+						TAG = USA
+						TAG = ENG
+					}
+					add = 1000
+				}
+			}
+		}  
+		corps_commander = {
+			traits = { inflexible_strategist BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_TheresaApocalypse_ttDescAdd
+			visible = { has_country_flag = BH3_Character_TheresaApocalypse_On }
+		}
+	}
+	###### 月下 ######
+	generate_character = {
+		token_base = BH3_Character_TheresaLunar
+		name = BH3_Character_TheresaLunar
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Theresa_LunaKindred
+				small = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = BH3_Character_TheresaLunar
+			traits = { BH3_trait_idea_TheresaLunar }
+			desc = BH3_cultivate_decision_window_TheresaLunar_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { 
+				OR = {
+					has_country_flag = BH3_Character_event_72_ad_true 
+					is_ai = yes
+				}
+			}
+			ai_will_do = {
+				base = 0
+				modifier = {
+					OR = {
+						TAG = PRC
+						TAG = CHI
+						TAG = SOV
+						TAG = USA
+						TAG = ENG
+					}
+					add = 1000
+				}
+			}
+		}  
+		corps_commander = {
+			traits = { brilliant_strategist BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_TheresaLunar_ttDescAdd
+			visible = { has_country_flag = BH3_Character_TheresaLunar_On }
+		}
+	}
+	###### 观星 ######
+	generate_character = {
+		token_base = BH3_Character_TheresaStarlitAstrologos
+		name = BH3_Character_TheresaStarlitAstrologos
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Theresa_StarlitAstrologos
+				small = GFX_BH3_unit_leader_Theresa_StarlitAstrologos2_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = air_chief
+			idea_token = BH3_Character_TheresaStarlitAstrologos
+			traits = { BH3_trait_idea_TheresaStarlitAstrologos }
+			desc = BH3_cultivate_decision_window_TheresaStarlitAstrologos_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { 
+				OR = {
+					has_country_flag = BH3_Character_event_81_ad_true 
+					is_ai = yes
+				}
+			}
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		corps_commander = {
+			traits = { brilliant_strategist BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_TheresaStarlitAstrologos_ttDescAdd
+			visible = { has_country_flag = BH3_Character_TheresaStarlitAstrologos_On }
+		}
+	}
+
+	###### 符华 ######
+	generate_character = {
+		token_base = BH3_Character_Fuka
+		name = BH3_Character_Fuka
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Fuka_ValkyrieAccipiter
+				small = GFX_BH3_unit_leader_Fuka_AzureEmpyrea_small
+			}
+		}
+		advisor = {
+			cost = 0
+			slot = theorist
+			idea_token = BH3_Character_Fuka
+			traits = { BH3_trait_idea_Fuka }
+			desc = BH3_cultivate_decision_window_Fuka_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { 
+				OR = { 
+					TAG = PRC
+					TAG = CHI 
+					has_country_flag = BH3_SaintFreyaCollege_Setup
+					is_ai = yes
+				}
+			}
+			ai_will_do = {
+				base = 999
+			}
+		}  
+		corps_commander = {
+			traits = { old_guard BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_Fuka_ttDescAdd
+			visible = { has_country_flag = BH3_Character_Fuka_On }
+		}
+	}
+
+	###### 比安卡·幽兰黛尔·阿塔吉娜 ######
+	generate_character = {
+		token_base = BH3_Character_BiankaDurandalAtaegina
+		name = BH3_Character_BiankaDurandalAtaegina
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Durandal_ValkyrieGloria
+				small = GFX_BH3_unit_leader_Durandal_DeaAnchora_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			traits = { BH3_trait_idea_Durandal }
+			desc = BH3_cultivate_decision_window_BiankaDurandalAtaegina_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { 
+				OR = {
+					has_country_flag = BH3_Character_event_102_ad_true
+					is_ai = yes
+				}
+			}
+			ai_will_do = {
+				base = 999
+			}
+		} 
+		corps_commander = {
+			traits = { BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_BiankaDurandalAtaegina_ttDescAdd
+			visible = { has_country_flag = BH3_Character_BiankaDurandalAtaegina_On }
+		}
+	}
+
+	###### 丽塔 ######
+	generate_character = {
+		token_base = BH3_Character_RitaRossweisse
+		name = BH3_Character_RitaRossweisse
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Rita_PhantomIron
+				small = GFX_BH3_unit_leader_Rita_PhantomIron_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			traits = { BH3_trait_idea_Rita }
+			desc = BH3_cultivate_decision_window_RitaRossweisse_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 999
+			}
+		} 		
+		corps_commander = {
+			traits = { BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_RitaRossweisse_ttDescAdd
+			visible = { has_country_flag = BH3_Character_RitaRossweisse_On }
+		}
+	}
+
+	###### 伊甸 ######
+	generate_character = {
+		token_base = BH3_Character_Eden
+		name = BH3_Character_Eden
+		can_be_captured = no
+		portraits = { 
+			civilian = {
+				large = GFX_BH3_unit_leader_Eden_GoldenDiva
+				small = GFX_BH3_unit_leader_Eden_GoldenDiva2_small
+			}
+		}
+		advisor = {
+			cost = 100
+			slot = high_command
+			idea_token = BH3_Character_Eden
+			traits = { BH3_trait_idea_Eden }
+			desc = BH3_cultivate_decision_window_Eden_ttDescAdd
+			visible = { has_country_flag = BH3_Hyperion_enabled }
+			available = { has_country_flag = BH3_Hyperion_enabled }
+			ai_will_do = {
+				base = 0
+				modifier = {
+					has_war = yes
+					add = 2000
+				}
+			}
+		}  
+		corps_commander = {
+			traits = { BH3_trait_StarsRing BH3_traits_valkyrie_a BH3_traits_valkyrie }
+			skill = 5 
+			attack_skill = 5
+			defense_skill = 5
+			planning_skill = 5
+			logistics_skill = 5
+			desc = BH3_cultivate_decision_window_Eden_ttDescAdd
+			visible = { has_country_flag = BH3_Character_Eden_On }
+		}
+	}
+}

@@ -1,0 +1,30 @@
+
+########### 伊甸 ###########
+animation = {
+	name = "Eden_GoldenDiva_Idle1_animation"
+	file = "Eden_GoldenDiva_Idle1.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_Idle2_animation"
+	file = "Eden_GoldenDiva_Idle2.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_Idle3_animation"
+	file = "Eden_GoldenDiva_Idle3.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_Move_animation"
+	file = "Eden_GoldenDiva_Move.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_Attack1_animation"
+	file = "Eden_GoldenDiva_Attack1.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_Attack2_animation"
+	file = "Eden_GoldenDiva_Attack2.anim"
+}
+animation = {
+	name = "Eden_GoldenDiva_SKL_animation"
+	file = "Eden_GoldenDiva_SKL.anim"
+}

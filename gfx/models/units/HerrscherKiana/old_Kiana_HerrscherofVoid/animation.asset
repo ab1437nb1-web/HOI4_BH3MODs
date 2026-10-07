@@ -1,0 +1,42 @@
+
+########### Kiana_HerrscherofVoid ###########
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Idle1_animation"
+# 	file = "Kiana_HerrscherofVoid_Idle1.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Idle2_animation"
+# 	file = "Kiana_HerrscherofVoid_Idle2.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Idle3_animation"
+# 	file = "Kiana_HerrscherofVoid_Idle3.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Move_animation"
+# 	file = "Kiana_HerrscherofVoid_Move.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Walk_animation"
+# 	file = "Kiana_HerrscherofVoid_Walk.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Attack1_animation"
+# 	file = "Kiana_HerrscherofVoid_Attack1.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Attack2_animation"
+# 	file = "Kiana_HerrscherofVoid_Attack2.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_Attack3_animation"
+# 	file = "Kiana_HerrscherofVoid_Attack3.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_AttackThree_animation"
+# 	file = "Kiana_HerrscherofVoid_AttackThree.anim"
+# }
+# animation = {
+# 	name = "Kiana_HerrscherofVoid_AllFire_animation"
+# 	file = "Kiana_HerrscherofVoid_AllFire.anim"
+# }

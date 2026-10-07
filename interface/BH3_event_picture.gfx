@@ -1,0 +1,42 @@
+spriteTypes = {
+	#event图片
+		spriteType = {
+		name = "GFX_event_BHS10"
+		texturefile = "gfx/event_pictures/BHS10.dds"
+	}
+	spriteType = {
+		name = "GFX_event_BHS11"
+		texturefile = "gfx/event_pictures/BHS11.dds"
+	}
+	spriteType = {
+		name = "GFX_event_BHS12"
+		texturefile = "gfx/event_pictures/BHS12.dds"
+	}
+	spriteType = {
+		name = "GFX_event_BHS25"
+		texturefile = "gfx/event_pictures/BHS25.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_BHS_news"
+		texturefile = "gfx/event_pictures/news_event_BHS_news.dds"
+	}
+	spriteType = {
+		name = "GFX_Character_LevelUp"
+		texturefile = "gfx/event_pictures/Character_LevelUp.dds"
+	}
+	spriteType = {
+		name = "GFX_CharacterEvent_Seele_Wake"
+		texturefile = "gfx/event_pictures/CharacterEvent_Seele_Wake.dds"
+	}
+	spriteType = {
+		name = "GFX_CharacterEvent_Theresa_s2ss"
+		texturefile = "gfx/event_pictures/CharacterEvent_Theresa_s2ss.dds"
+	}
+	spriteType = {
+		name = "GFX_CharacterEvent_Valkyrie_Die"
+		texturefile = "gfx/event_pictures/CharacterEvent_Valkyrie_Die.dds"
+	}
+
+	
+}

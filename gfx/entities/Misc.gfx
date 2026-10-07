@@ -1,0 +1,27 @@
+objectTypes = {
+	#休伯利安
+	pdxmesh = {
+		name = "BH3_Hyperion_pdx"
+		file = "gfx/models/Misc/BH3_Hyperion.mesh"
+		animation = { id = "Idle"	type = "BH3_Hyperion_Idle_animation"}
+		animation = { id = "Move"	type = "BH3_Hyperion_Idle_animation"}
+	}
+	#激光
+	pdxmesh = {
+		name = "BH3_Laser_pdx"
+		file = "gfx/models/Misc/BH3_Laser.mesh"
+		animation = { id = "Attack"	type = "BH3_Laser_Attack_animation"}
+	}
+
+	#激光
+	pdxmesh = {
+		name = "BH3_OathofJudah_pdx"
+		file = "gfx/models/Misc/BH3_OathofJudah.mesh"
+	}
+
+	#终焉之茧
+	pdxmesh = {
+		name = "BH3_Cocoon_pdx"
+		file = "gfx/models/Misc/BH3_Cocoon.mesh"
+	}
+}

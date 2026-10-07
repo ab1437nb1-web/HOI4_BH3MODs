@@ -1,0 +1,605 @@
+# 往事乐土·刻印：基于状态的动态修正（P2 全 12 派系）
+# 规则：每个刻印 = 精神（持有记录）+ 动态修正（真正加成）；每个 DM 必须有 icon 与 enable/无常驻。
+# 加成数值：满配对标神之键「第零额定功率」。
+
+BH3_ER_Savior_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.1275
+	breakthrough_factor = 0.153
+	air_attack_factor = 0.1275
+}
+
+BH3_ER_Savior_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.1275
+	breakthrough_factor = 0.153
+	air_attack_factor = 0.1275
+}
+
+BH3_ER_Savior_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.1275
+	breakthrough_factor = 0.153
+	air_attack_factor = 0.1275
+}
+
+BH3_ER_Savior_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.2125
+	breakthrough_factor = 0.255
+	air_attack_factor = 0.2125
+	army_org = 4.25
+}
+
+BH3_ER_Savior_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.2975
+	breakthrough_factor = 0.34
+	air_attack_factor = 0.2975
+	army_core_attack_factor = 0.1275
+	planning_speed = 0.2125
+}
+
+BH3_ER_Setsuna_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_speed_factor = 0.0425
+	air_agility_factor = 0.0425
+}
+
+BH3_ER_Setsuna_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_speed_factor = 0.0425
+	air_agility_factor = 0.0425
+}
+
+BH3_ER_Setsuna_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_speed_factor = 0.0425
+	air_agility_factor = 0.0425
+}
+
+BH3_ER_Setsuna_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_speed_factor = 0.1275
+	air_agility_factor = 0.1275
+	army_org_regain = 0.085
+}
+
+BH3_ER_Setsuna_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_speed_factor = 0.17
+	air_agility_factor = 0.17
+	breakthrough_factor = 0.17
+}
+
+BH3_ER_Bodhi_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_intelligence_agency = yes }
+	recon_factor = 0.085
+	planning_speed = 0.0425
+}
+
+BH3_ER_Bodhi_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_intelligence_agency = yes }
+	recon_factor = 0.085
+	planning_speed = 0.0425
+}
+
+BH3_ER_Bodhi_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_intelligence_agency = yes }
+	recon_factor = 0.085
+	planning_speed = 0.0425
+}
+
+BH3_ER_Bodhi_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_intelligence_agency = yes }
+	recon_factor = 0.17
+	planning_speed = 0.1275
+	intel_network_gain_factor = 0.2125
+}
+
+BH3_ER_Bodhi_L2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { agency_upgrade_number > 4 }
+	recon_factor = 0.1275
+	intel_network_gain_factor = 0.17
+	air_detection = 0.085
+}
+
+BH3_ER_Bodhi_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { agency_upgrade_number > 8 }
+	recon_factor = 0.17
+	planning_speed = 0.17
+}
+
+BH3_ER_Gold_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	stability_weekly = 0.0068
+	stability_factor = 0.0425
+}
+
+BH3_ER_Gold_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	stability_weekly = 0.0068
+	stability_factor = 0.0425
+}
+
+BH3_ER_Gold_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	stability_weekly = 0.0068
+	stability_factor = 0.0425
+}
+
+BH3_ER_Gold_Low_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_stability < 0.30 }
+	stability_weekly = 0.017
+	stability_factor = 0.17
+	consumer_goods_factor = -0.085
+}
+
+BH3_ER_Gold_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_stability > 0.90 }
+	political_power_gain = 0.1275
+	production_factory_max_efficiency_factor = 0.085
+	stability_factor = 0.085
+}
+
+BH3_ER_Gold_Overflow_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_stability > 0.99 }
+	political_power_gain = 0.2125
+	production_factory_max_efficiency_factor = 0.17
+	consumer_goods_factor = -0.085
+}
+
+BH3_ER_Gold_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	stability_factor = 0.17
+	stability_weekly = 0.0127
+	political_power_gain = 0.17
+}
+
+BH3_ER_Kalpas_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.051
+	attrition = 0.0255
+}
+
+BH3_ER_Kalpas_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.051
+	attrition = 0.0255
+}
+
+BH3_ER_Kalpas_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.051
+	attrition = 0.0255
+}
+
+BH3_ER_Kalpas_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { surrender_progress > 0.25 }
+	army_attack_factor = 0.1275
+	breakthrough_factor = 0.1275
+}
+
+BH3_ER_Kalpas_Desperate_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { surrender_progress > 0.50 }
+	army_attack_factor = 0.255
+	breakthrough_factor = 0.255
+	army_org = 8.5
+}
+
+BH3_ER_Kalpas_LastStand_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { surrender_progress > 0.65 }
+	army_attack_factor = 0.425
+	breakthrough_factor = 0.425
+	army_org_regain = 0.17
+	attrition = -0.17
+}
+
+BH3_ER_Kalpas_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.085
+	breakthrough_factor = 0.085
+}
+
+BH3_ER_Fusheng_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_org_regain = 0.0425
+	attrition = -0.0425
+}
+
+BH3_ER_Fusheng_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_org_regain = 0.0425
+	attrition = -0.0425
+}
+
+BH3_ER_Fusheng_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_org_regain = 0.0425
+	attrition = -0.0425
+}
+
+BH3_ER_Fusheng_Advantage_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Fusheng_balance > 0 } }
+	army_attack_factor = 0.2125
+	breakthrough_factor = 0.2125
+	army_speed_factor = 0.085
+}
+
+BH3_ER_Fusheng_Disadvantage_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Fusheng_balance < 0 } }
+	army_defence_factor = 0.2125
+	army_org = 8.5
+	army_org_regain = 0.17
+	combat_entrenchment = 0.17
+}
+
+BH3_ER_Fusheng_AmpAdv_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Fusheng_balance > 20 } }
+	breakthrough_factor = 0.2125
+	army_speed_factor = 0.1275
+}
+
+BH3_ER_Fusheng_AmpDis_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Fusheng_balance < -20 } }
+	army_defence_factor = 0.2125
+	army_org_regain = 0.1275
+}
+
+BH3_ER_Aponia_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_defence_factor = 0.051
+	war_support_weekly = 0.0034
+}
+
+BH3_ER_Aponia_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_defence_factor = 0.051
+	war_support_weekly = 0.0034
+}
+
+BH3_ER_Aponia_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_defence_factor = 0.051
+	war_support_weekly = 0.0034
+}
+
+BH3_ER_Aponia_Low_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war_support < 0.30 }
+	war_support_weekly = 0.0085
+	stability_factor = 0.1275
+	army_defence_factor = 0.1275
+}
+
+BH3_ER_Aponia_High_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war_support > 0.90 }
+	conscription_factor = 0.1275
+	army_core_attack_factor = 0.085
+	army_core_defence_factor = 0.1275
+}
+
+BH3_ER_Aponia_Overflow_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war_support > 0.99 }
+	conscription_factor = 0.17
+	army_core_attack_factor = 0.1275
+	army_core_defence_factor = 0.1275
+	max_surrender_limit_offset = 0.085
+	resistance_growth = -0.17
+	compliance_growth = 0.17
+}
+
+BH3_ER_Aponia_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	army_defence_factor = 0.2125
+	combat_entrenchment = 0.17
+	war_support_weekly = 0.0085
+}
+
+BH3_ER_Spiral_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	research_speed_factor = 0.0255
+	scientist_xp_gain_factor = 0.0425
+}
+
+BH3_ER_Spiral_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	research_speed_factor = 0.0255
+	scientist_xp_gain_factor = 0.0425
+}
+
+BH3_ER_Spiral_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	research_speed_factor = 0.0255
+	scientist_xp_gain_factor = 0.0425
+}
+
+BH3_ER_Spiral_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	special_project_speed_factor = 0.1275
+	research_speed_factor = 0.0425
+}
+
+BH3_ER_Spiral_Core_L2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { num_researched_technologies > 60 }
+	special_project_speed_factor = 0.1275
+	scientist_xp_gain_factor = 0.1275
+}
+
+BH3_ER_Spiral_Core_L3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { num_researched_technologies > 90 }
+	special_project_speed_factor = 0.1275
+	research_speed_factor = 0.085
+}
+
+BH3_ER_Spiral_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	special_project_speed_factor = 0.17
+	research_speed_factor = 0.085
+	scientist_xp_gain_factor = 0.17
+}
+
+BH3_ER_Mobius_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	industrial_capacity_factory = 0.0255
+}
+
+BH3_ER_Mobius_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	industrial_capacity_factory = 0.0255
+}
+
+BH3_ER_Mobius_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	industrial_capacity_factory = 0.0255
+}
+
+BH3_ER_Mobius_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	country_resource_steel = BH3_ER_Mobius_steel
+	country_resource_aluminium = BH3_ER_Mobius_aluminium
+	country_resource_rubber = BH3_ER_Mobius_rubber
+	country_resource_tungsten = BH3_ER_Mobius_tungsten
+	country_resource_chromium = BH3_ER_Mobius_chromium
+	country_resource_oil = BH3_ER_Mobius_oil
+	country_resource_coal = BH3_ER_Mobius_coal
+}
+
+BH3_ER_Mobius_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	industrial_capacity_factory = 0.085
+	production_factory_efficiency_gain_factor = 0.085
+}
+
+BH3_ER_Kosma_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	land_night_attack = 0.068
+	air_night_penalty = -0.0425
+}
+
+BH3_ER_Kosma_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	land_night_attack = 0.068
+	air_night_penalty = -0.0425
+}
+
+BH3_ER_Kosma_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	land_night_attack = 0.068
+	air_night_penalty = -0.0425
+}
+
+BH3_ER_Kosma_T1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Kosma_charge > 20 } }
+	land_night_attack = 0.1275
+	army_attack_factor = 0.085
+}
+
+BH3_ER_Kosma_T2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Kosma_charge > 40 } }
+	land_night_attack = 0.17
+	army_attack_factor = 0.1275
+	breakthrough_factor = 0.1275
+}
+
+BH3_ER_Kosma_T3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Kosma_charge > 60 } }
+	land_night_attack = 0.2125
+	army_attack_factor = 0.17
+	breakthrough_factor = 0.17
+}
+
+BH3_ER_Kosma_T4_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Kosma_charge > 80 } }
+	land_night_attack = 0.255
+	army_attack_factor = 0.2125
+	breakthrough_factor = 0.2125
+	army_speed_factor = 0.085
+}
+
+BH3_ER_Kosma_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	land_night_attack = 0.255
+	army_attack_factor = 0.1275
+	air_attack_factor = 0.1275
+}
+
+BH3_ER_Griseo_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.0255
+	army_defence_factor = 0.0255
+	air_attack_factor = 0.0255
+	air_defence_factor = 0.0255
+}
+
+BH3_ER_Griseo_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.0255
+	army_defence_factor = 0.0255
+	air_attack_factor = 0.0255
+	air_defence_factor = 0.0255
+}
+
+BH3_ER_Griseo_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.0255
+	army_defence_factor = 0.0255
+	air_attack_factor = 0.0255
+	air_defence_factor = 0.0255
+}
+
+BH3_ER_Griseo_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.051
+	army_defence_factor = 0.051
+	air_attack_factor = 0.051
+	air_defence_factor = 0.051
+	air_mission_efficiency = 0.085
+}
+
+BH3_ER_Griseo_T1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Griseo_sync > 15 } }
+	army_attack_factor = 0.068
+	air_attack_factor = 0.068
+}
+
+BH3_ER_Griseo_T2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Griseo_sync > 30 } }
+	army_attack_factor = 0.085
+	air_attack_factor = 0.085
+	air_cas_present_factor = 0.1275
+}
+
+BH3_ER_Griseo_T3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { check_variable = { BH3_ER_Griseo_sync > 45 } }
+	army_attack_factor = 0.102
+	air_attack_factor = 0.102
+	air_cas_present_factor = 0.17
+	army_org = 4.25
+}
+
+BH3_ER_Griseo_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = yes }
+	army_attack_factor = 0.068
+	army_defence_factor = 0.068
+	air_attack_factor = 0.068
+	air_defence_factor = 0.068
+	air_cas_present_factor = 0.1275
+}
+
+BH3_ER_Pardofelis_1_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = no }
+	industrial_capacity_factory = 0.051
+	consumer_goods_factor = -0.0255
+}
+
+BH3_ER_Pardofelis_2_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = no }
+	industrial_capacity_factory = 0.051
+	consumer_goods_factor = -0.0255
+}
+
+BH3_ER_Pardofelis_3_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = no }
+	industrial_capacity_factory = 0.051
+	consumer_goods_factor = -0.0255
+}
+
+BH3_ER_Pardofelis_Core_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = no }
+	industrial_capacity_factory = 0.1275
+	production_factory_efficiency_gain_factor = 0.17
+	research_speed_factor = 0.085
+}
+
+BH3_ER_Pardofelis_Amp_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { has_war = no }
+	industrial_capacity_factory = 0.17
+	consumer_goods_factor = -0.085
+	political_power_gain = 0.17
+}
+
+
+BH3_ER_Pardofelis_Trade_dm = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	country_resource_steel = BH3_ER_Pardofelis_steel
+	country_resource_aluminium = BH3_ER_Pardofelis_aluminium
+	country_resource_rubber = BH3_ER_Pardofelis_rubber
+}

@@ -1,0 +1,146 @@
+add_namespace = BH3_tech
+
+
+#用于女武神科研条进度更新
+country_event = {
+	id = BH3_tech.1
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				check_variable = {
+					BH3_researching = 1
+				}
+			}
+			if = {
+				limit = {
+					has_variable = BH3_tech_days_remain
+					check_variable = {
+						BH3_tech_days_remain = 1
+					}
+				}
+				set_variable = {
+					BH3_researching = 0
+				}
+				set_variable = {
+					BH3_research_progress_p = -1000
+				}
+				# BH3_research_complete = yes
+				BH3_ValkyrieArmor_research_complete = yes
+			}
+			else = {
+				subtract_from_variable = {
+					BH3_tech_days_remain = 1
+				}
+				country_event = {
+					id = BH3_tech.1
+					days = 1
+				}
+				BH3_refresh_tech_progressbar = yes
+			}
+		}
+	}
+}
+
+
+#崩坏浓度计算和满足给律者装备
+country_event = {
+	id = BH3_tech.2
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		set_variable = { global.BH3_Threat = global.threat }
+		multiply_variable = { global.BH3_Threat = 2500 }
+		if = {
+			limit = {
+				check_variable = {global.threat > 0.4 }
+			}
+			#给律者装备
+			if = {
+				limit = {
+					has_tech = Kiana_HerrscherofVoid_Research
+				}
+				add_equipment_to_stockpile = { type = HerrscherVoid_Kiana_equipment_0 amount = 1  }
+			}
+			if = {
+				limit = {
+					has_tech = Kiana_HerrscherofFlamescion_Research
+				}
+				add_equipment_to_stockpile = { type = HerrscherFlamescion_Kiana_equipment_0 amount = 1  }
+			}
+			if = {
+				limit = { 
+					has_tech = Bronya_HerrscherofReason_Research
+					check_variable = {global.BH3_Threat > 1000}
+				}
+				add_equipment_to_stockpile = { type = HerrscherReason_Bronya_equipment_0 amount = 1  }
+			}
+			if = {
+				limit = { 
+					has_tech = Seele_HerrscherofRebirth_Research
+					check_variable = {global.BH3_Threat > 1000}
+				}
+				add_equipment_to_stockpile = { type = HerrscherRebirth_Seele_equipment_0 amount = 1  }
+			}
+			if = {
+				limit = { 
+					has_tech = Mei_HerrscherofThunder_Research
+					check_variable = {global.BH3_Threat > 1000}
+				}
+				add_equipment_to_stockpile = { type = HerrscherThunder_Mei_equipment_0 amount = 1  }
+			}
+			if = {
+				limit = { 
+					has_tech = Elysia_HerrscherofHuman_Research
+					check_variable = {global.BH3_Threat > 1000}
+				}
+				add_equipment_to_stockpile = { type = HerrscherHuman_Elysia_equipment_0 amount = 1  }
+			}
+			if = {
+				#当达到指定浓度时，触发解锁律者科技的事件
+				limit = { check_variable = { BH3_tech_Herrscher_lock = 0 } }
+				if = {
+					limit = { 
+						has_global_flag = BHS_Invasion_Settings_Finish
+						check_variable = { global.BH3_invasion_menu_enable_herrscher2_btn_frame = 2 } 
+					}
+					set_variable = { BH3_tech_Herrscher_lock = 1 }
+					country_event = { id = BH3_tech.3 }
+				}
+				if = {
+					limit = { 
+						NOT = { has_global_flag = BHS_Invasion_Settings_Finish }
+					}
+					set_variable = { BH3_tech_Herrscher_lock = 1 }
+					country_event = { id = BH3_tech.3 }
+				}
+			}
+		
+			#触发检测的间隔
+			country_event = {
+				id = BH3_tech.2
+				days = 7
+			}
+		}
+		else = {
+			#触发检测的间隔
+			country_event = {
+				id = BH3_tech.2
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	#到达崩坏浓度的事件提醒
+	id = BH3_tech.3
+	is_triggered_only = yes
+	title =BH3_tech.3.t
+	desc = BH3_tech.3.d
+	picture = GFX_BH3_tech_Elysia_HerrscherofHuman_btn
+	option = {
+		name = BH3_tech.3.a
+	}
+}

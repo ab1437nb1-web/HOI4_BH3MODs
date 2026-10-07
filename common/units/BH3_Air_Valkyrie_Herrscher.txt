@@ -1,0 +1,106 @@
+sub_units = {
+	# 律者级空中女武神：不可设计（装备无模块槽），独立兵种，类别挂 category_AllHerrscher
+	HerrscherVoidKianaAir = {
+		sprite = HerrscherVoidKianaAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherVoid_Kiana_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+
+	HerrscherThunderMeiAir = {
+		sprite = HerrscherThunderMeiAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherThunder_Mei_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+
+	HerrscherFlamescionKianaAir = {
+		sprite = HerrscherFlamescionKianaAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherFlamescion_Kiana_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+	HerrscherReasonBronyaAir = {
+		sprite = HerrscherReasonBronyaAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherReason_Bronya_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+
+	HerrscherRebirthSeeleAir = {
+		sprite = HerrscherRebirthSeeleAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherRebirth_Seele_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+
+	HerrscherHumanElysiaAir = {
+		sprite = HerrscherHumanElysiaAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherHuman_Elysia_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+	# 仅"我即崩坏"模式启用：由侵蚀律者降临效果授予科技后刷出
+	HerrscherErosionElysiaAir = {
+		sprite = HerrscherErosionElysiaAir
+		priority = 1900
+		ai_priority = 1900
+		active = yes
+		type = fighter
+		need = { HerrscherErosion_Elysia_Air_equipment = 1 }
+		categories = {
+			category_fighter
+			category_AllHerrscher
+			category_AllValkyrieAndHerrscher
+		}
+		land_air_wing_size = 25
+	}
+}

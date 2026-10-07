@@ -1,0 +1,315 @@
+equipments = {
+
+	#######################################################
+	########## 律者级空中女武神（不可设计装备）##########
+	#######################################################
+	# 生态位：位于可设计的"次时代空中女武神装甲"之上，对标原版末代战力的顶格单位。
+	# 不可设计的实现方式：不写 module_slots，且不登记到 design 蓝图 gui
+	#   （interface/equipmentdesigner/BH3_ValkyrieAir_blueprints.gui），
+	#   因此它们只出现在生产界面，不会出现在空军设计器里。
+	# 数值口径（用户 2026-10-06 定）：对空攻击约 1500 / 防御约 3000 / 造价 20000 IC，
+	#   约为次时代满配设计的 2 倍、现有崩坏空中单位的 3 倍。
+	# 解锁：挂在既有律者科技上（Kiana_HerrscherofVoid_Research 等）。
+
+	############ 空之律者·琪亚娜 ############
+	HerrscherVoid_Kiana_Air_equipment = {
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherVoidKianaAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 空间权能：高机动、高航程
+		air_attack = 65000
+		air_defence = 100000
+		air_agility = 480
+		maximum_speed = 6000
+		air_range = 4200
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherVoid_Kiana_Air_equipment_0 = {
+		archetype = HerrscherVoid_Kiana_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+
+	############ 雷之律者·芽衣 ############
+	HerrscherThunder_Mei_Air_equipment = {
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherThunderMeiAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 雷之权能：高攻击
+		air_attack = 85000
+		air_defence = 85000
+		air_agility = 440
+		maximum_speed = 5800
+		air_range = 3800
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherThunder_Mei_Air_equipment_0 = {
+		archetype = HerrscherThunder_Mei_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+
+	############ 薪炎之律者·琪亚娜 ############
+	HerrscherFlamescion_Kiana_Air_equipment = {
+
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherFlamescionKianaAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.2
+
+		# 炎之权能：高防御、耐战
+		air_attack = 62000
+		air_defence = 110000
+		air_agility = 460
+		maximum_speed = 5600
+		air_range = 3600
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherFlamescion_Kiana_Air_equipment_0 = {
+		archetype = HerrscherFlamescion_Kiana_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+	############ 理之律者·布洛妮娅 ############
+	HerrscherReason_Bronya_Air_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherReasonBronyaAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 理之权能：结构解析、防御与航程见长
+		air_attack = 66000
+		air_defence = 102000
+		air_agility = 470
+		maximum_speed = 5700
+		air_range = 4100
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherReason_Bronya_Air_equipment_0 = {
+		archetype = HerrscherReason_Bronya_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+
+	############ 死生之律者·希儿 ############
+	HerrscherRebirth_Seele_Air_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherRebirthSeeleAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 死生权能：攻守均衡、机动最强
+		air_attack = 76000
+		air_defence = 92000
+		air_agility = 500
+		maximum_speed = 5900
+		air_range = 3800
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherRebirth_Seele_Air_equipment_0 = {
+		archetype = HerrscherRebirth_Seele_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+
+	############ 人之律者·爱莉希雅 ############
+	HerrscherHuman_Elysia_Air_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherHumanElysiaAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 真我·人之权能：律者级顶点，全面最高
+		air_attack = 82000
+		air_defence = 108000
+		air_agility = 520
+		maximum_speed = 6000
+		air_range = 4200
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherHuman_Elysia_Air_equipment_0 = {
+		archetype = HerrscherHuman_Elysia_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+	############ 侵蚀之律者·爱莉希雅（仅"我即崩坏"模式启用）############
+	HerrscherErosion_Elysia_Air_equipment = {
+		is_archetype = yes
+		is_buildable = no
+		can_license = no
+		picture = archetype_fighter_equipment
+		type = fighter
+		group_by = archetype
+		sprite = HerrscherErosionElysiaAir
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+
+		allow_mission_type = {
+			air_superiority
+		}
+
+		air_superiority = 20
+		reliability = 4.0
+
+		# 侵蚀权能：律者级中偏弱（对应陆战 2400/3800），由崩坏侧刷出
+		air_attack = 58000
+		air_defence = 88000
+		air_agility = 450
+		maximum_speed = 5500
+		air_range = 3700
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 400
+		build_cost_ic = 4300
+	}
+
+	HerrscherErosion_Elysia_Air_equipment_0 = {
+		archetype = HerrscherErosion_Elysia_Air_equipment
+		is_buildable = yes
+		priority = 100
+		visual_level = 0
+	}
+}

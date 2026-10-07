@@ -1,0 +1,867 @@
+technologies = {
+
+	############################################
+	########## 综合型女武神——琪亚娜 ############
+	############################################
+	Kiana_WhiteComet_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Kiana_equipment_0
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_0
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveKiana
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.01
+			hard_attack = 0.01
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Kiana_VoidDrifter_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Kiana_equipment_1
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_1
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveKiana
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Kiana_KnightMoonbeam_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Kiana_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_2
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveKiana
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	########## 综合型女武神——德丽莎 ############
+	############################################
+	Theresa_StarlitAstrologos_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Theresa_equipment_1
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cross_0
+			BH3_ValkyrieArmor_MainWeapon_Cross_1
+			BH3_ValkyrieArmor_MainWeapon_Cross_2
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveTheresa
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	#暂定为德丽莎火星主教
+	Theresa_Mars_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Theresa_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cross_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveTheresa
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.08
+			defense = 0.07
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Theresa_LunarVowCrimsonLove_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Theresa_equipment_3
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cross_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveTheresa
+		# }
+
+		category_AllValkyrie = {
+			hard_attack = 0.08
+			armor_value = 0.02
+			breakthrough = 0.04
+			defense = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Eden_GoldenDiva_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Eden_equipment_0
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieComprehensiveEden
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.05
+			max_organisation = 2
+			defense = 0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	############################################
+	############ 近战型女武神——芽衣 ############
+	############################################
+	Mei_CrimsonImpuls_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Mei_equipment_0
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Katana_0
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleMei
+		# }
+
+		category_AllValkyrie = {
+			hard_attack =  0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Mei_StrikerFulminata_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Mei_equipment_1
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Katana_1
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleMei
+		# }
+
+		category_AllValkyrie = {
+			hard_attack =  0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	####Mei_ShadowDash_Research废弃####
+
+	Mei_DanzaiSpectramancer_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Mei_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Katana_2
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleMei
+		# }
+
+		category_AllValkyrie = {
+			hard_attack =  0.05
+			ap_attack = 0.02
+			armor_value = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	####Mei_LightningEmpress_Research废弃####
+
+	Mei_Captain_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Mei_equipment_3
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Katana_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleMei
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.02
+			hard_attack =  0.05
+			maximum_speed = 0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	############ 近战型女武神——希儿 ############
+	############################################
+	Seele_SwallowtailPhantasm_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Seele_equipment_1
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Scythe_0
+			BH3_ValkyrieArmor_MainWeapon_Scythe_1
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleSeele
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.02
+			ap_attack = 0.02
+			breakthrough = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Seele_StygianNymph_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Seele_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Scythe_2
+			BH3_ValkyrieArmor_MainWeapon_Scythe_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleSeele
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.05
+			defense = 0.02
+			max_organisation = 1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Seele_StarchasmNyx_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Seele_equipment_3
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Scythe_2
+			BH3_ValkyrieArmor_MainWeapon_Scythe_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleSeele
+		# }
+
+		category_AllValkyrie = {
+			hard_attack =  0.12
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Fuka_ShadowKnight_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Fuka_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Fists_0
+			BH3_ValkyrieArmor_MainWeapon_Fists_1
+			BH3_ValkyrieArmor_MainWeapon_Fists_2
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleFuka
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.02
+			hard_attack =  0.01
+			maximum_speed = 0.02
+			defense = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Fuka_AzureEmpyrea_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Fuka_equipment_3
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Fists_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieMeeleFuka
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.04
+			maximum_speed = 0.02
+			defense = 0.02
+			armor_value = 0.03
+			ap_attack = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	########## 炮击型女武神——布洛妮娅 ##########
+	############################################
+
+	Bronya_ValkyrieChariot_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Bronya_equipment_0
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cannon_0
+		}
+		# enable_subunits = {
+		# 	ValkyrieArtilleryBronya
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.02
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Bronya_YamabukiArmor_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Bronya_equipment_1
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cannon_1
+		}
+		# enable_subunits = {
+		# 	ValkyrieArtilleryBronya
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.05
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Bronya_DimensionBreaker_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Bronya_equipment_2
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cannon_2
+		}
+		# enable_subunits = {
+		# 	ValkyrieArtilleryBronya
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.1
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Bronya_SilverWingNEX_Research = {
+		research_cost = 3
+		enable_equipments = {
+			Valkyrie_Bronya_equipment_3
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Cannon_3
+		}
+		# enable_subunits = {
+		# 	ValkyrieArtilleryBronya
+		# }
+
+		category_AllValkyrie = {
+			soft_attack = 0.15
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	############### 律者——琪亚娜 ###############
+	############################################
+	Kiana_HerrscherofVoid_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherVoid_Kiana_equipment_0
+			HerrscherVoid_Kiana_Air_equipment_0
+		}
+		enable_subunits = {
+			HerrscherVoidKianaAir
+		}
+		# enable_subunits = {
+		# 	HerrscherVoidKiana
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	Kiana_HerrscherofFlamescion_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherFlamescion_Kiana_equipment_0
+			HerrscherFlamescion_Kiana_Air_equipment_0
+		}
+		enable_subunits = {
+			HerrscherFlamescionKianaAir
+		}
+		# enable_subunits = {
+		# 	HerrscherFlamescionKiana
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	################ 律者——芽衣 ################
+	############################################
+	Mei_HerrscherofThunder_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherThunder_Mei_equipment_0
+			HerrscherThunder_Mei_Air_equipment_0
+		}
+		enable_subunits = {
+			HerrscherThunderMeiAir
+		}
+		# enable_subunits = {
+		# 	HerrscherThunderMei
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	############## 律者——布洛妮娅 ##############
+	############################################
+	Bronya_HerrscherofReason_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherReason_Bronya_equipment_0
+			HerrscherReason_Bronya_Air_equipment_0
+		}
+			enable_subunits = {
+				HerrscherReasonBronyaAir
+			}
+		# enable_subunits = {
+		# 	HerrscherReasonBronya
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	############### 律者——希儿 ################
+	############################################
+	Seele_HerrscherofRebirth_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherRebirth_Seele_equipment_0
+			HerrscherRebirth_Seele_Air_equipment_0
+		}
+			enable_subunits = {
+				HerrscherRebirthSeeleAir
+			}
+		# enable_subunits = {
+		# 	HerrscherRebirthSeele
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	############################################
+	############## 律者——爱莉希雅 ##############
+	############################################
+	Elysia_HerrscherofHuman_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherHuman_Elysia_equipment_0
+			HerrscherHuman_Elysia_Air_equipment_0
+		}
+			enable_subunits = {
+				HerrscherHumanElysiaAir
+			}
+		# enable_subunits = {
+		# 	HerrscherHumanElysia
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	Elysia_HerrscherofErosion_Research = {
+		research_cost = 3
+		enable_equipments = {
+			HerrscherErosion_Elysia_equipment_0
+			HerrscherErosion_Elysia_Air_equipment_0
+		}
+		enable_subunits = {
+			HerrscherErosionElysiaAir
+		}
+		# enable_subunits = {
+		# 	HerrscherErosionElysia
+		# }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+	############################################
+	################ 女武神人员 ################
+	############################################
+	BH3_ValkyrieSoldier_Research = {
+		research_cost = 3
+		enable_equipments = {
+			ValkyrieSoldier_Kiana_B_equipment
+			ValkyrieSoldier_Kiana_A_equipment
+			ValkyrieSoldier_Kiana_S_equipment
+			ValkyrieSoldier_Kiana_SS_equipment
+			ValkyrieSoldier_Kiana_SSS_equipment
+
+			ValkyrieSoldier_Mei_B_equipment
+			ValkyrieSoldier_Mei_A_equipment
+			ValkyrieSoldier_Mei_S_equipment
+			ValkyrieSoldier_Mei_SS_equipment
+			ValkyrieSoldier_Mei_SSS_equipment
+
+			ValkyrieSoldier_Bronya_B_equipment
+			ValkyrieSoldier_Bronya_A_equipment
+			ValkyrieSoldier_Bronya_S_equipment
+			ValkyrieSoldier_Bronya_SS_equipment
+			ValkyrieSoldier_Bronya_SSS_equipment
+
+			ValkyrieSoldier_Seele_A_equipment
+			ValkyrieSoldier_Seele_S_equipment
+			ValkyrieSoldier_Seele_SS_equipment
+			ValkyrieSoldier_Seele_SSS_equipment
+
+			ValkyrieSoldier_SeeleBlack_S_equipment
+			ValkyrieSoldier_SeeleBlack_SS_equipment
+			ValkyrieSoldier_SeeleBlack_SSS_equipment
+
+			ValkyrieSoldier_Fuka_A_equipment
+			ValkyrieSoldier_Fuka_S_equipment
+			ValkyrieSoldier_Fuka_SS_equipment
+			ValkyrieSoldier_Fuka_SSS_equipment
+
+			ValkyrieSoldier_Theresa_A_equipment
+			ValkyrieSoldier_Theresa_S_equipment
+			ValkyrieSoldier_Theresa_SS_equipment
+			ValkyrieSoldier_Theresa_SSS_equipment
+
+			ValkyrieSoldier_TheresaLunar_A_equipment
+			ValkyrieSoldier_TheresaLunar_S_equipment
+			ValkyrieSoldier_TheresaLunar_SS_equipment
+			ValkyrieSoldier_TheresaLunar_SSS_equipment
+
+			ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment
+			ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment
+			ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment
+			ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment
+
+			ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment
+			ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment
+			ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment
+			ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment
+
+			ValkyrieSoldier_RitaRossweisse_A_equipment
+			ValkyrieSoldier_RitaRossweisse_S_equipment
+			ValkyrieSoldier_RitaRossweisse_SS_equipment
+			ValkyrieSoldier_RitaRossweisse_SSS_equipment	
+			
+			ValkyrieSoldier_Eden_A_equipment
+			ValkyrieSoldier_Eden_S_equipment
+			ValkyrieSoldier_Eden_SS_equipment
+			ValkyrieSoldier_Eden_SSS_equipment
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_0_tech_Research = {
+		research_cost = 3
+		enable_equipments = {
+			BH3_ValkyrieArmor_classis_0
+			BH3_ValkyrieAir_ala_0
+		}
+		enable_subunits = {
+			ValkyrieArmorUnit
+			BH3_ValkyrieAirUnit
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_0
+			BH3_ValkyrieArmor_MainWeapon_Katana_0
+			BH3_ValkyrieArmor_MainWeapon_Cannon_0
+			BH3_ValkyrieArmor_MainWeapon_Scythe_0
+			BH3_ValkyrieArmor_MainWeapon_Fists_0
+			BH3_ValkyrieArmor_MainWeapon_Cross_0
+
+			BH3_ValkyrieArmor_Armor_None
+			BH3_ValkyrieArmor_Armor_Light
+			BH3_ValkyrieArmor_Armor_Middle
+			BH3_ValkyrieArmor_Armor_Heavy
+
+			BH3_ValkyrieArmor_Engine_Electric
+			BH3_ValkyrieArmor_Engine_Nuclear
+			BH3_ValkyrieArmor_Engine_Honkai
+			
+			BH3_ValkyrieArmor_Stigmata_Balance
+			BH3_ValkyrieArmor_Stigmata_Speed
+			BH3_ValkyrieArmor_Stigmata_Breakthrough
+			BH3_ValkyrieArmor_Stigmata_Defense
+			BH3_ValkyrieArmor_Stigmata_ArmorValue
+			BH3_ValkyrieArmor_Stigmata_ApAttack
+			BH3_ValkyrieArmor_Stigmata_SoftAttack
+			BH3_ValkyrieArmor_Stigmata_HardAttack
+
+			BH3_ValkyrieArmor_Doll_Empty
+
+			BH3_ValkyrieArmor_Keys_Empty
+
+			BH3_ValkyrieArmor_SpecialMod_SystemRedundancy
+			BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement
+			BH3_ValkyrieArmor_SpecialMod_Sidekick
+			BH3_ValkyrieArmor_SpecialMod_StrangeLegRing
+			BH3_ValkyrieArmor_SpecialMod_SimplifyProduction
+			BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly
+			BH3_ValkyrieAir_Engine_Electric_0
+			BH3_ValkyrieAir_Engine_Honkai_0
+			BH3_ValkyrieAir_Engine_Nuclear_0
+			BH3_ValkyrieAir_MainWeapon_Pistols_0
+			BH3_ValkyrieAir_MainWeapon_Katana_0
+			BH3_ValkyrieAir_MainWeapon_Cannon_0
+			BH3_ValkyrieAir_MainWeapon_Scythe_0
+			BH3_ValkyrieAir_MainWeapon_Fists_0
+			BH3_ValkyrieAir_MainWeapon_Cross_0
+			BH3_ValkyrieAir_Stigmata_Balance
+			BH3_ValkyrieAir_Stigmata_Speed
+			BH3_ValkyrieAir_Stigmata_Agility
+			BH3_ValkyrieAir_Stigmata_Defence
+			BH3_ValkyrieAir_Stigmata_Attack
+			BH3_ValkyrieAir_Stigmata_Pierce
+			BH3_ValkyrieAir_Stigmata_Range
+			BH3_ValkyrieAir_Stigmata_ArmorValue
+			BH3_ValkyrieAir_SpecialMod_SystemRedundancy
+			BH3_ValkyrieAir_SpecialMod_PrecisionAssembly
+			BH3_ValkyrieAir_SpecialMod_SimplifyProduction
+			BH3_ValkyrieAir_SpecialMod_AppearanceEnhancement
+			BH3_ValkyrieAir_SpecialMod_Sidekick
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_1_tech_Research = {
+		research_cost = 3
+		enable_equipments = {
+			BH3_ValkyrieArmor_classis_1
+			BH3_ValkyrieAir_ala_1
+		}
+		enable_subunits = {
+			ValkyrieArmorUnit
+			BH3_ValkyrieAirUnit
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieAir_Engine_Electric_1
+			BH3_ValkyrieAir_Engine_Honkai_1
+			BH3_ValkyrieAir_Engine_Nuclear_1
+			BH3_ValkyrieAir_MainWeapon_Pistols_1
+			BH3_ValkyrieAir_MainWeapon_Katana_1
+			BH3_ValkyrieAir_MainWeapon_Cannon_1
+			BH3_ValkyrieAir_MainWeapon_Scythe_1
+			BH3_ValkyrieAir_MainWeapon_Fists_1
+			BH3_ValkyrieAir_MainWeapon_Cross_1
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_2_tech_Research = {
+		research_cost = 3
+		enable_equipments = {
+			BH3_ValkyrieArmor_classis_2
+			BH3_ValkyrieAir_ala_2
+		}
+		enable_subunits = {
+			ValkyrieArmorUnit
+			BH3_ValkyrieAirUnit
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieAir_Engine_Electric_2
+			BH3_ValkyrieAir_Engine_Honkai_2
+			BH3_ValkyrieAir_Engine_Nuclear_2
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_3_tech_Research = {
+		research_cost = 3
+		enable_equipments = {
+			BH3_ValkyrieArmor_classis_3
+			BH3_ValkyrieAir_ala_3
+		}
+		enable_subunits = {
+			ValkyrieArmorUnit
+			BH3_ValkyrieAirUnit
+		}
+	}
+
+	BH3_debug_ValkyrieArmor_Research = {
+		research_cost = 3
+		doctrine = yes	
+		enable_subunits = {
+			ValkyrieArmorUnit
+		}
+		enable_equipments = {
+			BH3_ValkyrieArmor_classis_0
+			BH3_ValkyrieArmor_classis_1
+			BH3_ValkyrieArmor_classis_2
+			BH3_ValkyrieArmor_classis_3
+			BH3_ValkyrieArmor_classis_4
+		}
+		enable_equipment_modules = {
+			BH3_ValkyrieArmor_MainWeapon_Pistols_0
+			BH3_ValkyrieArmor_MainWeapon_Pistols_1
+			BH3_ValkyrieArmor_MainWeapon_Pistols_2
+			BH3_ValkyrieArmor_MainWeapon_Pistols_3
+			BH3_ValkyrieArmor_MainWeapon_Katana_0
+			BH3_ValkyrieArmor_MainWeapon_Katana_1
+			BH3_ValkyrieArmor_MainWeapon_Katana_2
+			BH3_ValkyrieArmor_MainWeapon_Katana_3
+			BH3_ValkyrieArmor_MainWeapon_Cannon_0
+			BH3_ValkyrieArmor_MainWeapon_Cannon_1
+			BH3_ValkyrieArmor_MainWeapon_Cannon_2
+			BH3_ValkyrieArmor_MainWeapon_Cannon_3
+			BH3_ValkyrieArmor_MainWeapon_Scythe_0
+			BH3_ValkyrieArmor_MainWeapon_Scythe_1
+			BH3_ValkyrieArmor_MainWeapon_Scythe_2
+			BH3_ValkyrieArmor_MainWeapon_Scythe_3
+			BH3_ValkyrieArmor_MainWeapon_Fists_0
+			BH3_ValkyrieArmor_MainWeapon_Fists_1
+			BH3_ValkyrieArmor_MainWeapon_Fists_2
+			BH3_ValkyrieArmor_MainWeapon_Fists_3
+			BH3_ValkyrieArmor_MainWeapon_Cross_0
+			BH3_ValkyrieArmor_MainWeapon_Cross_1
+			BH3_ValkyrieArmor_MainWeapon_Cross_2
+			BH3_ValkyrieArmor_MainWeapon_Cross_3
+
+			BH3_ValkyrieArmor_Armor_None
+			BH3_ValkyrieArmor_Armor_Light
+			BH3_ValkyrieArmor_Armor_Middle
+			BH3_ValkyrieArmor_Armor_Heavy
+			BH3_ValkyrieArmor_Armor_SuperHeavy
+
+			BH3_ValkyrieArmor_Engine_Electric
+			BH3_ValkyrieArmor_Engine_Nuclear
+			BH3_ValkyrieArmor_Engine_Honkai
+			BH3_ValkyrieArmor_Engine_HonkaiImproved
+			
+			BH3_ValkyrieArmor_Stigmata_Balance
+			BH3_ValkyrieArmor_Stigmata_Speed
+			BH3_ValkyrieArmor_Stigmata_Breakthrough
+			BH3_ValkyrieArmor_Stigmata_Defense
+			BH3_ValkyrieArmor_Stigmata_ArmorValue
+			BH3_ValkyrieArmor_Stigmata_ApAttack
+			BH3_ValkyrieArmor_Stigmata_SoftAttack
+			BH3_ValkyrieArmor_Stigmata_HardAttack
+
+			BH3_ValkyrieArmor_Keys_VoidArchives
+			BH3_ValkyrieArmor_Keys_ThousandKey
+			BH3_ValkyrieArmor_Keys_SevenThundersofRetribution
+			BH3_ValkyrieArmor_Keys_AbyssFlower
+			BH3_ValkyrieArmor_Keys_FenghuangDown
+			BH3_ValkyrieArmor_Keys_JudgementofShamash
+			BH3_ValkyrieArmor_Keys_OathofJudah
+			BH3_ValkyrieArmor_Keys_StarofEden
+			BH3_ValkyrieArmor_Keys_JizoMitama
+
+			BH3_ValkyrieArmor_Doll_CangXuanZhiShu
+			BH3_ValkyrieArmor_Doll_KeLaiYin
+			BH3_ValkyrieArmor_Doll_YaoJingAiLi
+			BH3_ValkyrieArmor_Doll_ChiYuanZhiYi
+			BH3_ValkyrieArmor_Doll_FangYouDa
+			BH3_ValkyrieArmor_Doll_BeiLa
+			BH3_ValkyrieArmor_Doll_ZhongZhuangXiaoTu
+
+			BH3_ValkyrieArmor_SpecialMod_SystemRedundancy
+			BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement
+			BH3_ValkyrieArmor_SpecialMod_Sidekick
+			BH3_ValkyrieArmor_SpecialMod_StrangeLegRing
+			BH3_ValkyrieArmor_SpecialMod_SimplifyProduction
+			BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly
+		}
+	}
+}

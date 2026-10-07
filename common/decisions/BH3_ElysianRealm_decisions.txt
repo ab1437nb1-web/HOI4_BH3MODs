@@ -1,0 +1,449 @@
+BH3_ElysianRealm_group = {
+
+	# ============ 往事乐土·抽取刻印 ============
+	# 每次消耗 1 把「无瑕之钥」，触发三/五选一事件
+	BH3_ElysianRealm_draw = {
+		priority = 90
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_equipment = { BH3_FlawlessKey_equipment > 49 }
+			# 边界：只要还有英杰未集齐增幅刻印，抽取才有意义
+			OR = {
+			NOT = { has_idea = BH3_ER_Savior_Amp }
+			NOT = { has_idea = BH3_ER_Setsuna_Amp }
+			NOT = { has_idea = BH3_ER_Bodhi_Amp }
+			NOT = { has_idea = BH3_ER_Gold_Amp }
+			NOT = { has_idea = BH3_ER_Kalpas_Amp }
+			NOT = { has_idea = BH3_ER_Fusheng_Amp }
+			NOT = { has_idea = BH3_ER_Aponia_Amp }
+			NOT = { has_idea = BH3_ER_Spiral_Amp }
+			NOT = { has_idea = BH3_ER_Mobius_Amp }
+			NOT = { has_idea = BH3_ER_Kosma_Amp }
+			NOT = { has_idea = BH3_ER_Griseo_Amp }
+			NOT = { has_idea = BH3_ER_Pardofelis_Amp }
+			}
+		}
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = BH3_FlawlessKey_equipment
+				amount = -50
+			}
+			country_event = { id = BH3_ElysianRealm.1 }
+		}
+	}
+
+	# ============ 往事乐土·重置刻印 ============
+	# 清空全部刻印，返还 3 把钥匙（近似 50% 返还，P1 固定值）
+		BH3_ElysianRealm_reset = {
+		priority = 89
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			OR = {
+				has_idea = BH3_ER_Savior_1
+				has_idea = BH3_ER_Savior_2
+				has_idea = BH3_ER_Savior_3
+				has_idea = BH3_ER_Savior_Core
+				has_idea = BH3_ER_Savior_Amp
+				has_idea = BH3_ER_Setsuna_1
+				has_idea = BH3_ER_Setsuna_2
+				has_idea = BH3_ER_Setsuna_3
+				has_idea = BH3_ER_Setsuna_Core
+				has_idea = BH3_ER_Setsuna_Amp
+				has_idea = BH3_ER_Bodhi_1
+				has_idea = BH3_ER_Bodhi_2
+				has_idea = BH3_ER_Bodhi_3
+				has_idea = BH3_ER_Bodhi_Core
+				has_idea = BH3_ER_Bodhi_Amp
+				has_idea = BH3_ER_Gold_1
+				has_idea = BH3_ER_Gold_2
+				has_idea = BH3_ER_Gold_3
+				has_idea = BH3_ER_Gold_Core
+				has_idea = BH3_ER_Gold_Amp
+				has_idea = BH3_ER_Kalpas_1
+				has_idea = BH3_ER_Kalpas_2
+				has_idea = BH3_ER_Kalpas_3
+				has_idea = BH3_ER_Kalpas_Core
+				has_idea = BH3_ER_Kalpas_Amp
+				has_idea = BH3_ER_Fusheng_1
+				has_idea = BH3_ER_Fusheng_2
+				has_idea = BH3_ER_Fusheng_3
+				has_idea = BH3_ER_Fusheng_Core
+				has_idea = BH3_ER_Fusheng_Amp
+				has_idea = BH3_ER_Aponia_1
+				has_idea = BH3_ER_Aponia_2
+				has_idea = BH3_ER_Aponia_3
+				has_idea = BH3_ER_Aponia_Core
+				has_idea = BH3_ER_Aponia_Amp
+				has_idea = BH3_ER_Spiral_1
+				has_idea = BH3_ER_Spiral_2
+				has_idea = BH3_ER_Spiral_3
+				has_idea = BH3_ER_Spiral_Core
+				has_idea = BH3_ER_Spiral_Amp
+				has_idea = BH3_ER_Mobius_1
+				has_idea = BH3_ER_Mobius_2
+				has_idea = BH3_ER_Mobius_3
+				has_idea = BH3_ER_Mobius_Core
+				has_idea = BH3_ER_Mobius_Amp
+				has_idea = BH3_ER_Kosma_1
+				has_idea = BH3_ER_Kosma_2
+				has_idea = BH3_ER_Kosma_3
+				has_idea = BH3_ER_Kosma_Core
+				has_idea = BH3_ER_Kosma_Amp
+				has_idea = BH3_ER_Griseo_1
+				has_idea = BH3_ER_Griseo_2
+				has_idea = BH3_ER_Griseo_3
+				has_idea = BH3_ER_Griseo_Core
+				has_idea = BH3_ER_Griseo_Amp
+				has_idea = BH3_ER_Pardofelis_1
+				has_idea = BH3_ER_Pardofelis_2
+				has_idea = BH3_ER_Pardofelis_3
+				has_idea = BH3_ER_Pardofelis_Core
+				has_idea = BH3_ER_Pardofelis_Amp
+			}
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			remove_ideas = {
+				BH3_ER_Savior_1
+				BH3_ER_Savior_2
+				BH3_ER_Savior_3
+				BH3_ER_Savior_Core
+				BH3_ER_Savior_Amp
+				BH3_ER_Setsuna_1
+				BH3_ER_Setsuna_2
+				BH3_ER_Setsuna_3
+				BH3_ER_Setsuna_Core
+				BH3_ER_Setsuna_Amp
+				BH3_ER_Bodhi_1
+				BH3_ER_Bodhi_2
+				BH3_ER_Bodhi_3
+				BH3_ER_Bodhi_Core
+				BH3_ER_Bodhi_Amp
+				BH3_ER_Gold_1
+				BH3_ER_Gold_2
+				BH3_ER_Gold_3
+				BH3_ER_Gold_Core
+				BH3_ER_Gold_Amp
+				BH3_ER_Kalpas_1
+				BH3_ER_Kalpas_2
+				BH3_ER_Kalpas_3
+				BH3_ER_Kalpas_Core
+				BH3_ER_Kalpas_Amp
+				BH3_ER_Fusheng_1
+				BH3_ER_Fusheng_2
+				BH3_ER_Fusheng_3
+				BH3_ER_Fusheng_Core
+				BH3_ER_Fusheng_Amp
+				BH3_ER_Aponia_1
+				BH3_ER_Aponia_2
+				BH3_ER_Aponia_3
+				BH3_ER_Aponia_Core
+				BH3_ER_Aponia_Amp
+				BH3_ER_Spiral_1
+				BH3_ER_Spiral_2
+				BH3_ER_Spiral_3
+				BH3_ER_Spiral_Core
+				BH3_ER_Spiral_Amp
+				BH3_ER_Mobius_1
+				BH3_ER_Mobius_2
+				BH3_ER_Mobius_3
+				BH3_ER_Mobius_Core
+				BH3_ER_Mobius_Amp
+				BH3_ER_Kosma_1
+				BH3_ER_Kosma_2
+				BH3_ER_Kosma_3
+				BH3_ER_Kosma_Core
+				BH3_ER_Kosma_Amp
+				BH3_ER_Griseo_1
+				BH3_ER_Griseo_2
+				BH3_ER_Griseo_3
+				BH3_ER_Griseo_Core
+				BH3_ER_Griseo_Amp
+				BH3_ER_Pardofelis_1
+				BH3_ER_Pardofelis_2
+				BH3_ER_Pardofelis_3
+				BH3_ER_Pardofelis_Core
+				BH3_ER_Pardofelis_Amp
+			}
+			remove_dynamic_modifier = { modifier = BH3_ER_Savior_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Savior_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Savior_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Savior_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Savior_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Setsuna_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Setsuna_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Setsuna_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Setsuna_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Setsuna_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_L2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Bodhi_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_Low_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_Overflow_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Gold_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_Desperate_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_LastStand_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kalpas_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_Advantage_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_Disadvantage_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpAdv_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpDis_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_Low_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_High_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_Overflow_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Aponia_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Spiral_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Mobius_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Mobius_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Mobius_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Mobius_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Mobius_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_T1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_T2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_T3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_T4_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Kosma_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_T1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_T2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_T3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Griseo_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_1_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_2_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_3_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Core_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Amp_dm }
+			remove_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Trade_dm }
+			add_equipment_to_stockpile = {
+				type = BH3_FlawlessKey_equipment
+				amount = 25
+			}
+		}
+	}
+
+
+	# ============ 往事乐土·无限（梅比乌斯）：无限增殖 ============
+	# 每次执行给本国 +5 点地图外资源（通过国家变量累加，由 BH3_ER_Mobius_Core_dm 读取）
+	BH3_ElysianRealm_mobius_steel = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_steel = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_aluminium = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_aluminium = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_rubber = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_rubber = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_tungsten = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_tungsten = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_chromium = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_chromium = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_oil = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_oil = 5 }
+		}
+	}
+	BH3_ElysianRealm_mobius_coal = {
+		priority = 88
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Mobius_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 50
+		complete_effect = {
+			add_to_variable = { BH3_ER_Mobius_coal = 5 }
+		}
+	}
+
+	# ============ 往事乐土·空梦（帕朵菲莉丝）：空梦交易所 ============
+	# 永久拆除本国（随机己方控制州）的民用工厂，换取即时政治点与地图外资源
+	BH3_ElysianRealm_pardofelis_1 = {
+		priority = 87
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Pardofelis_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 0
+		complete_effect = {
+			add_political_power = 50
+			random_owned_controlled_state = {
+				remove_building = { type = industrial_complex level = 1 }
+			}
+			add_to_variable = { BH3_ER_Pardofelis_steel = 3 }
+		}
+	}
+	BH3_ElysianRealm_pardofelis_2 = {
+		priority = 87
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Pardofelis_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 0
+		complete_effect = {
+			add_political_power = 180
+			random_owned_controlled_state = {
+				remove_building = { type = industrial_complex level = 3 }
+			}
+			add_to_variable = { BH3_ER_Pardofelis_steel = 10 }
+			add_to_variable = { BH3_ER_Pardofelis_aluminium = 5 }
+		}
+	}
+	BH3_ElysianRealm_pardofelis_3 = {
+		priority = 87
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_idea = BH3_ER_Pardofelis_Core
+		}
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_re_enable = 30
+		cost = 0
+		complete_effect = {
+			add_political_power = 400
+			random_owned_controlled_state = {
+				remove_building = { type = industrial_complex level = 6 }
+			}
+			add_to_variable = { BH3_ER_Pardofelis_steel = 20 }
+			add_to_variable = { BH3_ER_Pardofelis_aluminium = 10 }
+			add_to_variable = { BH3_ER_Pardofelis_rubber = 5 }
+		}
+	}
+}

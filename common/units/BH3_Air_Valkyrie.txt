@@ -1,0 +1,12 @@
+sub_units = {
+	# 空中女武神（空战型）：以空军 wing 形式存在，装备为模块化设计的空中女武神装甲
+	BH3_ValkyrieAirUnit = {
+		sprite = BH3_ValkyrieAir_0
+		priority = 950
+		active = yes
+		type = fighter
+		need = { BH3_ValkyrieAir_ala = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 50
+	}
+}

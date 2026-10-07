@@ -1,0 +1,58 @@
+add_namespace = BHSstate
+#正常刷登陆兵
+state_event = {
+	id = BHSstate.1
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			BHS_SpawnBHS_Landing = yes
+		}
+	}
+}
+#触发律者登陆
+state_event = {
+	id = BHSstate.2
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			BHS_SpawnHerrscher_Landing = yes
+		}
+		state_event = { id = BHSstate.3 trigger_for = controller days = 1 }
+		state_event = { id = BHSstate.3 trigger_for = controller days = 4 }
+	}
+}
+#触发律者伴生崩坏兽登陆
+state_event = {
+	id = BHSstate.3
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			create_unit = { 
+				division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = BHS
+				count = 10
+			}
+			create_unit = { 
+				division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+				allow_spawning_on_enemy_provs = yes
+				owner = BHS
+				count = 3
+			}
+		}
+	}
+}
+#触发律者崩坏兽登陆
+state_event = {
+	id = BHSstate.4
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		var:global.BHSLandingPoint = {
+			BHS_SpawnBHS_Landing = yes
+		}
+	}
+}

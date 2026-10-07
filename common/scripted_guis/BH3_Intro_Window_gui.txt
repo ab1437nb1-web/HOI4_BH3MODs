@@ -1,0 +1,159 @@
+scripted_gui = {
+
+	BH3_Intro_Window = {
+		context_type = player_context
+		window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+		
+		visible = {
+			has_country_flag = BH3_Intro_Window_show
+		}
+
+		triggers = {
+			BH3_Intro_1_btn_click_enabled = { NOT = { check_variable = { BH3_Intro_window_visible = 1 } } }
+			BH3_Intro_2_btn_click_enabled = { NOT = { check_variable = { BH3_Intro_window_visible = 2 } } }
+			BH3_Intro_3_btn_click_enabled = { NOT = { check_variable = { BH3_Intro_window_visible = 3 } } }
+		}
+
+		effects = {
+			BH3_Intro_1_btn_click = { 
+				set_variable = { BH3_Intro_window_visible = 1 } 
+				set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 0 }
+			}
+			BH3_Intro_2_btn_click = { 
+				set_variable = { BH3_Intro_window_visible = 2 } 
+				set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 1 }
+			}
+			BH3_Intro_3_btn_click = {
+				set_variable = { BH3_Intro_window_visible = 3 } 
+				set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 0 }
+			}
+
+			BH3_Intro_Ok_btn_click = {
+				clr_country_flag = BH3_Intro_Window_show
+				clear_variable = BH3_Intro_window_visible
+			}
+		}
+	}
+
+	BH3_Intro_Window_Update = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_Update
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_window_visible = 1 }
+		}
+	}
+
+	BH3_Intro_Window_HowPlay = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_window_visible = 2 }
+		}
+		triggers = {
+			BH3_Intro_Window_HowPlay_Sub_btn1_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 1 } } }
+			BH3_Intro_Window_HowPlay_Sub_btn2_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 2 } } }
+			BH3_Intro_Window_HowPlay_Sub_btn3_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 3 } } }
+			BH3_Intro_Window_HowPlay_Sub_btn4_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 4 } } }
+			BH3_Intro_Window_HowPlay_Sub_btn5_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 5 } } }
+			BH3_Intro_Window_HowPlay_Sub_btn6_enabled = { NOT = { check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 6 } } }			
+		}
+		effects = {
+			BH3_Intro_Window_HowPlay_Sub_btn1_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 1 } }
+			BH3_Intro_Window_HowPlay_Sub_btn2_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 2 } }
+			BH3_Intro_Window_HowPlay_Sub_btn3_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 3 } }
+			BH3_Intro_Window_HowPlay_Sub_btn4_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 4 } }
+			BH3_Intro_Window_HowPlay_Sub_btn5_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 5 } }
+			BH3_Intro_Window_HowPlay_Sub_btn6_click = { set_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 6 } }
+		}
+
+	}
+	BH3_Intro_Window_HowPlay_Container1 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container1
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 1 }
+		}
+	}
+	BH3_Intro_Window_HowPlay_Container2 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container2
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 2 }
+		}
+	}
+	BH3_Intro_Window_HowPlay_Container3 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container3
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 3 }
+		}
+	}
+	BH3_Intro_Window_HowPlay_Container4 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container4
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 4 }
+		}
+	}
+	BH3_Intro_Window_HowPlay_Container5 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container5
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 5 }
+		}
+	}
+	BH3_Intro_Window_HowPlay_Container6 = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_HowPlay_Container6
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_Window_HowPlay_Sub_visible = 6 }
+		}
+	}
+
+	BH3_Intro_Window_Other = {
+		context_type = player_context
+		window_name = BH3_Intro_Window_Other
+		parent_window_name = BH3_Intro_Window
+
+		ai_enabled = { always = no }
+
+		visible = {
+			check_variable = { BH3_Intro_window_visible = 3 }
+		}
+	}
+}
+

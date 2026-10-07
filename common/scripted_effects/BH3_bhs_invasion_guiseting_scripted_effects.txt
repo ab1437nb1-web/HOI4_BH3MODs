@@ -1,0 +1,156 @@
+BH3_BHS_Invasion_GUI_Ini_Settings = {
+	### 崩坏爆发地点 ###
+	set_variable = { global.BH3_invasion_menu_postion1_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_postion2_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_postion3_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_postion4_btn_frame = 1 }
+
+	### 崩坏爆发时间 ###
+	set_variable = { global.BH3_invasion_menu_time1_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_time2_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_time3_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_time4_btn_frame = 1 }
+
+	
+	### 开局崩坏师数量 ###
+	set_variable = { global.BH3_invasion_menu_army_num1_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_army_num2_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_army_num3_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_army_num4_btn_frame = 1 }
+
+	### 每月刷兵倍数 ###
+	set_variable = { global.BH3_invasion_menu_army_coefficient1_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_army_coefficient2_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_army_coefficient3_btn_frame = 1 }
+
+	### 玩家是否可以使用律者 ###
+	set_variable = { global.BH3_invasion_menu_enable_herrscher1_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_enable_herrscher2_btn_frame = 1 }
+
+	### 开局崩坏阶段 ###
+	set_variable = { global.BH3_invasion_menu_level1_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_level2_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_level3_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_level4_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_level5_btn_frame = 1 }
+
+	### 律者诞生间隔 ###
+	set_variable = { global.BH3_invasion_menu_herrscher_time1_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_herrscher_time2_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_herrscher_time3_btn_frame = 1 }
+
+	### 崩坏律者单位加强 ###
+	set_variable = { global.BH3_invasion_menu_herrscher_enhance0_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 }
+
+	### 杂项，多选 ###
+	set_variable = { global.BH3_invasion_menu_misc1_btn_frame = 2 }
+	set_variable = { global.BH3_invasion_menu_misc2_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_misc3_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_misc4_btn_frame = 1 }
+	set_variable = { global.BH3_invasion_menu_misc5_btn_frame = 1 }
+}
+
+BH3_BHS_Invasion_GUI_Settings_Finish = {
+	if = {
+		limit = { NOT = { has_global_flag = BHS_Invasion_GUI_Settings } }
+		set_global_flag = BHS_Invasion_GUI_Settings
+		### 崩坏爆发地点写在BH3_bhs_invasion_scripted_effect中，方便跳转视角 ###
+	
+		### 崩坏爆发时间 ###
+		#现在
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_time1_btn_frame = 2 } }
+			country_event = { id = BHS.1 days = 0 }
+		}
+		#一年后
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_time2_btn_frame = 2 } }
+			country_event = { id = BHS.1 days = 365 }
+			set_global_flag = BH3_honkai_invasion_dayleft_active
+			set_variable = { global.BH3_honkai_invasion_dayleft = 364 }
+		}
+		#二年后
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_time3_btn_frame = 2 } }
+			country_event = { id = BHS.1 days = 730 }
+			set_global_flag = BH3_honkai_invasion_dayleft_active
+			set_variable = { global.BH3_honkai_invasion_dayleft = 729 }
+		}
+		#三年后
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_time4_btn_frame = 2 } }
+			country_event = { id = BHS.1 days = 1095 }
+			set_global_flag = BH3_honkai_invasion_dayleft_active
+			set_variable = { global.BH3_honkai_invasion_dayleft = 1094 }
+		}
+	
+		### 开局崩坏师数量，变量设置在BHS_StartTroop中，写这里不生效 ###
+	
+		### 每月刷兵倍数 ###
+		if = {
+			limit = {check_variable = {global.BH3_invasion_menu_army_coefficient1_btn_frame = 2 } }
+			set_variable = { global.BHS_Army_Coefficient = 1 }
+		}
+		if = {
+			limit = {check_variable = {global.BH3_invasion_menu_army_coefficient2_btn_frame = 2 } }
+			set_variable = { global.BHS_Army_Coefficient = 2 }
+		}
+		if = {
+			limit = {check_variable = {global.BH3_invasion_menu_army_coefficient3_btn_frame = 2 } }
+			set_variable = { global.BHS_Army_Coefficient = 3 }
+		}
+
+		### 玩家是否可以使用律者 ###
+		#在决议和在BH3_BHS_start函数中设置中实现
+	
+		### 开局崩坏阶段 ###	
+		#在BH3_BHS_start函数中设置
+	
+		### 律者诞生间隔 ###
+		#间隔1次
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_herrscher_time1_btn_frame = 2 } }
+			set_variable = { global.BH3_herrscher_time = 1 }
+		}
+		#间隔2次
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_herrscher_time2_btn_frame = 2 } }
+			set_variable = { global.BH3_herrscher_time = 2 }
+		}
+		#间隔3次
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_herrscher_time3_btn_frame = 2 } }
+			set_variable = { global.BH3_herrscher_time = 3 }
+		}
+
+		### 崩坏律者单位加强 ###
+		#在BH3_BHS_start函数中设置
+		
+		#初始化登陆计数，当登陆计数等于间隔次数时触发
+		set_variable = { global.BHS_Herrscher_Landing_times = 0 }
+		#初始化律者诞生计数
+		set_variable = { global.BHS_Herrscher_Beaten_num = 0 } 
+	
+		### 杂项，多选 ###
+		#在BH3_BHS_start函数中设置
+
+		# 世界联盟
+		if = {
+			limit = { check_variable = { global.BH3_invasion_menu_misc3_btn_frame = 2 } }
+			set_variable = { global.BH3_Anti_Honkai_faction_leader = ROOT }
+			var:global.BH3_Anti_Honkai_faction_leader = {
+				create_faction_from_template = BH3_Anti_BHS_union
+			}
+			set_global_flag = BH3_AntiHonkai_Faction_Allow
+		}
+
+	
+		#设置开局高活性buff保持时间
+		set_variable = { global.BHS_Refresh_aggressiveCD = -10 }
+		#设置登陆间隔，紧张度越高间隔越小，最低为2,在scripted effect里面
+		set_variable = { global.BHS_LandingCD_set = 8 }
+		#部队上限
+		set_variable = { global.BHS_DivisionLimit = 3000 }
+	}
+}

@@ -1,0 +1,12 @@
+
+# technology_categories = {
+# }
+
+# technology_folders = {
+# 	BH3_valkyire_doctrine_folder = {
+# 		ledger = army
+# 		doctrine = yes
+# 	}
+# }
+
+ 

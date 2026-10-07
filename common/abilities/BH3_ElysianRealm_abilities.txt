@@ -1,0 +1,29 @@
+ability = {
+
+	# 往事乐土·刹那（樱）核心刻印奖励：指挥官技能「刹那·疾影」
+	# 效果：在一段时间内大幅提升部队速度与突破（参考原版 siege_artillery 的 unit_modifiers + cost + duration 结构）
+	BH3_ER_Setsuna_Blitz = {
+		name = ABILITY_BH3_ER_Setsuna_Blitz
+		desc = ABILITY_BH3_ER_Setsuna_Blitz_DESC
+
+		type = army_leader
+
+		allowed = {
+			is_border_war = no
+			OWNER = { has_idea = BH3_ER_Setsuna_Core }
+		}
+
+		unit_modifiers = {
+			army_speed_factor = 0.50
+			breakthrough_factor = 0.50
+		}
+
+		cancelable = yes
+		cost = 0.20
+		duration = 168
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}

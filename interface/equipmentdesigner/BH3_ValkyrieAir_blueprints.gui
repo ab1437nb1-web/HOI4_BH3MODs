@@ -1,0 +1,1254 @@
+guiTypes = {
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_0"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala_0"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_0"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala_1"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_1"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special2_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special2_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala_2"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_2"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special2_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special2_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special3_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special3_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala_3"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_3"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special2_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special2_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special3_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special3_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: fixed_auxiliary_weapon_slot_1
+			containerWindowType = {
+				name = "fixed_auxiliary_weapon_slot_1"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_1"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_1@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+	containerWindowType = {
+		name = "equipment_designer_BH3_ValkyrieAir_ala_4"
+		position = { x=0 y=0 }
+		size = { width=508 height=248 }
+
+		iconType = {
+			name = "equipment_image_overlay"
+			spriteType = "GFX_TC_BH3_ValkyrieAir_4"
+			position = { x=0 y=0 }
+		}
+
+		containerWindowType = {
+			name = "module_slots"
+			position = { x=0 y=0 }
+			size = { width=100% height=100% }
+
+			# MODULE SLOT: fixed_main_weapon_slot
+			containerWindowType = {
+				name = "fixed_main_weapon_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_main_weapon_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: engine_type_slot
+			containerWindowType = {
+				name = "engine_type_slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "engine_type_slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "engine_type_slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Wings"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataUp_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataUp_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataUp_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataMid_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataMid_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataMid_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Armor"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_StigmataDown_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_StigmataDown_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_StigmataDown_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Front"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special1_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special1_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special1_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special2_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special2_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special2_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: BH3_ValkyrieAir_Special3_Slot
+			containerWindowType = {
+				name = "BH3_ValkyrieAir_Special3_Slot"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "BH3_ValkyrieAir_Special3_Slot@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Back"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: fixed_auxiliary_weapon_slot_1
+			containerWindowType = {
+				name = "fixed_auxiliary_weapon_slot_1"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_1"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_1@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+
+			# MODULE SLOT: fixed_auxiliary_weapon_slot_2
+			containerWindowType = {
+				name = "fixed_auxiliary_weapon_slot_2"
+				position = { x=0 y=0 }
+				size = { width=100% height=100% }
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_2"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+				}
+
+				containerWindowType = {
+					name = "fixed_auxiliary_weapon_slot_2@highlight"
+					position = { x=0 y=0 }
+					size = { width=100% height=100% }
+
+					iconType = {
+						name = "blueprint"
+						spriteType = "GFX_TM_BH3_ValkyrieAir_Weapon"
+						position = { x=0 y=0 }
+					}
+				}
+			}
+		}
+	}
+}

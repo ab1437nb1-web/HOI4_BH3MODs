@@ -1,0 +1,333 @@
+BH3_decisions_group = {
+	BH3_create_Hyperion_descision = {
+		priority = 99
+	    icon = GFX_decision_Ai_Hyperion
+		available = {
+			always = yes
+			NOT = {
+				is_in_faction_with = BHS
+			}
+		}
+		visible = {
+			always = yes
+		}
+ 		ai_will_do = { 
+			base = 0
+			modifier = {
+				is_major = yes
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+	    fire_only_once = yes
+		days_remove = 0
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = BH3_Hyperion_enabled
+				set_country_flag = BH3_Hyperion_Icon_on
+				set_country_flag = BH3_Valkyrie_Score_System_on
+				# 检测运行环境是否支持特殊设施，支持就自动创建2个崩坏研究设施
+				BH3_Build_HonkaiFacility = yes
+				# 计算营数量给予女武神数量加成，on_action里面每周计算一次
+				BH3_ValkyrieSoldier_based_on_num_battalions = yes
+				BH3_create_Hyperion = yes
+				country_event = { id = BH3_misc.0 days = 1}
+				#给一代女武神装甲
+				load_oob = "ValkyrieArmor_UnitPool"
+				set_technology = {
+					BH3_ValkyrieSoldier_Research = 1
+					BH3_ValkyrieArmor_classis_0_tech_Research = 1
+				}		
+				create_equipment_variant = {
+					name = "远程女武神装甲"
+					type = BH3_ValkyrieArmor_classis_0
+					design_team = mio:BH3_MIO_Schicksal_Herheim_Lab #We feed on your tears
+					parent_version = 0
+					modules = {
+						BH3_ValkyrieArmor_StigmataUp_Slot = BH3_ValkyrieArmor_Stigmata_SoftAttack
+						BH3_ValkyrieArmor_StigmataMid_Slot = BH3_ValkyrieArmor_Stigmata_Defense
+						BH3_ValkyrieArmor_MainWeapon_Slot = BH3_ValkyrieArmor_MainWeapon_Cannon_0
+						BH3_ValkyrieArmor_Armor_Slot = BH3_ValkyrieArmor_Armor_None
+						BH3_ValkyrieArmor_Engine_Slot = BH3_ValkyrieArmor_Engine_Electric
+						BH3_ValkyrieArmor_StigmataDown_Slot = BH3_ValkyrieArmor_Stigmata_Balance
+						BH3_ValkyrieArmor_Add1_Slot = BH3_ValkyrieArmor_SpecialMod_SimplifyProduction
+					}
+					icon = "GFX_SchicksalValkyrieArtillery_Research_medium"
+					model = "SchicksalValkyrieArtillery_entity"
+				}
+				create_equipment_variant = {
+					name = "近战女武神装甲"
+					type = BH3_ValkyrieArmor_classis_0
+					design_team = mio:BH3_MIO_Schicksal_Herheim_Lab #We feed on your tears
+					parent_version = 0
+					modules = {
+						BH3_ValkyrieArmor_StigmataUp_Slot = BH3_ValkyrieArmor_Stigmata_HardAttack
+						BH3_ValkyrieArmor_StigmataMid_Slot = BH3_ValkyrieArmor_Stigmata_ArmorValue
+						BH3_ValkyrieArmor_MainWeapon_Slot = BH3_ValkyrieArmor_MainWeapon_Scythe_0
+						BH3_ValkyrieArmor_Armor_Slot = BH3_ValkyrieArmor_Armor_Light
+						BH3_ValkyrieArmor_Engine_Slot = BH3_ValkyrieArmor_Engine_Electric
+						BH3_ValkyrieArmor_StigmataDown_Slot = BH3_ValkyrieArmor_Stigmata_Breakthrough
+						BH3_ValkyrieArmor_Add1_Slot = BH3_ValkyrieArmor_SpecialMod_SimplifyProduction
+					}
+					icon = "GFX_SchicksalValkyrieMeele_Research_medium"
+					model = "SchicksalValkyrieMeele_entity"
+				}
+					# 空战型（AI 用：制空/多用途两种起步设计）
+					create_equipment_variant = {
+						name = "远程空战型女武神装甲"
+						type = BH3_ValkyrieAir_ala_0
+						design_team = mio:BH3_MIO_Schicksal_Herheim_Lab
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = BH3_ValkyrieAir_MainWeapon_Cannon_0
+							engine_type_slot = BH3_ValkyrieAir_Engine_Electric_0
+							BH3_ValkyrieAir_StigmataUp_Slot = BH3_ValkyrieAir_Stigmata_Attack
+							BH3_ValkyrieAir_StigmataMid_Slot = BH3_ValkyrieAir_Stigmata_Balance
+							BH3_ValkyrieAir_StigmataDown_Slot = BH3_ValkyrieAir_Stigmata_Defence
+						}
+						icon = "GFX_SchicksalValkyrieArtillery_Research_medium"
+						model = "BH3_ValkyrieAir_0_entity"
+					}
+					create_equipment_variant = {
+						name = "近战空战型女武神装甲"
+						type = BH3_ValkyrieAir_ala_0
+						design_team = mio:BH3_MIO_Schicksal_Herheim_Lab
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = BH3_ValkyrieAir_MainWeapon_Scythe_0
+							engine_type_slot = BH3_ValkyrieAir_Engine_Electric_0
+							BH3_ValkyrieAir_StigmataUp_Slot = BH3_ValkyrieAir_Stigmata_Agility
+							BH3_ValkyrieAir_StigmataMid_Slot = BH3_ValkyrieAir_Stigmata_Balance
+							BH3_ValkyrieAir_StigmataDown_Slot = BH3_ValkyrieAir_Stigmata_ArmorValue
+						}
+						icon = "GFX_SchicksalValkyrieMeele_Research_medium"
+						model = "BH3_ValkyrieAir_0_entity"
+						# 起步空中装备：每型 100 架（2 个 50 架联队）
+						add_equipment_to_stockpile = {
+							producer = ROOT
+							type = BH3_ValkyrieAir_ala_0
+							amount = 100
+							variant_name = "远程空战型女武神装甲"
+						}
+						add_equipment_to_stockpile = {
+							producer = ROOT
+							type = BH3_ValkyrieAir_ala_0
+							amount = 100
+							variant_name = "近战空战型女武神装甲"
+						}
+					}
+
+
+			}
+		}
+	    cost = 0
+	}
+
+	BH3_More_Honkai_Content_descision = {
+		priority = 99
+	    icon = GFX_decision_BH3_More_Honkai_Content
+		visible = {
+			Not = {
+				has_global_flag = BH3_More_Honkai_Content
+			}
+			has_country_flag = BH3_Hyperion_enabled
+		}
+ 		ai_will_do = { 
+			base = 0
+		}
+	    fire_only_once = yes
+		days_remove = 0
+		complete_effect = {
+			set_global_flag = BH3_More_Honkai_Content
+		}
+	    cost = 0
+	}
+
+	BH3_tech_decisions = {
+		priority = 98
+		icon = GFX_decision_Ai_Hyperion
+		available = {
+			always = yes
+			NOT = {
+				tag = BHS
+			}
+			is_ai = no 
+		}
+		visible = {
+			has_country_flag = BH3_Hyperion_enabled
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			set_country_flag = BH3_main_menu_open
+			clr_country_flag = BH3_tech_menu_open
+			clr_country_flag = BH3_Valkyrie_Doctrine_on
+			hidden_effect = { scoped_sound_effect = CaptainOnTheBridge } 
+		}
+	}
+
+	BH3_Hyperion_recharge = {
+		priority = 97
+	    icon = GFX_decision_Hyperion_Recharge
+	    allowed = { always = yes }
+	    available = { 
+			NOT = { has_country_flag = BH3_Hyperion_charged }
+			is_ai = no 
+			has_fuel > 30000
+		}
+	    visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+    	}
+		days_remove = 1
+		remove_effect = {
+			add_fuel = -30000
+			hidden_effect = {
+				set_country_flag = BH3_Hyperion_charged
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				scoped_sound_effect = Hyperion_Recharge
+			}
+		}
+		cost = 0
+	    ai_will_do = { factor = 0 }
+	}
+
+	#圣芙蕾雅学院
+	BH3_SaintFreyaCollege_decisions = {
+		priority = 97
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = {
+			always = yes
+		}
+		available = {
+			always = yes
+		}
+		visible = { 
+			has_country_flag = BH3_Hyperion_enabled
+			if = { 
+				limit = { has_global_flag = BHS_Started }
+				check_variable = { global.BH3_invasion_menu_enable_herrscher2_btn_frame = 2 }
+			}
+    	}
+		fire_only_once = yes
+		cost = 150
+		days_remove = 0
+		modifier = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = BH3_MIO_SaintFreyaCollege
+
+			mio:BH3_MIO_SaintFreyaCollege = {
+				add_mio_size = 1
+				add_mio_funds = 500
+			}
+			hidden_effect = {
+				set_country_flag = BH3_SaintFreyaCollege_Setup
+			}
+		}
+	}
+	#将舰长设置为国家领导人，仅替换图片
+	BH3_set_country_leader1_decisions = {
+		priority = 96
+		icon = GFX_decision_SetCountryLeaderBoy
+		available = {
+			always = yes
+			NOT = {
+				tag = BHS
+			}
+			is_ai = no 
+		}
+		visible = {
+			has_country_flag = BH3_Hyperion_enabled
+			has_country_flag = leader_CaptainJZ_on
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_country_leader_trait = BH3_country_leader_trait
+			hidden_effect = { 
+				var:country_leader = {
+					set_character_name = BH3_leader_CaptainJZ
+					set_portraits = { civilian = { large = GFX_BH3_unit_leader_CaptainJZ } }
+				}
+			} 
+		}
+	}
+	#将舰长设置为国家领导人，仅替换图片
+	BH3_set_country_leader2_decisions = {
+		priority = 95
+		icon = GFX_decision_SetCountryLeaderGirl
+		available = {
+			always = yes
+			NOT = {
+				tag = BHS
+			}
+			is_ai = no 
+		}
+		visible = {
+			has_country_flag = BH3_Hyperion_enabled
+			has_country_flag = leader_CaptainJZgirl_on
+		}
+		fire_only_once = no
+		cost = 0
+		days_remove = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			add_country_leader_trait = BH3_country_leader_trait
+			var:country_leader = {
+				set_character_name = BH3_leader_CaptainJZgirl
+				set_portraits = { civilian = { large = GFX_BH3_unit_leader_CaptainJZgirl } }
+			}
+		}
+	}
+
+	BH3_ai_get_valkyrie_tech_decisions = {
+		priority = 10
+		available = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		visible = {
+			has_global_flag = BH3_More_Honkai_Content
+			has_country_flag = BH3_Hyperion_enabled
+			is_ai = yes
+		}
+		fire_only_once = yes
+		cost = 0
+		days_remove = 720
+		ai_will_do = {
+			base = 0 
+			modifier = {
+				has_global_flag = BH3_More_Honkai_Content
+				add = 999
+			}
+		}
+		remove_effect = {
+			BH3_Tech_and_unit_spawn = yes
+			# random_controlled_state = {
+			# 	limit = { is_core_of = ROOT }
+				
+			# }
+		}
+	}
+
+}

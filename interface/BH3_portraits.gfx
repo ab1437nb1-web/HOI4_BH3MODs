@@ -1,0 +1,1185 @@
+spriteTypes = {
+    
+    ###########################
+    ####### 女武神将领 ########
+    ###########################
+    #男舰长
+    spriteType = {
+        name = "GFX_BH3_unit_leader_CaptainJZ"
+        texturefile = "gfx/leaders/Portrait_CaptainJZ.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_CaptainJZ_small"
+        texturefile = "gfx/leaders/Portrait_CaptainJZ_idea.dds"
+    }
+    #女舰长
+    spriteType = {
+        name = "GFX_BH3_unit_leader_CaptainJZgirl"
+        texturefile = "gfx/leaders/Portrait_CaptainJZgirl.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_CaptainJZgirl_small"
+        texturefile = "gfx/leaders/Portrait_CaptainJZgirl_idea.dds"
+    }
+    #琪亚娜
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_WhiteComet"
+        texturefile = "gfx/leaders/Portrait_Kiana_WhiteComet.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_WhiteComet_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_WhiteComet_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_VoidDrifter"
+        texturefile = "gfx/leaders/Portrait_Kiana_VoidDrifter.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_VoidDrifter_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_VoidDrifter_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_KnightMoonbeam"
+        texturefile = "gfx/leaders/Portrait_Kiana_KnightMoonbeam.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_KnightMoonbeam_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_KnightMoonbeam_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofVoid2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid2.dds"
+    }
+    
+    #芽衣
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_CrimsonImpuls"
+        texturefile = "gfx/leaders/Portrait_Mei_CrimsonImpuls.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_CrimsonImpuls_small"
+        texturefile = "gfx/leaders/Portrait_Mei_CrimsonImpuls_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_StrikerFulminata"
+        texturefile = "gfx/leaders/Portrait_Mei_StrikerFulminata.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_StrikerFulminata_small"
+        texturefile = "gfx/leaders/Portrait_Mei_StrikerFulminata_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_ShadowDash"
+        texturefile = "gfx/leaders/Portrait_Mei_ShadowDash.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_ShadowDash_small"
+        texturefile = "gfx/leaders/Portrait_Mei_ShadowDash_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_DanzaiSpectramancer"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_DanzaiSpectramancer_small"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_DanzaiSpectramancer2"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_DanzaiSpectramancer2_small"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer2_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_LightningEmpress"
+        texturefile = "gfx/leaders/Portrait_Mei_LightningEmpress.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_LightningEmpress_small"
+        texturefile = "gfx/leaders/Portrait_Mei_LightningEmpress_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_Captain"
+        texturefile = "gfx/leaders/Portrait_Mei_Captain.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_MeiCaptain_small"
+        texturefile = "gfx/leaders/Portrait_Mei_Captain_idea.dds"
+    }
+
+    #布洛妮娅
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_ValkyrieChariot"
+        texturefile = "gfx/leaders/Portrait_Bronya_ValkyrieChariot.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_ValkyrieChariot_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_ValkyrieChariot_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_YamabukiArmor"
+        texturefile = "gfx/leaders/Portrait_Bronya_YamabukiArmor.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_YamabukiArmor_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_YamabukiArmor_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_BlackNucleus"
+        texturefile = "gfx/leaders/Portrait_Bronya_BlackNucleus.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_BlackNucleus_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_BlackNucleus_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_DimensionBreaker"
+        texturefile = "gfx/leaders/Portrait_Bronya_DimensionBreaker.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_DimensionBreaker_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_DimensionBreaker_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_SilverWingNEX"
+        texturefile = "gfx/leaders/Portrait_Bronya_SilverWingN-EX.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_SilverWingNEX_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_SilverWingN-EX_idea.dds"
+    }
+    
+    #希儿
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_SwallowtailPhantasm"
+        texturefile = "gfx/leaders/Portrait_Seele_SwallowtailPhantasm.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_SwallowtailPhantasm_small"
+        texturefile = "gfx/leaders/Portrait_Seele_SwallowtailPhantasm_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymph"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymph_small"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymph2"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymph2_small"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph2_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymphBlack"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymphBlack.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StygianNymphBlack_small"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymphBlack_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StarchasmNyx"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StarchasmNyx_small"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StarchasmNyx2"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_StarchasmNyx2_small"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx2_idea.dds"
+    }
+
+
+    #符华
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_ValkyrieAccipiter"
+        texturefile = "gfx/leaders/Portrait_Fuka_ValkyrieAccipiter.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_ValkyrieAccipiter_small"
+        texturefile = "gfx/leaders/Portrait_Fuka_ValkyrieAccipiter_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_ShadowKnight"
+        texturefile = "gfx/leaders/Portrait_Fuka_ShadowKnight.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_ShadowKnight_small"
+        texturefile = "gfx/leaders/Portrait_Fuka_ShadowKnight_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_AzureEmpyrea"
+        texturefile = "gfx/leaders/Portrait_Fuka_AzureEmpyrea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_AzureEmpyrea_small"
+        texturefile = "gfx/leaders/Portrait_Fuka_AzureEmpyrea_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_FenghuangofVicissitudes"
+        texturefile = "gfx/leaders/Portrait_Fuka_FenghuangofVicissitudes.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_FenghuangofVicissitudes_small"
+        texturefile = "gfx/leaders/Portrait_Fuka_FenghuangofVicissitudes_idea.dds"
+    }
+    
+    #德丽莎
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_ValkyriePledge"
+        texturefile = "gfx/leaders/Portrait_Theresa_ValkyriePledge.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_ValkyriePledge_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_ValkyriePledge_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_VioletExecuter"
+        texturefile = "gfx/leaders/Portrait_Theresa_VioletExecuter.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_VioletExecuter_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_VioletExecuter_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_TwilightPaladin"
+        texturefile = "gfx/leaders/Portrait_Theresa_TwilightPaladin.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_TwilightPaladin_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_TwilightPaladin_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_Bishop"
+        texturefile = "gfx/leaders/Portrait_Theresa_Bishop.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_Bishop_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_Bishop_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_SchicksalsImperative"
+        texturefile = "gfx/leaders/Portrait_Theresa_SchicksalsImperative.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_SchicksalsImperative_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_SchicksalsImperative_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunaKindred"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunaKindred_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunaKindred2"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunaKindred2_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred2_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove2"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove2_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove2_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_CT"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove_CT.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_StarlitAstrologos"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_StarlitAstrologos_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_StarlitAstrologos2"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Theresa_StarlitAstrologos2_small"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos2_idea.dds"
+    }
+
+    #幽兰戴尔
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_ValkyrieGloria"
+        texturefile = "gfx/leaders/Portrait_Durandal_ValkyrieGloria.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_ValkyrieGloria_small"
+        texturefile = "gfx/leaders/Portrait_Durandal_ValkyrieGloria_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_BrightKnightExcelsis"
+        texturefile = "gfx/leaders/Portrait_Durandal_BrightKnightExcelsis.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_BrightKnightExcelsis_small"
+        texturefile = "gfx/leaders/Portrait_Durandal_BrightKnightExcelsis_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_DeaAnchora"
+        texturefile = "gfx/leaders/Portrait_Durandal_DeaAnchora.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_DeaAnchora_small"
+        texturefile = "gfx/leaders/Portrait_Durandal_DeaAnchora_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_PalatinusEquinox"
+        texturefile = "gfx/leaders/Portrait_Durandal_PalatinusEquinox.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Durandal_PalatinusEquinox_small"
+        texturefile = "gfx/leaders/Portrait_Durandal_PalatinusEquinox_idea.dds"
+    }
+    
+    #丽塔
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_PhantomIron"
+        texturefile = "gfx/leaders/Portrait_Rita_PhantomIron.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_PhantomIron_small"
+        texturefile = "gfx/leaders/Portrait_Rita_PhantomIron_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_ArgentKnightArtemis"
+        texturefile = "gfx/leaders/Portrait_Rita_ArgentKnightArtemis.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_ArgentKnightArtemis_small"
+        texturefile = "gfx/leaders/Portrait_Rita_ArgentKnightArtemis_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_SpinaAstera"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_SpinaAstera_small"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_SpinaAstera2"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_SpinaAstera2_small"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera2_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_NoneName"
+        texturefile = "gfx/leaders/Portrait_Rita_NoneName.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Rita_NoneName_small"
+        texturefile = "gfx/leaders/Portrait_Rita_NoneName_idea.dds"
+    }
+
+    #安娜
+    spriteType = {
+        name = "GFX_BH3_unit_leader_AnaSchariac"
+        texturefile = "gfx/leaders/Portrait_AnaSchariac.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_AnaSchariac_small"
+        texturefile = "gfx/leaders/Portrait_AnaSchariac_idea.dds"
+    }
+
+    #伊甸
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Eden_GoldenDiva"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Eden_GoldenDiva_small"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Eden_GoldenDiva2"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva2.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Eden_GoldenDiva2_small"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva2_idea.dds"
+    }
+
+    #希娜狄雅
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Senadina_DeepspaceAnchorFirst"
+        texturefile = "gfx/leaders/Portrait_Senadina_DeepspaceAnchorFirst.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Senadina_DeepspaceAnchorFirst_small"
+        texturefile = "gfx/leaders/Portrait_Senadina_DeepspaceAnchorFirst_idea.dds"
+    }
+
+    #赫丽娅
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Helia_ValkyrieBoltstorm"
+        texturefile = "gfx/leaders/Portrait_Helia_ValkyrieBoltstorm.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Helia_ValkyrieBoltstorm_small"
+        texturefile = "gfx/leaders/Portrait_Helia_ValkyrieBoltstorm_idea.dds"
+    }
+
+    #科拉莉
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Coralie_ValkyrieBlastmetal"
+        texturefile = "gfx/leaders/Portrait_Coralie_ValkyrieBlastmetal.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Coralie_ValkyrieBlastmetal_small"
+        texturefile = "gfx/leaders/Portrait_Coralie_ValkyrieBlastmetal_idea.dds"
+    }
+    
+
+    #空律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofVoid"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofVoid_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid_idea.dds"
+    }
+
+    #薪炎
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_idea.dds"
+    }
+
+    #终焉琪亚娜
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofFinality"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Kiana_HerrscherofFinality_small"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_idea.dds"
+    }
+
+    #雷律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_HerrscherofThunder"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_HerrscherofThunder_small"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_idea.dds"
+    }
+
+    #始源
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_HerrscherofOrigin"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofOrigin.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Mei_HerrscherofOrigin_small"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofOrigin_idea.dds"
+    }
+    
+    #理律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_HerrscherofReason"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_HerrscherofReason_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_idea.dds"
+    }
+
+    #真理
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_HerrscherofTruth"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofTruth.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Bronya_HerrscherofTruth_small"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofTruth_idea.dds"
+    }
+
+    #死生律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_HerrscherofRebirth"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Seele_HerrscherofRebirth_small"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_idea.dds"
+    }
+
+    #识律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_HerrscherofSentience"
+        texturefile = "gfx/leaders/Portrait_Fuka_HerrscherofSentience.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Fuka_HerrscherofSentience_small"
+        texturefile = "gfx/leaders/Portrait_Fuka_HerrscherofSentience_idea.dds"
+    }
+
+
+    #人律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Elysia_HerrscherofHuman"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_Elysia_HerrscherofHuman_small"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman_idea.dds"
+    }
+
+    ###########################
+    ######## 崩坏将领 #########
+    ###########################
+    #崩坏的领导人
+	spriteType = {
+		name = "GFX_Portrait_BHS"
+		texturefile = "gfx/leaders/Portrait_BHS.dds"
+	}
+    #理律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofReason"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofReason.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofReason_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofReason_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_SRHerrscherofReason"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofReasonSR.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_SRHerrscherofReason_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofReasonSR_idea.dds"
+    }
+    #空律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoid"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoid.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoid_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoid_idea.dds"
+    }
+    #空律-西林
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoidSirin"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoidSirin.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoidSirin_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoidSirin_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoidSR"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoidSR.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofVoidSR_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofVoidSR_idea.dds"
+    }
+    #雷律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofThunder"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofThunder.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofThunder_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofThunder_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofThunderSR"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofThunderSR.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofThunderSR_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofThunderSR_idea.dds"
+    }
+    #风律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofWind"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofWind.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofWind_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofWind_idea.dds"
+    }
+    #冰律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofIce"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofIce.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofIce_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofIce_idea.dds"
+    }
+    #识律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofSentience"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofSentience.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofSentience_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofSentience_idea.dds"
+    }
+    #千人
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofDominate"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofDominate.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofDominate_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofDominate_idea.dds"
+    }
+    #炎律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofFlamescion"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofFlamescion.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofFlamescion_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofFlamescion_idea.dds"
+    }
+    #侵蚀
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofErosion"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofErosion.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofErosion_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofErosion_idea.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofErosionA"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofErosionA.dds"
+    }
+    #死律
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofRebirth"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofRebirth.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_BHSHerrscherofRebirth_small"
+        texturefile = "gfx/leaders/Portrait_BHSHerrscherofRebirth_idea.dds"
+    }
+
+
+    ###########################
+    ########## 人物 ###########
+    ###########################
+    #长光
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_ChangGuang"
+        texturefile = "gfx/leaders/Char_Portrait_ChangGuang.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_ChangGuang_small"
+        texturefile = "gfx/leaders/Char_Portrait_ChangGuang_idea.dds"
+    }
+    #爱因斯坦
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Einstein"
+        texturefile = "gfx/leaders/Char_Portrait_Einstein.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Einstein_small"
+        texturefile = "gfx/leaders/Char_Portrait_Einstein_idea.dds"
+    }
+    #爱莉希雅
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Elysia"
+        texturefile = "gfx/leaders/Char_Portrait_Elysia.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Elysia_small"
+        texturefile = "gfx/leaders/Char_Portrait_Elysia_idea.dds"
+    }
+    #梅博士
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Mei"
+        texturefile = "gfx/leaders/Char_Portrait_Mei.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Mei_small"
+        texturefile = "gfx/leaders/Char_Portrait_Mei_idea.dds"
+    }
+    #梅比乌斯
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Mobius"
+        texturefile = "gfx/leaders/Char_Portrait_Mobius.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Mobius_small"
+        texturefile = "gfx/leaders/Char_Portrait_Mobius_idea.dds"
+    }
+    #维尔薇
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_VillV"
+        texturefile = "gfx/leaders/Char_Portrait_VillV.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_VillV_small"
+        texturefile = "gfx/leaders/Char_Portrait_VillV_idea.dds"
+    }
+    #特斯拉
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Tesla"
+        texturefile = "gfx/leaders/Char_Portrait_Tesla.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_Char_Portrait_Tesla_small"
+        texturefile = "gfx/leaders/Char_Portrait_Tesla_idea.dds"
+    }
+
+
+    ###########################
+    ######## 特质图标 #########
+    ###########################
+    #特质图标
+    spriteType = {
+		name = "GFX_trait_BH3_trait_CaptainJZ"
+		texturefile = "gfx/interface/traits/trait_CaptainJZ.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_NavalCaptainJZ"
+		texturefile = "gfx/interface/traits/trait_CaptainJZ.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie"
+		texturefile = "gfx/interface/traits/trait_valkyrie.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_CountryStrongestValkyrie"
+		texturefile = "gfx/interface/traits/trait_CountryStrongestValkyrie.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_WroldStrongestValkyrie"
+		texturefile = "gfx/interface/traits/trait_WroldStrongestValkyrie.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie_b"
+		texturefile = "gfx/interface/traits/trait_valkyrie_b.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie_a"
+		texturefile = "gfx/interface/traits/trait_valkyrie_a.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie_s"
+		texturefile = "gfx/interface/traits/trait_valkyrie_s.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie_ss"
+		texturefile = "gfx/interface/traits/trait_valkyrie_ss.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_traits_valkyrie_sss"
+		texturefile = "gfx/interface/traits/trait_valkyrie_sss.dds"
+	}
+
+    spriteType = {#星之环
+		name = "GFX_trait_BH3_trait_StarsRing"
+		texturefile = "gfx/interface/traits/trait_StarsRing.dds"
+	}
+
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofVoid"
+		texturefile = "gfx/interface/traits/trait_HerrscherofVoid.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofFlamescion"
+		texturefile = "gfx/interface/traits/trait_HerrscherofFlamescion.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofFinality"
+		texturefile = "gfx/interface/traits/trait_HerrscherofFinality.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofThunder"
+		texturefile = "gfx/interface/traits/trait_HerrscherofThunder.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofReason"
+		texturefile = "gfx/interface/traits/trait_HerrscherofReason.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofHuman"
+		texturefile = "gfx/interface/traits/trait_HerrscherofHuman.dds"
+	}
+
+
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofWind"
+		texturefile = "gfx/interface/traits/trait_HerrscherofWind.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofIce"
+		texturefile = "gfx/interface/traits/trait_HerrscherofIce.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofDominate"
+		texturefile = "gfx/interface/traits/trait_HerrscherofDominate.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofErosion"
+		texturefile = "gfx/interface/traits/trait_HerrscherofErosion.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofRebirth"
+		texturefile = "gfx/interface/traits/trait_HerrscherofRebirth.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofSentience"
+		texturefile = "gfx/interface/traits/trait_HerrscherofSentience.dds"
+	}
+    spriteType = {
+		name = "GFX_trait_BH3_trait_HerrscherofVoidSirin"
+		texturefile = "gfx/interface/traits/trait_HerrscherofVoidSirin.dds"
+	}
+
+    spriteType = {#崩坏病
+        name = "GFX_trait_BH3_trait_BHS"
+        texturefile = "gfx/interface/traits/trait_HonkaiImpactSick.dds"
+    }
+
+    spriteType = {#崩坏病
+		name = "GFX_trait_BH3_trait_HonkaiImpactSick"
+		texturefile = "gfx/interface/traits/trait_HonkaiImpactSick.dds"
+	}
+
+    #内阁图标
+    spriteType = {#女武神装甲研究
+        name = "GFX_trait_BH3_trait_ChangGuang"
+        texturefile = "gfx/interface/traits/idea_valkyrie_researcher.dds"
+    }
+
+    #科学家图标
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_level3"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_level3.dds"
+	}
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_level2"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_level2.dds"
+	}
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_level1"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_level1.dds"
+	}
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_BH3_ValkyrieArmor_Doll"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_doll.dds"
+	}
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_BH3_TheDivineKeys"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_TheDivineKeys.dds"
+	}
+    spriteType = {
+		name = "GFX_BH3_scientist_trait_BH3_ValkyrieArmor"
+        texturefile = "gfx/interface/traits/BH3_scientist_trait_ValkyrieArmor.dds"
+	}
+
+    #陆军个人特质
+    spriteType = {
+		name = "GFX_trait_BH3_trait_SeeleWake"
+        texturefile = "gfx/interface/traits/trait_SeeleWake.dds"
+	}
+
+
+    ######## 技能效果、值班秘书 ######
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_43_CT1"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx_CT1.dds"
+		noOfFrames = 160
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_43_CT2"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx_CT2.dds"
+		noOfFrames = 160
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_100_Skill1"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid_Skill1.dds"
+		noOfFrames = 58
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_100_Skill2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid_Skill2.dds"
+		noOfFrames = 58
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_101_CT1"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_CT1.dds"
+		noOfFrames = 66
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_101_CT2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_CT2.dds"
+		noOfFrames = 66
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_101_Skill1"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_Skill1.dds"
+		noOfFrames = 63
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_101_Skill2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_Skill2.dds"
+		noOfFrames = 63
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_102_CT1"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_CT1.dds"
+		noOfFrames = 130
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_102_CT2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_CT2.dds"
+		noOfFrames = 130
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_102_Skill1"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_Skill1.dds"
+		noOfFrames = 67
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_102_Skill2"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_Skill2.dds"
+		noOfFrames = 67
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_110_CT1"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_CT1.dds"
+		noOfFrames = 149
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_110_CT2"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_CT2.dds"
+		noOfFrames = 149
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_110_Skill1"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_Skill1.dds"
+		noOfFrames = 67
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_110_Skill2"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_Skill2.dds"
+		noOfFrames = 67
+		animation_rate_fps = 20
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_120_CT1"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_CT1.dds"
+		noOfFrames = 99
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_120_CT2"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_CT2.dds"
+		noOfFrames = 99
+		animation_rate_fps = 13
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_120_Skill1"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_Skill1.dds"
+		noOfFrames = 54
+		animation_rate_fps = 18
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_120_Skill2"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_Skill2.dds"
+		noOfFrames = 54
+		animation_rate_fps = 18
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_130_CT1"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_CT1.dds"
+		noOfFrames = 119
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_130_CT2"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_CT2.dds"
+		noOfFrames = 119
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_130_Skill1"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_Skill1.dds"
+		noOfFrames = 52
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_130_Skill2"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_Skill2.dds"
+		noOfFrames = 52
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_131_Skill1"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_Skill3.dds"
+		noOfFrames = 52
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_131_Skill2"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_Skill4.dds"
+		noOfFrames = 52
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_150_Skill1"
+        texturefile = "gfx/leaders/Portrait_Fuka_HerrscherofSentience_Skill1.dds"
+		noOfFrames = 68
+		animation_rate_fps = 18
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_150_Skill2"
+        texturefile = "gfx/leaders/Portrait_Fuka_HerrscherofSentience_Skill2.dds"
+		noOfFrames = 68
+		animation_rate_fps = 18
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_140_CT1"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman_CT1.dds"
+		noOfFrames = 159
+		animation_rate_fps = 20
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_140_CT2"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman_CT2.dds"
+		noOfFrames = 159
+		animation_rate_fps = 20
+		looping = yes
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_140_Skill1"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman_Skill1.dds"
+		noOfFrames = 47
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+    frameAnimatedSpriteType = {
+		name = "GFX_BH3_unit_leader_140_Skill2"
+        texturefile = "gfx/leaders/Portrait_Elysia_HerrscherofHuman_Skill2.dds"
+		noOfFrames = 47
+		animation_rate_fps = 15
+		looping = no
+		play_on_show = yes
+	}
+}    

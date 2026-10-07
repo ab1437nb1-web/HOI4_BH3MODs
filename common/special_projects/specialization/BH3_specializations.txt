@@ -1,0 +1,5 @@
+BH3_Honkai_specialization = {
+	# blueprint_image = "GFX_BH3_Honkai_Research_facility"
+	color = {24 43 23 } #GREY
+	program_background = "GFX_BH3_sp_facility_card_bg"
+}

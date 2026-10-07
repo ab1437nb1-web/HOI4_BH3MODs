@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_BH3_BHS_invasion_HH2_Mask_Window_icon"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_HH2_Effect.dds"
+	}
+}

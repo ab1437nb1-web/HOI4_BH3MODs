@@ -1,0 +1,88 @@
+
+# 崩坏目标消灭所有文明
+BH3_faction_manifest_Honkai_Civilization = {
+	name = BH3_faction_manifest_Honkai_Civilization_name
+	description = BH3_faction_manifest_Honkai_Civilization_name_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:BH3_all_states
+		completed_amount_collection = collection:BH3_honkai_control_states
+		range = { 
+			max = 1
+		}
+		
+		scale = {
+			army_attack_factor = 1
+			army_defence_factor = 1
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = 0.7
+	
+				modifier = { 
+					army_attack_against_major_factor = 0.5
+					army_breakthrough_against_major_factor = 0.5
+					army_defence_against_major_factor = 0.5
+				}			
+			}
+		}
+	}
+}
+
+# 崩坏目标消灭所有文明
+BH3_faction_manifest_Protect_Civilization = {
+	name = BH3_faction_manifest_Protect_Civilization_name
+	description = BH3_faction_manifest_Protect_Civilization_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:BH3_all_states
+		completed_amount_collection = collection:BH3_honkai_control_states
+		range = { 
+			max = 1
+		}
+		reversed = {
+
+		}
+		scale = {
+			conscription = 0.15
+		}
+		progress_sections = {
+			manifest_fulfilled = {
+				min = 0.2
+				max = 0.4
+				modifier = { 
+					army_core_attack_factor = 1
+					army_core_defence_factor = 1
+					army_attack_factor = 0.2
+					army_defence_factor = 0.2
+					industrial_capacity_factory = 1
+					production_speed_buildings_factor = 1
+					war_support_weekly = 0.02
+					stability_weekly = 0.02
+					line_change_production_efficiency_factor = 0.25		#生产效率保持
+					production_factory_efficiency_gain_factor = 0.25	#生产效率增长
+					local_resources_factor = 1
+					research_speed_factor = 1
+					industrial_capacity_dockyard = 0.5					#海军船坞产出
+					industry_repair_factor = 1							#工厂修复速度
+					industry_free_repair_factor = 1						#免费维修				
+				}			
+			}
+			manifest_fulfilled = {
+				min = 0.6
+				modifier = { 
+					army_core_attack_factor = -0.5
+					army_core_defence_factor = -0.5
+					industrial_capacity_factory = -1
+					production_speed_buildings_factor = -1
+					line_change_production_efficiency_factor = -0.25		#生产效率保持
+					production_factory_efficiency_gain_factor = -0.25		#生产效率增长
+					local_resources_factor = -0.5
+					research_speed_factor = -1
+					industrial_capacity_dockyard = -1						#海军船坞产出			
+				}			
+			}
+		}
+	}
+}

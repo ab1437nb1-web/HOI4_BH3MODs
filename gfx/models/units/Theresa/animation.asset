@@ -1,0 +1,76 @@
+
+########### 观星 ###########
+animation = {
+	name = "Theresa_StarlitAstrologos_Idle1_animation"
+	file = "Theresa_StarlitAstrologos_Idle1.anim"
+}
+animation = {
+	name = "Theresa_StarlitAstrologos_Idle2_animation"
+	file = "Theresa_StarlitAstrologos_Idle2.anim"
+}
+animation = {
+	name = "Theresa_StarlitAstrologos_Idle3_animation"
+	file = "Theresa_StarlitAstrologos_Idle3.anim"
+}
+animation = {
+	name = "Theresa_StarlitAstrologos_Move_animation"
+	file = "Theresa_StarlitAstrologos_Move.anim"
+}
+animation = {
+	name = "Theresa_StarlitAstrologos_Attack_animation"
+	file = "Theresa_StarlitAstrologos_Attack.anim"
+}
+animation = {
+	name = "Theresa_StarlitAstrologos_Ultra_animation"
+	file = "Theresa_StarlitAstrologos_Ultra.anim"
+}
+
+
+
+########### 大德丽莎 ###########
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Idle1_animation"
+	file = "Theresa_LunarVowCrimsonLove_Idle1.anim"
+}
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Idle2_animation"
+	file = "Theresa_LunarVowCrimsonLove_Idle2.anim"
+}
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Idle3_animation"
+	file = "Theresa_LunarVowCrimsonLove_Idle3.anim"
+}
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Move_animation"
+	file = "Theresa_LunarVowCrimsonLove_Move.anim"
+}
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Attack1_animation"
+	file = "Theresa_LunarVowCrimsonLove_Attack1.anim"
+}
+animation = {
+	name = "Theresa_LunarVowCrimsonLove_Attack2_animation"
+	file = "Theresa_LunarVowCrimsonLove_Attack2.anim"
+}
+
+########### 德丽莎主教 ###########
+animation = {
+	name = "Theresa_Mars_Idle1_animation"
+	file = "Theresa_Mars_Idle1.anim"
+}
+animation = {
+	name = "Theresa_Mars_Idle2_animation"
+	file = "Theresa_Mars_Idle2.anim"
+}
+animation = {
+	name = "Theresa_Mars_Move_animation"
+	file = "Theresa_Mars_Move.anim"
+}
+animation = {
+	name = "Theresa_Mars_Attack_animation"
+	file = "Theresa_Mars_Attack.anim"
+}
+animation = {
+	name = "Theresa_Mars_Ultra_animation"
+	file = "Theresa_Mars_Ultra.anim"
+}

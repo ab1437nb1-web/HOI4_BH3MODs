@@ -1,0 +1,322 @@
+
+############# 休伯利安 #############
+BH3_create_Hyperion = {
+	set_global_flag = BH3_Hyperion_on
+	set_variable = {
+		BH3_Hyperion_user = ROOT
+	}
+	set_variable = { BH3_Hyperion_pos = capital }
+	set_variable = { BH3_Hyperion_id = THIS.id }
+	add_to_variable = { BH3_Hyperion_id = 1995 }
+	create_entity = {
+		entity = BH3_Hyperion_entity
+		id = BH3_Hyperion_id
+		state = BH3_Hyperion_pos
+		min_zoom = 8000
+		z = 50 
+	}
+	set_entity_animation = {
+		id = BH3_Hyperion_id
+		animation = "Idle"
+	}
+	var:BH3_Hyperion_pos = {
+		add_dynamic_modifier = {
+			modifier = BH3_Hyperion_support_effect 
+			scope = ROOT
+		}
+	}
+	#终焉琪亚娜
+	set_variable = { BH3_Kiana_HerrscherofFinality_static_pos = capital }
+	set_variable = { BH3_Kiana_HerrscherofFinality_static_id = THIS.id }
+	add_to_variable = { BH3_Kiana_HerrscherofFinality_static_id = 114 }
+	create_entity = {
+		entity = Kiana_HerrscherofFinality_static_entity
+		id = BH3_Kiana_HerrscherofFinality_static_id
+		state = BH3_Kiana_HerrscherofFinality_static_pos
+		min_zoom = 8000
+		rotation = 5
+		scale = 1
+	}
+	set_entity_animation = {
+		id = BH3_Kiana_HerrscherofFinality_static_id
+		animation = "Stop"
+	}
+}
+
+BH3_Hyperion_move = {
+	ROOT = {
+		set_country_flag = BH3_Hyperion_moving
+		set_variable = { BH3_Hyperion_target_ratio = 0.05 }
+	}
+	set_variable = { ROOT.BH3_Hyperion_target = THIS }
+	set_entity_movement = {
+		id = ROOT.BH3_Hyperion_id
+		start = {
+			state = ROOT.BH3_Hyperion_pos
+			z = 50
+		}
+		target = {
+			state = THIS
+			z = 50
+		}
+		ratio = ROOT.BH3_Hyperion_target_ratio
+		rotation = -80.1
+	}
+	set_entity_animation = {
+		id = ROOT.BH3_Hyperion_id
+		animation = "Move"
+	}
+	var:ROOT.BH3_Hyperion_pos = {
+		remove_dynamic_modifier = { modifier = BH3_Hyperion_support_effect }
+	}
+	var:BH3_Hyperion_pos = {
+		add_dynamic_modifier = {
+			modifier = BH3_Hyperion_support_effect 
+			scope = ROOT
+		}
+	}
+
+}
+
+BH3_Hyperion_move_update = {
+	set_entity_movement = {
+		id = BH3_Hyperion_id
+		start = {
+			state = BH3_Hyperion_pos
+			z = 50
+		}
+		target = {
+			state = BH3_Hyperion_target
+			z = 50
+		}
+		ratio = BH3_Hyperion_target_ratio
+		rotation = -80.1
+	}
+}
+
+BH3_Hyperion_attack = {
+	clr_country_flag = BH3_Hyperion_charged
+	# set_entity_animation = {
+	# 	id = BH3_Hyperion_id
+	# 	animation = "Idle"
+	# }
+	set_variable = { BH3_Nuke_id = BH3_Hyperion_id }
+	# set_variable = { BH3_Laser_id = BH3_Hyperion_id }
+	add_to_variable = { BH3_Nuke_id = 1 }
+	# add_to_variable = { BH3_Laser_id = 2 }
+	create_entity = {
+		entity = BH3_Hyperion_Fire_Effect_entity
+		id = BH3_Nuke_id
+		state = BH3_Hyperion_pos
+		min_zoom = 1000
+		
+	}
+	set_entity_animation = {
+		id = BH3_Nuke_id
+		animation = attack
+		
+	}
+	# create_entity = {
+	# 	entity = BH3_Laser_entity
+	# 	id = BH3_Laser_id
+	# 	state = BH3_Hyperion_pos
+	# 	min_zoom = 1000
+	# 	z = 20
+	# 	rotation = 50
+	# }
+	# set_entity_animation = {
+	# 	id = BH3_Laser_id
+	# 	animation = attack
+	# }
+	country_event = { id = BH3_misc.1 days = 5 }
+	if = {
+		limit = { is_special_project_completed = sp:BH3_sp_hyperion_stength_fire }
+		damage_units = {
+			state = BH3_Hyperion_pos
+			org_damage = 15
+			str_damage = 25
+			ratio = no
+			limit = {
+				has_war_with = ROOT
+			}
+		}
+		else = {
+			damage_units = {
+				state = BH3_Hyperion_pos
+				org_damage = 5
+				str_damage = 10
+				ratio = no
+				limit = {
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+
+}
+
+# 终焉一击效果，不含对单位伤害（每个国家范围）
+BH3_Honkai_Finality_One_Hit = {
+	add_ideas = BH3_Finality_disaster_effect
+	# 对将领添加崩坏病                
+	every_army_leader = {
+		limit = {
+			NOT = {
+				has_trait = BH3_trait_CaptainJZ
+				has_trait = BH3_traits_valkyrie
+				has_trait = BH3_trait_BHS
+				has_trait = BH3_trait_HerrscherofVoid
+				has_trait = BH3_trait_HerrscherofFlamescion
+				has_trait = BH3_trait_HerrscherofFinality
+				has_trait = BH3_trait_HerrscherofThunder
+				has_trait = BH3_trait_HerrscherofReason
+				has_trait = BH3_trait_HerrscherofSentience
+				has_trait = BH3_trait_HerrscherofRebirth
+				has_trait = BH3_trait_HerrscherofHuman
+			}
+		}
+		add_timed_unit_leader_trait = { trait = sick days = 7 }
+		add_timed_unit_leader_trait = { trait = wounded days = 7 }
+		add_trait = { trait = BH3_trait_HonkaiImpactSick }
+	}
+	# 对所控制省份建筑造成伤害
+	every_controlled_state = {
+		BH3_Honkai_Destory_Factory = yes
+	}
+	# 在首都创建终焉一击打击特效
+	set_variable = { BH3_FinalityOneHit_pos = capital }
+	set_variable = { BH3_FinalityOneHit_id = BH3_FinalityOneHit_pos }
+	add_to_variable = { BH3_FinalityOneHit_id = 1 }
+	create_entity = {
+		entity = Honkai_One_Hit_entity
+		id = BH3_FinalityOneHit_id
+		state = BH3_FinalityOneHit_pos
+		min_zoom = 8000
+	}
+	set_entity_animation = {
+		id = BH3_FinalityOneHit_id
+		animation = attack
+	}
+	country_event = { id = BH3_misc.2 days = 5 }
+}
+
+
+#终焉律者琪亚娜将领技能效果
+HerrscherofFinality_One_Hit = {
+	every_country = {
+		limit = { 
+			has_war_with = FROM 
+			NOT = { is_in_faction_with = BHS }
+		}
+		BH3_Honkai_Finality_One_Hit = yes
+		every_controlled_state = {
+			damage_units = {
+				state = THIS
+				org_damage = 0.5
+				str_damage = 0.15
+				ratio = yes
+				limit = { 
+					has_war_with = ROOT 
+					NOT = { is_in_faction_with = BHS }
+				}
+				army = yes
+				navy = yes
+			}
+		}
+	}
+	# random_country = {
+	# 	limit = { 
+	# 		has_war_with = FROM 
+	# 		NOT = { is_in_faction_with = BHS }
+	# 	}
+	# 	random_core_state = {
+	# 		limit = { is_capital = yes }
+	# 		set_entity_position = {
+	# 			id = ROOT.BH3_Kiana_HerrscherofFinality_static_id
+	# 			state = THIS
+	# 		}
+			
+	# 		set_entity_animation = {
+	# 			id = ROOT.BH3_Kiana_HerrscherofFinality_static_id
+	# 			animation = "FallAttack"
+	# 		}
+	# 	}
+
+	# }
+}
+
+# 毁坏工厂
+BH3_Honkai_Destory_Factory = {
+	damage_building = {
+		type = infrastructure
+		damage = 50
+	}
+	damage_building = {
+		type = arms_factory
+		damage = 50
+	}
+	damage_building = {
+		type = industrial_complex
+		damage = 50
+	}
+	damage_building = {
+		type = dockyard
+		damage = 50
+	}
+	damage_building = {
+		type = naval_base 
+		damage = 50
+	}
+	damage_building = {
+		type = air_base 
+		damage = 50
+	}	
+	damage_building = {
+		type = anti_air_building 
+		damage = 50
+	}	
+	damage_building = {
+		type = radar_station 
+		damage = 50
+	}	
+}
+
+# 计算营数量给予女武神数量加成
+BH3_ValkyrieSoldier_based_on_num_battalions = {
+	set_variable = { ValkyrieSoldier_B_num = num_battalions }
+	multiply_variable = { ValkyrieSoldier_B_num = 0.02 }
+	round_variable = ValkyrieSoldier_B_num
+	if = {
+		limit = { check_variable = { ValkyrieSoldier_B_num < 1 } }
+		set_variable = { ValkyrieSoldier_B_num = 1 }
+	}
+	set_variable = { ValkyrieSoldier_A_num = num_battalions }
+	multiply_variable = { ValkyrieSoldier_A_num = 0.002 }
+	round_variable = ValkyrieSoldier_A_num
+	if = {
+		limit = { check_variable = { ValkyrieSoldier_A_num < 1 } }
+		set_variable = { ValkyrieSoldier_A_num = 1 }
+	}
+	set_variable = { ValkyrieSoldier_S_num = num_battalions }
+	multiply_variable = { ValkyrieSoldier_S_num = 0.001 }
+	round_variable = ValkyrieSoldier_S_num
+	if = {
+		limit = { check_variable = { ValkyrieSoldier_S_num < 1 } }
+		set_variable = { ValkyrieSoldier_S_num = 1 }
+	}
+	set_variable = { ValkyrieSoldier_SS_num = num_battalions }
+	multiply_variable = { ValkyrieSoldier_SS_num = 0.0005 }
+	round_variable = ValkyrieSoldier_SS_num
+	if = {
+		limit = { check_variable = { ValkyrieSoldier_SS_num < 1 } }
+		set_variable = { ValkyrieSoldier_SS_num = 1 }
+	}
+	set_variable = { ValkyrieSoldier_SSS_num = num_battalions }
+	multiply_variable = { ValkyrieSoldier_SSS_num = 0.0001 }
+	round_variable = ValkyrieSoldier_SSS_num
+	if = {
+		limit = { check_variable = { ValkyrieSoldier_SSS_num < 1 } }
+		set_variable = { ValkyrieSoldier_SSS_num = 1 }
+	}
+}
+

@@ -1,0 +1,577 @@
+add_namespace = BH3_ElysianRealm
+
+# ============ 往事乐土·抽取刻印（12 派系盲抽） ============
+# 机制：决议消耗钥匙后触发；事件给出"类别"选项（普通/核心/增幅/放弃）。
+# 每个选项先给 12 个派系算"可抽权重变量"（1=可抽 0=不可），再用 random_list 以变量为权重随机（原版文档支持变量权重）。
+country_event = {
+	id = BH3_ElysianRealm.1
+	title = BH3_ElysianRealm.1.t
+	desc = BH3_ElysianRealm.1.desc
+	picture = GFX_BH3_sp_ValkyrieArmor_Engine_HonkaiImproved
+	is_triggered_only = yes
+
+	# ---- 抽取 normal ----
+	option = {
+		name = BH3_ElysianRealm.1.a
+		trigger = {
+			OR = {
+				NOT = { has_idea = Savior_3 }
+				NOT = { has_idea = Setsuna_3 }
+				NOT = { has_idea = Bodhi_3 }
+				NOT = { has_idea = Gold_3 }
+				NOT = { has_idea = Kalpas_3 }
+				NOT = { has_idea = Fusheng_3 }
+				NOT = { has_idea = Aponia_3 }
+				NOT = { has_idea = Spiral_3 }
+				NOT = { has_idea = Mobius_3 }
+				NOT = { has_idea = Kosma_3 }
+				NOT = { has_idea = Griseo_3 }
+				NOT = { has_idea = Pardofelis_3 }
+			}
+		}
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Savior_3 } }
+			set_variable = { BH3_ER_w_Savior = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Savior = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Setsuna_3 } }
+			set_variable = { BH3_ER_w_Setsuna = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Setsuna = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Bodhi_3 } }
+			set_variable = { BH3_ER_w_Bodhi = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Bodhi = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Gold_3 } }
+			set_variable = { BH3_ER_w_Gold = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Gold = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Kalpas_3 } }
+			set_variable = { BH3_ER_w_Kalpas = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kalpas = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Fusheng_3 } }
+			set_variable = { BH3_ER_w_Fusheng = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Fusheng = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Aponia_3 } }
+			set_variable = { BH3_ER_w_Aponia = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Aponia = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Spiral_3 } }
+			set_variable = { BH3_ER_w_Spiral = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Spiral = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Mobius_3 } }
+			set_variable = { BH3_ER_w_Mobius = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Mobius = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Kosma_3 } }
+			set_variable = { BH3_ER_w_Kosma = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kosma = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Griseo_3 } }
+			set_variable = { BH3_ER_w_Griseo = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Griseo = 0 } }
+		if = {
+			limit = { NOT = { has_idea = BH3_ER_Pardofelis_3 } }
+			set_variable = { BH3_ER_w_Pardofelis = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Pardofelis = 0 } }
+		random_list = {
+			BH3_ER_w_Savior = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Savior_1 } }
+					add_ideas = BH3_ER_Savior_1
+					add_dynamic_modifier = { modifier = BH3_ER_Savior_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Savior_2 } }
+						add_ideas = BH3_ER_Savior_2
+						add_dynamic_modifier = { modifier = BH3_ER_Savior_2_dm }
+						else = {
+							add_ideas = BH3_ER_Savior_3
+							add_dynamic_modifier = { modifier = BH3_ER_Savior_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Setsuna = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Setsuna_1 } }
+					add_ideas = BH3_ER_Setsuna_1
+					add_dynamic_modifier = { modifier = BH3_ER_Setsuna_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Setsuna_2 } }
+						add_ideas = BH3_ER_Setsuna_2
+						add_dynamic_modifier = { modifier = BH3_ER_Setsuna_2_dm }
+						else = {
+							add_ideas = BH3_ER_Setsuna_3
+							add_dynamic_modifier = { modifier = BH3_ER_Setsuna_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Bodhi = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Bodhi_1 } }
+					add_ideas = BH3_ER_Bodhi_1
+					add_dynamic_modifier = { modifier = BH3_ER_Bodhi_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Bodhi_2 } }
+						add_ideas = BH3_ER_Bodhi_2
+						add_dynamic_modifier = { modifier = BH3_ER_Bodhi_2_dm }
+						else = {
+							add_ideas = BH3_ER_Bodhi_3
+							add_dynamic_modifier = { modifier = BH3_ER_Bodhi_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Gold = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Gold_1 } }
+					add_ideas = BH3_ER_Gold_1
+					add_dynamic_modifier = { modifier = BH3_ER_Gold_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Gold_2 } }
+						add_ideas = BH3_ER_Gold_2
+						add_dynamic_modifier = { modifier = BH3_ER_Gold_2_dm }
+						else = {
+							add_ideas = BH3_ER_Gold_3
+							add_dynamic_modifier = { modifier = BH3_ER_Gold_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Kalpas = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Kalpas_1 } }
+					add_ideas = BH3_ER_Kalpas_1
+					add_dynamic_modifier = { modifier = BH3_ER_Kalpas_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Kalpas_2 } }
+						add_ideas = BH3_ER_Kalpas_2
+						add_dynamic_modifier = { modifier = BH3_ER_Kalpas_2_dm }
+						else = {
+							add_ideas = BH3_ER_Kalpas_3
+							add_dynamic_modifier = { modifier = BH3_ER_Kalpas_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Fusheng = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Fusheng_1 } }
+					add_ideas = BH3_ER_Fusheng_1
+					add_dynamic_modifier = { modifier = BH3_ER_Fusheng_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Fusheng_2 } }
+						add_ideas = BH3_ER_Fusheng_2
+						add_dynamic_modifier = { modifier = BH3_ER_Fusheng_2_dm }
+						else = {
+							add_ideas = BH3_ER_Fusheng_3
+							add_dynamic_modifier = { modifier = BH3_ER_Fusheng_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Aponia = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Aponia_1 } }
+					add_ideas = BH3_ER_Aponia_1
+					add_dynamic_modifier = { modifier = BH3_ER_Aponia_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Aponia_2 } }
+						add_ideas = BH3_ER_Aponia_2
+						add_dynamic_modifier = { modifier = BH3_ER_Aponia_2_dm }
+						else = {
+							add_ideas = BH3_ER_Aponia_3
+							add_dynamic_modifier = { modifier = BH3_ER_Aponia_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Spiral = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Spiral_1 } }
+					add_ideas = BH3_ER_Spiral_1
+					add_dynamic_modifier = { modifier = BH3_ER_Spiral_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Spiral_2 } }
+						add_ideas = BH3_ER_Spiral_2
+						add_dynamic_modifier = { modifier = BH3_ER_Spiral_2_dm }
+						else = {
+							add_ideas = BH3_ER_Spiral_3
+							add_dynamic_modifier = { modifier = BH3_ER_Spiral_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Mobius = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Mobius_1 } }
+					add_ideas = BH3_ER_Mobius_1
+					add_dynamic_modifier = { modifier = BH3_ER_Mobius_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Mobius_2 } }
+						add_ideas = BH3_ER_Mobius_2
+						add_dynamic_modifier = { modifier = BH3_ER_Mobius_2_dm }
+						else = {
+							add_ideas = BH3_ER_Mobius_3
+							add_dynamic_modifier = { modifier = BH3_ER_Mobius_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Kosma = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Kosma_1 } }
+					add_ideas = BH3_ER_Kosma_1
+					add_dynamic_modifier = { modifier = BH3_ER_Kosma_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Kosma_2 } }
+						add_ideas = BH3_ER_Kosma_2
+						add_dynamic_modifier = { modifier = BH3_ER_Kosma_2_dm }
+						else = {
+							add_ideas = BH3_ER_Kosma_3
+							add_dynamic_modifier = { modifier = BH3_ER_Kosma_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Griseo = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Griseo_1 } }
+					add_ideas = BH3_ER_Griseo_1
+					add_dynamic_modifier = { modifier = BH3_ER_Griseo_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Griseo_2 } }
+						add_ideas = BH3_ER_Griseo_2
+						add_dynamic_modifier = { modifier = BH3_ER_Griseo_2_dm }
+						else = {
+							add_ideas = BH3_ER_Griseo_3
+							add_dynamic_modifier = { modifier = BH3_ER_Griseo_3_dm }
+						}
+					}
+				}
+			}
+			BH3_ER_w_Pardofelis = {
+				if = {
+					limit = { NOT = { has_idea = BH3_ER_Pardofelis_1 } }
+					add_ideas = BH3_ER_Pardofelis_1
+					add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_1_dm }
+					else_if = {
+						limit = { NOT = { has_idea = BH3_ER_Pardofelis_2 } }
+						add_ideas = BH3_ER_Pardofelis_2
+						add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_2_dm }
+						else = {
+							add_ideas = BH3_ER_Pardofelis_3
+							add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_3_dm }
+						}
+					}
+				}
+			}
+			1 = { add_political_power = 25 }
+		}
+	}
+
+	# ---- 抽取 core ----
+	option = {
+		name = BH3_ElysianRealm.1.b
+		trigger = {
+			OR = {
+				AND = { has_idea = BH3_ER_Savior_3  NOT = { has_idea = BH3_ER_Savior_Core } }
+				AND = { has_idea = BH3_ER_Setsuna_3  NOT = { has_idea = BH3_ER_Setsuna_Core } }
+				AND = { has_idea = BH3_ER_Bodhi_3  NOT = { has_idea = BH3_ER_Bodhi_Core } }
+				AND = { has_idea = BH3_ER_Gold_3  NOT = { has_idea = BH3_ER_Gold_Core } }
+				AND = { has_idea = BH3_ER_Kalpas_3  NOT = { has_idea = BH3_ER_Kalpas_Core } }
+				AND = { has_idea = BH3_ER_Fusheng_3  NOT = { has_idea = BH3_ER_Fusheng_Core } }
+				AND = { has_idea = BH3_ER_Aponia_3  NOT = { has_idea = BH3_ER_Aponia_Core } }
+				AND = { has_idea = BH3_ER_Spiral_3  NOT = { has_idea = BH3_ER_Spiral_Core } }
+				AND = { has_idea = BH3_ER_Mobius_3  NOT = { has_idea = BH3_ER_Mobius_Core } }
+				AND = { has_idea = BH3_ER_Kosma_3  NOT = { has_idea = BH3_ER_Kosma_Core } }
+				AND = { has_idea = BH3_ER_Griseo_3  NOT = { has_idea = BH3_ER_Griseo_Core } }
+				AND = { has_idea = BH3_ER_Pardofelis_3  NOT = { has_idea = BH3_ER_Pardofelis_Core } }
+			}
+		}
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Savior_3  NOT = { has_idea = BH3_ER_Savior_Core } } }
+			set_variable = { BH3_ER_w_Savior = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Savior = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Setsuna_3  NOT = { has_idea = BH3_ER_Setsuna_Core } } }
+			set_variable = { BH3_ER_w_Setsuna = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Setsuna = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Bodhi_3  NOT = { has_idea = BH3_ER_Bodhi_Core } } }
+			set_variable = { BH3_ER_w_Bodhi = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Bodhi = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Gold_3  NOT = { has_idea = BH3_ER_Gold_Core } } }
+			set_variable = { BH3_ER_w_Gold = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Gold = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Kalpas_3  NOT = { has_idea = BH3_ER_Kalpas_Core } } }
+			set_variable = { BH3_ER_w_Kalpas = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kalpas = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Fusheng_3  NOT = { has_idea = BH3_ER_Fusheng_Core } } }
+			set_variable = { BH3_ER_w_Fusheng = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Fusheng = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Aponia_3  NOT = { has_idea = BH3_ER_Aponia_Core } } }
+			set_variable = { BH3_ER_w_Aponia = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Aponia = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Spiral_3  NOT = { has_idea = BH3_ER_Spiral_Core } } }
+			set_variable = { BH3_ER_w_Spiral = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Spiral = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Mobius_3  NOT = { has_idea = BH3_ER_Mobius_Core } } }
+			set_variable = { BH3_ER_w_Mobius = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Mobius = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Kosma_3  NOT = { has_idea = BH3_ER_Kosma_Core } } }
+			set_variable = { BH3_ER_w_Kosma = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kosma = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Griseo_3  NOT = { has_idea = BH3_ER_Griseo_Core } } }
+			set_variable = { BH3_ER_w_Griseo = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Griseo = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Pardofelis_3  NOT = { has_idea = BH3_ER_Pardofelis_Core } } }
+			set_variable = { BH3_ER_w_Pardofelis = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Pardofelis = 0 } }
+		random_list = {
+			BH3_ER_w_Savior = {
+				add_ideas = BH3_ER_Savior_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Savior_Core_dm }
+			}
+			BH3_ER_w_Setsuna = {
+				add_ideas = BH3_ER_Setsuna_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Setsuna_Core_dm }
+				unlock_subunit = hq_support_company
+				every_army_leader = { add_unit_leader_trait = BH3_ER_trait_Setsuna }
+			}
+			BH3_ER_w_Bodhi = {
+				add_ideas = BH3_ER_Bodhi_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Bodhi_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Bodhi_L2_dm }
+			}
+			BH3_ER_w_Gold = {
+				add_ideas = BH3_ER_Gold_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Gold_Low_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Gold_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Gold_Overflow_dm }
+			}
+			BH3_ER_w_Kalpas = {
+				add_ideas = BH3_ER_Kalpas_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Desperate_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Kalpas_LastStand_dm }
+			}
+			BH3_ER_w_Fusheng = {
+				add_ideas = BH3_ER_Fusheng_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Fusheng_Advantage_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Fusheng_Disadvantage_dm }
+			}
+			BH3_ER_w_Aponia = {
+				add_ideas = BH3_ER_Aponia_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Aponia_Low_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Aponia_High_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Aponia_Overflow_dm }
+			}
+			BH3_ER_w_Spiral = {
+				add_ideas = BH3_ER_Spiral_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L2_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L3_dm }
+			}
+			BH3_ER_w_Mobius = {
+				add_ideas = BH3_ER_Mobius_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Mobius_Core_dm }
+			}
+			BH3_ER_w_Kosma = {
+				add_ideas = BH3_ER_Kosma_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Kosma_T1_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Kosma_T2_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Kosma_T3_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Kosma_T4_dm }
+			}
+			BH3_ER_w_Griseo = {
+				add_ideas = BH3_ER_Griseo_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Griseo_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Griseo_T1_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Griseo_T2_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Griseo_T3_dm }
+			}
+			BH3_ER_w_Pardofelis = {
+				add_ideas = BH3_ER_Pardofelis_Core
+				add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Core_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Trade_dm }
+			}
+			1 = { add_political_power = 25 }
+		}
+	}
+
+	# ---- 抽取 amp ----
+	option = {
+		name = BH3_ElysianRealm.1.c
+		trigger = {
+			OR = {
+				AND = { has_idea = BH3_ER_Savior_Core  NOT = { has_idea = BH3_ER_Savior_Amp } }
+				AND = { has_idea = BH3_ER_Setsuna_Core  NOT = { has_idea = BH3_ER_Setsuna_Amp } }
+				AND = { has_idea = BH3_ER_Bodhi_Core  NOT = { has_idea = BH3_ER_Bodhi_Amp } }
+				AND = { has_idea = BH3_ER_Gold_Core  NOT = { has_idea = BH3_ER_Gold_Amp } }
+				AND = { has_idea = BH3_ER_Kalpas_Core  NOT = { has_idea = BH3_ER_Kalpas_Amp } }
+				AND = { has_idea = BH3_ER_Fusheng_Core  NOT = { has_idea = BH3_ER_Fusheng_Amp } }
+				AND = { has_idea = BH3_ER_Aponia_Core  NOT = { has_idea = BH3_ER_Aponia_Amp } }
+				AND = { has_idea = BH3_ER_Spiral_Core  NOT = { has_idea = BH3_ER_Spiral_Amp } }
+				AND = { has_idea = BH3_ER_Mobius_Core  NOT = { has_idea = BH3_ER_Mobius_Amp } }
+				AND = { has_idea = BH3_ER_Kosma_Core  NOT = { has_idea = BH3_ER_Kosma_Amp } }
+				AND = { has_idea = BH3_ER_Griseo_Core  NOT = { has_idea = BH3_ER_Griseo_Amp } }
+				AND = { has_idea = BH3_ER_Pardofelis_Core  NOT = { has_idea = BH3_ER_Pardofelis_Amp } }
+			}
+		}
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Savior_Core  NOT = { has_idea = BH3_ER_Savior_Amp } } }
+			set_variable = { BH3_ER_w_Savior = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Savior = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Setsuna_Core  NOT = { has_idea = BH3_ER_Setsuna_Amp } } }
+			set_variable = { BH3_ER_w_Setsuna = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Setsuna = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Bodhi_Core  NOT = { has_idea = BH3_ER_Bodhi_Amp } } }
+			set_variable = { BH3_ER_w_Bodhi = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Bodhi = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Gold_Core  NOT = { has_idea = BH3_ER_Gold_Amp } } }
+			set_variable = { BH3_ER_w_Gold = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Gold = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Kalpas_Core  NOT = { has_idea = BH3_ER_Kalpas_Amp } } }
+			set_variable = { BH3_ER_w_Kalpas = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kalpas = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Fusheng_Core  NOT = { has_idea = BH3_ER_Fusheng_Amp } } }
+			set_variable = { BH3_ER_w_Fusheng = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Fusheng = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Aponia_Core  NOT = { has_idea = BH3_ER_Aponia_Amp } } }
+			set_variable = { BH3_ER_w_Aponia = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Aponia = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Spiral_Core  NOT = { has_idea = BH3_ER_Spiral_Amp } } }
+			set_variable = { BH3_ER_w_Spiral = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Spiral = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Mobius_Core  NOT = { has_idea = BH3_ER_Mobius_Amp } } }
+			set_variable = { BH3_ER_w_Mobius = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Mobius = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Kosma_Core  NOT = { has_idea = BH3_ER_Kosma_Amp } } }
+			set_variable = { BH3_ER_w_Kosma = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Kosma = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Griseo_Core  NOT = { has_idea = BH3_ER_Griseo_Amp } } }
+			set_variable = { BH3_ER_w_Griseo = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Griseo = 0 } }
+		if = {
+			limit = { AND = { has_idea = BH3_ER_Pardofelis_Core  NOT = { has_idea = BH3_ER_Pardofelis_Amp } } }
+			set_variable = { BH3_ER_w_Pardofelis = 1 }
+		}
+		else = { set_variable = { BH3_ER_w_Pardofelis = 0 } }
+		random_list = {
+			BH3_ER_w_Savior = {
+				add_ideas = BH3_ER_Savior_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Savior_Amp_dm }
+			}
+			BH3_ER_w_Setsuna = {
+				add_ideas = BH3_ER_Setsuna_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Setsuna_Amp_dm }
+			}
+			BH3_ER_w_Bodhi = {
+				add_ideas = BH3_ER_Bodhi_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Bodhi_Amp_dm }
+			}
+			BH3_ER_w_Gold = {
+				add_ideas = BH3_ER_Gold_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Gold_Amp_dm }
+			}
+			BH3_ER_w_Kalpas = {
+				add_ideas = BH3_ER_Kalpas_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Amp_dm }
+			}
+			BH3_ER_w_Fusheng = {
+				add_ideas = BH3_ER_Fusheng_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpAdv_dm }
+				add_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpDis_dm }
+			}
+			BH3_ER_w_Aponia = {
+				add_ideas = BH3_ER_Aponia_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Aponia_Amp_dm }
+			}
+			BH3_ER_w_Spiral = {
+				add_ideas = BH3_ER_Spiral_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Spiral_Amp_dm }
+			}
+			BH3_ER_w_Mobius = {
+				add_ideas = BH3_ER_Mobius_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Mobius_Amp_dm }
+			}
+			BH3_ER_w_Kosma = {
+				add_ideas = BH3_ER_Kosma_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Kosma_Amp_dm }
+			}
+			BH3_ER_w_Griseo = {
+				add_ideas = BH3_ER_Griseo_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Griseo_Amp_dm }
+			}
+			BH3_ER_w_Pardofelis = {
+				add_ideas = BH3_ER_Pardofelis_Amp
+				add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Amp_dm }
+			}
+			1 = { add_political_power = 25 }
+		}
+	}
+
+	option = {
+		name = BH3_ElysianRealm.1.f
+		add_political_power = 25
+	}
+}

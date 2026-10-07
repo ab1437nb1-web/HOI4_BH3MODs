@@ -1,0 +1,333 @@
+equipments = {
+
+	#############################################
+	########### 空中女武神装甲——空战型 ###########
+	#############################################
+	# 五代划分（与陆上女武神装甲一致）：
+	#   第一代 = 领域装·白练（预设）
+	#   第二代 = 天穹游侠（预设）
+	#   第三代 = 白骑士·月光（预设）
+	#   第四代 = 仅底座数据
+	#   次时代 = 仅底座数据
+	BH3_ValkyrieAir_ala = {
+		sprite = BH3_ValkyrieAir_0
+		is_archetype = yes
+		is_convertable = yes
+		picture = archetype_fighter_equipment
+		is_buildable = no
+		type = fighter
+		allowed_types = {
+			fighter
+			interceptor
+		}
+		group_by = archetype
+		air_map_icon_frame = 1
+
+		interface_category = interface_category_air
+		interface_overview_category_index = 1
+
+		active = no
+		can_license = no
+
+		allow_mission_type = {
+			air_superiority
+			training
+		}
+
+		air_superiority = 1
+		reliability = 0.9
+
+		# 第一代底座数据（新设计从这里起步）
+		air_range = 1000
+		maximum_speed = 1400
+		air_agility = 260
+		air_defence = 280
+		air_attack = 140
+		weight = 8
+		fuel_consumption = 0
+
+		lend_lease_cost = 8
+		manpower = 20
+		build_cost_ic = 130
+
+		default_modules = {
+			fixed_main_weapon_slot = BH3_ValkyrieAir_MainWeapon_Pistols_0
+			engine_type_slot = BH3_ValkyrieAir_Engine_Electric_0
+			BH3_ValkyrieAir_StigmataUp_Slot = BH3_ValkyrieAir_Stigmata_Balance
+			BH3_ValkyrieAir_StigmataMid_Slot = BH3_ValkyrieAir_Stigmata_Balance
+			BH3_ValkyrieAir_StigmataDown_Slot = BH3_ValkyrieAir_Stigmata_Balance
+			BH3_ValkyrieAir_Special1_Slot = empty
+		}
+
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Balance
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Speed
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Agility
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Defence
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Attack
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Pierce
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_Range
+			count < 2
+		}
+		module_count_limit = {
+			module = BH3_ValkyrieAir_Stigmata_ArmorValue
+			count < 2
+		}
+		module_count_limit = {
+			category = BH3_ValkyrieAir_SpecialMod
+			count < 2
+			module_count_limit = {
+				category = BH3_ValkyrieAir_TheDivineKeys
+				count < 2
+			}
+		}
+	}
+
+	############ 第一代空战型女武神装甲（预设：领域装·白练）############
+	BH3_ValkyrieAir_ala_0 = {
+		abbreviation = "ava0"
+		sprite = BH3_ValkyrieAir_0
+		derived_variant_name = Valkyrie_Kiana_equipment_0
+		is_buildable = yes
+		visual_level = 0
+		archetype = BH3_ValkyrieAir_ala
+		priority = 10
+		module_slots = inherit
+
+		reliability = 0.9
+		air_range = 1000
+		maximum_speed = 1400
+		air_agility = 260
+		air_defence = 280
+		air_attack = 140
+		weight = 8
+
+		lend_lease_cost = 8
+		manpower = 20
+		build_cost_ic = 130
+
+		module_slots = {
+			# 主武器：双枪 / 太刀 / 火炮 / 镰刀 / 拳套 / 十字
+			fixed_main_weapon_slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieAir_MainWeapon_Pistols
+					BH3_ValkyrieAir_MainWeapon_Katana
+					BH3_ValkyrieAir_MainWeapon_Cannon
+					BH3_ValkyrieAir_MainWeapon_Scythe
+					BH3_ValkyrieAir_MainWeapon_Fists
+					BH3_ValkyrieAir_MainWeapon_Cross
+				}
+			}
+
+			# 驱动引擎：电力 / 崩坏能 / 核聚变
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieAir_ElectricEngine
+					BH3_ValkyrieAir_HonkaiEngine
+					BH3_ValkyrieAir_NuclearEngine
+				}
+			}
+
+			# 圣痕上
+			BH3_ValkyrieAir_StigmataUp_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieAir_Stigmata
+				}
+			}
+			# 圣痕中
+			BH3_ValkyrieAir_StigmataMid_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieAir_Stigmata
+				}
+			}
+			# 圣痕下
+			BH3_ValkyrieAir_StigmataDown_Slot = {
+				required = yes
+				allowed_module_categories = {
+					BH3_ValkyrieAir_Stigmata
+				}
+			}
+
+			# 特殊模块
+			BH3_ValkyrieAir_Special1_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieAir_SpecialMod
+					BH3_ValkyrieAir_TheDivineKeys
+				}
+			}
+		}
+	}
+
+	############ 第二代空战型女武神装甲（预设：天穹游侠）############
+	BH3_ValkyrieAir_ala_1 = {
+		abbreviation = "ava1"
+		sprite = BH3_ValkyrieAir_1
+		derived_variant_name = Valkyrie_Kiana_equipment_1
+		is_buildable = yes
+		visual_level = 1
+		archetype = BH3_ValkyrieAir_ala
+		parent = BH3_ValkyrieAir_ala_0
+		priority = 20
+		module_slots = inherit
+
+		reliability = 1.2
+		air_range = 1400
+		maximum_speed = 1800
+		air_agility = 300
+		air_defence = 900
+		air_attack = 450
+		weight = 11
+
+		lend_lease_cost = 8
+		manpower = 40
+		build_cost_ic = 390
+
+		module_slots = {
+			# 特殊模块 2
+			BH3_ValkyrieAir_Special2_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieAir_SpecialMod
+					BH3_ValkyrieAir_TheDivineKeys
+				}
+			}
+		}
+	}
+
+	############ 第三代空战型女武神装甲（预设：白骑士·月光）############
+	BH3_ValkyrieAir_ala_2 = {
+		abbreviation = "ava2"
+		sprite = BH3_ValkyrieAir_2
+		derived_variant_name = Valkyrie_Kiana_equipment_2
+		is_buildable = yes
+		visual_level = 2
+		archetype = BH3_ValkyrieAir_ala
+		parent = BH3_ValkyrieAir_ala_1
+		priority = 30
+		module_slots = inherit
+
+		reliability = 1.6
+		air_range = 1800
+		maximum_speed = 2200
+		air_agility = 340
+		air_defence = 2600
+		air_attack = 1300
+		weight = 14
+
+		lend_lease_cost = 8
+		manpower = 80
+		build_cost_ic = 780
+
+		module_slots = {
+			# 特殊模块 3
+			BH3_ValkyrieAir_Special3_Slot = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieAir_SpecialMod
+					BH3_ValkyrieAir_TheDivineKeys
+				}
+			}
+		}
+	}
+
+	############ 第四代空战型女武神装甲 ############
+	BH3_ValkyrieAir_ala_3 = {
+		abbreviation = "ava3"
+		sprite = BH3_ValkyrieAir_3
+		is_buildable = yes
+		visual_level = 3
+		archetype = BH3_ValkyrieAir_ala
+		parent = BH3_ValkyrieAir_ala_2
+		priority = 40
+		module_slots = inherit
+
+		reliability = 2.1
+		air_range = 2400
+		maximum_speed = 2600
+		air_agility = 380
+		air_defence = 5800
+		air_attack = 2900
+		weight = 18
+
+		lend_lease_cost = 8
+		manpower = 160
+		build_cost_ic = 1600
+
+		module_slots = {
+			# 副武器
+			fixed_auxiliary_weapon_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieAir_MainWeapon_Pistols
+					BH3_ValkyrieAir_MainWeapon_Katana
+					BH3_ValkyrieAir_MainWeapon_Cannon
+					BH3_ValkyrieAir_MainWeapon_Scythe
+					BH3_ValkyrieAir_MainWeapon_Fists
+					BH3_ValkyrieAir_MainWeapon_Cross
+				}
+			}
+		}
+	}
+
+	############ 次时代空战型女武神装甲 ############
+	BH3_ValkyrieAir_ala_4 = {
+		abbreviation = "ava4"
+		sprite = BH3_ValkyrieAir_4
+		is_buildable = yes
+		visual_level = 4
+		archetype = BH3_ValkyrieAir_ala
+		parent = BH3_ValkyrieAir_ala_3
+		priority = 50
+		module_slots = inherit
+
+		reliability = 2.7
+		air_range = 3600
+		maximum_speed = 5000
+		air_agility = 420
+		air_defence = 12400
+		air_attack = 6200
+		weight = 24
+
+		lend_lease_cost = 8
+		manpower = 300
+		build_cost_ic = 3200
+
+		module_slots = {
+			# 对地武器
+			fixed_auxiliary_weapon_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					BH3_ValkyrieAir_MainWeapon_Pistols
+					BH3_ValkyrieAir_MainWeapon_Katana
+					BH3_ValkyrieAir_MainWeapon_Cannon
+					BH3_ValkyrieAir_MainWeapon_Scythe
+					BH3_ValkyrieAir_MainWeapon_Fists
+					BH3_ValkyrieAir_MainWeapon_Cross
+				}
+			}
+		}
+	}
+}

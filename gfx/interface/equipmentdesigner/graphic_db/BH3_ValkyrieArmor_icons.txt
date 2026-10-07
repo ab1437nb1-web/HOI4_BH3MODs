@@ -1,0 +1,125 @@
+default = {
+	BH3_ValkyrieArmor_classis_0 = {
+		pool = {
+			icons = {
+				"GFX_SchicksalValkyrieMeele_Research_medium"
+				"GFX_SchicksalValkyrieArtillery_Research_medium"
+				"GFX_Bronya_ValkyrieChariot_Research_medium"
+				"GFX_Mei_CrimsonImpuls_Research_medium" 
+				"GFX_Kiana_WhiteComet_Research_medium"	
+			}
+			models = {
+				"SchicksalValkyrieMeele_entity"
+				"SchicksalValkyrieArtillery_entity"
+				"ValkyrieArtilleryBronya_0_entity"
+				"ValkyrieMeeleMei_0_entity"
+				"ValkyrieComprehensiveKiana_0_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieArmor_classis_1 = {
+		pool = {
+			icons = {
+				"GFX_Seele_SwallowtailPhantasm_Research_medium"
+				"GFX_Bronya_YamabukiArmor_Research_medium"
+				"GFX_Mei_ShadowDash_Research_medium" 
+				"GFX_Mei_StrikerFulminata_Research_medium"
+				"GFX_Kiana_VoidDrifter_Research_medium" 
+			}
+			models = {
+				"ValkyrieMeeleSeele_1_entity"
+				"ValkyrieArtilleryBronya_1_entity"
+				"ValkyrieMeeleMei_1_entity"
+				"ValkyrieComprehensiveKiana_1_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieArmor_classis_2 = {
+		pool = {
+			icons = {
+				"GFX_Theresa_StarlitAstrologos_Research_medium"
+				"GFX_Fuka_ShadowKnight_Research_medium"
+				"GFX_Seele_StarchasmNyx_Research_medium"
+				"GFX_Seele_StygianNymph_Research_medium"
+				"GFX_Bronya_DimensionBreaker_Research_medium"
+				"GFX_Mei_LightningEmpress_Research_medium"
+				"GFX_Mei_DanzaiSpectramancer_Research_medium"
+				"GFX_Kiana_KnightMoonbeam_Research_medium" 
+			}
+			models = {				
+				"ValkyrieComprehensiveTheresa_1_entity"
+				"ValkyrieMeeleFuka_2_entity"
+				"ValkyrieMeeleSeele_3_entity"
+				"ValkyrieMeeleSeele_2_entity"
+				"ValkyrieArtilleryBronya_2_entity"
+				"ValkyrieMeeleMei_2_entity"
+				"ValkyrieComprehensiveKiana_2_entity"
+			}
+			weight = 100
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_3 = {
+		pool = {
+			icons = {
+				"GFX_Eden_GoldenDiva_Research_medium"
+				"GFX_Theresa_LunarVowCrimsonLove_Research_medium"
+				"GFX_Theresa_Mars_Research_medium"
+				"GFX_Fuka_AzureEmpyrea_Research_medium"
+				"GFX_Bronya_SilverWingNEX_Research_medium"
+				"GFX_Mei_Captain_Research_medium"
+				"GFX_Elysia_MissPinkElf_Research_medium"
+			}
+			models = {
+				"ValkyrieComprehensiveEden_0_entity"
+				"ValkyrieComprehensiveTheresa_3_entity"
+				"ValkyrieComprehensiveTheresa_2_entity"
+				"ValkyrieMeeleFuka_3_entity"
+				"ValkyrieArtilleryBronya_3_entity"
+				"ValkyrieMeeleMei_3_entity"
+				"Elysia_MissPinkElf_entity"
+			}
+			weight = 100
+		}
+	}
+
+	BH3_ValkyrieArmor_classis_4 = {
+		pool = {
+			icons = {
+				"GFX_Elysia_MissPinkElf_Research_medium"
+				"GFX_Eden_GoldenDiva_Research_medium"
+				"GFX_Theresa_LunarVowCrimsonLove_Research_medium"
+				"GFX_Theresa_Mars_Research_medium"
+				"GFX_Fuka_AzureEmpyrea_Research_medium"
+				"GFX_Bronya_SilverWingNEX_Research_medium"
+				"GFX_Mei_Captain_Research_medium"
+				"GFX_BH3_ValkyrieArmor_classis_4_medium"
+				"GFX_BH3_ValkyrieArmor_classis_4_1_medium"
+				"GFX_Elysia_HerrscherofHuman_Research_medium"
+				"GFX_Kiana_HerrscherofFlamescion_Research_medium"
+				"GFX_Seele_HerrscherofRebirth_Research_medium"
+				"GFX_Bronya_HerrscherofReason_Research_medium"
+				"GFX_Mei_HerrscherofThunder_Research_medium"
+				"GFX_Kiana_HerrscherofVoid_Research_medium"
+			}
+			models = {
+				"Elysia_MissPinkElf_entity"
+				"ValkyrieComprehensiveEden_0_entity"
+				"ValkyrieComprehensiveTheresa_3_entity"
+				"ValkyrieComprehensiveTheresa_2_entity"
+				"ValkyrieMeeleFuka_3_entity"
+				"ValkyrieArtilleryBronya_3_entity"
+				"ValkyrieMeeleMei_3_entity"
+				"HerrscherHumanElysia_0_entity"
+				"HerrscherFlamescionKiana_0_entity"
+				"HerrscherRebirthSeele_0_entity"
+				"HerrscherReasonBronya_0_entity"
+				"HerrscherThunderMei_0_entity"
+				"HerrscherVoidKiana_0_entity"
+			}
+			weight = 100
+		}
+	}
+}

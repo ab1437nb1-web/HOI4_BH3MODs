@@ -1,0 +1,123 @@
+#############################
+########### Kiana ###########
+#############################
+
+########### Kiana_WhiteComet ###########
+animation = {
+	name = "Kiana_WhiteComet_Idle1_animation"
+	file = "Kiana_WhiteComet_Idle1.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Idle2_1_animation"
+	file = "Kiana_WhiteComet_Idle2_1.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Idle2_2_animation"
+	file = "Kiana_WhiteComet_Idle2_2.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Idle3_animation"
+	file = "Kiana_WhiteComet_Idle3.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Idle4_animation"
+	file = "Kiana_WhiteComet_Idle4.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_MoveFast_animation"
+	file = "Kiana_WhiteComet_MoveFast.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Move_animation"
+	file = "Kiana_WhiteComet_Move.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Training_animation"
+	file = "Kiana_WhiteComet_Training.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_RightHandAttack1_animation"
+	file = "Kiana_WhiteComet_RightHandAttack1.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_RightHandAttack2_animation"
+	file = "Kiana_WhiteComet_RightHandAttack2.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_RightHandFire_animation"
+	file = "Kiana_WhiteComet_RightHandFire.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_LeftHandAttack1_animation"
+	file = "Kiana_WhiteComet_LeftHandAttack1.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_Kick_animation"
+	file = "Kiana_WhiteComet_Kick.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_JumpAttack_animation"
+	file = "Kiana_WhiteComet_JumpAttack.anim"
+}
+animation = {
+	name = "Kiana_WhiteComet_DoubleHandAttack_animation"
+	file = "Kiana_WhiteComet_DoubleHandAttack.anim"
+}
+
+
+########### Kiana_VoidDrifter ###########
+animation = {
+	name = "Kiana_VoidDrifter_Idle1_animation"
+	file = "Kiana_VoidDrifter_Idle1.anim"
+}
+animation = {
+	name = "Kiana_VoidDrifter_Idle2_animation"
+	file = "Kiana_VoidDrifter_Idle2.anim"
+}
+animation = {
+	name = "Kiana_VoidDrifter_Move_animation"
+	file = "Kiana_VoidDrifter_Move.anim"
+}
+animation = {
+	name = "Kiana_VoidDrifter_Attack1_animation"
+	file = "Kiana_VoidDrifter_Attack1.anim"
+}
+animation = {
+	name = "Kiana_VoidDrifter_Attack2_animation"
+	file = "Kiana_VoidDrifter_Attack2.anim"
+}
+animation = {
+	name = "Kiana_VoidDrifter_Ultra_animation"
+	file = "Kiana_VoidDrifter_Ultra.anim"
+}
+
+
+########### Kiana_KnightMoonbeam ###########
+animation = {
+	name = "Kiana_KnightMoonbeam_Idle1_animation"
+	file = "Kiana_KnightMoonbeam_Idle1.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_Idle2_animation"
+	file = "Kiana_KnightMoonbeam_Idle2.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_Idle3_animation"
+	file = "Kiana_KnightMoonbeam_Idle3.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_Move_animation"
+	file = "Kiana_KnightMoonbeam_Move.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_Attack1_animation"
+	file = "Kiana_KnightMoonbeam_Attack1.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_QTE_animation"
+	file = "Kiana_KnightMoonbeam_QTE.anim"
+}
+animation = {
+	name = "Kiana_KnightMoonbeam_SKILL_animation"
+	file = "Kiana_KnightMoonbeam_SKILL.anim"
+}

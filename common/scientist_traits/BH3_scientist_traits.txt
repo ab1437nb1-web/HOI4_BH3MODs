@@ -1,0 +1,39 @@
+BH3_scientist_trait_level3 = {
+	modifier = {
+		special_project_speed_factor = 0.4
+		scientist_breakthrough_bonus_factor = 0.6
+		scientist_xp_gain_factor = 0.5
+	}
+}
+BH3_scientist_trait_level2 = {
+	modifier = {
+		special_project_speed_factor = 0.3
+		scientist_breakthrough_bonus_factor = 0.4
+		scientist_xp_gain_factor = 0.4
+	}
+}
+BH3_scientist_trait_level1 = {
+	modifier = {
+		special_project_speed_factor = 0.2
+		scientist_breakthrough_bonus_factor = 0.3
+		scientist_xp_gain_factor = 0.3
+	}
+}
+
+BH3_scientist_trait_BH3_ValkyrieArmor_Doll = {
+	modifier = {
+		BH3_sp_tag_BH3_ValkyrieArmor_Doll_speed_factor = 0.5
+	}
+}
+
+BH3_scientist_trait_BH3_TheDivineKeys = {
+	modifier = {
+		BH3_sp_tag_BH3_TheDivineKeys_speed_factor = 0.25
+	}
+}
+
+BH3_scientist_trait_BH3_ValkyrieArmor = {
+	modifier = {
+		BH3_sp_tag_BH3_ValkyrieArmor_speed_factor = 0.5
+	}
+}

@@ -1,0 +1,24 @@
+
+BeinalesiBHS_BHS = {
+
+	available_for = {
+		BHS
+		HI1
+		HI2
+		HI3
+		HI6
+		HI7
+		HH2
+	}
+
+	role = BeinalesiBHS
+	
+	upgrade_prio = {
+		factor = 10
+
+		modifier = {
+			factor = 10
+		}
+	}
+	
+}

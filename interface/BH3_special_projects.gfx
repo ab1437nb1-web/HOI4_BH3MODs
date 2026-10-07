@@ -1,0 +1,94 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_BH3_Honkai_Research_facility"
+		texturefile = "gfx/interface/special_project/BH3_specialization_Honkai.dds"
+	}
+	spriteType = {
+		name = "GFX_mapicon_facility_BH3_Honkai_specialization"
+		texturefile = "gfx/interface/special_project/BH3_mapicon_facility_specialization_Honkai.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_technology_BH3_Honkai_specialization"
+		texturefile = "gfx/interface/special_project/BH3_technology_specialization_Honkai.dds"
+	}
+	spriteType = { #设施研发界面的贴图
+		name = "GFX_BH3_sp_facility_card_bg"
+		texturefile = "gfx/interface/special_project/BH3_sp_facility_card_bg.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_BH3_sp_Honkai_Fission_Bomb"
+		texturefile = "gfx/interface/special_project/BH3_sp_Honkai_Fission_Bomb.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_BH3_sp_hyperion_stength_fire"
+		texturefile = "gfx/interface/special_project/BH3_sp_hyperion_stength_fire.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BH3_sp_Void_Archives"
+		texturefile = "gfx/interface/special_project/BH3_sp_Void_Archives.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_ThousandKey"
+		texturefile = "gfx/interface/special_project/BH3_sp_ThousandKey.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_AbyssFlower"
+		texturefile = "gfx/interface/special_project/BH3_sp_AbyssFlower.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_FenghuangDown"
+		texturefile = "gfx/interface/special_project/BH3_sp_FenghuangDown.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_JizoMitama"
+		texturefile = "gfx/interface/special_project/BH3_sp_JizoMitama.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_JudgementofShamash"
+		texturefile = "gfx/interface/special_project/BH3_sp_JudgementofShamash.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_OathofJudah"
+		texturefile = "gfx/interface/special_project/BH3_sp_OathofJudah.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_SevenThundersofRetribution"
+		texturefile = "gfx/interface/special_project/BH3_sp_SevenThundersofRetribution.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_StarofEden"
+		texturefile = "gfx/interface/special_project/BH3_sp_StarofEden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_BH3_sp_ValkyrieArmor_Engine_HonkaiImproved"
+		texturefile = "gfx/interface/special_project/BH3_sp_ValkyrieArmor_Engine_HonkaiImproved.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_ValkyrieArmor_Armor_NextGeneration"
+		texturefile = "gfx/interface/special_project/BH3_sp_ValkyrieArmor_Armor_NextGeneration.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_sp_Doll"
+		texturefile = "gfx/interface/special_project/BH3_sp_Doll.dds"
+	}
+
+
+	### 特殊工程崩坏裂变弹
+	spriteType = {
+		name = "GFX_raid_category_small_BH3_Honkai_Fission_Bomb_Raids"
+		texturefile = "gfx/interface/military_raids/raid_unit_icon_BH3_Honkai_Fission_Bomb_Raids.dds"
+		noOfFrames = 1
+	}
+
+    spriteType = {
+		name = "GFX_raid_type_icon_BH3_Honkai_Fission_Bomb_strike"
+		texturefile = "gfx/interface/military_raids/raid_unit_icon_BH3_Honkai_Fission_Bomb_Raids.dds"
+	}
+}

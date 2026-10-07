@@ -1,0 +1,10 @@
+sub_units = {
+	ThousandKey_Air_Transport = {
+		sprite = heavy_plane
+		priority = 999
+		active = yes
+		type = air_transport
+		need = { ThousandKey_equipment = 100 }
+		land_air_wing_size = 100
+	}
+}

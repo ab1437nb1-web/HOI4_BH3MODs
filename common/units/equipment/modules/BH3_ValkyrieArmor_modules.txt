@@ -1,0 +1,2231 @@
+equipment_modules = {
+	####################################
+	############## 主武器 ##############
+	####################################
+	### 双枪 ###
+	BH3_ValkyrieArmor_MainWeapon_Pistols_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Pistols
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			breakthrough = 4
+			defense = 4
+			soft_attack = 25
+			hard_attack = 25
+			ap_attack = 20
+			air_attack = 2
+			build_cost_ic = 8
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Pistols
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Pistols_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Pistols
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Pistols_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -2
+			reliability = -0.1
+			breakthrough = 8
+			defense = 8
+			soft_attack = 30
+			hard_attack = 30
+			ap_attack = 45
+			air_attack = 4
+			build_cost_ic = 19
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Pistols
+			convert_cost_ic = 9
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Pistols_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Pistols
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Pistols_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -4
+			reliability = -0.3
+			breakthrough = 15
+			defense = 15
+			soft_attack = 35
+			hard_attack = 35
+			ap_attack = 80
+			air_attack = 8
+			build_cost_ic = 51
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Pistols
+			convert_cost_ic = 25
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Pistols_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Pistols
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Pistols_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -8
+			reliability = -0.6
+			breakthrough = 25
+			defense = 25
+			soft_attack = 40
+			hard_attack = 40
+			ap_attack = 120
+			air_attack = 12
+			build_cost_ic = 85
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Pistols
+			convert_cost_ic = 42
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	### 太刀 ###
+	BH3_ValkyrieArmor_MainWeapon_Katana_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Katana
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			breakthrough = 5
+			defense = 3
+			soft_attack = 18
+			hard_attack = 31
+			ap_attack = 25
+			air_attack = 0.9
+			build_cost_ic = 8
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Katana
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Katana_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Katana
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Katana_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -2
+			reliability = -0.1
+			breakthrough = 10
+			defense = 6
+			soft_attack = 21
+			hard_attack = 38
+			ap_attack = 56
+			air_attack = 1.5
+			build_cost_ic = 20
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Katana
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Katana_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Katana
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Katana_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -4
+			reliability = -0.3
+			breakthrough = 19
+			defense = 12
+			soft_attack = 25
+			hard_attack = 44
+			ap_attack = 100
+			air_attack = 4
+			build_cost_ic = 54
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Katana
+			convert_cost_ic = 28
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Katana_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Katana
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Katana_2
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -4
+			reliability = -0.6
+			breakthrough = 31
+			defense = 20
+			soft_attack = 28
+			hard_attack = 50
+			ap_attack = 150
+			air_attack = 6.8
+			build_cost_ic = 91
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Katana
+			convert_cost_ic = 25
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	### 重炮 ###
+	BH3_ValkyrieArmor_MainWeapon_Cannon_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cannon
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -1
+			breakthrough = 3
+			defense = 5
+			soft_attack = 39
+			hard_attack = 17
+			ap_attack = 16
+			air_attack = 3.2
+			build_cost_ic = 8
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cannon
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cannon_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cannon
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cannon_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -3
+			reliability = -0.1
+			breakthrough = 7
+			defense = 10
+			soft_attack = 47
+			hard_attack = 20
+			ap_attack = 36
+			air_attack = 6.4
+			build_cost_ic = 20
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cannon
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cannon_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cannon
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cannon_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -5
+			reliability = -0.3
+			breakthrough = 13
+			defense = 18
+			soft_attack = 54
+			hard_attack = 24
+			ap_attack = 64
+			air_attack = 12.8
+			build_cost_ic = 52
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cannon
+			convert_cost_ic = 26
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cannon_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cannon
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cannon_2
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -9
+			reliability = -0.6
+			breakthrough = 21
+			defense = 30
+			soft_attack = 62
+			hard_attack = 27
+			ap_attack = 96
+			air_attack = 19.2
+			build_cost_ic = 85
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cannon
+			convert_cost_ic = 23
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	
+	### 镰刀 ###
+	BH3_ValkyrieArmor_MainWeapon_Scythe_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Scythe
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -0.5
+			reliability = -0.05
+			breakthrough = 4
+			defense = 3
+			soft_attack = 20
+			hard_attack = 33
+			ap_attack = 23
+			air_attack = 1.1
+			build_cost_ic = 8
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Scythe
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Scythe_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Scythe
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Scythe_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -2.5
+			reliability = -0.15
+			breakthrough = 8
+			defense = 6
+			soft_attack = 24
+			hard_attack = 39
+			ap_attack = 52
+			air_attack = 2.2
+			build_cost_ic = 21
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Scythe
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+	
+	BH3_ValkyrieArmor_MainWeapon_Scythe_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Scythe
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Scythe_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -4.5
+			reliability = -0.35
+			breakthrough = 15
+			defense = 11
+			soft_attack = 28
+			hard_attack = 46
+			ap_attack = 92
+			air_attack = 4.4
+			build_cost_ic = 55
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Scythe
+			convert_cost_ic = 27
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Scythe_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Scythe
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Scythe_2
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -8.5
+			reliability = -0.65
+			breakthrough = 25
+			defense = 19
+			soft_attack = 32
+			hard_attack = 52
+			ap_attack = 138
+			air_attack = 6.6
+			build_cost_ic = 92
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Scythe
+			convert_cost_ic = 46
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	### 拳套 ###
+	BH3_ValkyrieArmor_MainWeapon_Fists_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Fists
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			breakthrough = 4
+			defense = 5
+			soft_attack = 28
+			hard_attack = 25
+			ap_attack = 21
+			air_attack = 0.6
+			build_cost_ic = 8
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Fists
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Fists_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Fists
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Fists_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -1.5
+			reliability = -0.1
+			breakthrough = 9
+			defense = 7
+			soft_attack = 33
+			hard_attack = 29
+			ap_attack = 47
+			air_attack = 1.2
+			build_cost_ic = 20
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Fists
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Fists_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Fists
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Fists_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -3.5
+			reliability = -0.3
+			breakthrough = 17
+			defense = 14
+			soft_attack = 39
+			hard_attack = 34
+			ap_attack = 84
+			air_attack = 2.4
+			build_cost_ic = 53
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Fists
+			convert_cost_ic = 26
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Fists_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Fists
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Fists_2
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -7.5
+			reliability = -0.5
+			breakthrough = 29
+			defense = 23
+			soft_attack = 44
+			hard_attack = 39
+			ap_attack = 126
+			air_attack = 3.6
+			build_cost_ic = 89
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Fists
+			convert_cost_ic = 44
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	### 十字架 ###
+	BH3_ValkyrieArmor_MainWeapon_Cross_0 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cross
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -0.5
+			breakthrough = 4
+			defense = 5
+			soft_attack = 28
+			hard_attack = 26
+			ap_attack = 17
+			air_attack = 1.5
+			build_cost_ic = 8
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cross
+			convert_cost_ic = 4
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cross_1 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cross
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cross_0
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -2.5
+			reliability = -0.1
+			breakthrough = 8
+			defense = 12
+			soft_attack = 33
+			hard_attack = 32
+			ap_attack = 39
+			air_attack = 3
+			build_cost_ic = 20
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.4
+			hard_attack = 0.4
+			ap_attack = 0.2
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cross
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cross_2 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cross
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cross_1
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -4.5
+			reliability = -0.3
+			breakthrough = 14
+			defense = 23
+			soft_attack = 39
+			hard_attack = 37
+			ap_attack = 70
+			air_attack = 6
+			build_cost_ic = 52
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 0.8
+			hard_attack = 0.8
+			ap_attack = 0.2
+			build_cost_ic = 0.6
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cross
+			convert_cost_ic = 26
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_MainWeapon_Cross_3 = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_MainWeapon_Cross
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_MainWeapon_Cross_2
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = -8.5
+			reliability = -0.6
+			breakthrough = 24
+			defense = 38
+			soft_attack = 44
+			hard_attack = 42
+			ap_attack = 104
+			air_attack = 9
+			build_cost_ic = 86
+
+		}
+		xp_cost = 5
+		multiply_stats = {
+			soft_attack = 1.5
+			hard_attack = 1.5
+			ap_attack = 0.4
+			build_cost_ic = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_MainWeapon_Cross
+			convert_cost_ic = 43
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+
+	####################################
+	############ 装甲类型 ##############
+	####################################
+	### 无甲 ###
+	BH3_ValkyrieArmor_Armor_None = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Armor
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 5
+		add_stats = {
+			hardness = -0.2
+			armor_value = -10
+		}
+		xp_cost = 1
+		multiply_stats = {
+			maximum_speed = 0.2
+			armor_value = -0.99
+			build_cost_ic = -0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Armor
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 轻甲 ###
+	BH3_ValkyrieArmor_Armor_Light = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Armor
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_Armor_None
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.1
+			armor_value = 0
+		}
+		xp_cost = 5
+		multiply_stats = {
+			defense = 0.2
+			breakthrough = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Armor
+			convert_cost_ic = 10
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 中型 ###
+	BH3_ValkyrieArmor_Armor_Middle = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Armor
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_Armor_Light
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.3
+			hardness = 0.1
+			armor_value = 0
+		}
+		xp_cost = 5
+		multiply_stats = {
+			maximum_speed = -0.2
+			defense = 0.45
+			breakthrough = 0.45
+			armor_value = 0.4
+			build_cost_ic = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Armor
+			convert_cost_ic = 25
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	### 重型 ###
+	BH3_ValkyrieArmor_Armor_Heavy = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Armor
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_Armor_Middle
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.5
+			hardness = 0.3
+			armor_value = 0
+		}
+		xp_cost = 5
+		multiply_stats = {
+			maximum_speed = -0.4
+			defense = 0.7
+			breakthrough = 0.7
+			armor_value = 0.7
+			build_cost_ic = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Armor
+			convert_cost_ic = 40
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine }
+	}
+
+	BH3_ValkyrieArmor_Armor_SuperHeavy = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Armor
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_Armor_Heavy
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.8
+			hardness = 0.4
+			armor_value = 0
+		}
+		xp_cost = 5
+		multiply_stats = {
+			maximum_speed = -0.5
+			defense = 1
+			breakthrough = 1
+			armor_value = 1
+			build_cost_ic = 0.3
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Armor
+			convert_cost_ic = 50
+		}
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_ElectricEngine BH3_ValkyrieArmor_NuclearEngine }
+	}
+
+	####################################
+	############# 驱动方式 #############
+	####################################
+	### 电池包 ###
+	BH3_ValkyrieArmor_Engine_Electric = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_ElectricEngine
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			maximum_speed = 7
+			build_cost_ic = 10
+		}
+		xp_cost = 5
+		multiply_stats = {
+
+		}
+		# can_convert_from = {
+		# 	module_category = BH3_ValkyrieArmor_Engine
+		# 	convert_cost_ic = 10
+		# }
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_TheDivineKeys }
+	}
+
+	### 核能反应炉 ###
+	BH3_ValkyrieArmor_Engine_Nuclear = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_NuclearEngine
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.3
+			maximum_speed = 14
+			build_cost_ic = 50
+		}
+		xp_cost = 5
+		multiply_stats = {
+			defense = 0.5
+			breakthrough = 0.5
+			soft_attack = 0.5
+			hard_attack = 0.5
+			air_attack = 0.7
+			armor_value = 0.25
+			ap_attack = 0.35
+			build_cost_ic = 0.1
+		}
+		# can_convert_from = {
+		# 	module_category = BH3_ValkyrieArmor_Engine
+		# 	convert_cost_ic = 25
+		# }
+		# build_cost_resources = {
+
+		# }
+		forbid_module_categories = { BH3_ValkyrieArmor_TheDivineKeys }
+	}
+
+	### 崩坏能反应炉 ###
+	BH3_ValkyrieArmor_Engine_Honkai = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_HonkaiEngine
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.5
+			maximum_speed = 18
+			build_cost_ic = 80
+		}
+		xp_cost = 5
+		multiply_stats = {
+			defense = 0.8
+			breakthrough = 0.8
+			soft_attack = 0.8
+			hard_attack = 0.8
+			air_attack = 0.9
+			armor_value = 0.35
+			ap_attack = 0.45
+			build_cost_ic = 0.25
+		}
+		# can_convert_from = {
+		# 	module_category = BH3_ValkyrieArmor_Engine_Honkai
+		# 	convert_cost_ic = 40
+		# }
+		# build_cost_resources = {
+
+		# }
+	}
+
+	
+	### 改良崩坏能反应炉 ###
+	BH3_ValkyrieArmor_Engine_HonkaiImproved = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_HonkaiEngine
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		parent = BH3_ValkyrieArmor_Engine_Honkai
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.7
+			maximum_speed = 22
+			build_cost_ic = 100
+		}
+		xp_cost = 5
+		multiply_stats = {
+			defense = 1
+			breakthrough = 1
+			soft_attack = 1
+			hard_attack = 1
+			air_attack = 1
+			armor_value = 0.4
+			ap_attack = 0.5
+			build_cost_ic = 0.35
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_HonkaiEngine
+			convert_cost_ic = 20
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+
+	####################################
+	############### 圣痕 ###############
+	####################################
+	### 综合 ###
+	BH3_ValkyrieArmor_Stigmata_Balance = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			maximum_speed = 0.1
+			defense = 0.1
+			breakthrough = 0.1
+			armor_value = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.1
+			air_attack = 0.1
+			build_cost_ic = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 速度 ###
+	BH3_ValkyrieArmor_Stigmata_Speed = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			maximum_speed = 0.8
+			build_cost_ic = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 突破 ###
+	BH3_ValkyrieArmor_Stigmata_Breakthrough = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			breakthrough = 0.8
+			build_cost_ic = 0.05
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 防御 ###
+	BH3_ValkyrieArmor_Stigmata_Defense = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			defense = 0.8
+			build_cost_ic = 0.05
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 装甲厚度 ###
+	BH3_ValkyrieArmor_Stigmata_ArmorValue = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			armor_value = 0.6
+			build_cost_ic = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 穿甲深度 ###
+	BH3_ValkyrieArmor_Stigmata_ApAttack = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			ap_attack = 0.6
+			build_cost_ic = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	## 软攻 ##
+	BH3_ValkyrieArmor_Stigmata_SoftAttack = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			soft_attack = 0.8
+			build_cost_ic = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	## 硬攻 ##
+	BH3_ValkyrieArmor_Stigmata_HardAttack = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Stigmata
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			
+		}
+		xp_cost = 2
+		multiply_stats = {
+			hard_attack = 0.8
+			build_cost_ic = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Stigmata
+			convert_cost_ic = 1
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+
+	####################################
+	############## 神之键 ##############
+	####################################
+
+	BH3_ValkyrieArmor_Keys_Empty = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 0
+		add_stats = {
+
+		}
+		xp_cost = 0
+		multiply_stats = {
+
+		}
+		can_convert_from = {
+
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 虚空万藏 ###
+	BH3_ValkyrieArmor_Keys_VoidArchives = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_Empty
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.24
+			breakthrough = 90
+			defense = 108
+			armor_value = 80
+			soft_attack = 110
+			hard_attack = 120
+			ap_attack = 70
+			air_attack = 50
+			build_cost_ic = 380
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.1
+			defense = 1.15
+			armor_value = 0.9
+			soft_attack = 1.05
+			hard_attack = 1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 190
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 千界一乘 ###
+	BH3_ValkyrieArmor_Keys_ThousandKey = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_VoidArchives
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.32
+			breakthrough = 30
+			defense = 150
+			armor_value = 120
+			soft_attack = 40
+			hard_attack = 60
+			ap_attack = 105
+			air_attack = 180
+			build_cost_ic = 300
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 0.9
+			defense = 1.25
+			armor_value = 1.1
+			soft_attack = 0.85
+			hard_attack = 0.95
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 150
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 涤罪七雷 ###
+	BH3_ValkyrieArmor_Keys_SevenThundersofRetribution = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_ThousandKey
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.4
+			breakthrough = 168
+			defense = 30
+			armor_value = 50
+			soft_attack = 175
+			hard_attack = 180
+			ap_attack = 175
+			air_attack = 80
+			build_cost_ic = 405
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.2
+			defense = 0.85
+			armor_value = 0.8
+			soft_attack = 1.3
+			hard_attack = 1.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 200
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 黑渊白花 ###
+	BH3_ValkyrieArmor_Keys_AbyssFlower = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_SevenThundersofRetribution
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.28
+			breakthrough = 120
+			defense = 120
+			armor_value = 100
+			soft_attack = 75
+			hard_attack = 72
+			ap_attack = 56
+			air_attack = 20
+			build_cost_ic = 360
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.05
+			defense = 1.1
+			armor_value = 1
+			soft_attack = 0.95
+			hard_attack = 0.9
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 180
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 天火圣裁 ###
+	BH3_ValkyrieArmor_Keys_JudgementofShamash = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_AbyssFlower
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.44
+			breakthrough = 210
+			defense = 48
+			armor_value = 80
+			soft_attack = 200
+			hard_attack = 210
+			ap_attack = 154
+			air_attack = 120
+			build_cost_ic = 520
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.3
+			defense = 0.9
+			armor_value = 0.85
+			soft_attack = 1.35
+			hard_attack = 1.25
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 260
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 羽渡尘 ###
+	BH3_ValkyrieArmor_Keys_FenghuangDown = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_JudgementofShamash
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.36
+			breakthrough = 72
+			defense = 90
+			armor_value = 30
+			soft_attack = 125
+			hard_attack = 30
+			ap_attack = 35
+			air_attack = 20
+			build_cost_ic = 380
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1
+			defense = 1.05
+			armor_value = 0.7
+			soft_attack = 1.15
+			hard_attack = 0.8
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 130
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+
+	### 伊甸之星 ###
+	BH3_ValkyrieArmor_Keys_StarofEden = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_FenghuangDown
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.34
+			breakthrough = 132
+			defense = 108
+			armor_value = 100
+			soft_attack = 140
+			hard_attack = 120
+			ap_attack = 126
+			air_attack = 60
+			build_cost_ic = 450
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.15
+			defense = 1.08
+			armor_value = 1.05
+			soft_attack = 1.2
+			hard_attack = 1.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 225
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 犹大的誓约 ###
+	BH3_ValkyrieArmor_Keys_OathofJudah = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_StarofEden
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.3
+			breakthrough = 48
+			defense = 210
+			armor_value = 150
+			soft_attack = 90
+			hard_attack = 150
+			ap_attack = 140
+			air_attack = 50
+			build_cost_ic = 480
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 0.95
+			defense = 1.35
+			armor_value = 1.2
+			soft_attack = 1
+			hard_attack = 1.15
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 240
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 地藏御魂 ###
+	BH3_ValkyrieArmor_Keys_JizoMitama = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_TheDivineKeys
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = BH3_ValkyrieArmor_Keys_OathofJudah
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = -0.38
+			breakthrough = 96
+			defense = 132
+			armor_value = 100
+			soft_attack = 150
+			hard_attack = 108
+			ap_attack = 105
+			air_attack = 40
+			build_cost_ic = 430
+		}
+		xp_cost = 5
+		multiply_stats = {
+			breakthrough = 1.08
+			defense = 1.18
+			armor_value = 1.02
+			soft_attack = 1.25
+			hard_attack = 1.05
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_TheDivineKeys
+			convert_cost_ic = 220
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+	
+
+	####################################
+	############# 武装人偶 #############
+	####################################
+
+	BH3_ValkyrieArmor_Doll_Empty = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 0
+		add_stats = {
+
+		}
+		xp_cost = 0
+		multiply_stats = {
+
+		}
+		can_convert_from = {
+
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 苍玄之书 ### 
+	BH3_ValkyrieArmor_Doll_CangXuanZhiShu = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.2
+			recon = 1
+			entrenchment = 5
+			experience_loss_factor = -0.2
+			breakthrough = 12
+			defense = 15
+			soft_attack = 20
+			hard_attack = 18
+			build_cost_ic = 31
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 16
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 克莱因 ###
+	BH3_ValkyrieArmor_Doll_KeLaiYin = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.15
+			recon = 2
+			entrenchment = 4
+			breakthrough = 8
+			defense = 12
+			soft_attack = 25
+			hard_attack = 10
+			build_cost_ic = 28
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.2
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 50
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 妖精爱莉 ###
+	BH3_ValkyrieArmor_Doll_YaoJingAiLi = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.18
+			entrenchment = 3
+			experience_loss_factor = -0.5
+			breakthrough = 15
+			defense = 30
+			soft_attack = 18
+			hard_attack = 8
+			build_cost_ic = 26
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.05
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 13
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 赤鸢之翼 ###
+	BH3_ValkyrieArmor_Doll_ChiYuanZhiYi = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.18
+			recon = 1.5
+			entrenchment = 2
+			experience_loss_factor = -0.1
+			breakthrough = 15
+			defense = 18
+			soft_attack = 22
+			hard_attack = 15
+			build_cost_ic = 30
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.15
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 15
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_Doll_FangYouDa = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.32
+			recon = 1
+			breakthrough = 20
+			defense = 22
+			soft_attack = 15
+			hard_attack = 25
+			build_cost_ic = 33
+		}
+		xp_cost = 1
+		multiply_stats = {
+			hard_attack = 0.25
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 16
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_Doll_BeiLa = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.14
+			entrenchment = 5
+			experience_loss_factor = -0.3
+			breakthrough = 18
+			defense = 16
+			soft_attack = 28
+			hard_attack = 20
+			build_cost_ic = 32
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.15
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 16
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_Doll_ZhongZhuangXiaoTu = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_Doll
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.2
+			soft_attack = 12
+			hard_attack = 30
+			build_cost_ic = 38
+		}
+		xp_cost = 1
+		multiply_stats = {
+			soft_attack = 0.1
+			hard_attack = 0.25
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_Doll
+			convert_cost_ic = 19
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	
+	####################################
+	############# 协同者 #############
+	####################################
+	# ### 熵 ###
+	# BH3_ValkyrieArmor_Sidekick_Shang = {
+	# 	# abbreviation = 
+	# 	category = BH3_ValkyrieArmor_Sidekick
+	# 	sfx = BH3_Click
+	# 	# allow_equipment_type = 
+	# 	# parent = 
+	# 	dismantle_cost_ic = 1
+	# 	add_stats = {
+	# 		reliability = 0.2
+	# 	}
+	# 	xp_cost = 1
+	# 	multiply_stats = {
+	# 		soft_attack = 0.1
+	# 		hard_attack = 0.1
+	# 	}
+	# 	can_convert_from = {
+	# 		module_category = BH3_ValkyrieArmor_Sidekick
+	# 		convert_cost_ic = 1
+	# 	}
+	# 	# build_cost_resources = {
+
+	# 	# }
+	# }
+
+	# ### 松雀 ###
+	# BH3_ValkyrieArmor_Sidekick_SongQue = {
+	# 	# abbreviation = 
+	# 	category = BH3_ValkyrieArmor_Sidekick
+	# 	sfx = BH3_Click
+	# 	# allow_equipment_type = 
+	# 	# parent = 
+	# 	dismantle_cost_ic = 1
+	# 	add_stats = {
+	# 		reliability = 0.3
+	# 	}
+	# 	xp_cost = 1
+	# 	multiply_stats = {
+	# 		soft_attack = 0.2
+	# 		hard_attack = 0.2
+	# 	}
+	# 	can_convert_from = {
+	# 		module_category = BH3_ValkyrieArmor_Sidekick
+	# 		convert_cost_ic = 1
+	# 	}
+	# 	# build_cost_resources = {
+
+	# 	# }
+	# }
+
+	# ### 瑟拉珮姆 ###
+	# BH3_ValkyrieArmor_Sidekick_Serapeum = {
+	# 	# abbreviation = 
+	# 	category = BH3_ValkyrieArmor_Sidekick
+	# 	sfx = BH3_Click
+	# 	# allow_equipment_type = 
+	# 	# parent = 
+	# 	dismantle_cost_ic = 1
+	# 	add_stats = {
+	# 		reliability = 0.2
+	# 	}
+	# 	xp_cost = 1
+	# 	multiply_stats = {
+	# 		soft_attack = 0.2
+	# 		hard_attack = 0.1
+	# 		build_cost_ic = 0.1
+	# 	}
+	# 	can_convert_from = {
+	# 		module_category = BH3_ValkyrieArmor_Sidekick
+	# 		convert_cost_ic = 1
+	# 	}
+	# 	# build_cost_resources = {
+
+	# 	# }
+	# }
+	
+	# ### 德丽莎 ###
+	# BH3_ValkyrieArmor_Sidekick_Theresa = {
+	# 	# abbreviation = 
+	# 	category = BH3_ValkyrieArmor_Sidekick
+	# 	sfx = BH3_Click
+	# 	# allow_equipment_type = 
+	# 	# parent = 
+	# 	dismantle_cost_ic = 1
+	# 	add_stats = {
+	# 		reliability = 0.2
+	# 	}
+	# 	xp_cost = 1
+	# 	multiply_stats = {
+	# 		soft_attack = 0.3
+	# 		hard_attack = 0.05
+	# 		build_cost_ic = 0.1
+	# 	}
+	# 	can_convert_from = {
+	# 		module_category = BH3_ValkyrieArmor_Sidekick
+	# 		convert_cost_ic = 1
+	# 	}
+	# 	# build_cost_resources = {
+
+	# 	# }
+	# }
+
+	# ### 晨雪 ###
+	# BH3_ValkyrieArmor_Sidekick_ChenXue = {
+	# 	# abbreviation = 
+	# 	category = BH3_ValkyrieArmor_Sidekick
+	# 	sfx = BH3_Click
+	# 	# allow_equipment_type = 
+	# 	# parent = 
+	# 	dismantle_cost_ic = 1
+	# 	add_stats = {
+	# 		reliability = 0.35
+	# 	}
+	# 	xp_cost = 1
+	# 	multiply_stats = {
+	# 		soft_attack = 0.1
+	# 		hard_attack = 0.2
+	# 		build_cost_ic = 0.1
+	# 	}
+	# 	can_convert_from = {
+	# 		module_category = BH3_ValkyrieArmor_Sidekick
+	# 		convert_cost_ic = 1
+	# 	}
+	# 	# build_cost_resources = {
+
+	# 	# }
+	# }
+
+	####################################
+	############# 特殊模块 #############
+	####################################
+	### 系统冗余 ### 
+	BH3_ValkyrieArmor_SpecialMod_SystemRedundancy= {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.7
+		}
+		xp_cost = 1
+		multiply_stats = {
+			build_cost_ic = 1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 外形美化 ### 
+	BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.05
+			breakthrough = 5
+			defense = 10
+			soft_attack = 5
+			hard_attack = 5
+			armor_value = 2
+		}
+		xp_cost = 1
+		multiply_stats = {
+			build_cost_ic = 0.02
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	BH3_ValkyrieArmor_SpecialMod_Sidekick = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.15
+			soft_attack = 50
+			hard_attack = 50
+			build_cost_ic = 35
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.1
+			breakthrough = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			build_cost_ic = 0.1
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 奇怪的腿环 ### 
+	BH3_ValkyrieArmor_SpecialMod_StrangeLegRing = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+			reliability = 0.05
+			armor_value = 5
+			soft_attack = 1
+			hard_attack = 1
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 简化生产 ### 
+	BH3_ValkyrieArmor_SpecialMod_SimplifyProduction = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+
+		}
+		xp_cost = 1
+		multiply_stats = {
+			breakthrough = -0.4
+			defense = -0.2
+			armor_value = -0.3
+			soft_attack = -0.2
+			hard_attack = -0.2
+			ap_attack = -0.2
+			air_attack = -0.2
+
+			build_cost_ic = -0.25
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+	### 精密装配 ### 
+	BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly = {
+		# abbreviation = 
+		category = BH3_ValkyrieArmor_SpecialMod
+		sfx = BH3_Click
+		# allow_equipment_type = 
+		# parent = 
+		dismantle_cost_ic = 1
+		add_stats = {
+
+		}
+		xp_cost = 1
+		multiply_stats = {
+			breakthrough = 0.25
+			defense = 0.25
+			armor_value = 0.15
+			soft_attack = 0.2
+			hard_attack = 0.2
+			ap_attack = 0.2
+			air_attack = 0.2
+
+			build_cost_ic = 0.25
+		}
+		can_convert_from = {
+			module_category = BH3_ValkyrieArmor_SpecialMod
+			convert_cost_ic = 0
+		}
+		# build_cost_resources = {
+
+		# }
+	}
+
+}

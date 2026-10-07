@@ -1,0 +1,128 @@
+add_namespace = BH3_misc
+
+#启用舰长
+country_event = { 
+	id = BH3_misc.0
+	title = BH3_misc.0.t
+	desc = BH3_misc.0.desc
+	picture = GFX_BH3_unit_leader_CaptainJZgirl
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {#启用舰长（男）
+		name = BH3_misc.0.a
+		hidden_effect = {
+			set_country_flag = leader_CaptainJZ_on
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {#启用舰长（女）
+		name = BH3_misc.0.b
+		hidden_effect = {
+			set_country_flag = leader_CaptainJZgirl_on
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {#我全都要
+		name = BH3_misc.0.c
+		hidden_effect = {
+			set_country_flag = leader_CaptainJZ_on
+			set_country_flag = leader_CaptainJZgirl_on
+		}
+		ai_chance = {
+			base = 999
+		}
+	}
+	option = {#不启用
+		name = BH3_misc.0.d
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+#注销休伯利安打击特效
+country_event = { 
+	id = BH3_misc.1
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		destroy_entity = BH3_Nuke_id
+		#destroy_entity = BH3_Laser_id
+	}
+}
+
+#注销终焉打击特效
+country_event = { 
+	id = BH3_misc.2
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		destroy_entity = BH3_FinalityOneHit_id
+	}
+}
+
+#注销犹大模型
+country_event = { 
+	id = BH3_misc.3
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		destroy_entity = BH3_OathofJudah_id
+		clr_country_flag = BH3_OathofJudah_effect_on
+	}
+}
+
+#复位将领技能动画
+country_event = { 
+	id = BH3_misc.4
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		set_country_flag = BH3_Hyperion_Leader_Skill_set
+		set_variable = { BH3_Hyperion_LeaderSkill = 999 }
+	}
+}
+
+# 完成崩坏能裂变弹
+country_event = { 
+	id = BH3_misc.5
+	title = BH3_misc.5.t
+	desc = BH3_misc.5.desc
+	picture = GFX_BH3_unit_leader_CaptainJZgirl
+	fire_only_once = no
+	is_triggered_only = yes
+	option = { #建造发射基地并将镜头拉近
+		name = BH3_misc.5.a
+		random_owned_controlled_state = {	
+			set_building_level = {
+				type = rocket_site
+				level = 1
+			}
+			ROOT = { goto_state = PREV }
+		}
+		
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = { #不建造
+		name = BH3_misc.5.b
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+#注销崩坏裂变弹打击特效
+country_event = { 
+	id = BH3_misc.6
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		destroy_entity = BH3_Honkai_Fission_Bomb_id
+	}
+}

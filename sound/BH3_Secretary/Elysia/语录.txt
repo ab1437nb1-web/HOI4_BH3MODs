@@ -1,0 +1,10 @@
+语速0.88
+初始设置为秘书
+BH3_Secretary_Elysia_Set1：你好！舰长，再次相遇，我叫爱莉希雅，如你所见，是一位如花朵般绚丽的少女
+BH3_Secretary_Elysia_Set2：哎呀呀！舰长，我们又见面啦，这次休伯利安又到达哪个世界泡啦？
+通过图标进入休伯利安
+BH3_Secretary_Elysia_OnBridge1：Captain on bridge，  哼哼，舰长，我说的怎么样
+BH3_Secretary_Elysia_OnBridge2：Captain on bridge，  欢迎来到休伯利安，舰长
+当战争开始
+BH3_Secretary_Elysia_OnWarAtk1：舰 长，你准备好了吗，让我们大干一场吧
+BH3_Secretary_Elysia_OnWarDef1：不论何时何地，爱莉希雅都会和舰长一起战斗

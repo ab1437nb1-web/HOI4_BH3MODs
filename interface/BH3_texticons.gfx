@@ -1,0 +1,538 @@
+spriteTypes = {
+
+	
+	SpriteType = {
+		name = "GFX_unit_category_AllValkyrie_icon_small"
+		texturefile = "gfx/texticons/unit_AllValkyrie_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_AllHerrscher_icon_small"
+		texturefile = "gfx/texticons/unit_AllHerrscher_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_AllValkyrieAndHerrscher_icon_small"
+		texturefile = "gfx/texticons/unit_AllHerrscher_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_ValkyrieComprehensive_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieComprehensivePistol_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_ValkyrieMeele_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieMeeleBlade_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_ValkyrieArtillery_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieArtilleryHeavy_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_category_ValkyrieArmor_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieArmorUnit_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 女武神装甲单位 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieArmorUnit_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieArmorUnit_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieArmorUnit_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieArmorUnit_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+
+	### 综合型琪亚娜 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieComprehensiveKiana_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieComprehensive_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveKiana_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieComprehensivePistol_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	### 综合型德丽莎 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieComprehensiveTheresa_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieComprehensive_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveTheresa_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieComprehensiveCross_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	### 综合型伊甸 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieComprehensiveEden_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieComprehensive_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveEden_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieComprehensivePistol_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 近战型芽衣 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieMeeleMei_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieMeele_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieMeeleMei_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieMeeleBlade_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	### 近战型希儿 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieMeeleSeele_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieMeele_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieMeeleSeele_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieMeeleScythe_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	### 近战型符华 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieMeeleFuka_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieMeele_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieMeeleFuka_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieMeeleFists_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 远程型布洛妮娅 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ValkyrieArtilleryBronya_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ValkyrieArtillery_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_ValkyrieArtilleryBronya_icon_small"
+		texturefile = "gfx/texticons/unit_ValkyrieArtilleryHeavy_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 空之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherVoidKiana_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherVoidKiana_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherVoidKiana_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherVoidKiana_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	### 薪炎之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherFlamescionKiana_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherFlamescionKiana_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherFlamescionKiana_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherFlamescionKiana_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 雷之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherThunderMei_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherThunderMei_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherThunderMei_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherThunderMei_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 理之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherReasonBronya_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherReasonBronya_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherReasonBronya_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherReasonBronya_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 死生之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherRebirthSeele_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherRebirthSeele_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherRebirthSeele_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherRebirthSeele_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	### 人之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherHumanElysia_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherHumanElysia_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherHumanElysia_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherHumanElysia_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	### 侵蚀之律者 ###
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_HerrscherErosionElysia_icon_small"
+		texturefile = "gfx/texticons/nato_unit_HerrscherErosionElysia_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_HerrscherErosionElysia_icon_small"
+		texturefile = "gfx/texticons/unit_HerrscherErosionElysia_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+
+
+	############# 崩坏 #############
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_SishiBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SishiBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_SishiBHS_icon_small"
+		texturefile = "gfx/texticons/unit_SishiBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_TujinBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_TujinBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_TujinBHS_icon_small"
+		texturefile = "gfx/texticons/unit_TujinBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_QishiBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_QishiBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_QishiBHS_icon_small"
+		texturefile = "gfx/texticons/unit_QishiBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ZhancheBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ZhancheBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_ZhancheBHS_icon_small"
+		texturefile = "gfx/texticons/unit_ZhancheBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_ShengdianBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ShengdianBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_ShengdianBHS_icon_small"
+		texturefile = "gfx/texticons/unit_ShengdianBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_JianisaBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_DiwangBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_JianisaBHS_icon_small"
+		texturefile = "gfx/texticons/unit_DiwangBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_BeinalesiBHS_icon_small"
+		texturefile = "gfx/texticons/nato_unit_ShengPanBHS_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_BeinalesiBHS_icon_small"
+		texturefile = "gfx/texticons/unit_ShengPanBHS_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	#崩坏空军
+	spriteType = {
+		name = "unit_TujinBHS_air_icon_small"
+		texturefile = "gfx/texticons/unit_TujinBHS_air_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "unit_BeinalesiBHS_air_icon_small"
+		texturefile = "gfx/texticons/unit_BeinalesiBHS_air_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	
+	############# 天命 #############
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_SchicksalValkyrieMeele_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SchicksalValkyrieMeele_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_SchicksalValkyrieMeele_icon_small"
+		texturefile = "gfx/texticons/unit_SchicksalValkyrieMeele_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_SchicksalValkyrieArtillery_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SchicksalValkyrieArtillery_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	
+	###normal
+	spriteType = {
+		name = "GFX_unit_SchicksalValkyrieArtillery_icon_small"
+		texturefile = "gfx/texticons/unit_SchicksalValkyrieArtillery_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+
+	
+	#神之键支援连
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_Void_Archives_icon_small"
+		texturefile = "gfx/texticons/nato_unit_Void_Archives_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_Void_Archives_icon_small"
+		texturefile = "gfx/texticons/unit_Void_Archives_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_SevenThundersofRetribution_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SevenThundersofRetribution_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_SevenThundersofRetribution_icon_small"
+		texturefile = "gfx/texticons/unit_SevenThundersofRetribution_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_AbyssFlower_icon_small"
+		texturefile = "gfx/texticons/nato_unit_AbyssFlower_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_AbyssFlower_icon_small"
+		texturefile = "gfx/texticons/unit_AbyssFlower_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_FenghuangDown_icon_small"
+		texturefile = "gfx/texticons/nato_unit_FenghuangDown_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_FenghuangDown_icon_small"
+		texturefile = "gfx/texticons/unit_FenghuangDown_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_JudgementofShamash_icon_small"
+		texturefile = "gfx/texticons/nato_unit_JudgementofShamash_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_JudgementofShamash_icon_small"
+		texturefile = "gfx/texticons/unit_JudgementofShamash_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_OathofJudah_icon_small"
+		texturefile = "gfx/texticons/nato_unit_OathofJudah_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_OathofJudah_icon_small"
+		texturefile = "gfx/texticons/unit_OathofJudah_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_StarofEden_icon_small"
+		texturefile = "gfx/texticons/nato_unit_StarofEden_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_StarofEden_icon_small"
+		texturefile = "gfx/texticons/unit_StarofEden_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+	###nato
+	spriteType = {
+		name = "GFX_nato_unit_JizoMitama_icon_small"
+		texturefile = "gfx/texticons/nato_unit_JizoMitama_icon_small.dds"
+		legacy_lazy_load = no
+	}
+	###normal
+	spriteType = {
+		name = "GFX_unit_JizoMitama_icon_small"
+		texturefile = "gfx/texticons/unit_JizoMitama_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+}

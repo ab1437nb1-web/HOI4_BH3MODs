@@ -1,0 +1,198 @@
+#决议的图片
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_decision_cat_HonkaiImpact3"
+		texturefile = "gfx/interface/decisions/decision_category_HonkaiImpact3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_cat_BHS_Invasion"
+		texturefile = "gfx/interface/decisions/decision_category_BHS_Invasion_pic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_cat_TheDivineKeys"
+		texturefile = "gfx/interface/decisions/decision_category_TheDivineKeys_pic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_cat_HonkaiImpact3_pic"
+		texturefile = "gfx/interface/decisions/decision_category_HonkaiImpact3_pic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_decision_Ai_Hyperion"
+		texturefile = "gfx/interface/decisions/decision_Ai_Hyperion.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_SetCountryLeaderBoy"
+		texturefile = "gfx/interface/decisions/decision_SetCountryLeaderBoy.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_SetCountryLeaderGirl"
+		texturefile = "gfx/interface/decisions/decision_SetCountryLeaderGirl.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_Kiana_WhiteComet"
+		texturefile = "gfx/interface/decisions/decision_Kiana_WhiteComet.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_Hyperion_Recharge"
+		texturefile = "gfx/interface/decisions/decision_Hyperion_Recharge.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_HonkaiImpactEffect"
+		texturefile = "gfx/interface/decisions/decision_HonkaiImpactEffect.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_SaintFreyaCollege"
+		texturefile = "gfx/interface/decisions/BH3_SaintFreyaCollege.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_More_Honkai_Content"
+		texturefile = "gfx/interface/decisions/BH3_More_Honkai_Content.dds"
+	} 
+
+	
+
+	#神之键
+	SpriteType = {
+		name = "GFX_decision_Void_Archives"
+		texturefile = "gfx/interface/decisions/decision_Void_Archives.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_SevenThundersofRetribution"
+		texturefile = "gfx/interface/decisions/decision_SevenThundersofRetribution.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_AbyssFlower"
+		texturefile = "gfx/interface/decisions/decision_AbyssFlower.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_FenghuangDown"
+		texturefile = "gfx/interface/decisions/decision_FenghuangDown.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_JudgementofShamash"
+		texturefile = "gfx/interface/decisions/decision_JudgementofShamash.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_OathofJudah"
+		texturefile = "gfx/interface/decisions/decision_OathofJudah.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_StarofEden"
+		texturefile = "gfx/interface/decisions/decision_StarofEden.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_StarofEden_Buff"
+		texturefile = "gfx/interface/decisions/decision_StarofEden_Buff.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_StarofEden_Debuff"
+		texturefile = "gfx/interface/decisions/decision_StarofEden_Debuff.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_JizoMitama"
+		texturefile = "gfx/interface/decisions/decision_JizoMitama.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_ThousandKey"
+		texturefile = "gfx/interface/decisions/decision_ThousandKey.dds"
+	}
+
+	#养成相关
+	SpriteType = {
+		name = "GFX_decision_cultivate_KianaKaslana"
+		texturefile = "gfx/interface/decisions/decision_cultivate_KianaKaslana.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_RaidenMei"
+		texturefile = "gfx/interface/decisions/decision_cultivate_RaidenMei.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_BronyaZaych"
+		texturefile = "gfx/interface/decisions/decision_cultivate_BronyaZaych.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_SeeleVollerei"
+		texturefile = "gfx/interface/decisions/decision_cultivate_SeeleVollerei.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_TheresaApocalypse"
+		texturefile = "gfx/interface/decisions/decision_cultivate_TheresaApocalypse.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_TheresaStarlitAstrologos"
+		texturefile = "gfx/interface/decisions/decision_cultivate_TheresaStarlitAstrologos.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_TheresaLunar"
+		texturefile = "gfx/interface/decisions/decision_cultivate_TheresaLunar.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_Fuka"
+		texturefile = "gfx/interface/decisions/decision_cultivate_Fuka.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_BiankaDurandalAtaegina"
+		texturefile = "gfx/interface/decisions/decision_cultivate_BiankaDurandalAtaegina.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_RitaRossweisse"
+		texturefile = "gfx/interface/decisions/decision_cultivate_RitaRossweisse.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_cultivate_Eden"
+		texturefile = "gfx/interface/decisions/decision_cultivate_Eden.dds"
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_Expand_ValkyrieSoldier_School"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_Expand_ValkyrieSoldier_School.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldierB_GoBattle"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldierB_GoBattle.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldier_B_Train"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldier_B_Train.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldier_A_Train"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldier_A_Train.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldier_S_Train"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldier_S_Train.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldier_SS_Train"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldier_SS_Train.dds"
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_decision_BH3_cultivate_ValkyrieSoldier_SSS_Train"
+		texturefile = "gfx/interface/decisions/BH3_cultivate_ValkyrieSoldier_SSS_Train.dds"
+		legacy_lazy_load = no
+	}
+
+}

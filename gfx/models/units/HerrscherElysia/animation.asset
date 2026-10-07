@@ -1,0 +1,34 @@
+
+########### Elysia_HerrscherofHuman ###########
+animation = {
+	name = "Elysia_HerrscherofHuman_Idle1_animation"
+	file = "Elysia_HerrscherofHuman_Idle1.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Idle2_animation"
+	file = "Elysia_HerrscherofHuman_Idle2.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Idle3_animation"
+	file = "Elysia_HerrscherofHuman_Idle3.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Move_animation"
+	file = "Elysia_HerrscherofHuman_Move.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Move2_animation"
+	file = "Elysia_HerrscherofHuman_Move2.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Attack1_animation"
+	file = "Elysia_HerrscherofHuman_Attack1.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Attack2_animation"
+	file = "Elysia_HerrscherofHuman_Attack2.anim"
+}
+animation = {
+	name = "Elysia_HerrscherofHuman_Attack3_animation"
+	file = "Elysia_HerrscherofHuman_Attack3.anim"
+}

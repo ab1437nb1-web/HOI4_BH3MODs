@@ -1,0 +1,137 @@
+objectTypes = {
+
+	######## 死士 ########
+	pdxmesh = {
+		name = "SishiBHS_pdx"
+		file = "gfx/models/units/BHS/SishiBHS.mesh"
+		animation = { id = "Idle"	type = "SishiBHS_Idle_animation"}
+		animation = { id = "Move"	type = "SishiBHS_Move_animation"}
+		animation = { id = "Attack"	type = "SishiBHS_Attack_animation"}
+	}
+
+	######## TujiBHS ########
+	#突进级
+	pdxmesh = {
+		name = "Tujin1BHS_pdx"
+		file = "gfx/models/units/BHS/Tujin1BHS.mesh"
+		animation = { id = "Idle"	type = "TujinBHS_Idle_animation"}
+		animation = { id = "Move"	type = "TujinBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "TujinBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "TujinBHS_Attack2_animation"}
+	}
+	#超突进级
+	pdxmesh = {
+		name = "Tujin2BHS_pdx"
+		file = "gfx/models/units/BHS/Tujin2BHS.mesh"
+		animation = { id = "Idle"	type = "TujinBHS_Idle_animation"}
+		animation = { id = "Move"	type = "TujinBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "TujinBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "TujinBHS_Attack2_animation"}
+		#涉及多个meshsetting不起作用
+		# meshsettings = {
+		# 	name = "body"
+		# 	index = 0
+		# 	texture_diffuse = "Tujin2BHS_Body_Color.dds"
+		# 	texture_normal = "BHS_Normal.dds"
+		# 	texture_specular = "BHS_Spec.dds"
+		# 	shader = "PdxMeshAdvanced"
+		# }
+	}
+
+	######## QishiBHS ########
+	#骑士级
+	pdxmesh = {
+		name = "Qishi1BHS_pdx"
+		file = "gfx/models/units/BHS/Qishi1BHS.mesh"
+		animation = { id = "Idle"	type = "QishiBHS_Idle_animation"}
+		animation = { id = "Move"	type = "QishiBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "QishiBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "QishiBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "QishiBHS_Attack3_animation"}
+	}
+	#圣骑士级
+	pdxmesh = {
+		name = "Qishi2BHS_pdx"
+		file = "gfx/models/units/BHS/Qishi2BHS.mesh"
+		animation = { id = "Idle"	type = "QishiBHS_Idle_animation"}
+		animation = { id = "Move"	type = "QishiBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "QishiBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "QishiBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "QishiBHS_Attack3_animation"}
+	}
+
+	######## ZhancheBHS ########
+	#战车级
+	pdxmesh = {
+		name = "Zhanche1BHS_pdx"
+		file = "gfx/models/units/BHS/Zhanche1BHS.mesh"
+		animation = { id = "Idle"	type = "ZhancheBHS_Idle_animation"}
+		animation = { id = "Move"	type = "ZhancheBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "ZhancheBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "ZhancheBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "ZhancheBHS_Attack3_animation"}
+	}
+	#合金战车级
+	pdxmesh = {
+		name = "Zhanche2BHS_pdx"
+		file = "gfx/models/units/BHS/Zhanche2BHS.mesh"
+		animation = { id = "Idle"	type = "ZhancheBHS_Idle_animation"}
+		animation = { id = "Move"	type = "ZhancheBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "ZhancheBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "ZhancheBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "ZhancheBHS_Attack3_animation"}
+	}
+
+	######## ShengdianBHS ########
+	#圣殿级
+	pdxmesh = {
+		name = "Shengdian1BHS_pdx"
+		file = "gfx/models/units/BHS/Shengdian1BHS.mesh"
+		animation = { id = "Idle"	type = "ShengdianBHS_Idle_animation"}
+		animation = { id = "Move"	type = "ShengdianBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "ShengdianBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "ShengdianBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "ShengdianBHS_Attack3_animation"}
+	}
+	#雷神级
+	pdxmesh = {
+		name = "Shengdian2BHS_pdx"
+		file = "gfx/models/units/BHS/Shengdian2BHS.mesh"
+		animation = { id = "Idle"	type = "ShengdianBHS_Idle_animation"}
+		animation = { id = "Move"	type = "ShengdianBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "ShengdianBHS_Attack1_animation"}
+		animation = { id = "Attack2"	type = "ShengdianBHS_Attack2_animation"}
+		animation = { id = "Attack3"	type = "ShengdianBHS_Attack3_animation"}
+	}
+
+	######## JianisaBHS ########
+	pdxmesh = {
+		name = "JianisaBHS_pdx"
+		file = "gfx/models/units/BHS/JianisaBHS.mesh"
+		animation = { id = "Idle"	type = "JianisaBHS_Idle_animation"}
+		animation = { id = "Move"	type = "JianisaBHS_Move_animation"}
+		animation = { id = "Attack1"	type = "JianisaBHS_Attack1_animation"}
+		animation = { id = "Roll1"	type = "JianisaBHS_Roll1_animation"}
+		animation = { id = "Burst1"	type = "JianisaBHS_Burst1_animation"}
+		animation = { id = "Burst2"	type = "JianisaBHS_Burst2_animation"}
+	}
+
+	######## BeinalesiBHS ########
+	pdxmesh = {
+		name = "BeinalesiBHS_pdx"
+		file = "gfx/models/units/BHS/BeinalesiBHS.mesh"
+		animation = { id = "Idle"	type = "BeinalesiBHS_Idle_animation"}
+		animation = { id = "Move"	type = "BeinalesiBHS_Move_animation"}
+		animation = { id = "Breath"	type = "BeinalesiBHS_Breath_animation"}
+		animation = { id = "Pounce"	type = "BeinalesiBHS_Pounce_animation"}
+		animation = { id = "Roar"	type = "BeinalesiBHS_Roar_animation"}
+		animation = { id = "Tornado"	type = "BeinalesiBHS_Tornado_animation"}
+		animation = { id = "WingClaw"	type = "BeinalesiBHS_WingClaw_animation"}
+	}
+	######## 示现此世之兽 ########
+	pdxmesh = {
+		name = "MonsterBossBHS_pdx"
+		file = "gfx/models/units/BHS/MonsterBossBHS.mesh"
+		animation = { id = "Idle"	type = "MonsterBossBHS_Idle_animation"}
+	}
+}

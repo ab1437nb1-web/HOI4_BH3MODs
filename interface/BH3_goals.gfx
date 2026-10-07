@@ -1,0 +1,9 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_goal_BH3_disaster"
+		texturefile = "gfx/interface/goals/BHS_Benghuai_idea.dds"
+	}
+
+
+}

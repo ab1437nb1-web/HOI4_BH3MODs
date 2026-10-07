@@ -1,0 +1,496 @@
+ideas = {
+	country = {
+
+		####################################################################
+		########## 往事乐土·刻印：救世（凯文）——突破爆发 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Savior_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Savior
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Savior_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Savior
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Savior_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Savior
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Savior_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Savior
+			modifier = {
+				army_attack_factor = 0.02
+			}
+		}
+		BH3_ER_Savior_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Savior
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：刹那（樱）——机动突进 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Setsuna_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Setsuna
+			modifier = {
+				army_speed_factor = 0.01
+			}
+		}
+		BH3_ER_Setsuna_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Setsuna
+			modifier = {
+				army_speed_factor = 0.01
+			}
+		}
+		BH3_ER_Setsuna_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Setsuna
+			modifier = {
+				army_speed_factor = 0.01
+			}
+		}
+		BH3_ER_Setsuna_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Setsuna
+			modifier = {
+				army_speed_factor = 0.02
+			}
+		}
+		BH3_ER_Setsuna_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Setsuna
+			modifier = {
+				army_speed_factor = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：天慧（苏）——情报预判 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Bodhi_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Bodhi
+			modifier = {
+				recon_factor = 0.01
+			}
+		}
+		BH3_ER_Bodhi_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Bodhi
+			modifier = {
+				recon_factor = 0.01
+			}
+		}
+		BH3_ER_Bodhi_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Bodhi
+			modifier = {
+				recon_factor = 0.01
+			}
+		}
+		BH3_ER_Bodhi_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Bodhi
+			modifier = {
+				recon_factor = 0.02
+			}
+		}
+		BH3_ER_Bodhi_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Bodhi
+			modifier = {
+				recon_factor = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：黄金（伊甸）——稳定度 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Gold_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Gold
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
+		BH3_ER_Gold_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Gold
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
+		BH3_ER_Gold_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Gold
+			modifier = {
+				stability_weekly = 0.001
+			}
+		}
+		BH3_ER_Gold_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Gold
+			modifier = {
+				stability_weekly = 0.002
+			}
+		}
+		BH3_ER_Gold_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Gold
+			modifier = {
+				stability_weekly = 0.003
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：鏖灭（千劫）——背水一战 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Kalpas_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kalpas
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Kalpas_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kalpas
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Kalpas_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kalpas
+			modifier = {
+				army_attack_factor = 0.01
+			}
+		}
+		BH3_ER_Kalpas_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kalpas
+			modifier = {
+				army_attack_factor = 0.02
+			}
+		}
+		BH3_ER_Kalpas_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kalpas
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：浮生（华）——稳健续航 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Fusheng_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Fusheng
+			modifier = {
+				army_defence_factor = 0.01
+			}
+		}
+		BH3_ER_Fusheng_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Fusheng
+			modifier = {
+				army_defence_factor = 0.01
+			}
+		}
+		BH3_ER_Fusheng_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Fusheng
+			modifier = {
+				army_defence_factor = 0.01
+			}
+		}
+		BH3_ER_Fusheng_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Fusheng
+			modifier = {
+				army_defence_factor = 0.02
+			}
+		}
+		BH3_ER_Fusheng_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Fusheng
+			modifier = {
+				army_defence_factor = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：戒律（阿波尼亚）——战支 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Aponia_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Aponia
+			modifier = {
+				war_support_weekly = 0.001
+			}
+		}
+		BH3_ER_Aponia_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Aponia
+			modifier = {
+				war_support_weekly = 0.001
+			}
+		}
+		BH3_ER_Aponia_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Aponia
+			modifier = {
+				war_support_weekly = 0.001
+			}
+		}
+		BH3_ER_Aponia_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Aponia
+			modifier = {
+				war_support_weekly = 0.002
+			}
+		}
+		BH3_ER_Aponia_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Aponia
+			modifier = {
+				war_support_weekly = 0.003
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：螺旋（维尔薇）——科研 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Spiral_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Spiral
+			modifier = {
+				research_speed_factor = 0.005
+			}
+		}
+		BH3_ER_Spiral_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Spiral
+			modifier = {
+				research_speed_factor = 0.005
+			}
+		}
+		BH3_ER_Spiral_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Spiral
+			modifier = {
+				research_speed_factor = 0.005
+			}
+		}
+		BH3_ER_Spiral_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Spiral
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+		BH3_ER_Spiral_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Spiral
+			modifier = {
+				research_speed_factor = 0.015
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：无限（梅比乌斯）——增殖 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Mobius_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Mobius
+			modifier = {
+				industrial_capacity_factory = 0.005
+			}
+		}
+		BH3_ER_Mobius_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Mobius
+			modifier = {
+				industrial_capacity_factory = 0.005
+			}
+		}
+		BH3_ER_Mobius_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Mobius
+			modifier = {
+				industrial_capacity_factory = 0.005
+			}
+		}
+		BH3_ER_Mobius_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Mobius
+			modifier = {
+				industrial_capacity_factory = 0.01
+			}
+		}
+		BH3_ER_Mobius_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Mobius
+			modifier = {
+				industrial_capacity_factory = 0.015
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：旭光（科斯魔）——夜战 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Kosma_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kosma
+			modifier = {
+				land_night_attack = 0.01
+			}
+		}
+		BH3_ER_Kosma_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kosma
+			modifier = {
+				land_night_attack = 0.01
+			}
+		}
+		BH3_ER_Kosma_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kosma
+			modifier = {
+				land_night_attack = 0.01
+			}
+		}
+		BH3_ER_Kosma_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kosma
+			modifier = {
+				land_night_attack = 0.02
+			}
+		}
+		BH3_ER_Kosma_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Kosma
+			modifier = {
+				land_night_attack = 0.03
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：繁星（格蕾修）——协同 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Griseo_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Griseo
+			modifier = {
+				air_cas_present_factor = 0.005
+			}
+		}
+		BH3_ER_Griseo_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Griseo
+			modifier = {
+				air_cas_present_factor = 0.005
+			}
+		}
+		BH3_ER_Griseo_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Griseo
+			modifier = {
+				air_cas_present_factor = 0.005
+			}
+		}
+		BH3_ER_Griseo_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Griseo
+			modifier = {
+				air_cas_present_factor = 0.01
+			}
+		}
+		BH3_ER_Griseo_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Griseo
+			modifier = {
+				air_cas_present_factor = 0.015
+			}
+		}
+
+		####################################################################
+		########## 往事乐土·刻印：空梦（帕朵菲莉丝）——交易 ##########
+		# 载体：精神=持有记录与界面展示（同一英杰 5 枚共用同一刻印图标，便于归组）；
+		# 真正的加成在 common/dynamic_modifiers 里，按各自状态生效。
+		####################################################################
+		BH3_ER_Pardofelis_1 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Pardofelis
+			modifier = {
+				consumer_goods_factor = -0.005
+			}
+		}
+		BH3_ER_Pardofelis_2 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Pardofelis
+			modifier = {
+				consumer_goods_factor = -0.005
+			}
+		}
+		BH3_ER_Pardofelis_3 = {
+			allowed = { always = yes }
+			picture = BH3_ER_Pardofelis
+			modifier = {
+				consumer_goods_factor = -0.005
+			}
+		}
+		BH3_ER_Pardofelis_Core = {
+			allowed = { always = yes }
+			picture = BH3_ER_Pardofelis
+			modifier = {
+				consumer_goods_factor = -0.01
+			}
+		}
+		BH3_ER_Pardofelis_Amp = {
+			allowed = { always = yes }
+			picture = BH3_ER_Pardofelis
+			modifier = {
+				consumer_goods_factor = -0.015
+			}
+		}
+	}
+}

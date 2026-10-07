@@ -1,0 +1,31 @@
+########### DG070 ###########
+animation = {
+	name = "DG070_Idle_animation"
+	file = "DG070_Idle.anim"
+}
+animation = {
+	name = "DG070_Move_animation"
+	file = "DG070_Move.anim"
+}
+animation = {
+	name = "DG070_Attack1_animation"
+	file = "DG070_Attack1.anim"
+}
+animation = {
+	name = "DG070_Attack2_animation"
+	file = "DG070_Attack2.anim"
+}
+
+########### DG080 ###########
+animation = {
+	name = "DG080_Idle_animation"
+	file = "DG080_Idle.anim"
+}
+animation = {
+	name = "DG080_Move_animation"
+	file = "DG080_Move.anim"
+}
+animation = {
+	name = "DG080_Attack1_animation"
+	file = "DG080_Attack1.anim"
+}

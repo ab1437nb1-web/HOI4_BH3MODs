@@ -1,0 +1,1182 @@
+########################################
+############# 科技选择语音 #############
+########################################
+soundeffect = { name = CaptainOnTheBridge  sounds = { sound = CaptainOnTheBridge } }
+
+soundeffect = { name = Kiana_tech_sel_voice1  sounds = { sound = Kiana_tech_sel_voice1 } }
+soundeffect = { name = Kiana_tech_sel_voice2  sounds = { sound = Kiana_tech_sel_voice2 } }
+soundeffect = { name = Kiana_tech_sel_voice3  sounds = { sound = Kiana_tech_sel_voice3 } }
+soundeffect = { name = Kiana_tech_sel_voice4  sounds = { sound = Kiana_tech_sel_voice4 } }
+soundeffect = { name = Kiana_tech_sel_voice5  sounds = { sound = Kiana_tech_sel_voice5 } }
+soundeffect = { name = Kiana_tech_sel_voice6  sounds = { sound = Kiana_tech_sel_voice6 } }
+soundeffect = { name = Kiana_tech_sel_voice7  sounds = { sound = Kiana_tech_sel_voice7 } }
+soundeffect = { name = Kiana_tech_sel_voice8  sounds = { sound = Kiana_tech_sel_voice8 } }
+soundeffect = { name = Kiana_tech_sel_voice9  sounds = { sound = Kiana_tech_sel_voice9 } }
+
+soundeffect = { name = Mei_tech_sel_voice1  sounds = { sound = Mei_tech_sel_voice1 } }
+soundeffect = { name = Mei_tech_sel_voice2  sounds = { sound = Mei_tech_sel_voice2 } }
+soundeffect = { name = Mei_tech_sel_voice3  sounds = { sound = Mei_tech_sel_voice3 } }
+soundeffect = { name = Mei_tech_sel_voice4  sounds = { sound = Mei_tech_sel_voice4 } }
+soundeffect = { name = Mei_tech_sel_voice5  sounds = { sound = Mei_tech_sel_voice5 } }
+soundeffect = { name = Mei_tech_sel_voice6  sounds = { sound = Mei_tech_sel_voice6 } }
+soundeffect = { name = Mei_tech_sel_voice7  sounds = { sound = Mei_tech_sel_voice7 } }
+soundeffect = { name = Mei_tech_sel_voice8  sounds = { sound = Mei_tech_sel_voice8 } }
+soundeffect = { name = Mei_tech_sel_voice9  sounds = { sound = Mei_tech_sel_voice9 } }
+soundeffect = { name = Mei_tech_sel_voice11  sounds = { sound = Mei_tech_sel_voice11 } }
+soundeffect = { name = Mei_tech_sel_voice12  sounds = { sound = Mei_tech_sel_voice12 } }
+soundeffect = { name = Mei_tech_sel_voice13  sounds = { sound = Mei_tech_sel_voice13 } }
+soundeffect = { name = Mei_tech_sel_voice14  sounds = { sound = Mei_tech_sel_voice14 } }
+soundeffect = { name = MeiCaptain_tech_sel_voice1  sounds = { sound = MeiCaptain_tech_sel_voice1 } }
+soundeffect = { name = MeiCaptain_tech_sel_voice2  sounds = { sound = MeiCaptain_tech_sel_voice2 } }
+soundeffect = { name = MeiCaptain_tech_sel_voice3  sounds = { sound = MeiCaptain_tech_sel_voice3 } }
+soundeffect = { name = MeiCaptain_tech_sel_voice4  sounds = { sound = MeiCaptain_tech_sel_voice4 } }
+
+
+soundeffect = { name = Bronya_tech_sel_voice1  sounds = { sound = Bronya_tech_sel_voice1 } }
+soundeffect = { name = Bronya_tech_sel_voice2  sounds = { sound = Bronya_tech_sel_voice2 } }
+soundeffect = { name = Bronya_tech_sel_voice3  sounds = { sound = Bronya_tech_sel_voice3 } }
+soundeffect = { name = Bronya_tech_sel_voice4  sounds = { sound = Bronya_tech_sel_voice4 } }
+soundeffect = { name = Bronya_tech_sel_voice5  sounds = { sound = Bronya_tech_sel_voice5 } }
+soundeffect = { name = Bronya_tech_sel_voice6  sounds = { sound = Bronya_tech_sel_voice6 } }
+soundeffect = { name = Bronya_tech_sel_voice7  sounds = { sound = Bronya_tech_sel_voice7 } }
+soundeffect = { name = Bronya_tech_sel_voice8  sounds = { sound = Bronya_tech_sel_voice8 } }
+soundeffect = { name = Bronya_tech_sel_voice9  sounds = { sound = Bronya_tech_sel_voice9 } }
+
+soundeffect = { name = Bronya_SilverWingNEX_sel_voice  sounds = { sound = Bronya_SilverWingNEX_sel_voice }}
+
+soundeffect = { name = Seele_tech_sel_voice1  sounds = { sound = Seele_tech_sel_voice1 } }
+soundeffect = { name = Seele_tech_sel_voice2  sounds = { sound = Seele_tech_sel_voice2 } }
+soundeffect = { name = Seele_tech_sel_voice3  sounds = { sound = Seele_tech_sel_voice3 } }
+soundeffect = { name = Seele_tech_sel_voice4  sounds = { sound = Seele_tech_sel_voice4 } }
+soundeffect = { name = Seele_tech_sel_voice5  sounds = { sound = Seele_tech_sel_voice5 } }
+soundeffect = { name = Seele_tech_sel_voice6  sounds = { sound = Seele_tech_sel_voice6 } }
+soundeffect = { name = Seele_tech_sel_voice7  sounds = { sound = Seele_tech_sel_voice7 } }
+
+soundeffect = { name = SeeleB_tech_sel_voice1  sounds = { sound = SeeleB_tech_sel_voice1 } }
+soundeffect = { name = SeeleB_tech_sel_voice2  sounds = { sound = SeeleB_tech_sel_voice2 } }
+soundeffect = { name = SeeleB_tech_sel_voice3  sounds = { sound = SeeleB_tech_sel_voice3 } }
+
+soundeffect = { name = Theresa_StarlitAstrologos_tech_sel_voice1  sounds = { sound = Theresa_StarlitAstrologos_tech_sel_voice1 } }
+soundeffect = { name = Theresa_StarlitAstrologos_tech_sel_voice2  sounds = { sound = Theresa_StarlitAstrologos_tech_sel_voice2 } }
+soundeffect = { name = Theresa_StarlitAstrologos_tech_sel_voice3  sounds = { sound = Theresa_StarlitAstrologos_tech_sel_voice3 } }
+soundeffect = { name = Theresa_LunarVowCrimsonLove_tech_sel_voice1  sounds = { sound = Theresa_LunarVowCrimsonLove_tech_sel_voice1 } }
+soundeffect = { name = Theresa_LunarVowCrimsonLove_tech_sel_voice2  sounds = { sound = Theresa_LunarVowCrimsonLove_tech_sel_voice2 } }
+soundeffect = { name = Theresa_LunarVowCrimsonLove_tech_sel_voice3  sounds = { sound = Theresa_LunarVowCrimsonLove_tech_sel_voice3 } }
+soundeffect = { name = Theresa_LunarVowCrimsonLove_tech_sel_voice4  sounds = { sound = Theresa_LunarVowCrimsonLove_tech_sel_voice4 } }
+soundeffect = { name = Theresa_Mars_tech_sel_voice1  sounds = { sound = Theresa_Mars_tech_sel_voice1 } }
+soundeffect = { name = Theresa_Mars_tech_sel_voice2  sounds = { sound = Theresa_Mars_tech_sel_voice2 } }
+soundeffect = { name = Theresa_Mars_tech_sel_voice3  sounds = { sound = Theresa_Mars_tech_sel_voice3 } }
+
+soundeffect = { name = Fuka_tech_sel_voice1  sounds = { sound = Fuka_tech_sel_voice1 } }
+soundeffect = { name = Fuka_tech_sel_voice2  sounds = { sound = Fuka_tech_sel_voice2 } }
+soundeffect = { name = Fuka_tech_sel_voice3  sounds = { sound = Fuka_tech_sel_voice3 } }
+soundeffect = { name = Fuka_tech_sel_voice4  sounds = { sound = Fuka_tech_sel_voice4 } }
+soundeffect = { name = Fuka_tech_sel_voice5  sounds = { sound = Fuka_tech_sel_voice5 } }
+
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice1  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice1 } }
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice2  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice2 } }
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice3  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice3 } }
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice4  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice4 } }
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice5  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice5 } }
+soundeffect = { name = Fuka_AzureEmpyrea_tech_sel_voice6  sounds = { sound = Fuka_AzureEmpyrea_tech_sel_voice6 } }
+
+soundeffect = { name = Eden_GoldenDiva_tech_sel_voice1  sounds = { sound = Eden_GoldenDiva_tech_sel_voice1 } }
+soundeffect = { name = Eden_GoldenDiva_tech_sel_voice2  sounds = { sound = Eden_GoldenDiva_tech_sel_voice2 } }
+soundeffect = { name = Eden_GoldenDiva_tech_sel_voice3  sounds = { sound = Eden_GoldenDiva_tech_sel_voice3 } }
+soundeffect = { name = Eden_GoldenDiva_tech_sel_voice4  sounds = { sound = Eden_GoldenDiva_tech_sel_voice4 } }
+
+soundeffect = { name = HerrscherofVoid_tech_sel_voice1  sounds = { sound = HerrscherofVoid_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofVoid_tech_sel_voice2  sounds = { sound = HerrscherofVoid_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofVoid_tech_sel_voice3  sounds = { sound = HerrscherofVoid_tech_sel_voice3 } }
+soundeffect = { name = HerrscherofVoid_tech_sel_voice4  sounds = { sound = HerrscherofVoid_tech_sel_voice4 } }
+
+soundeffect = { name = HerrscherofFlamescion_tech_sel_voice1  sounds = { sound = HerrscherofFlamescion_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofFlamescion_tech_sel_voice2  sounds = { sound = HerrscherofFlamescion_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofFlamescion_tech_sel_voice3  sounds = { sound = HerrscherofFlamescion_tech_sel_voice3 } }
+soundeffect = { name = HerrscherofFlamescion_tech_sel_voice4  sounds = { sound = HerrscherofFlamescion_tech_sel_voice4 } }
+
+soundeffect = { name = HerrscherofThunder_tech_sel_voice1  sounds = { sound = HerrscherofThunder_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofThunder_tech_sel_voice2  sounds = { sound = HerrscherofThunder_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofThunder_tech_sel_voice3  sounds = { sound = HerrscherofThunder_tech_sel_voice3 } }
+soundeffect = { name = HerrscherofThunder_tech_sel_voice4  sounds = { sound = HerrscherofThunder_tech_sel_voice4 } }
+
+soundeffect = { name = HerrscherofReason_tech_sel_voice1  sounds = { sound = HerrscherofReason_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofReason_tech_sel_voice2  sounds = { sound = HerrscherofReason_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofReason_tech_sel_voice3  sounds = { sound = HerrscherofReason_tech_sel_voice3 } }
+soundeffect = { name = HerrscherofReason_tech_sel_voice4  sounds = { sound = HerrscherofReason_tech_sel_voice4 } }
+
+soundeffect = { name = HerrscherofRebirth_tech_sel_voice1  sounds = { sound = HerrscherofRebirth_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofRebirth_tech_sel_voice2  sounds = { sound = HerrscherofRebirth_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofRebirth_tech_sel_voice3  sounds = { sound = HerrscherofRebirth_tech_sel_voice3 } }
+
+soundeffect = { name = HerrscherofHuman_tech_sel_voice1  sounds = { sound = HerrscherofHuman_tech_sel_voice1 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice2  sounds = { sound = HerrscherofHuman_tech_sel_voice2 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice3  sounds = { sound = HerrscherofHuman_tech_sel_voice3 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice4  sounds = { sound = HerrscherofHuman_tech_sel_voice4 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice5  sounds = { sound = HerrscherofHuman_tech_sel_voice5 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice6  sounds = { sound = HerrscherofHuman_tech_sel_voice6 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice7  sounds = { sound = HerrscherofHuman_tech_sel_voice7 } }
+soundeffect = { name = HerrscherofHuman_tech_sel_voice8  sounds = { sound = HerrscherofHuman_tech_sel_voice8 } }
+
+########################################
+############# 技能语音 #############
+########################################
+soundeffect = { name = ABILITY_BH3_Flamescion_vol  sounds = { sound = ABILITY_BH3_Flamescion_vol } }
+soundeffect = { name = ABILITY_BH3_Void_vol  sounds = { sound = ABILITY_BH3_Void_vol } }
+soundeffect = { name = ABILITY_BH3_Finality_vol  sounds = { sound = ABILITY_BH3_Finality_vol } }
+soundeffect = { name = ABILITY_BH3_Thunder_vol  sounds = { sound = ABILITY_BH3_Thunder_vol } }
+soundeffect = { name = ABILITY_BH3_Reason_vol  sounds = { sound = ABILITY_BH3_Reason_vol } }
+soundeffect = { name = ABILITY_BH3_Sentience_vol  sounds = { sound = ABILITY_BH3_Sentience_vol } }
+soundeffect = { name = ABILITY_BH3_Rebirth1_vol  sounds = { sound = ABILITY_BH3_Rebirth1_vol } }
+soundeffect = { name = ABILITY_BH3_Rebirth2_vol  sounds = { sound = ABILITY_BH3_Rebirth2_vol } }
+soundeffect = { name = ABILITY_BH3_Human_vol  sounds = { sound = ABILITY_BH3_Human_vol } }
+
+
+########################################
+############# 模型战斗语音 #############
+########################################
+
+soundeffect = {
+	name = Kiana_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_naigouqiao
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_naigouqiao
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_Gunfire
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_Gunfire
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_ShowTime
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_ShowTime
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#琪亚娜天穹游侠待机和战斗音效
+soundeffect = {
+	name = Kiana_VoidDrifter_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_VoidDrifter_Idle1
+		sound = Kiana_VoidDrifter_Idle2
+		sound = Kiana_VoidDrifter_Idle2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_VoidDrifter_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_VoidDrifter_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_VoidDrifter_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_VoidDrifter_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_VoidDrifter_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_VoidDrifter_Ultra
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#琪亚娜白骑士待机和战斗音效
+soundeffect = {
+	name = Kiana_KnightMoonbeam_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_KnightMoonbeam_Idle2
+		sound = Kiana_KnightMoonbeam_Idle3
+		sound = Kiana_KnightMoonbeam_Idle3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_KnightMoonbeam_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_KnightMoonbeam_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_KnightMoonbeam_QTE
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_KnightMoonbeam_QTE
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_KnightMoonbeam_SKILL
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_KnightMoonbeam_SKILL
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#芽衣破晓强袭战斗音效
+soundeffect = {
+	name = Mei_StrikerFulminata_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_StrikerFulminata_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Mei_StrikerFulminata_AttackLoop
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_StrikerFulminata_AttackLoop
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#芽衣断罪影舞战斗音效
+soundeffect = {
+	name = Mei_DanzaiSpectramancer_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_DanzaiSpectramancer_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Mei_DanzaiSpectramancer_UltraAtk
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_DanzaiSpectramancer_UltraAtk
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Mei_DanzaiSpectramancer_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_tech_sel_voice11
+		sound = Mei_tech_sel_voice12
+		sound = Mei_tech_sel_voice12
+		sound = Mei_tech_sel_voice13
+		sound = Mei_tech_sel_voice13
+		sound = Mei_tech_sel_voice13
+		sound = Mei_tech_sel_voice14
+		sound = Mei_tech_sel_voice14
+		sound = Mei_tech_sel_voice14
+		sound = Mei_tech_sel_voice14
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#芽衣队长战斗音效
+soundeffect = {
+	name = Mei_Captain_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_Captain_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Mei_Captain_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Mei_Captain_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#希儿魇夜星渊待机和战斗音效
+soundeffect = {
+	name = Seele_StarchasmNyx_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Seele_StarchasmNyx_Idle1
+		sound = Seele_StarchasmNyx_Idle2
+		sound = Seele_StarchasmNyx_Idle2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Seele_StarchasmNyx_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Seele_StarchasmNyx_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Seele_StarchasmNyx_ChargeAttack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Seele_StarchasmNyx_ChargeAttack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Seele_StarchasmNyx_SKL02
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Seele_StarchasmNyx_SKL02
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#德丽莎观星待机和战斗音效
+soundeffect = {
+	name = Theresa_StarlitAstrologos_IDLE1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_StarlitAstrologos_Idle3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_StarlitAstrologos_IDLE3
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_StarlitAstrologos_Idle1
+		sound = Theresa_StarlitAstrologos_Idle2
+		sound = Theresa_StarlitAstrologos_Idle2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_StarlitAstrologos_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_StarlitAstrologos_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_StarlitAstrologos_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_StarlitAstrologos_Ultra
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#德丽莎约下誓约予爱以心待机和战斗音效
+soundeffect = {
+	name = Theresa_LunarVowCrimsonLove_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_LunarVowCrimsonLove_Idle2
+		sound = Theresa_LunarVowCrimsonLove_Idle3
+		sound = Theresa_LunarVowCrimsonLove_Idle3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_LunarVowCrimsonLove_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_LunarVowCrimsonLove_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_LunarVowCrimsonLove_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_LunarVowCrimsonLove_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#德丽莎火星主教待机和战斗音效
+soundeffect = {
+	name = Theresa_Mars_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_Mars_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Theresa_Mars_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Theresa_Mars_Ultra
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#符华影骑士月轮战斗音效
+soundeffect = {
+	name = Fuka_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Fuka_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Fuka_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = yes
+	sounds = {
+		sound = Fuka_tech_sel_voice1
+		sound = Fuka_tech_sel_voice2
+		sound = Fuka_tech_sel_voice2
+		sound = Fuka_tech_sel_voice3
+		sound = Fuka_tech_sel_voice3
+		sound = Fuka_tech_sel_voice4
+		sound = Fuka_tech_sel_voice4
+		sound = Fuka_tech_sel_voice5
+		sound = Fuka_tech_sel_voice5
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#符华云墨丹心战斗音效
+soundeffect = {
+	name = Fuka_AzureEmpyrea_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Fuka_AzureEmpyrea_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Fuka_AzureEmpyrea_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = yes
+	sounds = {
+		sound = Fuka_AzureEmpyrea_Ultra1
+		sound = Fuka_AzureEmpyrea_Ultra2
+		#增加一个相当于增加权重
+		sound = Fuka_AzureEmpyrea_Ultra2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Fuka_AzureEmpyrea_Charge
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Fuka_AzureEmpyrea_Charge
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Fuka_AzureEmpyrea_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = yes
+	sounds = {
+		sound = Fuka_AzureEmpyrea_tech_sel_voice1
+		sound = Fuka_AzureEmpyrea_tech_sel_voice2
+		sound = Fuka_AzureEmpyrea_tech_sel_voice3
+		sound = Fuka_AzureEmpyrea_tech_sel_voice4
+		sound = Fuka_AzureEmpyrea_tech_sel_voice5
+		sound = Fuka_AzureEmpyrea_tech_sel_voice6
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#伊甸璀耀之歌待机和战斗音效
+soundeffect = {
+	name = Eden_GoldenDiva_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = yes
+	sounds = {#增加一个相当于增加权重
+		sound = Eden_GoldenDiva_Idle2_1
+		sound = Eden_GoldenDiva_Idle2_2
+		sound = Eden_GoldenDiva_Idle2_2 
+		sound = Eden_GoldenDiva_Idle2_2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Eden_GoldenDiva_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Eden_GoldenDiva_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Eden_GoldenDiva_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Eden_GoldenDiva_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Eden_GoldenDiva_SKL
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Eden_GoldenDiva_SKL
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#空律战斗音效
+soundeffect = {
+	name = HerrscherofVoid_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofVoid_tech_sel_voice1
+		sound = HerrscherofVoid_tech_sel_voice2
+		sound = HerrscherofVoid_tech_sel_voice2
+		sound = HerrscherofVoid_tech_sel_voice3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofVoid_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofVoid_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofVoid_BranchAttack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofVoid_BranchAttack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofVoid_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofVoid_Ultra
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#薪炎之律者待机和战斗音效
+soundeffect = {
+	name = Kiana_HerrscherofFlamescion_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		#sound = Kiana_HerrscherofFlamescion_Idle1
+		sound = Kiana_HerrscherofFlamescion_Idle2
+		sound = Kiana_HerrscherofFlamescion_Idle3
+		sound = Kiana_HerrscherofFlamescion_Idle3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofFlamescion_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofFlamescion_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofFlamescion_RulerStart
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofFlamescion_RulerStart1
+		sound = Kiana_HerrscherofFlamescion_RulerStart2
+		sound = Kiana_HerrscherofFlamescion_RulerStart2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Kiana_HerrscherofFlamescion_Ultra
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Kiana_HerrscherofFlamescion_Ultra1
+		sound = Kiana_HerrscherofFlamescion_Ultra2
+		sound = Kiana_HerrscherofFlamescion_Ultra2
+		#sound = Kiana_HerrscherofFlamescion_Ultra3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#雷律战斗音效
+soundeffect = {
+	name = HerrscherofThunder_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofThunder_tech_sel_voice1
+		sound = HerrscherofThunder_tech_sel_voice2
+		sound = HerrscherofThunder_tech_sel_voice3
+		sound = HerrscherofThunder_tech_sel_voice4
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofThunder_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofThunder_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofThunder_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofThunder_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#理律战斗音效
+soundeffect = {
+	name = HerrscherofReason_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofReason_tech_sel_voice1
+		sound = HerrscherofReason_tech_sel_voice2
+		sound = HerrscherofReason_tech_sel_voice3
+		sound = HerrscherofReason_tech_sel_voice4
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#死生律战斗音效
+soundeffect = {
+	name = HerrscherofRebirth_Idle
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofRebirth_tech_sel_voice1
+		sound = HerrscherofRebirth_tech_sel_voice3
+		sound = HerrscherofRebirth_tech_sel_voice3
+		sound = HerrscherofRebirth_tech_sel_voice2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofRebirth_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofRebirth_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofRebirth_BranchAttack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofRebirth_BranchAttack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofRebirth_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofRebirth_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+#人律战斗音效
+soundeffect = {
+	name = HerrscherofHuman_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofHuman_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofHuman_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofHuman_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofHuman_Attack3
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = HerrscherofHuman_Attack3
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = HerrscherofHuman_Idle2
+	falloff = "falloff_100"
+	random_sound_when_looping = yes
+	sounds = {
+		sound = HerrscherofHuman_tech_sel_voice4
+		sound = HerrscherofHuman_tech_sel_voice5
+		sound = HerrscherofHuman_tech_sel_voice6
+		sound = HerrscherofHuman_tech_sel_voice7
+		sound = HerrscherofHuman_tech_sel_voice8
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+#爱莉粉色妖精战斗音效
+soundeffect = {
+	name = Elysia_MissPinkElf_Attack1
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Elysia_MissPinkElf_Attack1
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+soundeffect = {
+	name = Elysia_MissPinkElf_Attack2
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = Elysia_MissPinkElf_Attack2
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 1
+}
+
+
+soundeffect = {
+	name = BHS_Attack
+	falloff = "falloff_100"
+	random_sound_when_looping = no
+	sounds = {
+		sound = BHS_Attack
+	} 
+	max_audible = 6
+	delay_random_offset = { 0.0 0.15 }
+	playbackrate_random_offset = { -0.15 0.15 }
+	max_audible_behaviour = fail
+	is3d = no
+	volume = 5
+}
+
+
+
+########################################
+############# 杂项 #############
+########################################
+soundeffect = { name = Mod_Intro  sounds = { sound = Mod_Intro } }
+soundeffect = { name = BH3_Click  sounds = { sound = BH3_Click } volume = 1 }
+soundeffect = { name = BH3_Click_X  sounds = { sound = BH3_Click_X } volume = 1 }
+soundeffect = { name = "BH3_Click_Yes"  sounds = { sound = BH3_Click_Yes } volume = 1 }
+
+#休伯利安
+soundeffect = { name = Hyperion_Fire  sounds = { sound = Hyperion_Fire } }
+soundeffect = { name = Hyperion_Recharge  sounds = { sound = Hyperion_Recharge } }
+soundeffect = {
+	name = Hyperion_jet_idle
+	falloff = "falloff_airplane_light"
+	loop = yes
+	sounds = {
+		sound = Hyperion_jet_idle_01
+		sound = Hyperion_jet_idle_02
+		sound = Hyperion_jet_idle_03
+		sound = Hyperion_jet_idle_04
+	} 	
+	max_audible = 6
+	max_audible_behaviour = fail
+	is3d = yes
+	volume = 0.5
+}
+
+
+########################################
+############ 崩坏入侵超事件 ############
+########################################
+soundeffect = { name = HI_Come1  sounds = { sound = HI_Come1 } }
+soundeffect = { name = HI_Come2  sounds = { sound = HI_Come2 } }
+soundeffect = { name = HI_Come3  sounds = { sound = HI_Come3 } }
+soundeffect = { name = HI_Beaten1  sounds = { sound = HI_Beaten1 } }
+soundeffect = { name = HI_Beaten2  sounds = { sound = HI_Beaten2 } }
+soundeffect = { name = HI_Beaten3  sounds = { sound = HI_Beaten3 } }
+soundeffect = { name = BHS_Invasion_Start  sounds = { sound = BHS_Invasion_Start } }
+soundeffect = { name = BHS_Invasion_Hive  sounds = { sound = BHS_Invasion_Hive } }
+soundeffect = { name = BHS_Invasion_End  sounds = { sound = BHS_Invasion_End } }

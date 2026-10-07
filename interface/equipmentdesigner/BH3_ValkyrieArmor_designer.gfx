@@ -1,0 +1,550 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_TC_BH3_ValkyrieArmor_chassis"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/BH3_ValkyrieArmor_chassis.dds" #背景
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_BH3_ValkyrieArmor_chassis_Front"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/BH3_ValkyrieArmor_chassis_Front.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_BH3_ValkyrieArmor_chassis_Back"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/BH3_ValkyrieArmor_chassis_Back.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_BH3_ValkyrieArmor_chassis_Weapon"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/BH3_ValkyrieArmor_chassis_Weapon.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_TM_BH3_ValkyrieArmor_chassis_Wings"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/BH3_ValkyrieArmor_chassis_Wings.dds"
+		legacy_lazy_load = no
+	}
+
+	##########################
+	######### 主武器 #########
+	##########################
+	# 双枪
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Pistols"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Pistols.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Pistols_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Pistols_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Pistols_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Pistols_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Pistols_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Pistols_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Pistols_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Pistols_3.dds" 
+		legacy_lazy_load = no
+    }
+	# 太刀
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Katana"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Katana.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Katana_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Katana_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Katana_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Katana_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Katana_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Katana_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Katana_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Katana_3.dds" 
+		legacy_lazy_load = no
+    }
+	# 重炮
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cannon"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cannon.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cannon_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cannon_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cannon_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cannon_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cannon_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cannon_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cannon_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cannon_3.dds" 
+		legacy_lazy_load = no
+    }
+	# 镰刀
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Scythe"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Scythe.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Scythe_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Scythe_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Scythe_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Scythe_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Scythe_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Scythe_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Scythe_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Scythe_3.dds" 
+		legacy_lazy_load = no
+    }
+	# 拳套
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Fists"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Fists.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Fists_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Fists_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Fists_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Fists_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Fists_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Fists_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Fists_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Fists_3.dds" 
+		legacy_lazy_load = no
+    }
+	# 十字架
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cross"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cross.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cross_0"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cross_0.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cross_1"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cross_1.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cross_2"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cross_2.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_MainWeapon_Cross_3"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_MainWeapon_Cross_3.dds" 
+		legacy_lazy_load = no
+    }
+
+	##########################
+	######## 装甲类型 ########
+	##########################
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Armor_None"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Armor_None.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Armor_Light"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Armor_Light.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Armor_Middle"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Armor_Middle.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Armor_Heavy"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Armor_Heavy.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Armor_SuperHeavy"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Armor_SuperHeavy.dds" 
+		legacy_lazy_load = no
+    }
+
+	##########################
+	######## 驱动方式 ########
+	##########################
+	# 电池包
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_ElectricEngine"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Electric"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Electric_Low"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric_Low.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Electric_Balance"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric_Balance.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Electric_High"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric_High.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Electric_Highest"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Electric_Highest.dds" 
+		legacy_lazy_load = no
+    }
+
+	# 核能
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_NuclearEngine"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Nuclear"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Nuclear_Low"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear_Low.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Nuclear_Balance"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear_Balance.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Nuclear_High"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear_High.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Nuclear_Highest"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Nuclear_Highest.dds" 
+		legacy_lazy_load = no
+    }
+
+	# 崩坏能
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_HonkaiEngine"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Honkai"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Honkai_Low"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai_Low.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Honkai_Balance"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai_Balance.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Honkai_High"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai_High.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_Honkai_Highest"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_Honkai_Highest.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Engine_HonkaiImproved"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Engine_HonkaiImproved.dds" 
+		legacy_lazy_load = no
+    }
+	
+
+	##########################
+	########## 圣痕 ##########
+	##########################
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_Balance"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_Balance.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_Speed"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_Speed.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_Breakthrough"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_Breakthrough.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_Defense"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_Defense.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_ArmorValue"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_ArmorValue.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_ApAttack"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_ApAttack.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_SoftAttack"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_SoftAttack.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Stigmata_HardAttack"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Stigmata_HardAttack.dds" 
+		legacy_lazy_load = no
+    }
+
+	
+	##########################
+	######### 神之键 #########
+	##########################
+	# 空
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_Empty"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Empty.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_TheDivineKeys"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_VoidArchives.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_VoidArchives"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_VoidArchives.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_ThousandKey"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_ThousandKey.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_SevenThundersofRetribution"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_SevenThundersofRetribution.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_AbyssFlower"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_AbyssFlower.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_FenghuangDown"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_FenghuangDown.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_JudgementofShamash"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_JudgementofShamash.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_OathofJudah"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_OathofJudah.dds" 
+		legacy_lazy_load = no
+    }		
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_StarofEden"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_StarofEden.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Keys_JizoMitama"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Keys_JizoMitama.dds" 
+		legacy_lazy_load = no
+    }
+
+	##########################
+	######## 武装人偶 ########
+	##########################
+	# 空
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_Empty"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Empty.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_CangXuanZhiShu"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_CangXuanZhiShu.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_KeLaiYin"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_KeLaiYin.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_YaoJingAiLi"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_YaoJingAiLi.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_ChiYuanZhiYi"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_ChiYuanZhiYi.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_FangYouDa"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_FangYouDa.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_BeiLa"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_BeiLa.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Doll_ZhongZhuangXiaoTu"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Doll_ZhongZhuangXiaoTu.dds" 
+		legacy_lazy_load = no
+    }
+
+	##########################
+	######## 协同者 ########
+	##########################
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick_Shang"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_Shang.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick_SongQue"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_SongQue.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick_Serapeum"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_Serapeum.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick_Theresa"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_Theresa.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_Sidekick_ChenXue"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_ChenXue.dds" 
+		legacy_lazy_load = no
+    }
+
+	##########################
+	######## 特殊模块 ########
+	##########################
+	
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_SystemRedundancy"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod_SystemRedundancy.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod_AppearanceEnhancement.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_Sidekick"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_Sidekick_Shang.dds" 
+		legacy_lazy_load = no
+    }	
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_StrangeLegRing"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod_StrangeLegRing.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_SimplifyProduction"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod_SimplifyProduction.dds" 
+		legacy_lazy_load = no
+    }
+	spriteType = { 
+		name = "GFX_EMI_BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly"
+		textureFile = "gfx/interface/equipmentdesigner/Valkyrie/modules/BH3_ValkyrieArmor_SpecialMod_PrecisionAssembly.dds" 
+		legacy_lazy_load = no
+    }				
+}

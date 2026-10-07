@@ -1,0 +1,13 @@
+objectTypes = {
+	pdxparticle = {
+		name = "BH3_nuke_particle"
+		type = "BH3_nuke_file"
+		scale = 1
+	}
+	
+	pdxparticle = {
+		name = "BH3_nuke_top_particle"
+		type = "BH3_nuke_top_file"
+		scale = 1
+	}
+}

@@ -1,0 +1,5 @@
+#国家在地图上的颜色和文化设置
+graphical_culture = western_european_gfx
+graphical_culture_2d = western_european_2d 
+
+color = { 0  0  0 }

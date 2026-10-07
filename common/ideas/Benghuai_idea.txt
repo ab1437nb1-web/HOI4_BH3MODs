@@ -1,0 +1,1230 @@
+ideas = {
+	country = {
+		BHS_Benghuai_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				ai_call_ally_desire_factor = 999
+				ai_join_ally_desire_factor = 999
+				stability_factor = 1
+				stability_weekly = 1
+				war_support_factor = 1
+				war_support_weekly = 1
+				drift_defence_factor = 5.00
+				#ai_get_ally_desire_factor = -9999
+				conscription = 8
+				conscription_factor = 1
+				#non_core_manpower = 1
+				military_leader_cost_factor = 100
+				command_abilities_cost_factor = 100
+				max_command_power_mult = -0.8
+				command_power_gain = -100
+                # command_power_gain_mult = -1
+				# max_command_power = -150
+				attrition = -2
+				heat_attrition_factor = -0.5
+				winter_attrition_factor = -0.5
+				max_dig_in = -10
+				max_planning = -0.50
+				political_power_gain = -100
+				experience_gain_army = -100.00
+				experience_gain_army_factor = -0.99
+				experience_gain_air = -100
+				experience_gain_air_factor = -0.99
+				experience_gain_navy = -100
+				experience_gain_navy_factor = -0.99
+				experience_loss_factor = 0.5
+				consumer_goods_expected_value = 0.5
+				industry_repair_factor = 5 
+				industrial_capacity_factory = -1
+				surrender_limit = 1
+				out_of_supply_factor = -1
+				supply_node_range = 2
+				supply_consumption_factor = -1
+				weekly_manpower = 10000
+				training_time_army_factor = -0.5
+
+			}
+			equipment_bonus = {
+				HerrscherVoid_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherVoid_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherThunder_Mei_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherThunder_Mei_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherReason_Bronya_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherReason_Bronya_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+
+				HerrscherRebirth_Seele_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherRebirth_Seele_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherErosion_Elysia_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherErosion_Elysia_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+
+			}
+		}
+		BHS_Benghuai_idea_Player = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 1
+				stability_weekly = 1
+				war_support_factor = 1
+				war_support_weekly = 1
+				drift_defence_factor = 5.00
+				#ai_get_ally_desire_factor = -9999
+				conscription = 8
+				#conscription_factor = 0.8
+				#non_core_manpower = 1
+				attrition = -2
+				heat_attrition_factor = -0.5
+				winter_attrition_factor = -0.5
+				max_dig_in = -10
+				industry_repair_factor = 5 
+				surrender_limit = 1
+				out_of_supply_factor = -1
+				supply_node_range = 2
+				supply_consumption_factor = -1
+				weekly_manpower = 10000
+				training_time_army_factor = -0.5
+			}
+			equipment_bonus = {
+				SishiBHS_equipment = {
+					build_cost_ic = -0.998
+					instant = yes
+				}
+				TujinBHS_equipment = {
+					build_cost_ic = -0.998
+					instant = yes
+				}
+				QishiBHS_equipment = {
+					build_cost_ic = -0.997
+					instant = yes
+				}
+				ZhancheBHS_equipment = {
+					build_cost_ic = -0.996
+					instant = yes
+				}
+				ShengdianBHS_equipment = {
+					build_cost_ic = -0.995
+					instant = yes
+				}
+				JianisaBHS_equipment = {
+					build_cost_ic = -0.994
+					instant = yes
+				}
+				BeinalesiBHS_equipment = {
+					build_cost_ic = -0.99
+					instant = yes
+				}
+				HerrscherVoid_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherVoid_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherThunder_Mei_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherThunder_Mei_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherReason_Bronya_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherReason_Bronya_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+
+				HerrscherRebirth_Seele_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherRebirth_Seele_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherErosion_Elysia_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherErosion_Elysia_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+			}
+		}
+		#高活性
+		BHS_aggressive3 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 10
+				ai_focus_defense_factor = -10
+				land_night_attack = 0.5
+				army_speed_factor = 0.25
+				land_reinforce_rate = 0.5
+			}
+		}
+		#中活性
+		BHS_aggressive2 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 5
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+				#army_org_factor = -0.3
+				#army_morale_factor = -0.2
+				#army_speed_factor = 0.15
+			}
+		}
+
+		#低活性
+		BHS_aggressive1 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				ai_focus_aggressive_factor = -10 
+				ai_focus_defense_factor = 10
+				army_attack_factor = -1
+				army_defence_factor = -1
+				army_org_factor = 2
+				#army_speed_factor = -0.25
+				army_morale_factor = 2
+				land_reinforce_rate = -0.3
+			}
+		}
+		#骇人难度崩坏阵营修正
+		BHS_aggressive0 = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 1
+				army_org_factor = 1
+			}
+			equipment_bonus = {
+				TujinBHS_equipment = {
+					defense = 2
+					breakthrough = 1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				QishiBHS_equipment = {
+					defense = 2
+					breakthrough =1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				ZhancheBHS_equipment = {
+					defense = 2
+					breakthrough = 1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				ShengdianBHS_equipment = {
+					defense = 2
+					breakthrough = 1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				JianisaBHS_equipment = {
+					defense = 2
+					breakthrough = 1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				BeinalesiBHS_equipment = {
+					defense = 2
+					breakthrough = 1
+					armor_value = 1
+					soft_attack = 2
+					hard_attack = 2
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+			}
+		}
+		#给玩家的buff
+		BH3_no_step_back = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				# political_power_gain = 1
+				# consumer_goods_factor = -0.5
+				war_support_weekly = 0.03
+                # command_power_gain_mult = 0.3
+				# production_speed_arms_factory_factor = 0.3
+				# production_speed_industrial_complex_factor = 0.3
+				# mobilization_speed  = 0.5
+				conscription = 0.05
+				surrender_limit = 1
+				# training_time_army_factor  = -0.1
+				# conversion_cost_civ_to_mil_factor = -0.5
+				# production_factory_start_efficiency_factor = 0.6
+				# production_factory_efficiency_gain_factor = 0.6
+				# production_factory_max_efficiency_factor = 0.6
+				# production_speed_bunker_factor = 2
+				# production_speed_coastal_bunker_factor = 2
+				# experience_gain_army_factor  = 1
+				research_speed_factor = 1
+				# industrial_capacity_factory = 1
+
+			}
+			# equipment_bonus = {
+			# 	ValkyrieComprehensiveKiana_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieComprehensiveTheresa_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieComprehensiveEden_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieMeeleMei_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieMeeleSeele_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieMeeleFuka_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# 	ValkyrieArtilleryBronya_equipment = {
+			# 		build_cost_ic = -0.2
+			# 		instant = yes
+			# 	}
+			# }
+		}
+		#律者单位加强
+		BHS_herrscher_enhance_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				command_abilities_cost_factor = -100
+				max_command_power_mult = 2
+				command_power_gain = 110
+				army_morale_factor = 10
+			}
+			equipment_bonus = {
+				HerrscherVoid_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherVoid_Kiana_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherThunder_Mei_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherThunder_Mei_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherReason_Bronya_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherReason_Bronya_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+
+				HerrscherRebirth_Seele_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherRebirth_Seele_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherErosion_Elysia_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 5
+					hard_attack = 5
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherErosion_Elysia_Air_equipment_0 = {
+					air_attack = 5
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				
+			}
+		}
+
+		#开战初期对人类国家的影响
+		BH3_disaster = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				mobilization_speed  = -0.5
+				army_attack_factor = -0.8
+				army_defence_factor = -0.8
+				army_speed_factor = -0.25
+				army_org_factor = -0.8
+				
+				air_cas_present_factor = -1
+				ground_attack_factor = -0.8
+				industrial_capacity_factory = -1
+
+				research_speed_factor = -1
+				line_change_production_efficiency_factor = -0.25		#生产效率保持
+				production_factory_efficiency_gain_factor = -0.25		#生产效率增长
+			}
+		}
+
+		BHS_level1_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+			}
+		}
+		BHS_level2_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_strength_factor = 0.25
+			}
+		}
+		BHS_level3_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 0.5
+			}
+			equipment_bonus = {
+				TujinBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+				QishiBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+				ZhancheBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+				ShengdianBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+				JianisaBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+				BeinalesiBHS_equipment = {
+					defense = 0.5
+					breakthrough = 0.5
+					armor_value = 0.25
+					soft_attack = 0.25
+					hard_attack = 0.25
+					ap_attack = 0.25
+					air_attack = 0.25
+					instant = yes
+				}
+			}
+		}
+		BHS_level4_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_speed_factor = 0.1
+				army_strength_factor = 0.75
+				experience_gain_army = 100.00
+				experience_gain_army_factor = 0.99
+			}
+			equipment_bonus = {
+				TujinBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				QishiBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				ZhancheBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				ShengdianBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				JianisaBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				BeinalesiBHS_equipment = {
+					maximum_speed = 0.25
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 0.5
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherVoid_Kiana_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherVoid_Kiana_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+				HerrscherThunder_Mei_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherThunder_Mei_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+				HerrscherReason_Bronya_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherReason_Bronya_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+
+				HerrscherRebirth_Seele_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherRebirth_Seele_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+				HerrscherErosion_Elysia_equipment_0 = {
+					defense = 1
+					breakthrough = 1
+					armor_value = 0.5
+					soft_attack = 0.5
+					hard_attack = 0.5
+					ap_attack = 1
+					air_attack = 0.5
+					instant = yes
+				}
+				HerrscherErosion_Elysia_Air_equipment_0 = {
+					air_attack = 0.5
+					air_defence = 1
+					air_agility = 1
+					instant = yes
+				}
+				
+			}
+		}
+		BHS_level5_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_speed_factor = 0.25
+				army_strength_factor = 1
+				experience_gain_army = 200.00
+				experience_gain_army_factor = 1
+			}
+			equipment_bonus = {
+				TujinBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				QishiBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				ZhancheBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				ShengdianBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				JianisaBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				BeinalesiBHS_equipment = {
+					maximum_speed = 0.5
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 1
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherVoid_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherVoid_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherThunder_Mei_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherThunder_Mei_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherReason_Bronya_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherReason_Bronya_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+
+				HerrscherRebirth_Seele_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherRebirth_Seele_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherFlamescion_Kiana_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+				HerrscherErosion_Elysia_equipment_0 = {
+					defense = 2
+					breakthrough = 2
+					armor_value = 1
+					soft_attack = 1
+					hard_attack = 1
+					ap_attack = 2
+					air_attack = 1
+					instant = yes
+				}
+				HerrscherErosion_Elysia_Air_equipment_0 = {
+					air_attack = 1
+					air_defence = 2
+					air_agility = 2
+					instant = yes
+				}
+			}
+		}
+
+		#预警带来的恐慌
+		BH3_predict_effect = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = -0.15
+				army_org_factor = -0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		#终焉一击
+		BH3_Finality_disaster_effect = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.5
+				stability_weekly = -0.02
+				weekly_manpower = -10000
+				conscription_factor = -0.25
+				attrition = 0.25
+				political_power_gain = -1
+				consumer_goods_expected_value = 0.25
+				army_attack_factor = -0.5
+				army_defence_factor = -0.5
+			}
+		}
+
+		#理之律者权能
+		BHS_HI1_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 5
+				equipment_capture = 5 
+				production_factory_start_efficiency_factor = 1		#基础生产效率
+				production_factory_max_efficiency_factor = 1		#生产效率上限
+				line_change_production_efficiency_factor = 1		#生产效率保持
+				production_factory_efficiency_gain_factor = 1		#生产效率增长
+				industrial_capacity_factory = 1				 		#工厂产出
+			}
+		}
+		#理之律者权能对人类影响，动态modifier
+
+		#空之律者权能
+		BHS_HI2_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = 1
+				max_dig_in = 5
+				dig_in_speed = 5
+				army_attack_factor = 0.25
+				land_reinforce_rate = 1
+				org_loss_when_moving = -1
+				terrain_penalty_reduction = 0.1
+			}
+		}
+		#空之律者权能对人类影响
+		BHS_HI2_Power_EffectHuman = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = -0.1
+				army_defence_factor = -0.25
+				air_accidents  = 0.5
+				air_mission_efficiency  = -0.5
+			}
+			 
+		}
+
+		#雷之律者权能，动态modifier
+
+		#雷之律者权能对人类影响
+		BHS_HI3_Power_EffectHuman = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_defence_factor = -0.15
+				air_accidents  = 1
+				production_speed_buildings_factor = -0.25			#建造速度
+				production_factory_start_efficiency_factor = -0.5	#基础生产效率
+				industrial_capacity_factory = -0.5					#工厂产出
+			}
+			 
+		}
+
+		#死之律者权能
+		BHS_HI6_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 2
+				army_org_factor = 1
+				army_morale_factor = 2
+				land_reinforce_rate = 0.5
+				experience_loss_factor = -1
+			} 
+		}
+		#死之律者权能对人类影响（限时）
+		BHS_HI6_Power_EffectHuman = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = -0.5
+				army_org_factor = -0.5
+				weekly_manpower = -50000
+			}
+		}
+		#炎之律者权能
+		BHS_HI7_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.25
+				land_night_attack = 0.25
+				org_loss_at_low_org_factor = -0.25
+				land_reinforce_rate = 0.35
+				terrain_penalty_reduction = 0.25
+			}
+		}
+		#炎之律者权能，极限爆发（限时）
+		BHS_HI7_1_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 2
+			}
+		}
+
+		BHS_HH2_Power = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				agency_upgrade_time = -9.99									#情报机构升级时
+				army_intel_decryption_bonus = 1000							#破译陆军密码加成
+				navy_intel_decryption_bonus = 1000							#破译海军密码加成
+				airforce_intel_decryption_bonus = 1000						#破译的空军密码加成
+				civilian_intel_decryption_bonus = 1000						#破译的民政密码加成
+				own_operative_intel_extraction_rate = -10					#情报获取率
+				intelligence_agency_defense = 110							#反间谍
+				decryption_power = 10										#破译能力
+				decryption_power_factor = 10								#破译能力修正
+				crypto_strength = 10										#加密等级
+				intel_network_gain = 10										#情报网强度增长
+				intel_network_gain_factor = 10								#情报网强度增长
+				enemy_intel_network_gain_factor_over_occupied_tag = -10		#敌方情报网强度增长
+				operation_cost = -10										#行动花费
+				operation_infiltrate_outcome = 10							#渗透效率
+				operation_outcome = 10										#行动效率
+				operative_slot = 5
+
+				industrial_capacity_factory = 0.25						 	#工厂产出
+				max_command_power_mult = 1
+				command_power_gain = 100
+				command_abilities_cost_factor = -0.5
+			}
+		}
+	}
+}

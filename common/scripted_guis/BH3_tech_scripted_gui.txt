@@ -1,0 +1,2133 @@
+scripted_gui = {
+
+	############ 女武神科技界面 #############
+	BH3_main_menu = { 
+	    context_type = player_context
+	    window_name = "BH3_main_menu"
+		visible = { has_country_flag = BH3_main_menu_open  }
+		
+		effects = {
+			BH3_main_menu_x_btn_click = {
+				clr_country_flag = BH3_main_menu_open
+			}
+			BH3_main_menu_tech_btn_click = {
+				set_country_flag = BH3_tech_menu_open
+			}
+			BH3_main_menu_doctrine_btn_click = {
+				set_country_flag = BH3_Valkyrie_Doctrine_on
+			}
+		}
+	}
+
+	############ 女武神科技界面 #############
+	BH3_tech_menu = { 
+	    context_type = player_context
+	    window_name = "BH3_tech_menu"
+		parent_window_name = "BH3_main_menu" 
+		visible = { has_country_flag = BH3_tech_menu_open  }
+		
+		effects = {
+			BH3_tech_menu_btn_X_click = {
+				clr_country_flag = BH3_tech_menu_open
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+				set_country_flag = BH3_main_menu_open
+			}
+			BH3_tech_Kiana_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 1 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Mei_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 1 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Bronya_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 1 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Seele_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 1 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Theresa_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 1 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Fuka_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 1 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_Eden_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 1 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			
+			BH3_tech_HerrscherKiana_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 1 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_HerrscherMei_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 1 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_HerrscherBronya_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 1 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_HerrscherSeele_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 1 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 0 }
+			}
+			BH3_tech_HerrscherElysia_btn_click = {
+				set_variable = { BH3_tech_Kiana_menu_open = 0 }
+				set_variable = { BH3_tech_Mei_menu_open = 0 }
+				set_variable = { BH3_tech_Bronya_menu_open = 0 }
+				set_variable = { BH3_tech_Seele_menu_open = 0 }
+				set_variable = { BH3_tech_Theresa_menu_open = 0 }
+				set_variable = { BH3_tech_Fuka_menu_open = 0 }
+				set_variable = { BH3_tech_Eden_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherKiana_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherMei_menu_open = 0 }
+				set_variable = { BH3_tech_HerrscherBronya_menu = 0 }
+				set_variable = { BH3_tech_HerrscherSeele_menu = 0 }
+				set_variable = { BH3_tech_HerrscherElysia_menu = 1 }
+			}
+		}
+
+		triggers = {
+			BH3_tech_current_research_visible = {
+				check_variable = { BH3_researching = 1 }
+			}
+			BH3_tech_remain_time_visible = {
+				check_variable = { BH3_researching = 1 }
+			}
+			BH3_research_progressbar_ic_visible = {
+				check_variable = { BH3_researching = 1 }
+			}
+			BH3_research_progressbar_bg_ic_visible = {
+				check_variable = { BH3_researching = 1 }
+			}
+		}
+
+		properties = {
+		    BH3_research_progressbar_ic = { 
+                x = BH3_research_progress_p
+            }
+	    }
+	}
+	############ 具体女武神选择界面 #############
+	BH3_tech_Kiana_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Kiana_menu"
+		visible = { check_variable = { BH3_tech_Kiana_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+		
+		effects = {
+			BH3_tech_Kiana_WhiteComet_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Kiana_equipment_0_desc
+				custom_effect_tooltip = tech_effect|Kiana_WhiteComet_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_0_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 10 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						16 = { scoped_sound_effect = Kiana_tech_sel_voice1 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice2 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice3 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice6 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice7 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice8 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice9 }
+					}					
+				}
+			}
+			BH3_tech_leader_kiana_WhiteComet_btn_click = {
+				random_list = {
+					16 = { scoped_sound_effect = Kiana_tech_sel_voice1 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice2 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice3 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice6 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice7 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice8 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_WhiteComet
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_WhiteComet } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Kiana_VoidDrifter_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Kiana_equipment_1_desc
+				custom_effect_tooltip = tech_effect|Kiana_VoidDrifter_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_1_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 11 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						50 = { scoped_sound_effect = Kiana_tech_sel_voice4 }
+						50 = { scoped_sound_effect = Kiana_tech_sel_voice5 }
+					}
+				}
+			}
+			BH3_tech_leader_kiana_VoidDrifter_btn_click = {
+				random_list = {
+					50 = { scoped_sound_effect = Kiana_tech_sel_voice4 }
+					50 = { scoped_sound_effect = Kiana_tech_sel_voice5 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_VoidDrifter
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_VoidDrifter } }
+						}
+						log = ""
+					}
+				}
+			}
+			BH3_tech_Kiana_KnightMoonbeam_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Kiana_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Kiana_KnightMoonbeam_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 12 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						16 = { scoped_sound_effect = Kiana_tech_sel_voice1 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice2 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice3 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice6 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice7 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice8 }
+						14 = { scoped_sound_effect = Kiana_tech_sel_voice9 }
+					}		
+				}
+			}
+			BH3_tech_leader_kiana_KnightMoonbeam_btn_click = {
+				random_list = {
+					16 = { scoped_sound_effect = Kiana_tech_sel_voice1 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice2 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice3 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice6 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice7 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice8 }
+					14 = { scoped_sound_effect = Kiana_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_KnightMoonbeam
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_KnightMoonbeam } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Kiana_WhiteComet_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Kiana_WhiteComet_Research }
+			}
+			BH3_tech_Kiana_VoidDrifter_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Kiana_VoidDrifter_Research }
+				has_tech = Kiana_WhiteComet_Research
+			}
+			BH3_tech_Kiana_KnightMoonbeam_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Kiana_KnightMoonbeam_Research }
+				has_tech = Kiana_VoidDrifter_Research
+			}
+		}
+	}
+
+	BH3_tech_Mei_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Mei_menu"
+		visible = { check_variable = { BH3_tech_Mei_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Mei_CrimsonImpuls_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Mei_equipment_0_desc
+				custom_effect_tooltip = tech_effect|Mei_CrimsonImpuls_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_0_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 20 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						12 = { scoped_sound_effect = Mei_tech_sel_voice1 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice2 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice3 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice4 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice5 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice6 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice7 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice8 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice9 }
+					}			
+				}
+			}
+			BH3_tech_leader_Mei_CrimsonImpuls_btn_click = {
+				random_list = {
+					12 = { scoped_sound_effect = Mei_tech_sel_voice1 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice2 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice3 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice4 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice5 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice6 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice7 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice8 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Mei_CrimsonImpuls
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Mei_CrimsonImpuls } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			###############
+			#ShadowDash废弃
+			###############
+
+
+			BH3_tech_Mei_StrikerFulminata_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Mei_equipment_1_desc
+				custom_effect_tooltip = tech_effect|Mei_StrikerFulminata_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_1_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 21 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						11 = { scoped_sound_effect = Mei_tech_sel_voice1 }
+						12 = { scoped_sound_effect = Mei_tech_sel_voice2 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice3 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice4 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice5 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice6 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice7 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice8 }
+						11 = { scoped_sound_effect = Mei_tech_sel_voice9 }
+					}	
+				}
+			}
+			BH3_tech_leader_Mei_StrikerFulminata_btn_click = {
+				random_list = {
+					12 = { scoped_sound_effect = Mei_tech_sel_voice1 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice2 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice3 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice4 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice5 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice6 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice7 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice8 }
+					11 = { scoped_sound_effect = Mei_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Mei_StrikerFulminata
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Mei_StrikerFulminata } }
+						}
+						log = ""
+					}
+				}
+			}
+			###############
+			#LightningEmpress废弃
+			###############
+
+
+			BH3_tech_Mei_DanzaiSpectramancer_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Mei_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Mei_DanzaiSpectramancer_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 22 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						25 = { scoped_sound_effect = Mei_tech_sel_voice11 }
+						25 = { scoped_sound_effect = Mei_tech_sel_voice12 }
+						25 = { scoped_sound_effect = Mei_tech_sel_voice13 }
+						25 = { scoped_sound_effect = Mei_tech_sel_voice14 }
+					}
+				}
+			}
+			BH3_tech_leader_Mei_DanzaiSpectramancer_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = Mei_tech_sel_voice11 }
+					25 = { scoped_sound_effect = Mei_tech_sel_voice12 }
+					25 = { scoped_sound_effect = Mei_tech_sel_voice13 }
+					25 = { scoped_sound_effect = Mei_tech_sel_voice14 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Mei_DanzaiSpectramancer
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Mei_DanzaiSpectramancer } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Mei_Captain_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Mei_equipment_3_desc
+				custom_effect_tooltip = tech_effect|Mei_Captain_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 23 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice1 }
+						25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice2 }
+						25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice3 }
+						25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice4 }
+					}
+				}
+			}
+			BH3_tech_leader_Mei_Captain_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice1 }
+					25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice2 }
+					25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice3 }
+					25 = { scoped_sound_effect = MeiCaptain_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Mei_Captain
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Mei_Captain } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Mei_CrimsonImpuls_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Mei_CrimsonImpuls_Research }
+			}
+			BH3_tech_Mei_StrikerFulminata_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Mei_StrikerFulminata_Research }
+				has_tech = Mei_CrimsonImpuls_Research
+			}
+			BH3_tech_Mei_DanzaiSpectramancer_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Mei_DanzaiSpectramancer_Research }
+				has_tech = Mei_StrikerFulminata_Research
+			}
+			BH3_tech_Mei_Captain_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Mei_Captain_Research }
+				has_tech = Mei_DanzaiSpectramancer_Research
+			}
+		}
+	}
+
+	BH3_tech_Bronya_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Bronya_menu"
+		visible = { check_variable = { BH3_tech_Bronya_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Bronya_ValkyrieChariot_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Bronya_equipment_0_desc
+				custom_effect_tooltip = tech_effect|Bronya_ValkyrieChariot_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_0_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 30 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						12 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+					}
+				}
+			}
+			BH3_tech_leader_Bronya_ValkyrieChariot_btn_click = {
+				random_list = {
+					12 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Bronya_ValkyrieChariot
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Bronya_ValkyrieChariot } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Bronya_YamabukiArmor_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Bronya_equipment_1_desc
+				custom_effect_tooltip = tech_effect|Bronya_YamabukiArmor_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_1_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 31 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+						12 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+					}
+				}
+			}
+			BH3_tech_leader_Bronya_YamabukiArmor_btn_click = {
+				random_list = {
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+					12 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Bronya_YamabukiArmor
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Bronya_YamabukiArmor } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Bronya_DimensionBreaker_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Bronya_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Bronya_DimensionBreaker_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 32 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+						12 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+						11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+					}
+				}
+			}
+			BH3_tech_leader_Bronya_DimensionBreaker_btn_click = {
+				random_list = {
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice1 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice2 }
+					12 = { scoped_sound_effect = Bronya_tech_sel_voice3 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice4 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice5 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice6 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice7 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice8 }
+					11 = { scoped_sound_effect = Bronya_tech_sel_voice9 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Bronya_DimensionBreaker
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Bronya_DimensionBreaker } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Bronya_SilverWingNEX_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Bronya_equipment_3_desc
+				custom_effect_tooltip = tech_effect|Bronya_SilverWingNEX_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 33 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					scoped_sound_effect = Bronya_SilverWingNEX_sel_voice
+				}
+			}
+			BH3_tech_leader_Bronya_SilverWingNEX_btn_click = {
+				scoped_sound_effect = Bronya_SilverWingNEX_sel_voice
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Bronya_SilverWingNEX
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Bronya_SilverWingNEX } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Bronya_ValkyrieChariot_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Bronya_ValkyrieChariot_Research }
+			}
+			BH3_tech_Bronya_YamabukiArmor_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Bronya_YamabukiArmor_Research }
+				has_tech = Bronya_ValkyrieChariot_Research
+			}
+			BH3_tech_Bronya_DimensionBreaker_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Bronya_DimensionBreaker_Research }
+				has_tech = Bronya_YamabukiArmor_Research
+			}
+			BH3_tech_Bronya_SilverWingNEX_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Bronya_SilverWingNEX_Research }
+				has_tech = Bronya_DimensionBreaker_Research
+			}
+		}
+	}
+
+	BH3_tech_Seele_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Seele_menu"
+		visible = { check_variable = { BH3_tech_Seele_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Seele_SwallowtailPhantasm_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Seele_equipment_1_desc
+				custom_effect_tooltip = tech_effect|Seele_SwallowtailPhantasm_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_1_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 41 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						16 = { scoped_sound_effect = Seele_tech_sel_voice1 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice2 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice3 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice4 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice5 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice6 }
+						14 = { scoped_sound_effect = Seele_tech_sel_voice7 }
+					}
+				}
+			}
+			BH3_tech_leader_Seele_SwallowtailPhantasm_btn_click = {
+				random_list = {
+					16 = { scoped_sound_effect = Seele_tech_sel_voice1 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice2 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice3 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice4 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice5 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice6 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice7 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Seele_SwallowtailPhantasm
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Seele_SwallowtailPhantasm } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Seele_StygianNymph_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Seele_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Seele_StygianNymph_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 42 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						12 = { scoped_sound_effect = Seele_tech_sel_voice1 }
+						12 = { scoped_sound_effect = Seele_tech_sel_voice2 }
+						12 = { scoped_sound_effect = Seele_tech_sel_voice3 }
+						12 = { scoped_sound_effect = Seele_tech_sel_voice4 }
+						12 = { scoped_sound_effect = Seele_tech_sel_voice5 }
+						12 = { scoped_sound_effect = Seele_tech_sel_voice6 }
+						28 = { scoped_sound_effect = Seele_tech_sel_voice7 }
+					}
+				}
+			}
+			BH3_tech_leader_Seele_StygianNymph_btn_click = {
+				random_list = {
+					16 = { scoped_sound_effect = Seele_tech_sel_voice1 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice2 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice3 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice4 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice5 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice6 }
+					14 = { scoped_sound_effect = Seele_tech_sel_voice7 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Seele_StygianNymph
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Seele_StygianNymph } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Seele_StarchasmNyx_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Seele_equipment_3_desc
+				custom_effect_tooltip = tech_effect|Seele_StarchasmNyx_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 43 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						33 = { scoped_sound_effect = SeeleB_tech_sel_voice1 }
+						33 = { scoped_sound_effect = SeeleB_tech_sel_voice2 }
+						34 = { scoped_sound_effect = SeeleB_tech_sel_voice3 }
+					}
+				}
+			}
+			BH3_tech_leader_Seele_StarchasmNyx_btn_click = {
+				random_list = {
+					33 = { scoped_sound_effect = SeeleB_tech_sel_voice1 }
+					33 = { scoped_sound_effect = SeeleB_tech_sel_voice2 }
+					34 = { scoped_sound_effect = SeeleB_tech_sel_voice3 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Seele_StarchasmNyx
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Seele_StarchasmNyx } }
+						}
+						log = ""
+					}
+				}
+			}
+
+		}
+		triggers = {
+			BH3_tech_Seele_SwallowtailPhantasm_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Seele_SwallowtailPhantasm_Research }
+				has_tech = Bronya_ValkyrieChariot_Research
+			}
+			BH3_tech_Seele_StygianNymph_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Seele_StygianNymph_Research }
+				has_tech = Seele_SwallowtailPhantasm_Research
+			}
+			BH3_tech_Seele_StarchasmNyx_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Seele_StarchasmNyx_Research }
+				has_tech = Seele_SwallowtailPhantasm_Research
+			}
+		}
+	}
+
+	BH3_tech_Theresa_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Theresa_menu"
+		visible = { check_variable = { BH3_tech_Theresa_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Theresa_StarlitAstrologos_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Theresa_equipment_1_desc
+				custom_effect_tooltip = tech_effect|Theresa_StarlitAstrologos_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 51 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						33 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice1 }
+						33 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice2 }
+						34 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice3 }
+					}
+				}
+			}
+			BH3_tech_Theresa_Mars_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Theresa_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Theresa_Mars_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 52 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice1 }
+						33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice2 }
+						33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice3 }
+					}
+				}
+			}
+			BH3_tech_Theresa_LunarVowCrimsonLove_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Theresa_equipment_3_desc
+				custom_effect_tooltip = tech_effect|Theresa_LunarVowCrimsonLove_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 53 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice1 }
+						25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice2 }
+						25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice3 }
+						25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice4 }
+					}
+				}
+			}
+
+			BH3_tech_leader_Theresa_StarlitAstrologos_btn_click = {
+				random_list = {
+					33 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice1 }
+					33 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice2 }
+					34 = { scoped_sound_effect = Theresa_StarlitAstrologos_tech_sel_voice3 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Theresa_StarlitAstrologos
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Theresa_StarlitAstrologos } }
+						}
+						log = ""
+					}
+				}
+			}
+			BH3_tech_leader_Theresa_Mars_btn_click = {
+				random_list = {
+					33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice1 }
+					33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice2 }
+					33 = { scoped_sound_effect = Theresa_Mars_tech_sel_voice3 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Theresa_Mars
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Theresa_Bishop } }
+						}
+						log = ""
+					}
+				}
+			}
+			BH3_tech_leader_Theresa_LunarVowCrimsonLove_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice1 }
+					25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice2 }
+					25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice3 }
+					25 = { scoped_sound_effect = Theresa_LunarVowCrimsonLove_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Theresa_LunarVowCrimsonLove
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_CT } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		
+		triggers = {
+			BH3_tech_Theresa_StarlitAstrologos_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Theresa_StarlitAstrologos_Research }
+				has_tech = Kiana_VoidDrifter_Research
+			}
+			BH3_tech_Theresa_Mars_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Theresa_Mars_Research }
+				has_tech = Theresa_StarlitAstrologos_Research
+			}
+			BH3_tech_Theresa_LunarVowCrimsonLove_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Theresa_LunarVowCrimsonLove_Research }
+				has_tech = Theresa_StarlitAstrologos_Research
+			}
+		}
+	}
+
+	BH3_tech_Fuka_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Fuka_menu"
+		visible = { check_variable = { BH3_tech_Fuka_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Fuka_ShadowKnight_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Fuka_equipment_2_desc
+				custom_effect_tooltip = tech_effect|Fuka_ShadowKnight_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_2_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 62 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						20 = { scoped_sound_effect = Fuka_tech_sel_voice1 }
+						20 = { scoped_sound_effect = Fuka_tech_sel_voice2 }
+						20 = { scoped_sound_effect = Fuka_tech_sel_voice3 }
+						20 = { scoped_sound_effect = Fuka_tech_sel_voice4 }
+						20 = { scoped_sound_effect = Fuka_tech_sel_voice5 }
+					}
+				}
+			}
+			BH3_tech_leader_Fuka_ShadowKnight_btn_click = {
+				random_list = {
+					20 = { scoped_sound_effect = Fuka_tech_sel_voice1 }
+					20 = { scoped_sound_effect = Fuka_tech_sel_voice2 }
+					20 = { scoped_sound_effect = Fuka_tech_sel_voice3 }
+					20 = { scoped_sound_effect = Fuka_tech_sel_voice4 }
+					20 = { scoped_sound_effect = Fuka_tech_sel_voice5 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Fuka_ShadowKnight
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Fuka_ShadowKnight } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_Fuka_AzureEmpyrea_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Fuka_equipment_3_desc
+				custom_effect_tooltip = tech_effect|Fuka_AzureEmpyrea_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 63 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice1 }
+						17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice2 }
+						17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice3 }
+						17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice4 }
+						17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice5 }
+						15 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice6 }
+					}
+				}
+			}
+			BH3_tech_leader_Fuka_AzureEmpyrea_btn_click = {
+				random_list = {
+					17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice1 }
+					17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice2 }
+					17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice3 }
+					17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice4 }
+					17 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice5 }
+					15 = { scoped_sound_effect = Fuka_AzureEmpyrea_tech_sel_voice6 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Fuka_AzureEmpyrea
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Fuka_AzureEmpyrea } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Fuka_ShadowKnight_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Fuka_ShadowKnight_Research }
+				has_tech = Kiana_VoidDrifter_Research
+			}
+			BH3_tech_Fuka_AzureEmpyrea_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Fuka_AzureEmpyrea_Research }
+				has_tech = Fuka_ShadowKnight_Research
+			}
+		}
+	}
+
+	BH3_tech_Eden_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_Eden_menu"
+		visible = { check_variable = { BH3_tech_Eden_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Eden_GoldenDiva_btn_click = { 
+				custom_effect_tooltip = Valkyrie_Eden_equipment_0_desc
+				custom_effect_tooltip = tech_effect|Eden_GoldenDiva_Research
+				custom_effect_tooltip = tech_effect|BH3_ValkyrieArmor_classis_3_tech_Research
+				hidden_effect = {
+					set_variable = { bh3_researching_tech_index = 71 }
+					set_variable = { BH3_tech_confirm_open = 1}
+					random_list = {
+						25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice1 }
+						25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice2 }
+						25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice3 }
+						25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice4 }
+					}
+				}
+			}
+			BH3_tech_leader_Eden_GoldenDiva_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice1 }
+					25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice2 }
+					25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice3 }
+					25 = { scoped_sound_effect = Eden_GoldenDiva_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Eden_GoldenDiva
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Eden_GoldenDiva } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		
+		triggers = {
+			BH3_tech_Eden_GoldenDiva_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { has_tech = Eden_GoldenDiva_Research }
+				has_tech = Kiana_KnightMoonbeam_Research
+			}
+		}
+	}
+
+	BH3_tech_HerrscherKiana_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_HerrscherKiana_menu"
+		visible = { check_variable = { BH3_tech_HerrscherKiana_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Kiana_HerrscherofVoid_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 100 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice4 }
+				}
+			}
+			BH3_tech_leader_Kiana_HerrscherofVoid_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofVoid_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_HerrscherofVoid
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_HerrscherofVoid } }
+						}
+						log = ""
+					}
+				}
+			}
+			BH3_tech_Kiana_HerrscherofFlamescion_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 101 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					40 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice1 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice2 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice3 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice4 }
+				}
+			}
+			BH3_tech_leader_Kiana_HerrscherofFlamescion_btn_click = {
+				random_list = {
+					40 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice1 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice2 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice3 }
+					20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_HerrscherofFlamescion
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion } }
+						}
+						log = ""
+					}
+				}
+			}
+
+			BH3_tech_leader_Kiana_HerrscherofFinality_btn_click = {
+				# random_list = {
+				# 	40 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice1 }
+				# 	20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice2 }
+				# 	20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice3 }
+				# 	20 = { scoped_sound_effect = HerrscherofFlamescion_tech_sel_voice4 }
+				# }
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Kiana_HerrscherofFinality
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Kiana_HerrscherofFinality } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Kiana_HerrscherofVoid_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Kiana_HerrscherofVoid_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+			BH3_tech_Kiana_HerrscherofFlamescion_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Kiana_HerrscherofFlamescion_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+			BH3_tech_Kiana_HerrscherofFinality_btn_click_enabled = {
+				always = no
+			}
+		}
+	}
+
+	BH3_tech_HerrscherMei_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_HerrscherMei_menu"
+		visible = { check_variable = { BH3_tech_HerrscherMei_menu_open = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Mei_HerrscherofThunder_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 110 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice4 }
+				}
+			}
+			BH3_tech_leader_Mei_HerrscherofThunder_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofThunder_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Mei_HerrscherofThunder
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Mei_HerrscherofThunder } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Mei_HerrscherofThunder_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Mei_HerrscherofThunder_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+			BH3_tech_Mei_HerrscherofOrigin_btn_click_enabled = {
+				always = no
+			}
+		}
+	}
+
+	BH3_tech_HerrscherBronya_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_HerrscherBronya_menu"
+		visible = { check_variable = { BH3_tech_HerrscherBronya_menu = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Bronya_HerrscherofReason_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 120 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice4 }
+				}
+			}
+			BH3_tech_leader_Bronya_HerrscherofReason_btn_click = {
+				random_list = {
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice1 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice2 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice3 }
+					25 = { scoped_sound_effect = HerrscherofReason_tech_sel_voice4 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Bronya_HerrscherofReason
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Bronya_HerrscherofReason } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Bronya_HerrscherofReason_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Bronya_HerrscherofReason_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+			BH3_tech_Bronya_HerrscherofTruth_btn_click_enabled = {
+				always = no
+			}
+		}
+	}
+
+	BH3_tech_HerrscherSeele_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_HerrscherSeele_menu"
+		visible = { check_variable = { BH3_tech_HerrscherSeele_menu = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Seele_HerrscherofRebirth_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 130 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice1 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice2 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice3 }
+				}
+			}
+			BH3_tech_leader_Seele_HerrscherofRebirth_btn_click = {
+				random_list = {
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice1 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice2 }
+					33 = { scoped_sound_effect = HerrscherofRebirth_tech_sel_voice3 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Seele_HerrscherofRebirth
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Seele_HerrscherofRebirth } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Seele_HerrscherofRebirth_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Seele_HerrscherofRebirth_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+		}
+	}
+
+	BH3_tech_HerrscherElysia_menu = {
+		context_type = player_context
+		window_name = "BH3_tech_HerrscherElysia_menu"
+		visible = { check_variable = { BH3_tech_HerrscherElysia_menu = 1 } }
+		parent_window_name = "BH3_main_menu" 
+
+		effects = {
+			BH3_tech_Elysia_HerrscherofHuman_btn_click = { 
+				set_variable = { bh3_researching_tech_index = 140 }
+				set_variable = { BH3_tech_confirm_open = 1}
+				random_list = {
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice1 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice2 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice3 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice4 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice5 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice6 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice7 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice8 }
+				}
+			}
+			BH3_tech_leader_Elysia_HerrscherofHuman_btn_click = {
+				random_list = {
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice1 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice2 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice3 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice4 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice5 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice6 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice7 }
+					12 = { scoped_sound_effect = HerrscherofHuman_tech_sel_voice8 }
+				}
+				var:country_leader = {
+					meta_effect = {
+						text = {
+							set_character_name = BH3_leader_Elysia_HerrscherofHuman
+							set_portraits = { civilian = { large = GFX_BH3_unit_leader_Elysia_HerrscherofHuman } }
+						}
+						log = ""
+					}
+				}
+			}
+		}
+		triggers = {
+			BH3_tech_Elysia_HerrscherofHuman_btn_click_enabled = {
+				check_variable = { BH3_researching = 0 }
+				NOT = { 
+					check_variable = { global.threat < 0.4 }
+					has_tech = Elysia_HerrscherofHuman_Research 
+					#崩坏入侵模式禁律者
+					has_global_flag = BH3_Forbid_Herrscher
+				}
+			}
+		}
+	}
+
+	###### 确认界面 #####
+	BH3_tech_confirm_window = { 
+		context_type = player_context
+		window_name = "BH3_tech_confirm_window"
+		visible = { check_variable = { BH3_tech_confirm_open = 1 } }
+	
+		effects = {
+			BH3_confirm_yes_btn_click = {
+				BH3_start_research = yes
+				set_variable = { BH3_tech_confirm_open = 0 }
+			}
+			BH3_confirm_no_btn_click = {
+				set_variable = { BH3_tech_confirm_open = 0 }
+			}
+		}
+	}
+
+	###### 作战学说 #####
+	BH3_Valkyrie_Doctrine = { 
+		context_type = player_context
+		window_name = "BH3_Valkyrie_Doctrine" 
+		parent_window_name = "BH3_main_menu"
+		visible = { has_country_flag = BH3_Valkyrie_Doctrine_on  }
+
+		effects = {
+			BH3_Valkyrie_Doctrine_Treeview_btn_X_click = {
+				clr_country_flag = BH3_Valkyrie_Doctrine_on
+			}
+		}
+	}
+
+	BH3_Valkyrie_Doctrine_Treeview = { 
+		context_type = player_context
+		window_name = "BH3_Valkyrie_Doctrine_Treeview" 
+		parent_window_name = "BH3_main_menu"
+		visible = { has_country_flag = BH3_Valkyrie_Doctrine_on  }
+		
+		effects = {
+			BH3_Valkyrie_Doctrine_0_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_0_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_0 
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_0 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_0 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_0_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_1_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_3_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_3_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_3
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_3 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_3 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_3_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_4_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_4_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_4_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_4_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_4_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_4_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_1_4_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_4_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_4_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_4_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_4_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_4_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_5_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_5_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_5_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_5_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_5_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_5_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_1_5_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_5_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_5_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_5_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_5_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_5_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_1_6_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_6_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_6_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_6_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_6_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_6_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_1_6_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_1_6_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_1_6_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_1_6_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_1_6_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_1_6_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_2_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_1_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_2_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_2_3_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_3_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_3
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_3 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_3 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_3_btn_frame = 2 }
+					}
+				}
+			}
+	
+			BH3_Valkyrie_Doctrine_2_4_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_4_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_4_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_4_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_4_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_4_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_2_4_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_4_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_4_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_4_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_4_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_4_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_2_5_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_5_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_5_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_5_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_5_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_5_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_2_5_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_5_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_5_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_5_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_5_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_5_2_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_2_6_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_2_6_ett
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_2_5_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_2_6 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_2_6 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_2_6_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_3_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_1_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_3_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_2_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_3_3_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_3_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_3
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_3 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_3 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_3_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_3_4_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_4_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_4
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_4 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_4 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_4_btn_frame = 2 }
+					}
+				}
+			}			
+
+			BH3_Valkyrie_Doctrine_3_5_1_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_5_1_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_5_1
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_5_1 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_5_1 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_5_1_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_3_5_2_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_5_2_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_5_2
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_5_2 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_5_2 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_5_2_btn_frame = 2 }
+					}
+				}
+			}
+			
+			BH3_Valkyrie_Doctrine_3_6_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_3_6_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_3_6
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_3_6 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_3_6 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_3_6_btn_frame = 2 }
+					}
+				}
+			}
+
+			BH3_Valkyrie_Doctrine_10_btn_click = { 
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_at_least_xp
+				custom_effect_tooltip = BH3_Valkyrie_Doctrine_10_ett 
+				custom_effect_tooltip = tech_effect|BH3_Valkyrie_Doctrine_10
+				hidden_effect = {
+					if = { 
+						limit = { 
+							NOT = { has_tech = BH3_Valkyrie_Doctrine_10 } 
+							check_variable = { army_experience > 149 }
+						}
+						army_experience = -150
+						
+						set_technology = {
+							BH3_Valkyrie_Doctrine_10 = 1
+						}
+						set_variable = { BH3_Valkyrie_Doctrine_10_btn_frame = 2 }
+					}
+				}
+			}
+
+		}
+		triggers = {
+			BH3_Valkyrie_Doctrine_0_btn_click_enabled = {
+				always = yes
+			}
+			BH3_Valkyrie_Doctrine_1_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_0
+			}
+			BH3_Valkyrie_Doctrine_1_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_1
+			}
+			BH3_Valkyrie_Doctrine_1_3_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_2
+			}
+			BH3_Valkyrie_Doctrine_1_4_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_3
+			}
+			BH3_Valkyrie_Doctrine_1_4_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_3
+			}
+			BH3_Valkyrie_Doctrine_1_5_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_4_1
+			}
+			BH3_Valkyrie_Doctrine_1_5_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_4_2
+			}
+			BH3_Valkyrie_Doctrine_1_6_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_5_1
+			}
+			BH3_Valkyrie_Doctrine_1_6_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_1_5_2
+			}
+			BH3_Valkyrie_Doctrine_2_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_0
+			}
+			BH3_Valkyrie_Doctrine_2_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_1
+			}
+			BH3_Valkyrie_Doctrine_2_3_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_2
+			}
+			BH3_Valkyrie_Doctrine_2_4_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_3
+			}
+			BH3_Valkyrie_Doctrine_2_4_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_3
+			}
+			BH3_Valkyrie_Doctrine_2_5_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_4_1
+			}
+			BH3_Valkyrie_Doctrine_2_5_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_2_4_2
+			}
+			BH3_Valkyrie_Doctrine_2_6_btn_click_enabled = {
+				OR = {
+					has_tech = BH3_Valkyrie_Doctrine_2_5_1
+					has_tech = BH3_Valkyrie_Doctrine_2_5_2
+				}
+			}
+			BH3_Valkyrie_Doctrine_3_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_0
+			}
+			BH3_Valkyrie_Doctrine_3_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_3_1
+			}
+			BH3_Valkyrie_Doctrine_3_3_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_3_2
+			}
+			BH3_Valkyrie_Doctrine_3_4_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_3_3
+			}
+			BH3_Valkyrie_Doctrine_3_5_1_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_3_4
+				NOT = { has_tech = BH3_Valkyrie_Doctrine_3_5_2 }
+			}
+			BH3_Valkyrie_Doctrine_3_5_2_btn_click_enabled = {
+				has_tech = BH3_Valkyrie_Doctrine_3_4
+				NOT = { has_tech = BH3_Valkyrie_Doctrine_3_5_1 }
+			}
+			BH3_Valkyrie_Doctrine_3_6_btn_click_enabled = {
+				OR = {
+					has_tech = BH3_Valkyrie_Doctrine_3_5_1
+					has_tech = BH3_Valkyrie_Doctrine_3_5_2
+				}
+			}
+			BH3_Valkyrie_Doctrine_10_btn_click_enabled = {
+				AND = {
+					has_tech = BH3_Valkyrie_Doctrine_1_5_1
+					has_tech = BH3_Valkyrie_Doctrine_1_5_2
+					has_tech = BH3_Valkyrie_Doctrine_2_6
+					has_tech = BH3_Valkyrie_Doctrine_3_6
+				}
+			}
+		}
+		properties = {
+			BH3_Valkyrie_Doctrine_0_btn = { frame = BH3_Valkyrie_Doctrine_0_btn_frame }
+			BH3_Valkyrie_Doctrine_1_1_btn = { frame = BH3_Valkyrie_Doctrine_1_1_btn_frame }
+			BH3_Valkyrie_Doctrine_1_2_btn = { frame = BH3_Valkyrie_Doctrine_1_2_btn_frame }
+			BH3_Valkyrie_Doctrine_1_3_btn = { frame = BH3_Valkyrie_Doctrine_1_3_btn_frame }
+			BH3_Valkyrie_Doctrine_1_4_1_btn = { frame =BH3_Valkyrie_Doctrine_1_4_1_btn_frame }
+			BH3_Valkyrie_Doctrine_1_4_2_btn = { frame =BH3_Valkyrie_Doctrine_1_4_2_btn_frame }
+			BH3_Valkyrie_Doctrine_1_5_1_btn = { frame =BH3_Valkyrie_Doctrine_1_5_1_btn_frame }
+			BH3_Valkyrie_Doctrine_1_5_2_btn = { frame =BH3_Valkyrie_Doctrine_1_5_2_btn_frame }
+			BH3_Valkyrie_Doctrine_1_6_1_btn = { frame =BH3_Valkyrie_Doctrine_1_6_1_btn_frame }
+			BH3_Valkyrie_Doctrine_1_6_2_btn = { frame =BH3_Valkyrie_Doctrine_1_6_2_btn_frame }
+			BH3_Valkyrie_Doctrine_2_1_btn = { frame = BH3_Valkyrie_Doctrine_2_1_btn_frame }
+			BH3_Valkyrie_Doctrine_2_2_btn = { frame = BH3_Valkyrie_Doctrine_2_2_btn_frame }
+			BH3_Valkyrie_Doctrine_2_3_btn = { frame = BH3_Valkyrie_Doctrine_2_3_btn_frame }
+			BH3_Valkyrie_Doctrine_2_4_1_btn = { frame =BH3_Valkyrie_Doctrine_2_4_1_btn_frame }
+			BH3_Valkyrie_Doctrine_2_4_2_btn = { frame =BH3_Valkyrie_Doctrine_2_4_2_btn_frame }
+			BH3_Valkyrie_Doctrine_2_5_1_btn = { frame =BH3_Valkyrie_Doctrine_2_5_1_btn_frame }
+			BH3_Valkyrie_Doctrine_2_5_2_btn = { frame =BH3_Valkyrie_Doctrine_2_5_2_btn_frame }
+			BH3_Valkyrie_Doctrine_2_6_btn = { frame = BH3_Valkyrie_Doctrine_2_6_btn_frame }
+			BH3_Valkyrie_Doctrine_3_1_btn = { frame = BH3_Valkyrie_Doctrine_3_1_btn_frame }
+			BH3_Valkyrie_Doctrine_3_2_btn = { frame = BH3_Valkyrie_Doctrine_3_2_btn_frame }
+			BH3_Valkyrie_Doctrine_3_3_btn = { frame = BH3_Valkyrie_Doctrine_3_3_btn_frame }
+			BH3_Valkyrie_Doctrine_3_4_btn = { frame = BH3_Valkyrie_Doctrine_3_4_btn_frame }
+			BH3_Valkyrie_Doctrine_3_5_1_btn = { frame =BH3_Valkyrie_Doctrine_3_5_1_btn_frame }
+			BH3_Valkyrie_Doctrine_3_5_2_btn = { frame =BH3_Valkyrie_Doctrine_3_5_2_btn_frame }
+			BH3_Valkyrie_Doctrine_3_6_btn = { frame = BH3_Valkyrie_Doctrine_3_6_btn_frame }
+			BH3_Valkyrie_Doctrine_10_btn = { frame = BH3_Valkyrie_Doctrine_10_btn_frame }
+		}
+	}
+}

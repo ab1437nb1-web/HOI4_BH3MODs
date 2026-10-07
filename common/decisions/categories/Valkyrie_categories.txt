@@ -1,0 +1,57 @@
+BH3_BHS_Invasion_decisions_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	#picture = GFX_decision_cat_BHS_Invasion
+	priority = 99999
+	allowed = { always = yes }
+	visible = { always = yes }
+	visible_when_empty = yes
+}
+
+
+BH3_decisions_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	picture = GFX_decision_cat_HonkaiImpact3_pic
+	allowed = { always = yes }
+	visible = { always = yes }
+	visible_when_empty = yes
+	priority = 99998
+}
+
+BH3_cultivate_decisions_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_Hyperion_enabled }
+	visible_when_empty = yes
+	scripted_gui = BH3_cultivate_decision_window
+	priority = 99997
+}
+
+BH3_TheDivineKeys_decisions_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	picture = GFX_decision_cat_TheDivineKeys
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_Hyperion_enabled }
+	visible_when_empty = yes
+	priority = 99996
+}
+
+BH3_debug_decisions_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	allowed = { is_debug = yes }
+	visible = { is_debug = yes }
+	priority = 99995
+}
+BH3_ElysianRealm_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	picture = GFX_decision_cat_TheDivineKeys
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+	visible_when_empty = yes
+	priority = 99994
+}
+BH3_ElysianRealm_debug_group = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	allowed = { is_debug = yes }
+	visible = { is_debug = yes }
+	priority = 99993
+}

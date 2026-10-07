@@ -1,0 +1,195 @@
+ideas = {
+	country = {
+
+		BH3_sp_Void_Archives_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 2
+				line_change_production_efficiency_factor = 0.25		#生产效率保持
+				production_factory_efficiency_gain_factor = 0.25	#生产效率增长
+				industrial_capacity_factory = 0.25				 	#工厂产出
+				industrial_capacity_dockyard = 2					#海军船坞产出
+				industry_repair_factor = 0.5						#工厂修复速度
+				industry_free_repair_factor = 0.5					#免费维修
+			}
+		}
+
+		BH3_sp_ThousandKey_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = 0.5
+				naval_speed_factor = 0.5
+				production_speed_buildings_factor = 0.5
+			}
+		}
+
+		BH3_sp_AbyssFlower_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_strength_factor = 1
+				army_org_factor = 0.25
+				army_morale = 2
+				experience_loss_factor = -1
+				weekly_manpower = 10000
+				war_support_weekly = 0.05
+			}
+		}
+
+		BH3_sp_FenghuangDown_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				opinion_gain_monthly_factor = 9.99						#改善关系
+				opinion_gain_monthly_same_ideology_factor = 9.99		#相同意识形态每月关系变化
+				improve_relations_maintain_cost_factor = -9.99
+				resistance_target = -9.99								#抵抗目标
+				# compliance_gain = 9.99									#每日顺从度增长
+				own_operative_detection_chance_factor = -9.99			#特工被发现几率
+				enemy_operative_detection_chance_factor = 9.99			#敌方特工被发现几率
+				own_operative_capture_chance_factor = -9.99				#我方特工被捕几率
+				enemy_operative_capture_chance_factor = 9.99			#敌方特工被捕几率
+				army_intel_to_others = -9.99							#泄露给他国的陆军情报
+				navy_intel_to_others = -9.99							#泄露给他国的海军情报
+				airforce_intel_to_others = -9.99						#泄露给他国的空军情报
+				civilian_intel_to_others = -9.99						#泄露给他国的民政情报
+				resistance_decay = 9.99									#抵抗下降速度
+				resistance_growth = -9.99								#抵抗增长速度
+				# compliance_growth = 9.99								#顺从度增长速度
+				resistance_garrison_penetration_chance = -9.99			#驻军渗透机会
+				root_out_resistance_effectiveness_factor = 9.99			#根除抵抗组织任务效率
+				boost_resistance_factor = 9.99							#加强抵抗组织效率
+				control_trade_mission_factor = 9.99						#控制贸易任务成果
+				diplomatic_pressure_mission_factor = 9.99				#外交施压任务成果
+				propaganda_mission_factor = 9.99						#政治宣传任务成果
+				boost_ideology_mission_factor = 9.99					#加强意识形态任务成果
+
+				experience_gain_army_unit_factor = 9.99
+				army_org_factor = 0.1
+				industrial_capacity_factory = 0.1				 	#工厂产出
+				weekly_manpower = 10000
+				conscription_factor = 0.25
+			}
+		}
+		BH3_sp_JudgementofShamash_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.25
+				land_night_attack = 0.5
+				org_loss_at_low_org_factor = -0.5
+				land_reinforce_rate = 0.1
+				industrial_capacity_factory = 0.25				 	#工厂产出
+			}
+		}
+
+		BH3_sp_OathofJudah_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				air_superiority_efficiency = 2						#夺取制空权任务效率
+				air_escort_efficiency = 2							#护航效率
+				air_intercept_efficiency = 2						#截击任务效率
+				air_cas_efficiency = 2								#空中支援任务效率
+				air_nav_efficiency = 2								#对海任务效率
+				air_mission_efficiency = 2							#空军任务效率
+				air_strategic_bomber_bombing_factor = 2				#战略轰炸
+				air_strategic_bomber_night_penalty = -2				#夜间战略轰炸惩罚
+				strategic_bomb_visibility = -2						#战略轰炸可见度
+				ground_attack = 1									#对地攻击
+				ground_attack_factor = 0.25							#对地攻击修正
+				air_cas_present_factor = 0.25						#地面支援
+				air_night_penalty = -2								#夜间行动惩罚
+				air_weather_penalty = -2							#不良天气惩罚
+
+				army_defence_factor = 2
+			}
+		}
+
+		BH3_sp_SevenThundersofRetribution_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				air_accidents = -1									#空军事故概率
+				air_accidents_factor = -1							#空军事故概率
+				air_detection = 2									#对空探测
+				air_attack_factor = 1								#对空攻击
+				air_defence_factor = 1								#空中防御
+				air_agility_factor = 1								#机动
+				air_bombing_targetting = 1							#对地攻击瞄准
+				air_range_factor = 2								#空军航程
+				air_maximum_speed_factor = 1						#空军最大速度
+				army_bonus_air_superiority_factor = 1				#空优
+				enemy_army_bonus_air_superiority_factor = -1		#敌方空中支援
+				air_superiority_detect_factor = 1					#战机侦测能力
+				air_interception_detect_factor = 1					#截击侦测能力
+				air_superiority_bonus_in_combat = 1					#战斗中空优加成
+
+				production_speed_buildings_factor = 0.25			#建造速度	
+				production_factory_max_efficiency_factor = 0.25		#生产效率上限
+				industrial_capacity_factory = 0.5					#工厂产出
+			}
+		}
+		BH3_sp_StarofEden_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 1				#工厂建造速度
+				global_building_slots_factor = 10					#地区最大工业值
+				local_resources_factor = 3
+				
+			}
+		}
+		BH3_sp_StarofEden_to_enemy_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = -9.99
+				air_range_factor = -0.80
+				production_speed_buildings_factor = -9.99				#工厂建造速度
+				local_resources_factor = -9.99	
+			}
+		}
+
+		BH3_sp_JizoMitama_idea = {
+			allowed = {
+				always = yes
+			}
+			modifier = {
+				agency_upgrade_time = -9.99									#情报机构升级时
+				army_intel_decryption_bonus = 999							#破译陆军密码加成
+				navy_intel_decryption_bonus = 999							#破译海军密码加成
+				airforce_intel_decryption_bonus = 999						#破译的空军密码加成
+				civilian_intel_decryption_bonus = 999						#破译的民政密码加成
+				own_operative_intel_extraction_rate = -9.99					#情报获取率
+				intelligence_agency_defense = 100							#反间谍
+				decryption_power = 9.99										#破译能力
+				decryption_power_factor = 9.99								#破译能力修正
+				crypto_strength = 9.99										#加密等级
+				intel_network_gain = 9.99									#情报网强度增长
+				intel_network_gain_factor = 9.99							#情报网强度增长
+				enemy_intel_network_gain_factor_over_occupied_tag = -9.99	#敌方情报网强度增长
+				operation_cost = -9.99										#行动花费
+				operation_infiltrate_outcome = 9.99							#渗透效率
+				operation_outcome = 9.99									#行动效率
+				operative_slot = 5
+				research_speed_factor = 0.25
+				industrial_capacity_factory = 0.25						 	#工厂产出
+				max_command_power_mult = 1
+				command_power_gain = 100
+				command_abilities_cost_factor = -0.5
+			}
+		}
+	}
+}

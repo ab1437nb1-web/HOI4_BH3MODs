@@ -1,0 +1,257 @@
+spriteTypes = {
+
+    #琪亚娜
+    spriteType = {
+        name = "GFX_BH3_unit_leader_10_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_WhiteComet_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_11_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_VoidDrifter_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_12_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_KnightMoonbeam_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_13_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofVoid2_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_14_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFlamescion_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_15_medium"
+        texturefile = "gfx/leaders/Portrait_Kiana_HerrscherofFinality_medium.dds"
+    }
+
+    #芽衣
+    spriteType = {
+        name = "GFX_BH3_unit_leader_20_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_CrimsonImpuls_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_21_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_StrikerFulminata_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_22_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_23_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_DanzaiSpectramancer2_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_24_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofThunder_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_25_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_HerrscherofOrigin_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_26_medium"
+        texturefile = "gfx/leaders/Portrait_Mei_Captain_medium.dds"
+    }
+
+    #布洛妮娅
+    spriteType = {
+        name = "GFX_BH3_unit_leader_30_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_ValkyrieChariot_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_31_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_YamabukiArmor_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_32_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_BlackNucleus_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_33_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_DimensionBreaker_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_34_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofReason_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_35_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_HerrscherofTruth_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_36_medium"
+        texturefile = "gfx/leaders/Portrait_Bronya_SilverWingN-EX_medium.dds"
+    }
+
+    #希儿
+    spriteType = {
+        name = "GFX_BH3_unit_leader_40_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_SwallowtailPhantasm_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_41_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_42_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymph2_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_43_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_HerrscherofRebirth_medium.dds"
+    }
+
+    #黑希
+    spriteType = {
+        name = "GFX_BH3_unit_leader_50_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_StygianNymphBlack_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_51_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_52_medium"
+        texturefile = "gfx/leaders/Portrait_Seele_StarchasmNyx2_medium.dds"
+    }
+
+    #德丽莎
+    spriteType = {
+        name = "GFX_BH3_unit_leader_60_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_ValkyriePledge_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_61_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_VioletExecuter_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_62_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_TwilightPaladin_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_63_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_Bishop_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_64_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_SchicksalsImperative_medium.dds"
+    }
+
+    #月下
+    spriteType = {
+        name = "GFX_BH3_unit_leader_70_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_71_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunaKindred2_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_72_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_73_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_LunarVowCrimsonLove2_medium.dds"
+    }
+
+    #观星
+    spriteType = {
+        name = "GFX_BH3_unit_leader_80_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_81_medium"
+        texturefile = "gfx/leaders/Portrait_Theresa_StarlitAstrologos2_medium.dds"
+    }
+
+    #符华
+    spriteType = {
+        name = "GFX_BH3_unit_leader_90_medium"
+        texturefile = "gfx/leaders/Portrait_Fuka_ValkyrieAccipiter_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_91_medium"
+        texturefile = "gfx/leaders/Portrait_Fuka_ShadowKnight_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_92_medium"
+        texturefile = "gfx/leaders/Portrait_Fuka_AzureEmpyrea_medium.dds"
+    }
+
+    spriteType = {
+        name = "GFX_BH3_unit_leader_93_medium"
+        texturefile = "gfx/leaders/Portrait_Fuka_FenghuangofVicissitudes_medium.dds"
+    }
+
+
+    #幽兰戴尔
+    spriteType = {
+        name = "GFX_BH3_unit_leader_100_medium"
+        texturefile = "gfx/leaders/Portrait_Durandal_ValkyrieGloria_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_101_medium"
+        texturefile = "gfx/leaders/Portrait_Durandal_BrightKnightExcelsis_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_102_medium"
+        texturefile = "gfx/leaders/Portrait_Durandal_DeaAnchora_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_103_medium"
+        texturefile = "gfx/leaders/Portrait_Durandal_PalatinusEquinox_medium.dds"
+    }
+
+    #丽塔
+    spriteType = {
+        name = "GFX_BH3_unit_leader_110_medium"
+        texturefile = "gfx/leaders/Portrait_Rita_PhantomIron_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_111_medium"
+        texturefile = "gfx/leaders/Portrait_Rita_ArgentKnightArtemis_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_112_medium"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_113_medium"
+        texturefile = "gfx/leaders/Portrait_Rita_SpinaAstera2_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_114_medium"
+        texturefile = "gfx/leaders/Portrait_Rita_NoneName_medium.dds"
+    }
+
+    #伊甸
+    spriteType = {
+        name = "GFX_BH3_unit_leader_120_medium"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva_medium.dds"
+    }
+    spriteType = {
+        name = "GFX_BH3_unit_leader_121_medium"
+        texturefile = "gfx/leaders/Portrait_Eden_GoldenDiva2_medium.dds"
+    }
+    
+
+
+
+
+
+}
+

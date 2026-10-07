@@ -1,0 +1,13 @@
+
+############添加一个飞机装备就进入千禧黎明就闪退，不理解
+
+# sub_units = {
+#     BH3_Honkai_Fission_Bomb_missile = {
+#         sprite = heavy_plane             
+#         priority = 998
+#         active = yes
+#         type = air_transport
+#         need = { Honkai_Fission_Bomb_equipment = 1 }   	
+#         land_air_wing_size = 10
+#     }
+# }

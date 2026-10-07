@@ -1,0 +1,415 @@
+scripted_gui = {
+	
+	############ 崩坏爆发大事件 #############
+	BH3_BHS_invasion_start_event = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_invasion_start_event"
+		visible = { 
+			has_country_flag = BHS_Start_event
+		}
+		
+		effects = {
+			BH3_BHS_invasion_start_event_btn_click = {
+				clr_country_flag = BHS_Start_event
+			}
+		}
+	}
+	############ 崩坏结束大事件 #############
+	BH3_BHS_invasion_end_event = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_invasion_end_event"
+		visible = { 
+			has_country_flag = BHS_End_event
+		}
+		
+		effects = {
+			BH3_BHS_invasion_end_event_btn_click = {
+				clr_country_flag = BHS_End_event
+				set_global_flag = BHS_Invasion_Event_End
+			}
+		}
+	}
+
+	############ 崩坏入侵大事件 #############
+	BH3_BHS_Invasion_Event_HI1_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI1_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HI1_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI1_Come_btn_click = {
+				clr_country_flag = BHS_Event_HI1_Come
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI2_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI2_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HI2_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI2_Come_btn_click = {
+				clr_country_flag = BHS_Event_HI2_Come
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI3_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI3_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HI3_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI3_Come_btn_click = {
+				clr_country_flag = BHS_Event_HI3_Come
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HI6_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI6_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HI6_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI6_Come_btn_click = {
+				clr_country_flag = BHS_Event_HI6_Come
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI7_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI7_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HI7_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI7_Come_btn_click = {
+				clr_country_flag = BHS_Event_HI7_Come
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HH2_Come = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HH2_Come"
+		visible = { 
+			has_country_flag = BHS_Event_HH2_Come
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HH2_Come_btn_click = {
+				clr_country_flag = BHS_Event_HH2_Come
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HI1_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI1_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HI1_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI1_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HI1_Beaten
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI2_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI2_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HI2_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI2_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HI2_Beaten
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI3_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI3_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HI3_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI3_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HI3_Beaten
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HI6_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI6_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HI6_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI6_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HI6_Beaten
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI7_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI7_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HI7_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI7_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HI7_Beaten
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HH2_Beaten = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HH2_Beaten"
+		visible = { 
+			has_country_flag = BHS_Event_HH2_Beaten
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HH2_Beaten_btn_click = {
+				clr_country_flag = BHS_Event_HH2_Beaten
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HI1_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI1_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HI1_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI1_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HI1_Reward
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI2_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI2_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HI2_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI2_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HI2_Reward
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI3_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI3_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HI3_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI3_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HI3_Reward
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HI6_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI6_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HI6_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI6_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HI6_Reward
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_HI7_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HI7_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HI7_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HI7_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HI7_Reward
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_HH2_Reward = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_HH2_Reward"
+		visible = { 
+			has_country_flag = BHS_Event_HH2_Reward
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_HH2_Reward_btn_click = {
+				clr_country_flag = BHS_Event_HH2_Reward
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_MoonBattleStart = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_MoonBattleStart"
+		visible = { 
+			has_country_flag = BHS_Event_MoonBattleStart
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn1_click = {
+				clr_country_flag = BHS_Event_MoonBattleStart
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn2_click = {
+				clr_country_flag = BHS_Event_MoonBattleStart
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn3_click = {
+				clr_country_flag = BHS_Event_MoonBattleStart
+			}
+		}
+		triggers = {
+			# 崩坏投降倾向高0.7
+			BH3_BHS_Invasion_Event_title_MoonBattleStart1_visible = { 
+				OR = {
+					BHS = { surrender_progress > 0.7 }
+					has_global_flag = BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible_FLAG
+				}
+			}
+			GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart1_visible = { 
+				OR = {
+					BHS = { surrender_progress > 0.7 }
+					has_global_flag = BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible_FLAG
+				}
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible = { 
+				OR = {
+					BHS = { surrender_progress > 0.7 }
+					has_global_flag = BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible_FLAG
+				}
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn1_visible = { 
+				OR = {
+					BHS = { surrender_progress > 0.7 }
+					has_global_flag = BH3_BHS_Invasion_Event_MoonBattleStart_desc1_visible_FLAG
+				}
+			}
+
+			# 崩坏投降倾向未达要求，但律者全出来
+			BH3_BHS_Invasion_Event_title_MoonBattleStart2_visible = { 
+				has_global_flag = HI1_has_beaten
+				has_global_flag = HI2_has_beaten
+				has_global_flag = HI3_has_beaten
+				has_global_flag = HI6_has_beaten
+				has_global_flag = HI7_has_beaten
+				has_global_flag = HH2_has_beaten
+			}
+			GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart2_visible = { 
+				has_global_flag = HI1_has_beaten
+				has_global_flag = HI2_has_beaten
+				has_global_flag = HI3_has_beaten
+				has_global_flag = HI6_has_beaten
+				has_global_flag = HI7_has_beaten
+				has_global_flag = HH2_has_beaten
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_desc2_visible = { 
+				has_global_flag = HI1_has_beaten
+				has_global_flag = HI2_has_beaten
+				has_global_flag = HI3_has_beaten
+				has_global_flag = HI6_has_beaten
+				has_global_flag = HI7_has_beaten
+				has_global_flag = HH2_has_beaten
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn2_visible = { 
+				has_global_flag = HI1_has_beaten
+				has_global_flag = HI2_has_beaten
+				has_global_flag = HI3_has_beaten
+				has_global_flag = HI6_has_beaten
+				has_global_flag = HI7_has_beaten
+				has_global_flag = HH2_has_beaten
+			}
+
+			# 损失人口达到要求
+			BH3_BHS_Invasion_Event_title_MoonBattleStart3_visible = { 
+				has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			}
+			BH3_BHS_Invasion_Event_title_MoonBattleStart3_visible = { 
+				has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			}
+			GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart3_visible = { 
+				has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_desc3_visible = { 
+				has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			}
+			BH3_BHS_Invasion_Event_MoonBattleStart_btn3_visible = { 
+				has_global_flag = HonkaiImpact_Cause_Population_Casualty_p_at_least_70
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_MoonBattleWin = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_MoonBattleWin"
+		visible = { 
+			has_country_flag = BHS_Event_MoonBattleWin
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_MoonBattleWin_btn_click = {
+				clr_country_flag = BHS_Event_MoonBattleWin
+			}
+		}
+	}
+	BH3_BHS_Invasion_Event_MoonBattleLose = {
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_MoonBattleLose"
+		visible = { 
+			has_country_flag = BHS_Event_MoonBattleLose
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_MoonBattleLose_btn_click = {
+				clr_country_flag = BHS_Event_MoonBattleLose
+			}
+		}
+	}
+
+	BH3_BHS_Invasion_Event_EnterHive = { 
+	    context_type = player_context
+	    window_name = "BH3_BHS_Invasion_Event_EnterHive"
+		visible = { 
+			has_country_flag = BHS_Event_EnterHive
+		}
+		
+		effects = {
+			BH3_BHS_Invasion_Event_EnterHive_btn_click = {
+				clr_country_flag = BHS_Event_EnterHive
+			}
+		}
+	}
+}

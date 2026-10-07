@@ -1,0 +1,1441 @@
+guiTypes = {
+	## HI1 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI1_Come"
+		position = { x = -200 y = -300}
+
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI1_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HI1_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI1_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI1_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI1_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI1_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HI1_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI2 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI2_Come"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI2_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HI2_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI2_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI2_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI2_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI2_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HI2_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI3 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI3_Come"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI3_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HI3_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI3_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI3_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI3_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI3_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HI3_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+
+	## HI6 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI6_Come"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI6_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HI6_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI6_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI6_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI6_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI6_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HI6_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+	## HI7 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI7_Come"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI7_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HI7_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI7_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI7_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI7_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI7_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HI7_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HH2 诞生 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HH2_Come"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HH2_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_HH2_Come"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HH2_Come"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HH2_Come"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HH2_Come"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Come_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HH2_Come_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Come_btn"
+			text = "BH3_BHS_Invasion_Event_HH2_Come_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI1 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI1_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI1_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HI1_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI1_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI1_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI1_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI1_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HI1_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI2 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI2_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI2_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HI2_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI2_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI2_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI2_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI2_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HI2_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI3 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI3_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI3_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HI3_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI3_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI3_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI3_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI3_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HI3_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI6 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI6_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI6_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HI6_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI6_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI6_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI6_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI6_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HI6_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+	## HI7 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI7_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI7_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HI7_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI7_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI7_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI7_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI7_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HI7_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+	## HH2 打败 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HH2_Beaten"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HH2_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_HH2_Beaten"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HH2_Beaten"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HH2_Beaten"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HH2_Beaten"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Beaten_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HH2_Beaten_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Beaten_btn"
+			text = "BH3_BHS_Invasion_Event_HH2_Beaten_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI1 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI1_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI1_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HI1_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI1_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI1_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI1_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI1_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI1_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HI1_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI2 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI2_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI2_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HI2_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI2_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI2_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI2_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI2_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI2_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HI2_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI3 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI3_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI3_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HI3_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI3_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI3_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI3_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI3_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI3_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HI3_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HI6 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI6_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI6_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HI6_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI6_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI6_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI6_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI6_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI6_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HI6_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+	## HI7 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HI7_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HI7_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HI7_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HI7_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HI7_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HI7_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HI7_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HI7_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HI7_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## HH2 奖励 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_HH2_Reward"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_HH2_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_HH2_Reward"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_HH2_Reward"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_HH2_Reward"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_HH2_Reward"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Reward_desc"
+			position = {  x= 40 y = -160 }
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_HH2_Reward_desc"
+			maxWidth = 520
+			maxHeight = 90
+			fixedsize = yes
+			format = right
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_HH2_Reward_btn"
+			text = "BH3_BHS_Invasion_Event_HH2_Reward_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## 月球之战开始 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_MoonBattleStart"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart1"
+			spriteType = "GFX_BH3_BHS_Invasion_MoonBattleStart1"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart2"
+			spriteType = "GFX_BH3_BHS_Invasion_MoonBattleStart2"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_MoonBattleStart3"
+			spriteType = "GFX_BH3_BHS_Invasion_MoonBattleStart3"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_MoonBattleStart"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+		# 崩坏高投降倾向
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_MoonBattleStart1"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_MoonBattleStart1"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+		# 击败所有律者
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_MoonBattleStart2"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_MoonBattleStart2"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+		# 损失人口达到要求
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_MoonBattleStart3"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_MoonBattleStart3"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		# 崩坏投降倾向高
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_desc1"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_desc1"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+		# 崩坏投降倾向未达要求，但律者全出来
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_desc2"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_desc2"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+		# 损失人口达到要求
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_desc3"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_desc3"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_btn1"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_btn_t1" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_btn2"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_btn_t2" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+			buttonType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleStart_btn3"
+			text = "BH3_BHS_Invasion_Event_MoonBattleStart_btn_t3" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## 月球之战（成功） ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_MoonBattleWin"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_MoonBattleWin"
+			spriteType = "GFX_BH3_BHS_Invasion_MoonBattleWin"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_MoonBattleWin"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_MoonBattleWin"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_MoonBattleWin"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleWin_desc"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_MoonBattleWin_desc"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleWin_btn"
+			text = "BH3_BHS_Invasion_Event_MoonBattleWin_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## 月球之战（失败） ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_MoonBattleLose"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_MoonBattleLose"
+			spriteType = "GFX_BH3_BHS_Invasion_MoonBattleLose"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_MoonBattleLose"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_MoonBattleLose"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_MoonBattleLose"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleLose_desc"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_MoonBattleLose_desc"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_MoonBattleLose_btn"
+			text = "BH3_BHS_Invasion_Event_MoonBattleLose_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+
+	## 进入茧 ##
+	containerWindowType = {
+		name = "BH3_BHS_Invasion_Event_EnterHive"
+		position = { x = -200 y = -300}
+ 
+		animation_time = 320	
+		size = { width = 589 height = 503 }
+		orientation = CENTER
+        moveable = yes
+		show_sound = BHS_Invasion_Hive
+		background = { quadTextureSprite = "GFX_BH3_BHS_Invasion_Event_window_alpha"}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Img_EnterHive"
+			spriteType = "GFX_BH3_BHS_Invasion_EnterHive"
+			position = { x= 18 y = 60 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_Invasion_Event_Bg_EnterHive"
+			spriteType = "GFX_BH3_BHS_Invasion_Event_window_BG"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_title_EnterHive"
+			position = { x = -90 y = 15 }
+			Orientation = CENTER_UP
+			font = "hoi_24header"
+			text = "BH3_BHS_Invasion_Event_title_EnterHive"
+			maxWidth = 190
+			maxHeight = 24
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_Invasion_Event_EnterHive_desc"
+			position = {  x= 40 y = -165 }
+			font = "hoi_18mbs"
+			text = "BH3_BHS_Invasion_Event_EnterHive_desc"
+			maxWidth = 520
+			maxHeight = 100
+			fixedsize = yes
+			format = left
+			Orientation = lower_left
+		}
+
+		buttonType = {
+			name = "BH3_BHS_Invasion_Event_EnterHive_btn"
+			text = "BH3_BHS_Invasion_Event_EnterHive_btn_t" 
+			shortcut = "ESCAPE"
+			position = { x = -110 y = 202 }
+			quadTextureSprite ="GFX_BH3_yes_200x35_btn"
+			buttonFont = "hoi_24header"
+			Orientation = center
+		}
+	}
+}

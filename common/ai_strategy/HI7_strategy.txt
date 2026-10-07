@@ -1,0 +1,65 @@
+HI7_bad = {
+	allowed = {
+		always = yes
+	}
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+	#志愿军倾向
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = HI7
+		value = -1000
+	}
+	#敌对
+	ai_strategy = {
+		type = antagonize
+		id = HI7
+		value = 2000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = HI7
+		target = non_aggression_pact
+		value = -2000
+	}
+}
+
+HI7_rush = {
+	allowed = {
+		always = yes
+	}
+	#冲击倾向
+	enable = {
+		tag = HI7
+		has_army_size = {
+			size > 100
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		area = HI7_area
+
+		ratio = 0.6
+
+		priority = 100
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		#卫戍
+		type = garrison
+		value = -1000
+	}
+
+}
+

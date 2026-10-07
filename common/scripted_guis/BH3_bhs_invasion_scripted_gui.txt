@@ -1,0 +1,279 @@
+scripted_gui = {
+
+	############ 崩坏入侵选项界面 #############
+	BH3_invasion_menu = { 
+	    context_type = player_context
+	    window_name = "BH3_invasion_menu"
+		visible = { 
+			check_variable = { BH3_invasion_menu_open = 1 } 
+			NOT = { has_global_flag = BHS_Started }
+		}
+		
+		effects = {
+			### 崩坏爆发地点 ###
+			BH3_invasion_menu_postion1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_postion1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_postion2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_postion2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_postion1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_postion3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_postion3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_postion1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion3_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_postion4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_postion4_btn_click = {
+				set_variable = { global.BH3_invasion_menu_postion1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_postion4_btn_frame = 2 }
+			}
+
+			### 崩坏爆发时间 ###
+			BH3_invasion_menu_time1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_time1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_time2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_time2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_time1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_time3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_time3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_time1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time3_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_time4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_time4_btn_click = {
+				set_variable = { global.BH3_invasion_menu_time1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_time4_btn_frame = 2 }
+			}
+
+			### 开局崩坏师数量 ###
+			BH3_invasion_menu_army_num1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_num1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_army_num2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_army_num2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_num1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_army_num3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_army_num3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_num1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num3_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_army_num4_btn_frame = 1 }
+			}
+			BH3_invasion_menu_army_num4_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_num1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_num4_btn_frame = 2 }
+			}
+
+			### 每月刷兵倍数 ###
+			BH3_invasion_menu_army_coefficient1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_coefficient1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient3_btn_frame = 1 }
+			}
+			BH3_invasion_menu_army_coefficient2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_coefficient1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient3_btn_frame = 1 }
+			}
+			BH3_invasion_menu_army_coefficient3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_army_coefficient1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_army_coefficient3_btn_frame = 2 }
+			}
+			
+			### 玩家是否可以使用律者 ###
+			BH3_invasion_menu_enable_herrscher1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_enable_herrscher1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_enable_herrscher2_btn_frame = 1 }
+			}
+			BH3_invasion_menu_enable_herrscher2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_enable_herrscher1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_enable_herrscher2_btn_frame = 2 }
+			}
+
+			### 开局崩坏阶段 ###
+			BH3_invasion_menu_level1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_level1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_level2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level4_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level5_btn_frame = 1 }
+			}
+			BH3_invasion_menu_level2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_level1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_level3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level4_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level5_btn_frame = 1 }
+			}
+			BH3_invasion_menu_level3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_level1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level3_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_level4_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level5_btn_frame = 1 }
+			}
+			BH3_invasion_menu_level4_btn_click = {
+				set_variable = { global.BH3_invasion_menu_level1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level4_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_level5_btn_frame = 1 }
+			}
+			BH3_invasion_menu_level5_btn_click = {
+				set_variable = { global.BH3_invasion_menu_level1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level3_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level4_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_level5_btn_frame = 2 }
+			}
+
+			### 律者诞生间隔 ###
+			BH3_invasion_menu_herrscher_time1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_herrscher_time1_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time3_btn_frame = 1 }
+			}
+			BH3_invasion_menu_herrscher_time2_btn_click = {
+				set_variable = { global.BH3_invasion_menu_herrscher_time1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time2_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time3_btn_frame = 1 }
+			}
+			BH3_invasion_menu_herrscher_time3_btn_click = {
+				set_variable = { global.BH3_invasion_menu_herrscher_time1_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time2_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_herrscher_time3_btn_frame = 2 }
+			}
+
+			BH3_invasion_menu_herrscher_enhance0_btn_click = {
+				set_variable = { global.BH3_invasion_menu_herrscher_enhance0_btn_frame = 2 }
+				set_variable = { global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 1 }
+			}
+			BH3_invasion_menu_herrscher_enhance1_btn_click = {
+				set_variable = { global.BH3_invasion_menu_herrscher_enhance0_btn_frame = 1 }
+				set_variable = { global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 }
+			}
+			
+			### 杂项，多选 ###
+			BH3_invasion_menu_misc1_btn_click = {
+				if = {
+					limit = { check_variable = { global.BH3_invasion_menu_misc1_btn_frame = 1 } }
+					set_variable = { global.BH3_invasion_menu_misc1_btn_frame = 2 }
+				}
+				else = { set_variable = { global.BH3_invasion_menu_misc1_btn_frame = 1 } }
+			}
+			BH3_invasion_menu_misc2_btn_click = {
+				if = {
+					limit = { check_variable = { global.BH3_invasion_menu_misc2_btn_frame = 1 } }
+					set_variable = { global.BH3_invasion_menu_misc2_btn_frame = 2 }
+				}
+				else = { set_variable = { global.BH3_invasion_menu_misc2_btn_frame = 1 } }
+			}
+			BH3_invasion_menu_misc3_btn_click = {
+				if = {
+					limit = { check_variable = { global.BH3_invasion_menu_misc3_btn_frame = 1 } }
+					set_variable = { global.BH3_invasion_menu_misc3_btn_frame = 2 }
+				}
+				else = { set_variable = { global.BH3_invasion_menu_misc3_btn_frame = 1 } }
+			}
+			BH3_invasion_menu_misc4_btn_click = {
+				if = {
+					limit = { check_variable = { global.BH3_invasion_menu_misc4_btn_frame = 1 } }
+					set_variable = { global.BH3_invasion_menu_misc4_btn_frame = 2 }
+				}
+				else = { set_variable = { global.BH3_invasion_menu_misc4_btn_frame = 1 } }
+			}
+			BH3_invasion_menu_misc5_btn_click = {
+				if = {
+					limit = { check_variable = { global.BH3_invasion_menu_misc5_btn_frame = 1 } }
+					set_variable = { global.BH3_invasion_menu_misc5_btn_frame = 2 }
+					#强制现在爆发
+					set_variable = { global.BH3_invasion_menu_time1_btn_frame = 2 }
+					set_variable = { global.BH3_invasion_menu_time2_btn_frame = 1 }
+					set_variable = { global.BH3_invasion_menu_time3_btn_frame = 1 }
+					set_variable = { global.BH3_invasion_menu_time4_btn_frame = 1 }
+				}
+				else = { set_variable = { global.BH3_invasion_menu_misc5_btn_frame = 1 } }
+			}
+			### 退出 ###
+			BH3_invasion_opt_exit_btn_click = {
+				set_variable = { BH3_invasion_menu_open = 0 }
+				set_variable = { global.BH3_invasion_menu_enable_herrscher1_btn_frame = 1 }
+			}
+			
+			### 设置完成 ###
+			BH3_invasion_opt_complete_btn_click = {
+				set_variable = { BH3_invasion_menu_open = 0 }
+				BH3_BHS_Invasion_GUI_Settings_Finish = yes
+				set_global_flag = BHS_Invasion_Settings_Finish
+			}
+		}
+		properties = {
+			### 崩坏爆发地点 ###
+			BH3_invasion_menu_postion1_btn = { frame = global.BH3_invasion_menu_postion1_btn_frame }
+			BH3_invasion_menu_postion2_btn = { frame = global.BH3_invasion_menu_postion2_btn_frame }
+			BH3_invasion_menu_postion3_btn = { frame = global.BH3_invasion_menu_postion3_btn_frame }
+			BH3_invasion_menu_postion4_btn = { frame = global.BH3_invasion_menu_postion4_btn_frame }
+			### 崩坏爆发地点 ###
+			BH3_invasion_menu_time1_btn = { frame = global.BH3_invasion_menu_time1_btn_frame }
+			BH3_invasion_menu_time2_btn = { frame = global.BH3_invasion_menu_time2_btn_frame }
+			BH3_invasion_menu_time3_btn = { frame = global.BH3_invasion_menu_time3_btn_frame }
+			BH3_invasion_menu_time4_btn = { frame = global.BH3_invasion_menu_time4_btn_frame }
+			### 开局崩坏师数量 ###
+			BH3_invasion_menu_army_num1_btn = { frame = global.BH3_invasion_menu_army_num1_btn_frame }
+			BH3_invasion_menu_army_num2_btn = { frame = global.BH3_invasion_menu_army_num2_btn_frame }
+			BH3_invasion_menu_army_num3_btn = { frame = global.BH3_invasion_menu_army_num3_btn_frame }
+			BH3_invasion_menu_army_num4_btn = { frame = global.BH3_invasion_menu_army_num4_btn_frame }
+			### 每月刷兵倍数 ###
+			BH3_invasion_menu_army_coefficient1_btn = { frame = global.BH3_invasion_menu_army_coefficient1_btn_frame }
+			BH3_invasion_menu_army_coefficient2_btn = { frame = global.BH3_invasion_menu_army_coefficient2_btn_frame }
+			BH3_invasion_menu_army_coefficient3_btn = { frame = global.BH3_invasion_menu_army_coefficient3_btn_frame }
+			### 玩家是否可以使用律者 ###
+			BH3_invasion_menu_enable_herrscher1_btn = { frame = global.BH3_invasion_menu_enable_herrscher1_btn_frame }
+			BH3_invasion_menu_enable_herrscher2_btn = { frame = global.BH3_invasion_menu_enable_herrscher2_btn_frame }
+			### 开局崩坏阶段 ###
+			BH3_invasion_menu_level1_btn = { frame = global.BH3_invasion_menu_level1_btn_frame }
+			BH3_invasion_menu_level2_btn = { frame = global.BH3_invasion_menu_level2_btn_frame }
+			BH3_invasion_menu_level3_btn = { frame = global.BH3_invasion_menu_level3_btn_frame }
+			BH3_invasion_menu_level4_btn = { frame = global.BH3_invasion_menu_level4_btn_frame }
+			BH3_invasion_menu_level5_btn = { frame = global.BH3_invasion_menu_level5_btn_frame }
+			### 律者诞生间隔 ###
+			BH3_invasion_menu_herrscher_time1_btn = { frame = global.BH3_invasion_menu_herrscher_time1_btn_frame }
+			BH3_invasion_menu_herrscher_time2_btn = { frame = global.BH3_invasion_menu_herrscher_time2_btn_frame }
+			BH3_invasion_menu_herrscher_time3_btn = { frame = global.BH3_invasion_menu_herrscher_time3_btn_frame }
+			### 崩坏律者单位加强 ###
+			BH3_invasion_menu_herrscher_enhance0_btn = { frame = global.BH3_invasion_menu_herrscher_enhance0_btn_frame }
+			BH3_invasion_menu_herrscher_enhance1_btn = { frame = global.BH3_invasion_menu_herrscher_enhance1_btn_frame }
+			### 杂项，多选 ###
+			BH3_invasion_menu_misc1_btn = { frame = global.BH3_invasion_menu_misc1_btn_frame }
+			BH3_invasion_menu_misc2_btn = { frame = global.BH3_invasion_menu_misc2_btn_frame }
+			BH3_invasion_menu_misc3_btn = { frame = global.BH3_invasion_menu_misc3_btn_frame }
+			BH3_invasion_menu_misc4_btn = { frame = global.BH3_invasion_menu_misc4_btn_frame }
+			BH3_invasion_menu_misc5_btn = { frame = global.BH3_invasion_menu_misc5_btn_frame }
+		}
+	}
+}

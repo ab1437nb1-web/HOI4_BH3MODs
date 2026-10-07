@@ -1,0 +1,94 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Menu_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Menu_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Secretary_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Secretary_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Secretary_img1"
+		texturefile = "gfx/interface/misc_gui/test1.png"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Secretary_img2"
+		texturefile = "gfx/interface/misc_gui/test2.png"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Menu_bg"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Menu_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Change_Secretary_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Change_Secretary_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Change_SecretaryX_btn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Recharge_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Recharge_btn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Atk_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Atk_btn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_BH3_Hyperion_Visable_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_Visable_btn.dds"
+	}
+
+	#用于将领大招动画位置测试
+	spriteType = {
+		name = "GFX_BH3_Hyperion_testSkillAni1"
+		texturefile = "gfx/interface/misc_gui/testSkillAni1.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_testSkillAni2"
+		texturefile = "gfx/interface/misc_gui/testSkillAni2.dds"
+	}
+	#用于律者将领大招动画复位
+	spriteType = {
+		name = "GFX_BH3_unit_leader_999_Skill1"
+		texturefile = "gfx/interface/misc_gui/Portrait_999_Skill.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_unit_leader_999_Skill2"
+		texturefile = "gfx/interface/misc_gui/Portrait_999_Skill.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_Hyperion_move_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_move_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Hyperion_attack_btn"
+		texturefile = "gfx/interface/misc_gui/BH3_Hyperion_attack_btn.dds"
+	}
+
+	#动态修整的图标
+	#崩坏入侵对地块影响图标
+	spriteType = {
+		name = "GFX_modifiers_BHSinvasion_effect"
+		textureFile = "gfx/interface/ideas/modifiers_BHSinvasion_effect.dds"
+	}
+	#高浓度区域
+	spriteType = {
+		name = "GFX_modifiers_High_Honkai_area"
+		textureFile = "gfx/interface/ideas/modifiers_High_Honkai_area.dds"
+	}
+	#休伯利安对地支援效果
+	spriteType = {
+		name = "GFX_modifiers_Hyperion_effect"
+		textureFile = "gfx/interface/ideas/modifiers_Hyperion_effect.dds"
+	}
+	
+}
+	

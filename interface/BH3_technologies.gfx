@@ -1,0 +1,557 @@
+spriteTypes = {
+	##############琪亚娜##################
+	SpriteType = {
+		name = "GFX_Kiana_WhiteComet_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_WhiteComet.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Kiana_VoidDrifter_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_VoidDrifter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Kiana_KnightMoonbeam_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_KnightMoonbeam.dds"
+	}
+
+	##############芽衣##################
+	SpriteType = {
+		name = "GFX_Mei_CrimsonImpuls_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_CrimsonImpuls.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Mei_StrikerFulminata_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_StrikerFulminata.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Mei_ShadowDash_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_ShadowDash.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Mei_DanzaiSpectramancer_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_DanzaiSpectramancer.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Mei_LightningEmpress_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_LightningEmpress.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Mei_Captain_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_Captain.dds"
+	}
+	##############希儿##################
+	SpriteType = {
+		name = "GFX_Seele_SwallowtailPhantasm_Research_medium"
+		texturefile = "gfx/interface/technologies/Seele_SwallowtailPhantasm.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Seele_StygianNymph_Research_medium"
+		texturefile = "gfx/interface/technologies/Seele_StygianNymph.dds"
+	}
+	SpriteType = {
+		name = "GFX_Seele_StarchasmNyx_Research_medium"
+		texturefile = "gfx/interface/technologies/Seele_StarchasmNyx.dds"
+	}
+	##############布洛妮娅##################
+	SpriteType = {
+		name = "GFX_Bronya_ValkyrieChariot_Research_medium"
+		texturefile = "gfx/interface/technologies/Bronya_ValkyrieChariot.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Bronya_YamabukiArmor_Research_medium"
+		texturefile = "gfx/interface/technologies/Bronya_YamabukiArmor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_Bronya_DimensionBreaker_Research_medium"
+		texturefile = "gfx/interface/technologies/Bronya_DimensionBreaker.dds"
+	}
+	SpriteType = {
+		name = "GFX_Bronya_SilverWingNEX_Research_medium"
+		texturefile = "gfx/interface/technologies/Bronya_SilverWingN-EX.dds"
+	}
+	#符华
+	SpriteType = {
+		name = "GFX_Fuka_ShadowKnight_Research_medium"
+		texturefile = "gfx/interface/technologies/Fuka_ShadowKnight.dds"
+	}
+	SpriteType = {
+		name = "GFX_Fuka_AzureEmpyrea_Research_medium"
+		texturefile = "gfx/interface/technologies/Fuka_AzureEmpyrea.dds"
+	}
+	##############德丽莎##################
+	SpriteType = {
+		name = "GFX_Theresa_StarlitAstrologos_Research_medium"
+		texturefile = "gfx/interface/technologies/Theresa_StarlitAstrologos.dds"
+	}
+	SpriteType = {
+		name = "GFX_Theresa_Mars_Research_medium"
+		texturefile = "gfx/interface/technologies/Theresa_Mars.dds"
+	}
+	SpriteType = {
+		name = "GFX_Theresa_LunarVowCrimsonLove_Research_medium"
+		texturefile = "gfx/interface/technologies/Theresa_LunarVowCrimsonLove.dds"
+	}
+	#伊甸
+	SpriteType = {
+		name = "GFX_Eden_GoldenDiva_Research_medium"
+		texturefile = "gfx/interface/technologies/Eden_GoldenDiva.dds"
+	}
+
+	##############空之律者##################
+	SpriteType = {
+		name = "GFX_Kiana_HerrscherofVoid_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_HerrscherofVoid.dds"
+	}
+	##############薪炎之律者##################
+	SpriteType = {
+		name = "GFX_Kiana_HerrscherofFlamescion_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_HerrscherofFlamescion.dds"
+	}
+	##############雷之律者##################
+	SpriteType = {
+		name = "GFX_Mei_HerrscherofThunder_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_HerrscherofThunder.dds"
+	}
+	##############理之律者##################
+	SpriteType = {
+		name = "GFX_Bronya_HerrscherofReason_Research_medium"
+		texturefile = "gfx/interface/technologies/Bronya_HerrscherofReason.dds"
+	}
+	##############死生之律者##################
+	SpriteType = {
+		name = "GFX_Seele_HerrscherofRebirth_Research_medium"
+		texturefile = "gfx/interface/technologies/Seele_HerrscherofRebirth.dds"
+	}
+	##############人之律者##################
+	SpriteType = {
+		name = "GFX_Elysia_HerrscherofHuman_Research_medium"
+		texturefile = "gfx/interface/technologies/Elysia_HerrscherofHuman.dds"
+	}
+	SpriteType = {
+		name = "GFX_Elysia_HerrscherofErosion_Research_medium"
+		texturefile = "gfx/interface/technologies/Elysia_HerrscherofErosion.dds"
+	}
+	SpriteType = {
+		name = "GFX_Elysia_MissPinkElf_Research_medium"
+		texturefile = "gfx/interface/technologies/Elysia_MissPinkElf.dds"
+	}
+	
+
+	##############死士##################
+	SpriteType = {
+		name = "GFX_SishiBHS_Research_medium"
+		texturefile = "gfx/interface/technologies/SishiBHS.dds"
+	}
+	##############突进级崩坏兽##################
+	SpriteType = {
+		name = "GFX_Tujin1BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Tujin1BHS.dds"
+	}
+	SpriteType = {
+		name = "GFX_Tujin2BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Tujin2BHS.dds"
+	}
+	##############骑士级崩坏兽##################
+	SpriteType = {
+		name = "GFX_Qishi1BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Qishi1BHS.dds"
+	}
+	SpriteType = {
+		name = "GFX_Qishi2BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Qishi2BHS.dds"
+	}
+	##############战车级崩坏兽##################
+	SpriteType = {
+		name = "GFX_Zhanche1BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Zhanche1BHS.dds"
+	}
+	SpriteType = {
+		name = "GFX_Zhanche2BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Zhanche2BHS.dds"
+	}
+	##############圣殿级崩坏兽##################
+	SpriteType = {
+		name = "GFX_Shengdian1BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Shengdian1BHS.dds"
+	}
+	SpriteType = {
+		name = "GFX_Shengdian2BHS_Research_medium"
+		texturefile = "gfx/interface/technologies/Shengdian2BHS.dds"
+	}
+	##############帝王级崩坏兽迦尼萨##################
+	SpriteType = {
+		name = "GFX_JianisaBHS_Research_medium"
+		texturefile = "gfx/interface/technologies/JianisaBHS.dds"
+	}
+	##############帝王级崩坏兽贝纳勒斯##################
+	SpriteType = {
+		name = "GFX_BeinalesiBHS_Research_medium"
+		texturefile = "gfx/interface/technologies/BeinalesiBHS.dds"
+	}
+	# #####崩坏空军######
+	# SpriteType = {
+	# 	name = "GFX_TujinBHS_air2air_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Qishi1BHS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_BeinalesiBHS_air2ground_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/BeinalesiBHS.dds"
+	# }
+
+
+	##############天命近战女武神##################
+	SpriteType = {
+		name = "GFX_SchicksalValkyrieMeele_Research_medium"
+		texturefile = "gfx/interface/technologies/SchicksalValkyrieMeele.dds"
+	}
+	##############天命远程女武神##################
+	SpriteType = {
+		name = "GFX_SchicksalValkyrieArtillery_Research_medium"
+		texturefile = "gfx/interface/technologies/SchicksalValkyrieArtillery.dds"
+	}
+
+	############## 崩坏裂变弹 ##################
+	SpriteType = {
+		name = "GFX_Honkai_Fission_Bomb_equipment_medium"
+		texturefile = "gfx/interface/technologies/Honkai_Fission_Bomb_equipment.dds"
+	}
+
+	##############神之键##################
+	SpriteType = {
+		name = "GFX_Void_Archives_equipment_medium"
+		texturefile = "gfx/interface/technologies/Void_Archives_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_SevenThundersofRetribution_equipment_medium"
+		texturefile = "gfx/interface/technologies/SevenThundersofRetribution_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_AbyssFlower_equipment_medium"
+		texturefile = "gfx/interface/technologies/AbyssFlower_equipment.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_FenghuangDown_equipment_medium"
+		texturefile = "gfx/interface/technologies/FenghuangDown_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_JudgementofShamash_equipment_medium"
+		texturefile = "gfx/interface/technologies/JudgementofShamash_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_OathofJudah_equipment_medium"
+		texturefile = "gfx/interface/technologies/OathofJudah_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_StarofEden_equipment_medium"
+		texturefile = "gfx/interface/technologies/StarofEden_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_JizoMitama_equipment_medium"
+		texturefile = "gfx/interface/technologies/JizoMitama_equipment.dds"
+	}
+
+	##############其他类别神之键##################
+	SpriteType = {
+		name = "GFX_ThousandKey_equipment_medium"
+		texturefile = "gfx/interface/technologies/ThousandKey_equipment.dds"
+	}
+
+	##########################################
+	############# 女武神人员 #################
+	##########################################
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieSoldier_Research_medium"
+		texturefile = "gfx/interface/technologies/BH3_ValkyrieSoldier_Research.dds"
+	}
+
+	##### 琪亚娜
+	SpriteType = {
+		name = "GFX_ValkyrieSoldier_Kiana_B_equipment_medium"
+		texturefile = "gfx/interface/technologies/Valkyrie_Kiana_B.dds"
+	}
+	SpriteType = {
+		name = "GFX_ValkyrieSoldier_Kiana_A_equipment_medium"
+		texturefile = "gfx/interface/technologies/Valkyrie_Kiana_A.dds"
+	}
+	SpriteType = {
+		name = "GFX_ValkyrieSoldier_Kiana_S_equipment_medium"
+		texturefile = "gfx/interface/technologies/Valkyrie_Kiana_S.dds"
+	}
+	SpriteType = {
+		name = "GFX_ValkyrieSoldier_Kiana_SS_equipment_medium"
+		texturefile = "gfx/interface/technologies/Valkyrie_Kiana_SS.dds"
+	}
+	SpriteType = {
+		name = "GFX_ValkyrieSoldier_Kiana_SSS_equipment_medium"
+		texturefile = "gfx/interface/technologies/Valkyrie_Kiana_SSS.dds"
+	}
+
+	####################################################################
+    ########### 太多装备定义会导致部分mod闪退（比如千禧黎明  ###########
+    ####################################################################
+	
+	# ##### 芽衣
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Mei_B_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Mei_B.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Mei_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Mei_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Mei_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Mei_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Mei_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Mei_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Mei_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Mei_SSS.dds"
+	# }
+
+	
+	# ##### 布洛妮娅
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Bronya_B_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Bronya_B.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Bronya_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Bronya_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Bronya_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Bronya_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Bronya_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Bronya_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Bronya_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Bronya_SSS.dds"
+	# }
+
+	# ##### 希儿
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Seele_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Seele_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Seele_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Seele_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Seele_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Seele_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Seele_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Seele_SSS.dds"
+	# }
+
+	# ##### 黑希
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_SeeleBlack_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_SeeleBlack_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_SeeleBlack_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_SeeleBlack_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_SeeleBlack_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_SeeleBlack_SSS.dds"
+	# }
+
+	# ##### 德丽莎
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Theresa_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Theresa_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Theresa_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Theresa_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Theresa_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Theresa_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Theresa_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Theresa_SSS.dds"
+	# }
+
+	# ##### 月下
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaLunar_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaLunar_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaLunar_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaLunar_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaLunar_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaLunar_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaLunar_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaLunar_SSS.dds"
+	# }
+
+	# ##### 观星
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaStarlitAstrologos_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaStarlitAstrologos_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaStarlitAstrologos_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_TheresaStarlitAstrologos_SSS.dds"
+	# }
+
+	# ##### 符华
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Fuka_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Fuka_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Fuka_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Fuka_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Fuka_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Fuka_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Fuka_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Fuka_SSS.dds"
+	# }
+
+	# ##### 幽兰戴尔
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_BiankaDurandalAtaegina_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_BiankaDurandalAtaegina_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_BiankaDurandalAtaegina_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_BiankaDurandalAtaegina_SSS.dds"
+	# }	
+
+	# ##### 丽塔
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_RitaRossweisse_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_RitaRossweisse_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_RitaRossweisse_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_RitaRossweisse_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_RitaRossweisse_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_RitaRossweisse_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_RitaRossweisse_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_RitaRossweisse_SSS.dds"
+	# }
+
+	# ##### 伊甸
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Eden_A_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Eden_A.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Eden_S_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Eden_S.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Eden_SS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Eden_SS.dds"
+	# }
+	# SpriteType = {
+	# 	name = "GFX_ValkyrieSoldier_Eden_SSS_equipment_medium"
+	# 	texturefile = "gfx/interface/technologies/Valkyrie_Eden_SSS.dds"
+	# }
+
+
+	##########################################
+	######### 女武神装甲（可设计） ###########
+	##########################################
+	
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_0_tech_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_WhiteComet.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_1_tech_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_VoidDrifter.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_2_tech_Research_medium"
+		texturefile = "gfx/interface/technologies/Kiana_KnightMoonbeam.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_3_tech_Research_medium"
+		texturefile = "gfx/interface/technologies/Mei_Captain.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_4_tech_Research_medium"
+		texturefile = "gfx/interface/technologies/BH3_ValkyrieArmor_classis_4_0.dds"
+	}
+
+	## 装甲底盘
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_0_medium"
+		texturefile = "gfx/interface/technologies/Kiana_WhiteComet.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_1_medium"
+		texturefile = "gfx/interface/technologies/Kiana_VoidDrifter.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_2_medium"
+		texturefile = "gfx/interface/technologies/Kiana_KnightMoonbeam.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_3_medium"
+		texturefile = "gfx/interface/technologies/Mei_Captain.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_4_medium"
+		texturefile = "gfx/interface/technologies/BH3_ValkyrieArmor_classis_4_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_BH3_ValkyrieArmor_classis_4_1_medium"
+		texturefile = "gfx/interface/technologies/BH3_ValkyrieArmor_classis_4_1.dds"
+	}
+}

@@ -1,0 +1,59 @@
+#############################
+########### Seele ###########
+#############################
+
+########### Seele_StygianNymph ###########
+animation = {
+	name = "Seele_StygianNymph_Idle1_animation"
+	file = "Seele_StygianNymph_Idle1.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Idle2_animation"
+	file = "Seele_StygianNymph_Idle2.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Idle3_animation"
+	file = "Seele_StygianNymph_Idle3.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Move_animation"
+	file = "Seele_StygianNymph_Move.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Attack1_animation"
+	file = "Seele_StygianNymph_Attack1.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Attack2_animation"
+	file = "Seele_StygianNymph_Attack2.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Attack3_animation"
+	file = "Seele_StygianNymph_Attack3.anim"
+}
+animation = {
+	name = "Seele_StygianNymph_Attack4_animation"
+	file = "Seele_StygianNymph_Attack4.anim"
+}
+
+########### Seele_StarchasmNyx ###########
+animation = {
+	name = "Seele_StarchasmNyx_Idle_animation"
+	file = "Seele_StarchasmNyx_Idle.anim"
+}
+animation = {
+	name = "Seele_StarchasmNyx_Move_animation"
+	file = "Seele_StarchasmNyx_Move.anim"
+}
+animation = {
+	name = "Seele_StarchasmNyx_Attack_animation"
+	file = "Seele_StarchasmNyx_Attack.anim"
+}
+animation = {
+	name = "Seele_StarchasmNyx_ChargeAttack_animation"
+	file = "Seele_StarchasmNyx_ChargeAttack.anim"
+}
+animation = {
+	name = "Seele_StarchasmNyx_SKL02_animation"
+	file = "Seele_StarchasmNyx_SKL02.anim"
+}

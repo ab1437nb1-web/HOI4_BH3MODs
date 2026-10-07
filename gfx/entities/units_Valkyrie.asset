@@ -1,0 +1,1812 @@
+#############################
+########### Kiana ###########
+#############################
+
+########### Kiana_WhiteComet ###########
+entity = {
+	name = "ValkyrieComprehensiveKiana_0_entity"
+	pdxmesh = "Kiana_WhiteComet_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.3 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle2_1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 1}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2_2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "" }}
+	}
+	state = { name = "training"  animation = "Training"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 2}
+
+	state = { name = "attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+	state = { name = "attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+	state = { name = "attack"  animation = "MoveFast"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "JumpAttack"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "Kiana_naigouqiao" } }
+	}
+
+	state = { name = "defend"  animation = "RightHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+	state = { name = "defend"  animation = "RightHandFire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "Kiana_Gunfire" } }
+	}
+	state = { name = "defend"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+	state = { name = "defend"  animation = "Kick"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Kiana_ShowTime" } }
+	}
+	
+	state = { name = "support_attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_Attack" } }
+	}
+
+	scale = 0.07
+}
+
+entity = {
+	clone = "ValkyrieComprehensiveKiana_0_entity"
+	name = "ValkyrieComprehensiveKiana_entity"
+	pdxmesh = "Kiana_WhiteComet_pdx"
+}
+
+entity = {
+	clone = "ValkyrieComprehensiveKiana_0_entity"
+	name = "Valkyrie_entity"
+	pdxmesh = "Kiana_WhiteComet_pdx"
+}
+
+
+########### Kiana_VoidDrifter ###########
+entity = {
+	name = "ValkyrieComprehensiveKiana_1_entity"
+	pdxmesh = "Kiana_VoidDrifter_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.5  animation_speed = 0.3 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.5  animation_speed = 0.3 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.5  animation_speed = 0.3 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.5  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Idle" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.3 looping = no  next_state = "training"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "" }}
+	}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.23 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Ultra" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.23 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Ultra" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.23 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_VoidDrifter_Attack2" } }
+	}
+	#调整过比例
+	scale = 1
+}
+
+########### Kiana_KnightMoonbeam ###########
+entity = {
+	name = "ValkyrieComprehensiveKiana_2_entity"
+	pdxmesh = "Kiana_KnightMoonbeam_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.3  animation_speed = 0.6 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.3  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.3  animation_speed = 0.6 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.3  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_Idle" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "QTE"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_Attack1" } }
+	}
+	state = { name = "attack"  animation = "SKILL"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_SKILL" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "QTE"   animation_blend_time = 0.1  animation_speed =1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_QTE" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_Attack1" } }
+	}
+	state = { name = "defend"  animation = "SKILL"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_SKILL" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "QTE"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_KnightMoonbeam_QTE" } }
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+}
+
+#############################
+############ Mei ############
+#############################
+
+########### Mei_CrimsonImpuls ###########
+entity = {
+	name = "ValkyrieMeeleMei_0_entity"
+	pdxmesh = "Mei_CrimsonImpuls_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.4 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 3}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 2}
+	state = { name = "training"  animation = "Idle4"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 3}
+
+	state = { name = "attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "MoveFast"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "DoubleHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 4 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "defend"  animation = "RightHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "DoubleHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "RightHandAttack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "JumpAttack"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	
+	state = { name = "support_attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "support_attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	scale = 0.07
+}
+
+
+entity = {
+		clone = "ValkyrieMeeleMei_0_entity"
+		name = "ValkyrieMeeleMei_entity"
+		pdxmesh = "Mei_CrimsonImpuls_pdx"
+}
+
+########### Mei_StrikerFulminata ###########
+entity = {
+	name = "ValkyrieMeeleMei_1_entity"
+	pdxmesh = "Mei_StrikerFulminata_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" }
+
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" }
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "AttackLoop"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_AttackLoop" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_Attack" } }
+	}
+	state = { name = "defend"  animation = "AttackLoop"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_AttackLoop" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "AttackLoop"   animation_blend_time = 0.1  animation_speed = 1.0 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Mei_StrikerFulminata_AttackLoop" } }
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+}
+
+# ########### Mei_ShadowDash ###########
+# entity = {
+# 	clone = "ValkyrieMeeleMei_0_entity"
+# 	name = "ValkyrieMeeleMei_1_entity"
+# 	pdxmesh = "Mei_ShadowDash_pdx"
+# }
+
+########### Mei_DanzaiSpectramancer ###########
+entity = {
+	name = "ValkyrieMeeleMei_2_entity"
+	pdxmesh = "Mei_DanzaiSpectramancer_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.5  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1}
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.5  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.5  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.5  animation_speed = 1 looping = no  next_state = "idle"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 1.5  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "UltraAtk"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_UltraAtk" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_Attack" } }
+	}
+	state = { name = "defend"  animation = "UltraAtk"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_UltraAtk" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "UltraAtk"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Mei_DanzaiSpectramancer_UltraAtk" } }
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+}
+
+########### Mei_LightningEmpress ###########
+# entity = {
+# 	clone = "ValkyrieMeeleMei_0_entity"
+# 	name = "ValkyrieMeeleMei_2_entity"
+# 	pdxmesh = "Mei_LightningEmpress_pdx"
+# }
+
+########### Mei_Captain ###########
+entity = {
+	name = "ValkyrieMeeleMei_3_entity"
+	pdxmesh = "Mei_Captain_Body_pdx"
+	#手臂骨骼存在缩放比例不为1，在同一状态若没有looping = yes会出现骨骼错位
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1   animation_speed = 0.7 looping = yes }
+
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Mei_Captain_Skirt = "attack1" }
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Mei_Captain_Skirt = "attack2" }
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		propagate_state = { Mei_Captain_Skirt = "attack3" }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		propagate_state = { Mei_Captain_Skirt = "attack4" }
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack2" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		propagate_state = { Mei_Captain_Skirt = "defend1" }	
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		propagate_state = { Mei_Captain_Skirt = "defend2" }	
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack2" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Mei_Captain_Skirt = "support_attack1" }	
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Mei_Captain_Skirt = "support_attack2" }
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack2" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 2
+		propagate_state = { Mei_Captain_Skirt = "support_attack3" }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		propagate_state = { Mei_Captain_Skirt = "support_attack4" }	
+		event = { time = 0  sound = { soundeffect = "Mei_Captain_Attack1" } }
+	}
+
+	attach = { name = "Mei_Captain_Skirt" ROOT = "Mei_Captain_Skirt_entity" }
+	#进unity
+	scale = 0.04
+}
+
+#Skirt
+entity = {
+	name = "Mei_Captain_Skirt_entity"
+	pdxmesh = "Mei_Captain_Skirt_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = yes }
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1   animation_speed = 0.7 looping = yes }
+
+	state = { name = "attack1"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack2"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no }
+	state = { name = "attack4"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+	state = { name = "defend1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "defend2"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+
+	state = { name = "support_attack1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack2"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no }
+	state = { name = "support_attack4"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  }
+	#主体控制比例
+	scale = 1
+}
+
+
+
+#############################
+########## Bronya ##########
+#############################
+
+########### Bronya_ValkyrieChariot ###########
+entity = {
+	name = "ValkyrieArtilleryBronya_0_entity"
+	pdxmesh = "Bronya_ValkyrieChariot_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.4 looping = no  next_state = "idle"  chance = 2}
+	#state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 2}
+	#state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 1}
+
+	state = { name = "move"  animation = "MoveFast"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "MoveFast"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 5}
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 2}
+
+	state = { name = "attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "RightHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "MoveFast"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Fire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "defend"  animation = "RightHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "RightHandAttack4"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "RightHandAttack5"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Fire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	
+	state = { name = "support_attack"  animation = "RightHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "support_attack"  animation = "Fire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	scale = 0.07
+}
+
+entity = {
+	clone = "ValkyrieArtilleryBronya_0_entity"
+	name = "ValkyrieArtilleryBronya_entity"
+	pdxmesh = "Bronya_ValkyrieChariot_pdx"
+}
+
+########### Bronya_YamabukiArmor ###########
+entity = {
+	clone = "ValkyrieArtilleryBronya_0_entity"
+	name = "ValkyrieArtilleryBronya_1_entity"
+	pdxmesh = "Bronya_YamabukiArmor_pdx"		
+}
+
+########### Bronya_DimensionBreaker ###########
+entity = {
+	clone = "ValkyrieArtilleryBronya_0_entity"
+	name = "ValkyrieArtilleryBronya_2_entity"
+	pdxmesh = "Bronya_DimensionBreaker_pdx"
+}
+
+########### Bronya_SilverWingNEX ###########
+entity = {
+	name = "ValkyrieArtilleryBronya_3_entity"
+	pdxmesh = "Bronya_SilverWingNEX_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 3}
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 2}
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 1}
+
+	state = { name = "attack"  animation = "LeftHandAttack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "RotateAttack"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "defend"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "LeftHandAttack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "LeftHandAttack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "RotateAttack"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	
+	state = { name = "support_attack"  animation = "LeftHandAttack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "support_attack"  animation = "LeftHandAttack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	#做完发现忘了单位，与之前不统一
+	scale = 7
+}
+
+#############################
+########### Seele ###########
+#############################
+########### Seele_SwallowtailPhantasm ###########
+entity = {
+	name = "ValkyrieMeeleSeele_1_entity"
+	pdxmesh = "Seele_SwallowtailPhantasm_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0  animation_speed = 0.2 looping = no  next_state = "idle"  chance = 3}
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0   animation_speed = 0.7 looping = no  next_state = "training"  chance = 1}
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 2}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.2 looping = no  next_state = "training"  chance = 2}
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 3}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack4"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Attack4"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "support_attack"  animation = "Attack4"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	scale = 0.07
+}
+
+entity = {
+	clone = "ValkyrieMeeleSeele_1_entity"
+	name = "ValkyrieMeeleSeele_entity"
+	pdxmesh = "Seele_SwallowtailPhantasm_pdx"
+}
+	
+########### Seele_StygianNymph ###########
+entity = {
+	clone = "ValkyrieMeeleSeele_1_entity"
+	name = "ValkyrieMeeleSeele_2_entity"
+	pdxmesh = "Seele_StygianNymph_pdx"
+}
+
+########### Seele_StarchasmNyx ###########
+entity = {
+	name = "ValkyrieMeeleSeele_3_entity"
+	pdxmesh = "Seele_StarchasmNyx_pdx"
+
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_Idle" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "SKL02"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Idle3" } }	
+	}
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_Attack" } }
+	}
+	state = { name = "attack"  animation = "ChargeAttack"   animation_blend_time = 0.1  animation_speed = 1.3 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_ChargeAttack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "SKL02"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_SKL02" } }
+	}
+
+	state = { name = "defend"  animation = "ChargeAttack"   animation_blend_time = 0.1  animation_speed = 1.3 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_ChargeAttack" } }
+	}
+	state = { name = "defend"  animation = "SKL02"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_SKL02" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "ChargeAttack"   animation_blend_time = 0.1  animation_speed = 1.3 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_ChargeAttack" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "SKL02"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Seele_StarchasmNyx_SKL02" } }
+	}
+	#进unity
+	scale = 0.04
+}
+
+
+#############################
+########## Theresa ##########
+#############################
+
+########### Theresa_StarlitAstrologos ###########
+entity = {
+	name = "ValkyrieComprehensiveTheresa_1_entity"
+	pdxmesh = "Theresa_StarlitAstrologos_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 2 }
+	# state = { name = "idle"  animation = "Idle3"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+	# 	event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_IDLE3" } }	
+	# }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_IDLE1" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Idle3" } }	
+	}
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Ultra" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Attack" } }
+	}
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Ultra" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Theresa_StarlitAstrologos_Ultra" } }
+	}
+
+	scale = 4
+}
+
+
+entity = {
+	clone = "ValkyrieComprehensiveTheresa_1_entity"
+	name = "ValkyrieComprehensiveTheresa_entity"
+	pdxmesh = "Theresa_StarlitAstrologos_pdx"
+}
+
+########### Theresa_LunarVowCrimsonLove ###########
+entity = {
+	name = "ValkyrieComprehensiveTheresa_3_entity"
+	pdxmesh = "Theresa_LunarVowCrimsonLove_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	# state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1
+	# 	event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Idle" } }
+	# }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Idle" } }	
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Idle3" } }	
+	}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack2" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack2" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Theresa_LunarVowCrimsonLove_Attack2" } }
+	}
+	#进unity
+	scale = 0.04
+}
+
+########### Theresa_Mars ###########
+entity = {
+	name = "ValkyrieComprehensiveTheresa_2_entity"
+	pdxmesh = "Theresa_Mars_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 2 }
+	# state = { name = "idle"  animation = "Idle3"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+	# 	event = { time = 0  sound = { soundeffect = "Theresa_Mars_IDLE3" } }	
+	# }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Theresa_Mars_IDLE1" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Theresa_Mars_Idle3" } }	
+	}
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Ultra" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Attack" } }
+	}
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Ultra" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Theresa_Mars_Ultra" } }
+	}
+
+	scale = 0.04
+}
+
+#############################
+########### Fuka ###########
+#############################
+########### Fuka_ShadowKnight ###########
+entity = {
+	name = "ValkyrieMeeleFuka_2_entity"
+	pdxmesh = "Fuka_ShadowKnight_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1}
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "Fuka_Idle2" } }
+	}
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5 }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Fuka_Attack" } }
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+	
+}
+
+entity = {
+	clone = "ValkyrieMeeleFuka_2_entity"
+	name = "ValkyrieMeeleFuka_entity"
+	pdxmesh = "Fuka_ShadowKnight_pdx"
+}
+
+########### Fuka_AzureEmpyrea ###########
+entity = {
+	name = "ValkyrieMeeleFuka_3_entity"
+	pdxmesh = "Fuka_AzureEmpyrea_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Attack" } }
+	}
+	state = { name = "attack"  animation = "Charge"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Charge" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Ultra" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Attack" } }
+	}
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Attack" } }
+	}
+	state = { name = "defend"  animation = "Charge"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Charge" } }
+	}
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Ultra" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Fuka_AzureEmpyrea_Ultra" } }
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+}
+
+
+#############################
+########### Eden ############
+#############################
+
+########### Eden_GoldenDiva ###########
+entity = {
+	name = "ValkyrieComprehensiveEden_0_entity"
+	pdxmesh = "Eden_GoldenDiva_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+	#state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5
+		#event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Idle2" } }
+	}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "SKL"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_SKL" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack2" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.25 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Attack2" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "SKL"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_SKL" } }
+	}
+	#进unity
+	scale = 0.04
+}
+
+entity = {
+	clone = "ValkyrieComprehensiveEden_0_entity"
+	name = "ValkyrieComprehensiveEden_entity"
+	pdxmesh = "Eden_GoldenDiva_pdx"
+}
+
+
+
+
+#############################
+######### Herrscher #########
+#############################
+
+########### Kiana_HerrscherofVoid ###########
+### Old ####
+# entity = {
+# 	name = "HerrscherVoidKiana_0_entity"
+# 	pdxmesh = "Kiana_HerrscherofVoid_pdx"
+		
+# 	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 1 }
+# 	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 1 }
+# 	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "idle"  chance = 2 }
+# 	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 5
+# 		event = { time = 0  sound = { soundeffect = "HerrscherofVoid_Idle2" } }
+# 	}
+
+# 	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+
+# 	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 5}
+# 	state = { name = "training"  animation = "Walk"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 2}
+
+# 	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "attack"  animation = "AttackThree"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "attack"  animation = "AllFire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5 
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+
+# 	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "defend"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "defend"  animation = "AttackThree"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "defend"  animation = "AllFire"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 5
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+	
+# 	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+# 	state = { name = "support_attack"  animation = "AttackThree"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+# 		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+# 	}
+
+# 	scale = 0.07
+	
+# }
+
+### Rework ####
+#Body
+entity = {
+	name = "Kiana_HerrscherofVoid_entity"
+	pdxmesh = "Kiana_HerrscherofVoid_Body_pdx"
+		
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "idle2" } 
+		event = { time = 0  sound = { soundeffect = "HerrscherofVoid_Idle2" } }
+	}
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "idle1" } }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 2 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "idle1" } }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "idle1" } }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "move" 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "move" } }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "move" 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "move" } }
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training" 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "idle3" } }
+
+	state = { name = "attack"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "branchattack" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_BranchAttack" } }
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "ultra" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Ultra" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "attack"  chance = 2 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "move" }
+	}
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "attack"  chance = 5
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "attack" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Attack" } }
+	}
+
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "defend"  chance = 1
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "ultra" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Ultra" } }
+	}
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "defend"  chance = 2
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "attack" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Attack" } }
+	}
+
+	state = { name = "support_attack"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "branchattack" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_BranchAttack" } }
+	}
+	state = { name = "support_attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "ultra" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Ultra" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "support_attack"  chance = 2 
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "move" }
+	}
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "support_attack"  chance = 5
+		propagate_state = { Kiana_HerrscherofVoid_BodyAdd = "attack" }
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofVoid_Attack" } }
+	}
+
+	attach = { name = "Kiana_HerrscherofVoid_BodyAdd" ROOT = "Kiana_HerrscherofVoid_BodyAdd_entity" }
+	#进unity
+	scale = 0.04
+}
+
+#BodyAdd
+entity = {
+	name = "Kiana_HerrscherofVoid_BodyAdd_entity"
+	pdxmesh = "Kiana_HerrscherofVoid_BodyAdd_pdx"
+		
+	state = { name = "idle1"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle2"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle3"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "branchattack"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no }
+	state = { name = "ultra"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	#主体控制比例
+	scale = 1
+}
+
+entity = {
+	clone = "Kiana_HerrscherofVoid_entity"
+	name = "HerrscherVoidKiana_0_entity"
+}
+entity = {
+	clone = "Kiana_HerrscherofVoid_entity"
+	name = "HerrscherVoidKiana_entity"
+}
+
+########### Kiana_HerrscherofFlamescion ###########
+entity = {
+	name = "HerrscherFlamescionKiana_0_entity"
+	pdxmesh = "Kiana_HerrscherofFlamescion_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 5 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.2  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Idle" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Idle" } }	
+	}
+
+	state = { name = "attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Attack" } }
+	}
+	state = { name = "attack"  animation = "RulerStart"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_RulerStart" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Ultra" } }
+	}
+
+	state = { name = "defend"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Attack" } }
+	}
+	state = { name = "defend"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Ultra" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "Attack"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Attack" } }
+	}
+	state = { name = "support_attack"  animation = "Ultra"   animation_blend_time = 0.1  animation_speed = 1.15 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_Ultra" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.6 looping = no  next_state = "support_attack"  chance = 2
+	}
+	state = { name = "support_attack"  animation = "RulerStart"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 6
+		event = { time = 0  sound = { soundeffect = "Kiana_HerrscherofFlamescion_RulerStart" } }
+	}
+	#进unity
+	scale = 0.04
+}
+entity = {
+	clone = "HerrscherFlamescionKiana_0_entity"
+	name = "HerrscherFlamescionKiana_entity"
+	pdxmesh = "Kiana_HerrscherofFlamescion_pdx"
+}
+
+
+########### Kiana_HerrscherofFinality_static ###########
+entity = {
+	name = "Kiana_HerrscherofFinality_static_entity"
+	pdxmesh = "Kiana_HerrscherofFinality_static_pdx"
+		
+	default_state = "Stop"
+	state = { name = "FallAttack"  animation = "FallAttack"   animation_blend_time = 0.1  animation_speed = 1.5 looping = no  }
+	state = { name = "Stop"  animation = "Stop"   animation_blend_time = 0.1  animation_speed = 1.5 looping = no  }
+
+	scale = 1
+}
+
+
+########### Mei_HerrscherofThunder ###########
+entity = {
+	name = "HerrscherThunderMei_0_entity"
+	pdxmesh = "Mei_HerrscherofThunder_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.2 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1.5 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "defend"  chance = 2
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack2" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack2" } }
+	}
+	#进unity
+	scale = 0.04
+	
+}
+entity = {
+	clone = "HerrscherThunderMei_0_entity"
+	name = "HerrscherThunderMei_entity"
+	pdxmesh = "Mei_HerrscherofThunder_pdx"
+}
+
+
+########### Bronya_HerrscherofReason ###########
+
+entity = {
+	name = "HerrscherReasonBronya_0_entity"
+	pdxmesh = "Bronya_HerrscherofReason_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.25 looping = no  next_state = "idle"  chance = 2}
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 2
+		event = { time = 0  sound = { soundeffect = "HerrscherofReason_Idle2" } }
+	}
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 1}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.25 looping = no  next_state = "training"  chance = 2}
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "training"  chance = 3}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 1 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Fire"   animation_blend_time = 0.1  animation_speed = 1.3 looping = no  next_state = "attack"  chance = 5 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "defend"  animation = "Fire"   animation_blend_time = 0.1  animation_speed = 1.3 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 1
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	scale = 0.07
+	
+}
+
+entity = {
+	clone = "HerrscherReasonBronya_0_entity"
+	name = "HerrscherReasonBronya_entity"
+	pdxmesh = "Bronya_HerrscherofReason_pdx"
+}
+
+########### Seele_HerrscherofRebirth ###########
+#Body
+entity = {
+	name = "HerrscherRebirthSeele_entity"
+	pdxmesh = "Seele_HerrscherofRebirth_Body_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "idle"  chance = 5 
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Idle" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "move" }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "move" }
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "training"  
+		#event = { time = 0  sound = { soundeffect = "Eden_GoldenDiva_Idle2" } }
+	}
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "attack1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "attack1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "attack1" }
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "attack2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "attack2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "attack2" }	
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "attack"  chance = 2 
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "attack3" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "attack3" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "attack3" }	
+	}
+	state = { name = "attack"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "attack4" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "attack4" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "attack4" }	
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_BranchAttack" } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "defend1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "defend1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "defend1" }		
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Attack2" } }
+	}
+	state = { name = "defend"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "defend2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "defend2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "defend2" }		
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_BranchAttack" } }
+	}
+
+
+	state = { name = "support_attack"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "support_attack1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "support_attack1" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "support_attack1" }		
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_BranchAttack" } }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "support_attack2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "support_attack2" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "support_attack2" }	
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  next_state = "support_attack"  chance = 2
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "support_attack3" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "support_attack3" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "support_attack3" }	
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 5
+		propagate_state = { Seele_HerrscherofRebirth_ShortSkirt = "support_attack4" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt1 = "support_attack4" }
+		propagate_state = { Seele_HerrscherofRebirth_LongSkirt2 = "support_attack4" }		
+		event = { time = 0  sound = { soundeffect = "HerrscherofRebirth_Attack2" } }
+	}
+
+	attach = { name = "Seele_HerrscherofRebirth_ShortSkirt" ROOT = "Seele_HerrscherofRebirth_ShortSkirt_entity" }
+	attach = { name = "Seele_HerrscherofRebirth_LongSkirt1" ROOT = "Seele_HerrscherofRebirth_LongSkirt1_entity" }
+	attach = { name = "Seele_HerrscherofRebirth_LongSkirt2" ROOT = "Seele_HerrscherofRebirth_LongSkirt2_entity" }
+	#进unity
+	scale = 0.04
+}
+
+#ShortSkirt
+entity = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_entity"
+	pdxmesh = "Seele_HerrscherofRebirth_ShortSkirt_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "attack1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack2"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "attack4"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+	state = { name = "defend1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "defend2"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+
+	state = { name = "support_attack1"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack2"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "support_attack4"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  }
+	#主体控制比例
+	scale = 1
+}
+
+#LongSkirt1
+entity = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_entity"
+	pdxmesh = "Seele_HerrscherofRebirth_LongSkirt1_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "attack1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack2"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "attack4"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+	state = { name = "defend1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "defend2"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+
+	state = { name = "support_attack1"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack2"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "support_attack4"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  }
+	#主体控制比例
+	scale = 1
+}
+
+#LongSkirt2
+entity = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_entity"
+	pdxmesh = "Seele_HerrscherofRebirth_LongSkirt2_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no  }
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "training"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+
+	state = { name = "attack1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack2"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "attack4"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+	state = { name = "defend1"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "defend2"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+
+
+	state = { name = "support_attack1"  animation = "BranchAttack"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack2"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no }
+	state = { name = "support_attack3"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.9 looping = no }
+	state = { name = "support_attack4"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  }
+	#主体控制比例
+	scale = 1
+}
+
+entity = {
+	name = "HerrscherRebirthSeele_0_entity"
+	clone = "HerrscherRebirthSeele_entity"
+}
+
+########### Elysia_HerrscherofHuman ###########
+
+entity = {
+	name = "HerrscherHumanElysia_0_entity"
+	pdxmesh = "Elysia_HerrscherofHuman_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle3"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack3" } }
+	}
+
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack2" } }
+	}
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Move2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "" } }
+	}
+	state = { name = "defend"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack3" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack3"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack3" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack2" } }
+	}
+	state = { name = "support_attack"  animation = "Move2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1.1 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Attack1" } }
+	}
+	
+	scale = 0.04
+	
+}
+
+entity = {
+	clone = "HerrscherHumanElysia_0_entity"
+	name = "HerrscherHumanElysia_entity"
+	pdxmesh = "Elysia_HerrscherofHuman_pdx"
+}
+
+
+########### Elysia_MissPinkElf ###########
+entity = {
+	name = "Elysia_MissPinkElf_entity"
+	pdxmesh = "Elysia_MissPinkElf_pdx"
+		
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle"  chance = 1 }
+	state = { name = "idle"  animation = "Idle1"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "idle"  chance = 2 }
+	state = { name = "idle"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle"  chance = 5
+		# event = { time = 0  sound = { soundeffect = "HerrscherofHuman_Idle2" } }
+	}
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "move" 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+
+	state = { name = "training"  animation = "Idle2"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack2" } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "attack"  chance = 2 
+		#event = { time = 0  sound = { soundeffect = "airplane_jet_idle" } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack2" } }
+	}
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "defend"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+	state = { name = "defend"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "defend"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "" } }
+	}
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "defend"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "support_attack"  chance = 1
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 2
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack2" } }
+	}
+	state = { name = "support_attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.7 looping = no  next_state = "support_attack"  chance = 2
+		#event = { time = 0  sound = { soundeffect = "HerrscherofThunder_Attack1" } }
+	}
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 0.95 looping = no  next_state = "support_attack"  chance = 5
+		event = { time = 0  sound = { soundeffect = "Elysia_MissPinkElf_Attack1" } }
+	}
+	
+	scale = 0.04
+	
+}
+
+########### Elysia_HerrscherofErosion ###########
+entity = {
+	clone = "Elysia_MissPinkElf_entity"
+	name = "HerrscherErosionElysia_entity"
+	pdxmesh = "Elysia_HerrscherofErosion_pdx"
+}
+entity = {
+	clone = "HerrscherErosionElysia_entity"
+	name = "HerrscherErosionElysia_0_entity"
+	pdxmesh = "Elysia_HerrscherofErosion_pdx"
+}
+
+
+
+entity = {
+	clone = "ValkyrieComprehensiveKiana_2_entity"
+	name = "ValkyrieArmorUnit_entity"
+}
+entity = {
+	clone = "ValkyrieComprehensiveKiana_0_entity"
+	name = "ValkyrieArmorUnit_0_entity"
+}
+entity = {
+	clone = "ValkyrieComprehensiveKiana_1_entity"
+	name = "ValkyrieArmorUnit_1_entity"
+}
+entity = {
+	clone = "ValkyrieComprehensiveKiana_2_entity"
+	name = "ValkyrieArmorUnit_2_entity"
+}
+entity = {
+	clone = "ValkyrieMeeleMei_3_entity"
+	name = "ValkyrieArmorUnit_3_entity"
+}
+entity = {
+	clone = "HerrscherRebirthSeele_0_entity"
+	name = "ValkyrieArmorUnit_4_entity"
+}

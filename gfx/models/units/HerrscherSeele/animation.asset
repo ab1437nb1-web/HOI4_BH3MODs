@@ -1,0 +1,82 @@
+
+########### Seele_HerrscherofRebirth ###########
+animation = {
+	name = "Seele_HerrscherofRebirth_Body_Idle_animation"
+	file = "Seele_HerrscherofRebirth_Body_Idle.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_Body_Move_animation"
+	file = "Seele_HerrscherofRebirth_Body_Move.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_Body_Attack1_animation"
+	file = "Seele_HerrscherofRebirth_Body_Attack1.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_Body_BranchAttack_animation"
+	file = "Seele_HerrscherofRebirth_Body_BranchAttack.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_Body_Attack2_animation"
+	file = "Seele_HerrscherofRebirth_Body_Attack2.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_Idle_animation"
+	file = "Seele_HerrscherofRebirth_ShortSkirt_Idle.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_Move_animation"
+	file = "Seele_HerrscherofRebirth_ShortSkirt_Move.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_Attack1_animation"
+	file = "Seele_HerrscherofRebirth_ShortSkirt_Attack1.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_BranchAttack_animation"
+	file = "Seele_HerrscherofRebirth_ShortSkirt_BranchAttack.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_ShortSkirt_Attack2_animation"
+	file = "Seele_HerrscherofRebirth_ShortSkirt_Attack2.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_Idle_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt1_Idle.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_Move_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt1_Move.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_Attack1_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt1_Attack1.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_BranchAttack_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt1_BranchAttack.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt1_Attack2_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt1_Attack2.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_Idle_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt2_Idle.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_Move_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt2_Move.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_Attack1_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt2_Attack1.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_BranchAttack_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt2_BranchAttack.anim"
+}
+animation = {
+	name = "Seele_HerrscherofRebirth_LongSkirt2_Attack2_animation"
+	file = "Seele_HerrscherofRebirth_LongSkirt2_Attack2.anim"
+}

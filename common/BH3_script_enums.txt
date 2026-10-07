@@ -1,0 +1,10 @@
+# #自行添加无效果，要覆盖源文件，这样会导致兼容性差，暂时不改
+# script_enum_equipment_bonus_type = {
+
+# 	HerrscherVoid_Kiana_equipment
+# 	Herrscher_Kiana_equipment_0
+# 	Herrscher_Mei_equipment
+# 	Herrscher_Mei_equipment_0
+# 	Herrscher_Bronya_equipment
+# 	Herrscher_Bronya_equipment_0
+# }

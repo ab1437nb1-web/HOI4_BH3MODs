@@ -1,0 +1,46 @@
+### 往事乐土 ###
+# 完成本特殊项目后：解锁「无瑕之钥」生产 + 打开「往事乐土」决议组（国家标记 BH3_ElysianRealm_unlocked）。
+BH3_sp_ElysianRealm_Open = {
+	specialization = BH3_Honkai_specialization
+
+	project_tags = BH3_sp_tag_BH3_ElysianRealm
+
+	icon = GFX_BH3_sp_ValkyrieArmor_Engine_HonkaiImproved
+	available = {
+		always = yes
+	}
+
+	visible = { FROM = { has_country_flag = BH3_Hyperion_enabled } }
+
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+
+	ai_will_do = {
+		base = -10
+	}
+
+	breakthrough_cost = {
+		BH3_Honkai_specialization = 0
+	}
+
+	project_output = {
+		enable_equipments = { BH3_FlawlessKey_equipment_0 }
+
+		country_effects = {
+			set_country_flag = BH3_ElysianRealm_unlocked
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1 sp_land_generic_reward_scientist_xp_2 sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1 sp_land_generic_reward_army_xp_2 sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1 sp_land_generic_reward_major_progress_2 sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1 sp_land_generic_reward_test_failure_2 sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_armor_tech_1 sp_land_generic_reward_armor_tech_2 sp_land_generic_reward_armor_tech_3
+		sp_land_generic_reward_armor_bonus_1 sp_land_generic_reward_armor_bonus_2 sp_land_generic_reward_armor_bonus_3
+		sp_land_generic_reward_engine_bonus_1 sp_land_generic_reward_engine_bonus_2 sp_land_generic_reward_engine_bonus_3
+		sp_land_generic_reward_resource_scarcity
+		sp_land_generic_reward_critical_failure
+	}
+}

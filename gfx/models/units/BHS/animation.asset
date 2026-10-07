@@ -1,0 +1,160 @@
+
+########### 死士 ###########
+animation = {
+	name = "SishiBHS_Idle_animation"
+	file = "SishiBHS_Idle.anim"
+}
+animation = {
+	name = "SishiBHS_Move_animation"
+	file = "SishiBHS_Move.anim"
+}
+animation = {
+	name = "SishiBHS_Attack_animation"
+	file = "SishiBHS_Attack.anim"
+}
+
+########### 突击级崩坏兽 ###########
+animation = {
+	name = "TujinBHS_Idle_animation"
+	file = "TujinBHS_Idle.anim"
+}
+animation = {
+	name = "TujinBHS_Move_animation"
+	file = "TujinBHS_Move.anim"
+}
+animation = {
+	name = "TujinBHS_Attack1_animation"
+	file = "TujinBHS_Attack1.anim"
+}
+animation = {
+	name = "TujinBHS_Attack2_animation"
+	file = "TujinBHS_Attack2.anim"
+}
+
+########### 骑士级崩坏兽 ###########
+animation = {
+	name = "QishiBHS_Idle_animation"
+	file = "QishiBHS_Idle.anim"
+}
+animation = {
+	name = "QishiBHS_Move_animation"
+	file = "QishiBHS_Move.anim"
+}
+animation = {
+	name = "QishiBHS_Attack1_animation"
+	file = "QishiBHS_Attack1.anim"
+}
+animation = {
+	name = "QishiBHS_Attack2_animation"
+	file = "QishiBHS_Attack2.anim"
+}
+animation = {
+	name = "QishiBHS_Attack3_animation"
+	file = "QishiBHS_Attack3.anim"
+}
+
+########### 战车级崩坏兽 ###########
+animation = {
+	name = "ZhancheBHS_Idle_animation"
+	file = "ZhancheBHS_Idle.anim"
+}
+animation = {
+	name = "ZhancheBHS_Move_animation"
+	file = "ZhancheBHS_Move.anim"
+}
+animation = {
+	name = "ZhancheBHS_Attack1_animation"
+	file = "ZhancheBHS_Attack1.anim"
+}
+animation = {
+	name = "ZhancheBHS_Attack2_animation"
+	file = "ZhancheBHS_Attack2.anim"
+}
+animation = {
+	name = "ZhancheBHS_Attack3_animation"
+	file = "ZhancheBHS_Attack3.anim"
+}
+
+########### 圣殿级崩坏兽 ###########
+animation = {
+	name = "ShengdianBHS_Idle_animation"
+	file = "ShengdianBHS_Idle.anim"
+}
+animation = {
+	name = "ShengdianBHS_Move_animation"
+	file = "ShengdianBHS_Move.anim"
+}
+animation = {
+	name = "ShengdianBHS_Attack1_animation"
+	file = "ShengdianBHS_Attack1.anim"
+}
+animation = {
+	name = "ShengdianBHS_Attack2_animation"
+	file = "ShengdianBHS_Attack2.anim"
+}
+animation = {
+	name = "ShengdianBHS_Attack3_animation"
+	file = "ShengdianBHS_Attack3.anim"
+}
+
+########### 迦尼萨 ###########
+animation = {
+	name = "JianisaBHS_Idle_animation"
+	file = "JianisaBHS_Idle.anim"
+}
+animation = {
+	name = "JianisaBHS_Move_animation"
+	file = "JianisaBHS_Move.anim"
+}
+animation = {
+	name = "JianisaBHS_Attack1_animation"
+	file = "JianisaBHS_Attack1.anim"
+}
+animation = {
+	name = "JianisaBHS_Roll1_animation"
+	file = "JianisaBHS_Roll1.anim"
+}
+animation = {
+	name = "JianisaBHS_Burst1_animation"
+	file = "JianisaBHS_Burst1.anim"
+}
+animation = {
+	name = "JianisaBHS_Burst2_animation"
+	file = "JianisaBHS_Burst2.anim"
+}
+
+########### 贝纳勒斯 ###########
+animation = {
+	name = "BeinalesiBHS_Idle_animation"
+	file = "BeinalesiBHS_Idle.anim"
+}
+animation = {
+	name = "BeinalesiBHS_Move_animation"
+	file = "BeinalesiBHS_Move.anim"
+}
+animation = {
+	name = "BeinalesiBHS_Breath_animation"
+	file = "BeinalesiBHS_Breath.anim"
+}
+animation = {
+	name = "BeinalesiBHS_Pounce_animation"
+	file = "BeinalesiBHS_Pounce.anim"
+}
+animation = {
+	name = "BeinalesiBHS_Roar_animation"
+	file = "BeinalesiBHS_Roar.anim"
+}
+animation = {
+	name = "BeinalesiBHS_Tornado_animation"
+	file = "BeinalesiBHS_Tornado.anim"
+}
+animation = {
+	name = "BeinalesiBHS_WingClaw_animation"
+	file = "BeinalesiBHS_WingClaw.anim"
+}
+
+########### 示现此世之兽 ###########
+animation = {
+	name = "MonsterBossBHS_Idle_animation"
+	file = "MonsterBossBHS_Idle.anim"
+}

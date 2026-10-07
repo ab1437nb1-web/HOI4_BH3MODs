@@ -1,0 +1,110 @@
+#####################################
+##### 律者级空中女武神实体 ##########
+#####################################
+# 复用陆上律者模型（mesh 与动画名取自 units_Valkyrie.asset 中对应实体），
+# 状态换为空军六态：fire / bomb / firebomb / idle / crash / explode。
+# scale 沿用该 mesh 在陆上 _0_entity 中的比例。
+
+entity = {
+	name = "HerrscherVoidKianaAir_entity"
+	pdxmesh = "Kiana_HerrscherofVoid_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.5 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 0.07
+}
+
+entity = {
+	name = "HerrscherThunderMeiAir_entity"
+	pdxmesh = "Mei_HerrscherofThunder_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 0.8 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.2 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.2 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.8 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.2 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.2 looping = no next_state = "explode" }
+
+	scale = 0.04
+}
+
+entity = {
+	name = "HerrscherFlamescionKianaAir_entity"
+	pdxmesh = "Kiana_HerrscherofFlamescion_pdx"
+
+	state = { name = "fire" animation = "Attack" animation_blend_time = 0.1 animation_speed = 1.15 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.2 animation_speed = 0.8 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "explode" }
+
+	scale = 0.04
+}
+# 理之律者·布洛妮娅（mesh Bronya_HerrscherofReason_pdx，动画取自陆上同名实体）
+entity = {
+	name = "HerrscherReasonBronyaAir_entity"
+	pdxmesh = "Bronya_HerrscherofReason_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Fire" animation_blend_time = 0.1 animation_speed = 1.2 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.5 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 0.07
+}
+
+# 死生之律者·希儿（mesh Seele_HerrscherofRebirth_Body_pdx，裙甲为 attach 子网格，必须保留）
+entity = {
+	name = "HerrscherRebirthSeeleAir_entity"
+	pdxmesh = "Seele_HerrscherofRebirth_Body_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.9 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "BranchAttack" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle" animation_blend_time = 0.1 animation_speed = 0.9 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.9 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.9 looping = no next_state = "explode" }
+
+	attach = { name = "Seele_HerrscherofRebirth_ShortSkirt" ROOT = "Seele_HerrscherofRebirth_ShortSkirt_entity" }
+	attach = { name = "Seele_HerrscherofRebirth_LongSkirt1" ROOT = "Seele_HerrscherofRebirth_LongSkirt1_entity" }
+	attach = { name = "Seele_HerrscherofRebirth_LongSkirt2" ROOT = "Seele_HerrscherofRebirth_LongSkirt2_entity" }
+
+	scale = 0.04
+}
+
+# 人之律者·爱莉希雅（mesh Elysia_HerrscherofHuman_pdx）
+entity = {
+	name = "HerrscherHumanElysiaAir_entity"
+	pdxmesh = "Elysia_HerrscherofHuman_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.1 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Attack3" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.8 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "explode" }
+
+	scale = 0.04
+}
+# 侵蚀之律者·爱莉希雅（mesh Elysia_HerrscherofErosion_pdx；动画名取自其陆战实体所 clone 的 Elysia_MissPinkElf_entity）
+entity = {
+	name = "HerrscherErosionElysiaAir_entity"
+	pdxmesh = "Elysia_HerrscherofErosion_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 0.95 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Attack2" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 0.04
+}

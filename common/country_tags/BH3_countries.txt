@@ -1,0 +1,9 @@
+BHS = "countries/Benghuaishou.txt"
+HI1 = "countries/Benghuaishou.txt"
+HI2 = "countries/Benghuaishou.txt"
+HI3 = "countries/Benghuaishou.txt"
+
+HI6 = "countries/Benghuaishou.txt"
+HI7 = "countries/Benghuaishou.txt"
+
+HH2 = "countries/Benghuaishou.txt"

@@ -1,0 +1,8 @@
+#Applied on the project level to group together Projects with the purpose of generating modifiers 
+
+project_tags = {
+	BH3_sp_tag_BH3_TheDivineKeys
+	BH3_sp_tag_BH3_ValkyrieArmor
+	BH3_sp_tag_BH3_ValkyrieArmor_Doll
+	BH3_sp_tag_BH3_ElysianRealm
+}

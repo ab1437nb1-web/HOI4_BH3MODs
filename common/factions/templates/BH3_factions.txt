@@ -1,0 +1,42 @@
+# 崩坏阵营
+BH3_Honkai_Impact_union = {
+	name = BH3_Honkai_Impact_union_name
+	manifest = BH3_faction_manifest_Honkai_Civilization
+	can_leader_join_other_factions = yes
+	icon = GFX_BH3_faction_icon_honkai
+	visible = {
+		always = yes 
+	}
+	available = {
+		TAG = BHS
+	}
+	goals = {
+
+	}
+
+	default_rules = {
+		
+	}
+
+}
+# 逐火之蛾
+BH3_Anti_BHS_union = {
+	name = BH3_Anti_BHS_union_name
+	manifest = BH3_faction_manifest_Protect_Civilization
+	can_leader_join_other_factions = yes
+	icon = GFX_BH3_faction_icon_union
+	visible = {
+		always = yes 
+	}
+	available = {
+		has_global_flag = BHS_Started
+	}
+	goals = {
+
+	}
+
+	default_rules = {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+peace_ai_desires = {
+    #谈判机制吞并一切
+    bhs_take_everything = {
+        peace_action_type = { take_states }
+        enable = {
+            ROOT = { tag = BHS }
+            ROOT = { tag = HI1 }
+            ROOT = { tag = HI2 }
+            ROOT = { tag = HI3 }
+
+            ROOT = { tag = HI6 }
+            ROOT = { tag = HI7 }
+            ROOT = { tag = HH2 }
+        }
+        ai_desire = 999
+    }
+
+}

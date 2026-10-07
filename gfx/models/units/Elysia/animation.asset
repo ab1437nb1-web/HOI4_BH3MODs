@@ -1,0 +1,22 @@
+
+########### Elysia_MissPinkElf ###########
+animation = {
+	name = "Elysia_MissPinkElf_Idle1_animation"
+	file = "Elysia_MissPinkElf_Idle1.anim"
+}
+animation = {
+	name = "Elysia_MissPinkElf_Idle2_animation"
+	file = "Elysia_MissPinkElf_Idle2.anim"
+}
+animation = {
+	name = "Elysia_MissPinkElf_Move_animation"
+	file = "Elysia_MissPinkElf_Move.anim"
+}
+animation = {
+	name = "Elysia_MissPinkElf_Attack1_animation"
+	file = "Elysia_MissPinkElf_Attack1.anim"
+}
+animation = {
+	name = "Elysia_MissPinkElf_Attack2_animation"
+	file = "Elysia_MissPinkElf_Attack2.anim"
+}

@@ -1,0 +1,184 @@
+guiTypes = {
+	containerWindowType = {
+		name = "BH3_BHS_invasion_HH2_Mask_Window"
+		position = { x = 0 y = 100 }
+		size = { width = 1080 height = 1280 }
+		moveable = no
+		orientation = CENTER
+		origo = center
+
+		iconType = {
+			name = "BH3_BHS_invasion_HH2_Mask_Window_icon"
+			position = { x = 0 y = 0 }
+			spriteType ="GFX_BH3_BHS_invasion_HH2_Mask_Window_icon"
+			alwaystransparent = yes
+		}
+    } 
+
+	containerWindowType = { 
+		name = "BH3_BHS_invasion_HH2_Mask_Window_Movie"
+		position = { x = 0 y = 100 }
+		# size = { width = 1080 height = 1280 }
+		size = { width = 1280 height = 720 }
+		orientation = CENTER
+        moveable = no
+		
+		background = { quadTextureSprite = "GFX_BH3_invasion_alpha_bg"}
+
+
+		iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg1"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg1"
+			position = { x= 0 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg2"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg2"
+			position = { x= 80 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg3"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg3"
+			position = { x= 160 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg4"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg4"
+			position = { x= 240 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg5"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg5"
+			position = { x= 320 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg6"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg6"
+			position = { x= 400 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg7"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg7"
+			position = { x= 480 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg8"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg8"
+			position = { x= 560 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg9"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg9"
+			position = { x= 640 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg10"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg10"
+			position = { x= 720 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg11"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg11"
+			position = { x= 800 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg12"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg12"
+			position = { x= 880 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg13"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg13"
+			position = { x= 960 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg14"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg14"
+			position = { x= 1040 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg15"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg15"
+			position = { x= 1120 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+        iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_bg16"
+			spriteType = "GFX_BH3_BHS_invasion_end_event_bg16"
+			position = { x= 1200 y = 0 }
+			Orientation = LEFT
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="GFX_BH3_BHS_invasion_end_event_mask"
+			spriteType = "GFX_BH3_BHS_invasion_start_event_mask"
+			position = { x= 40 y = -220 }
+			Orientation = LOWER_LEFT
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_invasion_end_event_title_desc"
+			position = { x= 60 y = -220 }
+			font = "hoi_30header"
+			text = "BH3_BHS_invasion_end_event_title_desc"
+			maxWidth = 1160
+			maxHeight = 30
+			fixedsize = yes
+			format = center
+			Orientation = LOWER_LEFT
+		}
+
+		instantTextBoxType = {
+			name = "BH3_BHS_invasion_end_event_desc"
+			position = { x= 45 y = -185 }
+			font = "hoi_24header"
+			text = "BH3_BHS_invasion_end_event_desc"
+			maxWidth = 1190
+			maxHeight = 150
+			fixedsize = yes
+			format = left
+			Orientation = LOWER_LEFT
+		}
+
+		buttonType = {
+			name = "BH3_BHS_invasion_end_event_btn"
+			spriteType = "GFX_BH3_opt_complete_200x50_btn"
+			position = { x = 560 y = -50 }
+			Orientation = LOWER_LEFT
+			buttonText = "BH3_BHS_invasion_end_event_btn_tt"
+			buttonfont = "hoi_24header"
+			shortcut = "ESCAPE"
+		}
+	}
+}

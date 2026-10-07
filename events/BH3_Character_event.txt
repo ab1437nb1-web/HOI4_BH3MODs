@@ -1,0 +1,541 @@
+add_namespace = BH3_Character_event 
+
+# 月球之战失败，移除本国最强女武神
+unit_leader_event = {
+	id = BH3_Character_event.1
+	is_triggered_only = yes
+	title =BH3_Character_event.1.t
+	desc = BH3_Character_event.1.d
+	picture = GFX_CharacterEvent_Valkyrie_Die
+	option = {
+		name = BH3_Character_event.1.a
+	}
+}
+
+
+#琪亚娜晋升提示
+unit_leader_event = {
+	id = BH3_Character_event.10
+	is_triggered_only = yes
+	title =BH3_Character_event.10.t
+	desc = BH3_Character_event.10.d
+	picture = GFX_BH3_unit_leader_VoidDrifter
+	option = {
+		name = BH3_Character_event.10.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.11
+	is_triggered_only = yes
+	title =BH3_Character_event.11.t
+	desc = BH3_Character_event.11.d
+	picture = GFX_BH3_unit_leader_KnightMoonbeam
+	option = {
+		name = BH3_Character_event.11.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.12
+	is_triggered_only = yes
+	title =BH3_Character_event.12.t
+	desc = BH3_Character_event.12.d
+	picture = GFX_BH3_unit_leader_HerrscherofVoidKiana
+	option = {
+		name = BH3_Character_event.12.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.13
+	is_triggered_only = yes
+	title =BH3_Character_event.13.t
+	desc = BH3_Character_event.13.d
+	picture = GFX_BH3_unit_leader_HerrscherofFlamescion
+	option = {
+		name = BH3_Character_event.13.a
+	}
+}
+
+#芽衣晋升提示
+unit_leader_event = {
+	id = BH3_Character_event.20
+	is_triggered_only = yes
+	title =BH3_Character_event.20.t
+	desc = BH3_Character_event.20.d
+	picture = GFX_BH3_unit_leader_StrikerFulminata
+	option = {
+		name = BH3_Character_event.20.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.21
+	is_triggered_only = yes
+	title =BH3_Character_event.21.t
+	desc = BH3_Character_event.21.d
+	picture = GFX_BH3_unit_leader_DanzaiSpectramancer
+	option = {
+		name = BH3_Character_event.21.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.22
+	is_triggered_only = yes
+	title =BH3_Character_event.22.t
+	desc = BH3_Character_event.22.d
+	picture = GFX_BH3_unit_leader_DanzaiSpectramancer2
+	option = {
+		name = BH3_Character_event.22.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.23
+	is_triggered_only = yes
+	title =BH3_Character_event.23.t
+	desc = BH3_Character_event.23.d
+	picture = GFX_BH3_unit_leader_HerrscherofThunder
+	option = {
+		name = BH3_Character_event.23.a
+	}
+}
+
+#布洛妮娅晋升提示
+unit_leader_event = {
+	id = BH3_Character_event.30
+	is_triggered_only = yes
+	title =BH3_Character_event.30.t
+	desc = BH3_Character_event.30.d
+	picture = GFX_BH3_unit_leader_YamabukiArmor
+	option = {
+		name = BH3_Character_event.30.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.31
+	is_triggered_only = yes
+	title =BH3_Character_event.31.t
+	desc = BH3_Character_event.31.d
+	picture = GFX_BH3_unit_leader_BlackNucleus
+	option = {
+		name = BH3_Character_event.31.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.32
+	is_triggered_only = yes
+	title =BH3_Character_event.32.t
+	desc = BH3_Character_event.32.d
+	picture = GFX_BH3_unit_leader_DimensionBreaker
+	option = {
+		name = BH3_Character_event.32.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.33
+	is_triggered_only = yes
+	title =BH3_Character_event.33.t
+	desc = BH3_Character_event.33.d
+	picture = GFX_BH3_unit_leader_HerrscherofReason
+	option = {
+		name = BH3_Character_event.33.a
+	}
+}
+
+#希儿晋升提示
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.40
+	is_triggered_only = yes
+	title =BH3_Character_event.40.t
+	desc = BH3_Character_event.40.d
+	picture = GFX_BH3_unit_leader_SwallowtailPhantasm
+	option = {
+		name = BH3_Character_event.40.a
+	}
+}
+unit_leader_event = { #晋升S级，并分离黑希
+	id = BH3_Character_event.41
+	is_triggered_only = yes
+	picture = GFX_CharacterEvent_Seele_Wake
+	title = BH3_Character_event.41.t
+	desc = BH3_Character_event.41.d
+	option = { #分离
+		name = BH3_Character_event.41.a1
+		ROOT = { set_country_flag = BH3_Character_SeeleVollereiBlack_On }
+		custom_effect_tooltip = BH3_Character_event.41.a1d
+	}
+	option = { #不分离获得特质
+		name = BH3_Character_event.41.a2
+		custom_effect_tooltip = BH3_Character_event.41.a2d
+		ROOT = {
+			meta_effect = {
+				text = {
+					BH3_Character_SeeleVollerei = {
+						add_trait = {
+							trait = BH3_trait_SeeleWake
+						}
+					}
+				}
+				log = ""
+			}
+		}
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.42
+	is_triggered_only = yes
+	title =BH3_Character_event.42.t
+	desc = BH3_Character_event.42.d
+	picture = GFX_BH3_unit_leader_StygianNymph2
+	option = {
+		name = BH3_Character_event.42.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.43
+	is_triggered_only = yes
+	title =BH3_Character_event.43.t
+	desc = BH3_Character_event.43.d
+	picture = GFX_BH3_unit_leader_HerrscherofRebirth
+	option = {
+		name = BH3_Character_event.43.a
+	}
+}
+
+#黑希晋升提示
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.50
+	is_triggered_only = yes
+	title =BH3_Character_event.50.t
+	desc = BH3_Character_event.50.d
+	picture = GFX_BH3_unit_leader_SwallowtailPhantasm
+	option = {
+		name = BH3_Character_event.50.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.51
+	is_triggered_only = yes
+	title =BH3_Character_event.51.t
+	desc = BH3_Character_event.51.d
+	picture = GFX_BH3_unit_leader_StygianNymphBlack
+	option = {
+		name = BH3_Character_event.51.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.52
+	is_triggered_only = yes
+	title =BH3_Character_event.52.t
+	desc = BH3_Character_event.52.d
+	picture = GFX_BH3_unit_leader_StarchasmNyx
+	option = {
+		name = BH3_Character_event.52.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.53
+	is_triggered_only = yes
+	title =BH3_Character_event.53.t
+	desc = BH3_Character_event.53.d
+	picture = GFX_BH3_unit_leader_StarchasmNyx2
+	option = {
+		name = BH3_Character_event.53.a
+	}
+}
+
+
+#德丽莎晋升提示
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.60
+	is_triggered_only = yes
+	title =BH3_Character_event.60.t
+	desc = BH3_Character_event.60.d
+	picture = GFX_BH3_unit_leader_ValkyriePledge
+	option = {
+		name = BH3_Character_event.60.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.61
+	is_triggered_only = yes
+	title =BH3_Character_event.61.t
+	desc = BH3_Character_event.61.d
+	picture = GFX_BH3_unit_leader_VioletExecuter
+	option = {
+		name = BH3_Character_event.61.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.62
+	is_triggered_only = yes
+	title =BH3_Character_event.62.t
+	desc = BH3_Character_event.62.d
+	picture = GFX_CharacterEvent_Theresa_s2ss
+	option = {
+		name = BH3_Character_event.62.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.63
+	is_triggered_only = yes
+	title =BH3_Character_event.63.t
+	desc = BH3_Character_event.63.d
+	picture = GFX_BH3_unit_leader_TheresaMars
+	option = {
+		name = BH3_Character_event.63.a
+		set_country_flag =  BH3_Character_event_63_ad_true
+	}
+}
+
+#月下晋升提示
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.70
+	is_triggered_only = yes
+	title =BH3_Character_event.70.t
+	desc = BH3_Character_event.70.d
+	picture = GFX_BH3_unit_leader_LunaKindred
+	option = {
+		name = BH3_Character_event.70.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.71
+	is_triggered_only = yes
+	title =BH3_Character_event.71.t
+	desc = BH3_Character_event.71.d
+	picture = GFX_BH3_unit_leader_LunaKindred2
+	option = {
+		name = BH3_Character_event.71.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.72
+	is_triggered_only = yes
+	title =BH3_Character_event.72.t
+	desc = BH3_Character_event.72.d
+	picture = GFX_BH3_unit_leader_LunarVowCrimsonLove
+	option = {
+		name = BH3_Character_event.72.a
+		set_country_flag =  BH3_Character_event_72_ad_true
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.73
+	is_triggered_only = yes
+	title =BH3_Character_event.73.t
+	desc = BH3_Character_event.73.d
+	picture = GFX_BH3_unit_leader_LunarVowCrimsonLove2
+	option = {
+		name = BH3_Character_event.73.a
+	}
+}
+
+#观星晋升提示
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.80
+	is_triggered_only = yes
+	title =BH3_Character_event.80.t
+	desc = BH3_Character_event.80.d
+	picture = GFX_BH3_unit_leader_StarlitAstrologos2
+	option = {
+		name = BH3_Character_event.80.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.81
+	is_triggered_only = yes
+	title =BH3_Character_event.81.t
+	desc = BH3_Character_event.81.d
+	picture = GFX_BH3_unit_leader_StarlitAstrologos2
+	option = {
+		name = BH3_Character_event.81.a		
+		set_country_flag =  BH3_Character_event_81_ad_true
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.82
+	is_triggered_only = yes
+	title =BH3_Character_event.82.t
+	desc = BH3_Character_event.82.d
+	picture = GFX_BH3_unit_leader_StarlitAstrologos2
+	option = {
+		name = BH3_Character_event.82.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.83
+	is_triggered_only = yes
+	title =BH3_Character_event.83.t
+	desc = BH3_Character_event.83.d
+	picture = GFX_BH3_unit_leader_StarlitAstrologos2
+	option = {
+		name = BH3_Character_event.83.a
+	}
+}
+
+#符华
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.90
+	is_triggered_only = yes
+	title =BH3_Character_event.90.t
+	desc = BH3_Character_event.90.d
+	picture = GFX_BH3_unit_leader_ValkyrieAccipiter
+	option = {
+		name = BH3_Character_event.90.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.91
+	is_triggered_only = yes
+	title =BH3_Character_event.91.t
+	desc = BH3_Character_event.91.d
+	picture = GFX_BH3_unit_leader_ShadowKnight
+	option = {
+		name = BH3_Character_event.91.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.92
+	is_triggered_only = yes
+	title =BH3_Character_event.92.t
+	desc = BH3_Character_event.92.d
+	picture = GFX_BH3_unit_leader_AzureEmpyrea
+	option = {
+		name = BH3_Character_event.92.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.93
+	is_triggered_only = yes
+	title =BH3_Character_event.93.t
+	desc = BH3_Character_event.93.d
+	picture = GFX_BH3_unit_leader_FenghuangofVicissitudes
+	option = {
+		name = BH3_Character_event.93.a
+	}
+}
+
+#幽兰戴尔
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.100
+	is_triggered_only = yes
+	title =BH3_Character_event.100.t
+	desc = BH3_Character_event.100.d
+	picture = GFX_BH3_unit_leader_ValkyrieGloria
+	option = {
+		name = BH3_Character_event.100.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.101
+	is_triggered_only = yes
+	title =BH3_Character_event.101.t
+	desc = BH3_Character_event.101.d
+	picture = GFX_BH3_unit_leader_BrightKnightExcelsis
+	option = {
+		name = BH3_Character_event.101.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.102
+	is_triggered_only = yes
+	title =BH3_Character_event.102.t
+	desc = BH3_Character_event.102.d
+	picture = GFX_BH3_unit_leader_DeaAnchora
+	option = {
+		name = BH3_Character_event.102.a
+		set_country_flag =  BH3_Character_event_102_ad_true
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.103
+	is_triggered_only = yes
+	title =BH3_Character_event.103.t
+	desc = BH3_Character_event.103.d
+	picture = GFX_BH3_unit_leader_PalatinusEquinox
+	option = {
+		name = BH3_Character_event.103.a
+	}
+}
+
+#丽塔
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.110
+	is_triggered_only = yes
+	title =BH3_Character_event.110.t
+	desc = BH3_Character_event.110.d
+	picture = GFX_BH3_unit_leader_PhantomIron
+	option = {
+		name = BH3_Character_event.110.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.111
+	is_triggered_only = yes
+	title =BH3_Character_event.111.t
+	desc = BH3_Character_event.111.d
+	picture = GFX_BH3_unit_leader_ArgentKnightArtemis
+	option = {
+		name = BH3_Character_event.111.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.112
+	is_triggered_only = yes
+	title =BH3_Character_event.112.t
+	desc = BH3_Character_event.112.d
+	picture = GFX_BH3_unit_leader_SpinaAstera
+	option = {
+		name = BH3_Character_event.112.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.113
+	is_triggered_only = yes
+	title =BH3_Character_event.113.t
+	desc = BH3_Character_event.113.d
+	picture = GFX_BH3_unit_leader_SpinaAstera2
+	option = {
+		name = BH3_Character_event.113.a
+	}
+}
+
+#伊甸
+unit_leader_event = {#无效事件，预留
+	id = BH3_Character_event.120
+	is_triggered_only = yes
+	title =BH3_Character_event.120.t
+	desc = BH3_Character_event.120.d
+	picture = GFX_BH3_unit_leader_GoldenDiva
+	option = {
+		name = BH3_Character_event.120.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.121
+	is_triggered_only = yes
+	title =BH3_Character_event.121.t
+	desc = BH3_Character_event.121.d
+	picture = GFX_BH3_unit_leader_GoldenDiva2
+	option = {
+		name = BH3_Character_event.121.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.122
+	is_triggered_only = yes
+	title =BH3_Character_event.122.t
+	desc = BH3_Character_event.122.d
+	picture = GFX_BH3_unit_leader_GoldenDiva2
+	option = {
+		name = BH3_Character_event.122.a
+	}
+}
+unit_leader_event = {
+	id = BH3_Character_event.123
+	is_triggered_only = yes
+	title =BH3_Character_event.123.t
+	desc = BH3_Character_event.123.d
+	picture = GFX_BH3_unit_leader_GoldenDiva2
+	option = {
+		name = BH3_Character_event.123.a
+	}
+}

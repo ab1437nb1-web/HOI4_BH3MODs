@@ -1,0 +1,80 @@
+# 往事乐土·刻印：变量结算（每周一次）
+# 说明：
+#   1) 三个变量型刻印（浮生/旭光/繁星）的国家变量在这里维护，动态修正只负责"读变量、按档给加成"；
+#   2) 这些 if 都先判断"是否持有对应核心刻印"，没有刻印的国家完全不走逻辑（性能友好）；
+#   3) 变量范围都手工夹紧（原版有 clamp_variable，此处用最朴素写法，避免版本差异）。
+
+on_actions = {
+
+	on_weekly = {
+		effect = {
+
+			every_country = {
+
+				# ================= 浮生（华）：战争双方人力战损比 =================
+				# 口径：敌方累计伤亡 − 我方累计伤亡（单位：千人）。为正=优势，为负=劣势。
+				# 注：此处"敌方伤亡"取所有与我交战国家的 casualties_k 之和；若要严格"仅我方造成的杀伤"，
+				#     需改用 casualties_inflicted_by 的取值写法（待验证），届时只需替换下面这一段。
+				if = {
+					limit = { has_idea = BH3_ER_Fusheng_Core }
+					set_variable = { BH3_ER_Fusheng_balance = 0 }
+					every_country = {
+						limit = { is_enemy = ROOT }
+						ROOT = {
+							add_to_variable = { BH3_ER_Fusheng_balance = PREV.casualties_k }
+						}
+					}
+					ROOT = {
+						subtract_from_variable = { BH3_ER_Fusheng_balance = casualties_k }
+					}
+				}
+
+				# ================= 旭光（科斯魔）：本土积蓄 / 出国衰减 =================
+				# 方案 A：有核心州不在我方控制 → 本土受侵 → 充能增长；否则缓慢衰减。
+				if = {
+					limit = { has_idea = BH3_ER_Kosma_Core }
+					if = {
+						limit = { any_core_state = { NOT = { is_controlled_by = ROOT } } }
+						add_to_variable = { BH3_ER_Kosma_charge = 5 }
+					}
+					else = {
+						subtract_from_variable = { BH3_ER_Kosma_charge = 3 }
+					}
+					if = {
+						limit = { check_variable = { BH3_ER_Kosma_charge > 100 } }
+						set_variable = { BH3_ER_Kosma_charge = 100 }
+					}
+					if = {
+						limit = { check_variable = { BH3_ER_Kosma_charge < 0 } }
+						set_variable = { BH3_ER_Kosma_charge = 0 }
+					}
+				}
+
+				# ================= 繁星（格蕾修）：陆军与空军协同 =================
+				# 口径：开战且我方有已部署的航空兵力时，协同度增长；否则缓慢衰减（上限 50）。
+				if = {
+					limit = { has_idea = BH3_ER_Griseo_Core }
+					if = {
+						limit = {
+							has_war = yes
+							has_deployed_air_force_size > 100
+						}
+						add_to_variable = { BH3_ER_Griseo_sync = 2 }
+					}
+					else = {
+						subtract_from_variable = { BH3_ER_Griseo_sync = 1 }
+					}
+					if = {
+						limit = { check_variable = { BH3_ER_Griseo_sync > 50 } }
+						set_variable = { BH3_ER_Griseo_sync = 50 }
+					}
+					if = {
+						limit = { check_variable = { BH3_ER_Griseo_sync < 0 } }
+						set_variable = { BH3_ER_Griseo_sync = 0 }
+					}
+				}
+
+			}
+		}
+	}
+}

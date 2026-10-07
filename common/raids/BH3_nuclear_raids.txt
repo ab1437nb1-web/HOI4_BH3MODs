@@ -1,0 +1,206 @@
+types = {
+	BH3_Honkai_Fission_Bomb_strike = { #对省份
+		
+
+		days_to_prepare = 1
+		days_re_enable = 1
+		# speed_multiplier = 0.08
+
+		category = BH3_Honkai_Fission_Bomb_Raids
+
+		command_power = 5 # command power allocation cost
+
+		allowed = {
+			has_dlc = "Gotterdammerung"
+		}
+
+		# Raid Type is visible
+		# visible = {
+		# 	is_special_project_completed = sp:BH3_sp_Honkai_Fission_Bomb
+		# }
+
+		# Specific Target is visible
+		show_target = {
+			# NOT = {
+			# 	is_in_faction_with = FROM
+			# }
+		}
+
+		# Can prepare
+		available = {
+			# has_war_with = FROM
+		}
+		launchable = {
+			# has_war_with = FROM
+		}
+		launch_sound = raid_launch_nuclear_missile
+		target_icon = GFX_other_target_icon
+		target_type = {
+			province = any
+		}
+
+		# target_loc_key = raid_target_name_thermonuclear
+
+		unit_requirements = {
+			equipment = {
+				type = { fighter cas heavy_fighter tactical_bomber strategic_bomber air_transport }
+				amount = { min = 1 }
+			}
+		}
+		essential_equipment = {
+			
+		}
+
+		# nuke_type = thermonuclear_bomb
+		starting_point = {
+		    types = { air_base  }
+		}	
+
+		arrow = {
+		    type = air
+		}
+
+        # unit_model = {
+        #     scale = 0.5
+        # }
+
+		success_factors = {
+			success = {
+				base = 0.5
+				intel = {
+					weight = 0.2
+					#start_reference = 50
+					reference = 100
+				}
+			}
+		}
+
+		success_levels = {
+			failure = {
+				actor_effects = {
+					var:actor_country = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_failure_tt
+					}
+				}
+			}
+			limited_success = {
+				# custom_sound = raid_result_success_nuclear
+				actor_effects = {
+					var:actor_country = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_threat_tt			
+						add_threat = 50
+						set_variable = { BH3_Honkai_Fission_Bomb_pos = var:ROOT.target_province }
+						set_variable = { BH3_Honkai_Fission_Bomb_id = BH3_Honkai_Fission_Bomb_pos }
+						add_to_variable = { BH3_Honkai_Fission_Bomb_id = 1 }
+						create_entity = {
+							entity = Honkai_Fission_Bomb_entity
+							id = BH3_Honkai_Fission_Bomb_id
+							province = BH3_Honkai_Fission_Bomb_pos
+							min_zoom = 1000
+						}
+						set_entity_animation = {
+							id = BH3_Honkai_Fission_Bomb_id
+							animation = attack
+						}
+						hidden_effect = { country_event = { id = BH3_misc.6 days = 5 } }						
+					}
+				}
+				victim_effects = {
+					var:target_state = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_limit_success_tt
+						add_dynamic_modifier = { modifier = BHS_High_Honkai_area scope = BHS }
+						add_dynamic_modifier = { modifier = BHSinvasion_effect }
+						BH3_Honkai_Destory_Factory = yes
+						damage_units = {
+							state = THIS
+							damage = 0.2
+							ratio = yes
+							army = yes
+							navy = yes
+						}
+					}
+				}
+			}
+			success = {
+			    # custom_sound = raid_result_success_nuclear
+				actor_effects = {
+					var:actor_country = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_threat_tt	
+						add_threat = 50
+						set_variable = { BH3_Honkai_Fission_Bomb_pos = var:ROOT.target_province }
+						set_variable = { BH3_Honkai_Fission_Bomb_id = BH3_Honkai_Fission_Bomb_pos }
+						add_to_variable = { BH3_Honkai_Fission_Bomb_id = 1 }
+						create_entity = {
+							entity = Honkai_Fission_Bomb_entity
+							id = BH3_Honkai_Fission_Bomb_id
+							province = BH3_Honkai_Fission_Bomb_pos
+							min_zoom = 1000
+						}
+						set_entity_animation = {
+							id = BH3_Honkai_Fission_Bomb_id
+							animation = attack
+						}
+						hidden_effect = { country_event = { id = BH3_misc.6 days = 5 } }
+					}
+				}
+				victim_effects = {
+					var:target_state = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_success_tt	
+						add_dynamic_modifier = { modifier = BHS_High_Honkai_area scope = BHS }
+						add_dynamic_modifier = { modifier = BHSinvasion_effect }
+						BH3_Honkai_Destory_Factory = yes
+						damage_units = {
+							state = THIS
+							damage = 0.7
+							ratio = yes
+							army = yes
+							navy = yes
+						}
+					}
+				}
+			}
+			critical_success = {
+			    # custom_sound = raid_result_success_nuclear
+				actor_effects = {
+					var:actor_country = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_threat_tt	
+						add_threat = 50
+						set_variable = { BH3_Honkai_Fission_Bomb_pos = var:ROOT.target_province }
+						set_variable = { BH3_Honkai_Fission_Bomb_id = BH3_Honkai_Fission_Bomb_pos }
+						add_to_variable = { BH3_Honkai_Fission_Bomb_id = 1 }
+						create_entity = {
+							entity = Honkai_Fission_Bomb_entity
+							id = BH3_Honkai_Fission_Bomb_id
+							province = BH3_Honkai_Fission_Bomb_pos
+							min_zoom = 1000
+						}
+						set_entity_animation = {
+							id = BH3_Honkai_Fission_Bomb_id
+							animation = attack
+						}
+						hidden_effect = { country_event = { id = BH3_misc.6 days = 5 } }
+					}
+				}
+				victim_effects = {
+					var:target_state = {
+						custom_effect_tooltip = BH3_Honkai_Fission_Bomb_strike_success_tt
+						add_dynamic_modifier = { modifier = BHS_High_Honkai_area scope = BHS }
+						add_dynamic_modifier = { modifier = BHSinvasion_effect }
+						BH3_Honkai_Destory_Factory = yes
+						damage_units = {
+							state = THIS
+							damage = 2
+							ratio = yes
+							army = yes
+							navy = yes
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}

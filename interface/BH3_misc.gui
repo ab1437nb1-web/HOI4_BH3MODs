@@ -1,0 +1,195 @@
+guiTypes = {
+	
+	#休伯利安菜单
+	containerWindowType =  {
+		name = "BH3_Hyperion_Menu"
+		position = { x = -320 y = -350 }	
+		size = { width = 240 height = 210 }
+		Orientation = LOWER_RIGHT
+		moveable = yes
+		background = { quadTextureSprite = "GFX_BH3_Hyperion_Menu_bg"}
+
+		buttonType = {
+			name = "BH3_Hyperion_Menu_btn"
+			position = { x = 40 y = 70 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Menu_btn"
+			pdx_tooltip = BH3_Hyperion_Menu_btn_desc
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Menu_Secretary_btn"
+			position = { x = 0 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Secretary_btn"
+			pdx_tooltip = BH3_Hyperion_Menu_btn_desc
+		}
+		iconType = {
+			name = "BH3_Hyperion_Menu_Secretary_img1"
+			position = { x = 0 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Secretary_img1"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "BH3_Hyperion_Menu_Secretary_img2"
+			position = { x = 100 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Secretary_img2"
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary_btn"
+			position = { x = 202 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_Secretary_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = BH3_Hyperion_Change_Secretary_btn_desc
+		}
+
+		buttonType = {
+			name = "BH3_Hyperion_Recharge_btn"
+			position = { x = 202 y = 55 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Recharge_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = BH3_Hyperion_recharge_stength_btn_tt
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Atk_btn"
+			position = { x = 202 y = 55 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Atk_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = BH3_Hyperion_attack_stength_btn_tt
+		}
+
+		buttonType = {
+			name = "BH3_Hyperion_Visable_btn"
+			position = { x = 202 y = 110 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Visable_btn"
+			clicksound = BH3_Click
+			#pdx_tooltip = BH3_Hyperion_Change_Secretary_btn_desc
+		}
+
+		
+	}
+
+	containerWindowType =  { #切换秘书舰
+		name = "BH3_Hyperion_Change_Secretary_Menu"
+		position = { x = 100 y = 0 }	
+		size = { width = 100 height = 175 }
+		Orientation = UPPER_LEFT
+		moveable = no
+		
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary1_btn"
+			position = { x = 0 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary1_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary2_btn"
+			position = { x = 0 y = 25 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary2_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary3_btn"
+			position = { x = 0 y = 50 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary3_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary4_btn"
+			position = { x = 0 y = 75 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary4_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary5_btn"
+			position = { x = 0 y = 100 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary5_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary6_btn"
+			position = { x = 0 y = 125 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary6_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_Hyperion_Change_Secretary7_btn"
+			position = { x = 0 y = 150 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			buttonText = "BH3_Hyperion_Change_Secretary7_btn_desc"
+			buttonFont = "hoi_16mbs"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType =  {		#将领技能大招动画
+		name = "BH3_Hyperion_Leader_Skill_Ani"
+		position = { x = -596 y = -410 }	
+		size = { width = 480 height = 270 }
+		Orientation = LOWER_RIGHT
+		moveable = yes
+		#background = { quadTextureSprite = "GFX_BH3_Hyperion_Menu_bg"}
+
+
+		iconType = {
+			name = "BH3_Hyperion_Leader_Skill_img1"
+			position = { x = 0 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_testSkillAni1"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "BH3_Hyperion_Leader_Skill_img2"
+			position = { x = 240 y = 0 }	
+			orientation = UPPER_LEFT
+			spriteType = "GFX_BH3_Hyperion_testSkillAni2"
+			alwaystransparent = yes
+		}
+	}
+
+	containerWindowType = { #休伯利安移动
+        name = "BH3_Hyperion_AttackMenu"
+        position = { x = 50% y = 85% }
+		size = { width = 150 height = 50 }
+		
+		buttonType = {
+			name ="BH3_Hyperion_attack_btn"
+			spriteType = "GFX_BH3_Hyperion_attack_btn"
+			position = { x = 110 y = 0 }
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Hyperion_attack_btn_tt"
+		}
+		buttonType = {
+			name ="BH3_Hyperion_move_btn"
+			spriteType = "GFX_BH3_Hyperion_move_btn"
+			position = { x = 110 y = 0 }
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Hyperion_move_btn_tt"
+		}
+    }
+}

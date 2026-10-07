@@ -1,0 +1,1172 @@
+equipments = {
+
+	############################################
+	########## 综合型女武神——琪亚娜 ############
+	############################################
+	Valkyrie_Kiana_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 30
+		breakthrough = 28
+		hardness = 0.2
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 35
+		hard_attack = 22
+		ap_attack = 20
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+	}
+
+	########### Kiana_WhiteComet ###########
+	Valkyrie_Kiana_equipment_0 = {
+	
+		archetype = Valkyrie_Kiana_equipment
+		priority = 100
+		visual_level = 0
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+	}
+
+	########### Kiana_VoidDrifter ###########
+	Valkyrie_Kiana_equipment_1 = {
+	
+		archetype = Valkyrie_Kiana_equipment
+		parent = Valkyrie_Kiana_equipment_0
+		priority = 120
+		visual_level = 1
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 63
+		breakthrough = 58
+		hardness = 0.4
+		armor_value = 60
+
+		#Offensive Abilities
+		soft_attack = 63
+		hard_attack = 52
+		ap_attack = 60
+		air_attack = 3
+
+		build_cost_ic = 200
+	}
+
+	########### Kiana_KnightMoonbeam ###########
+	Valkyrie_Kiana_equipment_2 = {
+	
+		archetype = Valkyrie_Kiana_equipment
+		parent = Valkyrie_Kiana_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+		
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 96
+		breakthrough = 88
+		hardness = 0.6
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 90
+		hard_attack = 82
+		ap_attack = 100
+		air_attack = 4
+		
+		build_cost_ic = 400
+	}
+
+	############################################
+	########### 近战型女武神——芽衣 #############
+	############################################
+	Valkyrie_Mei_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 20
+		breakthrough = 39
+		hardness = 0.2
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 23
+		hard_attack = 33
+		ap_attack = 36
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+	}
+
+	########### Mei_CrimsonImpuls ###########
+	Valkyrie_Mei_equipment_0 = {
+	
+		archetype = Valkyrie_Mei_equipment
+		priority = 100
+		visual_level = 0
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+	}
+
+	########### Mei_ShadowDash ###########（废弃）
+	########### Mei_StrikerFulminata ###########
+	Valkyrie_Mei_equipment_1 = {
+	
+		archetype = Valkyrie_Mei_equipment
+		parent = Valkyrie_Mei_equipment_0
+		priority = 120
+		visual_level = 1
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 41
+		breakthrough = 81
+		hardness = 0.4
+		armor_value = 90
+
+		#Offensive Abilities
+		soft_attack = 41
+		hard_attack = 70
+		ap_attack = 90
+		air_attack = 3
+
+		build_cost_ic = 200
+	}
+	########### Mei_LightningEmpress ###########（废弃）
+	########### Mei_DanzaiSpectramancer ###########
+	Valkyrie_Mei_equipment_2 = {
+	
+		archetype = Valkyrie_Mei_equipment
+		parent = Valkyrie_Mei_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 62
+		breakthrough = 123
+		hardness = 0.6
+		armor_value = 120
+
+		#Offensive Abilities
+		soft_attack = 61
+		hard_attack = 107
+		ap_attack = 150
+		air_attack = 6
+
+		build_cost_ic = 400
+	}
+	########### Mei_Captain ###########
+	Valkyrie_Mei_equipment_3 = {
+	
+		archetype = Valkyrie_Mei_equipment
+		parent = Valkyrie_Mei_equipment_2
+		priority = 140
+		visual_level = 3
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 120
+		breakthrough = 152
+		hardness = 0.8
+		armor_value = 170
+
+		#Offensive Abilities
+		soft_attack = 122
+		hard_attack = 150
+		ap_attack = 175
+		air_attack = 4
+
+		build_cost_ic = 800
+	}
+
+	############################################
+	######### 炮击型女武神——布洛妮娅 ###########
+	############################################
+	Valkyrie_Bronya_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no		
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 39
+		breakthrough = 22
+		hardness = 0.2
+		armor_value = 15
+
+		#Offensive Abilities
+		soft_attack = 46
+		hard_attack = 18
+		ap_attack = 10
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+	}
+
+	########### Bronya_ValkyrieChariot ###########
+	Valkyrie_Bronya_equipment_0 = {
+	
+		archetype = Valkyrie_Bronya_equipment
+		priority = 100
+		visual_level = 0
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+	}
+
+	########### Bronya_YamabukiArmor ###########
+	Valkyrie_Bronya_equipment_1 = {
+	
+		archetype = Valkyrie_Bronya_equipment
+		parent = Valkyrie_Bronya_equipment_0
+		priority = 120
+		visual_level = 1
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 82
+		breakthrough = 49
+		hardness = 0.4
+		armor_value = 48
+
+		#Offensive Abilities
+		soft_attack = 81
+		hard_attack = 42
+		ap_attack = 45
+		air_attack = 3
+
+		build_cost_ic = 200
+	}
+	########### Bronya_DimensionBreaker ###########
+	Valkyrie_Bronya_equipment_2 = {
+	
+		archetype = Valkyrie_Bronya_equipment
+		parent = Valkyrie_Bronya_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+		
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 125
+		breakthrough = 75
+		hardness = 0.6
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 117
+		hard_attack = 66
+		ap_attack = 80
+		air_attack = 4
+
+		build_cost_ic = 400
+	}
+
+	########### Bronya_SilverWingNEX ###########
+	Valkyrie_Bronya_equipment_3 = {
+	
+		archetype = Valkyrie_Bronya_equipment
+		parent = Valkyrie_Bronya_equipment_2
+		priority = 140
+		visual_level = 3
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 152
+		breakthrough = 120
+		hardness = 0.8
+		armor_value = 147
+
+		#Offensive Abilities
+		soft_attack = 176
+		hard_attack = 100
+		ap_attack = 147
+		air_attack = 6
+
+		build_cost_ic = 1000
+	}
+
+	############################################
+	########### 近战型女武神——希儿 ##############
+	############################################
+	Valkyrie_Seele_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 20
+		breakthrough = 39
+		hardness = 0.2
+		armor_value = 38
+
+		#Offensive Abilities
+		soft_attack = 43
+		hard_attack = 62
+		ap_attack = 45
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+	}
+
+	########### 希儿0 ###########
+	Valkyrie_Seele_equipment_0 = {
+	
+		archetype = Valkyrie_Seele_equipment
+		priority = 100
+		visual_level = 0
+	}
+	########### Seele_SwallowtailPhantasm ###########
+	Valkyrie_Seele_equipment_1 = {
+	
+		archetype = Valkyrie_Seele_equipment
+		parent = Valkyrie_Seele_equipment_0
+		priority = 120
+		visual_level = 1
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 46
+		breakthrough = 72
+		hardness = 0.4
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 43
+		hard_attack = 62
+		ap_attack = 80
+		air_attack = 3
+
+		build_cost_ic = 200
+	}
+
+	########### Seele_StygianNymph ###########
+	Valkyrie_Seele_equipment_2 = {
+	
+		archetype = Valkyrie_Seele_equipment
+		parent = Valkyrie_Seele_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 84
+		breakthrough = 86
+		hardness = 0.6
+		armor_value = 101
+
+		#Offensive Abilities
+		soft_attack = 83
+		hard_attack = 80
+		ap_attack = 124
+		air_attack = 4
+
+		build_cost_ic = 400
+	}
+	########### Seele_StarchasmNyx ###########
+	Valkyrie_Seele_equipment_3 = {
+	
+		archetype = Valkyrie_Seele_equipment
+		parent = Valkyrie_Seele_equipment_1
+		priority = 140
+		visual_level = 3
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 72
+		breakthrough = 113
+		hardness = 0.6
+		armor_value = 114
+
+		#Offensive Abilities
+		soft_attack = 58
+		hard_attack = 115
+		ap_attack = 155
+		air_attack = 4
+
+		build_cost_ic = 400
+	}
+
+	############################################
+	########## 综合型女武神——德丽莎 ############
+	############################################
+	Valkyrie_Theresa_equipment = {
+		#目前没有实装
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 45
+		breakthrough = 28
+		hardness = 0.7
+		armor_value = 20
+
+		#Offensive Abilities
+		soft_attack = 35
+		hard_attack = 22
+		ap_attack = 20
+		air_attack = 2
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60
+	}
+
+	########### 德丽莎0 ###########
+	Valkyrie_Theresa_equipment_0 = {
+	
+		archetype = Valkyrie_Theresa_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	########### Theresa_StarlitAstrologos ###########
+	Valkyrie_Theresa_equipment_1 = {
+	
+		archetype = Valkyrie_Theresa_equipment
+		parent = Valkyrie_Theresa_equipment_0
+		priority = 120
+		visual_level = 1
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 90
+		breakthrough = 88
+		hardness = 0.6
+		armor_value = 90
+
+		#Offensive Abilities
+		soft_attack = 99
+		hard_attack = 67
+		ap_attack = 88
+		air_attack = 4
+		
+		build_cost_ic = 400
+	}
+
+	########### 德丽莎，暂定为火星主教 ###########
+	Valkyrie_Theresa_equipment_2 = {
+	
+		archetype = Valkyrie_Theresa_equipment
+		parent = Valkyrie_Theresa_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 150
+		breakthrough = 130
+		hardness = 0.8
+		armor_value = 155
+
+		#Offensive Abilities
+		soft_attack = 138
+		hard_attack = 132
+		ap_attack = 160
+		air_attack = 6
+		
+		build_cost_ic = 1000
+	}
+
+	########### Theresa_LunarVowCrimsonLove ###########
+	Valkyrie_Theresa_equipment_3 = {
+	
+		archetype = Valkyrie_Theresa_equipment
+		parent = Valkyrie_Theresa_equipment_1
+		priority = 130
+		visual_level = 3
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 130
+		breakthrough = 141
+		hardness = 0.8
+		armor_value = 160
+
+		#Offensive Abilities
+		soft_attack = 145
+		hard_attack = 128
+		ap_attack = 165
+		air_attack = 6
+		
+		build_cost_ic = 1000
+	}
+
+	############################################
+	########### 近战型女武神——符华 ##############
+	############################################
+	Valkyrie_Fuka_equipment = {
+	
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 29
+		breakthrough = 39
+		hardness = 0.7
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 23
+		hard_attack = 33
+		ap_attack = 36
+		air_attack = 5
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 60	
+	}
+
+	########### 符华0 ###########
+	Valkyrie_Fuka_equipment_0 = {
+	
+		archetype = Valkyrie_Fuka_equipment
+		priority = 100
+		visual_level = 0
+	}
+	########### 符华1 ###########
+	Valkyrie_Fuka_equipment_1 = {
+	
+		archetype = Valkyrie_Fuka_equipment
+		parent = Valkyrie_Fuka_equipment_0
+		priority = 120
+		visual_level = 1
+
+		maximum_speed = 6
+
+		#Defensive Abilities
+		defense = 43
+		breakthrough = 56
+		armor_value = 100
+
+		#Offensive Abilities
+		soft_attack = 38
+		hard_attack = 56
+		ap_attack = 110
+		air_attack = 6
+
+		build_cost_ic = 200
+	}
+	########### Fuka_ShadowKnight ###########
+	Valkyrie_Fuka_equipment_2 = {
+	
+		archetype = Valkyrie_Fuka_equipment
+		parent = Valkyrie_Fuka_equipment_1
+		priority = 130
+		visual_level = 2
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 8
+
+		#Defensive Abilities
+		defense = 79
+		breakthrough = 98
+		hardness = 0.6
+		armor_value = 114
+
+		#Offensive Abilities
+		soft_attack = 86
+		hard_attack = 85
+		ap_attack = 135
+		air_attack = 4
+
+		build_cost_ic = 400
+	}
+
+	########### Fuka_AzureEmpyrea ###########
+	Valkyrie_Fuka_equipment_3 = {
+	
+		archetype = Valkyrie_Fuka_equipment
+		parent = Valkyrie_Fuka_equipment_2
+		priority = 140
+		visual_level = 3
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 119
+		breakthrough = 167
+		hardness = 0.8
+		armor_value = 165
+
+		#Offensive Abilities
+		soft_attack = 120
+		hard_attack = 136
+		ap_attack = 169
+		air_attack = 6
+
+		build_cost_ic = 1000
+	}
+
+	############################################
+	############ 综合型女武神——伊甸 #############
+	############################################
+	Valkyrie_Eden_equipment = {
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		active = no
+		can_license = no
+				
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 10
+
+		#Defensive Abilities
+		defense = 144
+		breakthrough = 123
+		hardness = 0.8
+		armor_value = 150
+
+		#Offensive Abilities
+		soft_attack = 144
+		hard_attack = 119
+		ap_attack = 140
+		air_attack = 6
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 1000
+	}
+
+	########### Eden_GoldenDiva ###########
+	Valkyrie_Eden_equipment_0 = {
+	
+		archetype = Valkyrie_Eden_equipment
+		priority = 100
+		visual_level = 0
+		is_buildable = no
+		# upgrades = {
+		# 	tank_at_upgrade
+		# 	tank_armor_upgrade
+		# 	tank_reliability_upgrade
+		# 	tank_engine_upgrade
+		# }
+	}
+
+	############################################
+	############### 律者——琪亚娜 ###############
+	############################################
+
+	HerrscherVoid_Kiana_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 4200
+		breakthrough = 4000
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 3000
+		hard_attack = 3000
+		ap_attack = 300
+		air_attack = 100
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Kiana_HerrscherofVoid ###########
+	HerrscherVoid_Kiana_equipment_0 = {
+	
+		archetype = HerrscherVoid_Kiana_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	########### Kiana_HerrscherofFlamescion ###########
+	HerrscherFlamescion_Kiana_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 4800
+		breakthrough = 5200
+		hardness = 0.95
+		armor_value = 300
+
+		#Offensive Abilities
+		soft_attack = 4300
+		hard_attack = 3700
+		ap_attack = 350
+		air_attack = 200
+
+		build_cost_ic = 2500
+		
+	}
+	HerrscherFlamescion_Kiana_equipment_0 = {
+
+		archetype = HerrscherFlamescion_Kiana_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	############################################
+	############### 律者——芽衣 ###############
+	############################################
+
+	HerrscherThunder_Mei_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 3000
+		breakthrough = 5000
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 2400
+		hard_attack = 3600
+		ap_attack = 250
+		air_attack = 100
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Mei_HerrscherofThunder ###########
+	HerrscherThunder_Mei_equipment_0 = {
+	
+		archetype = HerrscherThunder_Mei_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	############################################
+	############### 律者——布洛妮娅 ###############
+	############################################
+
+	HerrscherReason_Bronya_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 30
+
+		#Defensive Abilities
+		defense = 4800
+		breakthrough = 3200
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 3800
+		hard_attack = 2200
+		ap_attack = 350
+		air_attack = 120
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Bronya_HerrscherofReason ###########
+	HerrscherReason_Bronya_equipment_0 = {
+	
+		archetype = HerrscherReason_Bronya_equipment
+		priority = 100
+		visual_level = 0
+	}
+	
+	############################################
+	################ 律者——希儿 ################
+	############################################
+
+	HerrscherRebirth_Seele_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 4200
+		breakthrough = 3800
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 3800
+		hard_attack = 3200
+		ap_attack = 250
+		air_attack = 200
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Elysia_HerrscherofRebirth ###########
+	HerrscherRebirth_Seele_equipment_0 = {
+	
+		archetype = HerrscherRebirth_Seele_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+	############################################
+	############## 律者——爱莉希雅 ##############
+	############################################
+
+	HerrscherHuman_Elysia_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 5200
+		breakthrough = 4800
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 4600
+		hard_attack = 3400
+		ap_attack = 250
+		air_attack = 200
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Elysia_HerrscherofHuman ###########
+	HerrscherHuman_Elysia_equipment_0 = {
+	
+		archetype = HerrscherHuman_Elysia_equipment
+		priority = 100
+		visual_level = 0
+	}
+
+
+	HerrscherErosion_Elysia_equipment = {
+
+		is_archetype = yes
+		picture = archetype_medium_tank_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		#Misc Abilities
+		reliability = 1
+		maximum_speed = 24
+
+		#Defensive Abilities
+		defense = 3800
+		breakthrough = 3500
+		hardness = 0.9
+		armor_value = 250
+
+		#Offensive Abilities
+		soft_attack = 2400
+		hard_attack = 2500
+		ap_attack = 250
+		air_attack = 200
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 2500
+		
+	}
+
+	########### Elysia_HerrscherofErosion ###########
+	HerrscherErosion_Elysia_equipment_0 = {
+	
+		archetype = HerrscherErosion_Elysia_equipment
+		priority = 100
+		visual_level = 0
+	}
+}

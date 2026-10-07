@@ -1,0 +1,208 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_BH3_Finality_disaster_effect"
+		texturefile = "gfx/interface/ideas/BHS_Benghuai_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BHS_Benghuai_idea"
+		texturefile = "gfx/interface/ideas/BHS_Benghuai_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_Benghuai_idea_Player"
+		texturefile = "gfx/interface/ideas/BHS_Benghuai_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_aggressive0"
+		texturefile = "gfx/interface/ideas/BHS_aggressive0.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_aggressive1"
+		texturefile = "gfx/interface/ideas/BHS_aggressive1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BHS_aggressive2"
+		texturefile = "gfx/interface/ideas/BHS_aggressive2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_BHS_aggressive3"
+		texturefile = "gfx/interface/ideas/BHS_aggressive3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_no_step_back"
+		texturefile = "gfx/interface/ideas/BH3_no_step_back.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_Valkyrie_Score_effect"
+		texturefile = "gfx/interface/ideas/BH3_Valkyrie_Score_effect.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_no_step_back_AI"
+		texturefile = "gfx/interface/ideas/BH3_no_step_back.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_disaster"
+		texturefile = "gfx/interface/ideas/BHS_Benghuai_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_predict_effect"
+		texturefile = "gfx/interface/ideas/BH3_predict_effect.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_AtaackDefend"
+		texturefile = "gfx/interface/ideas/BHS_AtaackDefend.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_TimeImprovement"
+		texturefile = "gfx/interface/ideas/BHS_TimeImprovement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_CivilizationImprovement"
+		texturefile = "gfx/interface/ideas/BHS_CivilizationImprovement.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_ICAtaackDefend"
+		texturefile = "gfx/interface/ideas/BHS_ICAtaackDefend.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_level1_idea"
+		texturefile = "gfx/interface/ideas/BHS_Level1_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_level2_idea"
+		texturefile = "gfx/interface/ideas/BHS_Level2_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_level3_idea"
+		texturefile = "gfx/interface/ideas/BHS_Level3_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_level4_idea"
+		texturefile = "gfx/interface/ideas/BHS_Level4_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_level5_idea"
+		texturefile = "gfx/interface/ideas/BHS_Level5_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_NuclearCorrosionResistance_effect"
+		texturefile = "gfx/interface/ideas/BHS_NuclearCorrosionResistance_effect.dds"
+	}
+	
+
+	spriteType = {
+		name = "GFX_idea_BHS_herrscher_enhance_idea"
+		texturefile = "gfx/interface/ideas/BHS_herrscher_enhance_idea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BHS_HI1_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI1_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI1_Power_EffectHuman"
+		texturefile = "gfx/interface/ideas/BHS_HI1_Power_EffectHuman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI2_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI2_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI2_Power_EffectHuman"
+		texturefile = "gfx/interface/ideas/BHS_HI2_Power_EffectHuman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI3_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI3_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI3_Power_EffectHuman"
+		texturefile = "gfx/interface/ideas/BHS_HI3_Power_EffectHuman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BHS_HI6_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI6_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI6_Power_EffectHuman"
+		texturefile = "gfx/interface/ideas/BHS_HI6_Power_EffectHuman.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI7_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI7_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HI7_1_Power"
+		texturefile = "gfx/interface/ideas/BHS_HI7_1_Power.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BHS_HH2_Power"
+		texturefile = "gfx/interface/ideas/BHS_HH2_Power.dds"
+	}
+
+	#### 特殊工程-神之键 ####
+	spriteType = {
+		name = "GFX_idea_BH3_sp_Void_Archives_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_Void_Archives_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_AbyssFlower_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_AbyssFlower_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_FenghuangDown_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_FenghuangDown_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_JizoMitama_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_JizoMitama_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_JudgementofShamash_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_JudgementofShamash_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_OathofJudah_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_OathofJudah_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_BH3_sp_OathofJudah_to_enemy"
+		texturefile = "gfx/interface/ideas/modifiers_BH3_sp_OathofJudah_to_enemy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BH3_sp_SevenThundersofRetribution_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_SevenThundersofRetribution_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_StarofEden_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_StarofEden_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_StarofEden_to_enemy_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_StarofEden_to_enemy_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_modifiers_BH3_sp_StarofEden"
+		texturefile = "gfx/interface/ideas/modifiers_BH3_sp_StarofEden.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_modifiers_BH3_sp_StarofEden_Debuff"
+		texturefile = "gfx/interface/ideas/modifiers_BH3_sp_StarofEden_Debuff.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_modifiers_BH3_sp_StarofEden_Buff"
+		texturefile = "gfx/interface/ideas/modifiers_BH3_sp_StarofEden_Buff.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_BH3_sp_ThousandKey_idea"
+		texturefile = "gfx/interface/ideas/BH3_sp_ThousandKey_idea.dds"
+	}
+
+	
+}
+	

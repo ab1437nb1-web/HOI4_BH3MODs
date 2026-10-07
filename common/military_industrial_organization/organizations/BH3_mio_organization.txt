@@ -1,0 +1,639 @@
+BH3_MIO_Schicksal_Herheim_Lab = {#天命赫尔海姆实验室
+	icon = GFX_military_industrial_organization_Schicksal_Herheim_Lab
+	allowed = {	
+		always = yes
+	}
+	available = {
+		from = {
+			has_country_flag = BH3_Hyperion_enabled
+		}
+	}
+	background = GFX_military_industrial_organization_Schicksal_Herheim_Lab_BG
+	
+	equipment_type = {
+		BH3_ValkyrieArmor_classis
+		BH3_ValkyrieAir_ala
+	}
+
+	research_categories = {
+		infantry_weapons
+	}
+
+	tree_header_text = {
+		text = mio_header_production_management
+		x = 1
+	}
+	tree_header_text = {
+		text = mio_header_armor_enhance
+		x = 5
+	}
+	initial_trait = {
+		name = MIO_ValkyrieArmor_name
+		
+		production_bonus = {
+			production_efficiency_gain_factor = 0.05
+			production_capacity_factor = 0.05
+			production_efficiency_cap_factor = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_funds_gain = 0.25
+			military_industrial_organization_design_team_assign_cost = -0.5
+			military_industrial_organization_size_up_requirement = -0.5
+		}
+	}
+
+	trait = {#提高生产效率
+		token = bh3_mio_SHL_trait_1
+		name = bh3_mio_SHL_trait_1
+		icon = GFX_bh3_mio_SHL_trait_1
+		position = { x = 1 y = 0 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		production_bonus = {
+			production_cost_factor = -0.05
+			production_efficiency_gain_factor = 0.1
+			production_efficiency_cap_factor = 0.1
+		}
+	}
+
+	trait = {#更高质量1
+		token = bh3_mio_SHL_trait_1_2_1
+		name = bh3_mio_SHL_trait_1_2_1
+		icon = GFX_bh3_mio_SHL_trait_1_2_1
+
+		position = { x = -1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_1
+		mutually_exclusive = { bh3_mio_SHL_trait_1_2_2 }
+		any_parent = { bh3_mio_SHL_trait_1 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.05
+			reliability = 0.05
+			soft_attack = 0.1
+			hard_attack = 0.05
+			air_attack = 0.15
+		}
+	}
+	trait = {#更高质量2
+		token = bh3_mio_SHL_trait_1_3_1
+		name = bh3_mio_SHL_trait_1_3_1
+		icon = GFX_bh3_mio_SHL_trait_1_2_1 		
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_1_2_1
+		any_parent = { bh3_mio_SHL_trait_1_2_1}
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			build_cost_ic = 0.15
+			reliability = 0.15
+			soft_attack = 0.1
+			hard_attack = 0.1
+			defense = 0.1
+			breakthrough = 0.1
+			maximum_speed = 0.05
+			armor_value = 0.1
+			ap_attack = 0.05
+			air_attack = 0.05
+			air_defence = 0.1
+			air_agility = 0.1
+		}
+	}
+	trait = {#更多产量1
+		token = bh3_mio_SHL_trait_1_2_2
+		name = bh3_mio_SHL_trait_1_2_2
+		icon = GFX_bh3_mio_SHL_trait_1_2_2
+		position = { x = 1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_1
+		mutually_exclusive = { bh3_mio_SHL_trait_1_2_1 }
+		any_parent = { bh3_mio_SHL_trait_1 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			hard_attack = -0.1
+			breakthrough = -0.1
+			defense = -0.1
+			air_attack = -0.1
+			air_defence = -0.1
+			air_agility = -0.1
+		}
+	}
+	trait = {#更多产量2
+		token = bh3_mio_SHL_trait_1_3_2
+		name = bh3_mio_SHL_trait_1_3_2
+		icon = GFX_bh3_mio_SHL_trait_1_2_2
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_1_2_2
+		any_parent = { bh3_mio_SHL_trait_1_2_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.15
+			soft_attack = -0.1
+			armor_value = -0.1
+			ap_attack = -0.15
+			air_attack = -0.1
+			air_agility = -0.15
+		}
+	}
+	trait = {#生产线优化
+		token = bh3_mio_SHL_trait_1_4
+		name = bh3_mio_SHL_trait_1_4
+		icon = GFX_bh3_mio_SHL_trait_1
+		position = { x = 1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_1_3_1
+		any_parent = { bh3_mio_SHL_trait_1_3_1 bh3_mio_SHL_trait_1_3_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+			soft_attack = 0.05
+			hard_attack = 0.05
+			armor_value = 0.05
+			defense = 0.05
+			breakthrough = 0.05
+			maximum_speed = 0.1
+			air_attack = 0.1
+			air_defence = 0.05
+			air_agility = 0.05
+		}
+	}
+
+	trait = {#全面强化
+		token = bh3_mio_SHL_trait_2
+		name = bh3_mio_SHL_trait_2
+		icon = GFX_bh3_mio_SHL_trait_2
+		position = { x = 5 y = 0 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+			air_attack = 0.05
+			breakthrough = 0.05
+			defense = 0.05
+			armor_value = 0.05
+			maximum_speed = 0.05
+			build_cost_ic = 0.05
+			air_defence = 0.05
+			air_agility = 0.05
+		}
+	}
+	trait = {#加强综合型装甲火力
+		token = bh3_mio_SHL_trait_2_1_1
+		name = bh3_mio_SHL_trait_2_1_1
+		icon = GFX_bh3_mio_SHL_trait_2_1_1
+		position = { x = -1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_2
+		any_parent = { bh3_mio_SHL_trait_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			ap_attack = 0.05
+			air_attack = 0.05
+			air_agility = 0.05
+		}
+	}
+	trait = {#加强近战型装甲火力
+		token = bh3_mio_SHL_trait_2_1_2
+		name = bh3_mio_SHL_trait_2_1_2
+		icon = GFX_bh3_mio_SHL_trait_2_1_2
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_2
+		any_parent = { bh3_mio_SHL_trait_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			air_attack = 0.1
+		}
+	}
+	trait = {#加强远程型装甲火力
+		token = bh3_mio_SHL_trait_2_1_3
+		name = bh3_mio_SHL_trait_2_1_3
+		icon = GFX_bh3_mio_SHL_trait_2_1_3
+		position = { x = 1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_2
+		any_parent = { bh3_mio_SHL_trait_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			air_attack = 0.1
+		}
+	}
+	trait = {#加强机动性
+		token = bh3_mio_SHL_trait_2_2
+		name = bh3_mio_SHL_trait_2_2
+		icon = GFX_bh3_mio_SHL_trait_2_2
+		position = { x = 1 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_2_1_1
+		any_parent = { bh3_mio_SHL_trait_2_1_1 bh3_mio_SHL_trait_2_1_2 bh3_mio_SHL_trait_2_1_3 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			maximum_speed = 0.25
+		}
+	}
+	trait = {#增幅核心
+		token = bh3_mio_SHL_trait_2_3
+		name = bh3_mio_SHL_trait_2_3
+		icon = GFX_bh3_mio_SHL_trait_2_3		
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SHL_trait_2_2
+		any_parent = { bh3_mio_SHL_trait_2_2 }
+		limit_to_equipment_type = { 
+			BH3_ValkyrieArmor_classis
+			BH3_ValkyrieAir_ala
+		}
+		equipment_bonus = {
+			soft_attack = 0.15
+			hard_attack = 0.15
+			ap_attack = 0.1
+			air_attack = 0.2
+			breakthrough = 0.15
+			defense = 0.1
+			armor_value = 0.1
+			maximum_speed = 0.05
+			build_cost_ic = 0.1
+			air_defence = 0.1
+			air_agility = 0.15
+		}
+	}
+}
+
+BH3_MIO_SaintFreyaCollege = {#圣芙蕾雅学院
+	icon = GFX_military_industrial_organization_SaintFreyaCollege
+	allowed = {	
+		always = yes
+	}
+	available = {
+		from = {
+			has_country_flag = BH3_SaintFreyaCollege_Setup
+		}
+	}
+	background = GFX_military_industrial_organization_SaintFreyaCollege_BG
+	equipment_type = {
+		HerrscherVoid_Kiana_equipment
+		HerrscherFlamescion_Kiana_equipment
+		HerrscherThunder_Mei_equipment
+		HerrscherReason_Bronya_equipment
+		HerrscherRebirth_Seele_equipment
+		HerrscherHuman_Elysia_equipment
+		HerrscherVoid_Kiana_Air_equipment
+		HerrscherFlamescion_Kiana_Air_equipment
+		HerrscherThunder_Mei_Air_equipment
+		HerrscherReason_Bronya_Air_equipment
+		HerrscherRebirth_Seele_Air_equipment
+		HerrscherHuman_Elysia_Air_equipment
+	}
+
+	research_categories = {
+		infantry_weapons
+	}
+
+	tree_header_text = {
+		text = mio_header_herrscher_lesson
+		x = 3
+	}
+	initial_trait = {
+		name = MIO_Herrscher_name
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+			military_industrial_organization_funds_gain = 1
+			military_industrial_organization_design_team_assign_cost = -0.5
+			military_industrial_organization_size_up_requirement = -0.5
+		}
+	}
+
+	trait = {#极东魔窟
+		token = bh3_mio_SFC_trait_1
+		name = bh3_mio_SFC_trait_1
+		icon = GFX_bh3_mio_SFC_trait_1
+		position = { x = 3 y = 0 }
+		limit_to_equipment_type = { 
+			HerrscherVoid_Kiana_equipment
+			HerrscherFlamescion_Kiana_equipment
+			HerrscherThunder_Mei_equipment
+			HerrscherReason_Bronya_equipment
+			HerrscherRebirth_Seele_equipment
+			HerrscherHuman_Elysia_equipment
+			HerrscherVoid_Kiana_Air_equipment
+			HerrscherFlamescion_Kiana_Air_equipment
+			HerrscherThunder_Mei_Air_equipment
+			HerrscherReason_Bronya_Air_equipment
+			HerrscherRebirth_Seele_Air_equipment
+			HerrscherHuman_Elysia_Air_equipment
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.4
+		}
+	}
+
+	trait = {#基础课程
+		token = bh3_mio_SFC_trait_2
+		name = bh3_mio_SFC_trait_2
+		icon = GFX_bh3_mio_SFC_trait_2
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_1
+		any_parent = { bh3_mio_SFC_trait_1 }
+		limit_to_equipment_type = { 
+			HerrscherVoid_Kiana_equipment
+			HerrscherFlamescion_Kiana_equipment
+			HerrscherThunder_Mei_equipment
+			HerrscherReason_Bronya_equipment
+			HerrscherRebirth_Seele_equipment
+			HerrscherHuman_Elysia_equipment
+			HerrscherVoid_Kiana_Air_equipment
+			HerrscherFlamescion_Kiana_Air_equipment
+			HerrscherThunder_Mei_Air_equipment
+			HerrscherReason_Bronya_Air_equipment
+			HerrscherRebirth_Seele_Air_equipment
+			HerrscherHuman_Elysia_Air_equipment
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.05
+			defense = 0.05
+			maximum_speed = 0.05
+			air_attack = 0.1
+			air_defence = 0.05
+			air_agility = 0.05
+		}
+	}
+	
+	trait = {#女王降临
+		token = bh3_mio_SFC_trait_3_1
+		name = bh3_mio_SFC_trait_3_1
+		icon = GFX_bh3_mio_SFC_trait_3_1
+		position = { x = -2 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_2
+		any_parent = { bh3_mio_SFC_trait_2 }
+		limit_to_equipment_type = { 
+			HerrscherVoid_Kiana_equipment
+			HerrscherVoid_Kiana_Air_equipment
+
+
+
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			air_attack = 0.5
+			breakthrough = 0.05
+			maximum_speed = 0.2
+			air_agility = 0.05
+		}
+	}
+	trait = {#最后一课
+		token = bh3_mio_SFC_trait_4_1
+		name = bh3_mio_SFC_trait_4_1
+		icon = GFX_bh3_mio_SFC_trait_4_1
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_3_1
+		any_parent = { bh3_mio_SFC_trait_3_1 }
+		limit_to_equipment_type = { 
+			HerrscherVoid_Kiana_equipment
+			HerrscherFlamescion_Kiana_equipment
+			HerrscherVoid_Kiana_Air_equipment
+			HerrscherFlamescion_Kiana_Air_equipment
+
+
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.05
+			armor_value = 0.1
+			defense = 0.1
+			air_attack = 0.2
+			air_defence = 0.1
+			air_agility = 0.05
+		}
+	}
+	trait = {#薪炎永燃
+		token = bh3_mio_SFC_trait_5_1
+		name = bh3_mio_SFC_trait_5_1
+		icon = GFX_bh3_mio_SFC_trait_5_1
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_4_1
+		any_parent = { bh3_mio_SFC_trait_4_1 }
+		limit_to_equipment_type = {
+			HerrscherFlamescion_Kiana_equipment
+
+			HerrscherFlamescion_Kiana_Air_equipment
+
+
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			air_attack = 0.5
+			armor_value = 0.05
+			breakthrough = 0.15
+			defense = 0.15
+			maximum_speed = 0.1
+			air_defence = 0.15
+			air_agility = 0.15
+		}
+	}
+	trait = {#我什么都做不到
+		token = bh3_mio_SFC_trait_3_2
+		name = bh3_mio_SFC_trait_3_2
+		icon = GFX_bh3_mio_SFC_trait_3_2
+		position = { x = -1 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_2
+		any_parent = { bh3_mio_SFC_trait_2 }
+		limit_to_equipment_type = { 
+			HerrscherThunder_Mei_equipment
+
+
+			HerrscherThunder_Mei_Air_equipment
+
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			defense = 0.1
+			armor_value = 0.05
+			air_attack = 0.05
+			air_defence = 0.1
+		}
+	}
+	trait = {#罪人挽歌
+		token = bh3_mio_SFC_trait_4_2
+		name = bh3_mio_SFC_trait_4_2
+		icon = GFX_bh3_mio_SFC_trait_4_2
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_3_2
+		any_parent = { bh3_mio_SFC_trait_3_2 }
+		limit_to_equipment_type = { 
+			HerrscherThunder_Mei_equipment
+
+
+			HerrscherThunder_Mei_Air_equipment
+
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.15
+			hard_attack = 0.05
+			air_attack = 0.5
+			breakthrough = 0.3
+			defense = 0.05
+			armor_value = 0.05
+			maximum_speed = 0.15
+			air_defence = 0.05
+			air_agility = 0.3
+		}
+	}
+
+	trait = {#天使重构
+		token = bh3_mio_SFC_trait_3_3
+		name = bh3_mio_SFC_trait_3_3
+		icon = GFX_bh3_mio_SFC_trait_3_3
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_2
+		any_parent = { bh3_mio_SFC_trait_2 }
+		limit_to_equipment_type = { 
+			HerrscherReason_Bronya_equipment
+
+
+
+			HerrscherReason_Bronya_Air_equipment
+
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.2
+			air_attack = 0.5
+			breakthrough = 0.15
+			defense = 0.2
+			armor_value = 0.1
+			maximum_speed = 0.3
+			air_defence = 0.2
+			air_agility = 0.15
+		}
+	}
+
+	trait = {#彼岸双生
+		token = bh3_mio_SFC_trait_3_4
+		name = bh3_mio_SFC_trait_3_4
+		icon = GFX_bh3_mio_SFC_trait_3_4
+		position = { x = 1 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_2
+		any_parent = { bh3_mio_SFC_trait_2 }
+		limit_to_equipment_type = { 
+			HerrscherRebirth_Seele_equipment
+
+
+
+
+			HerrscherRebirth_Seele_Air_equipment
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.1
+			breakthrough = 0.05
+			air_attack = 0.15
+			air_agility = 0.05
+		}
+	}
+
+	trait = {#你我
+		token = bh3_mio_SFC_trait_4_4
+		name = bh3_mio_SFC_trait_4_4
+		icon = GFX_bh3_mio_SFC_trait_4_4
+		position = { x = 0 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_3_4
+		any_parent = { bh3_mio_SFC_trait_3_4 }
+		limit_to_equipment_type = { 
+			HerrscherRebirth_Seele_equipment
+
+
+
+
+			HerrscherRebirth_Seele_Air_equipment
+
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+			air_attack = 0.5
+			breakthrough = 0.05
+			defense = 0.2
+			armor_value = 0.1
+			maximum_speed = 0.3
+			air_defence = 0.2
+			air_agility = 0.05
+		}
+	}
+
+	trait = {#因你而在的故事
+		token = bh3_mio_SFC_trait_3_5
+		name = bh3_mio_SFC_trait_3_5
+		icon = GFX_bh3_mio_SFC_trait_3_5
+		position = { x = 2 y = 1 }
+		relative_position_id = bh3_mio_SFC_trait_2
+		any_parent = { bh3_mio_SFC_trait_2 }
+		limit_to_equipment_type = { 
+			HerrscherHuman_Elysia_equipment
+
+
+
+
+
+			HerrscherHuman_Elysia_Air_equipment
+		}
+		equipment_bonus = {
+			soft_attack = 0.2
+			hard_attack = 0.2
+			air_attack = 0.5
+			breakthrough = 0.1
+			defense = 0.2
+			armor_value = 0.1
+			maximum_speed = 0.3
+			air_defence = 0.2
+			air_agility = 0.1
+		}
+	}
+}

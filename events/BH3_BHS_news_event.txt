@@ -1,0 +1,58 @@
+add_namespace = BHS_news
+#崩坏过月吞并已投降的非主要国家
+news_event = {
+	id = BHS_news.1
+	title = {
+		text = BHS_news.1.t1
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 1  }
+		}
+	}
+	title = {
+		text = BHS_news.1.t2
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 2 }
+		}
+	}
+	title = {
+		text = BHS_news.1.t3
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 3 }
+		}
+	}
+	title = {
+		text = BHS_news.1.t4
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 4 }
+		}
+	}
+	desc = {
+		text = BHS_news.1.d1
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 1 }
+		}
+	}
+	desc = {
+		text = BHS_news.1.d2
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 2 }
+		}
+	}
+	desc = {
+		text = BHS_news.1.d3
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 3 }
+		}
+	}
+	desc = {
+		text = BHS_news.1.d4
+		trigger = {
+			check_variable = { global.bhs_beat_country_new = 4 }
+		}
+	}
+	option = {
+		name = BHS_news.1.a
+	}
+	picture = GFX_news_event_BHS_news
+	is_triggered_only = yes
+}

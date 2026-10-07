@@ -1,0 +1,337 @@
+# 往事乐土·调试决议组：仅在 debug 模式下可见（is_debug = yes）
+# 用途：一键获得某个派系的全部刻印（3 普通 + 核心 + 增幅）及其全部动态修正，便于测试。
+
+BH3_ElysianRealm_debug_group = {
+
+	# ===== 救世 ====
+	BH3_ElysianRealm_debug_Savior = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Savior_1
+				BH3_ER_Savior_2
+				BH3_ER_Savior_3
+				BH3_ER_Savior_Core
+				BH3_ER_Savior_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Savior_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Savior_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Savior_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Savior_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Savior_Amp_dm }
+		}
+	}
+
+	# ===== 刹那 ====
+	BH3_ElysianRealm_debug_Setsuna = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Setsuna_1
+				BH3_ER_Setsuna_2
+				BH3_ER_Setsuna_3
+				BH3_ER_Setsuna_Core
+				BH3_ER_Setsuna_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Setsuna_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Setsuna_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Setsuna_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Setsuna_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Setsuna_Amp_dm }
+			unlock_subunit = hq_support_company
+			every_army_leader = { add_unit_leader_trait = BH3_ER_trait_Setsuna }
+		}
+	}
+
+	# ===== 天慧 ====
+	BH3_ElysianRealm_debug_Bodhi = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Bodhi_1
+				BH3_ER_Bodhi_2
+				BH3_ER_Bodhi_3
+				BH3_ER_Bodhi_Core
+				BH3_ER_Bodhi_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_L2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Bodhi_Amp_dm }
+		}
+	}
+
+	# ===== 黄金 ====
+	BH3_ElysianRealm_debug_Gold = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Gold_1
+				BH3_ER_Gold_2
+				BH3_ER_Gold_3
+				BH3_ER_Gold_Core
+				BH3_ER_Gold_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_Low_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_Overflow_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Gold_Amp_dm }
+		}
+	}
+
+	# ===== 鏖灭 ====
+	BH3_ElysianRealm_debug_Kalpas = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Kalpas_1
+				BH3_ER_Kalpas_2
+				BH3_ER_Kalpas_3
+				BH3_ER_Kalpas_Core
+				BH3_ER_Kalpas_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Desperate_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_LastStand_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kalpas_Amp_dm }
+		}
+	}
+
+	# ===== 浮生 ====
+	BH3_ElysianRealm_debug_Fusheng = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Fusheng_1
+				BH3_ER_Fusheng_2
+				BH3_ER_Fusheng_3
+				BH3_ER_Fusheng_Core
+				BH3_ER_Fusheng_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_Advantage_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_Disadvantage_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpAdv_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Fusheng_AmpDis_dm }
+		}
+	}
+
+	# ===== 戒律 ====
+	BH3_ElysianRealm_debug_Aponia = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Aponia_1
+				BH3_ER_Aponia_2
+				BH3_ER_Aponia_3
+				BH3_ER_Aponia_Core
+				BH3_ER_Aponia_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_Low_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_High_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_Overflow_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Aponia_Amp_dm }
+		}
+	}
+
+	# ===== 螺旋 ====
+	BH3_ElysianRealm_debug_Spiral = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Spiral_1
+				BH3_ER_Spiral_2
+				BH3_ER_Spiral_3
+				BH3_ER_Spiral_Core
+				BH3_ER_Spiral_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_Core_L3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Spiral_Amp_dm }
+		}
+	}
+
+	# ===== 无限 ====
+	BH3_ElysianRealm_debug_Mobius = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Mobius_1
+				BH3_ER_Mobius_2
+				BH3_ER_Mobius_3
+				BH3_ER_Mobius_Core
+				BH3_ER_Mobius_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Mobius_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Mobius_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Mobius_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Mobius_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Mobius_Amp_dm }
+		}
+	}
+
+	# ===== 旭光 ====
+	BH3_ElysianRealm_debug_Kosma = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Kosma_1
+				BH3_ER_Kosma_2
+				BH3_ER_Kosma_3
+				BH3_ER_Kosma_Core
+				BH3_ER_Kosma_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_T1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_T2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_T3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_T4_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Kosma_Amp_dm }
+		}
+	}
+
+	# ===== 繁星 ====
+	BH3_ElysianRealm_debug_Griseo = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Griseo_1
+				BH3_ER_Griseo_2
+				BH3_ER_Griseo_3
+				BH3_ER_Griseo_Core
+				BH3_ER_Griseo_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_T1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_T2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_T3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Griseo_Amp_dm }
+		}
+	}
+
+	# ===== 空梦 ====
+	BH3_ElysianRealm_debug_Pardofelis = {
+		priority = 86
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		available = { is_debug = yes }
+		visible = { is_debug = yes }
+		ai_will_do = { factor = 0 }
+		fire_only_once = no
+		days_remove = 0
+		cost = 0
+		complete_effect = {
+			add_ideas = {
+				BH3_ER_Pardofelis_1
+				BH3_ER_Pardofelis_2
+				BH3_ER_Pardofelis_3
+				BH3_ER_Pardofelis_Core
+				BH3_ER_Pardofelis_Amp
+			}
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_1_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Core_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Trade_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Pardofelis_Amp_dm }
+		}
+	}
+}

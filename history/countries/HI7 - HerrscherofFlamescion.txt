@@ -1,0 +1,50 @@
+﻿set_research_slots = 0
+set_convoys = 200
+set_stability = 2
+set_war_support = 2
+
+add_ideas = {
+	BHS_Benghuai_idea
+}
+add_dynamic_modifier = { modifier = BHS_AtaackDefend }
+add_dynamic_modifier = { modifier = BHS_TimeImprovement }
+add_dynamic_modifier = { modifier = BHS_CivilizationImprovement }
+add_dynamic_modifier = { modifier = BHS_IC_AtaackDefend }
+
+set_technology = {
+	Tujin1BHS_Research = 1
+	Qishi1BHS_Research = 1
+	Zhanche1BHS_Research = 1
+	Shengdian1BHS_Research = 1
+	JianisaBHS_Research = 1
+	BeinalesiBHS_Research = 1
+}
+
+set_popularities = {
+	neutrality = 100
+}
+set_politics = {	
+	ruling_party = neutrality
+	last_election = "1147.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_rule = {
+	can_puppet = no
+	can_create_factions = no
+	can_join_factions = no
+	can_create_collaboration_government = no
+	can_force_government = no
+	can_send_volunteers = no
+}
+every_character = {
+	retire = yes
+}
+
+create_country_leader = {
+	name = HI7_country_leader
+	picture = GFX_BH3_unit_leader_BHSHerrscherofFlamescion
+	expire = "9999.1.1"
+	ideology = despotism
+}
+

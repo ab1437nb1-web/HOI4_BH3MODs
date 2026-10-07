@@ -1,0 +1,35 @@
+BH3_honkai_control_states = {
+	input = game:all_states
+	operators = {
+		limit = {
+			controller = { 
+				is_in_faction_with = BHS
+			}
+		}
+	}
+	name = COLLECTION_BH3_HONKAI_CONTROL_STATES
+}
+BH3_human_control_states = {
+	input = game:all_states
+	operators = {
+		limit = {
+			controller = { 
+				NOT = { is_in_faction_with = BHS }
+			}
+		}
+	}
+	name = COLLECTION_BH3_HUMAN_CONTROL_STATES
+}
+BH3_all_states = {
+	input = game:all_states
+	name = COLLECTION_BH3_ALL_STATES
+}
+
+#当前加入逐火之蛾的国家数量
+BH3_faction_member_num = {
+	input = game:scope
+	operators = {
+		faction_members
+	}
+	name = COLLECTION_BH3_FACTION_MEMBER_NUM
+}

@@ -1,0 +1,20 @@
+BH3_change_leader_rule_never = {
+	type = change_leader_rules
+	trigger = {
+		always = no
+	}
+	available = {
+		
+	}
+
+	can_remove = { 
+		
+	}
+
+	modifier = {
+
+	}
+	ai_will_do = {
+		base = 0
+	}
+}

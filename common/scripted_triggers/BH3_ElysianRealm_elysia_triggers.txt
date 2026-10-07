@@ -1,0 +1,16 @@
+# 往事乐土·真我刻印（P3）：公共触发器（供其它系统联动；submod 可按同格式扩展）
+
+BH3_ER_has_elysia = {
+	OR = {
+		has_idea = BH3_ER_Elysia_GER
+		has_idea = BH3_ER_Elysia_SOV
+	}
+}
+
+# 用法：BH3_ER_has_elysia_of = { TAG = GER }（在需要判定的国家作用域里调用）
+BH3_ER_has_elysia_of = {
+	OR = {
+		AND = { TAG = GER  has_idea = BH3_ER_Elysia_GER }
+		AND = { TAG = SOV  has_idea = BH3_ER_Elysia_SOV }
+	}
+}

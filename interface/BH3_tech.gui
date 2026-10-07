@@ -1,0 +1,1673 @@
+guiTypes = {
+	############ 舰桥界面 #############
+	containerWindowType = { 
+		name = "BH3_main_menu"
+		position = { x = -700 y = -350}
+		# show_animation_type = decelerated
+		# hide_animation_type = accelerated
+		animation_time = 300	
+		size = { width = 1400 height = 700 }
+		orientation = CENTER
+        moveable = yes
+		
+		# hide_sound = menu_close_window
+		# show_sound = menu_open_window
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_BH3_main_menu_bg"
+		}
+
+		iconType = {
+			position = { x = 1100 y = 20 }
+			name = "icon_BH3_Logo"
+			spriteType = "GFX_BH3_Logo"
+			alwaystransparent = yes
+		}
+		buttonType = {
+			name = "BH3_main_menu_x_btn"
+			position = { x = -60 y = 0 }
+			quadTextureSprite ="GFX_BH3_close_btn"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = BH3_Click_X
+			pdx_tooltip = "CLOSE"
+		}
+
+		buttonType = {
+			name = "BH3_main_menu_tech_btn"
+			position = { x = 350 y = 250 }
+			spriteType = "GFX_BH3_main_menu_item"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		iconType = {
+			position = { x = 400 y = 280 }
+			name = "icon_BH3_main_menu_tech"
+			spriteType = "GFX_BH3_main_menu_tech"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_main_menu_tech_btn_TextBox"
+			position = { x = 430 y = 440 }
+			font = "hoi_30header"
+			text = "BH3_main_menu_tech_btn_TextBox_tt"
+			format = left
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "BH3_main_menu_doctrine_btn"
+			position = { x = 700 y = 250 }
+			spriteType = "GFX_BH3_main_menu_item"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		iconType = {
+			position = { x = 780 y = 280 }
+			name = "icon_BH3_main_menu_doctrine"
+			spriteType = "GFX_BH3_main_menu_doctrine"
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_main_menu_doctrine_btn_TextBox"
+			position = { x = 790 y = 440 }
+			font = "hoi_30header"
+			text = "BH3_main_menu_doctrine_btn_TextBox_tt"
+			format = left
+			alwaystransparent = yes
+		}
+		
+	}
+
+	############ 女武神科技界面 #############
+	containerWindowType = { 
+		name = "BH3_tech_menu"
+		position = { x = 0 y = 0}
+		# show_animation_type = decelerated
+		# hide_animation_type = accelerated
+		animation_time = 300	
+		size = { width = 1400 height = 700 }
+		orientation = UPPER_LEFT
+        #moveable = yes
+		
+		# hide_sound = menu_close_window
+		# show_sound = menu_open_window
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_BH3_tech_menu_bg"
+		}
+
+		# iconType = {
+		# 	position = { x = 1120 y = 0 }
+		# 	name = "icon_BH3_Logo"
+		# 	spriteType = "GFX_BH3_Logo"
+		# 	alwaystransparent = yes
+		# }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_current_research"
+			position = { x = 50	 y = 620 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 10}
+			text = "BH3_tech_current_research_des"
+			maxWidth = 200
+			maxHeight = 50
+			fixedsize = yes
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "BH3_tech_remain_time"
+			position = { x = 50 y = 650 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 10}
+			text = "BH3_tech_remain_time_des"
+			maxWidth = 200
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		buttonType = {
+			name = "BH3_tech_Kiana_btn"
+			position = { x = 20 y = 70 }
+			spriteType = "GFX_BH3_filter_kiana_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Kiana_btn_TextBox"
+			position = { x = 70 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_kiana"
+			format = left
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_btn"
+			position = { x = 190 y = 70 }
+			spriteType = "GFX_BH3_filter_mei_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Mei_btn_TextBox"
+			position = { x = 240 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Mei"
+			format = left
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_btn"
+			position = { x = 360 y = 70 }
+			spriteType = "GFX_BH3_filter_bronya_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Bronya_btn_TextBox"
+			position = { x = 410 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Bronya"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_Seele_btn"
+			position = { x = 530 y = 70 }
+			spriteType = "GFX_BH3_filter_seele_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Seele_btn_TextBox"
+			position = { x = 580 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Seele"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_Theresa_btn"
+			position = { x = 700 y = 70 }
+			spriteType = "GFX_BH3_filter_theresa_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Theresa_btn_TextBox"
+			position = { x = 750 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Theresa"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_Fuka_btn"
+			position = { x = 870 y = 70 }
+			spriteType = "GFX_BH3_filter_fuka_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_Fuka_btn_TextBox"
+			position = { x = 920 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Fuka"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_Eden_btn"
+			position = { x = 1040 y = 70 }
+			spriteType = "GFX_BH3_filter_eden_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Eden_btn_TextBox"
+			position = { x = 1090 y = 85 }
+			font = "hoi_20bs"
+			text = "bh3_filter_Eden"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_HerrscherKiana_btn"
+			position = { x = 20 y = 140 }
+			spriteType = "GFX_BH3_filter_HerrscherKiana_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscherKiana_btn_TextBox"
+			position = { x = 70 y = 155 }
+			font = "hoi_20bs"
+			text = "bh3_filter_HerrscherKiana"
+			format = left
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "BH3_tech_HerrscherMei_btn"
+			position = { x = 190 y = 140 }
+			spriteType = "GFX_BH3_filter_HerrscherMei_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscherMei_btn_TextBox"
+			position = { x = 240 y = 155 }
+			font = "hoi_20bs"
+			text = "bh3_filter_HerrscherMei"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_HerrscherBronya_btn"
+			position = { x = 360 y = 140 }
+			spriteType = "GFX_BH3_filter_HerrscherBronya_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscherBronya_btn_TextBox"
+			position = { x = 410 y = 155 }
+			font = "hoi_20bs"
+			text = "bh3_filter_HerrscherBronya"
+			format = left
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "BH3_tech_HerrscherSeele_btn"
+			position = { x = 530 y = 140 }
+			spriteType = "GFX_BH3_filter_HerrscherSeele_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscherSeele_btn_TextBox"
+			position = { x = 580 y = 155 }
+			font = "hoi_20bs"
+			text = "bh3_filter_HerrscherSeele"
+			format = left
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "BH3_tech_HerrscherElysia_btn"
+			position = { x = 700 y = 140 }
+			spriteType = "GFX_BH3_filter_HerrscherElysia_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = ""
+		}
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscherElysia_btn_TextBox"
+			position = { x = 750 y = 155 }
+			font = "hoi_20bs"
+			text = "bh3_filter_HerrscherElysia"
+			format = left
+			fixedsize = yes
+		}
+
+		containerWindowType = {
+			name = "BH3_tech_progressbar"
+		    position = { x = 300 y = 624 }
+		    show_position = { x = 0 y = 0 }
+		    size = { width = 1000 height = 50 }
+			orientation = upper_left
+		    clipping = yes
+			
+			iconType = {
+		        position = { x = 0 y = 1 }
+		        name = "BH3_research_progressbar_ic"
+		        spriteType = "GFX_BH3_research_progressbar"
+	        }
+	    }
+				
+		iconType = {
+			position = { x = 300 y = 625 }
+			name = "BH3_research_progressbar_bg_ic"
+			spriteType = "GFX_BH3_research_progressbar_bg"
+		}
+
+		buttonType = {
+			name = "BH3_tech_menu_btn_X"
+			position = { x = -60 y = 0 }
+			quadTextureSprite ="GFX_BH3_return_btn"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = BH3_Click_X
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+	############ 女武神选择 #############
+	containerWindowType = { 
+		name = "BH3_tech_Kiana_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Kiana_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieComprehensive_des"
+			format = left
+			text_color_code = C
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_kiana"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Kiana_equipment_desc"
+		}
+		buttonType = {
+			name = "BH3_tech_Kiana_WhiteComet_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_WhiteComet_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Kiana_WhiteComet_btn_tt"
+		}
+		buttonType = {
+			position = { x = 190  y = 360 }
+			name = "BH3_tech_leader_kiana_WhiteComet_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelb"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Kiana_VoidDrifter_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_VoidDrifter_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Kiana_VoidDrifter_btn_tt"
+		}
+		buttonType = {
+			position = { x = 500  y = 360 }
+			name = "BH3_tech_leader_kiana_VoidDrifter_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levela"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Kiana_KnightMoonbeam_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_KnightMoonbeam_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Kiana_KnightMoonbeam_btn_tt"
+		}
+		buttonType = {
+			position = { x = 790  y = 360 }
+			name = "BH3_tech_leader_kiana_KnightMoonbeam_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_Mei_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+
+		instantTextBoxType = {
+			name = "BH3_tech_Mei_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieMeele_des"
+			format = left
+			text_color_code = O
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_mei"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Mei_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_CrimsonImpuls_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_CrimsonImpuls_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Mei_CrimsonImpuls_btn_tt"
+		}
+		buttonType = {
+			position = { x = 210  y = 360 }
+			name = "BH3_tech_leader_Mei_CrimsonImpuls_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelb"
+		}
+		
+		buttonType = {
+			name = "BH3_tech_Mei_StrikerFulminata_btn"
+			position = { x = 440 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_StrikerFulminata_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Mei_StrikerFulminata_btn_tt"
+		}
+		# 断罪影舞废弃
+		# buttonType = {
+		# 	name = "BH3_tech_Mei_ShadowDash_btn"
+		# 	position = { x = 420 y = 100 }
+		# 	spriteType = "GFX_BH3_tech_Mei_ShadowDash_btn"
+		# 	pdx_tooltip = "Valkyrie_Mei_equipment_1_desc"
+		# }
+		buttonType = {
+			position = { x = 520  y = 360 }
+			name = "BH3_tech_leader_Mei_StrikerFulminata_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levela"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_DanzaiSpectramancer_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_DanzaiSpectramancer_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Mei_DanzaiSpectramancer_btn_tt"
+		}
+		# 鬼铠废弃
+		# buttonType = {
+		# 	name = "BH3_tech_Mei_LightningEmpress_btn"
+		# 	position = { x = 720 y = 100 }
+		# 	spriteType = "GFX_BH3_tech_Mei_LightningEmpress_btn"
+		# 	pdx_tooltip = "Valkyrie_Mei_equipment_2_desc"
+		# }
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Mei_DanzaiSpectramancer_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_Captain_btn"
+			position = { x = 1020 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_Captain_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Mei_Captain_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1100  y = 360 }
+			name = "BH3_tech_leader_Mei_Captain_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_Bronya_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Bronya_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieArtillery_des"
+			format = left
+			text_color_code = Y
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_Bronya"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Bronya_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_ValkyrieChariot_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_ValkyrieChariot_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Bronya_ValkyrieChariot_btn_tt"
+		}
+		buttonType = {
+			position = { x = 215  y = 360 }
+			name = "BH3_tech_leader_Bronya_ValkyrieChariot_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelb"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_YamabukiArmor_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_YamabukiArmor_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Bronya_YamabukiArmor_btn_tt"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Bronya_YamabukiArmor_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levela"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_DimensionBreaker_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_DimensionBreaker_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Bronya_DimensionBreaker_btn_tt"
+		}
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Bronya_DimensionBreaker_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_SilverWingNEX_btn"
+			position = { x = 1020 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_SilverWingNEX_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Bronya_SilverWingNEX_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1100  y = 360 }
+			name = "BH3_tech_leader_Bronya_SilverWingNEX_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+	}
+
+
+	containerWindowType = { 
+		name = "BH3_tech_Seele_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Seele_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieMeele_des"
+			format = left
+			text_color_code = O
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_seele"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Seele_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Seele_SwallowtailPhantasm_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Seele_SwallowtailPhantasm_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Seele_SwallowtailPhantasm_btn_tt"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Seele_SwallowtailPhantasm_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levela"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Seele_StygianNymph_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Seele_StygianNymph_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Seele_StygianNymph_btn_tt"
+		}
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Seele_StygianNymph_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Seele_StarchasmNyx_btn"
+			position = { x = 1020 y = 100 }
+			spriteType = "GFX_BH3_tech_Seele_StarchasmNyx_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Seele_StarchasmNyx_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1100  y = 360 }
+			name = "BH3_tech_leader_Seele_StarchasmNyx_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_Theresa_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Theresa_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieComprehensive_des"
+			format = left
+			text_color_code = C
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_theresa"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Theresa_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Theresa_StarlitAstrologos_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Theresa_StarlitAstrologos_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Theresa_StarlitAstrologos_btn_tt"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Theresa_StarlitAstrologos_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Theresa_LunarVowCrimsonLove_btn"
+			position = { x = 720 y = 100 }   
+			spriteType = "GFX_BH3_tech_Theresa_LunarVowCrimsonLove_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Theresa_LunarVowCrimsonLove_btn_tt"
+		}
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Theresa_LunarVowCrimsonLove_btn"
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Theresa_Mars_btn"
+			position = { x = 1020 y = 80 }
+			spriteType = "GFX_BH3_tech_Theresa_Mars_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Theresa_Mars_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1150  y = 360 }
+			name = "BH3_tech_leader_Theresa_Mars_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+
+
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_Fuka_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Fuka_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieMeele_des"
+			format = left
+			text_color_code = O
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_fuka"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Fuka_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Fuka_ShadowKnight_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Fuka_ShadowKnight_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Fuka_ShadowKnight_btn_tt"
+		}
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Fuka_ShadowKnight_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levels"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Fuka_AzureEmpyrea_btn"
+			position = { x = 1020 y = 100 }
+			spriteType = "GFX_BH3_tech_Fuka_AzureEmpyrea_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Fuka_AzureEmpyrea_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1100  y = 360 }
+			name = "BH3_tech_leader_Fuka_AzureEmpyrea_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_Eden_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_Eden_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = -30 y = 300 }
+			text = "BH3_tech_menu_ValkyrieComprehensive_des"
+			format = left
+			text_color_code = C
+		}
+		iconType = {
+			name = "icon_BH3_tech_valkyrie_eden"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Valkyrie_Eden_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Eden_GoldenDiva_btn"
+			position = { x = 1020 y = 100 }
+			spriteType = "GFX_BH3_tech_Eden_GoldenDiva_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_tech_Eden_GoldenDiva_btn_tt"
+		}
+		buttonType = {
+			position = { x = 1100  y = 360 }
+			name = "BH3_tech_leader_Eden_GoldenDiva_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelss"
+		}
+	}
+ 
+	containerWindowType = { 
+		name = "BH3_tech_HerrscherKiana_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscheKiana_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = 20 y = 300 }
+			text = "BH3_tech_Herrsche_menu_valkyrie_des"
+			format = left
+			text_color_code = R
+		}
+		iconType = {
+			name = "icon_BH3_tech_Herrscher"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Herrscher_Kiana_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Kiana_HerrscherofVoid_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_HerrscherofVoid_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherVoid_Kiana_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 215  y = 360 }
+			name = "BH3_tech_leader_Kiana_HerrscherofVoid_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelsss"
+		}
+		
+		
+		buttonType = {
+			name = "BH3_tech_Kiana_HerrscherofFlamescion_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_HerrscherofFlamescion_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherFlamescion_Kiana_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Kiana_HerrscherofFlamescion_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelsss"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Kiana_HerrscherofFinality_btn"
+			position = { x = 720 y = 100 }
+			spriteType = "GFX_BH3_tech_Kiana_HerrscherofFinality_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "Herrscher_Kiana_equipment_2_desc"
+		}
+		buttonType = {
+			position = { x = 810  y = 360 }
+			name = "BH3_tech_leader_Kiana_HerrscherofFinality_btn"
+			clicksound = BH3_Click
+			spriteType = "GFX_BH3_tech_levelsss"
+		}
+		buttonType = {
+			name = "BH3_tech_Kiana_HerrscherofFinalityUncompleted_btn"
+			position = { x = 700 y = 140 }
+			spriteType = "GFX_BH3_tech_Uncompleted_btn"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_HerrscherMei_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscheMei_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = 20 y = 300 }
+			text = "BH3_tech_Herrsche_menu_valkyrie_des"
+			format = left
+			text_color_code = R
+		}
+		iconType = {
+			name = "icon_BH3_tech_Herrscher"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Herrscher_Mei_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_HerrscherofThunder_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_HerrscherofThunder_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherThunder_Mei_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 215  y = 360 }
+			name = "BH3_tech_leader_Mei_HerrscherofThunder_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+
+		buttonType = {
+			name = "BH3_tech_Mei_HerrscherofOrigin_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Mei_HerrscherofOrigin_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "Herrscher_Mei_equipment_1_desc"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Mei_HerrscherofOrigin_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_tech_Mei_HerrscherofOriginUncompleted_btn"
+			position = { x = 400 y = 140 }
+			spriteType = "GFX_BH3_tech_Uncompleted_btn"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_HerrscherBronya_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscheBronya_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = 20 y = 300 }
+			text = "BH3_tech_Herrsche_menu_valkyrie_des"
+			format = left
+			text_color_code = R
+		}
+		iconType = {
+			name = "icon_BH3_tech_Herrscher"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Herrscher_Bronya_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_HerrscherofReason_btn"
+			position = { x = 120 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_HerrscherofReason_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherReason_Bronya_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 215  y = 360 }
+			name = "BH3_tech_leader_Bronya_HerrscherofReason_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+
+		buttonType = {
+			name = "BH3_tech_Bronya_HerrscherofTruth_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Bronya_HerrscherofTruth_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "Herrscher_Bronya_equipment_1_desc"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_HerrscherofTruth_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+		buttonType = {
+			name = "BH3_tech_Mei_HerrscherofTruthUncompleted_btn"
+			position = { x = 400 y = 140 }
+			spriteType = "GFX_BH3_tech_Uncompleted_btn"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_HerrscherSeele_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscheSeele_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = 20 y = 300 }
+			text = "BH3_tech_Herrsche_menu_valkyrie_des"
+			format = left
+			text_color_code = R
+		}
+		iconType = {
+			name = "icon_BH3_tech_Herrscher"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Herrscher_Seele_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Seele_HerrscherofRebirth_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Seele_HerrscherofRebirth_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherRebirth_Seele_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Seele_HerrscherofRebirth_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_tech_HerrscherElysia_menu"
+		position = { x = 50 y = 150 }
+		size = { width = 1300 height = 480 }
+		
+		instantTextBoxType = {
+			name = "BH3_tech_HerrscheElysia_menu_valkyrie"
+			font = "hoi_36header"
+			position = { x = 20 y = 300 }
+			text = "BH3_tech_Herrsche_menu_valkyrie_des"
+			format = left
+			text_color_code = R
+		}
+		iconType = {
+			name = "icon_BH3_tech_Herrscher"
+			position = { x = -10  y = 170 }
+			spriteType = "GFX_BH3_tech_valkyrie"
+			pdx_tooltip = "Herrscher_Elysia_equipment_desc"
+		}
+
+		buttonType = {
+			name = "BH3_tech_Elysia_HerrscherofHuman_btn"
+			position = { x = 420 y = 100 }
+			spriteType = "GFX_BH3_tech_Elysia_HerrscherofHuman_btn"
+			clicksound = BH3_Click
+			pdx_tooltip = "HerrscherHuman_Elysia_equipment_0_desc"
+		}
+		buttonType = {
+			position = { x = 510  y = 360 }
+			name = "BH3_tech_leader_Elysia_HerrscherofHuman_btn"
+			spriteType = "GFX_BH3_tech_levelsss"
+			clicksound = BH3_Click
+		}
+	}
+
+	containerWindowType = {
+		name = "BH3_tech_confirm_window"
+		position = { x = -300 y = -150 }
+		size = { width = 400 height = 250 }
+		orientation = CENTER
+        moveable = yes
+		
+		background = {
+			name = "Background"		
+			spriteType = "GFX_BH3_BH3_confirm_bg"
+		}
+		
+		buttonType = {
+			name = "BH3_confirm_yes_btn"
+			position = { x = 0 y = 200 }
+			spriteType = "GFX_BH3_yes_200x50_btn"
+			buttonText = "bh3_confirm_yes"
+			buttonFont = "hoi_24header"
+			clicksound = BH3_Click_Yes
+		}
+	
+		buttonType = {
+			name = "BH3_confirm_no_btn"
+			position = { x = 200 y = 200 }
+			spriteType = "GFX_BH3_no_200x50_btn"
+			shortcut = "ESCAPE"
+			buttonText = "bh3_confirm_no"
+			buttonFont = "hoi_24header"
+			clicksound = BH3_Click_X
+		}
+		
+		instantTextBoxType = {
+			name = "BH3_army_tech_cfm_description"
+			font = "hoi_24header"
+			borderSize = {x = 5 y = 100}
+			text = "BH3_army_tech_cfm_description_text"
+			maxWidth = 400
+			maxHeight = 200
+			format = center
+		}	
+	}
+
+
+	############ 女武神学说界面 #############
+	containerWindowType = { 
+		name = "BH3_Valkyrie_Doctrine"
+
+		animation_time = 300	
+		size = { width = 1400 height = 700 }
+		orientation = UPPER_LEFT
+        #moveable = yes
+		
+		# hide_sound = menu_close_window
+		# show_sound = menu_open_window
+		verticalScrollbar = BH3_right_vertical_slider
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_BH3_Valkyrie_Doctrine_bg"
+		}
+
+		buttonType = {
+			name = "BH3_Valkyrie_Doctrine_Treeview_btn_X"
+			position = { x = -60 y = 0 }
+			quadTextureSprite ="GFX_BH3_return_btn"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = BH3_Click_X
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+	containerWindowType = { 
+		name = "BH3_Valkyrie_Doctrine_Treeview"
+		position = { x = 0 y = 80 }
+		animation_time = 300	
+		size = { width = 1400 height = 580 }
+		orientation = UPPER_LEFT
+        #moveable = yes
+		
+		# hide_sound = menu_close_window
+		# show_sound = menu_open_window
+		verticalScrollbar = BH3_right_vertical_slider
+
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_BH3_Valkyrie_Doctrine_bg_alpha"
+		}
+
+
+
+		iconType = {
+            name = "ANC_Tech_Type0bg" position = { x = 0 y = 0 }
+           # spriteType = GFX_anc_ui_background_tech_type0 alwaystransparent = yes
+        }
+
+		buttonType = { #基础作战理论
+            name = "BH3_Valkyrie_Doctrine_0_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_0
+            position = { x = 660 y = 50 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_0_btn_tt"
+        }
+		#近接歼灭战术（Close Quarters Annihilation Doctrine）
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_1
+            position = { x = 190 y = 200 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_1_btn_tt"
+        }
+		
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_2
+            position = { x = 190 y = 350 }
+			clicksound = BH3_Click 
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_2_btn_tt"
+        }
+
+		#弱点贯穿（Precision Pierce）
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_3_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_3
+            position = { x = 190 y = 500 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_3_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_4_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_4_1
+            position = { x = 60 y = 650 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_4_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_4_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_4_2
+            position = { x = 330 y = 650 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_4_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_5_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_5_1
+            position = { x = 60 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_5_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_5_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_5_2
+            position = { x = 330 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_5_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_6_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_6_1
+            position = { x = 60 y = 950 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_6_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_1_6_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_1_6_2
+            position = { x = 330 y = 950 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_1_6_2_btn_tt"
+        }
+
+		
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_1
+            position = { x = 660 y = 200 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_2
+            position = { x = 660 y = 350 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_3_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_3
+            position = { x = 660 y = 500 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_3_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_4_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_4_1
+            position = { x = 530 y = 650 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_4_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_4_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_4_2
+            position = { x = 800 y = 650 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_4_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_5_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_5_1
+            position = { x = 530 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_5_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_5_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_5_2
+            position = { x = 800 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_5_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_2_6_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_2_6
+            position = { x = 660 y = 950 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_2_6_btn_tt"
+        }
+
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_1
+            position = { x = 1120 y = 200 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_2
+            position = { x = 1120 y = 350 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_3_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_3
+            position = { x = 1120 y = 500 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_3_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_4_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_4
+            position = { x = 1120 y = 650 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_4_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_5_1_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_5_1
+            position = { x = 990 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_5_1_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_5_2_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_5_2
+            position = { x = 1260 y = 800 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_5_2_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_3_6_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_3_6
+            position = { x = 1120 y = 950 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_3_6_btn_tt"
+        }
+
+		buttonType = { 
+            name = "BH3_Valkyrie_Doctrine_10_btn" 
+			spriteType = GFX_BH3_Valkyrie_Doctrine_0
+            position = { x = 660 y = 1100 } 
+			clicksound = BH3_Click
+			pdx_tooltip = "BH3_Valkyrie_Doctrine_10_btn_tt"
+        }
+		iconType = {
+			position = { x = 550 y = 60 }
+			name = "icon_Arrow_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 380 y = 60 }
+			name = "icon_Arrow_1_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 60 }
+			name = "icon_Arrow_1_2"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 120 }
+			name = "icon_Arrow_1_3"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 672 y = 120 }
+			name = "icon_Arrow_2"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 770 y = 60 }
+			name = "icon_Arrow_3"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 940 y = 60 }
+			name = "icon_Arrow_3_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1098 y = 60 }
+			name = "icon_Arrow_3_2"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 120 }
+			name = "icon_Arrow_3_3"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 270 }
+			name = "icon_Arrow_4"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 420 }
+			name = "icon_Arrow_5"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 90 y = 515 }
+			name = "icon_Arrow_6"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 72 y = 570 }
+			name = "icon_Arrow_6_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 280 y = 515 }
+			name = "icon_Arrow_7"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 342 y = 575 }
+			name = "icon_Arrow_7_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 72 y = 720 }
+			name = "icon_Arrow_8"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 342 y = 720 }
+			name = "icon_Arrow_9"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 72 y = 870 }
+			name = "icon_Arrow_10"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 342 y = 870 }
+			name = "icon_Arrow_11"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 672 y = 270 }
+			name = "icon_Arrow_12"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 672 y = 420 }
+			name = "icon_Arrow_13"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 560 y = 510 }
+			name = "icon_Arrow_14"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 542 y = 575 }
+			name = "icon_Arrow_14_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 750 y = 510 }
+			name = "icon_Arrow_15"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 812 y = 575 }
+			name = "icon_Arrow_15_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 542 y = 720 }
+			name = "icon_Arrow_16"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 812 y = 720 }
+			name = "icon_Arrow_17"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 560 y = 870 }
+			name = "icon_Arrow_18"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 750 y = 870 }
+			name = "icon_Arrow_19"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 672 y = 870 }
+			name = "icon_Arrow_19_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 270 }
+			name = "icon_Arrow_20"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 420 }
+			name = "icon_Arrow_21_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 570 }
+			name = "icon_Arrow_21"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1020 y = 660 }
+			name = "icon_Arrow_22"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1002 y = 720 }
+			name = "icon_Arrow_22_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1210 y = 660 }
+			name = "icon_Arrow_23"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1270 y = 720 }
+			name = "icon_Arrow_23_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1020 y = 870 }
+			name = "icon_Arrow_24"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 870 }
+			name = "icon_Arrow_24_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1210 y = 870 }
+			name = "icon_Arrow_25"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 280 y = 1020 }
+			name = "icon_Arrow_26"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 90 y = 1020 }
+			name = "icon_Arrow_26_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 672 y = 1020 }
+			name = "icon_Arrow_27"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1132 y = 1020 }
+			name = "icon_Arrow_28"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 1030 }
+			name = "icon_Arrow_29"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 202 y = 1110 }
+			name = "icon_Arrow_29_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 380 y = 1110 }
+			name = "icon_Arrow_29_2"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 550 y = 1110 }
+			name = "icon_Arrow_29_3"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 1100 y = 1110 }
+			name = "icon_Arrow_30"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 930 y = 1110 }
+			name = "icon_Arrow_30_1"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+		iconType = {
+			position = { x = 760 y = 1110 }
+			name = "icon_Arrow_30_2"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			position = { x = 1052 y = 810 }
+			name = "icon_BH3_Valkyrie_Doctrine_opp"
+			spriteType = "GFX_BH3_Valkyrie_Doctrine_opp"
+			alwaystransparent = yes
+		}
+	}
+
+}

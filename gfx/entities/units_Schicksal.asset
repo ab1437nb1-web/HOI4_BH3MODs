@@ -1,0 +1,82 @@
+########### DG070 ###########
+entity = {
+	name = "SchicksalValkyrieMeele_entity"
+	pdxmesh = "DG070_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 0.8 looping = no  next_state = "idle" }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "move"}
+
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "move" 
+	}
+
+	state = { name = "training"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 1
+	}
+	state = { name = "defend"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  chance = 2
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack"  chance = 1
+	}
+	state = { name = "support_attack"  animation = "Attack2"   animation_blend_time = 0.1  animation_speed = 1.0 looping = no  next_state = "support_attack"  chance = 2
+	}
+	#没有进unity，所以是这个比例
+	scale = 4
+}
+entity = {
+	clone =  "SchicksalValkyrieMeele_entity"
+	name = "SchicksalValkyrieMeele_0_entity"
+	pdxmesh = "DG070_pdx"
+}
+
+########### DG080 ###########
+entity = {
+	name = "SchicksalValkyrieArtillery_entity"
+	pdxmesh = "DG080_pdx"
+		
+	state = { name = "idle"  animation = "Idle"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "idle" }
+
+	state = { name = "move"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "move"}
+
+	state = { name = "retreat"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "move" 
+	}
+
+	state = { name = "training"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "training"  }
+	
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 1
+		event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	}
+	state = { name = "attack"  animation = "Move"   animation_blend_time = 0.1  animation_speed = 0.5 looping = no  next_state = "attack"  chance = 2 
+	}
+	state = { name = "attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "attack"  chance = 5
+		event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	}
+
+	state = { name = "defend"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "defend"  
+		event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	}
+
+	state = { name = "support_attack"  animation = "Attack1"   animation_blend_time = 0.1  animation_speed = 1 looping = no  next_state = "support_attack" 
+		event = { time = 0 node="muzzle" particle = "rifle_muzzle_particle"  keep_particle = yes light = "muzzle_flash" sound = { soundeffect = infantry_rifle_attack } }
+	}
+	#调整过比例
+	scale = 1
+}
+entity = {
+	clone =  "SchicksalValkyrieArtillery_entity"
+	name = "SchicksalValkyrieArtillery_0_entity"
+	pdxmesh = "DG080_pdx"
+}

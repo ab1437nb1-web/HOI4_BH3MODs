@@ -1,0 +1,20 @@
+objectTypes = {
+	######## DG070 ########
+	pdxmesh = {
+		name = "DG070_pdx"
+		file = "gfx/models/units/Schicksal/DG070.mesh"
+		animation = { id = "Idle"	type = "DG070_Idle_animation"}
+		animation = { id = "Move"	type = "DG070_Move_animation"}
+		animation = { id = "Attack1"	type = "DG070_Attack1_animation"}
+		animation = { id = "Attack2"	type = "DG070_Attack2_animation"}
+	}
+
+	######## DG080 ########
+	pdxmesh = {
+		name = "DG080_pdx"
+		file = "gfx/models/units/Schicksal/DG080.mesh"
+		animation = { id = "Idle"	type = "DG080_Idle_animation"}
+		animation = { id = "Move"	type = "DG080_Move_animation"}
+		animation = { id = "Attack1"	type = "DG080_Attack1_animation"}
+	}
+}

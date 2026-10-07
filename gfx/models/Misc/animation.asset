@@ -1,0 +1,10 @@
+animation = {
+	name = "BH3_Hyperion_Idle_animation"
+	file = "BH3_Hyperion_Idle.anim"
+}
+
+animation = {
+	name = "BH3_Laser_Attack_animation"
+	file = "BH3_Laser_Attack.anim"
+}
+

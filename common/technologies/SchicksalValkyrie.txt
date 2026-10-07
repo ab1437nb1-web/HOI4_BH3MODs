@@ -1,0 +1,36 @@
+technologies = {
+
+	############################################
+	################## 天命 ##################
+	############################################
+
+	##############天命近战女武神##################
+	SchicksalValkyrieMeele_Research = {
+		research_cost = 1
+		enable_equipments = {
+			SchicksalValkyrieMeele_equipment_0
+		}
+		enable_subunits = {
+			SchicksalValkyrieMeele
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	##############天命远战女武神##################
+	SchicksalValkyrieArtillery_Research = {
+		research_cost = 1
+		enable_equipments = {
+			SchicksalValkyrieArtillery_equipment_0
+		}
+		enable_subunits = {
+			SchicksalValkyrieArtillery
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,19 @@
+default = {
+	# 往事乐土：无瑕之钥（可生产材料装备 —— 按本 mod 规律，可生产装备必须有图标池）
+	BH3_FlawlessKey_equipment = {
+		pool = {
+			icons = {
+				"GFX_SchicksalValkyrieMeele_Research_medium"
+			}
+			weight = 100
+		}
+	}
+	BH3_FlawlessKey_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_SchicksalValkyrieMeele_Research_medium"
+			}
+			weight = 100
+		}
+	}
+}

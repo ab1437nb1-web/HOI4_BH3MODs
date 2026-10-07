@@ -1,0 +1,164 @@
+division_template = {
+	name = "Schicksal Valkyrie A Team"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		SchicksalValkyrieMeele = { x = 0 y = 0 }
+		SchicksalValkyrieMeele = { x = 0 y = 1 }
+		SchicksalValkyrieMeele= { x = 0 y = 2 }
+		SchicksalValkyrieMeele = { x = 1 y = 0 }
+		SchicksalValkyrieMeele = { x = 1 y = 1 }
+		SchicksalValkyrieMeele = { x = 1 y = 2 }
+		SchicksalValkyrieArtillery = { x = 2 y = 0 }
+		SchicksalValkyrieArtillery = { x = 2 y = 1 }
+		SchicksalValkyrieArtillery = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Schicksal Valkyrie B Team"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		SchicksalValkyrieArtillery = { x = 0 y = 0 }
+		SchicksalValkyrieArtillery = { x = 0 y = 1 }
+		SchicksalValkyrieArtillery= { x = 0 y = 2 }
+		SchicksalValkyrieArtillery = { x = 1 y = 0 }
+		SchicksalValkyrieArtillery = { x = 1 y = 1 }
+		SchicksalValkyrieArtillery = { x = 1 y = 2 }
+		SchicksalValkyrieMeele = { x = 2 y = 0 }
+		SchicksalValkyrieMeele = { x = 2 y = 1 }
+		SchicksalValkyrieMeele = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kiana"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieComprehensiveKiana = { x = 0 y = 0 }
+		ValkyrieComprehensiveKiana = { x = 0 y = 1 }
+		ValkyrieComprehensiveKiana = { x = 0 y = 2 }
+		ValkyrieComprehensiveKiana = { x = 1 y = 0 }
+		ValkyrieComprehensiveKiana = { x = 1 y = 1 }
+		ValkyrieComprehensiveKiana = { x = 1 y = 2 }
+		ValkyrieComprehensiveKiana = { x = 2 y = 0 }
+		ValkyrieComprehensiveKiana = { x = 2 y = 1 }
+		ValkyrieComprehensiveKiana = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Mei"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieMeeleMei = { x = 0 y = 0 }
+		ValkyrieMeeleMei = { x = 0 y = 1 }
+		ValkyrieMeeleMei = { x = 0 y = 2 }
+		ValkyrieMeeleMei = { x = 1 y = 0 }
+		ValkyrieMeeleMei = { x = 1 y = 1 }
+		ValkyrieMeeleMei = { x = 1 y = 2 }
+		ValkyrieMeeleMei = { x = 2 y = 0 }
+		ValkyrieMeeleMei = { x = 2 y = 1 }
+		ValkyrieMeeleMei = { x = 2 y = 2 }
+
+	}
+}
+division_template = {
+	name = "Bronya"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieArtilleryBronya = { x = 0 y = 0 }
+		ValkyrieArtilleryBronya = { x = 0 y = 1 }
+		ValkyrieArtilleryBronya = { x = 0 y = 2 }
+		ValkyrieArtilleryBronya = { x = 1 y = 0 }
+		ValkyrieArtilleryBronya = { x = 1 y = 1 }
+		ValkyrieArtilleryBronya = { x = 1 y = 2 }
+		ValkyrieArtilleryBronya = { x = 2 y = 0 }
+		ValkyrieArtilleryBronya = { x = 2 y = 1 }
+		ValkyrieArtilleryBronya = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Seele"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieMeeleSeele = { x = 0 y = 0 }
+		ValkyrieMeeleSeele = { x = 0 y = 1 }
+		ValkyrieMeeleSeele = { x = 0 y = 2 }
+		ValkyrieMeeleSeele = { x = 1 y = 0 }
+		ValkyrieMeeleSeele = { x = 1 y = 1 }
+		ValkyrieMeeleSeele = { x = 1 y = 2 }
+		ValkyrieMeeleSeele = { x = 2 y = 0 }
+		ValkyrieMeeleSeele = { x = 2 y = 1 }
+		ValkyrieMeeleSeele = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Theresa"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieComprehensiveTheresa = { x = 0 y = 0 }
+		ValkyrieComprehensiveTheresa = { x = 0 y = 1 }
+		ValkyrieComprehensiveTheresa = { x = 0 y = 2 }
+		ValkyrieComprehensiveTheresa = { x = 1 y = 0 }
+		ValkyrieComprehensiveTheresa = { x = 1 y = 1 }
+		ValkyrieComprehensiveTheresa = { x = 1 y = 2 }
+		ValkyrieComprehensiveTheresa = { x = 2 y = 0 }
+		ValkyrieComprehensiveTheresa = { x = 2 y = 1 }
+		ValkyrieComprehensiveTheresa = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Fuka"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieMeeleFuka = { x = 0 y = 0 }
+		ValkyrieMeeleFuka = { x = 0 y = 1 }
+		ValkyrieMeeleFuka = { x = 0 y = 2 }
+		ValkyrieMeeleFuka = { x = 1 y = 0 }
+		ValkyrieMeeleFuka = { x = 1 y = 1 }
+		ValkyrieMeeleFuka = { x = 1 y = 2 }
+		ValkyrieMeeleFuka = { x = 2 y = 0 }
+		ValkyrieMeeleFuka = { x = 2 y = 1 }
+		ValkyrieMeeleFuka = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Eden"
+	is_locked = no
+	#support = {
+	#	SpecializingHonkaiImpact = 1
+	#}
+	regiments = {
+		ValkyrieComprehensiveEden = { x = 0 y = 0 }
+		ValkyrieComprehensiveEden = { x = 0 y = 1 }
+		ValkyrieComprehensiveEden = { x = 0 y = 2 }
+		ValkyrieComprehensiveEden = { x = 1 y = 0 }
+		ValkyrieComprehensiveEden = { x = 1 y = 1 }
+		ValkyrieComprehensiveEden = { x = 1 y = 2 }
+		ValkyrieComprehensiveEden = { x = 2 y = 0 }
+		ValkyrieComprehensiveEden = { x = 2 y = 1 }
+		ValkyrieComprehensiveEden = { x = 2 y = 2 }
+	}
+}

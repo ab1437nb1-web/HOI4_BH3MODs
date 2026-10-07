@@ -1,0 +1,283 @@
+
+leader_traits = {
+
+	BH3_country_leader_trait = {
+		random = no
+		political_power_factor = 0.5
+		drift_defence_factor = 1
+		political_advisor_cost_factor = -0.5
+		trade_laws_cost_factor = -0.5
+		mobilization_laws_cost_factor = -0.5
+		conscription = 0.02
+		max_command_power = 500
+		command_power_gain_mult = 2
+		high_command_cost_factor = -0.5
+		air_chief_cost_factor = -0.5
+		army_chief_cost_factor = -0.5
+		navy_chief_cost_factor = -0.5
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		fuel_gain_factor = 0.25
+	}
+
+	BH3_trait_idea_CaptainJZ = {
+		random = no
+		experience_gain_army = 0.35
+		experience_gain_army_factor = 0.15
+		army_attack_factor = 0.1
+		army_defence_factor = 0.1
+		org_loss_when_moving = -0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		max_planning = 0.15
+	}
+
+	BH3_trait_idea_NavalCaptainJZ = {
+		random = no
+		experience_gain_navy = 0.35
+		experience_gain_navy_factor = 0.15
+		navy_org_factor = 0.15
+	    naval_speed_factor = 0.15
+        navy_visibility = -0.2
+		navy_max_range_factor = 0.3
+		spotting_chance = 0.3
+		naval_critical_score_chance_factor = 0.15
+	}
+	BH3_trait_idea_DoctorMei = { #人类最后的领导者
+		random = no
+		political_power_gain = 0.2
+		research_speed_factor = -0.15
+		production_speed_buildings_factor = 0.15
+		consumer_goods_factor = -0.1
+		special_project_speed_factor = 0.15
+		scientist_breakthrough_bonus_factor = 0.15
+		BH3_sp_tag_BH3_TheDivineKeys_speed_factor = 0.1
+		BH3_sp_tag_BH3_ValkyrieArmor_speed_factor = 0.1
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		conscription = 0.02
+		army_speed_factor = 0.1
+		supply_consumption_factor = -0.1
+		fuel_gain_factor = 0.1
+	}
+	BH3_trait_idea_Mobius = { #蛇之工坊
+		random = no
+		research_speed_factor = 0.1
+		consumer_goods_expected_value = -0.15
+		production_factory_start_efficiency_factor = 0.15	#基础生产效率
+		production_factory_max_efficiency_factor = 0.15
+		weekly_manpower = -100
+		stability_factor = -0.1
+		army_strength_factor = 0.1
+		production_speed_buildings_factor = 0.55
+		fuel_gain_factor = 0.5
+	}
+	BH3_trait_idea_VillV = { #螺旋工坊的主人
+		random = no
+		research_speed_factor = 0.2
+		production_factory_start_efficiency_factor = 0.1	#基础生产效率
+		production_speed_buildings_factor = 0.15
+		special_project_speed_factor = 0.15
+		scientist_breakthrough_bonus_factor = 0.25
+		BH3_sp_tag_BH3_TheDivineKeys_speed_factor = 0.15
+		BH3_sp_tag_BH3_ValkyrieArmor_Doll_speed_factor = 0.1
+		local_resources_factor = 0.15
+		army_fuel_consumption_factor = 0.2
+		air_fuel_consumption_factor = 0.2
+		navy_fuel_consumption_factor = 0.2
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+	}
+	BH3_trait_idea_Elysia = {
+		random = no
+		stability_factor = 0.25
+		stability_weekly = 0.03
+		political_power_gain = 1
+		surrender_limit = 0.25
+		weekly_manpower = 1000
+		resistance_growth = -0.5								#抵抗增长速度
+		opinion_gain_monthly_factor = 0.5
+		army_core_defence_factor = 0.15
+		army_morale_factor = 0.25
+		army_org_factor = 0.2
+		modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.05
+		modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.05
+		modifier_army_sub_unit_category_AllValkyrie_breakthrough_factor = 0.05
+		modifier_army_sub_unit_category_AllValkyrie_speed_factor = 0.05
+	}
+	BH3_trait_idea_Eden = { #黄金歌者
+		random = no
+		stability_factor = 0.15
+		stability_weekly = 0.02
+		war_support_factor = 0.15
+		war_support_weekly = 0.02
+		political_power_factor = 0.1
+		consumer_goods_factor = 0.1
+		experience_loss_factor = -0.15
+		mobilization_speed = 0.25
+		opinion_gain_monthly_factor = 0.5
+		non_core_manpower = 0.15
+		conscription_factor = 0.25
+		weekly_manpower = 200
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.15
+		production_factory_efficiency_gain_factor = 0.05
+		production_factory_start_efficiency_factor = 0.1
+		production_factory_max_efficiency_factor = 0.05
+		local_resources_factor = 0.1
+	}
+	BH3_trait_idea_ChangGuang = {
+		random = no
+		research_speed_factor = 0.2
+		industrial_capacity_factory = 0.1
+		modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_speed_factor = 0.15
+		equipment_bonus = {
+			BH3_ValkyrieArmor_classis = {
+				armor_value = 0.15
+				instant = yes
+			}
+		}
+	}
+	BH3_trait_idea_Einstein = { #逆熵统领
+		random = no
+		political_power_factor = 0.1
+		research_speed_factor = 0.25
+		industrial_capacity_factory = 0.25
+		production_factory_efficiency_gain_factor = 0.15
+		production_factory_start_efficiency_factor = 0.15
+		production_factory_max_efficiency_factor = 0.25
+	}
+	BH3_trait_idea_Tesla = { #逆熵的革新领袖
+		random = no
+		research_speed_factor = 0.15
+		production_speed_buildings_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		experience_gain_army = 0.03
+		experience_gain_air = 0.03
+		experience_gain_navy = 0.03
+		supply_factor = 0.1
+		supply_node_range = 0.1
+		out_of_supply_factor = -0.1
+		attrition = -0.05
+		modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.1
+		modifier_army_sub_unit_category_AllValkyrie_breakthrough_factor = 0.1
+		modifier_army_sub_unit_category_AllValkyrie_speed_factor = 0.1
+	}
+	BH3_trait_idea_Bronya = { #Cyberangel
+		random = no
+		research_speed_factor = 0.1
+		production_speed_buildings_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.1
+		max_command_power = 50
+		planning_speed = 0.25
+		max_planning = 0.25
+		army_attack_factor = 0.5
+		naval_damage_factor = 0.5
+		air_attack_factor = 0.5
+		army_fuel_consumption_factor = 0.5
+		air_fuel_consumption_factor = 0.5
+		navy_fuel_consumption_factor = 0.5
+	}
+	BH3_trait_idea_TheresaMars = {
+		random = no
+		stability_factor = 0.1
+		conscription = 0.01
+		war_support_factor = -0.1
+		army_morale_factor = 0.05
+		planning_speed = -0.3
+		max_planning = -0.3
+		army_strength_factor = 0.1
+		army_speed_factor = 0.1
+		army_org_factor = 0.05
+		army_attack_factor = 0.1
+		army_core_attack_factor = 0.15
+		army_defence_factor = 0.1
+		experience_gain_army = 0.25
+		experience_gain_army_factor = 0.2
+		experience_gain_air = 0.1
+		experience_gain_air_factor = 0.1
+		experience_gain_navy = 0.1
+		experience_gain_navy_factor = 0.15
+		experience_loss_factor = -0.1
+	}
+
+	BH3_trait_idea_TheresaStarlitAstrologos = { #智珠在握,贤名无双
+		random = no
+		air_accidents_factor = -0.35
+		air_night_penalty = -0.35
+		air_weather_penalty = -0.35
+		air_ace_generation_chance_factor = 0.15
+		air_intercept_efficiency = 0.15
+		army_bonus_air_superiority_factor = 0.15
+		air_superiority_efficiency = 0.15
+		air_cas_efficiency = 0.15
+		ground_attack_factor = 0.1
+		experience_gain_air = 0.35
+		air_cas_present_factor = 0.15
+	}
+	BH3_trait_idea_TheresaLunar = { #逾越命运的告白
+		random = no
+		political_power_gain = -0.15
+		experience_gain_army = 0.05
+		experience_gain_army_factor = 0.15
+		attrition = -0.05
+		army_attack_factor = 0.05
+		land_night_attack = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.15
+		org_loss_at_low_org_factor = -0.1
+		army_strength_factor = 0.1
+		coordination_bonus = 0.1
+		combat_width_factor = -0.1
+		planning_speed = -0.15
+	}
+
+	BH3_trait_idea_Fuka = {
+		random = no
+		land_doctrine_cost_factor = -0.25
+		naval_doctrine_cost_factor = -0.25
+		air_doctrine_cost_factor = -0.25
+		army_attack_factor = 0.05
+		army_defence_factor = 0.15
+		experience_gain_army = 0.05
+		experience_gain_air = 0.05
+		experience_gain_navy = 0.05
+		max_command_power = 150
+		max_dig_in = 0.5
+	}
+	BH3_trait_idea_Durandal = { #不灭星锚
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.1
+		army_org_factor = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.15
+		planning_speed = 0.1
+		experience_gain_army = 0.05
+		modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_defence_factor = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_breakthrough_factor = 0.15
+		modifier_army_sub_unit_category_AllValkyrie_speed_factor = 0.15
+	}
+	BH3_trait_idea_Rita = { #阴影中的舞者
+		random = no
+		agency_upgrade_time = -0.15
+		operation_cost = -0.5										#行动花费
+		operation_infiltrate_outcome = 0.5							#渗透效率
+		operation_outcome = 0.5										#行动效率
+		own_operative_capture_chance_factor = -0.8					#我方特工被捕几率
+		enemy_operative_capture_chance_factor = 0.8					#敌方特工被捕几率
+		intelligence_agency_defense = 5								#反间谍
+		operative_slot = 2											#特工槽位
+		experience_gain_army = 0.05
+
+		generate_wargoal_tension = -1								#制造战争目标的紧张度限制
+		justify_war_goal_time = -0.8 								#正当化战争目标所需时间
+		send_volunteer_size = 24
+		modifier_army_sub_unit_category_AllValkyrie_attack_factor = 0.05
+		special_forces_attack_factor = 0.15
+		special_forces_defence_factor = 0.15
+		special_forces_min = 36
+	}
+}

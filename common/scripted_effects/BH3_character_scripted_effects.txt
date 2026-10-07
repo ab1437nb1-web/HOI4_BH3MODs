@@ -1,0 +1,1521 @@
+########## 提升女武神特质，给战力、换头像、触发事件等
+BH3_Character_Portraits_Change = {
+
+	every_possible_country = {
+		if = {
+			limit = { has_country_flag = BH3_Valkyrie_Score_System_on }
+			######### 左侧集团军头像无法及时更新，只有切换集团军使才会刷新头像
+			meta_effect = {
+				text = {
+					
+					#######################################
+					##############  琪亚娜  ###############
+					#######################################
+					BH3_Character_KianaKaslana = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_a 
+								NOT = { has_character_flag = BH3_Character_KianaKaslana_b2a }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_KianaKaslana_img = 11 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Kiana_VoidDrifter
+										small = GFX_BH3_unit_leader_Kiana_VoidDrifter_small 
+									} 
+								} 
+							}
+							set_character_flag = BH3_Character_KianaKaslana_b2a
+							
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a1 = attack_level }
+							multiply_temp_variable = { BH3_Character_a1 = 50 }
+							add_to_temp_variable = { BH3_Character_b1 = defense_level }
+							multiply_temp_variable = { BH3_Character_b1 = 40 }
+							add_to_temp_variable = { BH3_Character_a1 = BH3_Character_b1 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^0 = BH3_Character_a1 }
+
+							#晋升事件,character范围无法识别country_flag
+							unit_leader_event = BH3_Character_event.10
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_KianaKaslana_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_KianaKaslana_img = 12 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Kiana_KnightMoonbeam
+										small = GFX_BH3_unit_leader_Kiana_KnightMoonbeam_small 
+									} 
+								} 
+							}
+							set_character_flag = BH3_Character_KianaKaslana_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a1 = attack_level }
+							multiply_temp_variable = { BH3_Character_a1 = 100 }
+							add_to_temp_variable = { BH3_Character_b1 = defense_level }
+							multiply_temp_variable = { BH3_Character_b1 = 80 }
+							add_to_temp_variable = { BH3_Character_a1 = BH3_Character_b1 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^0 = BH3_Character_a1 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.11 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_KianaKaslana_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_KianaKaslana_img = 13 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Kiana_HerrscherofVoid2
+										small = GFX_BH3_unit_leader_Kiana_HerrscherofVoid2_small 
+									} 
+								} 
+							}
+							set_character_flag = BH3_Character_KianaKaslana_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a1 = attack_level }
+							multiply_temp_variable = { BH3_Character_a1 = 200 }
+							add_to_temp_variable = { BH3_Character_b1 = defense_level }
+							multiply_temp_variable = { BH3_Character_b1 = 160 }
+							add_to_temp_variable = { BH3_Character_a1 = BH3_Character_b1 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^0 = BH3_Character_a1 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.12 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_KianaKaslana_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_KianaKaslana_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_KianaKaslana_img = 14 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion
+										small = GFX_BH3_unit_leader_Kiana_HerrscherofFlamescion_small 
+									} 
+								} 
+							}
+							set_character_flag = BH3_Character_KianaKaslana_ss2sss
+							
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a1 = attack_level }
+							multiply_temp_variable = { BH3_Character_a1 = 400 }
+							add_to_temp_variable = { BH3_Character_b1 = defense_level }
+							multiply_temp_variable = { BH3_Character_b1 = 320 }
+							add_to_temp_variable = { BH3_Character_a1 = BH3_Character_b1 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^0 = BH3_Character_a1 }
+
+							#晋升事件，增加得分
+							unit_leader_event = BH3_Character_event.13 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					###############  芽衣  ###############
+					########################################
+					BH3_Character_RaidenMei = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_a 
+								NOT = { has_character_flag = BH3_Character_RaidenMei_b2a }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RaidenMei_img = 21 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Mei_StrikerFulminata
+										small = GFX_BH3_unit_leader_Mei_StrikerFulminata_small 
+									} 
+								}
+							} 
+							set_character_flag = BH3_Character_RaidenMei_b2a
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a2 = attack_level }
+							multiply_temp_variable = { BH3_Character_a2 = 50 }
+							add_to_temp_variable = { BH3_Character_b2 = defense_level }
+							multiply_temp_variable = { BH3_Character_b2 = 40 }
+							add_to_temp_variable = { BH3_Character_a2 = BH3_Character_b2 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^1 = BH3_Character_a2 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.20 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_RaidenMei_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RaidenMei_img = 22 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Mei_DanzaiSpectramancer
+										small = GFX_BH3_unit_leader_Mei_DanzaiSpectramancer_small 
+									} 
+								}
+							} 
+							set_character_flag = BH3_Character_RaidenMei_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a2 = attack_level }
+							multiply_temp_variable = { BH3_Character_a2 = 100 }
+							add_to_temp_variable = { BH3_Character_b2 = defense_level }
+							multiply_temp_variable = { BH3_Character_b2 = 80 }
+							add_to_temp_variable = { BH3_Character_a2 = BH3_Character_b2 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^1 = BH3_Character_a2 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.21 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_RaidenMei_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RaidenMei_img = 23 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Mei_DanzaiSpectramancer2
+										small = GFX_BH3_unit_leader_Mei_DanzaiSpectramancer2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_RaidenMei_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a2 = attack_level }
+							multiply_temp_variable = { BH3_Character_a2 = 200 }
+							add_to_temp_variable = { BH3_Character_b2 = defense_level }
+							multiply_temp_variable = { BH3_Character_b2 = 160 }
+							add_to_temp_variable = { BH3_Character_a2 = BH3_Character_b2 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^1 = BH3_Character_a2 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.22 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_RaidenMei_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RaidenMei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RaidenMei_img = 24 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Mei_HerrscherofThunder
+										small = GFX_BH3_unit_leader_Mei_HerrscherofThunder_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_RaidenMei_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a2 = attack_level }
+							multiply_temp_variable = { BH3_Character_a2 = 400 }
+							add_to_temp_variable = { BH3_Character_b2 = defense_level }
+							multiply_temp_variable = { BH3_Character_b2 = 320 }
+							add_to_temp_variable = { BH3_Character_a2 = BH3_Character_b2 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^1 = BH3_Character_a2 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.23 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					###############  布洛妮娅  ###############
+					########################################
+					BH3_Character_BronyaZaych = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_a 
+								NOT = { has_character_flag = BH3_Character_BronyaZaych_b2a }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BronyaZaych_img = 31 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Bronya_YamabukiArmor
+										small = GFX_BH3_unit_leader_Bronya_YamabukiArmor_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BronyaZaych_b2a
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a3 = attack_level }
+							multiply_temp_variable = { BH3_Character_a3 = 50 }
+							add_to_temp_variable = { BH3_Character_b3 = defense_level }
+							multiply_temp_variable = { BH3_Character_b3 = 40 }
+							add_to_temp_variable = { BH3_Character_a3 = BH3_Character_b3 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^2 = BH3_Character_a3 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.30 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_BronyaZaych_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BronyaZaych_img = 32 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Bronya_BlackNucleus
+										small = GFX_BH3_unit_leader_Bronya_BlackNucleus_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BronyaZaych_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a3 = attack_level }
+							multiply_temp_variable = { BH3_Character_a3 = 100 }
+							add_to_temp_variable = { BH3_Character_b3 = defense_level }
+							multiply_temp_variable = { BH3_Character_b3 = 80 }
+							add_to_temp_variable = { BH3_Character_a3 = BH3_Character_b3 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^2 = BH3_Character_a3 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.31 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_BronyaZaych_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BronyaZaych_img = 33 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Bronya_DimensionBreaker
+										small = GFX_BH3_unit_leader_Bronya_DimensionBreaker_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BronyaZaych_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a3 = attack_level }
+							multiply_temp_variable = { BH3_Character_a3 = 200 }
+							add_to_temp_variable = { BH3_Character_b3 = defense_level }
+							multiply_temp_variable = { BH3_Character_b3 = 160 }
+							add_to_temp_variable = { BH3_Character_a3 = BH3_Character_b3 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^2 = BH3_Character_a3 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.32 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_BronyaZaych_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BronyaZaych_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BronyaZaych_img = 34 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Bronya_HerrscherofReason
+										small = GFX_BH3_unit_leader_Bronya_HerrscherofReason_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BronyaZaych_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a3 = attack_level }
+							multiply_temp_variable = { BH3_Character_a3 = 400 }
+							add_to_temp_variable = { BH3_Character_b3 = defense_level }
+							multiply_temp_variable = { BH3_Character_b3 = 320 }
+							add_to_temp_variable = { BH3_Character_a3 = BH3_Character_b3 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^2 = BH3_Character_a3 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.33 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					###############  希儿  ###############
+					########################################
+					BH3_Character_SeeleVollerei = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_SeeleVollerei_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_SeeleVollerei_img = 41 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Seele_StygianNymph
+										small = GFX_BH3_unit_leader_Seele_StygianNymph_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_SeeleVollerei_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a4 = attack_level }
+							multiply_temp_variable = { BH3_Character_a4 = 150 }
+							add_to_temp_variable = { BH3_Character_b4 = defense_level }
+							multiply_temp_variable = { BH3_Character_b4 = 120 }
+							add_to_temp_variable = { BH3_Character_a4 = BH3_Character_b4 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^3 = BH3_Character_a4 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.41 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_SeeleVollerei_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_SeeleVollerei_img = 42 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Seele_StygianNymph2
+										small = GFX_BH3_unit_leader_Seele_StygianNymph2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_SeeleVollerei_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a4 = attack_level }
+							multiply_temp_variable = { BH3_Character_a4 = 200 }
+							add_to_temp_variable = { BH3_Character_b4 = defense_level }
+							multiply_temp_variable = { BH3_Character_b4 = 160 }
+							add_to_temp_variable = { BH3_Character_a4 = BH3_Character_b4 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^3 = BH3_Character_a4 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.42 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_SeeleVollerei_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_SeeleVollerei_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_SeeleVollerei_img = 43 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Seele_HerrscherofRebirth
+										small = GFX_BH3_unit_leader_Seele_HerrscherofRebirth_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_SeeleVollerei_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a4 = attack_level }
+							multiply_temp_variable = { BH3_Character_a4 = 400 }
+							add_to_temp_variable = { BH3_Character_b4 = defense_level }
+							multiply_temp_variable = { BH3_Character_b4 = 320 }
+							add_to_temp_variable = { BH3_Character_a4 = BH3_Character_b4 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^3 = BH3_Character_a4 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.43 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					###############  黑希  ###############
+					########################################
+					BH3_Character_SeeleVollereiBlack = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_SeeleVollereiBlack_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_SeeleVollereiBlack_img = 51 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Seele_StarchasmNyx
+										small = GFX_BH3_unit_leader_Seele_StarchasmNyx_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_SeeleVollereiBlack_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a5 = attack_level }
+							multiply_temp_variable = { BH3_Character_a5 = 400 }
+							add_to_temp_variable = { BH3_Character_b5 = defense_level }
+							multiply_temp_variable = { BH3_Character_b5 = 320 }
+							add_to_temp_variable = { BH3_Character_a5 = BH3_Character_b5 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^4 = BH3_Character_a5 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.52 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_SeeleVollereiBlack_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_SeeleVollereiBlack_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_SeeleVollereiBlack_img = 52 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Seele_StarchasmNyx2
+										small = GFX_BH3_unit_leader_Seele_StarchasmNyx2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_SeeleVollereiBlack_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a5 = attack_level }
+							multiply_temp_variable = { BH3_Character_a5 = 400 }
+							add_to_temp_variable = { BH3_Character_b5 = defense_level }
+							multiply_temp_variable = { BH3_Character_b5 = 320 }
+							add_to_temp_variable = { BH3_Character_a5 = BH3_Character_b5 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^4 = BH3_Character_a5 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.53 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					#########   德丽莎·阿波卡利斯  #########
+					########################################
+					BH3_Character_TheresaApocalypse = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_TheresaApocalyps_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaApocalypse_img = 61 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_VioletExecuter
+										small = GFX_BH3_unit_leader_Theresa_Bishop_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_TheresaApocalyps_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a6 = attack_level }
+							multiply_temp_variable = { BH3_Character_a6 = 150 }
+							add_to_temp_variable = { BH3_Character_b6 = defense_level }
+							multiply_temp_variable = { BH3_Character_b6 = 120 }
+							add_to_temp_variable = { BH3_Character_a6 = BH3_Character_b6 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^5 = BH3_Character_a6 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.61 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_TheresaApocalyps_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaApocalypse_img = 62 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_TwilightPaladin
+										small = GFX_BH3_unit_leader_Theresa_Bishop_small 
+									} 
+								}
+							}
+							set_character_flag = BH3_Character_TheresaApocalyps_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a6 = attack_level }
+							multiply_temp_variable = { BH3_Character_a6 = 200 }
+							add_to_temp_variable = { BH3_Character_b6 = defense_level }
+							multiply_temp_variable = { BH3_Character_b6 = 160 }
+							add_to_temp_variable = { BH3_Character_a6 = BH3_Character_b6 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^5 = BH3_Character_a6 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.62 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_TheresaApocalyps_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaApocalypse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaApocalypse_img = 63 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_Bishop
+										small = GFX_BH3_unit_leader_Theresa_Bishop_small 
+									} 
+								}
+							}
+							set_character_flag = BH3_Character_TheresaApocalyps_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a6 = attack_level }
+							multiply_temp_variable = { BH3_Character_a6 = 400 }
+							add_to_temp_variable = { BH3_Character_b6 = defense_level }
+							multiply_temp_variable = { BH3_Character_b6 = 320 }
+							add_to_temp_variable = { BH3_Character_a6 = BH3_Character_b6 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^5 = BH3_Character_a6 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.63 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					################  月下  ################
+					########################################
+					BH3_Character_TheresaLunar = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_TheresaLunar_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaLunar_img = 71 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_LunaKindred2
+										small = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_small 
+									} 
+								}
+							} 
+							set_character_flag = BH3_Character_TheresaLunar_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a7 = attack_level }
+							multiply_temp_variable = { BH3_Character_a7 = 150 }
+							add_to_temp_variable = { BH3_Character_b7 = defense_level }
+							multiply_temp_variable = { BH3_Character_b7 = 120 }
+							add_to_temp_variable = { BH3_Character_a7 = BH3_Character_b7 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^6 = BH3_Character_a7 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.71 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_TheresaLunar_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaLunar_img = 72 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove
+										small = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_TheresaLunar_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a7 = attack_level }
+							multiply_temp_variable = { BH3_Character_a7 = 200 }
+							add_to_temp_variable = { BH3_Character_b7 = defense_level }
+							multiply_temp_variable = { BH3_Character_b7 = 160 }
+							add_to_temp_variable = { BH3_Character_a7 = BH3_Character_b7 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^6 = BH3_Character_a7 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.72 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_TheresaLunar_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaLunar_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaLunar_img = 73 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove2
+										small = GFX_BH3_unit_leader_Theresa_LunarVowCrimsonLove2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_TheresaLunar_ss2sss
+							
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a7 = attack_level }
+							multiply_temp_variable = { BH3_Character_a7 = 400 }
+							add_to_temp_variable = { BH3_Character_b7 = defense_level }
+							multiply_temp_variable = { BH3_Character_b7 = 320 }
+							add_to_temp_variable = { BH3_Character_a7 = BH3_Character_b7 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^6 = BH3_Character_a7 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.73 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+					########################################
+					################  观星  ################
+					########################################
+					BH3_Character_TheresaStarlitAstrologos = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_TheresaStarlitAstrologos_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_TheresaStarlitAstrologos_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_TheresaStarlitAstrologos_img = 81 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Theresa_StarlitAstrologos2
+										small = GFX_BH3_unit_leader_Theresa_StarlitAstrologos2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_TheresaStarlitAstrologos_a2s
+		
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a8 = attack_level }
+							multiply_temp_variable = { BH3_Character_a8 = 150 }
+							add_to_temp_variable = { BH3_Character_b8 = defense_level }
+							multiply_temp_variable = { BH3_Character_b8 = 120 }
+							add_to_temp_variable = { BH3_Character_a8 = BH3_Character_b8 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^7 = BH3_Character_a8 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.81 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_TheresaStarlitAstrologos_s2ss }
+							}
+							set_character_flag = BH3_Character_TheresaStarlitAstrologos_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a8 = attack_level }
+							multiply_temp_variable = { BH3_Character_a8 = 200 }
+							add_to_temp_variable = { BH3_Character_b8 = defense_level }
+							multiply_temp_variable = { BH3_Character_b8 = 160 }
+							add_to_temp_variable = { BH3_Character_a8 = BH3_Character_b8 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^7 = BH3_Character_a8 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.82 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_TheresaStarlitAstrologos_ss2sss }
+							}
+							set_character_flag = BH3_Character_TheresaStarlitAstrologos_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a8 = attack_level }
+							multiply_temp_variable = { BH3_Character_a8 = 400 }
+							add_to_temp_variable = { BH3_Character_b8 = defense_level }
+							multiply_temp_variable = { BH3_Character_b8 = 320 }
+							add_to_temp_variable = { BH3_Character_a8 = BH3_Character_b8 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^7 = BH3_Character_a8 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.83 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					################  符华  ################
+					########################################
+					BH3_Character_Fuka = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_Fuka_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_Fuka_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_Fuka_img = 91 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Fuka_ShadowKnight
+										small = GFX_BH3_unit_leader_Fuka_AzureEmpyrea_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_Fuka_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a9 = attack_level }
+							multiply_temp_variable = { BH3_Character_a9 = 150 }
+							add_to_temp_variable = { BH3_Character_b9 = defense_level }
+							multiply_temp_variable = { BH3_Character_b9 = 120 }
+							add_to_temp_variable = { BH3_Character_a9 = BH3_Character_b9 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^8 = BH3_Character_a9 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.91 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_Fuka_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_Fuka_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_Fuka_img = 92 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Fuka_AzureEmpyrea
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_Fuka_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a9 = attack_level }
+							multiply_temp_variable = { BH3_Character_a9 = 200 }
+							add_to_temp_variable = { BH3_Character_b9 = defense_level }
+							multiply_temp_variable = { BH3_Character_b9 = 160 }
+							add_to_temp_variable = { BH3_Character_a9 = BH3_Character_b9 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^8 = BH3_Character_a9 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.92 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_Fuka_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_Fuka_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_Fuka_img = 93 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Fuka_FenghuangofVicissitudes
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_Fuka_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a9 = attack_level }
+							multiply_temp_variable = { BH3_Character_a9 = 400 }
+							add_to_temp_variable = { BH3_Character_b9 = defense_level }
+							multiply_temp_variable = { BH3_Character_b9 = 320 }
+							add_to_temp_variable = { BH3_Character_a9 = BH3_Character_b9 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^8 = BH3_Character_a9 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.93 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					################  幽兰戴尔  ################
+					########################################
+					BH3_Character_BiankaDurandalAtaegina = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_BiankaDurandalAtaegina_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 101 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Durandal_BrightKnightExcelsis
+										small = GFX_BH3_unit_leader_Durandal_DeaAnchora_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BiankaDurandalAtaegina_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a10 = attack_level }
+							multiply_temp_variable = { BH3_Character_a10 = 150 }
+							add_to_temp_variable = { BH3_Character_b10 = defense_level }
+							multiply_temp_variable = { BH3_Character_b10 = 120 }
+							add_to_temp_variable = { BH3_Character_a10 = BH3_Character_b10 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^9 = BH3_Character_a10 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.101 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_BiankaDurandalAtaegina_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 102 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Durandal_DeaAnchora
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BiankaDurandalAtaegina_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a10 = attack_level }
+							multiply_temp_variable = { BH3_Character_a10 = 200 }
+							add_to_temp_variable = { BH3_Character_b10 = defense_level }
+							multiply_temp_variable = { BH3_Character_b10 = 160 }
+							add_to_temp_variable = { BH3_Character_a10 = BH3_Character_b10 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^9 = BH3_Character_a10 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.102 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_BiankaDurandalAtaegina_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_BiankaDurandalAtaegina_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_BiankaDurandalAtaegina_img = 103 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Durandal_PalatinusEquinox
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_BiankaDurandalAtaegina_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a10 = attack_level }
+							multiply_temp_variable = { BH3_Character_a10 = 400 }
+							add_to_temp_variable = { BH3_Character_b10 = defense_level }
+							multiply_temp_variable = { BH3_Character_b10 = 320 }
+							add_to_temp_variable = { BH3_Character_a10 = BH3_Character_b10 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^9 = BH3_Character_a10 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.103 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					################  丽塔  ################
+					########################################
+					BH3_Character_RitaRossweisse = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_RitaRossweisse_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RitaRossweisse_img = 111 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Rita_ArgentKnightArtemis
+										small = GFX_BH3_unit_leader_Rita_ArgentKnightArtemis_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_RitaRossweisse_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a11 = attack_level }
+							multiply_temp_variable = { BH3_Character_a11 = 150 }
+							add_to_temp_variable = { BH3_Character_b11 = defense_level }
+							multiply_temp_variable = { BH3_Character_b11 = 120 }
+							add_to_temp_variable = { BH3_Character_a11 = BH3_Character_b11 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^10 = BH3_Character_a11 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.111 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_RitaRossweisse_s2ss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RitaRossweisse_img = 112 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Rita_SpinaAstera
+										small = GFX_BH3_unit_leader_Rita_SpinaAstera_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_RitaRossweisse_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a11 = attack_level }
+							multiply_temp_variable = { BH3_Character_a11 = 200 }
+							add_to_temp_variable = { BH3_Character_b11 = defense_level }
+							multiply_temp_variable = { BH3_Character_b11 = 160 }
+							add_to_temp_variable = { BH3_Character_a11 = BH3_Character_b11 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^10 = BH3_Character_a11 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.112 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_RitaRossweisse_ss2sss }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_RitaRossweisse_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_RitaRossweisse_img = 113 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Rita_SpinaAstera2
+										small = GFX_BH3_unit_leader_Rita_SpinaAstera2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_RitaRossweisse_ss2sss
+							
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a11 = attack_level }
+							multiply_temp_variable = { BH3_Character_a11 = 400 }
+							add_to_temp_variable = { BH3_Character_b11 = defense_level }
+							multiply_temp_variable = { BH3_Character_b11 = 320 }
+							add_to_temp_variable = { BH3_Character_a11 = BH3_Character_b11 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^10 = BH3_Character_a11 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.113 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+
+					########################################
+					################  Eden  ################
+					########################################
+					BH3_Character_Eden = {
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_s 
+								NOT = { has_character_flag = BH3_Character_Eden_a2s }
+							}
+							if = {
+								limit = { NOT = { PREV = { has_country_flag = BH3_cultivate_decision_window_Eden_img_locked_flag } } }
+								set_variable = { PREV.BH3_cultivate_decision_window_Eden_img = 121 }
+								set_portraits = { 
+									army = {
+										large = GFX_BH3_unit_leader_Eden_GoldenDiva2
+										small = GFX_BH3_unit_leader_Eden_GoldenDiva2_small 
+									} 
+								} 
+							} 
+							set_character_flag = BH3_Character_Eden_a2s
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a12 = attack_level }
+							multiply_temp_variable = { BH3_Character_a12 = 150 }
+							add_to_temp_variable = { BH3_Character_b12 = defense_level }
+							multiply_temp_variable = { BH3_Character_b12 = 120 }
+							add_to_temp_variable = { BH3_Character_a12 = BH3_Character_b12 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^11 = BH3_Character_a12 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.121 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_ss
+								NOT = { has_character_flag = BH3_Character_Eden_s2ss }
+							}
+							set_character_flag = BH3_Character_Eden_s2ss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a12 = attack_level }
+							multiply_temp_variable = { BH3_Character_a12 = 200 }
+							add_to_temp_variable = { BH3_Character_b12 = defense_level }
+							multiply_temp_variable = { BH3_Character_b12 = 160 }
+							add_to_temp_variable = { BH3_Character_a12 = BH3_Character_b12 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^11 = BH3_Character_a12 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.122 
+						}
+						if = { 
+							limit = { 
+								has_trait = BH3_traits_valkyrie_sss
+								NOT = { has_character_flag = BH3_Character_Eden_ss2sss }
+							}
+							set_character_flag = BH3_Character_Eden_ss2sss
+
+							#攻击和防御计算将领得分
+							set_temp_variable = { BH3_Character_a12 = attack_level }
+							multiply_temp_variable = { BH3_Character_a12 = 400 }
+							add_to_temp_variable = { BH3_Character_b12 = defense_level }
+							multiply_temp_variable = { BH3_Character_b12 = 320 }
+							add_to_temp_variable = { BH3_Character_a12 = BH3_Character_b12 }
+							add_to_variable = { PREV.BH3_Country_Strongest_Valkyire_Array^11 = BH3_Character_a12 }
+
+							#晋升事件
+							unit_leader_event = BH3_Character_event.123 
+							add_to_variable = { global.BH3_World_SSS_Valkyire_num = 1 }
+						}
+					}
+				}
+				log = ""
+			}
+		}
+
+	}
+}
+
+######## 计算每个国家最强女武神，并加入世界最强女武神比选
+BH3_Country_Strongest_Valkyrie_Solve = {
+	###### 清除标记
+	every_character = {
+		limit = { has_character_flag = BH3_Character_is_CountryStrongestValkyrie }
+		clr_character_flag = BH3_Character_is_CountryStrongestValkyrie
+	}
+	####### 比较本国最强女武神
+	find_highest_in_array = {
+		array = BH3_Country_Strongest_Valkyire_Array
+		index = i
+		value = v
+	}
+	set_variable = { BH3_Country_Strongest_Valkyire_index = i }
+	set_variable = { BH3_Country_Strongest_Valkyire_Score = v }
+
+	if = { #琪亚娜
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 0 } }
+		meta_effect = {
+			text = {
+				BH3_Character_KianaKaslana = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #芽衣
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 1 } }
+		meta_effect = {
+			text = {
+				BH3_Character_RaidenMei = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #布洛妮娅
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 2 } }
+		meta_effect = {
+			text = {
+				BH3_Character_BronyaZaych = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}	
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #白希
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 3 } }
+		meta_effect = {
+			text = {
+				BH3_Character_SeeleVollerei = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #黑希
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 4 } }
+		meta_effect = {
+			text = {
+				BH3_Character_SeeleVollereiBlack = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #德丽莎
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 5 } }
+		meta_effect = {
+			text = {
+				BH3_Character_TheresaApocalypse = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #月下
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 6 } }
+		meta_effect = {
+			text = {
+				BH3_Character_TheresaLunar = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #观星
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 7 } }
+		meta_effect = {
+			text = {
+				BH3_Character_TheresaStarlitAstrologos = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}					
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #符华
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 8 } }
+		meta_effect = {
+			text = {
+				BH3_Character_Fuka = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #幽兰戴尔
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 9 } }
+		meta_effect = {
+			text = {
+				BH3_Character_BiankaDurandalAtaegina = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #丽塔
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 10 } }
+		meta_effect = {
+			text = {
+				BH3_Character_RitaRossweisse = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	if = { #伊甸
+		limit = { check_variable = { BH3_Country_Strongest_Valkyire_index = 11 } }
+		meta_effect = {
+			text = {
+				BH3_Character_Eden = {
+					set_character_flag = BH3_Character_is_CountryStrongestValkyrie
+					set_variable = { PREV.BH3_Country_Strongest_Valkyire = THIS }
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Array
+						value = THIS
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Score_Array
+						value = PREV.BH3_Country_Strongest_Valkyire_Array^PREV.BH3_Country_Strongest_Valkyire_index
+					}
+					add_to_array = {
+						array = global.BH3_World_Strongest_Valkyire_Country_Array
+						value = PREV
+					}
+				}
+			}
+			log = ""
+		}
+	}
+	####### 移除本国最强女武神特质并重新添加
+	every_character = {
+		limit = { has_trait = BH3_trait_CountryStrongestValkyrie }
+		remove_trait = { trait = BH3_trait_CountryStrongestValkyrie }
+	}
+	every_character = {
+		limit = { has_character_flag = BH3_Character_is_CountryStrongestValkyrie }
+		add_trait = { trait = BH3_trait_CountryStrongestValkyrie }
+	}
+}
+
+######## 计算全球最强女武神
+BH3_World_Strongest_Valkyrie_Solve  = {
+	find_highest_in_array = {
+		array = global.BH3_World_Strongest_Valkyire_Score_Array
+		value = v
+		index = i
+	}
+	set_variable = { global.BH3_World_Strongest_Valkyire_Score_Temp = v }
+	set_variable = { global.BH3_World_Strongest_Valkyire_Score_index = i }
+	for_each_loop = {
+		array = global.BH3_World_Strongest_Valkyire_Array
+		index = i
+		value = v
+		if = {
+			limit = { check_variable = { i = global.BH3_World_Strongest_Valkyire_Score_index } }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Temp = v }
+		}
+	}
+	for_each_loop = {
+		array = global.BH3_World_Strongest_Valkyire_Country_Array
+		index = i
+		value = v
+		if = {
+			limit = { check_variable = { i = global.BH3_World_Strongest_Valkyire_Score_index } }
+			set_variable = { global.BH3_World_Strongest_Valkyire_Country_Temp = v }
+		}
+	}
+	if = {
+		limit = { check_variable = { global.BH3_World_Strongest_Valkyire_Score_Temp > global.BH3_World_Strongest_Valkyire_Score_Temp_Prev } }
+		#移除最强女武神特质并重新添加
+		var:global.BH3_World_Strongest_Valkyire_Country_Temp_Prev = {
+			var:global.BH3_World_Strongest_Valkyire_Temp_Prev = {
+				if = { 
+					limit = { has_trait = BH3_trait_WroldStrongestValkyrie }
+					remove_trait = { trait = BH3_trait_WroldStrongestValkyrie }
+				}
+			}
+		}
+		#加特质
+		var:global.BH3_World_Strongest_Valkyire_Country_Temp = {
+			var:global.BH3_World_Strongest_Valkyire_Temp = {
+				add_trait = { trait = BH3_trait_WroldStrongestValkyrie }
+			}
+		}
+		set_variable = { global.BH3_World_Strongest_Valkyire_Country_Temp_Prev = global.BH3_World_Strongest_Valkyire_Country_Temp }
+		set_variable = { global.BH3_World_Strongest_Valkyire_Temp_Prev = global.BH3_World_Strongest_Valkyire_Temp }
+		set_variable = { global.BH3_World_Strongest_Valkyire_Score_Temp_Prev = global.BH3_World_Strongest_Valkyire_Score_Temp }
+
+		set_variable = { global.BH3_World_Strongest_Valkyire_Country = global.BH3_World_Strongest_Valkyire_Country_Temp }
+		set_variable = { global.BH3_World_Strongest_Valkyire = global.BH3_World_Strongest_Valkyire_Temp }
+		set_variable = { global.BH3_World_Strongest_Valkyire_Score = global.BH3_World_Strongest_Valkyire_Score_Temp }
+	}
+
+	clear_array = global.BH3_World_Strongest_Valkyire_Array
+	clear_array = global.BH3_World_Strongest_Valkyire_Score_Array
+	clear_array = global.BH3_World_Strongest_Valkyire_Country_Array
+}
+
+######## 计算SSS级女武神数量和计算全球总战力
+BH3_Valkyrie_SSS_and_Socore_Solve = {	
+	if = { 
+		limit = { 
+			check_variable = { global.BH3_World_SSS_Valkyire_num > 8 } 
+			NOT = { has_global_flag = BH3_World_SSS_Valkyire_more_than_9 }
+		}
+		set_global_flag = BH3_World_SSS_Valkyire_more_than_9
+	}
+	set_variable = { global.BH3_World_Valkyire_Score = 0 }
+	every_possible_country = { 
+		limit = { has_country_flag = BH3_Hyperion_enabled }
+		for_each_loop = {
+			array = BH3_Country_Strongest_Valkyire_Array
+			value = v
+			add_to_variable = { global.BH3_World_Valkyire_Score = v }
+		}
+	}
+	divide_variable  = { global.BH3_World_Valkyire_Score = 1000 }
+	if = { 
+		limit = { 
+			check_variable = { global.BH3_World_Valkyire_Score > 100 } 
+			NOT = { has_global_flag = BH3_World_Valkyire_Score_more_than_100k }
+		}
+		set_global_flag = BH3_World_Valkyire_Score_more_than_100k
+	}
+}

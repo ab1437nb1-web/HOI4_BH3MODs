@@ -1,0 +1,164 @@
+#############################
+########### MEI ###########
+#############################
+
+########### Mei_CrimsonImpuls ###########
+animation = {
+	name = "Mei_CrimsonImpuls_Idle1_animation"
+	file = "Mei_CrimsonImpuls_Idle1.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_Idle2_animation"
+	file = "Mei_CrimsonImpuls_Idle2.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_Idle3_animation"
+	file = "Mei_CrimsonImpuls_Idle3.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_Idle4_animation"
+	file = "Mei_CrimsonImpuls_Idle4.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_Idle5_animation"
+	file = "Mei_CrimsonImpuls_Idle5.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_MoveFast_animation"
+	file = "Mei_CrimsonImpuls_MoveFast.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_Move_animation"
+	file = "Mei_CrimsonImpuls_Move.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_RightHandAttack1_animation"
+	file = "Mei_CrimsonImpuls_RightHandAttack1.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_RightHandAttack2_animation"
+	file = "Mei_CrimsonImpuls_RightHandAttack2.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_RightHandAttack3_animation"
+	file = "Mei_CrimsonImpuls_RightHandAttack3.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_LeftHandAttack1_animation"
+	file = "Mei_CrimsonImpuls_LeftHandAttack1.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_LeftHandAttack2_animation"
+	file = "Mei_CrimsonImpuls_LeftHandAttack2.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_JumpAttack_animation"
+	file = "Mei_CrimsonImpuls_JumpAttack.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_RotateAttack1_animation"
+	file = "Mei_CrimsonImpuls_RotateAttack1.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_RotateAttack2_animation"
+	file = "Mei_CrimsonImpuls_RotateAttack2.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_DoubleHandAttack1_animation"
+	file = "Mei_CrimsonImpuls_DoubleHandAttack1.anim"
+}
+animation = {
+	name = "Mei_CrimsonImpuls_DoubleHandAttack2_animation"
+	file = "Mei_CrimsonImpuls_DoubleHandAttack2.anim"
+}
+
+########### Mei_StrikerFulminata ###########
+animation = {
+	name = "Mei_StrikerFulminata_Idle1_animation"
+	file = "Mei_StrikerFulminata_Idle1.anim"
+}
+animation = {
+	name = "Mei_StrikerFulminata_Idle2_animation"
+	file = "Mei_StrikerFulminata_Idle2.anim"
+}
+animation = {
+	name = "Mei_StrikerFulminata_Move_animation"
+	file = "Mei_StrikerFulminata_Move.anim"
+}
+animation = {
+	name = "Mei_StrikerFulminata_Attack_animation"
+	file = "Mei_StrikerFulminata_Attack.anim"
+}
+animation = {
+	name = "Mei_StrikerFulminata_AttackLoop_animation"
+	file = "Mei_StrikerFulminata_AttackLoop.anim"
+}
+
+########### Mei_DanzaiSpectramancer ###########
+animation = {
+	name = "Mei_DanzaiSpectramancer_Idle1_animation"
+	file = "Mei_DanzaiSpectramancer_Idle1.anim"
+}
+animation = {
+	name = "Mei_DanzaiSpectramancer_Idle2_animation"
+	file = "Mei_DanzaiSpectramancer_Idle2.anim"
+}
+animation = {
+	name = "Mei_DanzaiSpectramancer_Idle3_animation"
+	file = "Mei_DanzaiSpectramancer_Idle3.anim"
+}
+animation = {
+	name = "Mei_DanzaiSpectramancer_Move_animation"
+	file = "Mei_DanzaiSpectramancer_Move.anim"
+}
+animation = {
+	name = "Mei_DanzaiSpectramancer_Attack_animation"
+	file = "Mei_DanzaiSpectramancer_Attack.anim"
+}
+animation = {
+	name = "Mei_DanzaiSpectramancer_UltraAtk_animation"
+	file = "Mei_DanzaiSpectramancer_UltraAtk.anim"
+}
+
+########### Mei_Captain_Body ###########
+animation = {
+	name = "Mei_Captain_Body_Idle1_animation"
+	file = "Mei_Captain_Body_Idle1.anim"
+}
+animation = {
+	name = "Mei_Captain_Body_Idle2_animation"
+	file = "Mei_Captain_Body_Idle2.anim"
+}
+animation = {
+	name = "Mei_Captain_Body_Move_animation"
+	file = "Mei_Captain_Body_Move.anim"
+}
+animation = {
+	name = "Mei_Captain_Body_Attack1_animation"
+	file = "Mei_Captain_Body_Attack1.anim"
+}
+animation = {
+	name = "Mei_Captain_Body_Attack2_animation"
+	file = "Mei_Captain_Body_Attack2.anim"
+}
+########### Mei_Captain_Skirt ###########
+animation = {
+	name = "Mei_Captain_Skirt_Idle1_animation"
+	file = "Mei_Captain_Skirt_Idle1.anim"
+}
+animation = {
+	name = "Mei_Captain_Skirt_Idle2_animation"
+	file = "Mei_Captain_Skirt_Idle2.anim"
+}
+animation = {
+	name = "Mei_Captain_Skirt_Move_animation"
+	file = "Mei_Captain_Skirt_Move.anim"
+}
+animation = {
+	name = "Mei_Captain_Skirt_Attack1_animation"
+	file = "Mei_Captain_Skirt_Attack1.anim"
+}
+animation = {
+	name = "Mei_Captain_Skirt_Attack2_animation"
+	file = "Mei_Captain_Skirt_Attack2.anim"
+}

@@ -1,0 +1,296 @@
+	
+shared_focus = {
+	id = BHS_more_diwangji1
+	icon = GFX_goal_BH3_disaster
+	x = 18
+	y = 1
+	
+	prerequisite = {}
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = TujinBHS_air2air_equipment_0
+			amount = 2000
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2ground_equipment_0
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2air_equipment_0
+			amount = 1000
+		}
+	}
+}
+
+shared_focus = {
+	id = BHS_Chaotujiji_upgrade
+	icon = GFX_goal_BH3_disaster
+	x = 15
+	y = 1
+	
+	prerequisite = {  }
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.15
+		OR = {
+			has_idea = BHS_level2_idea
+			has_idea = BHS_level3_idea
+			has_idea = BHS_level4_idea
+			has_idea = BHS_level5_idea
+		}
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		set_technology = { Tujin2BHS_Research = 1 }
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Charger-class Honkai Beast\" division_template = \"Charger-class Honkai Beast\"  start_experience_factor = 0.2 "
+				owner = PREV
+				count = 20
+			}	
+		}
+	}
+}
+shared_focus = {
+	id = BHS_more_diwangji2
+	icon = GFX_goal_BH3_disaster
+	x = 18
+	y = 2
+	
+	prerequisite = { focus = BHS_more_diwangji1 }
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.5
+		OR = {
+			has_idea = BHS_level2_idea
+			has_idea = BHS_level3_idea
+			has_idea = BHS_level4_idea
+			has_idea = BHS_level5_idea
+		}
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\"  start_experience_factor = 1 "
+				owner = PREV
+				count = 5
+			}	
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\"  start_experience_factor = 1 "
+				owner = PREV
+				count = 15
+			}	
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2ground_equipment_0
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2air_equipment_0
+			amount = 200
+		}
+	}
+}
+shared_focus = {
+	id = BHS_Shengqishiji_upgrade
+	icon = GFX_goal_BH3_disaster
+	x = 15
+	y = 2
+	
+	prerequisite = { focus = BHS_Chaotujiji_upgrade }
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.3
+		OR = {
+			has_idea = BHS_level3_idea
+			has_idea = BHS_level4_idea
+			has_idea = BHS_level5_idea
+		}
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		set_technology = { Qishi2BHS_Research = 1 }
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Knight-class Honkai Beast\" division_template = \"Knight-class Honkai Beast\"  start_experience_factor = 0.2 "
+				owner = PREV
+				count = 20
+			}	
+		}
+	}
+}
+
+shared_focus = {
+	id = BHS_more_diwangji3
+	icon = GFX_goal_BH3_disaster
+	x = 18
+	y = 3
+	
+	prerequisite = { focus = BHS_more_diwangji2 }
+	mutually_exclusive = { }
+	cost = 20
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.9
+		OR = {
+			has_idea = BHS_level3_idea
+			has_idea = BHS_level4_idea
+			has_idea = BHS_level5_idea
+		}
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\"  start_experience_factor = 1 "
+				owner = PREV
+				count = 8
+			}	
+		}
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\"  start_experience_factor = 1 "
+				owner = PREV
+				count = 20
+			}	
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2ground_equipment_0
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = BeinalesiBHS_air2air_equipment_0
+			amount = 1000
+		}
+	}
+}
+
+shared_focus = {
+	id = BHS_Hejinzhancheji_upgrade
+	icon = GFX_goal_BH3_disaster
+	x = 15
+	y = 3
+	
+	prerequisite = { focus = BHS_Shengqishiji_upgrade }
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.5
+		OR = {
+			has_idea = BHS_level4_idea
+			has_idea = BHS_level5_idea
+		}
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		set_technology = { Zhanche2BHS_Research = 1 }
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Chariot-class Honkai Beast\" division_template = \"Chariot-class Honkai Beast\"  start_experience_factor = 0.2 "
+				owner = PREV
+				count = 60
+			}	
+		}
+	}
+}
+
+shared_focus = {
+	id = BHS_Leishenji_upgrade
+	icon = GFX_goal_BH3_disaster
+	x = 15
+	y = 4
+	
+	prerequisite = { focus = BHS_Hejinzhancheji_upgrade }
+	mutually_exclusive = { }
+	cost = 1
+		ai_will_do = {
+		factor = 1
+	}
+	available = {
+		threat  > 0.8
+		has_idea = BHS_level5_idea
+	}
+	bypass = {
+
+	}
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+	search_filters = { FOCUS_FILTER_HISTORICAL }
+	completion_reward = {
+		set_technology = { Shengdian2BHS_Research = 1 }
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\"  start_experience_factor = 0.6 "
+				owner = PREV
+				count = 40
+			}	
+		}
+	}
+}
+

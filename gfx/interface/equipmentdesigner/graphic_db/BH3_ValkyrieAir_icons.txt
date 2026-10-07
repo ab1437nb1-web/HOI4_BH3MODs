@@ -1,0 +1,225 @@
+default = {
+	BH3_ValkyrieAir_ala = {
+		pool = {
+			icons = {
+				"GFX_Kiana_WhiteComet_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_0_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieAir_ala_0 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_WhiteComet_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_0_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieAir_ala_1 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_VoidDrifter_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_1_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieAir_ala_2 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_KnightMoonbeam_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_2_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieAir_ala_3 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofVoid_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_3_entity"
+			}
+			weight = 100
+		}
+	}
+	BH3_ValkyrieAir_ala_4 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofFlamescion_Research_medium"
+			}
+			models = {
+				"BH3_ValkyrieAir_4_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherVoid_Kiana_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofVoid_Research_medium"
+			}
+			models = {
+				"HerrscherVoidKianaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherVoid_Kiana_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofVoid_Research_medium"
+			}
+			models = {
+				"HerrscherVoidKianaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherThunder_Mei_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Mei_HerrscherofThunder_Research_medium"
+			}
+			models = {
+				"HerrscherThunderMeiAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherThunder_Mei_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Mei_HerrscherofThunder_Research_medium"
+			}
+			models = {
+				"HerrscherThunderMeiAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherFlamescion_Kiana_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofFlamescion_Research_medium"
+			}
+			models = {
+				"HerrscherFlamescionKianaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherFlamescion_Kiana_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Kiana_HerrscherofFlamescion_Research_medium"
+			}
+			models = {
+				"HerrscherFlamescionKianaAir_entity"
+			}
+			weight = 100
+		}
+	}
+
+
+	HerrscherReason_Bronya_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Bronya_HerrscherofReason_Research_medium"
+			}
+			models = {
+				"HerrscherReasonBronyaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherReason_Bronya_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Bronya_HerrscherofReason_Research_medium"
+			}
+			models = {
+				"HerrscherReasonBronyaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherRebirth_Seele_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Seele_HerrscherofRebirth_Research_medium"
+			}
+			models = {
+				"HerrscherRebirthSeeleAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherRebirth_Seele_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Seele_HerrscherofRebirth_Research_medium"
+			}
+			models = {
+				"HerrscherRebirthSeeleAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherHuman_Elysia_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Elysia_HerrscherofHuman_Research_medium"
+			}
+			models = {
+				"HerrscherHumanElysiaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherHuman_Elysia_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Elysia_HerrscherofHuman_Research_medium"
+			}
+			models = {
+				"HerrscherHumanElysiaAir_entity"
+			}
+			weight = 100
+		}
+	}
+
+	HerrscherErosion_Elysia_Air_equipment = {
+		pool = {
+			icons = {
+				"GFX_Elysia_HerrscherofErosion_Research_medium"
+			}
+			models = {
+				"HerrscherErosionElysiaAir_entity"
+			}
+			weight = 100
+		}
+	}
+	HerrscherErosion_Elysia_Air_equipment_0 = {
+		pool = {
+			icons = {
+				"GFX_Elysia_HerrscherofErosion_Research_medium"
+			}
+			models = {
+				"HerrscherErosionElysiaAir_entity"
+			}
+			weight = 100
+		}
+	}
+}

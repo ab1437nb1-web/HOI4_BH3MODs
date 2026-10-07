@@ -1,0 +1,31 @@
+sub_units = {
+	TujinBHS_air2air = {
+		sprite = TujinBHS_air2air
+		priority = 997
+		active = yes
+		type = fighter
+		need = { TujinBHS_air2air_equipment = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 50
+	}
+
+	BeinalesiBHS_air2ground = {
+		sprite = BeinalesiBHS_air2ground
+		priority = 999
+		active = yes
+		type = cas
+		need = { BeinalesiBHS_air2ground_equipment = 1 }
+		categories = { category_cas }
+		land_air_wing_size = 25
+	}
+
+	BeinalesiBHS_air2air = {
+		sprite = BeinalesiBHS_air2air
+		priority = 998
+		active = yes
+		type = heavy_fighter
+		need = { BeinalesiBHS_air2air_equipment = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 25
+	}
+}

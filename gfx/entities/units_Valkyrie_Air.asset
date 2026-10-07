@@ -1,0 +1,76 @@
+#############################
+##### 空中女武神装甲 #######
+#############################
+# 复用陆上女武神模型（mesh 与动画名沿用 units_Valkyrie.asset），仅替换为空军状态：
+# fire / bomb / firebomb / idle / crash / explode
+# 各代 scale 沿用该 mesh 在陆上实体中的比例，勿随意改动。
+
+entity = {
+	name = "BH3_ValkyrieAir_0_entity"
+	pdxmesh = "Kiana_WhiteComet_pdx"
+
+	state = { name = "fire" animation = "RightHandAttack1" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.5 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 0.07
+}
+
+entity = {
+	name = "BH3_ValkyrieAir_1_entity"
+	pdxmesh = "Kiana_VoidDrifter_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.8 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.8 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.5 animation_speed = 0.3 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.2 animation_speed = 0.8 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.2 animation_speed = 0.8 looping = no next_state = "explode" }
+
+	scale = 1
+}
+
+entity = {
+	name = "BH3_ValkyrieAir_2_entity"
+	pdxmesh = "Kiana_KnightMoonbeam_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.3 animation_speed = 0.6 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 4
+}
+
+entity = {
+	name = "BH3_ValkyrieAir_3_entity"
+	pdxmesh = "Kiana_HerrscherofVoid_pdx"
+
+	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.1 animation_speed = 0.5 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "explode" }
+
+	scale = 0.07
+}
+
+entity = {
+	name = "BH3_ValkyrieAir_4_entity"
+	pdxmesh = "Kiana_HerrscherofFlamescion_pdx"
+
+	state = { name = "fire" animation = "Attack" animation_blend_time = 0.1 animation_speed = 1.15 looping = no next_state = "fire" }
+	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "bomb" }
+	state = { name = "firebomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "firebomb" }
+	state = { name = "idle" animation = "Idle1" animation_blend_time = 0.2 animation_speed = 0.8 looping = no next_state = "idle" }
+	state = { name = "crash" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "crash" }
+	state = { name = "explode" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.6 looping = no next_state = "explode" }
+
+	scale = 0.04
+}

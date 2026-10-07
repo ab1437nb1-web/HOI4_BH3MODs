@@ -1,0 +1,29 @@
+########### Bronya_HerrscherofReason ###########
+animation = {
+	name = "Bronya_HerrscherofReason_Idle1_animation"
+	file = "Bronya_HerrscherofReason_Idle1.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Idle2_animation"
+	file = "Bronya_HerrscherofReason_Idle2.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Idle3_animation"
+	file = "Bronya_HerrscherofReason_Idle3.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Move_animation"
+	file = "Bronya_HerrscherofReason_Move.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Attack1_animation"
+	file = "Bronya_HerrscherofReason_Attack1.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Attack2_animation"
+	file = "Bronya_HerrscherofReason_Attack2.anim"
+}
+animation = {
+	name = "Bronya_HerrscherofReason_Fire_animation"
+	file = "Bronya_HerrscherofReason_Fire.anim"
+}

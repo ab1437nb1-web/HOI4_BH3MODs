@@ -1,0 +1,432 @@
+spriteTypes = {
+	#舰桥
+	corneredTileSpriteType = {
+		name = "GFX_BH3_main_menu_bg"
+		textureFile = "gfx/interface/technologies/BH3_Hyperion_Bridge_bg.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_close_btn"
+		texturefile = "gfx/interface/technologies/BH3_close_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_return_btn"
+		texturefile = "gfx/interface/technologies/BH3_return_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_main_menu_item"
+		texturefile = "gfx/interface/technologies/BH3_main_menu_item.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_main_menu_tech"
+		texturefile = "gfx/interface/technologies/BH3_main_menu_tech.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_main_menu_doctrine"
+		texturefile = "gfx/interface/technologies/BH3_main_menu_doctrine.dds"
+	}
+	
+	########## UI ##########
+	corneredTileSpriteType = {
+		name = "GFX_BH3_tech_menu_bg"
+		textureFile = "gfx/interface/technologies/BH3_tech_bg.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_Logo"
+		texturefile = "gfx/interface/technologies/BH3_Logo.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_levelb"
+		texturefile = "gfx/interface/technologies/BH3_tech_levelb.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_levela"
+		texturefile = "gfx/interface/technologies/BH3_tech_levela.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_levels"
+		texturefile = "gfx/interface/technologies/BH3_tech_levels.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_levelss"
+		texturefile = "gfx/interface/technologies/BH3_tech_levelss.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_levelsss"
+		texturefile = "gfx/interface/technologies/BH3_tech_levelsss.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_BH3_confirm_bg"
+		texturefile = "gfx/interface/technologies/BH3_confirm_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_yes_200x50_btn"
+		texturefile = "gfx/interface/technologies/BH3_yes_200x50_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_no_200x50_btn"
+		texturefile = "gfx/interface/technologies/BH3_no_200x50_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_research_progressbar_bg"
+		texturefile = "gfx/interface/technologies/BH3_research_progressbar_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_research_progressbar"
+		texturefile = "gfx/interface/technologies/BH3_research_progressbar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_tech_valkyrie"
+		texturefile = "gfx/interface/technologies/BH3_tech_valkyrie.dds"
+	}
+	
+	########## 分类按钮 ##########
+	spriteType = {
+		name = "GFX_BH3_filter_kiana_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_kiana_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_mei_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_mei_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_bronya_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_bronya_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_seele_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_seele_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_fuka_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_fuka_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_theresa_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_theresa_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_eden_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_eden_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_HerrscherKiana_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_HerrscherKiana_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_HerrscherMei_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_HerrscherMei_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_HerrscherBronya_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_HerrscherBronya_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_HerrscherSeele_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_HerrscherSeele_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_filter_HerrscherElysia_btn"
+		texturefile = "gfx/interface/technologies/BH3_filter_HerrscherElysia_btn.dds"
+	}
+
+	########## 女武神选择按钮 ##########
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_WhiteComet_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_WhiteComet.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_VoidDrifter_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_VoidDrifter.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_KnightMoonbeam_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_KnightMoonbeam.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_CrimsonImpuls_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_CrimsonImpuls.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_StrikerFulminata_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_StrikerFulminata.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_ShadowDash_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_ShadowDash.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_DanzaiSpectramancer_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_DanzaiSpectramancer.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_LightningEmpress_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_LightningEmpress.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_Captain_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_Captain.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Seele_SwallowtailPhantasm_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Seele_SwallowtailPhantasm.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Seele_StygianNymph_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Seele_StygianNymph.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Seele_StarchasmNyx_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Seele_StarchasmNyx.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_ValkyrieChariot_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_ValkyrieChariot.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_YamabukiArmor_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_YamabukiArmor.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_DimensionBreaker_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_DimensionBreaker.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_SilverWingNEX_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_SilverWingN-EX.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Fuka_ShadowKnight_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Fuka_ShadowKnight.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Fuka_AzureEmpyrea_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Fuka_AzureEmpyrea.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Theresa_StarlitAstrologos_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Theresa_StarlitAstrologos.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Theresa_Mars_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Theresa_Mars.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Theresa_LunarVowCrimsonLove_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Theresa_LunarVowCrimsonLove.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Eden_GoldenDiva_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Eden_GoldenDiva.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_HerrscherofVoid_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_HerrscherofVoid.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_HerrscherofFlamescion_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_HerrscherofFlamescion.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Kiana_HerrscherofFinality_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Kiana_HerrscherofFinality.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_HerrscherofThunder_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_HerrscherofThunder.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Mei_HerrscherofOrigin_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Mei_HerrscherofOrigin.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_HerrscherofReason_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_HerrscherofReason.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Bronya_HerrscherofTruth_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Bronya_HerrscherofTruth.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Seele_HerrscherofRebirth_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Seele_HerrscherofRebirth.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_tech_Elysia_HerrscherofHuman_btn"
+		texturefile = "gfx/interface/technologies/BH3_tech_Elysia_HerrscherofHuman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_tech_Uncompleted_btn"
+		texturefile = "gfx/interface/technologies/Uncompleted.dds"
+	}
+
+
+
+
+	########## 作战学说UI ##########
+	corneredTileSpriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_bg_alpha"
+		textureFile = "gfx/interface/technologies/BH3_tech_bg_alpha.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_bg"
+		textureFile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_bg.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_BH3_return_btn"
+		texturefile = "gfx/interface/technologies/BH3_return_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_Arrow"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_Arrow.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_Arrow90"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_Arrow90.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_ArrowSymmetry"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_ArrowSymmetry.dds"
+	}	
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_opp"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_opp.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_0"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_0.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_3"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_4_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_4_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_4_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_4_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_5_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_5_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_5_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_5_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_6_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_6_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_1_6_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_1_6_2.dds"
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_3"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_4_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_4_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_4_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_4_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_5_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_5_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_5_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_5_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_2_6"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_2_6.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_3"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_3.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_4"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_4.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_5_1"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_5_1.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_5_2"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_5_2.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_Valkyrie_Doctrine_3_6"
+		texturefile = "gfx/interface/technologies/Doctrine/BH3_Valkyrie_Doctrine_3_6.dds"
+		noOfFrames = 2
+	}
+}

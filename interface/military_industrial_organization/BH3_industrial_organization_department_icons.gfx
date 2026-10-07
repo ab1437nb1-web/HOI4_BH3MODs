@@ -1,0 +1,162 @@
+spriteTypes = {
+
+	#军工组织——天命赫尔海姆实验室
+	spriteType = {
+		name = "GFX_military_industrial_organization_Schicksal_Herheim_Lab"
+		texturefile = "gfx/interface/military_industrial_organization/BH3_mio_Schicksal_Herheim_Lab.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Schicksal_Herheim_Lab_BG"
+		texturefile = "gfx/interface/military_industrial_organization/BH3_mio_Schicksal_Herheim_Lab_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_military_industrial_organization_BH3_ValkyrieArmor_classis"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_BH3_ValkyrieArmor_classis.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Kiana_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Kiana_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Mei_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Mei_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Bronya_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Bronya_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Seele_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Seele_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Fuka_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Fuka_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Theresa_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Theresa_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_Valkyrie_Eden_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_Valkyrie_Eden_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_1_2_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_1_2_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_1_2_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_1_2_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2_1_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2_1_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2_1_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2_1_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2_1_3"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2_1_3.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SHL_trait_2_3"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SHL_trait_2_3.dds"
+	}
+
+	#军工组织——圣芙蕾雅学院
+	spriteType = {
+		name = "GFX_military_industrial_organization_SaintFreyaCollege"
+		texturefile = "gfx/interface/military_industrial_organization/BH3_mio_SaintFreyaCollege.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_SaintFreyaCollege_BG"
+		texturefile = "gfx/interface/military_industrial_organization/BH3_mio_SaintFreyaCollege_BG.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherVoid_Kiana_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherVoid_Kiana_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherFlamescion_Kiana_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherFlamescion_Kiana_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherThunder_Mei_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherThunder_Mei_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherReason_Bronya_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherReason_Bronya_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherRebirth_Seele_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherRebirth_Seele_equipment.dds"
+	}
+	spriteType = {
+		name = "GFX_military_industrial_organization_HerrscherHuman_Elysia_equipment"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/MIO_HerrscherHuman_Elysia_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_3_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_3_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_3_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_3_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_3_3"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_3_3.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_3_4"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_3_4.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_4_4"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_4_4.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_3_5"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_3_5.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_4_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_4_1.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_4_2"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_4_2.dds"
+	}
+	spriteType = {
+		name = "GFX_bh3_mio_SFC_trait_5_1"
+		texturefile = "gfx/interface/military_industrial_organization/department_icons/bh3_mio_SFC_trait_5_1.dds"
+	}
+}

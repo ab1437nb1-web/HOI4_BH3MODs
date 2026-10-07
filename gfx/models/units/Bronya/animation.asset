@@ -1,0 +1,77 @@
+
+########### Bronya_ValkyrieChariot ###########
+animation = {
+	name = "Bronya_ValkyrieChariot_Idle1_animation"
+	file = "Bronya_ValkyrieChariot_Idle1.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_Idle2_animation"
+	file = "Bronya_ValkyrieChariot_Idle2.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_Idle3_animation"
+	file = "Bronya_ValkyrieChariot_Idle3.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_Move_animation"
+	file = "Bronya_ValkyrieChariot_Move.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_MoveFast_animation"
+	file = "Bronya_ValkyrieChariot_MoveFast.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_RightHandAttack1_animation"
+	file = "Bronya_ValkyrieChariot_RightHandAttack1.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_RightHandAttack2_animation"
+	file = "Bronya_ValkyrieChariot_RightHandAttack2.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_RightHandAttack3_animation"
+	file = "Bronya_ValkyrieChariot_RightHandAttack3.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_RightHandAttack4_animation"
+	file = "Bronya_ValkyrieChariot_RightHandAttack4.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_RightHandAttack5_animation"
+	file = "Bronya_ValkyrieChariot_RightHandAttack5.anim"
+}
+animation = {
+	name = "Bronya_ValkyrieChariot_Fire_animation"
+	file = "Bronya_ValkyrieChariot_Fire.anim"
+}
+
+
+########### Bronya_SilverWingN-EX ###########
+animation = {
+	name = "Bronya_SilverWingNEX_Idle1_animation"
+	file = "Bronya_SilverWingN-EX_Idle1.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_Idle2_animation"
+	file = "Bronya_SilverWingN-EX_Idle2.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_Move_animation"
+	file = "Bronya_SilverWingN-EX_Move.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_LeftHandAttack1_animation"
+	file = "Bronya_SilverWingN-EX_LeftHandAttack1.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_LeftHandAttack2_animation"
+	file = "Bronya_SilverWingN-EX_LeftHandAttack2.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_LeftHandAttack3_animation"
+	file = "Bronya_SilverWingN-EX_LeftHandAttack3.anim"
+}
+animation = {
+	name = "Bronya_SilverWingNEX_RotateAttack_animation"
+	file = "Bronya_SilverWingN-EX_RotateAttack.anim"
+}

@@ -1,0 +1,1254 @@
+########################################
+############# 科技选择语音 #############
+########################################
+
+#####科技选择-登陆####
+sound = 
+{
+    name = "CaptainOnTheBridge"
+	file = "BH3_sound/CaptainOnTheBridge.wav"
+    always_load = no
+}
+
+#####科技选择-琪亚娜####
+sound = 
+{
+    name = "Kiana_tech_sel_voice1"
+	file = "BH3_sound/Kiana_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice2"
+	file = "BH3_sound/Kiana_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice3"
+	file = "BH3_sound/Kiana_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice4"
+	file = "BH3_sound/Kiana_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice5"
+	file = "BH3_sound/Kiana_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice6"
+	file = "BH3_sound/Kiana_tech_sel_voice6.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice7"
+	file = "BH3_sound/Kiana_tech_sel_voice7.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice8"
+	file = "BH3_sound/Kiana_tech_sel_voice8.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_tech_sel_voice9"
+	file = "BH3_sound/Kiana_tech_sel_voice9.wav"
+    always_load = no
+}
+#####科技选择-芽衣####
+sound = 
+{
+    name = "Mei_tech_sel_voice1"
+	file = "BH3_sound/Mei_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice2"
+	file = "BH3_sound/Mei_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice3"
+	file = "BH3_sound/Mei_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice4"
+	file = "BH3_sound/Mei_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice5"
+	file = "BH3_sound/Mei_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice6"
+	file = "BH3_sound/Mei_tech_sel_voice6.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice7"
+	file = "BH3_sound/Mei_tech_sel_voice7.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice8"
+	file = "BH3_sound/Mei_tech_sel_voice8.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice9"
+	file = "BH3_sound/Mei_tech_sel_voice9.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice11"
+	file = "BH3_sound/Mei_tech_sel_voice11.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice12"
+	file = "BH3_sound/Mei_tech_sel_voice12.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice13"
+	file = "BH3_sound/Mei_tech_sel_voice13.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_tech_sel_voice14"
+	file = "BH3_sound/Mei_tech_sel_voice14.wav"
+    always_load = no
+}
+#芽衣队长
+sound = 
+{
+    name = "MeiCaptain_tech_sel_voice1"
+	file = "BH3_sound/MeiCaptain_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "MeiCaptain_tech_sel_voice2"
+	file = "BH3_sound/MeiCaptain_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "MeiCaptain_tech_sel_voice3"
+	file = "BH3_sound/MeiCaptain_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "MeiCaptain_tech_sel_voice4"
+	file = "BH3_sound/MeiCaptain_tech_sel_voice4.wav"
+    always_load = no
+}
+#####科技选择-布洛妮娅####
+sound = 
+{
+    name = "Bronya_tech_sel_voice1"
+	file = "BH3_sound/Bronya_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice2"
+	file = "BH3_sound/Bronya_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice3"
+	file = "BH3_sound/Bronya_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice4"
+	file = "BH3_sound/Bronya_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice5"
+	file = "BH3_sound/Bronya_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice6"
+	file = "BH3_sound/Bronya_tech_sel_voice6.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice7"
+	file = "BH3_sound/Bronya_tech_sel_voice7.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice8"
+	file = "BH3_sound/Bronya_tech_sel_voice8.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Bronya_tech_sel_voice9"
+	file = "BH3_sound/Bronya_tech_sel_voice9.wav"
+    always_load = no
+}
+
+
+sound = 
+{
+    name = "Bronya_SilverWingNEX_sel_voice"
+	file = "BH3_sound/Bronya_SilverWingN-EX_tech_sel_voice.wav"
+    always_load = no
+}
+
+#####科技选择-希儿妮娅####
+sound = 
+{
+    name = "Seele_tech_sel_voice1"
+	file = "BH3_sound/Seele_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice2"
+	file = "BH3_sound/Seele_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice3"
+	file = "BH3_sound/Seele_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice4"
+	file = "BH3_sound/Seele_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice5"
+	file = "BH3_sound/Seele_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice6"
+	file = "BH3_sound/Seele_tech_sel_voice6.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_tech_sel_voice7"
+	file = "BH3_sound/Seele_tech_sel_voice7.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "SeeleB_tech_sel_voice1"
+	file = "BH3_sound/SeeleB_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "SeeleB_tech_sel_voice2"
+	file = "BH3_sound/SeeleB_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "SeeleB_tech_sel_voice3"
+	file = "BH3_sound/SeeleB_tech_sel_voice3.wav"
+    always_load = no
+}
+#####科技选择-德丽莎####
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_tech_sel_voice1"
+	file = "BH3_sound/Theresa_StarlitAstrologos_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_tech_sel_voice2"
+	file = "BH3_sound/Theresa_StarlitAstrologos_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_tech_sel_voice3"
+	file = "BH3_sound/Theresa_StarlitAstrologos_tech_sel_voice3.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_tech_sel_voice1"
+	file = "BH3_sound/Theresa_LunarVowCrimsonLove_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_tech_sel_voice2"
+	file = "BH3_sound/Theresa_LunarVowCrimsonLove_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_tech_sel_voice3"
+	file = "BH3_sound/Theresa_LunarVowCrimsonLove_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_tech_sel_voice4"
+	file = "BH3_sound/Theresa_LunarVowCrimsonLove_tech_sel_voice4.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "Theresa_Mars_tech_sel_voice1"
+	file = "BH3_sound/Theresa_Mars_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_Mars_tech_sel_voice2"
+	file = "BH3_sound/Theresa_Mars_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_Mars_tech_sel_voice3"
+	file = "BH3_sound/Theresa_Mars_tech_sel_voice3.wav"
+    always_load = no
+}
+
+#####科技选择-符华####
+sound = 
+{
+    name = "Fuka_tech_sel_voice1"
+	file = "BH3_sound/Fuka_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_tech_sel_voice2"
+	file = "BH3_sound/Fuka_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_tech_sel_voice3"
+	file = "BH3_sound/Fuka_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_tech_sel_voice4"
+	file = "BH3_sound/Fuka_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_tech_sel_voice5"
+	file = "BH3_sound/Fuka_tech_sel_voice5.wav"
+    always_load = no
+}
+
+#符华云墨丹心
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice1"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice2"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice3"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice4"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice5"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_tech_sel_voice6"
+	file = "BH3_sound/Fuka_AzureEmpyrea_tech_sel_voice6.wav"
+    always_load = no
+}
+#####科技选择-伊甸####
+sound = 
+{
+    name = "Eden_GoldenDiva_tech_sel_voice1"
+	file = "BH3_sound/Eden_GoldenDiva_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_tech_sel_voice2"
+	file = "BH3_sound/Eden_GoldenDiva_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_tech_sel_voice3"
+	file = "BH3_sound/Eden_GoldenDiva_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_tech_sel_voice4"
+	file = "BH3_sound/Eden_GoldenDiva_tech_sel_voice4.wav"
+    always_load = no
+}
+
+#####科技选择-律者####
+sound = 
+{
+    name = "HerrscherofVoid_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofVoid_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofVoid_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofVoid_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofVoid_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofVoid_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofVoid_tech_sel_voice4"
+	file = "BH3_sound/HerrscherofVoid_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofFlamescion_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofFlamescion_tech_sel_voice1.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "HerrscherofFlamescion_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofFlamescion_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofFlamescion_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofFlamescion_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofFlamescion_tech_sel_voice4"
+	file = "BH3_sound/HerrscherofFlamescion_tech_sel_voice4.wav"
+    always_load = no
+}
+
+
+sound = 
+{
+    name = "HerrscherofThunder_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofThunder_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofThunder_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofThunder_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofThunder_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofThunder_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofThunder_tech_sel_voice4"
+	file = "BH3_sound/HerrscherofThunder_tech_sel_voice4.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "HerrscherofReason_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofReason_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofReason_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofReason_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofReason_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofReason_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofReason_tech_sel_voice4"
+	file = "BH3_sound/HerrscherofReason_tech_sel_voice4.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "HerrscherofRebirth_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofRebirth_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofRebirth_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofRebirth_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofRebirth_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofRebirth_tech_sel_voice3.wav"
+    always_load = no
+}
+
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice1"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice2"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice3"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice4"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice4.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice5"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice5.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice6"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice6.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice7"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice7.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_tech_sel_voice8"
+	file = "BH3_sound/HerrscherofHuman_tech_sel_voice8.wav"
+    always_load = no
+}
+
+########################################
+############### 技能语音 ###############
+########################################
+sound = 
+{
+    name = "ABILITY_BH3_Flamescion_vol"
+	file = "BH3_ability/ABILITY_BH3_Flamescion_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Void_vol"
+	file = "BH3_ability/ABILITY_BH3_Void_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Finality_vol"
+	file = "BH3_ability/ABILITY_BH3_Finality_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Thunder_vol"
+	file = "BH3_ability/ABILITY_BH3_Thunder_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Reason_vol"
+	file = "BH3_ability/ABILITY_BH3_Reason_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Sentience_vol"
+	file = "BH3_ability/ABILITY_BH3_Sentience_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Rebirth1_vol"
+	file = "BH3_ability/ABILITY_BH3_Rebirth1_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Rebirth2_vol"
+	file = "BH3_ability/ABILITY_BH3_Rebirth2_vol.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "ABILITY_BH3_Human_vol"
+	file = "BH3_ability/ABILITY_BH3_Human_vol.wav"
+    always_load = no
+}
+
+########################################
+############# 模型战斗语音 #############
+########################################
+
+sound = 
+{
+    name = "Kiana_Attack"
+	file = "BH3_animations/Kiana_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_naigouqiao"
+	file = "BH3_animations/Kiana_naigouqiao.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_Gunfire"
+	file = "BH3_animations/Kiana_Gunfire.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_ShowTime"
+	file = "BH3_animations/Kiana_ShowTime.wav"
+    always_load = no
+}
+#琪亚娜天穹游侠待机和战斗音效
+sound = 
+{
+    name = "Kiana_VoidDrifter_Idle1"
+	file = "BH3_animations/Kiana_VoidDrifter_Idle1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_VoidDrifter_Idle2"
+	file = "BH3_animations/Kiana_VoidDrifter_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_VoidDrifter_Attack1"
+	file = "BH3_animations/Kiana_VoidDrifter_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_VoidDrifter_Attack2"
+	file = "BH3_animations/Kiana_VoidDrifter_Attack2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_VoidDrifter_Ultra"
+	file = "BH3_animations/Kiana_VoidDrifter_Ultra.wav"
+    always_load = no
+}
+#琪亚娜白骑士待机和战斗音效
+sound = 
+{
+    name = "Kiana_KnightMoonbeam_Idle2"
+	file = "BH3_animations/Kiana_KnightMoonbeam_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_KnightMoonbeam_Idle3"
+	file = "BH3_animations/Kiana_KnightMoonbeam_Idle3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_KnightMoonbeam_Attack1"
+	file = "BH3_animations/Kiana_KnightMoonbeam_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_KnightMoonbeam_QTE"
+	file = "BH3_animations/Kiana_KnightMoonbeam_QTE.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_KnightMoonbeam_SKILL"
+	file = "BH3_animations/Kiana_KnightMoonbeam_SKILL.wav"
+    always_load = no
+}
+#芽衣破晓强袭战斗音效
+sound = 
+{
+    name = "Mei_StrikerFulminata_Attack"
+	file = "BH3_animations/Mei_StrikerFulminata_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_StrikerFulminata_AttackLoop"
+	file = "BH3_animations/Mei_StrikerFulminata_AttackLoop.wav"
+    always_load = no
+}
+#芽衣断罪影舞战斗音效
+sound = 
+{
+    name = "Mei_DanzaiSpectramancer_Attack"
+	file = "BH3_animations/Mei_DanzaiSpectramancer_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_DanzaiSpectramancer_UltraAtk"
+	file = "BH3_animations/Mei_DanzaiSpectramancer_UltraAtk.wav"
+    always_load = no
+}
+#芽衣队长斗音效
+sound = 
+{
+    name = "Mei_Captain_Attack1"
+	file = "BH3_animations/Mei_Captain_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Mei_Captain_Attack2"
+	file = "BH3_animations/Mei_Captain_Attack2.wav"
+    always_load = no
+}
+
+#希儿魇夜星渊待机和战斗音效
+sound = 
+{
+    name = "Seele_StarchasmNyx_Idle1"
+	file = "BH3_animations/Seele_StarchasmNyx_Idle1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_StarchasmNyx_Idle2"
+	file = "BH3_animations/Seele_StarchasmNyx_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_StarchasmNyx_Attack"
+	file = "BH3_animations/Seele_StarchasmNyx_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_StarchasmNyx_ChargeAttack"
+	file = "BH3_animations/Seele_StarchasmNyx_ChargeAttack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Seele_StarchasmNyx_SKL02"
+	file = "BH3_animations/Seele_StarchasmNyx_SKL02.wav"
+    always_load = no
+}
+
+#德丽莎观星待机和战斗音效
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_Idle1"
+	file = "BH3_animations/Theresa_StarlitAstrologos_Idle1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_Idle2"
+	file = "BH3_animations/Theresa_StarlitAstrologos_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_Idle3"
+	file = "BH3_animations/Theresa_StarlitAstrologos_Idle3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_Attack"
+	file = "BH3_animations/Theresa_StarlitAstrologos_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_StarlitAstrologos_Ultra"
+	file = "BH3_animations/Theresa_StarlitAstrologos_Ultra.wav"
+    always_load = no
+}
+
+#德丽莎约下誓约予爱以心待机和战斗音效
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_Idle2"
+	file = "BH3_animations/Theresa_LunarVowCrimsonLove_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_Idle3"
+	file = "BH3_animations/Theresa_LunarVowCrimsonLove_Idle3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_Attack1"
+	file = "BH3_animations/Theresa_LunarVowCrimsonLove_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_LunarVowCrimsonLove_Attack2"
+	file = "BH3_animations/Theresa_LunarVowCrimsonLove_Attack2.wav"
+    always_load = no
+}
+
+#德丽莎火星主教待机和战斗音效
+sound = 
+{
+    name = "Theresa_Mars_Attack"
+	file = "BH3_animations/Theresa_Mars_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Theresa_Mars_Ultra"
+	file = "BH3_animations/Theresa_Mars_Ultra.wav"
+    always_load = no
+}
+
+#符华影骑士月轮战斗音效
+sound = 
+{
+    name = "Fuka_Attack"
+	file = "BH3_animations/Fuka_Attack.wav"
+    always_load = no
+}
+
+#符华云墨丹心战斗音效
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_Attack"
+	file = "BH3_animations/Fuka_AzureEmpyrea_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_Ultra1"
+	file = "BH3_animations/Fuka_AzureEmpyrea_Ultra1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_Ultra2"
+	file = "BH3_animations/Fuka_AzureEmpyrea_Ultra2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Fuka_AzureEmpyrea_Charge"
+	file = "BH3_animations/Fuka_AzureEmpyrea_Charge.wav"
+    always_load = no
+}
+#伊甸待机和战斗音效
+sound = 
+{
+    name = "Eden_GoldenDiva_Idle2_1"
+	file = "BH3_animations/Eden_GoldenDiva_Idle2_1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_Idle2_2"
+	file = "BH3_animations/Eden_GoldenDiva_Idle2_2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_Attack1"
+	file = "BH3_animations/Eden_GoldenDiva_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_Attack2"
+	file = "BH3_animations/Eden_GoldenDiva_Attack2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Eden_GoldenDiva_SKL"
+	file = "BH3_animations/Eden_GoldenDiva_SKL.wav"
+    always_load = no
+}
+
+#空之律者待机和战斗音效
+sound = 
+{
+    name = "Kiana_HerrscherofVoid_Attack"
+	file = "BH3_animations/Kiana_HerrscherofVoid_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofVoid_BranchAttack"
+	file = "BH3_animations/Kiana_HerrscherofVoid_BranchAttack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofVoid_Ultra"
+	file = "BH3_animations/Kiana_HerrscherofVoid_Ultra.wav"
+    always_load = no
+}
+
+#薪炎之律者待机和战斗音效
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Idle1"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Idle1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Idle2"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Idle2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Idle3"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Idle3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Attack"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Attack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_RulerStart1"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_RulerStart1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_RulerStart2"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_RulerStart2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Ultra1"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Ultra1.wav"
+    always_load = no
+}sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Ultra2"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Ultra2.wav"
+    always_load = no
+}sound = 
+{
+    name = "Kiana_HerrscherofFlamescion_Ultra3"
+	file = "BH3_animations/Kiana_HerrscherofFlamescion_Ultra3.wav"
+    always_load = no
+}
+
+#雷律战斗音效
+sound = 
+{
+    name = "HerrscherofThunder_Attack1"
+	file = "BH3_animations/HerrscherofThunder_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofThunder_Attack2"
+	file = "BH3_animations/HerrscherofThunder_Attack2.wav"
+    always_load = no
+}
+#死生律战斗音效
+sound = 
+{
+    name = "HerrscherofRebirth_Attack1"
+	file = "BH3_animations/HerrscherofRebirth_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofRebirth_BranchAttack"
+	file = "BH3_animations/HerrscherofRebirth_BranchAttack.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofRebirth_Attack2"
+	file = "BH3_animations/HerrscherofRebirth_Attack2.wav"
+    always_load = no
+}
+#人律战斗音效
+sound = 
+{
+    name = "HerrscherofHuman_Attack1"
+	file = "BH3_animations/HerrscherofHuman_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_Attack2"
+	file = "BH3_animations/HerrscherofHuman_Attack2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HerrscherofHuman_Attack3"
+	file = "BH3_animations/HerrscherofHuman_Attack3.wav"
+    always_load = no
+}
+
+#爱莉粉色妖精战斗音效
+sound = 
+{
+    name = "Elysia_MissPinkElf_Attack1"
+	file = "BH3_animations/Elysia_MissPinkElf_Attack1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Elysia_MissPinkElf_Attack2"
+	file = "BH3_animations/Elysia_MissPinkElf_Attack2.wav"
+    always_load = no
+}
+
+#崩坏通用战斗音效
+sound = 
+{
+    name = "BHS_Attack"
+	file = "BH3_animations/BHS_Attack.wav"
+    always_load = no
+}
+
+########################################
+############# 杂项 #############
+########################################
+sound = 
+{
+    name = "Mod_Intro"
+	file = "BH3_misc/Mod_Intro.wav"
+    always_load = no
+}
+#休伯利安
+sound = 
+{
+    name = "Hyperion_Fire"
+	file = "BH3_misc/Hyperion_Fire.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Hyperion_Recharge"
+	file = "BH3_misc/Hyperion_Recharge.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Hyperion_jet_idle_01"
+	file = "BH3_misc/Hyperion_jet_idle_01.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Hyperion_jet_idle_02"
+	file = "BH3_misc/Hyperion_jet_idle_02.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Hyperion_jet_idle_03"
+	file = "BH3_misc/Hyperion_jet_idle_03.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "Hyperion_jet_idle_04"
+	file = "BH3_misc/Hyperion_jet_idle_04.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BH3_Click"
+	file = "BH3_misc/BH3_Click.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BH3_Click_X"
+	file = "BH3_misc/BH3_Click_X.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BH3_Click_Yes"
+	file = "BH3_misc/BH3_Click_Yes.wav"
+    always_load = no
+}
+
+
+########################################
+############ 崩坏入侵超事件 ############
+########################################
+sound = 
+{
+    name = "HI_Come1"
+	file = "BH3_BHS_Invasion/HI_Come1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HI_Come2"
+	file = "BH3_BHS_Invasion/HI_Come2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HI_Come3"
+	file = "BH3_BHS_Invasion/HI_Come3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HI_Beaten1"
+	file = "BH3_BHS_Invasion/HI_Beaten1.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HI_Beaten2"
+	file = "BH3_BHS_Invasion/HI_Beaten2.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "HI_Beaten3"
+	file = "BH3_BHS_Invasion/HI_Beaten3.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BHS_Invasion_Start"
+	file = "BH3_BHS_Invasion/BHS_Invasion_Start.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BHS_Invasion_Hive"
+	file = "BH3_BHS_Invasion/BHS_Invasion_Hive.wav"
+    always_load = no
+}
+sound = 
+{
+    name = "BHS_Invasion_End"
+	file = "BH3_BHS_Invasion/BHS_Invasion_End.wav"
+    always_load = no
+}

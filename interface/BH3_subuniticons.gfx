@@ -1,0 +1,366 @@
+spriteTypes = {
+
+	### 女武神装甲单位 ###
+	SpriteType = {
+		name = "GFX_unit_ValkyrieArmorUnit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieArmorUnit_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieArmorUnit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieArmorUnit_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	#综合型琪亚娜
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveKiana_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieComprehensivePistol_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveKiana_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieComprehensivePistol_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#综合型德丽莎
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveTheresa_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieComprehensiveCross_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveTheresa_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieComprehensiveCross_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#综合型伊甸
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveEden_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieComprehensivePistol_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieComprehensiveEden_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieComprehensivePistol_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	#近战型芽衣
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleMei_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieMeeleBlade_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleMei_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieMeeleBlade_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#近战型希儿
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleSeele_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieMeeleScythe_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleSeele_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieMeeleScythe_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#近战型符华
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleFuka_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieMeeleFists_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieMeeleFuka_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieMeeleFists_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	#远程型布洛妮娅
+	SpriteType = {
+		name = "GFX_unit_ValkyrieArtilleryBronya_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ValkyrieArtilleryHeavy_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ValkyrieArtilleryBronya_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ValkyrieArtilleryHeavy_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	#空之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherVoidKiana_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherVoidKiana_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherVoidKiana_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherVoidKiana_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#薪炎之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherFlamescionKiana_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherFlamescionKiana_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherFlamescionKiana_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherFlamescionKiana_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#雷之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherThunderMei_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherThunderMei_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherThunderMei_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherThunderMei_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#理之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherReasonBronya_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherReasonBronya_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherReasonBronya_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherReasonBronya_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#死生之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherRebirthSeele_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherRebirthSeele_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherRebirthSeele_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherRebirthSeele_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#人之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherHumanElysia_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherHumanElysia_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherHumanElysia_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherHumanElysia_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#侵蚀之律者
+	SpriteType = {
+		name = "GFX_unit_HerrscherErosionElysia_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_HerrscherErosionElysia_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_HerrscherErosionElysia_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_HerrscherErosionElysia_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	##################### 崩坏 #####################
+	#死士
+	SpriteType = {
+		name = "GFX_unit_SishiBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_SishiBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_SishiBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_SishiBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+    #突击级崩坏兽
+	SpriteType = {
+		name = "GFX_unit_TujinBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_TujinBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_TujinBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_TujinBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#骑士级崩坏兽
+	SpriteType = {
+		name = "GFX_unit_QishiBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_QishiBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_QishiBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_QishiBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#战车级崩坏兽
+	SpriteType = {
+		name = "GFX_unit_ZhancheBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ZhancheBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ZhancheBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ZhancheBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#圣殿级崩坏兽
+	SpriteType = {
+		name = "GFX_unit_ShengdianBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ShengdianBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_ShengdianBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ShengdianBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#迦尼萨
+	SpriteType = {
+		name = "GFX_unit_JianisaBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_DiwangBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_JianisaBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_DiwangBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#贝纳勒斯
+	SpriteType = {
+		name = "GFX_unit_BeinalesiBHS_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_ShengPanBHS_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_BeinalesiBHS_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_ShengPanBHS_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	##################### 天命 #####################
+    #近战女武神
+	SpriteType = {
+		name = "GFX_unit_SchicksalValkyrieMeele_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_SchicksalValkyrieMeele_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_SchicksalValkyrieMeele_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_SchicksalValkyrieMeele_unit_icon.dds"
+		noOfFrames = 2
+	}
+	#远程女武神
+	SpriteType = {
+		name = "GFX_unit_SchicksalValkyrieArtillery_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_SchicksalValkyrieArtillery_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_SchicksalValkyrieArtillery_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_SchicksalValkyrieArtillery_unit_icon.dds"
+		noOfFrames = 2
+	}
+	
+
+
+	#神之键支援连
+	SpriteType = {
+		name = "GFX_unit_Void_Archives_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_Void_Archives_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_Void_Archives_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_Void_Archives_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_SevenThundersofRetribution_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_SevenThundersofRetribution_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_SevenThundersofRetribution_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_SevenThundersofRetribution_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_AbyssFlower_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_AbyssFlower_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_AbyssFlower_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_AbyssFlower_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_FenghuangDown_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_FenghuangDown_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_FenghuangDown_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_FenghuangDown_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_JudgementofShamash_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_JudgementofShamash_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_JudgementofShamash_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_JudgementofShamash_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_OathofJudah_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_OathofJudah_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_OathofJudah_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_OathofJudah_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_StarofEden_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_StarofEden_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_StarofEden_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_StarofEden_unit_icon.dds"
+		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_unit_JizoMitama_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_JizoMitama_icon.dds"
+		noOfFrames = 2
+	}
+	SpriteType = {
+		name = "GFX_unit_JizoMitama_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_JizoMitama_unit_icon.dds"
+		noOfFrames = 2
+	}
+}

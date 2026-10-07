@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_BH3_musicplayer"
+		texturefile = "gfx/interface/musicplayer/BH3_musicplayer.png"
+		noOfFrames = 2
+	}
+}

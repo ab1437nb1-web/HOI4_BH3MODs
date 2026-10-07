@@ -1,0 +1,239 @@
+spriteTypes = {
+	########## UI ##########
+	corneredTileSpriteType = {
+		name = "GFX_BH3_invasion_alpha_bg"
+		textureFile = "gfx/interface/BHS_Invasion/BH3_BHS_Invasion_Event_window_alpha.dds"
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg1"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg1.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg2"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg2.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg3"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg3.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg4"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg4.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg5"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg5.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg6"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg6.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg7"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg7.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg8"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg8.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg9"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg9.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_bg10"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_start_event_bg10.dds"
+		noOfFrames = 128
+		animation_rate_fps = 7
+		looping = yes
+		play_on_show = yes
+	}
+
+	spriteType = {
+		name = "GFX_BH3_BHS_invasion_start_event_mask"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_invasion_menu_mask.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_CheakBox_30x30_btn"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_CheakBox_30x30_btn.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_BH3_opt_complete_200x50_btn"
+		texturefile = "gfx/interface/technologies/BH3_yes_200x50_btn.dds"
+	}
+	spriteType = {
+		name = "GFX_BH3_closebutton"
+		texturefile = "gfx/interface/technologies/BH3_close_btn.dds"
+	}
+
+	#### 结局影片 ####
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg1"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg1.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg2"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg2.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg3"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg3.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg4"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg4.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg5"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg5.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg6"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg6.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg7"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg7.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg8"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg8.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg9"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg9.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg10"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg10.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg11"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg11.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg12"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg12.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg13"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg13.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg14"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg14.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg15"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg15.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_BH3_BHS_invasion_end_event_bg16"
+		texturefile = "gfx/interface/BHS_Invasion/BH3_BHS_invasion_end_event_bg16.dds"
+		noOfFrames = 200
+		animation_rate_fps = 5
+		looping = yes
+		play_on_show = yes
+	}
+}
+	

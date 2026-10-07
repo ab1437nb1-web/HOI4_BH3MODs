@@ -1,0 +1,2148 @@
+#将领支援
+BH3_BHS_Tech_Support = {
+	every_country = {
+		limit = { 
+			NOT = { is_in_faction_with = BHS } 
+			is_ai = yes
+		}
+		army_experience = 500
+		add_political_power = 500
+		set_technology = {
+			SchicksalValkyrieMeele_Research = 1
+			SchicksalValkyrieArtillery_Research = 1
+		}
+		if = {
+			limit = {
+				OR = {
+					is_major = yes
+					is_ai = no
+				}
+			}
+			set_country_flag = BH3_Valkyrie_Score_System_on
+
+			set_country_flag = BH3_Character_KianaKaslana_On
+			set_country_flag = BH3_Character_RaidenMei_On
+			set_country_flag = BH3_Character_BronyaZaych_On
+			set_country_flag = BH3_Character_SeeleVollerei_On
+			set_country_flag = BH3_Character_TheresaApocalypse_On
+			set_country_flag = BH3_Character_TheresaLunar_On
+			set_country_flag = BH3_Character_TheresaStarlitAstrologos_On
+			set_country_flag = BH3_Character_Fuka_On
+			set_country_flag = BH3_Character_BiankaDurandalAtaegina_On
+			set_country_flag = BH3_Character_RitaRossweisse_On
+			set_country_flag = BH3_Character_Eden_On
+			BH3_Tech_and_unit_spawn = yes
+			
+		}
+	}
+}
+#科技和特殊步兵支援
+BH3_Tech_and_unit_spawn = {
+	load_oob = "Valkyrie_UnitPool"
+	set_technology = {
+		SchicksalValkyrieMeele_Research = 1
+		SchicksalValkyrieArtillery_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Schicksal Valkyrie A Team\" division_template = \"Schicksal Valkyrie A Team\"  start_experience_factor = 0.3 "
+			owner = PREV
+			count = 36
+		}	
+		create_unit = {
+			division = "name = \"Schicksal Valkyrie B Team\" division_template = \"Schicksal Valkyrie B Team\"  start_experience_factor = 0.3 "
+			owner = PREV
+			count = 36
+		}	
+	}
+	set_technology = {
+		Kiana_WhiteComet_Research = 1
+		Mei_CrimsonImpuls_Research = 1
+		Bronya_ValkyrieChariot_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Kiana\" division_template = \"Kiana\"  start_experience_factor = 0.3 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Mei\" division_template = \"Mei\"  start_experience_factor = 0.3 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Bronya\" division_template = \"Bronya\"  start_experience_factor = 0.3 "
+			owner = PREV
+			count = 2
+		}	
+	}
+	set_technology = {
+		Kiana_VoidDrifter_Research = 1
+		Mei_StrikerFulminata_Research = 1
+		Bronya_YamabukiArmor_Research = 1
+		Seele_SwallowtailPhantasm_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Kiana\" division_template = \"Kiana\"  start_experience_factor = 0.5 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Mei\" division_template = \"Mei\"  start_experience_factor = 0.5 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Bronya\" division_template = \"Bronya\"  start_experience_factor = 0.5 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Seele\" division_template = \"Seele\"  start_experience_factor = 0.5 "
+			owner = PREV
+			count = 2
+		}				
+	}
+	set_technology = {
+		Kiana_KnightMoonbeam_Research = 1
+		Mei_DanzaiSpectramancer_Research = 1
+		Bronya_DimensionBreaker_Research = 1
+		Seele_StygianNymph_Research = 1
+		Theresa_StarlitAstrologos_Research = 1
+		Fuka_ShadowKnight_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Kiana\" division_template = \"Kiana\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Mei\" division_template = \"Mei\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Bronya\" division_template = \"Bronya\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Theresa\" division_template = \"Theresa\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}			
+		create_unit = {
+			division = "name = \"Seele\" division_template = \"Seele\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}			
+	}
+	set_technology = {
+		Seele_StarchasmNyx_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Seele\" division_template = \"Seele\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}	
+	}
+	set_technology = {
+		Mei_Captain_Research = 1
+		Bronya_SilverWingNEX_Research = 1
+		Theresa_LunarVowCrimsonLove_Research = 1
+		Fuka_AzureEmpyrea_Research = 1
+		Eden_GoldenDiva_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Mei\" division_template = \"Mei\"  start_experience_factor = 0.7 "
+			owner = PREV
+			count = 2
+		}			
+		create_unit = {
+			division = "name = \"Bronya\" division_template = \"Bronya\"  start_experience_factor = 1 "
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "name = \"Theresa\" division_template = \"Theresa\"  start_experience_factor = 1 "
+			owner = PREV
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Fuka\" division_template = \"Fuka\"  start_experience_factor = 1 "
+			owner = PREV
+			count = 2
+		}			
+		create_unit = {
+			division = "name = \"Eden\" division_template = \"Eden\"  start_experience_factor = 1 "
+			owner = PREV
+			count = 2
+		}				
+	}
+	set_technology = {
+		Theresa_Mars_Research = 1
+	}
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Theresa\" division_template = \"Theresa\"  start_experience_factor = 1 "
+			owner = PREV
+			count = 2
+		}	
+	}
+}
+
+#想通过本地化翻译师模板名称，但该方法还需要进一步研究
+BH3_BHS_OOB_Create = {
+	meta_effect = {
+		text = {
+			division_template = {
+				name = "TujinBHS_division"
+				is_locked = no
+				regiments = {
+					TujinBHS = { x = 0 y = 0 }
+				}
+				priority = 100
+			}
+		}
+		log = ""
+	}
+}
+
+#动态buff初始化
+BH3_DynamicBuff_ini = {
+	#崩坏阵营攻防初始化
+	set_temp_variable = { temp_BHS_Atteack = global.threat }
+	divide_temp_variable = { temp_BHS_Atteack = 2 }
+	set_variable = { global.BHS_Atteack = temp_BHS_Atteack }
+	set_temp_variable = { temp_BHS_Defend = global.threat }
+	divide_temp_variable = { temp_BHS_Defend = 1 }
+	set_variable = { global.BHS_Defend = temp_BHS_Defend }
+	set_temp_variable = { temp_BHS_army_morale_factor = global.threat }
+	multiply_temp_variable = { temp_BHS_army_morale_factor = 10 }
+	set_variable = { global.BHS_army_morale_factor = temp_BHS_army_morale_factor }
+	
+	#崩坏随时间增强
+	set_variable = { global.BHS_TacticalAtteack = 0.01 }
+	set_variable = { global.BHS_TacticalDefend = 0.01 }
+	#崩坏随文明增强
+	set_variable = { global.BHS_CivilizationImprovement_ATK = 0 }
+	set_variable = { global.BHS_CivilizationImprovement_DEF = 0 }
+	set_variable = { global.BHS_CivilizationImprovement_HP = 0 }
+	set_variable = { global.BHS_CivilizationImprovement_ORG = 0 }
+
+	#崩坏按全球工业计算
+	set_variable = { global.BHS_IC = 0 }
+
+	#女武神战力加成
+	set_variable = { global.BH3_Valkyrie_Score_effect1 = 0 }
+	set_variable = { global.BH3_Valkyrie_Score_effect2 = 0 }
+
+	#崩坏浓度对人类的影响
+	set_variable = { global.HUM_ConsumerExpected = 0 }
+	set_variable = { global.HUM_PoliticalPpower = 0 }
+	set_variable = { global.HUM_MobilizationSpeed = 0 }
+	set_variable = { global.HUM_Conscription = 0 }
+	set_variable = { global.HUM_IC_factory = 0 }
+	set_variable = { global.HUM_BuildingSpeed = 0 }
+	set_variable = { global.HUM_air_cas_present_factor = 0 }
+	set_variable = { global.HUM_ground_attack_factor = 0 }
+	set_variable = { global.HUM_air_accidents_factor = 0 }
+	set_variable = { global.HUM_weekly_manpower = 0 }
+
+	#核熔蚀抗性
+	set_variable = { global.BHS_NuclearCorrosionResistance_var = 0 }
+}
+
+#动态buff更新，每周更新
+BH3_DynamicBuff_upgrade = {
+	#崩坏攻防随浓度更新
+	set_temp_variable = { temp_BHS_Atteack = global.threat }
+	divide_temp_variable = { temp_BHS_Atteack = 2 }
+	set_variable = { global.BHS_Atteack = temp_BHS_Atteack }
+	set_temp_variable = { temp_BHS_Defend = global.threat }
+	divide_temp_variable = { temp_BHS_Defend = 2 }
+	set_variable = { global.BHS_Defend = temp_BHS_Defend }
+	set_temp_variable = { temp_BHS_army_morale_factor = global.threat }
+	multiply_temp_variable = { temp_BHS_army_morale_factor = 10 }
+	set_variable = { global.BHS_army_morale_factor = temp_BHS_army_morale_factor }
+
+	#崩坏随时间增强
+	add_to_variable = { global.BHS_TacticalAtteack = 0.005 }
+	add_to_variable = { global.BHS_TacticalDefend = 0.01 }
+
+	#崩坏随文明增强
+	set_temp_variable = { temp_BHS_major_country_num = 0 }
+	set_temp_variable = { temp_BHS_major_country_atk = 0 }
+	set_temp_variable = { temp_BHS_major_country_def = 0 }
+	set_temp_variable = { temp_BHS_major_country_hp = 0 }
+	set_temp_variable = { temp_BHS_major_country_org = 0 }
+	every_country = {
+		limit = { 
+			OR = {
+				is_ai = no
+				is_major = yes
+				NOT = { is_in_faction_with = BHS }
+			}
+		}
+		add_to_temp_variable = { temp_BHS_major_country_num = 1 }
+		add_to_temp_variable = { temp_BHS_major_country_atk = modifier@army_attack_factor }
+		add_to_temp_variable = { temp_BHS_major_country_def = modifier@army_defence_factor }
+		add_to_temp_variable = { temp_BHS_major_country_hp = modifier@army_strength_factor }
+		add_to_temp_variable = { temp_BHS_major_country_org = modifier@army_org_factor }
+	}
+	divide_temp_variable = { temp_BHS_major_country_atk = temp_BHS_major_country_num }
+	divide_temp_variable = { temp_BHS_major_country_def = temp_BHS_major_country_num }
+	divide_temp_variable = { temp_BHS_major_country_hp = temp_BHS_major_country_num }
+	divide_temp_variable = { temp_BHS_major_country_org = temp_BHS_major_country_num }
+	if = {
+		limit = { check_variable = { temp_BHS_major_country_atk < 0.5 } }
+		set_variable = { global.BHS_CivilizationImprovement_ATK = 0.5 }
+	}
+	else = { set_variable = { global.BHS_CivilizationImprovement_ATK = temp_BHS_major_country_atk } }
+	if = {
+		limit = { check_variable = { temp_BHS_major_country_def < 0.5 } }
+		set_variable = { global.BHS_CivilizationImprovement_DEF = 0.5 }
+	}
+	else = { set_variable = { global.BHS_CivilizationImprovement_DEF = temp_BHS_major_country_def } }
+	if = {
+		limit = { check_variable = { temp_BHS_major_country_hp < 0.25 } }
+		set_variable = { global.BHS_CivilizationImprovement_HP = 0.25 }
+	}
+	else = { set_variable = { global.BHS_CivilizationImprovement_HP = temp_BHS_major_country_hp } }
+	if = {
+		limit = { check_variable = { temp_BHS_major_country_org < 0.25 } }
+		set_variable = { global.BHS_CivilizationImprovement_ORG = 0.25 }
+	}
+	else = { set_variable = { global.BHS_CivilizationImprovement_ORG = temp_BHS_major_country_org } }	
+
+	#崩坏按全球工业计算，超2000部分按0.001%计算
+	set_temp_variable = { temp_IC = 0 }
+	every_country = {
+		add_to_temp_variable = { temp_IC = this.num_of_factories }
+	}
+	if = {
+		limit = { check_variable = { temp_IC > 2000 } }
+		set_temp_variable = { temp_IC1 = temp_IC }
+		subtract_from_temp_variable = { temp_IC1 = 2000 }
+		divide_temp_variable = { temp_IC1 = 1000 }
+		set_temp_variable = { temp_IC = temp_IC1 }
+	}
+	else = {
+		set_temp_variable = { temp_IC = 0 }
+	}
+	set_variable = { global.BHS_IC = temp_IC }
+
+	#女武神战力加成
+	set_temp_variable = { temp_BH3_Valkyrie_Score1 = global.BH3_World_Valkyire_Score }
+	divide_temp_variable = { temp_BH3_Valkyrie_Score1 = 100 }
+	set_variable = { global.BH3_Valkyrie_Score_effect1 = temp_BH3_Valkyrie_Score1 }
+	set_temp_variable = { temp_BH3_Valkyrie_Score2 = global.BH3_World_Valkyire_Score }
+	divide_temp_variable = { temp_BH3_Valkyrie_Score2 = 500 }
+	set_variable = { global.BH3_Valkyrie_Score_effect2 = temp_BH3_Valkyrie_Score2 }
+
+	#崩坏浓度对人类的影响
+	#消费期望值
+	set_temp_variable = { temp_HUM_ConsumerExpected = global.threat }
+	divide_temp_variable = { temp_HUM_ConsumerExpected = 10 }
+	set_variable = { global.HUM_ConsumerExpected = temp_HUM_ConsumerExpected }
+	#政治点
+	set_temp_variable = { temp_HUM_PoliticalPpower = global.threat }
+	divide_temp_variable = { temp_HUM_PoliticalPpower = -5 }
+	set_variable = { global.HUM_PoliticalPpower = temp_HUM_PoliticalPpower }
+	#动员速度
+	set_temp_variable = { temp_HUM_MobilizationSpeed = global.threat }
+	divide_temp_variable = { temp_HUM_MobilizationSpeed = -5 }
+	set_variable = { global.HUM_MobilizationSpeed = temp_HUM_MobilizationSpeed }
+	#适役人口
+	set_temp_variable = { temp_HUM_Conscription = global.threat }
+	divide_temp_variable = { temp_HUM_Conscription = -20 }
+	set_variable = { global.HUM_Conscription = temp_HUM_Conscription }
+	#工业产出
+	set_temp_variable = { temp_HUM_IC_factory = global.threat }
+	divide_temp_variable = { temp_HUM_IC_factory = -4 }
+	set_variable = { global.HUM_IC_factory = temp_HUM_IC_factory }
+	#建造速度
+	set_temp_variable = { temp_HUM_BuildingSpeed = global.threat }
+	divide_temp_variable = { temp_HUM_BuildingSpeed = -4 }
+	set_variable = { global.HUM_BuildingSpeed = temp_HUM_BuildingSpeed }
+	#陆战对地支援
+	set_temp_variable = { temp_HUM_air_cas_present_factor = global.threat }
+	divide_temp_variable = { temp_HUM_air_cas_present_factor = -5 }
+	set_variable = { global.HUM_air_cas_present_factor = temp_HUM_air_cas_present_factor }
+	#加空军对地支援伤害
+	set_temp_variable = { temp_HUM_ground_attack_factor = global.threat }
+	divide_temp_variable = { temp_HUM_ground_attack_factor = -5 }
+	set_variable = { global.HUM_ground_attack_factor = temp_HUM_ground_attack_factor }
+	#空军事故率
+	set_temp_variable = { temp_HUM_air_accidents_factor = global.threat }
+	divide_temp_variable = { temp_HUM_air_accidents_factor = 4 }
+	set_variable = { global.HUM_air_accidents_factor = temp_HUM_air_accidents_factor }
+	#扣人力
+	set_temp_variable = { temp_HUM_weekly_manpower = global.threat }
+	multiply_temp_variable= { temp_HUM_weekly_manpower = -10000 }
+	set_variable = { global.HUM_weekly_manpower = temp_HUM_weekly_manpower }
+	#对律者加成
+	set_temp_variable = { temp_Herrscher_attck = global.threat }
+	divide_temp_variable = { temp_Herrscher_attck = 2 }
+	set_variable = { global.Herrscher_attck = temp_Herrscher_attck }
+}
+
+#建立崩坏国家
+BH3_BHS_start = {
+	#取消军事禁区
+	every_state = {
+		set_demilitarized_zone = no
+	}
+	#取消原版美洲门罗主义
+	every_country = {
+		limit= { has_idea = USA_monroe_doctrine_idea }
+		remove_ideas = USA_monroe_doctrine_idea
+	}
+	### 崩坏爆发地点 ###
+	#随机地点
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_postion1_btn_frame = 2 } }
+		random_state = {
+			limit = {
+				state_population_k > 1000
+				# industrial_complex > 1
+				controller = { NOT = { TAG = SPR } }
+				is_island_state = no
+				# is_coastal = no
+				# 
+				# NOT = {
+				# 	any_neighbor_state = {
+				# 		is_coastal = yes
+				# 	}
+				# }
+			}
+			set_variable = { global.BHS_StartLocation = THIS }
+			add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+			}
+			every_country = {
+				limit = { is_ai = no}
+				goto_state = PREV
+			}
+		}
+	}
+	#柏林
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_postion2_btn_frame = 2 } }
+		set_variable = { global.BHS_StartLocation = 64 }
+		64 = {
+			add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+			}
+		}
+		every_country = {
+			limit = { is_ai = no}
+			goto_state = 64
+		}
+	}
+	#西伯利亚
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_postion3_btn_frame = 2 } }
+		set_variable = { global.BHS_StartLocation = 576 }
+		576 = {
+			add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+			}
+		}
+		every_country = {
+			limit = { is_ai = no}
+			goto_state = 576
+		}
+	}
+	#东京
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_postion4_btn_frame = 2 } }
+		set_variable = { global.BHS_StartLocation = 282 }
+		282 = {
+			add_building_construction = {
+				type = air_base
+				level = 10
+				instant_build = yes
+			}
+		}
+		every_country = {
+			limit = { is_ai = no}
+			goto_state = 282
+		}
+	}
+	#释放国家
+	var:global.BHS_StartLocation = {
+		add_core_of = BHS
+		transfer_state_to = BHS
+		add_dynamic_modifier = { modifier = BHSinvasion_effect }
+		add_dynamic_modifier = {
+			modifier = BHS_High_Honkai_area 
+			scope = BHS
+		}
+	}
+	#崩坏开始
+	BHS = { 
+		set_capital = { state = var:global.BHS_StartLocation }
+		#重设领导人头像和名字
+		var:country_leader = {
+			meta_effect = {
+				text = {
+					set_character_name = BHS_country_leader
+					set_portraits = { civilian = { large = GFX_Portrait_BHS } }
+				}
+				log = ""
+				# debug = yes #在game.log中查看meta效果
+			}
+		}
+		add_threat = 5 
+		load_oob = "BHS_UnitPool"
+		#天使轮投资
+		add_manpower = 6000000
+		add_fuel = 999999
+		# 避免部分脑瘫mod替换了country文件夹
+		set_technology = {
+			SishiBHS_Research = 1
+			Tujin1BHS_Research = 1
+			Qishi1BHS_Research = 1
+			Zhanche1BHS_Research = 1
+			Shengdian1BHS_Research = 1
+			JianisaBHS_Research = 1
+			BeinalesiBHS_Research = 1
+		}
+		add_equipment_to_stockpile = { type = TujinBHS_equipment_0 amount = 50000 }
+		add_equipment_to_stockpile = { type = QishiBHS_equipment_0 amount = 50000 }
+		add_equipment_to_stockpile = { type = ZhancheBHS_equipment_0 amount = 50000 }
+		add_equipment_to_stockpile = { type = ShengdianBHS_equipment_0 amount = 50000 }
+		every_neighbor_country = {
+			BHS = { 
+				declare_war_on = { target = PREV type = annex_everything } 
+			}
+		}
+		every_state = {
+			add_claim_by = BHS
+		}
+		#创建一个阵营
+		create_faction_from_template = BH3_Honkai_Impact_union
+		# create_faction = BH3_Honkai_Impact_union
+		### 开局崩坏阶段 ###
+		#阶段1
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_level1_btn_frame = 2 } }
+			add_ideas = BHS_level1_idea
+		}
+		#阶段2
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_level2_btn_frame = 2 } }
+			add_ideas = BHS_level2_idea
+		}
+		#阶段3
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_level3_btn_frame = 2 } }
+			add_ideas = BHS_level3_idea
+		}
+		#阶段4
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_level4_btn_frame = 2 } }
+			add_ideas = BHS_level4_idea
+		}
+		#阶段5
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_level5_btn_frame = 2 } }
+			add_ideas = BHS_level5_idea
+		}
+
+		### 崩坏律者单位加强 ###
+		#加强
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_herrscher_enhance1_btn_frame = 2 } }
+			add_ideas = BHS_herrscher_enhance_idea
+		}
+
+		### 杂项，多选 ###
+		#崩坏加强
+		if = {
+			limit = { check_variable = {global.BH3_invasion_menu_misc4_btn_frame = 2 } }
+			add_ideas = BHS_aggressive0
+		}
+
+		#给将领
+		BH3_create_bhs_leader = yes
+		#情报人员
+		BH3_create_BHS_operative_leader = yes
+		#刷开局兵
+		BHS_StartTroop = yes
+
+		# 触发第一个律者诞生,延迟2天
+		country_event = { id = HerrscherCome.1 days = 2 }
+
+		BH3_DynamicBuff_ini = yes
+		BH3_DynamicBuff_upgrade = yes
+	}
+	#设置登陆CD
+	set_variable = { global.BHS_LandingCD = 1 }
+
+
+	### 杂项，多选 ###
+	#科技和女武神支援
+	if = {
+		limit = { check_variable = { global.BH3_invasion_menu_misc2_btn_frame = 2 } }
+		BH3_BHS_Tech_Support = yes
+	}
+	#添加开局debuff和为美好而战buff
+	if = {
+		limit = { check_variable = { global.BH3_invasion_menu_misc1_btn_frame = 2 } }
+		every_country = {
+			limit = { NOT = { TAG = BHS } }
+			add_dynamic_modifier = { modifier = BHS_disaster_effect }
+				add_dynamic_modifier = { modifier = BH3_Valkyrie_Score_effect }
+			add_timed_idea = { idea = BH3_disaster days = 180 }
+			add_ideas = BH3_no_step_back
+		}
+		else = {
+			every_country = {
+				limit = { NOT = { TAG = BHS } }
+				add_dynamic_modifier = { modifier = BHS_disaster_effect }
+				add_dynamic_modifier = { modifier = BH3_Valkyrie_Score_effect }
+				add_timed_idea = { idea = BH3_disaster days = 180 }
+			}
+		}
+	}
+	#世界联盟,谁点设置谁当盟主，代码在BH3_BHS_Invasion_GUI_Settings_Finish
+	if = {
+		limit = { check_variable = { global.BH3_invasion_menu_misc3_btn_frame = 2 } }
+		BHS = { ###宣战不生效
+			add_threat = 40 
+			declare_war_on = { 
+				target = var:global.BH3_Anti_Honkai_faction_leader 
+				type = annex_everything 
+			}
+		}
+	}
+
+
+	### 是否启用律者 ###
+	#不启用，删除爆发前已启用律者降临和部队
+	if = {
+		limit = { check_variable = { global.BH3_invasion_menu_enable_herrscher1_btn_frame = 2 } }
+		set_global_flag = BH3_Forbid_Herrscher
+	}
+	if = {
+		limit = { has_global_flag = BH3_Forbid_Herrscher }
+		#删除已有
+		every_country = {
+			limit = { NOT = { TAG = BHS } }
+			every_army_leader = {
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofVoid }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofFlamescion }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofFinality }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofThunder }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofReason }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofRebirth }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofSentience }
+					remove_unit_leader = yes
+				}
+				if = {
+					limit = { has_trait =  BH3_trait_HerrscherofHuman }
+					this = {}
+					remove_unit_leader = yes
+				}
+			}
+			# 删除律者部队
+			if = { #判断玩家律者单位编制是中文还是英文
+				limit = { check_variable = { Kiana_HerrscherofVoid_T = "空之律者" } }
+				meta_effect = {
+					text = {
+						delete_unit_template_and_units = { division_template = "空之律者" }
+						delete_unit_template_and_units = { division_template = "薪炎之律者" }
+						delete_unit_template_and_units = { division_template = "雷之律者" }
+						delete_unit_template_and_units = { division_template = "理之律者" }
+						delete_unit_template_and_units = { division_template = "死生之律者" }
+						delete_unit_template_and_units = { division_template = "真我·人之律者" }
+					}
+					log = ""
+				}
+			}
+			# 删除律者部队
+			if = { #判断玩家律者单位编制是中文还是英文
+				limit = { check_variable = { Kiana_HerrscherofVoid_T = "The-Herrscher-of-Void" } }
+				meta_effect = {
+					text = {
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Void" }
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Flamescion" }
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Thunder" }
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Reason" }
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Rebirth" }
+						delete_unit_template_and_units = { division_template = "The-Herrscher-of-Human:Ego" }
+					}
+					log = ""
+				}
+			}
+
+		}
+	}
+	if = {
+		limit = { check_variable = { global.BH3_invasion_menu_misc5_btn_frame = 2 } }
+		BHS = {
+			remove_ideas = BHS_Benghuai_idea
+			add_ideas = BHS_Benghuai_idea_Player
+			change_tag_from  = ROOT
+		}
+	}
+	else = {#非玩家锁编制
+		BHS = {
+			country_lock_all_division_template = yes
+		}
+	}
+}
+
+#创建开局部队
+BHS_StartTroop = {
+
+	### 开局崩坏师数量 ###
+	#200
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_army_num1_btn_frame = 2 } }
+		set_variable = { global.BHS_StartDivisionNum = 200 }
+	}
+	#300
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_army_num2_btn_frame = 2 } }
+		set_variable = { global.BHS_StartDivisionNum = 300 }
+	}
+	#400
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_army_num3_btn_frame = 2 } }
+		set_variable = { global.BHS_StartDivisionNum = 400 }
+	}
+	#500
+	if = {
+		limit = { check_variable = {global.BH3_invasion_menu_army_num4_btn_frame = 2 } }
+		set_variable = { global.BHS_StartDivisionNum = 500 }
+	}
+
+
+	#刷兵
+	set_temp_variable = { bhs_spawnmul = global.BHS_StartDivisionNum }
+	divide_temp_variable = { bhs_spawnmul = 100 } 
+	round_temp_variable = bhs_spawnmul #取整
+	for_loop_effect = {
+		end = bhs_spawnmul
+		capital_scope = {
+			create_unit = {
+				division = "name = \"Charger-class Honkai Beast\" division_template = \"Charger-class Honkai Beast\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 25
+			}	
+			create_unit = {
+				division = "name = \"Knight-class Honkai Beast\" division_template = \"Knight-class Honkai Beast\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 40
+			}	
+			create_unit = {
+				division = "name = \"Chariot-class Honkai Beast\" division_template = \"Chariot-class Honkai Beast\" start_experience_factor = 0.5"
+				owner = PREV
+				count = 20
+			}	
+			create_unit = {
+				division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.8"
+				owner = PREV
+				count = 15
+			}
+		}
+	}
+	set_temp_variable = { bhs_spawnmul = global.BHS_StartDivisionNum }
+	divide_temp_variable = { bhs_spawnmul = 25 } 
+	round_temp_variable = bhs_spawnmul #取整
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+			owner = PREV
+			count = bhs_spawnmul
+		}	
+	}
+	set_temp_variable = { bhs_spawnmul = global.BHS_StartDivisionNum }
+	divide_temp_variable = { bhs_spawnmul = 100 } 
+	round_temp_variable = bhs_spawnmul #取整
+	capital_scope = {
+		create_unit = {
+			division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+			owner = PREV
+			count = bhs_spawnmul
+		}	
+	}
+}
+BHS_StartTroop_Herrscher = {
+	#刷兵
+	capital_scope = {	
+		create_unit = {
+			division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.8"
+			owner = PREV
+			count = 20
+		}
+		create_unit = {
+			division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+			owner = PREV
+			count = 6
+		}	
+		create_unit = {
+			division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+			owner = PREV
+			count = 2
+		}	
+	}
+}
+
+#刷火星兵
+BHS_SpawnBHS = {
+	if = {
+		limit = {
+			has_manpower > 10000
+			BHS = { check_variable = { num_divisions < global.BHS_DivisionLimit } } 
+		}
+		#生成突击级
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 100 }
+		round_temp_variable = bhs_spawnmul
+		set_temp_variable = { bhs_spawnmul_max = 15 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -9000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Charger-class Honkai Beast\" division_template = \"Charger-class Honkai Beast\" start_experience_factor = 0.6"
+					owner = PREV
+				}
+			}
+		}
+		#生成骑士级
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 100 }
+		round_temp_variable = bhs_spawnmul
+		set_temp_variable = { bhs_spawnmul_max = 20 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -9000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Knight-class Honkai Beast\" division_template = \"Knight-class Honkai Beast\" start_experience_factor = 0.6"
+					owner = PREV
+				}
+			}
+		}
+		#生成战车级
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 300 }
+		round_temp_variable = bhs_spawnmul
+		set_temp_variable = { bhs_spawnmul_max = 10 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -9000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Chariot-class Honkai Beast\" division_template = \"Chariot-class Honkai Beast\" start_experience_factor = 0.6"
+					owner = PREV
+				}
+			}
+		}
+		#生成圣殿级,根据崩坏浓度，地块数量计算
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 1000 }
+		round_temp_variable = bhs_spawnmul
+		if = {
+			limit = { check_variable = { global.BH3_Threat < 1000 } }
+			set_temp_variable = { bhs_spawnmul = 0 }
+		}
+		set_temp_variable = { bhs_spawnmul_max = 10 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -20000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.8"
+					owner = PREV
+				}
+			}
+		}
+		#生成Ganesha Honkai Beast,根据崩坏浓度和地块数量计算
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 1500 }
+		round_temp_variable = bhs_spawnmul
+		if = {
+			limit = {  check_variable = { global.BH3_Threat < 1500 } }
+			set_temp_variable = { bhs_spawnmul = 0 }
+		}
+		set_temp_variable = { bhs_spawnmul_max = 4 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -50000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+					owner = PREV
+				}
+			}
+		}
+		#生成Benares Honkai Beast,根据崩坏浓度和地块数量计算
+		set_temp_variable = { bhs_spawnmul = 1 }
+		multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+		multiply_temp_variable = { bhs_spawnmul = controlled_states^num }
+		divide_temp_variable = { bhs_spawnmul = 2500 }
+		round_temp_variable = bhs_spawnmul
+		if = {
+			limit = {  check_variable = { global.BH3_Threat < 1500 } }
+			set_temp_variable = { bhs_spawnmul = 0 }
+		}
+		set_temp_variable = { bhs_spawnmul_max = 1 }
+		multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+		clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+		for_loop_effect = {
+			end = bhs_spawnmul
+			add_manpower = -50000
+			random_core_state = {
+				create_unit = { 
+					division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+					owner = PREV
+				}
+			}
+		}
+	}
+}
+
+#登陆警告
+BHS_PreLanding = {
+	clear_variable = global.BHSLandingPoint
+	clear_variable = global.BHSLandingCountry
+	# 随机登陆天数
+	randomize_variable = {
+		var = global.BHS_Landing_Left_Day
+		distribution = uniform
+		min = 1
+		max = 25
+	}
+	round_variable = global.BHS_Landing_Left_Day
+	### 如果登陆次数达到律者降临计数，本次触发律者登陆 ###
+	if = {
+		limit = { 
+			check_variable = { global.BHS_Herrscher_Landing_times = global.BH3_herrscher_time } 
+			check_variable = { global.BHS_Herrscher_Beaten_num < 5 } 
+		}
+		random_state = {
+			limit = {
+				state_population_k > 1000
+				controller = {
+					NOT = { TAG = BHS }
+					NOT = { TAG = HI1 }
+					NOT = { TAG = HI2 }
+					NOT = { TAG = HI3 }
+					NOT = { TAG = HI6 }
+					NOT = { TAG = HI7 }
+					NOT = { TAG = HH2 }
+				}
+			}
+			controller = { 
+				set_variable = { global.BHSLandingPoint = PREV }
+			}
+			#触发律者登陆
+			set_variable = { global.BHSLandingCountry = controller }
+			state_event = { id = BHSstate.2 trigger_for = controller days = global.BHS_Landing_Left_Day }
+			#登陆间隔计数清零
+			set_variable = { global.BHS_Herrscher_Landing_times = 0 }
+			#律者计数加1
+			add_to_variable = { global.BHS_Herrscher_Beaten_num = 1 } 
+			every_country = {
+				limit = { is_ai = no}
+				goto_state = PREV
+			}
+		}
+	}
+	else =  {
+		random_state = {
+			limit = {
+				controller = { has_war_with = BHS }
+				OR = {
+					is_coastal = yes
+					is_island_state = yes
+				}
+			}
+			controller = { 
+				set_variable = { global.BHSLandingPoint = PREV }
+			}
+			#触发登陆
+			set_variable = { global.BHSLandingCountry = controller }
+			state_event = { id = BHSstate.1 trigger_for = controller days = global.BHS_Landing_Left_Day }
+			every_country = {
+				limit = { is_ai = no}
+				goto_state = PREV
+			}
+		}
+	}
+	every_country = {
+		#所有国家触发登陆预警
+		country_event = { id = BHS.11 }
+		#触发X天后的登陆警告
+		country_event = { id = BHS.12 days = global.BHS_Landing_Left_Day }
+	}
+}
+
+BHS_SpawnBHS_Landing = {
+	#刷兵
+	set_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+	divide_temp_variable = { bhs_spawnmul = 300 }
+	round_temp_variable = bhs_spawnmul
+	set_temp_variable = { bhs_spawnmul_max = 4 }
+	multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+	clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+	for_loop_effect = {
+		end = bhs_spawnmul
+		create_unit = {
+			division = "name = \"Charger-class Honkai Beast\" division_template = \"Charger-class Honkai Beast\" start_experience_factor = 0.5"
+			owner = BHS
+			allow_spawning_on_enemy_provs = yes
+			count = 2
+		}	
+		create_unit = {
+			division = "name = \"Knight-class Honkai Beast\" division_template = \"Knight-class Honkai Beast\" start_experience_factor = 0.5"
+			owner = BHS
+			allow_spawning_on_enemy_provs = yes
+			count = 4
+		}	
+		create_unit = {
+			division = "name = \"Chariot-class Honkai Beast\" division_template = \"Chariot-class Honkai Beast\" start_experience_factor = 0.5"
+			owner = BHS
+			allow_spawning_on_enemy_provs = yes
+			count = 2
+		}
+		create_unit = {
+			division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.8"
+			owner = BHS
+			allow_spawning_on_enemy_provs = yes
+			count = 1
+		}
+	}
+		
+	set_temp_variable = { bhs_spawnmul = 1 }
+	multiply_temp_variable = { bhs_spawnmul = global.BH3_Threat }
+	divide_temp_variable = { bhs_spawnmul = 500 }
+	round_temp_variable = bhs_spawnmul
+	if = {
+		limit = {  check_variable = { global.BH3_Threat < 1500 } }
+		set_temp_variable = { bhs_spawnmul = 0 }
+	}
+	set_temp_variable = { bhs_spawnmul_max = 2 }
+	multiply_temp_variable = { bhs_spawnmul_max = global.BHS_Army_Coefficient }
+	clamp_temp_variable = { var = bhs_spawnmul min = 0 max = bhs_spawnmul_max }
+	for_loop_effect = {
+		end = bhs_spawnmul
+		create_unit = { 
+			division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+		}
+	}
+}
+
+#触发律者登陆
+BHS_SpawnHerrscher_Landing = {
+	#避免下次登陆更换律者登陆地点影响决议触发
+	set_variable = { global.BHS_Herrscher_LandingPoint = global.BHSLandingPoint }
+	#为律者诞生地添加省份buff
+	var:global.BHS_Herrscher_LandingPoint = {
+		add_dynamic_modifier = { modifier = BHSinvasion_effect }
+		add_dynamic_modifier = {
+			modifier = BHS_High_Honkai_area 
+			scope = BHS
+		}
+	}
+	BHS = {
+		declare_war_on = { target = global.BHSLandingCountry type = annex_everything } 
+		### 随机律者顺序 ###
+		clr_global_flag = BH3_is_who_herrscher_flag
+		#判定此次诞生律者为理律
+		if = {
+			limit = { 
+				has_global_flag = HI1_will_Come
+				NOT = { 
+					has_global_flag = HI1_has_Come 
+					has_global_flag = HI1_set_up
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+
+			set_technology = {
+				Bronya_HerrscherofReason_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherReason_Bronya_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Reason"
+				is_locked = no
+				regiments = {
+					HerrscherReasonBronya = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = {
+				create_unit = {
+					division = "name = \"the Herrscher of Reason\" division_template = \"the Herrscher of Reason\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}	
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HI1_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+		#判定此次诞生律者为空律
+		if = {
+			limit = { 
+				has_global_flag = HI2_will_Come
+				NOT = { 
+					has_global_flag = HI2_has_Come 
+					has_global_flag = HI2_set_up
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+			set_technology = {
+				Kiana_HerrscherofVoid_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherVoid_Kiana_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Void"
+				is_locked = no
+				regiments = {
+					herrscherVoidKiana = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = {
+				create_unit = {
+					division = "name = \"the Herrscher of Void\" division_template = \"the Herrscher of Void\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HI2_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+		#判定此次诞生律者为雷律
+		if = {
+			limit = { 
+				has_global_flag = HI3_will_Come
+				NOT = { 
+					has_global_flag = HI3_has_Come
+					has_global_flag = HI3_set_up 
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+			set_technology = {
+				Mei_HerrscherofThunder_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherThunder_Mei_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Thunder"
+				is_locked = no
+				regiments = {
+					HerrscherthunderMei = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Thunder\" division_template = \"the Herrscher of Thunder\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}	
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HI3_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+
+
+		#判定此次诞生律者为死律
+		if = {
+			limit = { 
+				has_global_flag = HI6_will_Come
+				NOT = { 
+					has_global_flag = HI6_has_Come
+					has_global_flag = HI6_set_up 
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+			set_technology = {
+				Seele_HerrscherofRebirth_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherRebirth_Seele_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Rebirth"
+				is_locked = no
+				regiments = {
+					HerrscherRebirthSeele = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Rebirth\" division_template = \"the Herrscher of Rebirth\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}	
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HI6_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+		#判定此次诞生律者为炎律
+		if = {
+			limit = { 
+				has_global_flag = HI7_will_Come
+				NOT = { 
+					has_global_flag = HI7_has_Come
+					has_global_flag = HI7_set_up 
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+			set_technology = {
+				Kiana_HerrscherofFlamescion_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherFlamescion_Kiana_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Flamescion"
+				is_locked = no
+				regiments = {
+					HerrscherFlamescionKiana = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Flamescion\" division_template = \"the Herrscher of Flamescion\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}	
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HI7_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+
+		#判定此次诞生律者为侵蚀律
+		if = {
+			limit = { 
+				has_global_flag = HH2_will_Come
+				NOT = { 
+					has_global_flag = HH2_has_Come
+					has_global_flag = HH2_set_up 
+					has_global_flag = BH3_is_who_herrscher_flag 
+				}
+			}
+			set_technology = {
+				Elysia_HerrscherofErosion_Research = 1
+			}
+			add_equipment_to_stockpile = { type = HerrscherErosion_Elysia_Air_equipment_0 amount = 25 }
+			division_template = {
+				name = "the Herrscher of Erosion"
+				is_locked = no
+				regiments = {
+					HerrscherErosionElysia = { x = 0 y = 0 }
+				}
+			}
+			var:global.BHSLandingPoint = { 
+				create_unit = {
+					division = "name = \"the Herrscher of Erosion\" division_template = \"the Herrscher of Erosion\"  start_experience_factor = 1 "
+					allow_spawning_on_enemy_provs = yes
+					owner = BHS
+					count = 1
+				}	
+			}
+			set_global_flag = BH3_is_who_herrscher_flag
+			set_global_flag = HH2_has_Come
+			set_global_flag = BHS_decison_Control_State_Flag
+		}
+	}
+	
+}
+
+#根据占领城市规模刷死士
+BHS_SpawnSishiBHS_On_Control_State = {
+	if = {
+		limit = { BHS = { check_variable = { num_divisions < global.BHS_DivisionLimit } } }
+		set_temp_variable = { BHS_Honkai_Zombies_num = state_population_k }
+		divide_temp_variable = { BHS_Honkai_Zombies_num = 10 } #死士一营1万人
+		multiply_temp_variable = { BHS_Honkai_Zombies_num = 0.125 } #取50%人口，在此基础上转化率为25%，综合转换率为12.5%
+		round_temp_variable = BHS_Honkai_Zombies_num
+		create_unit = {
+			division = "name = \"Honkai Zombie\" division_template = \"Honkai Zombie\" start_experience_factor = 0.5"
+			owner = ROOT
+			allow_spawning_on_enemy_provs = yes
+			count = BHS_Honkai_Zombies_num
+		}	
+	}
+}
+
+#改变阶段
+BHS_honkai_Change_LevelII = {
+	every_country = {
+		limit = { 
+			is_in_faction_with = BHS 
+			has_idea = BHS_level1_idea
+		}
+		remove_ideas = BHS_level1_idea
+		add_ideas = BHS_level2_idea
+	}
+	every_country = {
+		limit = { is_ai = no }
+		country_event = { id = BHS.21 }
+	}
+}
+#改变阶段
+BHS_honkai_Change_LevelIII = {
+	every_country = {
+		limit = { 
+			is_in_faction_with = BHS 
+			has_idea = BHS_level2_idea
+		}
+		remove_ideas = BHS_level2_idea
+		add_ideas = BHS_level3_idea
+	}
+	every_country = {
+		limit = { is_ai = no }
+		country_event = { id = BHS.22 }
+	}
+}
+#改变阶段
+BHS_honkai_Change_LevelIV = {
+	every_country = {
+		limit = { 
+			is_in_faction_with = BHS 
+			has_idea = BHS_level3_idea
+		}
+		remove_ideas = BHS_level3_idea
+		add_ideas = BHS_level4_idea
+	}
+	every_country = {
+		limit = { is_ai = no }
+		country_event = { id = BHS.23 }
+	}
+}
+#改变阶段
+BHS_honkai_Change_LevelV = {
+	every_country = {
+		limit = { 
+			is_in_faction_with = BHS 
+			has_idea = BHS_level4_idea
+		}
+		remove_ideas = BHS_level4_idea
+		add_ideas = BHS_level5_idea
+	}
+	every_country = {
+		limit = { is_ai = no }
+		country_event = { id = BHS.24 }
+	}
+}
+
+#计算谁取得律者权能（谁在该省份兵多）
+BHS_Who_Beat_HIX_Solve_OneState = {
+	every_country = {
+		set_variable = { global.BHS_Who_Beat_HIX_temp = THIS }
+		set_variable = { global.BHS_Who_Beat_HIX_unit_num_temp = 0 }
+		var:global.BHS_Herrscher_LandingPoint  = {
+			every_state_division = {
+				limit = { OWNER = { check_variable = { global.BHS_Who_Beat_HIX_temp = THIS }  } }  #log = "Owner is [?THIS.GetName]"
+				add_to_variable = { global.BHS_Who_Beat_HIX_unit_num_temp = 1 }
+				# log = "[?global.BHS_Who_Beat_HIX_unit_num_temp] division in berlin"
+			}
+			# log = "total [?global.BHS_Who_Beat_HIX_unit_num_temp] division in berlin"
+			# log = "[?global.BHS_Who_Beat_HIX_temp.GetName] in [?global.BHS_Herrscher_LandingPoint.GetName] own [?global.BHS_Who_Beat_HIX_unit_num_temp] division"
+		}
+		log = "[?THIS.GetName] HAS [?global.BHS_Who_Beat_HIX_unit_num_temp] in [?global.BHS_Herrscher_LandingPoint.GetName] "
+		if = {
+			limit = { NOT = { check_variable = { global.BHS_Who_Beat_HIX_unit_num_temp = 0 } } }
+			add_to_array = {
+				array = global.BHS_Who_Beat_HIX_TAG_Array
+				value = global.BHS_Who_Beat_HIX_temp
+			}
+			add_to_array = {
+				array = global.BHS_Who_Beat_HIX_unit_num_Array
+				value = global.BHS_Who_Beat_HIX_unit_num_temp
+			}
+		}
+	}
+	find_highest_in_array = {
+		array = global.BHS_Who_Beat_HIX_unit_num_Array
+		index = i
+	}
+	log = "[?global.BHS_Who_Beat_HIX_TAG_Array^i.GetName] has most [?global.BHS_Who_Beat_HIX_unit_num_Array^i] division in [?global.BHS_Herrscher_LandingPoint.GetName] "
+	set_variable = { global.BHS_Who_Beat_HIX = global.BHS_Who_Beat_HIX_TAG_Array^i }
+	clear_array = global.BHS_Who_Beat_HIX_TAG_Array
+	clear_array = global.BHS_Who_Beat_HIX_unit_num_Array
+}
+
+#计算谁取得律者权能（谁在该律者核心省份兵多）
+# BHS_Who_Beat_HIX_Solve_CoreState = {	
+# 	every_country = {
+# 		set_temp_variable = { BHS_Who_Beat_HIX_temp = THIS }
+# 		set_temp_variable = { BHS_Who_Beat_HIX_unit_num_temp = 0 }
+# 		if = {
+# 			limit = { check_variable = { THIS = global.BHS_beat_HIX }  }
+# 			every_core_state = {
+# 				every_state_division = {
+# 					log = "[?OWNER.GetName]"
+# 					OWNER = {
+# 						log = "THIS=[?OWNER.GetName]"
+# 					}
+# 					limit = { OWNER = { check_variable = { BHS_Who_Beat_HIX_temp = THIS } } }
+# 					add_to_temp_variable = { BHS_Who_Beat_HIX_unit_num_temp = 1 }
+# 				}
+# 			}
+# 			log = "[?BHS_Who_Beat_HIX_unit_num_temp]"
+# 		}
+# 		if = {
+# 			limit = { NOT = { check_variable = { BHS_Who_Beat_HIX_unit_num_temp = 0 } } }
+# 			add_to_array = {
+# 				array = global.BHS_Who_Beat_HIX_TAG_Array
+# 				value = BHS_Who_Beat_HIX_temp
+# 			}
+# 			add_to_array = {
+# 				array = global.BHS_Who_Beat_HIX_unit_num_Array
+# 				value = BHS_Who_Beat_HIX_unit_num_temp
+# 			}
+# 		}
+# 	}
+# 	find_highest_in_array = {
+# 		array = global.BHS_Who_Beat_HIX_unit_num_Array
+# 		index = i
+# 	}
+# 	if = { 
+# 		limit = { check_variable = { global.BHS_beat_HIX = HI1 } }
+# 		set_variable = { global.Who_beat_HI1 = BHS_Who_Beat_HIX_TAG_Array^i }
+# 	}
+# 	if = { 
+# 		limit = { check_variable = { global.BHS_beat_HIX = HI2 } }
+# 		set_variable = { global.Who_beat_HI2 = BHS_Who_Beat_HIX_TAG_Array^i }
+# 	}
+# 	if = { 
+# 		limit = { check_variable = { global.BHS_beat_HIX = HI3 } }
+# 		set_variable = { global.Who_beat_HI3 = BHS_Who_Beat_HIX_TAG_Array^i }
+# 	}
+# 	if = { 
+# 		limit = { check_variable = { global.BHS_beat_HIX = HI6 } }
+# 		set_variable = { global.Who_beat_HI6 = BHS_Who_Beat_HIX_TAG_Array^i }
+# 	}
+# 	if = { 
+# 		limit = { check_variable = { global.BHS_beat_HIX = HI7 } }
+# 		set_variable = { global.Who_beat_HI7 = BHS_Who_Beat_HIX_TAG_Array^i }
+# 	}
+	
+# 	# clear_array = global.BHS_Who_Beat_HIX_TAG_Array
+# 	# clear_array = global.BHS_Who_Beat_HIX_unit_num_Array
+# }
+
+#高浓度省份对非女武神部队和非崩坏部队造成每天HP损害(无法作用于排除某种部队的所有范围)
+
+
+
+#理律权能对人类的影响，减科研槽和速度
+BHS_HerrscherofReson_ReduceResearch = {
+	every_country = {
+		limit = {
+			has_global_flag = HI1_set_up 
+			check_variable = { amount_research_slots > 2 }
+			NOT = { 
+				is_in_faction_with = BHS
+				has_global_flag = HI1_has_beaten
+			}
+		}
+		add_research_slot = -1
+	}
+}
+
+#空律陨石轰炸
+BHS_HerrscherofVoid_MeteoriteHit = {
+
+	random_country = {
+		limit = { 
+			NOT = { is_in_faction_with = BHS } 
+			has_war_with = BHS
+		}
+		set_variable = { global.BH3_BHS_Invasion_HI2_hit_country = this }
+		set_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos = this.num_controlled_states }
+		set_variable = { global.BH3_BHS_Invasion_HI2_hit_IC = this.num_of_factories }
+	}
+	set_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos_break = 0 } #用于跳出循环
+	while_loop_effect = {
+		limit = { #优先对地块大于5和工业较高国家进行袭击
+			check_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos < 5 } 
+			check_variable = { global.BH3_BHS_Invasion_HI2_hit_IC < 30 } 
+			check_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos_break < 20 } 
+		}
+		add_to_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos_break = 1 }
+		random_country = {
+			limit = { 
+				NOT = { is_in_faction_with = BHS } 
+				has_war_with = BHS
+			}
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_country = this }
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_3pos = this.num_controlled_states }
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_IC = this.num_of_factories }
+		}
+	}
+	#没有满足条件的会以最后一次为准，若是没有控制地块则
+	var:global.BH3_BHS_Invasion_HI2_hit_country = {
+		random_controlled_state = {
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_pos1 = this }
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = dockyard
+				damage = 1
+			}
+			damage_building = {
+				type = naval_base 
+				damage = 3
+			}
+			damage_building = {
+				type = air_base 
+				damage = 3
+			}
+			set_variable = { BH3_BHSVoidNukeSmall_pos1 = this }
+			set_variable = { BH3_BHSVoidNukeSmall_id1 = BH3_BHSVoidNukeSmall_pos1 }
+			add_to_variable = { BH3_BHSVoidNukeSmall_id1 = 1 }
+			create_entity = {
+				entity = BH3_FinalityNukeSmall_entity
+				id = BH3_BHSVoidNukeSmall_id1
+				state = BH3_BHSVoidNukeSmall_pos1
+				min_zoom = 2000
+				
+			}
+			set_entity_animation = {
+				id = BH3_BHSVoidNukeSmall_id1
+				animation = attack
+			}
+			damage_units = {
+				state = THIS
+				org_damage = 20
+				str_damage = 5
+				ratio = no
+				limit = {
+					NOT = { is_in_faction_with = BHS }
+				}
+				army = yes
+				navy = yes
+			}
+		}
+		random_controlled_state = {
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_pos2 = this }
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = dockyard
+				damage = 1
+			}
+			damage_building = {
+				type = naval_base 
+				damage = 3
+			}
+			damage_building = {
+				type = air_base 
+				damage = 3
+			}
+			set_variable = { BH3_BHSVoidNukeSmall_pos2 = this }
+			set_variable = { BH3_BHSVoidNukeSmall_id2 = BH3_BHSVoidNukeSmall_pos2 }
+			add_to_variable = { BH3_BHSVoidNukeSmall_id2 = 1 }
+			create_entity = {
+				entity = BH3_FinalityNukeSmall_entity
+				id = BH3_BHSVoidNukeSmall_id2
+				state = BH3_BHSVoidNukeSmall_pos2
+				min_zoom = 2000
+				
+			}
+			set_entity_animation = {
+				id = BH3_BHSVoidNukeSmall_id2
+				animation = attack
+			}
+			damage_units = {
+				state = THIS
+				org_damage = 20
+				str_damage = 5
+				ratio = no
+				limit = {
+					NOT = { is_in_faction_with = BHS }
+				}
+				army = yes
+				navy = yes
+			}
+		}
+		random_controlled_state = {
+			set_variable = { global.BH3_BHS_Invasion_HI2_hit_pos3 = this }
+			damage_building = {
+				type = infrastructure
+				damage = 3
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			damage_building = {
+				type = dockyard
+				damage = 1
+			}
+			damage_building = {
+				type = naval_base 
+				damage = 3
+			}
+			damage_building = {
+				type = air_base 
+				damage = 3
+			}
+			set_variable = { BH3_BHSVoidNukeSmall_pos3 = this }
+			set_variable = { BH3_BHSVoidNukeSmall_id3 = BH3_BHSVoidNukeSmall_pos3 }
+			add_to_variable = { BH3_BHSVoidNukeSmall_id3 = 1 }
+			create_entity = {
+				entity = BH3_FinalityNukeSmall_entity
+				id = BH3_BHSVoidNukeSmall_id3
+				state = BH3_BHSVoidNukeSmall_pos3
+				min_zoom = 2000
+				
+			}
+			set_entity_animation = {
+				id = BH3_BHSVoidNukeSmall_id3
+				animation = attack
+			}
+			damage_units = {
+				state = THIS
+				org_damage = 20
+				str_damage = 5
+				ratio = no
+				limit = {
+					NOT = { is_in_faction_with = BHS }
+				}
+				army = yes
+				navy = yes
+			}
+		}
+	}
+	every_country = {
+		limit = { 
+			is_ai = no 
+			NOT = { has_country_flag = HerrscherCome203b }
+		}
+		country_event = HerrscherCome.203
+	}
+}
+
+#死亡凋零
+BHS_HerrscherofRebirth_BHSinvasion_effect = {
+	random_country = {
+		limit = { 
+			NOT = { is_in_faction_with = BHS } 
+			has_war_with = BHS
+		}
+
+		set_variable = { global.BH3_BHS_Invasion_HI6_hit_country = this }
+		set_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos = this.num_controlled_states }
+		set_variable = { global.BH3_BHS_Invasion_HI6_hit_IC = this.num_of_factories }
+	}
+	set_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 0 } #用于跳出循环
+	while_loop_effect = {
+		limit = { #优先对工业高的国家发动袭击
+			check_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos < 5 } 
+			check_variable = { global.BH3_BHS_Invasion_HI6_hit_IC < 30 } 
+			check_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break < 20 } 
+		}
+		add_to_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 1 }
+		random_country = {
+			limit = { 
+				NOT = { is_in_faction_with = BHS } 
+				has_war_with = BHS
+			}
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_country = this }
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos = this.num_controlled_states }
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_IC = this.num_of_factories }
+		}
+	}
+	#没有满足条件的会以最后一次为准
+	var:global.BH3_BHS_Invasion_HI6_hit_country = {
+		#添加限时debuff
+		add_timed_idea = {
+			idea = BHS_HI6_Power_EffectHuman
+			days = 50
+		}
+		#随机优先选取没有省份debuff省份
+		set_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 0 } #用于跳出循环,重复利用
+
+		random_controlled_state = {
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos1 = this }
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop = this.state_population_k }
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BHSinvasion_effect }  }
+				set_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+			else = {
+				clr_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+		}
+		while_loop_effect = {
+			limit = { #优先对没有挂debuff且人口较多省份袭击
+				check_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop < 100 } 
+				check_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break < 20 } 
+				has_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+			add_to_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 1 }
+			random_controlled_state = {
+				set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos1 = this }
+				set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop = this.state_population_k }
+				if = {
+					limit = { has_dynamic_modifier = { modifier = BHSinvasion_effect }  }
+					set_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+				}
+				else = {
+					clr_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+				}
+			}
+		}
+		#随机优先选取没有省份debuff省份
+		set_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 0 } #用于跳出循环,重复利用
+		clr_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+		random_controlled_state = {
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos2 = this }
+			set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop = this.state_population_k }
+			if = {
+				limit = { has_dynamic_modifier = { modifier = BHSinvasion_effect }  }
+				set_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+			else = {
+				clr_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+		}
+		while_loop_effect = {
+			limit = { #优先对没有挂debuff且人口较多省份袭击
+				check_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop < 100 } 
+				check_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break < 20 } 
+				has_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+			}
+			add_to_variable = { global.BH3_BHS_Invasion_HI6_hit_2pos_break = 1 }
+			random_controlled_state = {
+				set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos2 = this }
+				set_variable = { global.BH3_BHS_Invasion_HI6_hit_pos_pop = this.state_population_k }
+				if = {
+					limit = { has_dynamic_modifier = { modifier = BHSinvasion_effect }  }
+					set_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+				}
+				else = {
+					clr_global_flag = BH3_BHS_Invasion_HI6_hit_pos_has_modifier
+				}
+			}
+		}
+		var:global.BH3_BHS_Invasion_HI6_hit_pos1 = {
+			add_dynamic_modifier = {
+				modifier = BHSinvasion_effect
+			}
+		}
+		var:global.BH3_BHS_Invasion_HI6_hit_pos2 = {
+			add_dynamic_modifier = {
+				modifier = BHSinvasion_effect
+			}
+		}
+	}
+	every_country = {
+		limit = { 
+			is_ai = no 
+			NOT = { has_country_flag = HerrscherCome604b }
+		}
+		country_event = HerrscherCome.604
+	}
+}
+
+#炎律给随机判定给自己挂极限buff
+BHS_HerrscherofFlamescion_BHSinvasion_effect = {
+	random_list = {
+		25 = {
+			HI7 = {
+				add_timed_idea = {
+					idea = BHS_HI7_1_Power
+					days = 7
+				}
+			}
+			every_country = {
+				limit = { 
+					is_ai = no 
+					NOT = { has_country_flag = HerrscherCome704b }
+				}
+				country_event = HerrscherCome.704
+			}
+		}
+		75 = {  }
+	}
+}
+
+#侵蚀给玩家挂图片
+BHS_HerrscherofErosion_BHSinvasion_effect = {
+	random_country = {
+		limit = { 
+			is_ai = no 
+			NOT = { is_in_faction_with = BHS }
+			NOT = { has_country_flag = BHS_HH2_Power_EffectHuman_flag }
+		}
+		set_country_flag = BHS_HH2_Power_EffectHuman_flag
+		set_global_flag = BHS_HH2_Power_EffectHuman_selected_flag
+		set_variable = { global.BH3_BHS_Invasion_HH2_hit_country = this }
+		country_event = {
+			id = HerrscherCome.1203
+			days = 20
+		}
+	}
+	if = {
+		limit = { has_global_flag = BHS_HH2_Power_EffectHuman_selected_flag }
+		every_country = {
+			limit = { 
+				is_ai = no 
+				NOT = { has_country_flag = HerrscherCome1204b }
+			}
+			country_event = HerrscherCome.1204
+		}
+		clr_global_flag = BHS_HH2_Power_EffectHuman_selected_flag
+	}
+
+}
+
+#月球之战成功
+BHS_MoonBattle_Win = {
+	#终焉一击
+	BHS_HerrscherofFinality_One_Hit = yes
+	random_controlled_state = {
+		transfer_state_to = BHS
+		BHS = {	
+			set_capital = { state = PREV } 
+		}
+		set_variable = { global.MonsterBossBHS_pos = THIS }
+		set_variable = { global.MonsterBossBHS_id = global.MonsterBossBHS_pos }
+		add_to_variable = { MonsterBossBHS_id = 1 }
+		every_country = {
+			limit = { is_ai = no}
+			goto_state = PREV
+		}
+
+		create_entity = {
+			entity = BH3_Cocoon_entity
+			id = global.MonsterBossBHS_id
+			state = global.MonsterBossBHS_pos
+			min_zoom = 99999
+			scale = 1.5
+			rotation = 90
+			z = 5
+		}
+		set_state_name = "终焉之茧"
+	}
+	set_global_flag = BHS_Final_Time_flag
+
+	#刷兵
+	var:global.MonsterBossBHS_pos = {
+		create_unit = {
+			division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.6"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 50
+		}
+		create_unit = {
+			division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 30
+		}	
+		create_unit = {
+			division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 12
+		}	
+	}
+
+}
+
+#月球之战失败
+BHS_MoonBattle_Lose = {
+	#终焉一击
+	BHS_HerrscherofFinality_One_Hit = yes
+	BHS = {
+		set_variable = { global.MonsterBossBHS_pos = THIS.capital }
+		set_variable = { global.MonsterBossBHS_id = THIS.capital }
+		add_to_variable = { global.MonsterBossBHS_id = 1 }
+		#创建示现此世之兽
+		create_entity = {
+			entity = MonsterBossBHS_entity
+			id = global.MonsterBossBHS_id
+			state = global.MonsterBossBHS_pos
+			min_zoom = 10000
+			#rotation = 0
+			scale = 1
+			z = 100
+		}
+		set_entity_animation = {
+			id = global.MonsterBossBHS_id
+			animation = "Idle"
+		}
+		create_unit = {
+			division = "name = \"Templar-class Honkai Beast\" division_template = \"Templar-class Honkai Beast\" start_experience_factor = 0.6"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 50
+		}
+		create_unit = {
+			division = "name = \"Ganesha Honkai Beast\" division_template = \"Ganesha Honkai Beast\" start_experience_factor = 1"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 30
+		}	
+		create_unit = {
+			division = "name = \"Benares Honkai Beast\" division_template = \"Benares Honkai Beast\" start_experience_factor = 1"
+			allow_spawning_on_enemy_provs = yes
+			owner = BHS
+			count = 12
+		}	
+		set_technology = {
+			Kiana_HerrscherofVoid_Research = 1
+		}
+		BHS_Herrscher_Spawn = yes
+		BH3_BHS_MonsterBossBHS_move = yes
+	}
+}
+
+#崩坏的终焉一击
+BHS_HerrscherofFinality_One_Hit = {
+	every_country = {
+		limit = { 
+			NOT = { is_in_faction_with = BHS }
+		}
+		BH3_Honkai_Finality_One_Hit = yes
+	}
+	every_state = {
+		damage_units = {
+			state = THIS
+			org_damage = 0.5
+			str_damage = 0.15
+			ratio = yes
+			limit = { NOT = { is_in_faction_with = BHS } }
+			army = yes
+			navy = yes
+		}
+	}
+}
+
+#月球之战失败过月刷律者
+BHS_Herrscher_Spawn = {
+	create_unit = {
+		division = "name = \"Herrscher\" division_template = \"Herrscher\" start_experience_factor = 1"
+		allow_spawning_on_enemy_provs = yes
+		owner = BHS
+		count = 1
+	}
+}
+
+#示现之兽移动
+BH3_BHS_MonsterBossBHS_move = {
+	random_country = {
+		limit = { 
+			NOT = { is_in_faction_with = BHS }
+		}
+		set_variable = { global.MonsterBossBHS_target_state = THIS.capital }
+		set_variable = { global.MonsterBossBHS_target_country = THIS }
+	}
+	set_variable = { global.MonsterBossBHS_target_state_ratio = 0.05 }
+	
+	set_entity_movement = {
+		id = global.MonsterBossBHS_id
+		start = {
+			state = global.MonsterBossBHS_pos
+			z = 100
+		}
+		target = {
+			state = global.MonsterBossBHS_target_state
+			z = 100
+		}
+		ratio = global.MonsterBossBHS_target_state_ratio
+		rotation = -80.1
+	}
+	set_entity_animation = {
+		id = global.MonsterBossBHS_id
+		animation = "Idle"
+	}
+	var:global.MonsterBossBHS_target_state  = {
+		add_dynamic_modifier = { modifier = BHSinvasion_effect }
+	}
+}
+
+BHS_BHS_MonsterBossBHS_One_Hit = {
+	var:global.MonsterBossBHS_target_country = {
+		every_army_leader = {
+		limit = {
+			NOT = {
+				has_trait = BH3_trait_CaptainJZ
+				has_trait = BH3_traits_valkyrie
+				has_trait = BH3_trait_HerrscherofVoid
+				has_trait = BH3_trait_HerrscherofFlamescion
+				has_trait = BH3_trait_HerrscherofFinality
+				has_trait = BH3_trait_HerrscherofThunder
+				has_trait = BH3_trait_HerrscherofReason
+				has_trait = BH3_trait_HerrscherofSentience
+				has_trait = BH3_trait_HerrscherofRebirth
+				has_trait = BH3_trait_HerrscherofHuman
+			}
+		}
+		add_trait = { trait = sick }
+		add_trait = { trait = wounded }
+		add_trait = { trait = BH3_trait_HonkaiImpactSick }
+		}
+		every_controlled_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 10
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 10
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 10
+			}
+			damage_building = {
+				type = dockyard
+				damage = 10
+			}
+			damage_building = {
+				type = naval_base 
+				damage = 10
+			}
+			damage_building = {
+				type = air_base 
+				damage = 10
+			}
+		}
+		every_controlled_state = { 
+			if = {
+				limit = { is_capital = no }
+				set_variable = { BH3_FinalityNukeSmall_pos = this }
+				set_variable = { BH3_FinalityNukeSmall_id = BH3_FinalityNukeSmall_pos }
+				add_to_variable = { BH3_FinalityNukeSmall_id = 1 }
+				create_entity = {
+					entity = BH3_FinalityNukeSmall_entity
+					id = BH3_FinalityNukeSmall_id
+					state = BH3_FinalityNukeSmall_pos
+					min_zoom = 8000
+					
+				}
+				set_entity_animation = {
+					id = BH3_FinalityNukeSmall_id
+					animation = attack
+				}
+			}
+			if = {
+				limit = { is_capital = yes }
+				set_variable = { BH3_FinalityNukeBig_pos = this }
+				set_variable = { BH3_FinalityNukeBig_id = BH3_FinalityNukeBig_pos }
+				add_to_variable = { BH3_FinalityNukeBig_id = 1 }
+				create_entity = {
+					entity = BH3_FinalityNukeBig_entity
+					id = BH3_FinalityNukeBig_id
+					state = BH3_FinalityNukeBig_pos
+					min_zoom = 8000
+					
+				}
+				set_entity_animation = {
+					id = BH3_FinalityNukeBig_id
+					animation = attack
+				}
+				BHS_Herrscher_Spawn = yes
+			}
+		}
+		every_state = {
+			damage_units = {
+				state = THIS
+				org_damage = 1
+				str_damage = 0.08
+				ratio = yes
+				limit = { 
+					NOT = { is_in_faction_with = BHS }
+				}
+				army = yes
+				navy = yes
+			}
+		}
+	}
+
+}

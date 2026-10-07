@@ -1,0 +1,26 @@
+ideas = {
+	country = {
+
+		####################################################################
+		########## 往事乐土·真我刻印（P3）：每个国家的定制刻印 ##########
+		# 载体同其它刻印：精神=持有标记与界面展示；真加成在 dynamic_modifiers。
+		# 本文件只放本 mod 预设的 8 国；submod 按 docs/BH3_ElysianRealm_P3_真我刻印_submod接口.md 自行添加。
+		####################################################################
+
+		BH3_ER_Elysia_GER = {
+			allowed = { always = yes }
+			picture = BH3_ER_Elysia_GER
+			modifier = {
+				army_attack_factor = 0.02
+			}
+		}
+
+		BH3_ER_Elysia_SOV = {
+			allowed = { always = yes }
+			picture = BH3_ER_Elysia_SOV
+			modifier = {
+				army_defence_factor = 0.02
+			}
+		}
+	}
+}

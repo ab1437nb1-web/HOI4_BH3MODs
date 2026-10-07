@@ -1,0 +1,216 @@
+add_namespace = BHS
+#创建崩坏国家的事件
+country_event = {
+	id = BHS.1
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		set_global_flag = BHS_Started
+		set_variable = { global.HonkaiImpact_Beat_Country_Num = 0 } #统计崩坏阵营打败国家数量
+		set_variable = { global.HonkaiImpact_Casualty = 0 } #统计崩坏自身伤害人数（万人）
+		set_variable = { global.HonkaiImpact_Cause_Casualty = 0 } #统计崩坏造成军队伤亡（万人）
+		set_variable = { global.HonkaiImpact_Population_Total = 0 } #统计人口（百万人）
+		set_variable = { global.HonkaiImpact_State_Total = 0 } #统计全球地块
+		every_state = {
+			set_temp_variable = {BH3_state_population_m = THIS.state_population_k }
+			divide_temp_variable = { BH3_state_population_m = 1000 } 
+			add_to_variable = { global.HonkaiImpact_Population_Total = BH3_state_population_m } 
+		} 
+		round_variable = global.HonkaiImpact_Population_Total
+		BH3_BHS_start = yes
+		every_country = {
+			limit = { is_ai = no }
+			#触发爆发事件
+			set_country_flag = BHS_Start_event
+			play_song = "Befall"
+			country_event = { id = BHS.10 days = 1 }
+		}
+		var:global.BHS_StartLocation = {
+			set_variable = { global.HonkaiImpact_Cause_Population_Casualty = state_population_k } #统计崩坏造成人类伤亡（百万人）
+		}
+		divide_variable = { global.HonkaiImpact_Cause_Population_Casualty = 1000 } 
+		set_variable = { global.HonkaiImpact_Remain_Population_Casualty = global.HonkaiImpact_Population_Total } #统计剩余人口（百万人）
+		subtract_from_variable = { global.HonkaiImpact_Remain_Population_Casualty = HonkaiImpact_Cause_Population_Casualty }
+		# 计算侵蚀人口百分比
+		set_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Cause_Population_Casualty }
+		divide_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = global.HonkaiImpact_Population_Total }
+		multiply_variable = { global.HonkaiImpact_Cause_Population_Casualty_p = 100 }
+	}
+}
+
+#示现此世之兽移动
+country_event = {
+	id = BHS.2
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	immediate = {
+		BH3_BHS_MonsterBossBHS_move = yes
+	}
+}
+
+#崩坏爆发导致神之键失效
+country_event = {
+	id = BHS.10
+	title = BHS.10.t
+	desc = BHS.10.d
+	picture = GFX_event_BHS10
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.10.a
+	}
+}
+
+#崩坏警告事件
+country_event = {
+	id = BHS.11
+	title = BHS.11.t
+	desc = BHS.11.d
+	picture = GFX_event_BHS11
+	is_triggered_only = yes
+	immediate = {
+
+	}
+	option = {
+		name = BHS.11.a
+		var:global.BHSLandingCountry = {
+			add_timed_idea = { idea = BH3_predict_effect days = 28 }
+		}
+	}
+}
+#崩坏能浓度达到，崩坏兽登陆
+country_event = {
+	id = BHS.12
+	title = BHS.12.t
+	desc = BHS.12.d
+	picture = GFX_event_BHS12
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.12.a
+	}
+}
+
+#抽取高低活性idea
+country_event = {
+	id = BHS.13
+	title = BHS.13.t
+	desc = BHS.13.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.13.a
+	}
+}
+
+#抽取中活性idea
+country_event = {
+	id = BHS.14
+	title = BHS.14.t
+	desc = BHS.14.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.14.a
+	}
+}
+
+#抽取低活性idea
+country_event = {
+	id = BHS.15
+	title = BHS.15.t
+	desc = BHS.15.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.15.a
+	}
+}
+
+#阶段I转II
+country_event = {
+	id = BHS.21
+	title = BHS.21.t
+	desc = BHS.21.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.21.a
+	}
+}
+#阶段II转III
+country_event = {
+	id = BHS.22
+	title = BHS.22.t
+	desc = BHS.22.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.22.a
+	}
+}
+#阶段III转IV
+country_event = {
+	id = BHS.23
+	title = BHS.23.t
+	desc = BHS.23.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.23.a
+	}
+}
+#阶段IV转V
+country_event = {
+	id = BHS.24
+	title = BHS.24.t
+	desc = BHS.24.d
+	picture = GFX_Portrait_BHS
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.24.a
+	}
+}
+
+#崩坏获得核熔蚀抗性
+country_event = {
+	id = BHS.25
+	title = BHS.25.t
+	desc = BHS.25.d
+	picture = GFX_event_BHS25
+	is_triggered_only = yes
+	immediate = {
+		
+	}
+	option = {
+		name = BHS.25.a
+	}
+}
