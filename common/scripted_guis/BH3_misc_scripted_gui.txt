@@ -10,12 +10,14 @@ scripted_gui = {
 				set_country_flag = BH3_main_menu_open
 				clr_country_flag = BH3_tech_menu_open
 				clr_country_flag = BH3_Valkyrie_Doctrine_on
+				clr_country_flag = BH3_ER_menu_open
 				scoped_sound_effect = CaptainOnTheBridge
 			}
 			BH3_Hyperion_Menu_Secretary_btn_click = {
 				set_country_flag = BH3_main_menu_open
 				clr_country_flag = BH3_tech_menu_open
 				clr_country_flag = BH3_Valkyrie_Doctrine_on
+				clr_country_flag = BH3_ER_menu_open
 				if = {
 					limit = { has_country_flag = BH3_Hyperion_Secretary_Elysia }
 					BH3_Secretary_Elysia_sound_effect_OnBridge = yes

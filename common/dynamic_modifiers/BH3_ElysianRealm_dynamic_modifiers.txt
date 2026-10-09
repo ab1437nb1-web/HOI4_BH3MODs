@@ -603,3 +603,13 @@ BH3_ER_Pardofelis_Trade_dm = {
 	country_resource_aluminium = BH3_ER_Pardofelis_aluminium
 	country_resource_rubber = BH3_ER_Pardofelis_rubber
 }
+
+# ================= 天慧·「陷阱提案」：目标国的"被拖累"减益 =================
+# 由 common/operations/BH3_ElysianRealm_operations.txt 的行动成功后授予（带 days，无需重置决议处理）。
+BH3_ER_Bodhi_TrapDebuff = {
+	icon = GFX_modifiers_BHSinvasion_effect
+	enable = { always = yes }
+	planning_speed = -0.30
+	army_attack_factor = -0.15
+	war_support_weekly = -0.05
+}

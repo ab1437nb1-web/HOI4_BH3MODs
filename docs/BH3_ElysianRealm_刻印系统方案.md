@@ -273,3 +273,70 @@
 2. **独立本地化文件崩溃之谜**：现象稳定复现（我自己的 yml 文件在场即崩，不在场即正常），但内容/编码/行尾/键名均已排除；当前以"并入 mod 文件"绕开，后续若要新增独立 loc 文件需先做小样本验证；
 3. **P2**：其余 11 派系（每派系 3 普通 + 核心 + 增幅）、跨派系随机抽签、重置按持有精确返还；各派系的"状态条件"按主题细化（鏖灭=组织度低、浮生=组织度高、旭光=夜间等）；
 4. **P3**：真我（爱莉希雅）定制刻印；13 枚刻印与钥匙的专属美术。
+
+---
+
+## 十二、实施记录：抽取机制原作化 + GUI 化（2026-10-09）
+
+### 目标
+
+1. **抽卡机制与原作一致**：原作每层是"三扇传送门 → 门内三枚刻印选其一"；旧实现是"决议 → 事件选类别 → 盲抽派系"。改为**一次性给出三个具体候选（系徽可见），点选其一获得该系下一枚刻印**。
+2. **整体迁出决议组**：往事乐土的全部交互（抽取 / 放弃 / 重置 / 12 系持有展示 / 无限增殖 / 空梦交易所）从决议列表迁入 GUI 窗口。
+   - 2026-10-09 白天版：挂在决议分类面板上（`context_type = decision_category` 内嵌）——**当晚被用户否定**（用户要求接入崩坏3主菜单体系，而非在决议界面自创界面）。
+   - 2026-10-09 夜晚定稿：**主菜单子窗口模式**，与「女武神科技」「作战学说」并列。
+
+### 新抽取规则（与原作逐条对应）
+
+| 原作 | mod 实现 |
+|---|---|
+| 进入刻印门，门内随机 3 枚刻印，三选一 | 点「进入试炼」（50 把钥匙）→ `random_list`（变量权重）生成 3 个互不重复的候选派系（`BH3_ER_cand1/2/3`）→ 界面显示 3 张候选卡（系徽图标，悬停显示该系**下一枚**刻印的完整名称与效果） |
+| 重复获得同系刻印 = 升级 | 同系自动递进 Ⅰ→Ⅱ→Ⅲ→核心→增幅（授予链 `BH3_ER_grant_<系>` 按持有进度给下一枚） |
+| 集齐 3 枚普通 → 核心入池 | 权重规则：未到 Ⅲ 的系权重 1；有 Ⅲ 无核心 → 候选给核心；有核心无增幅 → 候选给增幅；全齐 → 权重 0 |
+| 门数恒为 3 | 候选不足 3 个时给出「放弃本次（全额返还 50 钥匙）」；全部集齐后抽取按钮禁用 |
+| —（原作无） | 重置按钮：清空全部刻印返还 25 钥匙（沿用旧口径） |
+
+### 文件清单
+
+| 文件 | 内容 |
+|---|---|
+| `common/scripted_effects/BH3_ElysianRealm_scripted_effects.txt`（新） | `BH3_ER_roll_candidates`（权重计算+三轮抽取，抽中即清零权重防重复）、`BH3_ER_cancel_draw`、`BH3_ER_reset`、`BH3_ER_grant_<系>`×12（含各系核心/增幅的多动态修正组合与刹那核心特技）、`BH3_ER_pardofelis_sell_<1..3>`；**10-09 夜修复权重 bug**：原逻辑「无Ⅲ才给权重」导致集齐 Ⅲ 后核心/增幅永不可抽、候选随持有数增加而缺失，改为「有增幅=0，其余均为 1」（授予链自动递进，核心/增幅自然入候选） |
+| `common/scripted_guis/BH3_ElysianRealm_scripted_gui.txt`（新，主菜单版） | `BH3_ER_menu`：`context_type = player_context`，`parent_window_name = "BH3_main_menu"`，`visible = has_country_flag = BH3_ER_menu_open`；3 主按钮 + 36 候选卡（3 槽 × 12 系）+ 7 无限增殖 + 3 空梦交易 + 12 系徽 + 返回钮的 effects/triggers |
+| `interface/BH3_ER_menu.gui`（新） | **全屏覆盖式主界面**（1400×700 UPPER_LEFT，与科技/学说菜单同规格；10-09 夜由 460×545 悬浮窗改为全覆盖，背景换 `GFX_BH3_tech_menu_bg` 深蓝底以提升白系徽可读性；右上 `GFX_BH3_return_btn` 返回主菜单 + ESCAPE 快捷键）：标题 → 抽取钮 → 三候选卡 → 放弃/重置 → 12 系徽 6×2 → 无限增殖 3×3 → 空梦交易，整体居中 |
+| ~~`interface/BH3_ElysianRealm_window.gui`~~ | **已删除**（决议面板内嵌版，被主菜单方案取代）；`common/decisions/categories/Valkyrie_categories.txt` 中的 `scripted_gui = BH3_ElysianRealm_window` 行同步移除，`BH3_ElysianRealm_group` 分类保留为空分类 |
+| `interface/BH3_tech.gui`（改） | 主菜单**原「作战学说」位置**（700,250）改放往事乐土入口 `BH3_main_menu_er_btn`（复用六边形 `GFX_BH3_main_menu_item`）+ 图标 `icon_BH3_main_menu_er`（爱莉希雅系徽，scale 2.3 放大至约 138×156）+ 文字框（790,440）；**学说按钮三件套已移除**（学说系统将按精通度学说重置后再恢复，贴图 `GFX_BH3_main_menu_doctrine` 保留未删） |
+| `interface/BH3_tech.gfx`（改） | 新增 `GFX_BH3_main_menu_elysianrealm` → `gfx/interface/elysianrealm/signet_Elysia.png` |
+| `common/scripted_guis/BH3_tech_scripted_gui.txt`（改） | `BH3_main_menu_er_btn_click`：置 `BH3_ER_menu_open`，同时清 `BH3_tech_menu_open` / `BH3_Valkyrie_Doctrine_on`（入口互斥）；主菜单关闭钮、科技入口同步清 `BH3_ER_menu_open`；`BH3_main_menu_doctrine_btn_click` 随按钮一并移除 |
+| `common/scripted_guis/BH3_ElysianRealm_scripted_gui.txt`（改，10-09 夜） | 返回钮效果改为「清 `BH3_ER_menu_open` + 置 `BH3_main_menu_open`」（同科技菜单 X 钮惯例） |
+| `common/scripted_guis/BH3_misc_scripted_gui.txt`（改） | 两处打开主菜单的 effect（`BH3_Hyperion_Menu_btn_click` / `_Secretary_btn_click`）追加 `clr_country_flag = BH3_ER_menu_open`，防残留 |
+| `common/scripted_localisation/BH3_ElysianRealm_scripted_loc.txt`（改，10-09 深夜） | 新增 `BHER_lock_tip` 动态文本：未解锁时主菜单按钮 tooltip 显示「请先在特殊项目中完成往事乐土项目」提示；`BH3_tech.gui` 按钮 tooltip 改为 `[BHER_lock_tip]`，`BH3_main_menu_er_btn_click_enabled` 要求 `BH3_ElysianRealm_unlocked`（未解锁按钮置灰） |
+| `common/scripted_localisation/BH3_ElysianRealm_scripted_loc.txt`（新） | `BHER_cand1/2/3_card`（每槽 60 条件项：候选派系 × 该系下一档 → 卡面 loc）+ `BHER_stat_<系>`×12（持有状态 tooltip，6 态） |
+| `common/decisions/BH3_ElysianRealm_decisions.txt` | **已删除**（原 13 个决议全部 GUI 化） |
+| `events/BH3_ElysianRealm_event.txt` | **已删除**（三选一事件由 GUI 取代；其 loc 键留作无害孤儿） |
+| `common/decisions/categories/Valkyrie_categories.txt`（改） | 移除 `scripted_gui` 行（见上） |
+| `common/on_actions/BH3_ElysianRealm_on_actions.txt`（改） | `on_weekly` 追加两个冷却变量递减（`BH3_ER_mobius_cd` / `BH3_ER_pardofelis_cd`，每周 −1，=4 约 30 天，粒度与原 `days_re_enable = 30` 一致） |
+| `localisation/BH3_equipment_l_english.yml` / `simp_chinese/...`（追加 174+1 键 ×2） | 候选卡面 60（名+效果说明）、系状态 72、GUI 按钮/提示、`BH3_ER_menu_title`（窗口标题/主菜单按钮 tooltip）；沿用「并入现有 yml」规避独立 loc 崩溃问题 |
+| `localisation/BH3_tech_l_english.yml` / `simp_chinese/...`（追加 1 键 ×2） | `BH3_main_menu_er_btn_TextBox_tt`（往事乐土 / Elysian Realm） |
+| `tools/gen_elysian_gui.py` | 全部上述重复内容的生成器（可复跑，yml 追加幂等） |
+
+### 附带修正
+
+- 旧事件授予逻辑里浮生/戒律/旭光核心的动态修正组合与重置清单不一致（重置漏 `Bodhi_Core_dm`）；新版 `grant` 与 `reset` 共用同一生成源（`TIER_DM` 表），必然一致。
+
+### 待游戏内验证（建议清单）
+
+1. 打开崩坏3主菜单（Hyperion 舰桥界面），右侧出现第三个大按钮「往事乐土」（爱莉希雅系徽图标）；
+2. 点「往事乐土」→ 弹出往事乐土子窗口（标题「往事乐土 · 刻印试炼」、可拖动、右上可关闭）；再点「女武神科技」/「作战学说」应互斥切换，关主菜单后子窗口不残留；
+3. 钥匙 ≥50 时「进入试炼」可点，点击后出现 3 张系徽候选卡，悬停显示正确的「下一枚刻印」名称与效果；
+4. 点选候选卡后获得对应刻印（民族精神 + 开战时动态修正），候选区清空、按钮恢复；
+5. 「放弃本次」全额返还 50 钥匙；「重置全部刻印」清空并返还 25；
+6. 无限增殖 7 按钮消耗 50 PP、约 30 天冷却；空梦交易所 3 按钮拆厂换资源；
+7. 12 系徽 tooltip 显示已持有列表与下一枚；
+8. 全部 60 枚集齐后抽取按钮禁用；
+9. 决议分类「往事乐土」不再显示自定义窗口（恢复为空分类，入口仅走主菜单）。
+
+### 已知限制
+
+- 主菜单第三个按钮的图标直接复用爱莉希雅系徽白图（60×68），比科技/学说的大图标小，风格上是白图线稿系徽，观感待肉眼确认；
+- 窗口为舰桥背景平铺（`GFX_BH3_main_menu_bg` cornered tile），与主菜单同底图；若太花可换 `GFX_BH3_tech_menu_bg` 或加纯色底板；
+- 候选卡的「卡面文字」是 60 个静态组合（由生成器产出），新增/调整刻印数值后需复跑生成器同步文案；
+- AI 不会与窗口交互（与原决议 `ai_will_do = 0` 一致）。

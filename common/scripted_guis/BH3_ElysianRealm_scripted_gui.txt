@@ -1,0 +1,278 @@
+scripted_gui = {
+	# 往事乐土主窗口（2026-10-09：接入崩坏3主菜单体系，作为其子窗口，取代原决议列表）
+	BH3_ER_menu = {
+	    context_type = player_context
+		window_name = "BH3_ER_menu"
+		parent_window_name = "BH3_main_menu"
+		visible = { has_country_flag = BH3_ER_menu_open }
+
+		effects = {
+			BH3_ER_menu_x_btn_click = {
+				clr_country_flag = BH3_ER_menu_open
+				set_country_flag = BH3_main_menu_open
+			}
+			BH3_ER_draw_btn_click = {
+				add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -50 }
+				BH3_ER_roll_candidates = yes
+			}
+			BH3_ER_cancel_btn_click = { BH3_ER_cancel_draw = yes }
+			BH3_ER_reset_btn_click = { BH3_ER_reset = yes }
+			BH3_ER_take_1_Savior_click = { BH3_ER_grant_Savior = yes }
+			BH3_ER_take_1_Setsuna_click = { BH3_ER_grant_Setsuna = yes }
+			BH3_ER_take_1_Bodhi_click = { BH3_ER_grant_Bodhi = yes }
+			BH3_ER_take_1_Gold_click = { BH3_ER_grant_Gold = yes }
+			BH3_ER_take_1_Kalpas_click = { BH3_ER_grant_Kalpas = yes }
+			BH3_ER_take_1_Fusheng_click = { BH3_ER_grant_Fusheng = yes }
+			BH3_ER_take_1_Aponia_click = { BH3_ER_grant_Aponia = yes }
+			BH3_ER_take_1_Spiral_click = { BH3_ER_grant_Spiral = yes }
+			BH3_ER_take_1_Mobius_click = { BH3_ER_grant_Mobius = yes }
+			BH3_ER_take_1_Kosma_click = { BH3_ER_grant_Kosma = yes }
+			BH3_ER_take_1_Griseo_click = { BH3_ER_grant_Griseo = yes }
+			BH3_ER_take_1_Pardofelis_click = { BH3_ER_grant_Pardofelis = yes }
+			BH3_ER_take_2_Savior_click = { BH3_ER_grant_Savior = yes }
+			BH3_ER_take_2_Setsuna_click = { BH3_ER_grant_Setsuna = yes }
+			BH3_ER_take_2_Bodhi_click = { BH3_ER_grant_Bodhi = yes }
+			BH3_ER_take_2_Gold_click = { BH3_ER_grant_Gold = yes }
+			BH3_ER_take_2_Kalpas_click = { BH3_ER_grant_Kalpas = yes }
+			BH3_ER_take_2_Fusheng_click = { BH3_ER_grant_Fusheng = yes }
+			BH3_ER_take_2_Aponia_click = { BH3_ER_grant_Aponia = yes }
+			BH3_ER_take_2_Spiral_click = { BH3_ER_grant_Spiral = yes }
+			BH3_ER_take_2_Mobius_click = { BH3_ER_grant_Mobius = yes }
+			BH3_ER_take_2_Kosma_click = { BH3_ER_grant_Kosma = yes }
+			BH3_ER_take_2_Griseo_click = { BH3_ER_grant_Griseo = yes }
+			BH3_ER_take_2_Pardofelis_click = { BH3_ER_grant_Pardofelis = yes }
+			BH3_ER_take_3_Savior_click = { BH3_ER_grant_Savior = yes }
+			BH3_ER_take_3_Setsuna_click = { BH3_ER_grant_Setsuna = yes }
+			BH3_ER_take_3_Bodhi_click = { BH3_ER_grant_Bodhi = yes }
+			BH3_ER_take_3_Gold_click = { BH3_ER_grant_Gold = yes }
+			BH3_ER_take_3_Kalpas_click = { BH3_ER_grant_Kalpas = yes }
+			BH3_ER_take_3_Fusheng_click = { BH3_ER_grant_Fusheng = yes }
+			BH3_ER_take_3_Aponia_click = { BH3_ER_grant_Aponia = yes }
+			BH3_ER_take_3_Spiral_click = { BH3_ER_grant_Spiral = yes }
+			BH3_ER_take_3_Mobius_click = { BH3_ER_grant_Mobius = yes }
+			BH3_ER_take_3_Kosma_click = { BH3_ER_grant_Kosma = yes }
+			BH3_ER_take_3_Griseo_click = { BH3_ER_grant_Griseo = yes }
+			BH3_ER_take_3_Pardofelis_click = { BH3_ER_grant_Pardofelis = yes }
+			BH3_ER_mob_steel_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_steel = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_aluminium_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_aluminium = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_rubber_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_rubber = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_tungsten_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_tungsten = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_chromium_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_chromium = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_oil_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_oil = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_mob_coal_click = {
+				add_political_power = -50
+				add_to_variable = { BH3_ER_Mobius_coal = 5 }
+				set_variable = { BH3_ER_mobius_cd = 4 }
+			}
+			BH3_ER_pard_1_click = {
+				BH3_ER_pardofelis_sell_1 = yes
+				set_variable = { BH3_ER_pardofelis_cd = 4 }
+			}
+			BH3_ER_pard_2_click = {
+				BH3_ER_pardofelis_sell_2 = yes
+				set_variable = { BH3_ER_pardofelis_cd = 4 }
+			}
+			BH3_ER_pard_3_click = {
+				BH3_ER_pardofelis_sell_3 = yes
+				set_variable = { BH3_ER_pardofelis_cd = 4 }
+			}
+		}
+
+		triggers = {
+			BH3_ER_draw_btn_click_enabled = {
+				has_country_flag = BH3_ElysianRealm_unlocked
+				has_equipment = { BH3_FlawlessKey_equipment > 49 }
+				NOT = { check_variable = { BH3_ER_drawing = 1 } }
+				OR = {
+					NOT = { has_idea = BH3_ER_Savior_Amp }
+					NOT = { has_idea = BH3_ER_Setsuna_Amp }
+					NOT = { has_idea = BH3_ER_Bodhi_Amp }
+					NOT = { has_idea = BH3_ER_Gold_Amp }
+					NOT = { has_idea = BH3_ER_Kalpas_Amp }
+					NOT = { has_idea = BH3_ER_Fusheng_Amp }
+					NOT = { has_idea = BH3_ER_Aponia_Amp }
+					NOT = { has_idea = BH3_ER_Spiral_Amp }
+					NOT = { has_idea = BH3_ER_Mobius_Amp }
+					NOT = { has_idea = BH3_ER_Kosma_Amp }
+					NOT = { has_idea = BH3_ER_Griseo_Amp }
+					NOT = { has_idea = BH3_ER_Pardofelis_Amp }
+				}
+			}
+			BH3_ER_cancel_btn_visible = { check_variable = { BH3_ER_drawing = 1 } }
+			BH3_ER_reset_btn_click_enabled = {
+				OR = {
+				has_idea = BH3_ER_Savior_1
+				has_idea = BH3_ER_Savior_2
+				has_idea = BH3_ER_Savior_3
+				has_idea = BH3_ER_Savior_Core
+				has_idea = BH3_ER_Savior_Amp
+				has_idea = BH3_ER_Setsuna_1
+				has_idea = BH3_ER_Setsuna_2
+				has_idea = BH3_ER_Setsuna_3
+				has_idea = BH3_ER_Setsuna_Core
+				has_idea = BH3_ER_Setsuna_Amp
+				has_idea = BH3_ER_Bodhi_1
+				has_idea = BH3_ER_Bodhi_2
+				has_idea = BH3_ER_Bodhi_3
+				has_idea = BH3_ER_Bodhi_Core
+				has_idea = BH3_ER_Bodhi_Amp
+				has_idea = BH3_ER_Gold_1
+				has_idea = BH3_ER_Gold_2
+				has_idea = BH3_ER_Gold_3
+				has_idea = BH3_ER_Gold_Core
+				has_idea = BH3_ER_Gold_Amp
+				has_idea = BH3_ER_Kalpas_1
+				has_idea = BH3_ER_Kalpas_2
+				has_idea = BH3_ER_Kalpas_3
+				has_idea = BH3_ER_Kalpas_Core
+				has_idea = BH3_ER_Kalpas_Amp
+				has_idea = BH3_ER_Fusheng_1
+				has_idea = BH3_ER_Fusheng_2
+				has_idea = BH3_ER_Fusheng_3
+				has_idea = BH3_ER_Fusheng_Core
+				has_idea = BH3_ER_Fusheng_Amp
+				has_idea = BH3_ER_Aponia_1
+				has_idea = BH3_ER_Aponia_2
+				has_idea = BH3_ER_Aponia_3
+				has_idea = BH3_ER_Aponia_Core
+				has_idea = BH3_ER_Aponia_Amp
+				has_idea = BH3_ER_Spiral_1
+				has_idea = BH3_ER_Spiral_2
+				has_idea = BH3_ER_Spiral_3
+				has_idea = BH3_ER_Spiral_Core
+				has_idea = BH3_ER_Spiral_Amp
+				has_idea = BH3_ER_Mobius_1
+				has_idea = BH3_ER_Mobius_2
+				has_idea = BH3_ER_Mobius_3
+				has_idea = BH3_ER_Mobius_Core
+				has_idea = BH3_ER_Mobius_Amp
+				has_idea = BH3_ER_Kosma_1
+				has_idea = BH3_ER_Kosma_2
+				has_idea = BH3_ER_Kosma_3
+				has_idea = BH3_ER_Kosma_Core
+				has_idea = BH3_ER_Kosma_Amp
+				has_idea = BH3_ER_Griseo_1
+				has_idea = BH3_ER_Griseo_2
+				has_idea = BH3_ER_Griseo_3
+				has_idea = BH3_ER_Griseo_Core
+				has_idea = BH3_ER_Griseo_Amp
+				has_idea = BH3_ER_Pardofelis_1
+				has_idea = BH3_ER_Pardofelis_2
+				has_idea = BH3_ER_Pardofelis_3
+				has_idea = BH3_ER_Pardofelis_Core
+				has_idea = BH3_ER_Pardofelis_Amp
+				}
+			}
+			BH3_ER_take_1_Savior_visible = { check_variable = { BH3_ER_cand1 = 1 } }
+			BH3_ER_take_1_Setsuna_visible = { check_variable = { BH3_ER_cand1 = 2 } }
+			BH3_ER_take_1_Bodhi_visible = { check_variable = { BH3_ER_cand1 = 3 } }
+			BH3_ER_take_1_Gold_visible = { check_variable = { BH3_ER_cand1 = 4 } }
+			BH3_ER_take_1_Kalpas_visible = { check_variable = { BH3_ER_cand1 = 5 } }
+			BH3_ER_take_1_Fusheng_visible = { check_variable = { BH3_ER_cand1 = 6 } }
+			BH3_ER_take_1_Aponia_visible = { check_variable = { BH3_ER_cand1 = 7 } }
+			BH3_ER_take_1_Spiral_visible = { check_variable = { BH3_ER_cand1 = 8 } }
+			BH3_ER_take_1_Mobius_visible = { check_variable = { BH3_ER_cand1 = 9 } }
+			BH3_ER_take_1_Kosma_visible = { check_variable = { BH3_ER_cand1 = 10 } }
+			BH3_ER_take_1_Griseo_visible = { check_variable = { BH3_ER_cand1 = 11 } }
+			BH3_ER_take_1_Pardofelis_visible = { check_variable = { BH3_ER_cand1 = 12 } }
+			BH3_ER_take_2_Savior_visible = { check_variable = { BH3_ER_cand2 = 1 } }
+			BH3_ER_take_2_Setsuna_visible = { check_variable = { BH3_ER_cand2 = 2 } }
+			BH3_ER_take_2_Bodhi_visible = { check_variable = { BH3_ER_cand2 = 3 } }
+			BH3_ER_take_2_Gold_visible = { check_variable = { BH3_ER_cand2 = 4 } }
+			BH3_ER_take_2_Kalpas_visible = { check_variable = { BH3_ER_cand2 = 5 } }
+			BH3_ER_take_2_Fusheng_visible = { check_variable = { BH3_ER_cand2 = 6 } }
+			BH3_ER_take_2_Aponia_visible = { check_variable = { BH3_ER_cand2 = 7 } }
+			BH3_ER_take_2_Spiral_visible = { check_variable = { BH3_ER_cand2 = 8 } }
+			BH3_ER_take_2_Mobius_visible = { check_variable = { BH3_ER_cand2 = 9 } }
+			BH3_ER_take_2_Kosma_visible = { check_variable = { BH3_ER_cand2 = 10 } }
+			BH3_ER_take_2_Griseo_visible = { check_variable = { BH3_ER_cand2 = 11 } }
+			BH3_ER_take_2_Pardofelis_visible = { check_variable = { BH3_ER_cand2 = 12 } }
+			BH3_ER_take_3_Savior_visible = { check_variable = { BH3_ER_cand3 = 1 } }
+			BH3_ER_take_3_Setsuna_visible = { check_variable = { BH3_ER_cand3 = 2 } }
+			BH3_ER_take_3_Bodhi_visible = { check_variable = { BH3_ER_cand3 = 3 } }
+			BH3_ER_take_3_Gold_visible = { check_variable = { BH3_ER_cand3 = 4 } }
+			BH3_ER_take_3_Kalpas_visible = { check_variable = { BH3_ER_cand3 = 5 } }
+			BH3_ER_take_3_Fusheng_visible = { check_variable = { BH3_ER_cand3 = 6 } }
+			BH3_ER_take_3_Aponia_visible = { check_variable = { BH3_ER_cand3 = 7 } }
+			BH3_ER_take_3_Spiral_visible = { check_variable = { BH3_ER_cand3 = 8 } }
+			BH3_ER_take_3_Mobius_visible = { check_variable = { BH3_ER_cand3 = 9 } }
+			BH3_ER_take_3_Kosma_visible = { check_variable = { BH3_ER_cand3 = 10 } }
+			BH3_ER_take_3_Griseo_visible = { check_variable = { BH3_ER_cand3 = 11 } }
+			BH3_ER_take_3_Pardofelis_visible = { check_variable = { BH3_ER_cand3 = 12 } }
+			BH3_ER_mob_steel_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_steel_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_aluminium_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_aluminium_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_rubber_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_rubber_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_tungsten_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_tungsten_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_chromium_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_chromium_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_oil_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_oil_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_mob_coal_visible = { has_idea = BH3_ER_Mobius_Core }
+			BH3_ER_mob_coal_click_enabled = {
+				has_political_power > 49
+				NOT = { check_variable = { BH3_ER_mobius_cd > 0 } }
+			}
+			BH3_ER_pard_1_visible = { has_idea = BH3_ER_Pardofelis_Core }
+			BH3_ER_pard_1_click_enabled = {
+				num_of_civilian_factories > 0
+				NOT = { check_variable = { BH3_ER_pardofelis_cd > 0 } }
+			}
+			BH3_ER_pard_2_visible = { has_idea = BH3_ER_Pardofelis_Core }
+			BH3_ER_pard_2_click_enabled = {
+				num_of_civilian_factories > 0
+				NOT = { check_variable = { BH3_ER_pardofelis_cd > 0 } }
+			}
+			BH3_ER_pard_3_visible = { has_idea = BH3_ER_Pardofelis_Core }
+			BH3_ER_pard_3_click_enabled = {
+				num_of_civilian_factories > 0
+				NOT = { check_variable = { BH3_ER_pardofelis_cd > 0 } }
+			}
+		}
+	}
+}

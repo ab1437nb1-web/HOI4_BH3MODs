@@ -1,0 +1,430 @@
+guiTypes = {
+
+	# 往事乐土主界面（2026-10-09：改为全屏覆盖式，与「女武神科技」「作战学说」一致；原 460×545 布局平移居中）
+	containerWindowType = {
+		name = "BH3_ER_menu"
+		position = { x = 0 y = 0 }
+		size = { width = 1400 height = 700 }
+		orientation = UPPER_LEFT
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_BH3_tech_menu_bg"
+		}
+
+		# 返回主菜单（与科技菜单 X 钮行为一致）
+		buttonType = {
+			name = "BH3_ER_menu_x_btn"
+			position = { x = -60 y = 0 }
+			quadTextureSprite ="GFX_BH3_return_btn"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = BH3_Click_X
+			pdx_tooltip = "CLOSE"
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_menu_title"
+			position = { x = 485 y = 89 }
+			font = "hoi_30header"
+			text = "BH3_ER_menu_title"
+			maxWidth = 340
+			maxHeight = 40
+			format = left
+			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "BH3_ER_draw_btn"
+			position = { x = 500 y = 133 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_gui_draw_tt"
+			buttonText = "BH3_ER_gui_draw"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Savior"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Savior"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Setsuna"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Setsuna"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Bodhi"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Bodhi"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Gold"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Gold"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Kalpas"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kalpas"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Fusheng"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Fusheng"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Aponia"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Aponia"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Spiral"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Spiral"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Mobius"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Mobius"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Kosma"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kosma"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Griseo"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Griseo"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_1_Pardofelis"
+			position = { x = 515 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Pardofelis"
+			pdx_tooltip = "BH3_ER_cand1_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Savior"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Savior"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Setsuna"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Setsuna"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Bodhi"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Bodhi"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Gold"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Gold"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Kalpas"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kalpas"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Fusheng"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Fusheng"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Aponia"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Aponia"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Spiral"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Spiral"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Mobius"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Mobius"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Kosma"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kosma"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Griseo"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Griseo"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_2_Pardofelis"
+			position = { x = 685 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Pardofelis"
+			pdx_tooltip = "BH3_ER_cand2_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Savior"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Savior"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Setsuna"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Setsuna"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Bodhi"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Bodhi"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Gold"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Gold"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Kalpas"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kalpas"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Fusheng"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Fusheng"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Aponia"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Aponia"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Spiral"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Spiral"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Mobius"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Mobius"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Kosma"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Kosma"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Griseo"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Griseo"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_take_3_Pardofelis"
+			position = { x = 855 y = 193 }
+			spriteType = "GFX_idea_BH3_ER_Pardofelis"
+			pdx_tooltip = "BH3_ER_cand3_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_cancel_btn"
+			position = { x = 500 y = 275 }
+			spriteType = "GFX_BH3_Intro_200x50_alpha_btn"
+			pdx_tooltip = "BH3_ER_gui_cancel_tt"
+			buttonText = "BH3_ER_gui_cancel"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_reset_btn"
+			position = { x = 710 y = 275 }
+			spriteType = "GFX_BH3_Intro_200x50_alpha_btn"
+			pdx_tooltip = "BH3_ER_gui_reset_tt"
+			buttonText = "BH3_ER_gui_reset"
+			buttonFont = "hoi_16mbs"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Savior"
+			position = { x = 490 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Savior"
+			pdx_tooltip = "BH3_ER_fac_Savior_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Setsuna"
+			position = { x = 562 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Setsuna"
+			pdx_tooltip = "BH3_ER_fac_Setsuna_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Bodhi"
+			position = { x = 634 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Bodhi"
+			pdx_tooltip = "BH3_ER_fac_Bodhi_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Gold"
+			position = { x = 706 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Gold"
+			pdx_tooltip = "BH3_ER_fac_Gold_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Kalpas"
+			position = { x = 778 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Kalpas"
+			pdx_tooltip = "BH3_ER_fac_Kalpas_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Fusheng"
+			position = { x = 850 y = 339 }
+			spriteType = "GFX_idea_BH3_ER_Fusheng"
+			pdx_tooltip = "BH3_ER_fac_Fusheng_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Aponia"
+			position = { x = 490 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Aponia"
+			pdx_tooltip = "BH3_ER_fac_Aponia_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Spiral"
+			position = { x = 562 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Spiral"
+			pdx_tooltip = "BH3_ER_fac_Spiral_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Mobius"
+			position = { x = 634 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Mobius"
+			pdx_tooltip = "BH3_ER_fac_Mobius_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Kosma"
+			position = { x = 706 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Kosma"
+			pdx_tooltip = "BH3_ER_fac_Kosma_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Griseo"
+			position = { x = 778 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Griseo"
+			pdx_tooltip = "BH3_ER_fac_Griseo_tt"
+		}
+		iconType = {
+			name = "BH3_ER_fac_Pardofelis"
+			position = { x = 850 y = 415 }
+			spriteType = "GFX_idea_BH3_ER_Pardofelis"
+			pdx_tooltip = "BH3_ER_fac_Pardofelis_tt"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_steel"
+			position = { x = 490 y = 497 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_steel_tt"
+			buttonText = "BH3_ER_gui_mob_steel"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_aluminium"
+			position = { x = 610 y = 497 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_aluminium_tt"
+			buttonText = "BH3_ER_gui_mob_aluminium"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_rubber"
+			position = { x = 730 y = 497 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_rubber_tt"
+			buttonText = "BH3_ER_gui_mob_rubber"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_tungsten"
+			position = { x = 490 y = 527 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_tungsten_tt"
+			buttonText = "BH3_ER_gui_mob_tungsten"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_chromium"
+			position = { x = 610 y = 527 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_chromium_tt"
+			buttonText = "BH3_ER_gui_mob_chromium"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_oil"
+			position = { x = 730 y = 527 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_oil_tt"
+			buttonText = "BH3_ER_gui_mob_oil"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_mob_coal"
+			position = { x = 490 y = 557 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_mob_coal_tt"
+			buttonText = "BH3_ER_gui_mob_coal"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_pard_1"
+			position = { x = 490 y = 587 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_pard_1_tt"
+			buttonText = "BH3_ER_gui_pard_1"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_pard_2"
+			position = { x = 610 y = 587 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_pard_2_tt"
+			buttonText = "BH3_ER_gui_pard_2"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "BH3_ER_pard_3"
+			position = { x = 730 y = 587 }
+			spriteType = "GFX_BH3_Hyperion_Change_SecretaryX_btn"
+			pdx_tooltip = "BH3_ER_gui_pard_3_tt"
+			buttonText = "BH3_ER_gui_pard_3"
+			buttonFont = "hoi_16mbs"
+		}
+	}
+}

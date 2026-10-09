@@ -1,0 +1,78 @@
+# 往事乐土·天慧（苏）：「陷阱提案」情报行动（P2 收尾项）
+# 参照原版 operation_fake_intel 的字段结构（已核对原版 00_operations.txt）：
+#   * 不声明 target_type 时目标默认为"国家"（原版仅 strategic_region 类行动才声明 target_type）
+#   * visible/available 中 ROOT = 发起国、FROM = 目标国；目标国需有情报网（network_national_coverage）
+#   * 阶段名全部沿用原版 operation_phases，引擎自带，无需本 mod 定义
+# 机制：被策反的将领在目标国情报网协同下提出"拨款后勤"的假提案，实则将资金转入地下——
+#       成功后给目标国挂 120 天的「陷阱拖累」动态修正。
+
+BH3_ER_Bodhi_TrapProposal = {
+	icon = GFX_operations_fake_intel
+	map_icon = GFX_operations_fake_intel_map
+	name = BH3_ER_Bodhi_TrapProposal
+	desc = BH3_ER_Bodhi_TrapProposal_desc
+	priority = 10
+
+	days = 60
+	network_strength = 40
+	operatives = 1
+
+	# 由「天慧·核心刻印」解锁；需已建立情报机构；目标国需有我方情报网
+	visible = {
+		ROOT = {
+			has_idea = BH3_ER_Bodhi_Core
+			has_intelligence_agency = yes
+		}
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+	}
+
+	available = {
+		ROOT = {
+			has_idea = BH3_ER_Bodhi_Core
+			has_intelligence_agency = yes
+		}
+	}
+
+	equipment = {
+
+	}
+
+	risk_chance = 0.15
+	experience = 2
+
+	# 成功：目标国中招——看似拿到拨款的提案，实际计划速度与攻击被拖累、战争支持度流失
+	outcome_execute = {
+		FROM = {
+			add_dynamic_modifier = {
+				modifier = BH3_ER_Bodhi_TrapDebuff
+				days = 120
+			}
+		}
+	}
+
+	outcome_potential = {
+		FROM = {
+			add_dynamic_modifier = {
+				modifier = BH3_ER_Bodhi_TrapDebuff
+				days = 120
+			}
+		}
+	}
+
+	phases = { # 渗透：以"正常提案送审"的名义把网络节点送进目标国
+		infiltration_diplomatic = { base = 50 }
+		infiltration_border = { base = 50 }
+	}
+	phases = { # 提案运作：买通中层、伪造拨款流水（照抄原版"窃取蓝图"的阶段，伪装成正常事务）
+		steal_blueprints_middle_manager = { base = 34 }
+		steal_blueprints_bribe = { base = 33 }
+		steal_blueprints_seduction = { base = 33 }
+	}
+	phases = { # 撤出：资金已转入地下情报网，人间蒸发
+		exfiltration_go_to_ground = { base = 50 }
+		exfiltration_border = { base = 50 }
+	}
+}

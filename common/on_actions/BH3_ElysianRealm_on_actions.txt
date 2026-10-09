@@ -74,6 +74,15 @@ on_actions = {
 					}
 				}
 
+				# ================= GUI 按钮冷却（无限增殖 / 空梦交易所，每周递减 1，约 30 天）=================
+				if = {
+					limit = { check_variable = { BH3_ER_mobius_cd > 0 } }
+					subtract_from_variable = { BH3_ER_mobius_cd = 1 }
+				}
+				if = {
+					limit = { check_variable = { BH3_ER_pardofelis_cd > 0 } }
+					subtract_from_variable = { BH3_ER_pardofelis_cd = 1 }
+				}
 			}
 		}
 	}

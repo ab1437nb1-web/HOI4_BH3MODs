@@ -1,0 +1,1728 @@
+# 往事乐土动态文本（候选卡面 / 各系持有状态）
+defined_text = {
+	name = BHER_cand1_card
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 1 }
+			NOT = { has_idea = BH3_ER_Savior_1 }
+		}
+		localization_key = BH3_ER_card_Savior_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 1 }
+			has_idea = BH3_ER_Savior_1
+			NOT = { has_idea = BH3_ER_Savior_2 }
+		}
+		localization_key = BH3_ER_card_Savior_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 1 }
+			has_idea = BH3_ER_Savior_2
+			NOT = { has_idea = BH3_ER_Savior_3 }
+		}
+		localization_key = BH3_ER_card_Savior_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 1 }
+			has_idea = BH3_ER_Savior_3
+			NOT = { has_idea = BH3_ER_Savior_Core }
+		}
+		localization_key = BH3_ER_card_Savior_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 1 }
+			has_idea = BH3_ER_Savior_Core
+			NOT = { has_idea = BH3_ER_Savior_Amp }
+		}
+		localization_key = BH3_ER_card_Savior_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 2 }
+			NOT = { has_idea = BH3_ER_Setsuna_1 }
+		}
+		localization_key = BH3_ER_card_Setsuna_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 2 }
+			has_idea = BH3_ER_Setsuna_1
+			NOT = { has_idea = BH3_ER_Setsuna_2 }
+		}
+		localization_key = BH3_ER_card_Setsuna_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 2 }
+			has_idea = BH3_ER_Setsuna_2
+			NOT = { has_idea = BH3_ER_Setsuna_3 }
+		}
+		localization_key = BH3_ER_card_Setsuna_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 2 }
+			has_idea = BH3_ER_Setsuna_3
+			NOT = { has_idea = BH3_ER_Setsuna_Core }
+		}
+		localization_key = BH3_ER_card_Setsuna_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 2 }
+			has_idea = BH3_ER_Setsuna_Core
+			NOT = { has_idea = BH3_ER_Setsuna_Amp }
+		}
+		localization_key = BH3_ER_card_Setsuna_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 3 }
+			NOT = { has_idea = BH3_ER_Bodhi_1 }
+		}
+		localization_key = BH3_ER_card_Bodhi_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 3 }
+			has_idea = BH3_ER_Bodhi_1
+			NOT = { has_idea = BH3_ER_Bodhi_2 }
+		}
+		localization_key = BH3_ER_card_Bodhi_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 3 }
+			has_idea = BH3_ER_Bodhi_2
+			NOT = { has_idea = BH3_ER_Bodhi_3 }
+		}
+		localization_key = BH3_ER_card_Bodhi_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 3 }
+			has_idea = BH3_ER_Bodhi_3
+			NOT = { has_idea = BH3_ER_Bodhi_Core }
+		}
+		localization_key = BH3_ER_card_Bodhi_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 3 }
+			has_idea = BH3_ER_Bodhi_Core
+			NOT = { has_idea = BH3_ER_Bodhi_Amp }
+		}
+		localization_key = BH3_ER_card_Bodhi_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 4 }
+			NOT = { has_idea = BH3_ER_Gold_1 }
+		}
+		localization_key = BH3_ER_card_Gold_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 4 }
+			has_idea = BH3_ER_Gold_1
+			NOT = { has_idea = BH3_ER_Gold_2 }
+		}
+		localization_key = BH3_ER_card_Gold_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 4 }
+			has_idea = BH3_ER_Gold_2
+			NOT = { has_idea = BH3_ER_Gold_3 }
+		}
+		localization_key = BH3_ER_card_Gold_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 4 }
+			has_idea = BH3_ER_Gold_3
+			NOT = { has_idea = BH3_ER_Gold_Core }
+		}
+		localization_key = BH3_ER_card_Gold_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 4 }
+			has_idea = BH3_ER_Gold_Core
+			NOT = { has_idea = BH3_ER_Gold_Amp }
+		}
+		localization_key = BH3_ER_card_Gold_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 5 }
+			NOT = { has_idea = BH3_ER_Kalpas_1 }
+		}
+		localization_key = BH3_ER_card_Kalpas_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 5 }
+			has_idea = BH3_ER_Kalpas_1
+			NOT = { has_idea = BH3_ER_Kalpas_2 }
+		}
+		localization_key = BH3_ER_card_Kalpas_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 5 }
+			has_idea = BH3_ER_Kalpas_2
+			NOT = { has_idea = BH3_ER_Kalpas_3 }
+		}
+		localization_key = BH3_ER_card_Kalpas_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 5 }
+			has_idea = BH3_ER_Kalpas_3
+			NOT = { has_idea = BH3_ER_Kalpas_Core }
+		}
+		localization_key = BH3_ER_card_Kalpas_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 5 }
+			has_idea = BH3_ER_Kalpas_Core
+			NOT = { has_idea = BH3_ER_Kalpas_Amp }
+		}
+		localization_key = BH3_ER_card_Kalpas_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 6 }
+			NOT = { has_idea = BH3_ER_Fusheng_1 }
+		}
+		localization_key = BH3_ER_card_Fusheng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 6 }
+			has_idea = BH3_ER_Fusheng_1
+			NOT = { has_idea = BH3_ER_Fusheng_2 }
+		}
+		localization_key = BH3_ER_card_Fusheng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 6 }
+			has_idea = BH3_ER_Fusheng_2
+			NOT = { has_idea = BH3_ER_Fusheng_3 }
+		}
+		localization_key = BH3_ER_card_Fusheng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 6 }
+			has_idea = BH3_ER_Fusheng_3
+			NOT = { has_idea = BH3_ER_Fusheng_Core }
+		}
+		localization_key = BH3_ER_card_Fusheng_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 6 }
+			has_idea = BH3_ER_Fusheng_Core
+			NOT = { has_idea = BH3_ER_Fusheng_Amp }
+		}
+		localization_key = BH3_ER_card_Fusheng_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 7 }
+			NOT = { has_idea = BH3_ER_Aponia_1 }
+		}
+		localization_key = BH3_ER_card_Aponia_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 7 }
+			has_idea = BH3_ER_Aponia_1
+			NOT = { has_idea = BH3_ER_Aponia_2 }
+		}
+		localization_key = BH3_ER_card_Aponia_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 7 }
+			has_idea = BH3_ER_Aponia_2
+			NOT = { has_idea = BH3_ER_Aponia_3 }
+		}
+		localization_key = BH3_ER_card_Aponia_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 7 }
+			has_idea = BH3_ER_Aponia_3
+			NOT = { has_idea = BH3_ER_Aponia_Core }
+		}
+		localization_key = BH3_ER_card_Aponia_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 7 }
+			has_idea = BH3_ER_Aponia_Core
+			NOT = { has_idea = BH3_ER_Aponia_Amp }
+		}
+		localization_key = BH3_ER_card_Aponia_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 8 }
+			NOT = { has_idea = BH3_ER_Spiral_1 }
+		}
+		localization_key = BH3_ER_card_Spiral_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 8 }
+			has_idea = BH3_ER_Spiral_1
+			NOT = { has_idea = BH3_ER_Spiral_2 }
+		}
+		localization_key = BH3_ER_card_Spiral_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 8 }
+			has_idea = BH3_ER_Spiral_2
+			NOT = { has_idea = BH3_ER_Spiral_3 }
+		}
+		localization_key = BH3_ER_card_Spiral_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 8 }
+			has_idea = BH3_ER_Spiral_3
+			NOT = { has_idea = BH3_ER_Spiral_Core }
+		}
+		localization_key = BH3_ER_card_Spiral_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 8 }
+			has_idea = BH3_ER_Spiral_Core
+			NOT = { has_idea = BH3_ER_Spiral_Amp }
+		}
+		localization_key = BH3_ER_card_Spiral_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 9 }
+			NOT = { has_idea = BH3_ER_Mobius_1 }
+		}
+		localization_key = BH3_ER_card_Mobius_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 9 }
+			has_idea = BH3_ER_Mobius_1
+			NOT = { has_idea = BH3_ER_Mobius_2 }
+		}
+		localization_key = BH3_ER_card_Mobius_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 9 }
+			has_idea = BH3_ER_Mobius_2
+			NOT = { has_idea = BH3_ER_Mobius_3 }
+		}
+		localization_key = BH3_ER_card_Mobius_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 9 }
+			has_idea = BH3_ER_Mobius_3
+			NOT = { has_idea = BH3_ER_Mobius_Core }
+		}
+		localization_key = BH3_ER_card_Mobius_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 9 }
+			has_idea = BH3_ER_Mobius_Core
+			NOT = { has_idea = BH3_ER_Mobius_Amp }
+		}
+		localization_key = BH3_ER_card_Mobius_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 10 }
+			NOT = { has_idea = BH3_ER_Kosma_1 }
+		}
+		localization_key = BH3_ER_card_Kosma_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 10 }
+			has_idea = BH3_ER_Kosma_1
+			NOT = { has_idea = BH3_ER_Kosma_2 }
+		}
+		localization_key = BH3_ER_card_Kosma_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 10 }
+			has_idea = BH3_ER_Kosma_2
+			NOT = { has_idea = BH3_ER_Kosma_3 }
+		}
+		localization_key = BH3_ER_card_Kosma_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 10 }
+			has_idea = BH3_ER_Kosma_3
+			NOT = { has_idea = BH3_ER_Kosma_Core }
+		}
+		localization_key = BH3_ER_card_Kosma_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 10 }
+			has_idea = BH3_ER_Kosma_Core
+			NOT = { has_idea = BH3_ER_Kosma_Amp }
+		}
+		localization_key = BH3_ER_card_Kosma_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 11 }
+			NOT = { has_idea = BH3_ER_Griseo_1 }
+		}
+		localization_key = BH3_ER_card_Griseo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 11 }
+			has_idea = BH3_ER_Griseo_1
+			NOT = { has_idea = BH3_ER_Griseo_2 }
+		}
+		localization_key = BH3_ER_card_Griseo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 11 }
+			has_idea = BH3_ER_Griseo_2
+			NOT = { has_idea = BH3_ER_Griseo_3 }
+		}
+		localization_key = BH3_ER_card_Griseo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 11 }
+			has_idea = BH3_ER_Griseo_3
+			NOT = { has_idea = BH3_ER_Griseo_Core }
+		}
+		localization_key = BH3_ER_card_Griseo_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 11 }
+			has_idea = BH3_ER_Griseo_Core
+			NOT = { has_idea = BH3_ER_Griseo_Amp }
+		}
+		localization_key = BH3_ER_card_Griseo_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 12 }
+			NOT = { has_idea = BH3_ER_Pardofelis_1 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 12 }
+			has_idea = BH3_ER_Pardofelis_1
+			NOT = { has_idea = BH3_ER_Pardofelis_2 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 12 }
+			has_idea = BH3_ER_Pardofelis_2
+			NOT = { has_idea = BH3_ER_Pardofelis_3 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 12 }
+			has_idea = BH3_ER_Pardofelis_3
+			NOT = { has_idea = BH3_ER_Pardofelis_Core }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand1 = 12 }
+			has_idea = BH3_ER_Pardofelis_Core
+			NOT = { has_idea = BH3_ER_Pardofelis_Amp }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Amp
+	}
+	text = { localization_key = BH3_ER_card_none }
+}
+
+defined_text = {
+	name = BHER_cand2_card
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 1 }
+			NOT = { has_idea = BH3_ER_Savior_1 }
+		}
+		localization_key = BH3_ER_card_Savior_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 1 }
+			has_idea = BH3_ER_Savior_1
+			NOT = { has_idea = BH3_ER_Savior_2 }
+		}
+		localization_key = BH3_ER_card_Savior_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 1 }
+			has_idea = BH3_ER_Savior_2
+			NOT = { has_idea = BH3_ER_Savior_3 }
+		}
+		localization_key = BH3_ER_card_Savior_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 1 }
+			has_idea = BH3_ER_Savior_3
+			NOT = { has_idea = BH3_ER_Savior_Core }
+		}
+		localization_key = BH3_ER_card_Savior_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 1 }
+			has_idea = BH3_ER_Savior_Core
+			NOT = { has_idea = BH3_ER_Savior_Amp }
+		}
+		localization_key = BH3_ER_card_Savior_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 2 }
+			NOT = { has_idea = BH3_ER_Setsuna_1 }
+		}
+		localization_key = BH3_ER_card_Setsuna_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 2 }
+			has_idea = BH3_ER_Setsuna_1
+			NOT = { has_idea = BH3_ER_Setsuna_2 }
+		}
+		localization_key = BH3_ER_card_Setsuna_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 2 }
+			has_idea = BH3_ER_Setsuna_2
+			NOT = { has_idea = BH3_ER_Setsuna_3 }
+		}
+		localization_key = BH3_ER_card_Setsuna_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 2 }
+			has_idea = BH3_ER_Setsuna_3
+			NOT = { has_idea = BH3_ER_Setsuna_Core }
+		}
+		localization_key = BH3_ER_card_Setsuna_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 2 }
+			has_idea = BH3_ER_Setsuna_Core
+			NOT = { has_idea = BH3_ER_Setsuna_Amp }
+		}
+		localization_key = BH3_ER_card_Setsuna_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 3 }
+			NOT = { has_idea = BH3_ER_Bodhi_1 }
+		}
+		localization_key = BH3_ER_card_Bodhi_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 3 }
+			has_idea = BH3_ER_Bodhi_1
+			NOT = { has_idea = BH3_ER_Bodhi_2 }
+		}
+		localization_key = BH3_ER_card_Bodhi_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 3 }
+			has_idea = BH3_ER_Bodhi_2
+			NOT = { has_idea = BH3_ER_Bodhi_3 }
+		}
+		localization_key = BH3_ER_card_Bodhi_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 3 }
+			has_idea = BH3_ER_Bodhi_3
+			NOT = { has_idea = BH3_ER_Bodhi_Core }
+		}
+		localization_key = BH3_ER_card_Bodhi_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 3 }
+			has_idea = BH3_ER_Bodhi_Core
+			NOT = { has_idea = BH3_ER_Bodhi_Amp }
+		}
+		localization_key = BH3_ER_card_Bodhi_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 4 }
+			NOT = { has_idea = BH3_ER_Gold_1 }
+		}
+		localization_key = BH3_ER_card_Gold_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 4 }
+			has_idea = BH3_ER_Gold_1
+			NOT = { has_idea = BH3_ER_Gold_2 }
+		}
+		localization_key = BH3_ER_card_Gold_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 4 }
+			has_idea = BH3_ER_Gold_2
+			NOT = { has_idea = BH3_ER_Gold_3 }
+		}
+		localization_key = BH3_ER_card_Gold_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 4 }
+			has_idea = BH3_ER_Gold_3
+			NOT = { has_idea = BH3_ER_Gold_Core }
+		}
+		localization_key = BH3_ER_card_Gold_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 4 }
+			has_idea = BH3_ER_Gold_Core
+			NOT = { has_idea = BH3_ER_Gold_Amp }
+		}
+		localization_key = BH3_ER_card_Gold_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 5 }
+			NOT = { has_idea = BH3_ER_Kalpas_1 }
+		}
+		localization_key = BH3_ER_card_Kalpas_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 5 }
+			has_idea = BH3_ER_Kalpas_1
+			NOT = { has_idea = BH3_ER_Kalpas_2 }
+		}
+		localization_key = BH3_ER_card_Kalpas_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 5 }
+			has_idea = BH3_ER_Kalpas_2
+			NOT = { has_idea = BH3_ER_Kalpas_3 }
+		}
+		localization_key = BH3_ER_card_Kalpas_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 5 }
+			has_idea = BH3_ER_Kalpas_3
+			NOT = { has_idea = BH3_ER_Kalpas_Core }
+		}
+		localization_key = BH3_ER_card_Kalpas_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 5 }
+			has_idea = BH3_ER_Kalpas_Core
+			NOT = { has_idea = BH3_ER_Kalpas_Amp }
+		}
+		localization_key = BH3_ER_card_Kalpas_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 6 }
+			NOT = { has_idea = BH3_ER_Fusheng_1 }
+		}
+		localization_key = BH3_ER_card_Fusheng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 6 }
+			has_idea = BH3_ER_Fusheng_1
+			NOT = { has_idea = BH3_ER_Fusheng_2 }
+		}
+		localization_key = BH3_ER_card_Fusheng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 6 }
+			has_idea = BH3_ER_Fusheng_2
+			NOT = { has_idea = BH3_ER_Fusheng_3 }
+		}
+		localization_key = BH3_ER_card_Fusheng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 6 }
+			has_idea = BH3_ER_Fusheng_3
+			NOT = { has_idea = BH3_ER_Fusheng_Core }
+		}
+		localization_key = BH3_ER_card_Fusheng_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 6 }
+			has_idea = BH3_ER_Fusheng_Core
+			NOT = { has_idea = BH3_ER_Fusheng_Amp }
+		}
+		localization_key = BH3_ER_card_Fusheng_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 7 }
+			NOT = { has_idea = BH3_ER_Aponia_1 }
+		}
+		localization_key = BH3_ER_card_Aponia_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 7 }
+			has_idea = BH3_ER_Aponia_1
+			NOT = { has_idea = BH3_ER_Aponia_2 }
+		}
+		localization_key = BH3_ER_card_Aponia_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 7 }
+			has_idea = BH3_ER_Aponia_2
+			NOT = { has_idea = BH3_ER_Aponia_3 }
+		}
+		localization_key = BH3_ER_card_Aponia_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 7 }
+			has_idea = BH3_ER_Aponia_3
+			NOT = { has_idea = BH3_ER_Aponia_Core }
+		}
+		localization_key = BH3_ER_card_Aponia_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 7 }
+			has_idea = BH3_ER_Aponia_Core
+			NOT = { has_idea = BH3_ER_Aponia_Amp }
+		}
+		localization_key = BH3_ER_card_Aponia_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 8 }
+			NOT = { has_idea = BH3_ER_Spiral_1 }
+		}
+		localization_key = BH3_ER_card_Spiral_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 8 }
+			has_idea = BH3_ER_Spiral_1
+			NOT = { has_idea = BH3_ER_Spiral_2 }
+		}
+		localization_key = BH3_ER_card_Spiral_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 8 }
+			has_idea = BH3_ER_Spiral_2
+			NOT = { has_idea = BH3_ER_Spiral_3 }
+		}
+		localization_key = BH3_ER_card_Spiral_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 8 }
+			has_idea = BH3_ER_Spiral_3
+			NOT = { has_idea = BH3_ER_Spiral_Core }
+		}
+		localization_key = BH3_ER_card_Spiral_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 8 }
+			has_idea = BH3_ER_Spiral_Core
+			NOT = { has_idea = BH3_ER_Spiral_Amp }
+		}
+		localization_key = BH3_ER_card_Spiral_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 9 }
+			NOT = { has_idea = BH3_ER_Mobius_1 }
+		}
+		localization_key = BH3_ER_card_Mobius_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 9 }
+			has_idea = BH3_ER_Mobius_1
+			NOT = { has_idea = BH3_ER_Mobius_2 }
+		}
+		localization_key = BH3_ER_card_Mobius_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 9 }
+			has_idea = BH3_ER_Mobius_2
+			NOT = { has_idea = BH3_ER_Mobius_3 }
+		}
+		localization_key = BH3_ER_card_Mobius_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 9 }
+			has_idea = BH3_ER_Mobius_3
+			NOT = { has_idea = BH3_ER_Mobius_Core }
+		}
+		localization_key = BH3_ER_card_Mobius_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 9 }
+			has_idea = BH3_ER_Mobius_Core
+			NOT = { has_idea = BH3_ER_Mobius_Amp }
+		}
+		localization_key = BH3_ER_card_Mobius_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 10 }
+			NOT = { has_idea = BH3_ER_Kosma_1 }
+		}
+		localization_key = BH3_ER_card_Kosma_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 10 }
+			has_idea = BH3_ER_Kosma_1
+			NOT = { has_idea = BH3_ER_Kosma_2 }
+		}
+		localization_key = BH3_ER_card_Kosma_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 10 }
+			has_idea = BH3_ER_Kosma_2
+			NOT = { has_idea = BH3_ER_Kosma_3 }
+		}
+		localization_key = BH3_ER_card_Kosma_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 10 }
+			has_idea = BH3_ER_Kosma_3
+			NOT = { has_idea = BH3_ER_Kosma_Core }
+		}
+		localization_key = BH3_ER_card_Kosma_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 10 }
+			has_idea = BH3_ER_Kosma_Core
+			NOT = { has_idea = BH3_ER_Kosma_Amp }
+		}
+		localization_key = BH3_ER_card_Kosma_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 11 }
+			NOT = { has_idea = BH3_ER_Griseo_1 }
+		}
+		localization_key = BH3_ER_card_Griseo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 11 }
+			has_idea = BH3_ER_Griseo_1
+			NOT = { has_idea = BH3_ER_Griseo_2 }
+		}
+		localization_key = BH3_ER_card_Griseo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 11 }
+			has_idea = BH3_ER_Griseo_2
+			NOT = { has_idea = BH3_ER_Griseo_3 }
+		}
+		localization_key = BH3_ER_card_Griseo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 11 }
+			has_idea = BH3_ER_Griseo_3
+			NOT = { has_idea = BH3_ER_Griseo_Core }
+		}
+		localization_key = BH3_ER_card_Griseo_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 11 }
+			has_idea = BH3_ER_Griseo_Core
+			NOT = { has_idea = BH3_ER_Griseo_Amp }
+		}
+		localization_key = BH3_ER_card_Griseo_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 12 }
+			NOT = { has_idea = BH3_ER_Pardofelis_1 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 12 }
+			has_idea = BH3_ER_Pardofelis_1
+			NOT = { has_idea = BH3_ER_Pardofelis_2 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 12 }
+			has_idea = BH3_ER_Pardofelis_2
+			NOT = { has_idea = BH3_ER_Pardofelis_3 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 12 }
+			has_idea = BH3_ER_Pardofelis_3
+			NOT = { has_idea = BH3_ER_Pardofelis_Core }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand2 = 12 }
+			has_idea = BH3_ER_Pardofelis_Core
+			NOT = { has_idea = BH3_ER_Pardofelis_Amp }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Amp
+	}
+	text = { localization_key = BH3_ER_card_none }
+}
+
+defined_text = {
+	name = BHER_cand3_card
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 1 }
+			NOT = { has_idea = BH3_ER_Savior_1 }
+		}
+		localization_key = BH3_ER_card_Savior_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 1 }
+			has_idea = BH3_ER_Savior_1
+			NOT = { has_idea = BH3_ER_Savior_2 }
+		}
+		localization_key = BH3_ER_card_Savior_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 1 }
+			has_idea = BH3_ER_Savior_2
+			NOT = { has_idea = BH3_ER_Savior_3 }
+		}
+		localization_key = BH3_ER_card_Savior_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 1 }
+			has_idea = BH3_ER_Savior_3
+			NOT = { has_idea = BH3_ER_Savior_Core }
+		}
+		localization_key = BH3_ER_card_Savior_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 1 }
+			has_idea = BH3_ER_Savior_Core
+			NOT = { has_idea = BH3_ER_Savior_Amp }
+		}
+		localization_key = BH3_ER_card_Savior_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 2 }
+			NOT = { has_idea = BH3_ER_Setsuna_1 }
+		}
+		localization_key = BH3_ER_card_Setsuna_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 2 }
+			has_idea = BH3_ER_Setsuna_1
+			NOT = { has_idea = BH3_ER_Setsuna_2 }
+		}
+		localization_key = BH3_ER_card_Setsuna_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 2 }
+			has_idea = BH3_ER_Setsuna_2
+			NOT = { has_idea = BH3_ER_Setsuna_3 }
+		}
+		localization_key = BH3_ER_card_Setsuna_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 2 }
+			has_idea = BH3_ER_Setsuna_3
+			NOT = { has_idea = BH3_ER_Setsuna_Core }
+		}
+		localization_key = BH3_ER_card_Setsuna_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 2 }
+			has_idea = BH3_ER_Setsuna_Core
+			NOT = { has_idea = BH3_ER_Setsuna_Amp }
+		}
+		localization_key = BH3_ER_card_Setsuna_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 3 }
+			NOT = { has_idea = BH3_ER_Bodhi_1 }
+		}
+		localization_key = BH3_ER_card_Bodhi_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 3 }
+			has_idea = BH3_ER_Bodhi_1
+			NOT = { has_idea = BH3_ER_Bodhi_2 }
+		}
+		localization_key = BH3_ER_card_Bodhi_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 3 }
+			has_idea = BH3_ER_Bodhi_2
+			NOT = { has_idea = BH3_ER_Bodhi_3 }
+		}
+		localization_key = BH3_ER_card_Bodhi_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 3 }
+			has_idea = BH3_ER_Bodhi_3
+			NOT = { has_idea = BH3_ER_Bodhi_Core }
+		}
+		localization_key = BH3_ER_card_Bodhi_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 3 }
+			has_idea = BH3_ER_Bodhi_Core
+			NOT = { has_idea = BH3_ER_Bodhi_Amp }
+		}
+		localization_key = BH3_ER_card_Bodhi_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 4 }
+			NOT = { has_idea = BH3_ER_Gold_1 }
+		}
+		localization_key = BH3_ER_card_Gold_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 4 }
+			has_idea = BH3_ER_Gold_1
+			NOT = { has_idea = BH3_ER_Gold_2 }
+		}
+		localization_key = BH3_ER_card_Gold_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 4 }
+			has_idea = BH3_ER_Gold_2
+			NOT = { has_idea = BH3_ER_Gold_3 }
+		}
+		localization_key = BH3_ER_card_Gold_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 4 }
+			has_idea = BH3_ER_Gold_3
+			NOT = { has_idea = BH3_ER_Gold_Core }
+		}
+		localization_key = BH3_ER_card_Gold_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 4 }
+			has_idea = BH3_ER_Gold_Core
+			NOT = { has_idea = BH3_ER_Gold_Amp }
+		}
+		localization_key = BH3_ER_card_Gold_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 5 }
+			NOT = { has_idea = BH3_ER_Kalpas_1 }
+		}
+		localization_key = BH3_ER_card_Kalpas_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 5 }
+			has_idea = BH3_ER_Kalpas_1
+			NOT = { has_idea = BH3_ER_Kalpas_2 }
+		}
+		localization_key = BH3_ER_card_Kalpas_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 5 }
+			has_idea = BH3_ER_Kalpas_2
+			NOT = { has_idea = BH3_ER_Kalpas_3 }
+		}
+		localization_key = BH3_ER_card_Kalpas_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 5 }
+			has_idea = BH3_ER_Kalpas_3
+			NOT = { has_idea = BH3_ER_Kalpas_Core }
+		}
+		localization_key = BH3_ER_card_Kalpas_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 5 }
+			has_idea = BH3_ER_Kalpas_Core
+			NOT = { has_idea = BH3_ER_Kalpas_Amp }
+		}
+		localization_key = BH3_ER_card_Kalpas_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 6 }
+			NOT = { has_idea = BH3_ER_Fusheng_1 }
+		}
+		localization_key = BH3_ER_card_Fusheng_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 6 }
+			has_idea = BH3_ER_Fusheng_1
+			NOT = { has_idea = BH3_ER_Fusheng_2 }
+		}
+		localization_key = BH3_ER_card_Fusheng_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 6 }
+			has_idea = BH3_ER_Fusheng_2
+			NOT = { has_idea = BH3_ER_Fusheng_3 }
+		}
+		localization_key = BH3_ER_card_Fusheng_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 6 }
+			has_idea = BH3_ER_Fusheng_3
+			NOT = { has_idea = BH3_ER_Fusheng_Core }
+		}
+		localization_key = BH3_ER_card_Fusheng_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 6 }
+			has_idea = BH3_ER_Fusheng_Core
+			NOT = { has_idea = BH3_ER_Fusheng_Amp }
+		}
+		localization_key = BH3_ER_card_Fusheng_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 7 }
+			NOT = { has_idea = BH3_ER_Aponia_1 }
+		}
+		localization_key = BH3_ER_card_Aponia_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 7 }
+			has_idea = BH3_ER_Aponia_1
+			NOT = { has_idea = BH3_ER_Aponia_2 }
+		}
+		localization_key = BH3_ER_card_Aponia_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 7 }
+			has_idea = BH3_ER_Aponia_2
+			NOT = { has_idea = BH3_ER_Aponia_3 }
+		}
+		localization_key = BH3_ER_card_Aponia_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 7 }
+			has_idea = BH3_ER_Aponia_3
+			NOT = { has_idea = BH3_ER_Aponia_Core }
+		}
+		localization_key = BH3_ER_card_Aponia_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 7 }
+			has_idea = BH3_ER_Aponia_Core
+			NOT = { has_idea = BH3_ER_Aponia_Amp }
+		}
+		localization_key = BH3_ER_card_Aponia_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 8 }
+			NOT = { has_idea = BH3_ER_Spiral_1 }
+		}
+		localization_key = BH3_ER_card_Spiral_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 8 }
+			has_idea = BH3_ER_Spiral_1
+			NOT = { has_idea = BH3_ER_Spiral_2 }
+		}
+		localization_key = BH3_ER_card_Spiral_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 8 }
+			has_idea = BH3_ER_Spiral_2
+			NOT = { has_idea = BH3_ER_Spiral_3 }
+		}
+		localization_key = BH3_ER_card_Spiral_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 8 }
+			has_idea = BH3_ER_Spiral_3
+			NOT = { has_idea = BH3_ER_Spiral_Core }
+		}
+		localization_key = BH3_ER_card_Spiral_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 8 }
+			has_idea = BH3_ER_Spiral_Core
+			NOT = { has_idea = BH3_ER_Spiral_Amp }
+		}
+		localization_key = BH3_ER_card_Spiral_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 9 }
+			NOT = { has_idea = BH3_ER_Mobius_1 }
+		}
+		localization_key = BH3_ER_card_Mobius_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 9 }
+			has_idea = BH3_ER_Mobius_1
+			NOT = { has_idea = BH3_ER_Mobius_2 }
+		}
+		localization_key = BH3_ER_card_Mobius_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 9 }
+			has_idea = BH3_ER_Mobius_2
+			NOT = { has_idea = BH3_ER_Mobius_3 }
+		}
+		localization_key = BH3_ER_card_Mobius_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 9 }
+			has_idea = BH3_ER_Mobius_3
+			NOT = { has_idea = BH3_ER_Mobius_Core }
+		}
+		localization_key = BH3_ER_card_Mobius_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 9 }
+			has_idea = BH3_ER_Mobius_Core
+			NOT = { has_idea = BH3_ER_Mobius_Amp }
+		}
+		localization_key = BH3_ER_card_Mobius_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 10 }
+			NOT = { has_idea = BH3_ER_Kosma_1 }
+		}
+		localization_key = BH3_ER_card_Kosma_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 10 }
+			has_idea = BH3_ER_Kosma_1
+			NOT = { has_idea = BH3_ER_Kosma_2 }
+		}
+		localization_key = BH3_ER_card_Kosma_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 10 }
+			has_idea = BH3_ER_Kosma_2
+			NOT = { has_idea = BH3_ER_Kosma_3 }
+		}
+		localization_key = BH3_ER_card_Kosma_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 10 }
+			has_idea = BH3_ER_Kosma_3
+			NOT = { has_idea = BH3_ER_Kosma_Core }
+		}
+		localization_key = BH3_ER_card_Kosma_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 10 }
+			has_idea = BH3_ER_Kosma_Core
+			NOT = { has_idea = BH3_ER_Kosma_Amp }
+		}
+		localization_key = BH3_ER_card_Kosma_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 11 }
+			NOT = { has_idea = BH3_ER_Griseo_1 }
+		}
+		localization_key = BH3_ER_card_Griseo_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 11 }
+			has_idea = BH3_ER_Griseo_1
+			NOT = { has_idea = BH3_ER_Griseo_2 }
+		}
+		localization_key = BH3_ER_card_Griseo_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 11 }
+			has_idea = BH3_ER_Griseo_2
+			NOT = { has_idea = BH3_ER_Griseo_3 }
+		}
+		localization_key = BH3_ER_card_Griseo_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 11 }
+			has_idea = BH3_ER_Griseo_3
+			NOT = { has_idea = BH3_ER_Griseo_Core }
+		}
+		localization_key = BH3_ER_card_Griseo_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 11 }
+			has_idea = BH3_ER_Griseo_Core
+			NOT = { has_idea = BH3_ER_Griseo_Amp }
+		}
+		localization_key = BH3_ER_card_Griseo_Amp
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 12 }
+			NOT = { has_idea = BH3_ER_Pardofelis_1 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_1
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 12 }
+			has_idea = BH3_ER_Pardofelis_1
+			NOT = { has_idea = BH3_ER_Pardofelis_2 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_2
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 12 }
+			has_idea = BH3_ER_Pardofelis_2
+			NOT = { has_idea = BH3_ER_Pardofelis_3 }
+		}
+		localization_key = BH3_ER_card_Pardofelis_3
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 12 }
+			has_idea = BH3_ER_Pardofelis_3
+			NOT = { has_idea = BH3_ER_Pardofelis_Core }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Core
+	}
+	text = {
+		trigger = {
+			check_variable = { BH3_ER_cand3 = 12 }
+			has_idea = BH3_ER_Pardofelis_Core
+			NOT = { has_idea = BH3_ER_Pardofelis_Amp }
+		}
+		localization_key = BH3_ER_card_Pardofelis_Amp
+	}
+	text = { localization_key = BH3_ER_card_none }
+}
+
+defined_text = {
+	name = BHER_stat_Savior
+	text = {
+		trigger = { has_idea = BH3_ER_Savior_Amp }
+		localization_key = BH3_ER_stat_Savior_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Savior_Core }
+		localization_key = BH3_ER_stat_Savior_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Savior_3 }
+		localization_key = BH3_ER_stat_Savior_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Savior_2 }
+		localization_key = BH3_ER_stat_Savior_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Savior_1 }
+		localization_key = BH3_ER_stat_Savior_1
+	}
+	text = { localization_key = BH3_ER_stat_Savior_none }
+}
+
+defined_text = {
+	name = BHER_stat_Setsuna
+	text = {
+		trigger = { has_idea = BH3_ER_Setsuna_Amp }
+		localization_key = BH3_ER_stat_Setsuna_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Setsuna_Core }
+		localization_key = BH3_ER_stat_Setsuna_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Setsuna_3 }
+		localization_key = BH3_ER_stat_Setsuna_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Setsuna_2 }
+		localization_key = BH3_ER_stat_Setsuna_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Setsuna_1 }
+		localization_key = BH3_ER_stat_Setsuna_1
+	}
+	text = { localization_key = BH3_ER_stat_Setsuna_none }
+}
+
+defined_text = {
+	name = BHER_stat_Bodhi
+	text = {
+		trigger = { has_idea = BH3_ER_Bodhi_Amp }
+		localization_key = BH3_ER_stat_Bodhi_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Bodhi_Core }
+		localization_key = BH3_ER_stat_Bodhi_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Bodhi_3 }
+		localization_key = BH3_ER_stat_Bodhi_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Bodhi_2 }
+		localization_key = BH3_ER_stat_Bodhi_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Bodhi_1 }
+		localization_key = BH3_ER_stat_Bodhi_1
+	}
+	text = { localization_key = BH3_ER_stat_Bodhi_none }
+}
+
+defined_text = {
+	name = BHER_stat_Gold
+	text = {
+		trigger = { has_idea = BH3_ER_Gold_Amp }
+		localization_key = BH3_ER_stat_Gold_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Gold_Core }
+		localization_key = BH3_ER_stat_Gold_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Gold_3 }
+		localization_key = BH3_ER_stat_Gold_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Gold_2 }
+		localization_key = BH3_ER_stat_Gold_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Gold_1 }
+		localization_key = BH3_ER_stat_Gold_1
+	}
+	text = { localization_key = BH3_ER_stat_Gold_none }
+}
+
+defined_text = {
+	name = BHER_stat_Kalpas
+	text = {
+		trigger = { has_idea = BH3_ER_Kalpas_Amp }
+		localization_key = BH3_ER_stat_Kalpas_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kalpas_Core }
+		localization_key = BH3_ER_stat_Kalpas_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kalpas_3 }
+		localization_key = BH3_ER_stat_Kalpas_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kalpas_2 }
+		localization_key = BH3_ER_stat_Kalpas_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kalpas_1 }
+		localization_key = BH3_ER_stat_Kalpas_1
+	}
+	text = { localization_key = BH3_ER_stat_Kalpas_none }
+}
+
+defined_text = {
+	name = BHER_stat_Fusheng
+	text = {
+		trigger = { has_idea = BH3_ER_Fusheng_Amp }
+		localization_key = BH3_ER_stat_Fusheng_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Fusheng_Core }
+		localization_key = BH3_ER_stat_Fusheng_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Fusheng_3 }
+		localization_key = BH3_ER_stat_Fusheng_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Fusheng_2 }
+		localization_key = BH3_ER_stat_Fusheng_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Fusheng_1 }
+		localization_key = BH3_ER_stat_Fusheng_1
+	}
+	text = { localization_key = BH3_ER_stat_Fusheng_none }
+}
+
+defined_text = {
+	name = BHER_stat_Aponia
+	text = {
+		trigger = { has_idea = BH3_ER_Aponia_Amp }
+		localization_key = BH3_ER_stat_Aponia_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Aponia_Core }
+		localization_key = BH3_ER_stat_Aponia_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Aponia_3 }
+		localization_key = BH3_ER_stat_Aponia_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Aponia_2 }
+		localization_key = BH3_ER_stat_Aponia_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Aponia_1 }
+		localization_key = BH3_ER_stat_Aponia_1
+	}
+	text = { localization_key = BH3_ER_stat_Aponia_none }
+}
+
+defined_text = {
+	name = BHER_stat_Spiral
+	text = {
+		trigger = { has_idea = BH3_ER_Spiral_Amp }
+		localization_key = BH3_ER_stat_Spiral_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Spiral_Core }
+		localization_key = BH3_ER_stat_Spiral_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Spiral_3 }
+		localization_key = BH3_ER_stat_Spiral_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Spiral_2 }
+		localization_key = BH3_ER_stat_Spiral_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Spiral_1 }
+		localization_key = BH3_ER_stat_Spiral_1
+	}
+	text = { localization_key = BH3_ER_stat_Spiral_none }
+}
+
+defined_text = {
+	name = BHER_stat_Mobius
+	text = {
+		trigger = { has_idea = BH3_ER_Mobius_Amp }
+		localization_key = BH3_ER_stat_Mobius_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Mobius_Core }
+		localization_key = BH3_ER_stat_Mobius_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Mobius_3 }
+		localization_key = BH3_ER_stat_Mobius_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Mobius_2 }
+		localization_key = BH3_ER_stat_Mobius_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Mobius_1 }
+		localization_key = BH3_ER_stat_Mobius_1
+	}
+	text = { localization_key = BH3_ER_stat_Mobius_none }
+}
+
+defined_text = {
+	name = BHER_stat_Kosma
+	text = {
+		trigger = { has_idea = BH3_ER_Kosma_Amp }
+		localization_key = BH3_ER_stat_Kosma_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kosma_Core }
+		localization_key = BH3_ER_stat_Kosma_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kosma_3 }
+		localization_key = BH3_ER_stat_Kosma_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kosma_2 }
+		localization_key = BH3_ER_stat_Kosma_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Kosma_1 }
+		localization_key = BH3_ER_stat_Kosma_1
+	}
+	text = { localization_key = BH3_ER_stat_Kosma_none }
+}
+
+defined_text = {
+	name = BHER_stat_Griseo
+	text = {
+		trigger = { has_idea = BH3_ER_Griseo_Amp }
+		localization_key = BH3_ER_stat_Griseo_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Griseo_Core }
+		localization_key = BH3_ER_stat_Griseo_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Griseo_3 }
+		localization_key = BH3_ER_stat_Griseo_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Griseo_2 }
+		localization_key = BH3_ER_stat_Griseo_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Griseo_1 }
+		localization_key = BH3_ER_stat_Griseo_1
+	}
+	text = { localization_key = BH3_ER_stat_Griseo_none }
+}
+
+defined_text = {
+	name = BHER_stat_Pardofelis
+	text = {
+		trigger = { has_idea = BH3_ER_Pardofelis_Amp }
+		localization_key = BH3_ER_stat_Pardofelis_Amp
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Pardofelis_Core }
+		localization_key = BH3_ER_stat_Pardofelis_Core
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Pardofelis_3 }
+		localization_key = BH3_ER_stat_Pardofelis_3
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Pardofelis_2 }
+		localization_key = BH3_ER_stat_Pardofelis_2
+	}
+	text = {
+		trigger = { has_idea = BH3_ER_Pardofelis_1 }
+		localization_key = BH3_ER_stat_Pardofelis_1
+	}
+	text = { localization_key = BH3_ER_stat_Pardofelis_none }
+}
+
+defined_text = {
+	name = BHER_lock_tip
+	text = {
+		trigger = { has_country_flag = BH3_ElysianRealm_unlocked }
+		localization_key = BH3_ER_menu_title
+	}
+	text = { localization_key = BH3_ER_lock_tip }
+}

@@ -26,6 +26,10 @@ spriteTypes = {
 		name = "GFX_BH3_main_menu_doctrine"
 		texturefile = "gfx/interface/technologies/BH3_main_menu_doctrine.dds"
 	}
+	spriteType = {
+		name = "GFX_BH3_main_menu_elysianrealm"
+		texturefile = "gfx/interface/elysianrealm/signet_Elysia.png"
+	}
 	
 	########## UI ##########
 	corneredTileSpriteType = {
