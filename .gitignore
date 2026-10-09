@@ -33,3 +33,6 @@ ehthumbs.db
 *.log
 .vscode/
 .idea/
+
+# 临时截图（工作用参考图，非资产）
+tools/_shot*.png

@@ -1,0 +1,93 @@
+valkyrie_infantry = {
+    name = BH3_doctrine_track_infantry
+    background = "GFX_grand_battleplan_bg"
+    icon = "GFX_doctrine_milestone_infantry_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 1.0
+        categories = {
+            category_all_infantry
+        }
+    }
+}
+valkyrie_support = {
+    name = BH3_doctrine_track_support
+    background = "GFX_sup_firepower_bg"
+    icon = "GFX_doctrine_milestone_artillery_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 8.0
+        categories = {
+            category_line_artillery
+            category_artillery
+            category_support_battalions
+        }
+    }
+}
+valkyrie_armor = {
+    name = BH3_doctrine_track_armor
+    background = "GFX_mob_warfare_bg"
+    icon = "GFX_doctrine_milestone_armored_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 10.0
+        categories = {
+            category_tanks
+            category_all_armor
+        }
+    }
+}
+valkyrie_operations = {
+    name = BH3_doctrine_track_operations
+    background = "GFX_tac_operation_bg"
+    icon = "GFX_doctrine_milestone_operations_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 0.7
+        categories = {
+            category_all_infantry
+            category_line_artillery
+            category_artillery
+            category_tanks
+            category_all_armor
+        }
+    }
+}
+valkyrie_assault = {
+    name = BH3_doctrine_track_assault
+    background = "GFX_mob_warfare_bg"
+    icon = "GFX_doctrine_milestone_infantry_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 5.0
+        categories = {
+            category_special_forces
+            category_all_infantry
+        }
+    }
+}
+valkyrie_herrscher = {
+    name = BH3_doctrine_track_herrscher
+    background = "GFX_tac_operation_bg"
+    icon = "GFX_doctrine_milestone_armored_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 0.5
+        categories = {
+            category_special_forces
+            category_all_armor
+        }
+    }
+}
+valkyrie_special = {
+    name = BH3_doctrine_track_special
+    background = "GFX_sup_firepower_bg"
+    icon = "GFX_doctrine_milestone_artillery_land"
+    icon_frame = "GFX_doctrine_decor_land"
+    mastery = {
+        multiplier = 2.0
+        categories = {
+            category_special_forces
+        }
+    }
+}

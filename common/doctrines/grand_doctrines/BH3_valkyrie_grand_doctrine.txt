@@ -1,0 +1,115 @@
+bh3_valkyrie_warfare = {
+    folder = valkyrie
+
+    name = BH3_grand_doctrine_valkyrie
+    description = BH3_grand_doctrine_valkyrie_desc
+    icon = GFX_BH3_main_menu_doctrine
+
+    available = {
+        has_country_flag = BH3_Hyperion_enabled
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+    }
+
+    tracks = {
+        valkyrie_infantry
+        valkyrie_support
+        valkyrie_armor
+        valkyrie_operations
+        valkyrie_assault
+        valkyrie_herrscher
+        valkyrie_special
+    }
+
+    # 主学说效果（= 旧 BH3_Valkyrie_Doctrine_0「对崩坏作战理论」；special_forces_min/defence_factor 按学说语境换为 cap/attack）
+    category_army = {
+        soft_attack = 0.15
+        hard_attack = 0.15
+        armor_value = 0.15
+        ap_attack = 1
+        max_organisation = 50
+        max_strength = 25
+        defense = 1
+    }
+    special_forces_cap = 0.10
+    special_forces_attack_factor = 0.15
+
+    # 里程碑 ×7：旧收尾学说 BH3_Valkyrie_Doctrine_10「为世界上所有美好而战」的效果按线分散
+    milestones = {
+        {
+            # 步兵协同线
+            category_AllValkyrie = {
+                soft_attack = 0.07
+                hard_attack = 0.07
+            }
+            category_army = {
+                soft_attack = 0.15
+                hard_attack = 0.15
+            }
+        }
+        {
+            # 战斗支援线
+            category_AllValkyrie = {
+                armor_value = 0.07
+            }
+            category_army = {
+                ap_attack = 0.15
+                armor_value = 0.07
+            }
+        }
+        {
+            # 装甲突击线
+            category_AllValkyrie = {
+                defense = 0.15
+            }
+            category_army = {
+                breakthrough = 0.15
+                defense = 0.20
+            }
+        }
+        {
+            # 纵深作战线
+            category_AllValkyrie = {
+                max_organisation = 4
+            }
+            category_army = {
+                max_organisation = 15
+                maximum_speed = 0.25
+            }
+        }
+        {
+            # 近战攻坚线
+            category_AllValkyrie = {
+                default_morale = 0.07
+            }
+            category_army = {
+                defense = 0.30
+                default_morale = 0.15
+            }
+        }
+        {
+            # 律者降临线
+            category_AllHerrscher = {
+                soft_attack = 0.15
+                hard_attack = 0.15
+                defense = 0.15
+                max_organisation = 500
+            }
+            category_army = {
+                defense = 0.35
+            }
+        }
+        {
+            # 女武神特战线
+            category_AllHerrscher = {
+                max_organisation = 500
+                default_morale = 0.15
+            }
+        }
+    }
+}
