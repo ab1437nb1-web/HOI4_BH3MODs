@@ -67,6 +67,9 @@ BH3_ER_GER_1a_finish = {
 		limit = { date < 1938.3.12 }
 		add_to_variable = { BH3_ER_GER_momentum = 15 }
 	}
+	# 立即启动下一阶段任务（不等 activation 周期判定）
+	activate_mission = BH3_ER_Elysia_GER_2a
+	activate_mission = BH3_ER_Elysia_GER_2b
 }
 
 BH3_ER_GER_1b_finish = {
@@ -78,6 +81,9 @@ BH3_ER_GER_1b_finish = {
 		limit = { date < 1938.3.12 }
 		add_to_variable = { BH3_ER_GER_momentum = 15 }
 	}
+	# 立即启动下一阶段任务（不等 activation 周期判定）
+	activate_mission = BH3_ER_Elysia_GER_2a
+	activate_mission = BH3_ER_Elysia_GER_2b
 }
 
 BH3_ER_GER_1c_finish = {
@@ -89,6 +95,9 @@ BH3_ER_GER_1c_finish = {
 		limit = { date < 1938.3.12 }
 		add_to_variable = { BH3_ER_GER_momentum = 15 }
 	}
+	# 立即启动下一阶段任务（不等 activation 周期判定）
+	activate_mission = BH3_ER_Elysia_GER_2a
+	activate_mission = BH3_ER_Elysia_GER_2b
 }
 
 BH3_ER_GER_2a_finish = {
@@ -100,6 +109,9 @@ BH3_ER_GER_2a_finish = {
 		limit = { date < 1939.9.1 }
 		add_to_variable = { BH3_ER_GER_momentum = 15 }
 	}
+	# 立即启动阶段三任务
+	activate_mission = BH3_ER_Elysia_GER_3a
+	activate_mission = BH3_ER_Elysia_GER_3b
 }
 
 BH3_ER_GER_2b_finish = {
@@ -111,6 +123,9 @@ BH3_ER_GER_2b_finish = {
 		limit = { date < 1939.9.1 }
 		add_to_variable = { BH3_ER_GER_momentum = 15 }
 	}
+	# 立即启动阶段三任务
+	activate_mission = BH3_ER_Elysia_GER_3a
+	activate_mission = BH3_ER_Elysia_GER_3b
 }
 
 BH3_ER_GER_3a_finish = {

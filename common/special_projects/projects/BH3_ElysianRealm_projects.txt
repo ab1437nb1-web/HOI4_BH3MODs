@@ -37,6 +37,13 @@ BH3_sp_ElysianRealm_Open = {
 			add_dynamic_modifier = { modifier = BH3_ER_elysia_delay_dm }
 			# 德国真我「闪击节奏」节奏变量（其余国家的特色机制变量随该国蓝本加入时一并初始化）
 			set_variable = { BH3_ER_GER_momentum = 0 }
+			# 德国真我任务链：解锁瞬间立即启动阶段一（后续阶段由完成结算自动衔接）
+			if = {
+				limit = { tag = GER }
+				activate_mission = BH3_ER_Elysia_GER_1a
+				activate_mission = BH3_ER_Elysia_GER_1b
+				activate_mission = BH3_ER_Elysia_GER_1c
+			}
 		}
 	}
 
