@@ -321,3 +321,36 @@ if = {
 三个节点分别为 `1938.3.12`（阶段一）、`1939.9.1`（阶段二）、`1941.6.22`（阶段三）。这样"提前于历史"有明确奖励，"落后于历史"则节奏吃亏——与梅福券式的拖沓惩罚形成正反两面。
 
 **苏联对照**：苏联时限保持 **1080 / 300 / 360 天**（阶段一由清洗链硬下限 910 天推出，属于"机制约束"而非"历史跨度"）。
+
+
+---
+
+## 十三、实施纠偏记录（2026-10-10）
+
+### 13.1 selectable_mission 三字段语义（实测 + 原版 AST 任务核对）
+
+原方案第五节「机制选型」表述有误，实际字段语义（以原版 `AST_summon_the_cabinet_mission` 为准）：
+
+| 字段 | 真实语义 |
+|---|---|
+| `activation` | **自动启动条件**：满足即开始计时。**缺省不写 = 永远不会自行启动**（原版事件触发型填 `always = no` + `activate_mission` 效果启动） |
+| `available` | **完成条件**：任务运行中达成即完成（触发 `complete_effect`） |
+| `days_mission_timeout` / `timeout_effect` | 时限与超时结算（不变） |
+
+**教训**：本 mod 首版实现漏写 `activation`，任务在面板可见、可显示时限，但永不计时、永不完成。
+修复：每个任务补 `activation`（条件与 `visible` 一致：乐土已解锁 + 上一阶段旗标 + 未持有刻印）。
+文档第十节「墨索里尼的任务」参考案例实为 `selectable_mission = no` + 脚本管理系统（`ITA_missiolinis_manage_next_mission`），
+`selectable_mission = yes` 的自启动范例应参考 AST 系任务。
+
+### 13.2 德国阶段一选项定稿（用户三轮修订汇总）
+
+| 选项 | 完成条件（定稿） |
+|---|---|
+| 1a 重整军备·经济路线 | `GER_the_four_year_plan` 或 `GER_prioritize_economic_growth` 任一（两条互斥经济线起点均可）＋ 1938.1.1 后 `modifier@consumer_goods_factor < 0.601` |
+| 1b 重整军备·工业突破 | `advanced_machine_tools` 或 `construction3` 任一（1939 工业科技） |
+| 1c 重整军备·闪电扩军 | `num_divisions > 70` ＋ 同 1a 的消费品系数校验 |
+
+**教训**：①「四年计划」的互斥对应分支是「经济增长优先」；`GER_prioritize_the_four_year_plan` 在元首核心圈（施佩尔线），
+与经济线无关。② `consumer_goods_expected_value` / `consumer_goods_factor` 是**修饰符**不是触发器；
+读系数用国家作用域动态变量 `modifier@consumer_goods_factor`（游戏自带 documentation 可查证）。
+③ 本地化文件必须带 UTF-8 BOM——用脚本/编辑工具重写后务必复查。

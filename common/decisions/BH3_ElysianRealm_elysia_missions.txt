@@ -1,8 +1,9 @@
 # ============================================================
 # 往事乐土·真我刻印（P3）：国家真我任务链
-# 机制：原版 selectable_mission（有时限、有成败；参考原版 ITA/GER 梅福券）。
-#   * available = 完成目标（达成即完成）；days_mission_timeout = 时限；
-#     超时进 timeout_effect（拖延惩罚 + 重新激活，可再来）。
+# 机制：原版 selectable_mission（有时限、有成败；字段语义照原版 AST/GER 任务）：
+#   * activation   = 自动启动条件（缺此字段任务永远不会开始计时！原版事件触发型填 always = no）
+#   * available    = 完成目标（任务运行中达成即完成，触发 complete_effect）
+#   * days_mission_timeout = 时限；超时进 timeout_effect（拖延惩罚 + 重新激活，可再来）
 #   * 依次解锁：阶段一 → 阶段二 → 阶段三；完成阶段三授予真我刻印本体（永久保留）。
 #   * 拿到刻印后（NOT has_idea 失效）全部任务隐藏；国家转入非历史线时
 #     cancel_if_not_visible 自动取消正在运行的任务。
@@ -19,33 +20,37 @@ BH3_ElysianRealm_elysia_missions = {
 
 	# ---------- 阶段一：重整军备（801 天，1936.1.1 → 1938.3.12 德奥合并）----------
 
-	# ① 四年计划（延续梅福券体系）：军工产能强，但消费品负担重
+	# ① 经济路线：两条互斥经济线起点均可（四年计划 / 经济增长优先）
 	BH3_ER_Elysia_GER_1a = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
 		available = {
-			# 两条互斥经济线的起点均可（四年计划 / 经济增长优先）
 			OR = {
 				has_completed_focus = GER_the_four_year_plan
 				has_completed_focus = GER_prioritize_economic_growth
 			}
-			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%（系数为乘区，区别于期望）
+			# 阶段一附加要求：1938.1.1 后生活消费品工厂系数不高于 60%（系数为乘区，区别于期望）
 			date > 1938.1.1
 			custom_trigger_tooltip = {
 				tooltip = BH3_ER_GER_cg_check_tt
 				modifier@consumer_goods_factor < 0.601
 			}
 		}
-		visible = {
-			has_country_flag = BH3_ElysianRealm_unlocked
-			NOT = { has_country_flag = BH3_ER_GER_stage1 }
-			NOT = { has_idea = BH3_ER_Elysia_GER }
-		}
-		selectable_mission = yes
-		is_good = yes
-		fire_only_once = no
-		days_mission_timeout = 801
-		cancel_if_not_visible = yes
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage1
 			BH3_ER_elysia_mission_ok = yes
@@ -62,27 +67,31 @@ BH3_ElysianRealm_elysia_missions = {
 		}
 	}
 
-	# ② 恢复经济（取消梅福券）：消费品轻、经济增长快，但军工起步较慢
+	# ② 工业突破：1939 年工业科技「先进机床」或「建筑技术 III」任一
 	BH3_ER_Elysia_GER_1b = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = {
-			# 工业线要求：1939 年工业科技「先进机床」或「建筑技术 III」任一
-			OR = {
-				has_tech = advanced_machine_tools
-				has_tech = construction3
-			}
-		}
-		visible = {
-			has_country_flag = BH3_ElysianRealm_unlocked
-			NOT = { has_country_flag = BH3_ER_GER_stage1 }
-			NOT = { has_idea = BH3_ER_Elysia_GER }
-		}
 		selectable_mission = yes
 		is_good = yes
 		fire_only_once = no
 		days_mission_timeout = 801
 		cancel_if_not_visible = yes
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		available = {
+			OR = {
+				has_tech = advanced_machine_tools
+				has_tech = construction3
+			}
+		}
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage1
 			BH3_ER_elysia_mission_ok = yes
@@ -102,25 +111,30 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_1c = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
 		available = {
 			num_divisions > 70
-			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%
+			# 阶段一附加要求：1938.1.1 后生活消费品工厂系数不高于 60%
 			date > 1938.1.1
 			custom_trigger_tooltip = {
 				tooltip = BH3_ER_GER_cg_check_tt
 				modifier@consumer_goods_factor < 0.601
 			}
 		}
-		visible = {
-			has_country_flag = BH3_ElysianRealm_unlocked
-			NOT = { has_country_flag = BH3_ER_GER_stage1 }
-			NOT = { has_idea = BH3_ER_Elysia_GER }
-		}
-		selectable_mission = yes
-		is_good = yes
-		fire_only_once = no
-		days_mission_timeout = 801
-		cancel_if_not_visible = yes
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage1
 			BH3_ER_elysia_mission_ok = yes
@@ -142,23 +156,29 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_2a = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = {
-			OR = {
-				has_completed_focus = GER_anschluss
-				has_completed_focus = GER_demand_sudetenland
-			}
-		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
 		visible = {
 			has_country_flag = BH3_ElysianRealm_unlocked
 			has_country_flag = BH3_ER_GER_stage1
 			NOT = { has_country_flag = BH3_ER_GER_stage2 }
 			NOT = { has_idea = BH3_ER_Elysia_GER }
 		}
-		selectable_mission = yes
-		is_good = yes
-		fire_only_once = no
-		days_mission_timeout = 538
-		cancel_if_not_visible = yes
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		available = {
+			OR = {
+				has_completed_focus = GER_anschluss
+				has_completed_focus = GER_demand_sudetenland
+			}
+		}
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage2
 			BH3_ER_elysia_mission_ok = yes
@@ -179,18 +199,24 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_2b = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = { NOT = { country_exists = POL } }
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
 		visible = {
 			has_country_flag = BH3_ElysianRealm_unlocked
 			has_country_flag = BH3_ER_GER_stage1
 			NOT = { has_country_flag = BH3_ER_GER_stage2 }
 			NOT = { has_idea = BH3_ER_Elysia_GER }
 		}
-		selectable_mission = yes
-		is_good = yes
-		fire_only_once = no
-		days_mission_timeout = 538
-		cancel_if_not_visible = yes
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		available = { NOT = { country_exists = POL } }
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage2
 			BH3_ER_elysia_mission_ok = yes
@@ -212,17 +238,22 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_3a = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = { ENG = { surrender_progress > 0.99 } }
-		visible = {
-			has_country_flag = BH3_ElysianRealm_unlocked
-			has_country_flag = BH3_ER_GER_stage2
-			NOT = { has_idea = BH3_ER_Elysia_GER }
-		}
 		selectable_mission = yes
 		is_good = yes
 		fire_only_once = no
 		days_mission_timeout = 660
 		cancel_if_not_visible = yes
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		available = { ENG = { surrender_progress > 0.99 } }
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage3
 			BH3_ER_elysia_mission_ok = yes
@@ -249,17 +280,22 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_3b = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = { SOV = { surrender_progress > 0.99 } }
-		visible = {
-			has_country_flag = BH3_ElysianRealm_unlocked
-			has_country_flag = BH3_ER_GER_stage2
-			NOT = { has_idea = BH3_ER_Elysia_GER }
-		}
 		selectable_mission = yes
 		is_good = yes
 		fire_only_once = no
 		days_mission_timeout = 660
 		cancel_if_not_visible = yes
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		activation = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		available = { SOV = { surrender_progress > 0.99 } }
 		complete_effect = {
 			set_country_flag = BH3_ER_GER_stage3
 			BH3_ER_elysia_mission_ok = yes
