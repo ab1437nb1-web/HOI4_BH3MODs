@@ -67,12 +67,10 @@ BH3_ElysianRealm_elysia_missions = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
 		available = {
-			has_completed_focus = GER_prioritize_economic_growth
-			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%
-			date > 1938.1.1
-			custom_trigger_tooltip = {
-				tooltip = BH3_ER_GER_cg_check_tt
-				modifier@consumer_goods_factor < 0.601
+			# 工业线要求：1939 年工业科技「先进机床」或「建筑技术 III」任一
+			OR = {
+				has_tech = advanced_machine_tools
+				has_tech = construction3
 			}
 		}
 		visible = {
