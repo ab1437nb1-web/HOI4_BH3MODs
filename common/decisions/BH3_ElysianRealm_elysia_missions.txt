@@ -24,7 +24,11 @@ BH3_ElysianRealm_elysia_missions = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
 		available = {
-			has_completed_focus = GER_the_four_year_plan
+			# 两条互斥经济线的起点均可（四年计划 / 经济增长优先）
+			OR = {
+				has_completed_focus = GER_the_four_year_plan
+				has_completed_focus = GER_prioritize_economic_growth
+			}
 			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%（系数为乘区，区别于期望）
 			date > 1938.1.1
 			custom_trigger_tooltip = {
