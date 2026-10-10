@@ -24,9 +24,12 @@ BH3_ElysianRealm_elysia_missions = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
 		available = {
-			OR = {
-				has_completed_focus = GER_the_four_year_plan
-				has_completed_focus = GER_prioritize_the_four_year_plan
+			has_completed_focus = GER_the_four_year_plan
+			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%（系数为乘区，区别于期望）
+			date > 1938.1.1
+			custom_trigger_tooltip = {
+				tooltip = BH3_ER_GER_cg_check_tt
+				modifier@consumer_goods_factor < 0.601
 			}
 		}
 		visible = {
@@ -59,7 +62,15 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_1b = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = { has_completed_focus = GER_prioritize_economic_growth }
+		available = {
+			has_completed_focus = GER_prioritize_economic_growth
+			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%
+			date > 1938.1.1
+			custom_trigger_tooltip = {
+				tooltip = BH3_ER_GER_cg_check_tt
+				modifier@consumer_goods_factor < 0.601
+			}
+		}
 		visible = {
 			has_country_flag = BH3_ElysianRealm_unlocked
 			NOT = { has_country_flag = BH3_ER_GER_stage1 }
@@ -89,7 +100,15 @@ BH3_ElysianRealm_elysia_missions = {
 	BH3_ER_Elysia_GER_1c = {
 		icon = GFX_decision_BH3_SaintFreyaCollege
 		allowed = { tag = GER }
-		available = { num_divisions > 70 }
+		available = {
+			num_divisions > 70
+			# 阶段一通统一要求：1938.1.1 后生活消费品工厂系数不高于 60%
+			date > 1938.1.1
+			custom_trigger_tooltip = {
+				tooltip = BH3_ER_GER_cg_check_tt
+				modifier@consumer_goods_factor < 0.601
+			}
+		}
 		visible = {
 			has_country_flag = BH3_ElysianRealm_unlocked
 			NOT = { has_country_flag = BH3_ER_GER_stage1 }
