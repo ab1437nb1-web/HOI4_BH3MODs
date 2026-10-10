@@ -47,3 +47,188 @@ BH3_ER_elysia_mission_fail = {
 	}
 	activate_mission = $MISSION$
 }
+
+# ============================================================
+# 德国（GER）真我任务链：完成结算 + 每周自动完成驱动
+# 说明：selectable_mission 达成 available 后需玩家手动点击完成；
+#       为"达成即自动进入下一阶段"，由 on_weekly 调用 BH3_ER_elysia_GER_weekly 代为结算。
+#       手动点击（complete_effect）与自动驱动共用同一组 _finish 脚本，奖励不会重复
+#       （_finish 内设置阶段旗标，驱动端另有 NOT 阶段旗标兜底）。
+# ============================================================
+
+# ---------- 完成结算（complete_effect 与自动驱动共用）----------
+
+BH3_ER_GER_1a_finish = {
+	set_country_flag = BH3_ER_GER_stage1
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 50
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1938.3.12 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+}
+
+BH3_ER_GER_1b_finish = {
+	set_country_flag = BH3_ER_GER_stage1
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 50
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1938.3.12 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+}
+
+BH3_ER_GER_1c_finish = {
+	set_country_flag = BH3_ER_GER_stage1
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 50
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1938.3.12 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+}
+
+BH3_ER_GER_2a_finish = {
+	set_country_flag = BH3_ER_GER_stage2
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 50
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1939.9.1 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+}
+
+BH3_ER_GER_2b_finish = {
+	set_country_flag = BH3_ER_GER_stage2
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 50
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1939.9.1 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+}
+
+BH3_ER_GER_3a_finish = {
+	set_country_flag = BH3_ER_GER_stage3
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 100
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1941.6.22 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+	# 授予真我刻印本体（精神 + 持有旗标）并挂载闪击节奏分档修正
+	BH3_ER_elysia_grant = { TAG = GER }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+}
+
+BH3_ER_GER_3b_finish = {
+	set_country_flag = BH3_ER_GER_stage3
+	BH3_ER_elysia_mission_ok = yes
+	add_political_power = 100
+	add_to_variable = { BH3_ER_GER_momentum = 25 }
+	if = {
+		limit = { date < 1941.6.22 }
+		add_to_variable = { BH3_ER_GER_momentum = 15 }
+	}
+	BH3_ER_elysia_grant = { TAG = GER }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
+	add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+}
+
+# ---------- 每周自动完成驱动（on_weekly 调用；仅对解锁乐土的德国运行）----------
+
+BH3_ER_elysia_GER_weekly = {
+
+	# 阶段一：三个选项任一达成即自动完成（同阶段的其余选项随旗标隐藏并取消）
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_1a
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			OR = {
+				has_completed_focus = GER_the_four_year_plan
+				has_completed_focus = GER_prioritize_economic_growth
+			}
+			date > 1938.1.1
+			modifier@consumer_goods_factor < 0.601
+		}
+		BH3_ER_GER_1a_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_1a
+	}
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_1b
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			OR = {
+				has_tech = advanced_machine_tools
+				has_tech = construction3
+			}
+		}
+		BH3_ER_GER_1b_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_1b
+	}
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_1c
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			num_divisions > 70
+			date > 1938.1.1
+			modifier@consumer_goods_factor < 0.601
+		}
+		BH3_ER_GER_1c_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_1c
+	}
+
+	# 阶段二
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_2a
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			OR = {
+				has_completed_focus = GER_anschluss
+				has_completed_focus = GER_demand_sudetenland
+			}
+		}
+		BH3_ER_GER_2a_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_2a
+	}
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_2b
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { country_exists = POL }
+		}
+		BH3_ER_GER_2b_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_2b
+	}
+
+	# 阶段三
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_3a
+			NOT = { has_country_flag = BH3_ER_GER_stage3 }
+			ENG = { surrender_progress > 0.99 }
+		}
+		BH3_ER_GER_3a_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_3a
+	}
+	if = {
+		limit = {
+			has_active_mission = BH3_ER_Elysia_GER_3b
+			NOT = { has_country_flag = BH3_ER_GER_stage3 }
+			SOV = { surrender_progress > 0.99 }
+		}
+		BH3_ER_GER_3b_finish = yes
+		remove_mission = BH3_ER_Elysia_GER_3b
+	}
+}

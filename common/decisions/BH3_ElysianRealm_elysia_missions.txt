@@ -2,7 +2,9 @@
 # 往事乐土·真我刻印（P3）：国家真我任务链
 # 机制：原版 selectable_mission（有时限、有成败；字段语义照原版 AST/GER 任务）：
 #   * activation   = 自动启动条件（缺此字段任务永远不会开始计时！原版事件触发型填 always = no）
-#   * available    = 完成目标（任务运行中达成即完成，触发 complete_effect）
+#   * available    = 完成目标（用于界面展示完成条件；任务运行中达成后由每周脉冲自动结算，
+#                    见 elysia_effects 的 BH3_ER_elysia_GER_weekly——selectable_mission 达成条件
+#                    后默认需玩家手动点击完成，自动驱动即为此而设）
 #   * days_mission_timeout = 时限；超时进 timeout_effect（拖延惩罚 + 重新激活，可再来）
 #   * 依次解锁：阶段一 → 阶段二 → 阶段三；完成阶段三授予真我刻印本体（永久保留）。
 #   * 拿到刻印后（NOT has_idea 失效）全部任务隐藏；国家转入非历史线时
@@ -52,15 +54,7 @@ BH3_ElysianRealm_elysia_missions = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage1
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 50
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			# 历史节点奖励：早于 1938.3.12 完成 → 额外节奏
-			if = {
-				limit = { date < 1938.3.12 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
+			BH3_ER_GER_1a_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1a }
@@ -93,14 +87,7 @@ BH3_ElysianRealm_elysia_missions = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage1
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 50
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			if = {
-				limit = { date < 1938.3.12 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
+			BH3_ER_GER_1b_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1b }
@@ -136,14 +123,7 @@ BH3_ElysianRealm_elysia_missions = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage1
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 50
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			if = {
-				limit = { date < 1938.3.12 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
+			BH3_ER_GER_1c_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1c }
@@ -180,15 +160,7 @@ BH3_ElysianRealm_elysia_missions = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage2
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 50
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			# 历史节点奖励：早于 1939.9.1 完成 → 额外节奏
-			if = {
-				limit = { date < 1939.9.1 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
+			BH3_ER_GER_2a_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_2a }
@@ -218,14 +190,7 @@ BH3_ElysianRealm_elysia_missions = {
 		}
 		available = { NOT = { country_exists = POL } }
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage2
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 50
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			if = {
-				limit = { date < 1939.9.1 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
+			BH3_ER_GER_2b_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_2b }
@@ -255,21 +220,7 @@ BH3_ElysianRealm_elysia_missions = {
 		}
 		available = { ENG = { surrender_progress > 0.99 } }
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage3
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 100
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			# 历史节点奖励：早于 1941.6.22 完成 → 额外节奏
-			if = {
-				limit = { date < 1941.6.22 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
-			# 授予真我刻印本体（精神 + 持有旗标）并挂载闪击节奏分档修正
-			BH3_ER_elysia_grant = { TAG = GER }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+			BH3_ER_GER_3a_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_3a }
@@ -297,19 +248,7 @@ BH3_ElysianRealm_elysia_missions = {
 		}
 		available = { SOV = { surrender_progress > 0.99 } }
 		complete_effect = {
-			set_country_flag = BH3_ER_GER_stage3
-			BH3_ER_elysia_mission_ok = yes
-			add_political_power = 100
-			add_to_variable = { BH3_ER_GER_momentum = 25 }
-			if = {
-				limit = { date < 1941.6.22 }
-				add_to_variable = { BH3_ER_GER_momentum = 15 }
-			}
-			BH3_ER_elysia_grant = { TAG = GER }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
-			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+			BH3_ER_GER_3b_finish = yes
 		}
 		timeout_effect = {
 			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_3b }

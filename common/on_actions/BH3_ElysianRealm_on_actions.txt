@@ -83,6 +83,12 @@ on_actions = {
 					limit = { check_variable = { BH3_ER_pardofelis_cd > 0 } }
 					subtract_from_variable = { BH3_ER_pardofelis_cd = 1 }
 				}
+				# ================= 真我刻印（P3）：德国任务链自动完成驱动 =================
+				# 达成完成条件后无需手动点击，每周脉冲自动结算并进入下一阶段
+				if = {
+					limit = { has_country_flag = BH3_ElysianRealm_unlocked }
+					BH3_ER_elysia_GER_weekly = yes
+				}
 			}
 		}
 	}
