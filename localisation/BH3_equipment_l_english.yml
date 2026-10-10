@@ -569,7 +569,7 @@ BH3_ER_stat_Pardofelis_2:0 "§YReverie§!\nHeld: Reverie I: Shiny, Valuable, Rev
 BH3_ER_stat_Pardofelis_3:0 "§YReverie§!\nHeld: Reverie I: Shiny, Valuable, Reverie II: Philosophy of the Peddler, Reverie III: Street Recitative\nNext: Reverie Core: Empty Dream, Empty Set, Empty Self, Empty Joy"
 BH3_ER_stat_Pardofelis_Core:0 "§YReverie§!\nHeld: Reverie I: Shiny, Valuable, Reverie II: Philosophy of the Peddler, Reverie III: Street Recitative, Reverie Core: Empty Dream, Empty Set, Empty Self, Empty Joy\nNext: Reverie Amp: Improv 'The Boss'"
 BH3_ER_stat_Pardofelis_Amp:0 "§YReverie§!\nHeld: Reverie I: Shiny, Valuable, Reverie II: Philosophy of the Peddler, Reverie III: Street Recitative, Reverie Core: Empty Dream, Empty Set, Empty Self, Empty Joy, Reverie Amp: Improv 'The Boss'\n§GAll Signets of this series collected.§!"
-BH3_ER_gui_draw:0 "Enter the Trial: Signets, Choose 1 of 3 (50 Flawless Keys)"
+BH3_ER_gui_draw:0 "Enter Trial: Choose 1 of 3 Signets"
 BH3_ER_gui_draw_tt:0 "Spend §Y50 Flawless Keys§! for a draw faithful to the original game:\nThree §Yhero portals§! appear, each offering that hero's §Ynext Signet§! (Normal I->II->III -> Core -> Amplifier; the series advances automatically, matching the original's 'duplicates upgrade' rule).\n\nRules (as in the original):\n· Series without 3 Normal Signets -> next Normal Signet;\n· With 3 Normal Signets -> the series' §YCore Signet§!;\n· With the Core -> the series' §YAmplifier Signet§!;\n· The three candidates never repeat; if fewer remain, you may cancel for a full refund.\n\nClick a card to claim its Signet; hover a card for its full name and effects."
 BH3_ER_gui_cancel:0 "Cancel (refund keys)"
 BH3_ER_gui_cancel_tt:0 "Abandon the current three candidates and §Yrefund all 50 Flawless Keys§!."

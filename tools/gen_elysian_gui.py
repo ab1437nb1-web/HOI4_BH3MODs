@@ -2,9 +2,14 @@
 """往事乐土 GUI 化改造生成器：
 1) common/scripted_effects/BH3_ElysianRealm_scripted_effects.txt  —— 候选生成/授予/重置/放弃
 2) common/scripted_guis/BH3_ElysianRealm_scripted_gui.txt        —— 窗口交互
-3) interface/BH3_ElysianRealm_window.gui                         —— 窗口布局
+3) interface/BH3_tech.gui（__BH3_ER_MENU_BEGIN__/END 标记段）    —— 窗口布局（手工维护，见文件内注释）
 4) common/scripted_localisation/BH3_ElysianRealm_scripted_loc.txt—— 候选卡/系状态的动态文本
 5) 追加本地化键到两个现有 yml（保持 BOM 与行尾）
+
+⚠️ 2026-10-10 警示：本生成器的 scripted_effects / scripted_gui / scripted_loc 输出段
+   已落后于 10-09~10-10 的手工改版（parent 挂载、权重规则、BHER_lock_tip 等均手工调整过），
+   盲目复跑会用旧逻辑覆盖新手改！复跑前必须先把当前文件内容回灌到本脚本对应段落。
+   当前唯一安全复跑的部分：第 5) 项 yml 本地化（幂等追加）。
 """
 import os, re, io
 
@@ -234,36 +239,10 @@ def btn(name, x, y, sprite, tt, text=None, font="hoi_16mbs"):
     s.append("\t\t}")
     return s
 
-gui = ["guiTypes = {", "",
-       "\t# 往事乐土主窗口（2026-10-09：取代原决议列表，原作式三候选抽取）",
-       "\tcontainerWindowType = {",
-       "\t\tname = \"BH3_ElysianRealm_window\"",
-       "\t\tposition = { x = 0 y = 0 }",
-       "\t\tsize = { width = 100% height = 545 }"]
-gui += btn("BH3_ER_draw_btn", 15, 8, "GFX_BH3_Intro_400x50_btn", "BH3_ER_gui_draw_tt", "BH3_ER_gui_draw")
-for slot, x in ((1, 15), (2, 160), (3, 305)):
-    for f, *_ in FACTIONS:
-        gui += btn(f"BH3_ER_take_{slot}_{f}", x, 66, f"GFX_idea_BH3_ER_{f}", f"BH3_ER_cand{slot}_tt")
-gui += btn("BH3_ER_cancel_btn", 15, 160, "GFX_BH3_Intro_200x50_alpha_btn", "BH3_ER_gui_cancel_tt", "BH3_ER_gui_cancel")
-gui += btn("BH3_ER_reset_btn", 215, 160, "GFX_BH3_Intro_200x50_alpha_btn", "BH3_ER_gui_reset_tt", "BH3_ER_gui_reset")
-for i, (f, *_ ) in enumerate(FACTIONS):
-    x = 15 + (i % 6) * 68
-    y = 222 if i < 6 else 316
-    gui += [f"\t\ticonType = {{",
-            f"\t\t\tname = \"BH3_ER_fac_{f}\"",
-            f"\t\t\tposition = {{ x = {x} y = {y} }}",
-            f"\t\t\tspriteType = \"GFX_idea_BH3_ER_{f}\"",
-            f"\t\t\tpdx_tooltip = \"BH3_ER_fac_{f}_tt\"",
-            f"\t\t}}"]
-for i, r in enumerate(RES):
-    x = 15 + (i % 3) * 110
-    y = 414 + (i // 3) * 30
-    gui += btn(f"BH3_ER_mob_{r}", x, y, "GFX_BH3_Hyperion_Change_SecretaryX_btn", f"BH3_ER_gui_mob_{r}_tt", f"BH3_ER_gui_mob_{r}")
-for i in (1, 2, 3):
-    gui += btn(f"BH3_ER_pard_{i}", 15 + (i - 1) * 110, 510, "GFX_BH3_Hyperion_Change_SecretaryX_btn", f"BH3_ER_gui_pard_{i}_tt", f"BH3_ER_gui_pard_{i}")
-gui += ["\t}", "}"]
-open(os.path.join(ROOT, "interface/BH3_ElysianRealm_window.gui"), "w", encoding="utf-8", newline="\n").write("\n".join(gui) + "\n")
-print("gui:", len(gui), "lines")
+# GUI 窗口本体（BH3_ER_menu）现由 interface/BH3_tech.gui 中 __BH3_ER_MENU_BEGIN__/END 标记间的人工维护段承载：
+# 1) parent_window_name = BH3_main_menu 必须与父窗口同处一个 .gui 文件（跨文件挂载实测失效，窗口落到屏幕左上角）；
+# 2) 2026-10-09 全屏覆盖式改版（标题/X钮/全覆盖布局）为手工调整，生成器不再整体重发该窗口，避免覆盖手工改动。
+# 若日后需批量重建按钮区，请从 BH3_tech.gui 标记段复制回本文件作为模板。
 
 # ---------------------------------------------------------------- 4. scripted_localisation
 sl = ["# 往事乐土动态文本（候选卡面 / 各系持有状态）"]
@@ -345,7 +324,7 @@ for f, fid, cn_name, cn_hero, en_name in FACTIONS:
         put(f"BH3_ER_stat_{f}_{st}", f"{head_cn}\\n{body_cn}", f"{head_en}\\n{body_en}")
 
 # GUI 文本
-put("BH3_ER_gui_draw", "进入试炼·刻印三选一（50 把无瑕之钥）", "Enter the Trial: Signets, Choose 1 of 3 (50 Flawless Keys)")
+put("BH3_ER_gui_draw", "进入试炼·刻印三选一", "Enter Trial: Choose 1 of 3 Signets")
 put("BH3_ER_gui_draw_tt",
     "消耗 §Y50 把无瑕之钥§!，开启一次与原作相同的刻印三选一：\\n随机出现三§Y位英桀的传送门§!，每位门内是其§Y下一枚刻印§!（普通 Ⅰ→Ⅱ→Ⅲ → 核心 → 增幅，同系自动递进，与原作重复获得即升级一致）。\\n\\n规则（与原作一致）：\\n· 未集齐 3 枚普通刻印的系 → 门内给下一枚普通刻印；\\n· 集齐 3 枚普通后 → 门内变为该系§Y核心刻印§!；\\n· 持有核心后 → 门内变为该系§Y增幅刻印§!；\\n· 三候选互不重复；候选不足时可放弃并全额返还钥匙。\\n\\n点选一张候选卡即获得对应刻印；点击候选卡可查看其完整名称与效果说明。",
     "Spend §Y50 Flawless Keys§! for a draw faithful to the original game:\\nThree §Yhero portals§! appear, each offering that hero's §Ynext Signet§! (Normal I->II->III -> Core -> Amplifier; the series advances automatically, matching the original's 'duplicates upgrade' rule).\\n\\nRules (as in the original):\\n· Series without 3 Normal Signets -> next Normal Signet;\\n· With 3 Normal Signets -> the series' §YCore Signet§!;\\n· With the Core -> the series' §YAmplifier Signet§!;\\n· The three candidates never repeat; if fewer remain, you may cancel for a full refund.\\n\\nClick a card to claim its Signet; hover a card for its full name and effects.")

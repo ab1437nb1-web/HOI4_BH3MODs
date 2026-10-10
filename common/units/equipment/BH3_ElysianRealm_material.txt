@@ -33,7 +33,9 @@ equipments = {
 	BH3_FlawlessKey_equipment_0 = {
 		is_buildable = yes
 		archetype = BH3_FlawlessKey_equipment
-		active = yes
+		# active 必须=no：默认 inactive，由特殊项目 BH3_sp_ElysianRealm_Open 的 enable_equipments 解锁生产
+		# （写 yes 会导致未做特殊项目就能直接生产无瑕之钥，2026-10-10 实测修复）
+		active = no
 		priority = 100
 		year = 1936
 	}
