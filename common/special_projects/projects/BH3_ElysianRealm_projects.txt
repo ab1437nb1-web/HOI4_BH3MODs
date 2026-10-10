@@ -29,6 +29,14 @@ BH3_sp_ElysianRealm_Open = {
 
 		country_effects = {
 			set_country_flag = BH3_ElysianRealm_unlocked
+			# 真我刻印（P3）：初始化拖延惩罚变量并挂载通用惩罚修正（任务超时时累积，见 elysia_effects）
+			set_variable = { BH3_ER_elysia_delay = 0 }
+			set_variable = { BH3_ER_elysia_delay_cg = 0 }
+			set_variable = { BH3_ER_elysia_delay_pp = 0 }
+			set_variable = { BH3_ER_elysia_delay_stab = 0 }
+			add_dynamic_modifier = { modifier = BH3_ER_elysia_delay_dm }
+			# 德国真我「闪击节奏」节奏变量（其余国家的特色机制变量随该国蓝本加入时一并初始化）
+			set_variable = { BH3_ER_GER_momentum = 0 }
 		}
 	}
 

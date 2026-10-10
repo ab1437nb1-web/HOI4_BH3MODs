@@ -1,0 +1,29 @@
+ideas = {
+	country = {
+
+		####################################################################
+		########## 往事乐土·真我刻印（P3）：定制刻印精神 ##########
+		# 载体同其它刻印：精神=持有标记与界面展示；真加成在 dynamic_modifiers。
+		# 本 mod 预设国逐国添加；submod 按公共脚本头注释的接口契约自行添加 BH3_ER_Elysia_<TAG>。
+		####################################################################
+
+		# 默认「真我」精神：未做定制刻印的国家（含 submod）可复用。
+		BH3_ER_Elysia = {
+			allowed = { always = yes }
+			picture = GFX_idea_BH3_ER_Elysia
+			modifier = {
+				army_morale_factor = 0.03
+			}
+		}
+
+		# 德国「真我·日耳曼尼亚」
+		BH3_ER_Elysia_GER = {
+			allowed = { always = yes }
+			picture = GFX_idea_BH3_ER_Elysia_GER
+			modifier = {
+				army_attack_factor = 0.02
+				air_attack_factor = 0.02
+			}
+		}
+	}
+}

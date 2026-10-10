@@ -52,6 +52,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/signet_Pardofelis.png"
 	}
 	spriteType = {
+		name = "GFX_idea_BH3_ER_Elysia"
+		texturefile = "gfx/interface/elysianrealm/signet_Elysia.png"
+	}
+	spriteType = {
 		name = "GFX_idea_BH3_ER_Elysia_GER"
 		texturefile = "gfx/interface/elysianrealm/signet_Elysia.png"
 	}

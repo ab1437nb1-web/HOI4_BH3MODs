@@ -1,0 +1,261 @@
+# ============================================================
+# 往事乐土·真我刻印（P3）：国家真我任务链
+# 机制：原版 selectable_mission（有时限、有成败；参考原版 ITA/GER 梅福券）。
+#   * available = 完成目标（达成即完成）；days_mission_timeout = 时限；
+#     超时进 timeout_effect（拖延惩罚 + 重新激活，可再来）。
+#   * 依次解锁：阶段一 → 阶段二 → 阶段三；完成阶段三授予真我刻印本体（永久保留）。
+#   * 拿到刻印后（NOT has_idea 失效）全部任务隐藏；国家转入非历史线时
+#     cancel_if_not_visible 自动取消正在运行的任务。
+# 公共结算脚本见 common/scripted_effects/BH3_ElysianRealm_elysia_effects.txt。
+# ============================================================
+
+BH3_ElysianRealm_elysia_missions = {
+
+	################################################################
+	########## 德国（GER）：真我·日耳曼尼亚 ##########
+	# 核心机制「闪击节奏」：每阶段完成 +25 momentum，
+	# 早于历史节点（1938.3.12 / 1939.9.1 / 1941.6.22）完成再 +15，momentum 分档见 elysia_dm。
+	################################################################
+
+	# ---------- 阶段一：重整军备（801 天，1936.1.1 → 1938.3.12 德奥合并）----------
+
+	# ① 四年计划（延续梅福券体系）：军工产能强，但消费品负担重
+	BH3_ER_Elysia_GER_1a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = {
+			OR = {
+				has_completed_focus = GER_the_four_year_plan
+				has_completed_focus = GER_prioritize_the_four_year_plan
+			}
+		}
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage1
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 50
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			# 历史节点奖励：早于 1938.3.12 完成 → 额外节奏
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1a }
+		}
+	}
+
+	# ② 恢复经济（取消梅福券）：消费品轻、经济增长快，但军工起步较慢
+	BH3_ER_Elysia_GER_1b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { has_completed_focus = GER_prioritize_economic_growth }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage1
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 50
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1b }
+		}
+	}
+
+	# ③ 闪电扩军：不碰经济路线，直接扩军（陆军师数 > 70）
+	BH3_ER_Elysia_GER_1c = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { num_divisions > 70 }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			NOT = { has_country_flag = BH3_ER_GER_stage1 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 801
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage1
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 50
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			if = {
+				limit = { date < 1938.3.12 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1c }
+		}
+	}
+
+	# ---------- 阶段二：不流血的外交（538 天，1938.3.12 → 1939.9.1 波兰战役）----------
+
+	# ① 慕尼黑路线：外交吞并（德奥合并 / 苏台德）
+	BH3_ER_Elysia_GER_2a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = {
+			OR = {
+				has_completed_focus = GER_anschluss
+				has_completed_focus = GER_demand_sudetenland
+			}
+		}
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage2
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 50
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			# 历史节点奖励：早于 1939.9.1 完成 → 额外节奏
+			if = {
+				limit = { date < 1939.9.1 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_2a }
+		}
+	}
+
+	# ② 直接摊牌：对波兰动武并取胜（波兰被任意一方消灭即算达成，避免卡死）
+	BH3_ER_Elysia_GER_2b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { NOT = { country_exists = POL } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage1
+			NOT = { has_country_flag = BH3_ER_GER_stage2 }
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 538
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage2
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 50
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			if = {
+				limit = { date < 1939.9.1 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_2b }
+		}
+	}
+
+	# ---------- 阶段三：西线还是东线（660 天，1939.9.1 → 1941.6.22 巴巴罗萨）----------
+
+	# ① 海狮：登陆并击溃英国
+	BH3_ER_Elysia_GER_3a = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { ENG = { surrender_progress > 0.99 } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 660
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage3
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 100
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			# 历史节点奖励：早于 1941.6.22 完成 → 额外节奏
+			if = {
+				limit = { date < 1941.6.22 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+			# 授予真我刻印本体（精神 + 持有旗标）并挂载闪击节奏分档修正
+			BH3_ER_elysia_grant = { TAG = GER }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_3a }
+		}
+	}
+
+	# ② 巴巴罗萨：击溃苏联
+	BH3_ER_Elysia_GER_3b = {
+		icon = GFX_decision_BH3_SaintFreyaCollege
+		allowed = { tag = GER }
+		available = { SOV = { surrender_progress > 0.99 } }
+		visible = {
+			has_country_flag = BH3_ElysianRealm_unlocked
+			has_country_flag = BH3_ER_GER_stage2
+			NOT = { has_idea = BH3_ER_Elysia_GER }
+		}
+		selectable_mission = yes
+		is_good = yes
+		fire_only_once = no
+		days_mission_timeout = 660
+		cancel_if_not_visible = yes
+		complete_effect = {
+			set_country_flag = BH3_ER_GER_stage3
+			BH3_ER_elysia_mission_ok = yes
+			add_political_power = 100
+			add_to_variable = { BH3_ER_GER_momentum = 25 }
+			if = {
+				limit = { date < 1941.6.22 }
+				add_to_variable = { BH3_ER_GER_momentum = 15 }
+			}
+			BH3_ER_elysia_grant = { TAG = GER }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum2_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum3_dm }
+			add_dynamic_modifier = { modifier = BH3_ER_Elysia_GER_momentum4_dm }
+		}
+		timeout_effect = {
+			BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_3b }
+		}
+	}
+}

@@ -1,0 +1,7 @@
+# 往事乐土·真我刻印（P3）：公共脚本触发器（供本 mod 预设、submod 与其它系统联动复用）
+
+# 判断本国是否已持有真我刻印（任何来源授予均可）。
+# 用法：BH3_ER_has_elysia = yes
+BH3_ER_has_elysia = {
+	has_country_flag = BH3_ER_has_elysia
+}

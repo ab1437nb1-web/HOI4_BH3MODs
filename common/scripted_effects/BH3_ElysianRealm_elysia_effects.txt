@@ -1,0 +1,49 @@
+# ============================================================
+# 往事乐土·真我刻印（P3）：公共脚本框架（通用，供本 mod 预设与 submod 复用）
+#
+# submod 接口契约（无需改动本 mod 任何文件）：
+#   1) 定义精神 BH3_ER_Elysia_<TAG>（common/ideas/，picture 用 GFX_idea_BH3_ER_Elysia_<TAG>）；
+#      不想自定义时可直接复用默认精神 BH3_ER_Elysia（通用「真我」莲花图标）。
+#   2) 定义本国真我任务链（common/decisions/，决议组用 BH3_ElysianRealm_elysia_missions，
+#      selectable_mission = yes 写法同原版意大利任务）。
+#   3) 在任务结算里调用下列公共脚本。
+#
+# 约定：
+#   * 拖延惩罚变量全国一套（一个国家同时只有一条真我任务链）：
+#     BH3_ER_elysia_delay（计数 0~5）/ _delay_cg / _delay_pp / _delay_stab（三系惩罚量）。
+#     变量在「往事乐土」特殊项目完成时初始化为 0（见 special_projects 文件）。
+#   * 真我持有旗标 BH3_ER_has_elysia（set 后不再清除；国家灭亡自然消失）。
+# ============================================================
+
+# 授予真我刻印：精神 + 持有旗标。
+# 用法：BH3_ER_elysia_grant = { TAG = GER }
+# 注：引擎对不存在的 add_ideas 目标只写 error.log、不中断游戏；
+#     但请 submod 务必先按命名约定定义精神（或用默认精神，见接口契约第 1 条）。
+BH3_ER_elysia_grant = {
+	hidden_effect = {
+		add_ideas = BH3_ER_Elysia_$TAG$
+		set_country_flag = BH3_ER_has_elysia
+	}
+}
+
+# 阶段完成通用结算：清除本阶段拖延计数与惩罚（照设计：不带入下一阶段）。
+# 用法：BH3_ER_elysia_mission_ok = yes
+BH3_ER_elysia_mission_ok = {
+	set_variable = { BH3_ER_elysia_delay = 0 }
+	set_variable = { BH3_ER_elysia_delay_cg = 0 }
+	set_variable = { BH3_ER_elysia_delay_pp = 0 }
+	set_variable = { BH3_ER_elysia_delay_stab = 0 }
+}
+
+# 阶段超时通用结算（照原版梅福券）：拖延 +1（上限 5 层），三系惩罚同步累积，任务重新激活可再来。
+# 用法：BH3_ER_elysia_mission_fail = { MISSION = BH3_ER_Elysia_GER_1a }
+BH3_ER_elysia_mission_fail = {
+	if = {
+		limit = { check_variable = { BH3_ER_elysia_delay < 5 } }
+		add_to_variable = { BH3_ER_elysia_delay = 1 }
+		add_to_variable = { BH3_ER_elysia_delay_cg = 0.02 }
+		add_to_variable = { BH3_ER_elysia_delay_pp = -0.05 }
+		add_to_variable = { BH3_ER_elysia_delay_stab = -0.005 }
+	}
+	activate_mission = $MISSION$
+}

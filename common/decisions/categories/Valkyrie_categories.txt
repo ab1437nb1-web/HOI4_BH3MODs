@@ -49,6 +49,14 @@ BH3_ElysianRealm_group = {
 	visible_when_empty = yes
 	priority = 99994
 }
+# 真我刻印（P3）：各国定制刻印任务链（selectable_mission 决议形态，见 elysia_missions 文件）
+BH3_ElysianRealm_elysia_missions = {
+	icon = GFX_decision_cat_HonkaiImpact3
+	picture = GFX_decision_cat_TheDivineKeys
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+	priority = 99992
+}
 BH3_ElysianRealm_debug_group = {
 	icon = GFX_decision_cat_HonkaiImpact3
 	allowed = { is_debug = yes }
