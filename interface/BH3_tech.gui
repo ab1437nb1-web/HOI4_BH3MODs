@@ -1125,6 +1125,27 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
+
+		# 当前层数（由 BH3_ER_floor 变量驱动，见 scripted_localisation）
+		instantTextBoxType = {
+			name = "BH3_ER_floor_text"
+			position = { x = 485 y = 140 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_text"
+			maxWidth = 420
+			maxHeight = 30
+			format = left
+			alwaystransparent = yes
+		}
+
+		# 无瑕之钥图标（装饰）
+		iconType = {
+			position = { x = 880 y = 120 }
+			name = "icon_BH3_ER_key"
+			spriteType = "GFX_BH3_ER_FlawlessKey_icon"
+			scale = 0.8
+			alwaystransparent = yes
+		}
 	}
 	# __BH3_ER_MENU_END__
 }

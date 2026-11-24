@@ -1,0 +1,55 @@
+# 往事乐土：层数与关卡机制（2026-11-25 第一版）
+# 变量：BH3_ER_floor（0~17）、BH3_ER_double_pending、BH3_ER_signets、
+#       BH3_ER_shop_45 / BH3_ER_shop_89 / BH3_ER_shop_1314
+# 标记：BH3_ER_boss_floor / BH3_ER_shop_floor
+
+BH3_ER_init_run = {
+	set_variable = { BH3_ER_floor = 0 }
+	set_variable = { BH3_ER_double_pending = 0 }
+	set_variable = { BH3_ER_signets = 0 }
+	set_variable = { BH3_ER_shop_45 = 0 }
+	set_variable = { BH3_ER_shop_89 = 0 }
+	set_variable = { BH3_ER_shop_1314 = 0 }
+	clr_country_flag = BH3_ER_boss_floor
+	clr_country_flag = BH3_ER_shop_floor
+	clr_country_flag = BH3_ER_final_challenge
+}
+
+# 进入新一层的结算：普通层给 1 枚刻印（占位计数），并标记层类型
+BH3_ER_enter_floor = {
+	set_variable = { BH3_ER_double_pending = 0 }
+	clr_country_flag = BH3_ER_boss_floor
+	clr_country_flag = BH3_ER_shop_floor
+	add_to_variable = { BH3_ER_signets = 1 }
+
+	# 双倍层：3 / 6 / 11 / 15
+	if = {
+		limit = {
+			OR = {
+				check_variable = { BH3_ER_floor = 3 }
+				check_variable = { BH3_ER_floor = 6 }
+				check_variable = { BH3_ER_floor = 11 }
+				check_variable = { BH3_ER_floor = 15 }
+			}
+		}
+		set_variable = { BH3_ER_double_pending = 1 }
+	}
+
+	# Boss 层：7 / 12 / 17
+	if = {
+		limit = {
+			OR = {
+				check_variable = { BH3_ER_floor = 7 }
+				check_variable = { BH3_ER_floor = 12 }
+				check_variable = { BH3_ER_floor = 17 }
+			}
+		}
+		set_country_flag = BH3_ER_boss_floor
+	}
+
+	# 固定商店层：16
+	if = {
+		limit = { check_variable = { BH3_ER_floor = 16 } }
+		set_country_flag = BH3_ER_shop_floor
+	}
+}

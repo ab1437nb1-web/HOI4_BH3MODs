@@ -29,6 +29,7 @@ BH3_sp_ElysianRealm_Open = {
 
 		country_effects = {
 			set_country_flag = BH3_ElysianRealm_unlocked
+			BH3_ER_init_run = yes
 		}
 	}
 

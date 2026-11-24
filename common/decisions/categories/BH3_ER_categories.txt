@@ -1,0 +1,13 @@
+BH3_ElysianRealm_floor_group = {
+	icon = GFX_BH3_ER_FlawlessKey_icon
+	priority = 99990
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+}
+
+BH3_ER_debug_group = {
+	icon = GFX_BH3_ER_FlawlessKey_icon
+	priority = 99989
+	allowed = { is_debug = yes }
+	visible = { is_debug = yes }
+}

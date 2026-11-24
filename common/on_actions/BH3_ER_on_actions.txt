@@ -1,0 +1,15 @@
+on_actions = {
+
+	# 旧存档/异常情况下补一次初始化
+	on_daily = {
+		effect = {
+			every_country = {
+				limit = {
+					has_country_flag = BH3_ElysianRealm_unlocked
+					NOT = { has_variable = BH3_ER_floor }
+				}
+				BH3_ER_init_run = yes
+			}
+		}
+	}
+}

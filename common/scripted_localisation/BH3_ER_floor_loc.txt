@@ -1,0 +1,75 @@
+defined_text = {
+	name = BH3_ER_floor_text
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 0 } }
+		localization_key = BH3_ER_floor_0
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 1 } }
+		localization_key = BH3_ER_floor_1
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 2 } }
+		localization_key = BH3_ER_floor_2
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 3 } }
+		localization_key = BH3_ER_floor_3
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 4 } }
+		localization_key = BH3_ER_floor_4
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 5 } }
+		localization_key = BH3_ER_floor_5
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 6 } }
+		localization_key = BH3_ER_floor_6
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 7 } }
+		localization_key = BH3_ER_floor_7
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 8 } }
+		localization_key = BH3_ER_floor_8
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 9 } }
+		localization_key = BH3_ER_floor_9
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 10 } }
+		localization_key = BH3_ER_floor_10
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 11 } }
+		localization_key = BH3_ER_floor_11
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 12 } }
+		localization_key = BH3_ER_floor_12
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 13 } }
+		localization_key = BH3_ER_floor_13
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 14 } }
+		localization_key = BH3_ER_floor_14
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 15 } }
+		localization_key = BH3_ER_floor_15
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 16 } }
+		localization_key = BH3_ER_floor_16
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_floor = 17 } }
+		localization_key = BH3_ER_floor_17
+	}
+}

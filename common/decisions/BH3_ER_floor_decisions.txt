@@ -1,0 +1,109 @@
+BH3_ElysianRealm_floor_group = {
+
+	# ---------- 推进一层 ----------
+	BH3_ER_advance_floor = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = { check_variable = { BH3_ER_floor < 17 } }
+		available = {
+			has_equipment = { BH3_FlawlessKey_equipment > 99 }
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+			add_to_variable = { BH3_ER_floor = 1 }
+			BH3_ER_enter_floor = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 双倍层：第二枚刻印（再花 100 钥匙） ----------
+	BH3_ER_buy_double_signet = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = { check_variable = { BH3_ER_double_pending = 1 } }
+		available = {
+			has_equipment = { BH3_FlawlessKey_equipment > 99 }
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+			set_variable = { BH3_ER_double_pending = 0 }
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 可选商店：4~5 层 ----------
+	BH3_ER_shop_enter_45 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = {
+			check_variable = { BH3_ER_shop_45 = 0 }
+			OR = {
+				check_variable = { BH3_ER_floor = 4 }
+				check_variable = { BH3_ER_floor = 5 }
+			}
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_shop_45 = 1 }
+			set_country_flag = BH3_ER_shop_open_45
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 可选商店：8~9 层 ----------
+	BH3_ER_shop_enter_89 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = {
+			check_variable = { BH3_ER_shop_89 = 0 }
+			OR = {
+				check_variable = { BH3_ER_floor = 8 }
+				check_variable = { BH3_ER_floor = 9 }
+			}
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_shop_89 = 1 }
+			set_country_flag = BH3_ER_shop_open_89
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 可选商店：13~14 层 ----------
+	BH3_ER_shop_enter_1314 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = {
+			check_variable = { BH3_ER_shop_1314 = 0 }
+			OR = {
+				check_variable = { BH3_ER_floor = 13 }
+				check_variable = { BH3_ER_floor = 14 }
+			}
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_shop_1314 = 1 }
+			set_country_flag = BH3_ER_shop_open_1314
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 17 层后：英桀挑战 ----------
+	BH3_ER_challenge_elysia = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { has_country_flag = BH3_ElysianRealm_unlocked }
+		visible = { check_variable = { BH3_ER_floor = 17 } }
+		available = { always = yes }
+		complete_effect = {
+			set_country_flag = BH3_ER_final_challenge
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

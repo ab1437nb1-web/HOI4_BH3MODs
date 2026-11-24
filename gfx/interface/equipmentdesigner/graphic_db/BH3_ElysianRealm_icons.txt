@@ -3,7 +3,7 @@ default = {
 	BH3_FlawlessKey_equipment = {
 		pool = {
 			icons = {
-				"GFX_SchicksalValkyrieMeele_Research_medium"
+				"GFX_BH3_ER_FlawlessKey_icon"
 			}
 			weight = 100
 		}
@@ -11,7 +11,7 @@ default = {
 	BH3_FlawlessKey_equipment_0 = {
 		pool = {
 			icons = {
-				"GFX_SchicksalValkyrieMeele_Research_medium"
+				"GFX_BH3_ER_FlawlessKey_icon"
 			}
 			weight = 100
 		}

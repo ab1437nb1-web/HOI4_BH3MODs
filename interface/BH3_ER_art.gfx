@@ -1,0 +1,14 @@
+spriteTypes = {
+
+	# 无瑕之钥（往事乐土货币/材料图标）
+	spriteType = {
+		name = "GFX_BH3_ER_FlawlessKey_icon"
+		texturefile = "gfx/interface/elysianrealm/flawless_key.png"
+	}
+
+	# 大图版本（GUI 展示用）
+	spriteType = {
+		name = "GFX_BH3_ER_FlawlessKey_big"
+		texturefile = "gfx/interface/elysianrealm/flawless_key_big.png"
+	}
+}
