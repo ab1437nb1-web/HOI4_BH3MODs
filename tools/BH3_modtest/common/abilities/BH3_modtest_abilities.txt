@@ -1,0 +1,75 @@
+ability = {
+
+	# 测试组：-100% 受伤（本次要验证的写法，放在 unit_modifiers 里）
+	BH3_test_ability_immune = {
+		name = ABILITY_BH3_TEST_IMMUNE
+		desc = ABILITY_BH3_TEST_IMMUNE_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -1.0
+			org_damage_multiplier = -1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 对照组：-50%
+	BH3_test_ability_half = {
+		name = ABILITY_BH3_TEST_HALF
+		desc = ABILITY_BH3_TEST_HALF_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -0.5
+			org_damage_multiplier = -0.5
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 单变量：只减兵力伤害
+	BH3_test_ability_str_only = {
+		name = ABILITY_BH3_TEST_STR_ONLY
+		desc = ABILITY_BH3_TEST_STR_ONLY_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 单变量：只减组织度伤害
+	BH3_test_ability_org_only = {
+		name = ABILITY_BH3_TEST_ORG_ONLY
+		desc = ABILITY_BH3_TEST_ORG_ONLY_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			org_damage_multiplier = -1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 反向对照：+100%
+	BH3_test_ability_double = {
+		name = ABILITY_BH3_TEST_DOUBLE
+		desc = ABILITY_BH3_TEST_DOUBLE_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = 1.0
+			org_damage_multiplier = 1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

@@ -92,3 +92,47 @@
 - 这些 modifier 是国家级 的，不能只作用于某个师。
 - 它们只影响常规陆战伤害；CAS 伤害走 cas_damage_reduction，脚本 damage_units 直接改 org/str，理论上都不吃这两个倍率（需要另做测试确认）。
 - -1.0 是否被引擎 clamp、-2.0 会怎样，官方文档没写，只能靠本测试确认。
+
+
+---
+
+## 六、v2：指挥官技能测试（2026-11-25 追加）
+
+第一轮结论：**在国家精神（ideas）里这两个 modifier 会显示但没有实战效果**。
+所以把它们搬到原版真正使用它们的地方——指挥官技能的 unit_modifiers 里。
+
+新增 5 个技能（都在 common/abilities/BH3_modtest_abilities.txt）：
+
+| 技能 ID | 效果 | 时长 |
+|---|---|---|
+| BH3_test_ability_immune | str -1.0 / org -1.0 | 168 小时 |
+| BH3_test_ability_half | str -0.5 / org -0.5 | 168 小时 |
+| BH3_test_ability_str_only | str -1.0 | 168 小时 |
+| BH3_test_ability_org_only | org -1.0 | 168 小时 |
+| BH3_test_ability_double | str +1.0 / org +1.0 | 168 小时 |
+
+### 测试步骤
+
+1. 新开一局德国（或读取已有存档，只要技能没变）。
+2. 把 2~3 个师编给一个有指挥权的将领（ Corps Commander 即可，技能在将领面板下方那一排按钮里）。
+3. 对荷兰/波兰进攻，开打后**暂停**，点「测试技能：受伤 -100%」（cost 0，立刻可用）。
+4. 观察 168 小时内：我方师的组织度、兵力是否变化；敌方是否打不动你。
+5. 对照：
+   - 同一场战斗，等技能过期后再看一次；
+   - 或换 BH3_test_ability_double（+100%），看掉血是否明显变快（验证符号）；
+   - 或分别用 str_only / org_only 定位两个 modifier 各自管什么。
+
+### 判定
+
+| 现象 | 结论 |
+|---|---|
+| 技能生效期间组织度/兵力完全不动 | **unit_modifiers 里 -1.0 有效** → 浮生可用“能力版无敌” |
+| 只一项不动 | 只有部分 modifier 在 unit_modifiers 里被接受 |
+| 完全没变化 | unit_modifiers 也不接受 -1.0（或被钳制），改用 org_loss_at_low_org_factor 方案 |
+| 掉血变快/异常 | 符号被反转，禁止使用 |
+
+### 注意
+
+- 技能按钮若没出现：确认将领是 Corps Commander（不是 Army Group 司令），并检查 error.log 里有没有 ability 相关报错。
+- 技能是“作用于该将领麾下部队”，所以必须让被测师归属该将领。
+- ideas 里的那 5 个精神仍然保留，作为“国家级无效”的对照证据。
