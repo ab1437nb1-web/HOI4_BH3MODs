@@ -32,3 +32,5 @@
  ABILITY_BH3_TEST_ORG_ONLY_DESC:0 "指挥官技能。仅 org_damage_multiplier = -1.0。"
  ABILITY_BH3_TEST_DOUBLE:0 "测试技能：受伤 +100%（对照）"
  ABILITY_BH3_TEST_DOUBLE_DESC:0 "指挥官技能对照组。两个倍率都 +1.0。"
+ ABILITY_BH3_TEST_GATED:0 "测试技能：门槛 -80%（需持有精神）"
+ ABILITY_BH3_TEST_GATED_DESC:0 "仅当国家持有 BH3_test_immune 时出现。时长 24 小时、冷却 168 小时、两个倍率 -0.8，用于验证门槛与冷却。"

@@ -32,3 +32,5 @@
  ABILITY_BH3_TEST_ORG_ONLY_DESC:0 "Commander ability. Only org_damage_multiplier = -1.0."
  ABILITY_BH3_TEST_DOUBLE:0 "TEST ABILITY: Damage Taken +100% (control)"
  ABILITY_BH3_TEST_DOUBLE_DESC:0 "Commander ability control group. Both multipliers +1.0."
+ ABILITY_BH3_TEST_GATED:0 "TEST ABILITY: Gated -80% (needs idea)"
+ ABILITY_BH3_TEST_GATED_DESC:0 "Only visible when the country has BH3_test_immune. duration 24h, cooldown 168h, both multipliers -0.8. Used to verify gating + cooldown."

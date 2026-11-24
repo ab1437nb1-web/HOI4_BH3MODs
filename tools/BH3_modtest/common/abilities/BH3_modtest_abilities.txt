@@ -72,4 +72,23 @@ ability = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# v3：验证“只在持有指定精神时出现”的门槛 + 冷却 + 1 天时长
+	BH3_test_ability_gated = {
+		name = ABILITY_BH3_TEST_GATED
+		desc = ABILITY_BH3_TEST_GATED_DESC
+		type = army_leader
+		cost = 0
+		duration = 24
+		cooldown = 168
+		allowed = {
+			OWNER = { has_idea = BH3_test_immune }
+		}
+		unit_modifiers = {
+			str_damage_multiplier = -0.8
+			org_damage_multiplier = -0.8
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 }
