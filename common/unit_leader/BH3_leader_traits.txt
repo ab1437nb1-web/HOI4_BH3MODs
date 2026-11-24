@@ -520,14 +520,6 @@ leader_traits = {
 		}
 		new_commander_weight = { factor = 0 }
 	}
-	# 往事乐土·刹那（樱）核心刻印：授予该特质即解锁指挥官技能「刹那·疾影」
-	BH3_ER_trait_Setsuna = {
-		type = all
-		trait_type = basic_trait
-		gain_xp = { always = no }
-		enable_ability = BH3_ER_Setsuna_Blitz
-		new_commander_weight = { factor = 0 }
-	}
 }
 # supply_consumption_factor = -0.2
 # experience_gain_factor = 1
