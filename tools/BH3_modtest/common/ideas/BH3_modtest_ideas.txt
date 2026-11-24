@@ -1,0 +1,52 @@
+ideas = {
+	country = {
+
+		# 测试组：-100% 受伤（本次要验证的写法）
+		BH3_test_immune = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				str_damage_multiplier = -1.0
+				org_damage_multiplier = -1.0
+			}
+		}
+
+		# 对照组：-50% 受伤（看是否线性生效）
+		BH3_test_half = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				str_damage_multiplier = -0.5
+				org_damage_multiplier = -0.5
+			}
+		}
+
+		# 单变量：只减兵力伤害
+		BH3_test_str_only = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				str_damage_multiplier = -1.0
+			}
+		}
+
+		# 单变量：只减组织度伤害
+		BH3_test_org_only = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				org_damage_multiplier = -1.0
+			}
+		}
+
+		# 反向对照：+100% 受伤（验证符号方向，正常应被打得更惨）
+		BH3_test_double = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				str_damage_multiplier = 1.0
+				org_damage_multiplier = 1.0
+			}
+		}
+	}
+}

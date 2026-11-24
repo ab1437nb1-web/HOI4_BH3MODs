@@ -1,0 +1,88 @@
+BH3_modtest_category = {
+	icon = generic_research
+	priority = 1000
+
+	allowed = { always = yes }
+	visible = { always = yes }
+
+	BH3_test_add_immune = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_idea = BH3_test_immune } }
+		available = { always = yes }
+		complete_effect = { add_ideas = BH3_test_immune }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_add_half = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_idea = BH3_test_half } }
+		available = { always = yes }
+		complete_effect = { add_ideas = BH3_test_half }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_add_str_only = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_idea = BH3_test_str_only } }
+		available = { always = yes }
+		complete_effect = { add_ideas = BH3_test_str_only }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_add_org_only = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_idea = BH3_test_org_only } }
+		available = { always = yes }
+		complete_effect = { add_ideas = BH3_test_org_only }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_add_double = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_idea = BH3_test_double } }
+		available = { always = yes }
+		complete_effect = { add_ideas = BH3_test_double }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_remove_all = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			if = {
+				limit = { has_idea = BH3_test_immune }
+				remove_ideas = BH3_test_immune
+			}
+			if = {
+				limit = { has_idea = BH3_test_half }
+				remove_ideas = BH3_test_half
+			}
+			if = {
+				limit = { has_idea = BH3_test_str_only }
+				remove_ideas = BH3_test_str_only
+			}
+			if = {
+				limit = { has_idea = BH3_test_org_only }
+				remove_ideas = BH3_test_org_only
+			}
+			if = {
+				limit = { has_idea = BH3_test_double }
+				remove_ideas = BH3_test_double
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+}
