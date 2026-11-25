@@ -96,3 +96,50 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 - 实现：18 个静态 instantTextBoxType（BH3_ER_badge_0..17），由 scripted_gui 的 BH3_ER_badge_N_visible 触发器按 BH3_ER_floor 精确匹配切换
 - 为什么不用时间触发器：玩家可能在暂停状态下点击，日结类触发器不会执行；按钮 _click 执行后 scripted_gui 会立即重算该窗口元素状态，所以暂停时也能即时变化
 - 旧的左侧 BH3_ER_floor_text（defined_text）已移除，避免两处显示不一致
+
+
+---
+
+## 3. 刻印获取机制（2026-11-25 第一版）
+
+### 3.1 文件夹约定
+
+刻印的实际生效位置：common/scripted_effects/BH3_ER_signets/
+
+- 每个系一个文件（将来 12 个文件），文件名形如 01_deliverance.txt、02_setsuna.txt …
+- 目前只有 00_test_pool.txt：6 个测试刻印（1~6），用于验证抽取、授予、与层数/商店联动
+- 若游戏日志报 unknown effect BH3_ER_roll_offer，说明该版本不加载 scripted_effects 的子目录，把文件上移一层即可（内容不用改）
+
+### 3.2 变量
+
+| 变量 | 含义 |
+|---|---|
+| BH3_ER_draws | 剩余抽取次数（每推进一层 +1，双倍层购买再 +1） |
+| BH3_ER_offer | 1 = 当前正在展示候选 |
+| BH3_ER_c1 / c2 / c3 | 三枚候选的刻印 ID（0 = 空） |
+| BH3_ER_signets | 已获得刻印数（成就/统计用） |
+
+### 3.3 流程
+
+1. 进入新一层 → BH3_ER_draws +1
+2. 点「抽取刻印」→ BH3_ER_roll_offer：扣 1 次抽取，随机掷出 3 个不同候选（1~6），置 offer = 1
+3. 6 个候选按钮按 c1/c2/c3 的取值显示（每个按钮 _visible 判断自己是否在候选中）
+4. 点候选 → BH3_ER_signet_grant_N：给对应国家精神（已有则跳过）、刻印数 +1、清空候选
+5. 点「放弃本次抽取」→ 退还抽取次数并清空候选
+
+### 3.4 测试刻印（6）
+
+| ID | 名称 | 效果 |
+|---|---|---|
+| BH3_ER_signet_1 | 测试刻印 1 · 救世 | army_attack_factor +3% |
+| BH3_ER_signet_2 | 测试刻印 2 · 刹那 | army_speed_factor +5% |
+| BH3_ER_signet_3 | 测试刻印 3 · 浮生 | army_defence_factor +3% |
+| BH3_ER_signet_4 | 测试刻印 4 · 旭光 | breakthrough_factor +3% |
+| BH3_ER_signet_5 | 测试刻印 5 · 黄金 | industrial_capacity_factory +2% |
+| BH3_ER_signet_6 | 测试刻印 6 · 天慧 | army_org +2 |
+
+### 3.5 已知限制
+
+- 6 个候选按钮是硬编码的，扩到 12 系 × 14 枚（168）时需要改成“按系分池 + 动态渲染”（或每系一页）；
+- 目前不做重复保护：同一刻印抽到第二次仍会给精神（已有时跳过加精神，但计数仍 +1）；
+- 权重目前是均等 1/6，正式版要按稀有度/是否已持有加权。

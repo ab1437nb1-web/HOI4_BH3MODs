@@ -7,6 +7,11 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_floor = 0 }
 	set_variable = { BH3_ER_double_pending = 0 }
 	set_variable = { BH3_ER_signets = 0 }
+	set_variable = { BH3_ER_draws = 0 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
 	set_variable = { BH3_ER_shop_45 = 0 }
 	set_variable = { BH3_ER_shop_89 = 0 }
 	set_variable = { BH3_ER_shop_1314 = 0 }
@@ -20,7 +25,7 @@ BH3_ER_enter_floor = {
 	set_variable = { BH3_ER_double_pending = 0 }
 	clr_country_flag = BH3_ER_boss_floor
 	clr_country_flag = BH3_ER_shop_floor
-	add_to_variable = { BH3_ER_signets = 1 }
+	add_to_variable = { BH3_ER_draws = 1 }
 
 	# 双倍层：3 / 6 / 11 / 15
 	if = {

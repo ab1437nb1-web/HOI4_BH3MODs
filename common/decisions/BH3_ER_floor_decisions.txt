@@ -29,7 +29,7 @@ BH3_ElysianRealm_floor_group = {
 		complete_effect = {
 			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
 			set_variable = { BH3_ER_double_pending = 0 }
-			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_draws = 1 }
 		}
 		ai_will_do = { factor = 0 }
 	}

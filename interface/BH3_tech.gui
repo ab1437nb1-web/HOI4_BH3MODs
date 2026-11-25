@@ -1388,6 +1388,79 @@ guiTypes = {
 			buttonText = "BH3_ER_final_btn_text"
 			buttonFont = "hoi_16mbs"
 		}
+
+		# ---------- 刻印抽取 ----------
+		buttonType = {
+			name = "BH3_ER_draw_btn"
+			position = { x = 110 y = 600 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_draw_btn_tt"
+			buttonText = "BH3_ER_draw_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_cancel_draw_btn"
+			position = { x = 560 y = 600 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_cancel_draw_btn_tt"
+			buttonText = "BH3_ER_cancel_draw_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_1_btn"
+			position = { x = 560 y = 200 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_1_btn_tt"
+			buttonText = "BH3_ER_signet_1"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_2_btn"
+			position = { x = 560 y = 255 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_2_btn_tt"
+			buttonText = "BH3_ER_signet_2"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_3_btn"
+			position = { x = 560 y = 310 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_3_btn_tt"
+			buttonText = "BH3_ER_signet_3"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_4_btn"
+			position = { x = 560 y = 365 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_4_btn_tt"
+			buttonText = "BH3_ER_signet_4"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_5_btn"
+			position = { x = 560 y = 420 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_5_btn_tt"
+			buttonText = "BH3_ER_signet_5"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_pick_6_btn"
+			position = { x = 560 y = 475 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_pick_6_btn_tt"
+			buttonText = "BH3_ER_signet_6"
+			buttonFont = "hoi_16mbs"
+		}
 	}
 	# __BH3_ER_MENU_END__
 }

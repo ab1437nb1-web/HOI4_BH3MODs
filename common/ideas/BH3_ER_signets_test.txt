@@ -1,0 +1,55 @@
+ideas = {
+	country = {
+
+		# 往事乐土·刻印（测试池 1~6）
+		# 真实强度后续按 12 系 14 枚重写；这里只验证获取机制与 UI。
+
+		BH3_ER_signet_1 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.03
+			}
+		}
+
+		BH3_ER_signet_2 = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+
+		BH3_ER_signet_3 = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				army_defence_factor = 0.03
+			}
+		}
+
+		BH3_ER_signet_4 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				breakthrough_factor = 0.03
+			}
+		}
+
+		BH3_ER_signet_5 = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		BH3_ER_signet_6 = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				army_org = 2
+			}
+		}
+	}
+}

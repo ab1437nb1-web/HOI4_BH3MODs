@@ -1,0 +1,152 @@
+# 往事乐土 · 刻印（测试池）
+# 本文件夹是刻印的实际生效位置：每个系一个文件，定义 grant / 抽取权重 / 效果。
+# 2026-11-25 第一版：6 个测试刻印（1~6），用于验证获取机制与商店联动。
+
+# ============ 抽取：消耗一次抽取机会，掷出 3 个不同候选 ============
+BH3_ER_roll_offer = {
+	if = {
+		limit = {
+			check_variable = { BH3_ER_draws > 0 }
+			check_variable = { BH3_ER_offer = 0 }
+		}
+		subtract_from_variable = { BH3_ER_draws = 1 }
+
+		random_list = {
+			100 = { set_variable = { BH3_ER_c1 = 1 } }
+			100 = { set_variable = { BH3_ER_c1 = 2 } }
+			100 = { set_variable = { BH3_ER_c1 = 3 } }
+			100 = { set_variable = { BH3_ER_c1 = 4 } }
+			100 = { set_variable = { BH3_ER_c1 = 5 } }
+			100 = { set_variable = { BH3_ER_c1 = 6 } }
+		}
+
+		random_list = {
+			100 = { set_variable = { BH3_ER_c2 = 1 } }
+			100 = { set_variable = { BH3_ER_c2 = 2 } }
+			100 = { set_variable = { BH3_ER_c2 = 3 } }
+			100 = { set_variable = { BH3_ER_c2 = 4 } }
+			100 = { set_variable = { BH3_ER_c2 = 5 } }
+			100 = { set_variable = { BH3_ER_c2 = 6 } }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c2 = BH3_ER_c1 } }
+			add_to_variable = { BH3_ER_c2 = 1 }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c2 > 6 } }
+			set_variable = { BH3_ER_c2 = 1 }
+		}
+
+		random_list = {
+			100 = { set_variable = { BH3_ER_c3 = 1 } }
+			100 = { set_variable = { BH3_ER_c3 = 2 } }
+			100 = { set_variable = { BH3_ER_c3 = 3 } }
+			100 = { set_variable = { BH3_ER_c3 = 4 } }
+			100 = { set_variable = { BH3_ER_c3 = 5 } }
+			100 = { set_variable = { BH3_ER_c3 = 6 } }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 = BH3_ER_c1 } }
+			add_to_variable = { BH3_ER_c3 = 1 }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 > 6 } }
+			set_variable = { BH3_ER_c3 = 1 }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 = BH3_ER_c2 } }
+			add_to_variable = { BH3_ER_c3 = 1 }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 > 6 } }
+			set_variable = { BH3_ER_c3 = 1 }
+		}
+
+		set_variable = { BH3_ER_offer = 1 }
+	}
+}
+
+# 放弃本次抽取：退还一次抽取机会
+BH3_ER_cancel_offer = {
+	if = {
+		limit = { check_variable = { BH3_ER_offer = 1 } }
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+		add_to_variable = { BH3_ER_draws = 1 }
+	}
+}
+
+# ============ 授予：每个刻印一个 grant 效果 ============
+BH3_ER_signet_grant_1 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_1 } }
+		add_ideas = BH3_ER_signet_1
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
+
+BH3_ER_signet_grant_2 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_2 } }
+		add_ideas = BH3_ER_signet_2
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
+
+BH3_ER_signet_grant_3 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_3 } }
+		add_ideas = BH3_ER_signet_3
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
+
+BH3_ER_signet_grant_4 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_4 } }
+		add_ideas = BH3_ER_signet_4
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
+
+BH3_ER_signet_grant_5 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_5 } }
+		add_ideas = BH3_ER_signet_5
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
+
+BH3_ER_signet_grant_6 = {
+	if = {
+		limit = { NOT = { has_idea = BH3_ER_signet_6 } }
+		add_ideas = BH3_ER_signet_6
+	}
+	add_to_variable = { BH3_ER_signets = 1 }
+	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_c1 = 0 }
+	set_variable = { BH3_ER_c2 = 0 }
+	set_variable = { BH3_ER_c3 = 0 }
+}
