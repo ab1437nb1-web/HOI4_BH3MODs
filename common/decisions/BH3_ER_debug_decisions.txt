@@ -442,33 +442,37 @@ BH3_ER_debug_group = {
 
 
 	# 黄金：绕过政治点读取，直接按档位重算（诊断用）
-	BH3_ER_dbg_gold_bucket_250 = {
-		icon = GFX_BH3_ER_icon_small
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
-		available = { always = yes }
-		complete_effect = {
-			set_variable = { BH3_ER_gold_bucket = 10 }
-			BH3_ER_gold_recalc = yes
-		}
-		ai_will_do = { factor = 0 }
-	}
 
-	BH3_ER_dbg_gold_bucket_500 = {
-		icon = GFX_BH3_ER_icon_small
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
-		available = { always = yes }
-		complete_effect = {
-			set_variable = { BH3_ER_gold_bucket = 20 }
-			BH3_ER_gold_recalc = yes
-		}
-		ai_will_do = { factor = 0 }
-	}
 
 	# 黄金：把当前数值档位写入 game.log（诊断用，搜索 BH3GOLD）
+
+	# 黄金：直接把政治点拉到 600（测试阈值上限）
+	BH3_ER_dbg_gold_pp_max = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			add_political_power = 600
+			BH3_ER_gold_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 黄金：政治点清零（测试低档）
+	BH3_ER_dbg_gold_pp_zero = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			add_political_power = -2000
+			BH3_ER_gold_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_gold_log = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
