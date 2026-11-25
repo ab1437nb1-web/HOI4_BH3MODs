@@ -1,0 +1,50 @@
+BH3_ER_signet_group = {
+
+	# 救世：开启必杀技（原作“必杀技”触发）
+	BH3_ER_ult_dlv = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			OR = {
+				has_country_flag = BH3_ER_own_dlv_101
+				has_country_flag = BH3_ER_own_dlv_102
+				has_country_flag = BH3_ER_own_dlv_103
+				has_country_flag = BH3_ER_own_dlv_104
+				has_country_flag = BH3_ER_own_dlv_105
+				has_country_flag = BH3_ER_own_dlv_106
+				has_country_flag = BH3_ER_own_dlv_107
+				has_country_flag = BH3_ER_own_dlv_108
+				has_country_flag = BH3_ER_own_dlv_109
+				has_country_flag = BH3_ER_own_dlv_110
+				has_country_flag = BH3_ER_own_dlv_112
+				has_country_flag = BH3_ER_own_dlv_113
+				has_country_flag = BH3_ER_own_dlv_114
+			}
+		}
+		available = { has_war = yes }
+		days_re_enable = 30
+		complete_effect = {
+			BH3_ER_dlv_ult = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 救世：进入救世之战（核心Ⅱ）
+	BH3_ER_dlv_war_state = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			has_country_flag = BH3_ER_own_dlv_111
+		}
+		available = { has_war = yes }
+		days_re_enable = 60
+		complete_effect = {
+			BH3_ER_dlv_war = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

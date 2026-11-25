@@ -1,0 +1,481 @@
+# 抽取：按阶段从 救世 池取 3 个不同候选
+# 拥有普通刻印 < 3 时只出普通；否则全部 14 枚都会出现
+BH3_ER_roll_offer = {
+	if = {
+		limit = {
+			check_variable = { BH3_ER_draws > 0 }
+			check_variable = { BH3_ER_offer = 0 }
+		}
+		subtract_from_variable = { BH3_ER_draws = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_dlv_n < 3 } }
+		random_list = {
+			10 = { set_variable = { BH3_ER_c1 = 101 } }
+			10 = { set_variable = { BH3_ER_c1 = 102 } }
+			10 = { set_variable = { BH3_ER_c1 = 103 } }
+			10 = { set_variable = { BH3_ER_c1 = 104 } }
+			10 = { set_variable = { BH3_ER_c1 = 105 } }
+			10 = { set_variable = { BH3_ER_c1 = 106 } }
+		}
+		}
+		else = {
+		random_list = {
+			10 = { set_variable = { BH3_ER_c1 = 101 } }
+			10 = { set_variable = { BH3_ER_c1 = 102 } }
+			10 = { set_variable = { BH3_ER_c1 = 103 } }
+			10 = { set_variable = { BH3_ER_c1 = 104 } }
+			10 = { set_variable = { BH3_ER_c1 = 105 } }
+			10 = { set_variable = { BH3_ER_c1 = 106 } }
+			10 = { set_variable = { BH3_ER_c1 = 107 } }
+			10 = { set_variable = { BH3_ER_c1 = 108 } }
+			10 = { set_variable = { BH3_ER_c1 = 109 } }
+			10 = { set_variable = { BH3_ER_c1 = 110 } }
+			10 = { set_variable = { BH3_ER_c1 = 111 } }
+			10 = { set_variable = { BH3_ER_c1 = 112 } }
+			10 = { set_variable = { BH3_ER_c1 = 113 } }
+			10 = { set_variable = { BH3_ER_c1 = 114 } }
+		}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_dlv_n < 3 } }
+		random_list = {
+			10 = { set_variable = { BH3_ER_c2 = 101 } }
+			10 = { set_variable = { BH3_ER_c2 = 102 } }
+			10 = { set_variable = { BH3_ER_c2 = 103 } }
+			10 = { set_variable = { BH3_ER_c2 = 104 } }
+			10 = { set_variable = { BH3_ER_c2 = 105 } }
+			10 = { set_variable = { BH3_ER_c2 = 106 } }
+		}
+		}
+		else = {
+		random_list = {
+			10 = { set_variable = { BH3_ER_c2 = 101 } }
+			10 = { set_variable = { BH3_ER_c2 = 102 } }
+			10 = { set_variable = { BH3_ER_c2 = 103 } }
+			10 = { set_variable = { BH3_ER_c2 = 104 } }
+			10 = { set_variable = { BH3_ER_c2 = 105 } }
+			10 = { set_variable = { BH3_ER_c2 = 106 } }
+			10 = { set_variable = { BH3_ER_c2 = 107 } }
+			10 = { set_variable = { BH3_ER_c2 = 108 } }
+			10 = { set_variable = { BH3_ER_c2 = 109 } }
+			10 = { set_variable = { BH3_ER_c2 = 110 } }
+			10 = { set_variable = { BH3_ER_c2 = 111 } }
+			10 = { set_variable = { BH3_ER_c2 = 112 } }
+			10 = { set_variable = { BH3_ER_c2 = 113 } }
+			10 = { set_variable = { BH3_ER_c2 = 114 } }
+		}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c2 = BH3_ER_c1 } }
+			if = {
+				limit = { check_variable = { BH3_ER_dlv_n < 3 } }
+				if = { limit = { check_variable = { BH3_ER_c2 > 106 } } set_variable = { BH3_ER_c2 = 101 } }
+				else = { add_to_variable = { BH3_ER_c2 = 1 } }
+			}
+			else = {
+				if = { limit = { check_variable = { BH3_ER_c2 > 114 } } set_variable = { BH3_ER_c2 = 101 } }
+				else = { add_to_variable = { BH3_ER_c2 = 1 } }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_dlv_n < 3 } }
+		random_list = {
+			10 = { set_variable = { BH3_ER_c3 = 101 } }
+			10 = { set_variable = { BH3_ER_c3 = 102 } }
+			10 = { set_variable = { BH3_ER_c3 = 103 } }
+			10 = { set_variable = { BH3_ER_c3 = 104 } }
+			10 = { set_variable = { BH3_ER_c3 = 105 } }
+			10 = { set_variable = { BH3_ER_c3 = 106 } }
+		}
+		}
+		else = {
+		random_list = {
+			10 = { set_variable = { BH3_ER_c3 = 101 } }
+			10 = { set_variable = { BH3_ER_c3 = 102 } }
+			10 = { set_variable = { BH3_ER_c3 = 103 } }
+			10 = { set_variable = { BH3_ER_c3 = 104 } }
+			10 = { set_variable = { BH3_ER_c3 = 105 } }
+			10 = { set_variable = { BH3_ER_c3 = 106 } }
+			10 = { set_variable = { BH3_ER_c3 = 107 } }
+			10 = { set_variable = { BH3_ER_c3 = 108 } }
+			10 = { set_variable = { BH3_ER_c3 = 109 } }
+			10 = { set_variable = { BH3_ER_c3 = 110 } }
+			10 = { set_variable = { BH3_ER_c3 = 111 } }
+			10 = { set_variable = { BH3_ER_c3 = 112 } }
+			10 = { set_variable = { BH3_ER_c3 = 113 } }
+			10 = { set_variable = { BH3_ER_c3 = 114 } }
+		}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 = BH3_ER_c1 } }
+			add_to_variable = { BH3_ER_c3 = 1 }
+			if = { limit = { check_variable = { BH3_ER_c3 > 114 } } set_variable = { BH3_ER_c3 = 101 } }
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_c3 = BH3_ER_c2 } }
+			add_to_variable = { BH3_ER_c3 = 1 }
+			if = { limit = { check_variable = { BH3_ER_c3 > 114 } } set_variable = { BH3_ER_c3 = 101 } }
+		}
+		set_variable = { BH3_ER_offer = 1 }
+	}
+}
+
+BH3_ER_cancel_offer = {
+	if = {
+		limit = { check_variable = { BH3_ER_offer = 1 } }
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+		add_to_variable = { BH3_ER_draws = 1 }
+	}
+}
+
+BH3_ER_grant_101 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_101 } }
+			set_country_flag = BH3_ER_own_dlv_101
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_102 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_102 } }
+			set_country_flag = BH3_ER_own_dlv_102
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_103 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_103 } }
+			set_country_flag = BH3_ER_own_dlv_103
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_104 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_104 } }
+			set_country_flag = BH3_ER_own_dlv_104
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_105 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_105 } }
+			set_country_flag = BH3_ER_own_dlv_105
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_106 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_106 } }
+			set_country_flag = BH3_ER_own_dlv_106
+			add_to_variable = { BH3_ER_signets = 1 }
+		add_to_variable = { BH3_ER_dlv_n = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_107 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_107 } }
+			set_country_flag = BH3_ER_own_dlv_107
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_108 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_108 } }
+			set_country_flag = BH3_ER_own_dlv_108
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_109 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_109 } }
+			set_country_flag = BH3_ER_own_dlv_109
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_110 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_110 } }
+			set_country_flag = BH3_ER_own_dlv_110
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_111 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_111 } }
+			set_country_flag = BH3_ER_own_dlv_111
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_112 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_112 } }
+			set_country_flag = BH3_ER_own_dlv_112
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_113 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_113 } }
+			set_country_flag = BH3_ER_own_dlv_113
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_114 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_dlv_114 } }
+			set_country_flag = BH3_ER_own_dlv_114
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_c1 = {
+	if = {
+		limit = { check_variable = { BH3_ER_c1 = 101 } }
+		BH3_ER_grant_101 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 102 } }
+		BH3_ER_grant_102 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 103 } }
+		BH3_ER_grant_103 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 104 } }
+		BH3_ER_grant_104 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 105 } }
+		BH3_ER_grant_105 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 106 } }
+		BH3_ER_grant_106 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 107 } }
+		BH3_ER_grant_107 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 108 } }
+		BH3_ER_grant_108 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 109 } }
+		BH3_ER_grant_109 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 110 } }
+		BH3_ER_grant_110 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 111 } }
+		BH3_ER_grant_111 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 112 } }
+		BH3_ER_grant_112 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 113 } }
+		BH3_ER_grant_113 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 114 } }
+		BH3_ER_grant_114 = yes
+	}
+}
+BH3_ER_grant_c2 = {
+	if = {
+		limit = { check_variable = { BH3_ER_c2 = 101 } }
+		BH3_ER_grant_101 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 102 } }
+		BH3_ER_grant_102 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 103 } }
+		BH3_ER_grant_103 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 104 } }
+		BH3_ER_grant_104 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 105 } }
+		BH3_ER_grant_105 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 106 } }
+		BH3_ER_grant_106 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 107 } }
+		BH3_ER_grant_107 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 108 } }
+		BH3_ER_grant_108 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 109 } }
+		BH3_ER_grant_109 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 110 } }
+		BH3_ER_grant_110 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 111 } }
+		BH3_ER_grant_111 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 112 } }
+		BH3_ER_grant_112 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 113 } }
+		BH3_ER_grant_113 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 114 } }
+		BH3_ER_grant_114 = yes
+	}
+}
+BH3_ER_grant_c3 = {
+	if = {
+		limit = { check_variable = { BH3_ER_c3 = 101 } }
+		BH3_ER_grant_101 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 102 } }
+		BH3_ER_grant_102 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 103 } }
+		BH3_ER_grant_103 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 104 } }
+		BH3_ER_grant_104 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 105 } }
+		BH3_ER_grant_105 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 106 } }
+		BH3_ER_grant_106 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 107 } }
+		BH3_ER_grant_107 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 108 } }
+		BH3_ER_grant_108 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 109 } }
+		BH3_ER_grant_109 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 110 } }
+		BH3_ER_grant_110 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 111 } }
+		BH3_ER_grant_111 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 112 } }
+		BH3_ER_grant_112 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 113 } }
+		BH3_ER_grant_113 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 114 } }
+		BH3_ER_grant_114 = yes
+	}
+}

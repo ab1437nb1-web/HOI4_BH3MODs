@@ -11,3 +11,10 @@ BH3_ER_debug_group = {
 	allowed = { always = yes }
 	visible = { is_debug = yes }
 }
+
+BH3_ER_signet_group = {
+	icon = GFX_BH3_ER_FlawlessKey_icon
+	priority = 99988
+	allowed = { always = yes }
+	visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+}

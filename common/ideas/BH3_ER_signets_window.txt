@@ -1,0 +1,119 @@
+ideas = {
+	country = {
+
+		# 往事乐土·救世：必杀技窗口（临时国家精神，由决议添加，过期自动移除）
+		# 对应 14 枚救世刻印的“生效窗口”
+		BH3_ER_dlv_w_101 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.35
+			}
+		}
+
+		BH3_ER_dlv_w_102 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				breakthrough_factor = 0.3
+			}
+		}
+
+		BH3_ER_dlv_w_103 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_defence_factor = 0.3
+			}
+		}
+
+		BH3_ER_dlv_w_104 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				breakthrough_factor = 0.35
+			}
+		}
+
+		BH3_ER_dlv_w_105 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_defence_factor = 0.2
+			}
+		}
+
+		BH3_ER_dlv_w_106 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_org_regain = 0.03
+			}
+		}
+
+		BH3_ER_dlv_w_107 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.17
+				breakthrough_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+
+		BH3_ER_dlv_w_108 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.2
+			}
+		}
+
+		BH3_ER_dlv_w_109 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.14
+			}
+		}
+
+		BH3_ER_dlv_w_110 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+		}
+
+		BH3_ER_dlv_w_111 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.05
+			}
+		}
+
+		BH3_ER_dlv_w_112 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.21
+				breakthrough_factor = 0.18
+				army_defence_factor = 0.18
+			}
+		}
+
+		BH3_ER_dlv_w_113 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.5
+			}
+		}
+
+		BH3_ER_dlv_w_114 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				breakthrough_factor = 0.5
+			}
+		}
+	}
+}
