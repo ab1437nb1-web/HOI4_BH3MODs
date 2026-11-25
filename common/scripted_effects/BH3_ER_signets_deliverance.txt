@@ -1,189 +1,23 @@
-# 往事乐土·救世：必杀技窗口（决议调用）
-# 原作机制：开启必杀技后 7 秒内所有“救世”普通刻印生效；核心Ⅰ延长/强化，核心Ⅱ常驻。
+# 往事乐土·救世：必杀技窗口与核心II永久化
+# 窗口剩余天数存在 BH3_ER_dlv_window，由 on_daily 递减；核心II解锁后置 BH3_ER_dlv_permanent
 BH3_ER_dlv_ult = {
-	set_temp_variable = { dlv_days = 7 }
+	add_to_variable = { BH3_ER_dlv_ult_count = 1 }
 	if = {
 		limit = { has_country_flag = BH3_ER_own_dlv_110 }
-		set_temp_variable = { dlv_days = 9 }
-	}
-	if = {
-		limit = { check_variable = { dlv_days = 9 } }
-		if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_101 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_101 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_102 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_102 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_103 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_103 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_104 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_104 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_105 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_105 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_106 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_106 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_107 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_107 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_108 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_108 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_109 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_109 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_110 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_110 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_111 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_111 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_112 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_112 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_113 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_113 days = 9 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_114 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_114 days = 9 }
-			}
+		set_variable = { BH3_ER_dlv_window = 9 }
 	}
 	else = {
-		if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_101 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_101 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_102 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_102 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_103 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_103 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_104 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_104 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_105 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_105 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_106 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_106 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_107 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_107 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_108 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_108 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_109 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_109 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_110 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_110 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_111 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_111 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_112 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_112 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_113 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_113 days = 7 }
-			}
-			if = {
-				limit = { has_country_flag = BH3_ER_own_dlv_114 }
-				add_timed_idea = { idea = BH3_ER_dlv_w_114 days = 7 }
-			}
+		set_variable = { BH3_ER_dlv_window = 7 }
 	}
 }
 
-# 救世之战（核心Ⅱ）：把普通刻印的加成常驻化一段时间
+# 核心II：累计释放 40 次后，把加成变为常驻
 BH3_ER_dlv_war = {
 	if = {
-		limit = { has_country_flag = BH3_ER_own_dlv_111 }
-		if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_101 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_101 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_102 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_102 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_103 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_103 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_104 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_104 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_105 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_105 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_106 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_106 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_107 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_107 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_108 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_108 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_109 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_109 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_110 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_110 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_111 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_111 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_112 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_112 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_113 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_113 days = 14 }
-				}
-				if = {
-					limit = { has_country_flag = BH3_ER_own_dlv_114 }
-					add_timed_idea = { idea = BH3_ER_dlv_w_114 days = 14 }
-				}
+		limit = {
+			has_country_flag = BH3_ER_own_dlv_111
+			check_variable = { BH3_ER_dlv_ult_count > 39 }
+		}
+		set_country_flag = BH3_ER_dlv_permanent
 	}
 }

@@ -13,6 +13,104 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+	# 测试：直接获得全部救世刻印
+	BH3_ER_dbg_grant_dlv = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			set_country_flag = BH3_ER_own_dlv_101
+			set_country_flag = BH3_ER_own_dlv_102
+			set_country_flag = BH3_ER_own_dlv_103
+			set_country_flag = BH3_ER_own_dlv_104
+			set_country_flag = BH3_ER_own_dlv_105
+			set_country_flag = BH3_ER_own_dlv_106
+			set_country_flag = BH3_ER_own_dlv_107
+			set_country_flag = BH3_ER_own_dlv_108
+			set_country_flag = BH3_ER_own_dlv_109
+			set_country_flag = BH3_ER_own_dlv_110
+			set_country_flag = BH3_ER_own_dlv_111
+			set_country_flag = BH3_ER_own_dlv_112
+			set_country_flag = BH3_ER_own_dlv_113
+			set_country_flag = BH3_ER_own_dlv_114
+			set_variable = { BH3_ER_dlv_n = 6 }
+			set_variable = { BH3_ER_signets = 14 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 测试：清空全部救世刻印与窗口状态
+	BH3_ER_dbg_clear_dlv = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_dlv_101
+			clr_country_flag = BH3_ER_own_dlv_102
+			clr_country_flag = BH3_ER_own_dlv_103
+			clr_country_flag = BH3_ER_own_dlv_104
+			clr_country_flag = BH3_ER_own_dlv_105
+			clr_country_flag = BH3_ER_own_dlv_106
+			clr_country_flag = BH3_ER_own_dlv_107
+			clr_country_flag = BH3_ER_own_dlv_108
+			clr_country_flag = BH3_ER_own_dlv_109
+			clr_country_flag = BH3_ER_own_dlv_110
+			clr_country_flag = BH3_ER_own_dlv_111
+			clr_country_flag = BH3_ER_own_dlv_112
+			clr_country_flag = BH3_ER_own_dlv_113
+			clr_country_flag = BH3_ER_own_dlv_114
+			set_variable = { BH3_ER_dlv_n = 0 }
+			set_variable = { BH3_ER_signets = 0 }
+			set_variable = { BH3_ER_dlv_window = 0 }
+			set_variable = { BH3_ER_dlv_ult_count = 0 }
+			clr_country_flag = BH3_ER_dlv_permanent
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 测试：立即触发一次必杀技窗口
+	BH3_ER_dbg_ult = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_dlv_ult = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 测试：把必杀技累计次数设为 40（解锁核心II决议）
+	BH3_ER_dbg_ult40 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dlv_ult_count = 40 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 测试：查看窗口剩余天数
+	BH3_ER_dbg_window_info = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_dlv_ult = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	BH3_ER_debug_keys = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0

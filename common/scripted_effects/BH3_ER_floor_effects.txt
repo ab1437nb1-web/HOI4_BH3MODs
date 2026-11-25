@@ -13,6 +13,24 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_c2 = 0 }
 	set_variable = { BH3_ER_c3 = 0 }
 	set_variable = { BH3_ER_dlv_n = 0 }
+	set_variable = { BH3_ER_dlv_window = 0 }
+	set_variable = { BH3_ER_dlv_ult_count = 0 }
+	clr_country_flag = BH3_ER_dlv_permanent
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_101 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_102 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_103 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_104 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_105 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_106 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_107 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_108 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_109 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_110 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_111 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_112 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_113 }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv_114 }
+
 	set_variable = { BH3_ER_shop_45 = 0 }
 	set_variable = { BH3_ER_shop_89 = 0 }
 	set_variable = { BH3_ER_shop_1314 = 0 }

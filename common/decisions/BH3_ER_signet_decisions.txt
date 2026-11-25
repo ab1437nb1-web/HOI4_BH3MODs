@@ -3,7 +3,7 @@ BH3_ER_signet_group = {
 	# 救世：开启必杀技（原作“必杀技”触发）
 	BH3_ER_ult_dlv = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
-		cost = 0
+		cost = 50
 		allowed = { always = yes }
 		visible = {
 			has_war = yes
@@ -39,6 +39,7 @@ BH3_ER_signet_group = {
 		visible = {
 			has_war = yes
 			has_country_flag = BH3_ER_own_dlv_111
+			check_variable = { BH3_ER_dlv_ult_count > 39 }
 		}
 		available = { has_war = yes }
 		days_re_enable = 60

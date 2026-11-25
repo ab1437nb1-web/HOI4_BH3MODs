@@ -1,0 +1,159 @@
+# 往事乐土·救世：按刻印归属的动态修正
+# 激活条件：窗口期（BH3_ER_dlv_window > 0）或核心II永久化旗标；且必须持有对应刻印
+
+BH3_ER_dm_dlv_101 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_101
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.35
+}
+
+BH3_ER_dm_dlv_102 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_102
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	breakthrough_factor = 0.3
+}
+
+BH3_ER_dm_dlv_103 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_103
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_defence_factor = 0.3
+}
+
+BH3_ER_dm_dlv_104 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_104
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	breakthrough_factor = 0.35
+}
+
+BH3_ER_dm_dlv_105 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_105
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_defence_factor = 0.2
+}
+
+BH3_ER_dm_dlv_106 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_106
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_org_regain = 0.03
+}
+
+BH3_ER_dm_dlv_107 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_107
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.17
+	breakthrough_factor = 0.15
+	army_defence_factor = 0.15
+}
+
+BH3_ER_dm_dlv_108 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_108
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.2
+}
+
+BH3_ER_dm_dlv_109 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_109
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.14
+}
+
+BH3_ER_dm_dlv_110 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_110
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+}
+
+BH3_ER_dm_dlv_111 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_111
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.05
+}
+
+BH3_ER_dm_dlv_112 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_112
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.21
+	breakthrough_factor = 0.18
+	army_defence_factor = 0.18
+}
+
+BH3_ER_dm_dlv_113 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_113
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	army_attack_factor = 0.5
+}
+
+BH3_ER_dm_dlv_114 = {
+	enable = {
+		has_country_flag = BH3_ER_own_dlv_114
+		OR = {
+			check_variable = { BH3_ER_dlv_window > 0 }
+			has_country_flag = BH3_ER_dlv_permanent
+		}
+	}
+	breakthrough_factor = 0.5
+}
