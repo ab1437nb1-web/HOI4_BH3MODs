@@ -609,6 +609,39 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# ---------- 通用：额外伤害接口测试 ----------
+	BH3_ER_dbg_ud_army = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_org = 0.05 }
+			set_variable = { BH3_UD_str = 0.05 }
+			set_variable = { BH3_UD_mode = 2 }
+			BH3_UD_apply = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_ud_navy = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_org = 0.05 }
+			set_variable = { BH3_UD_str = 0.05 }
+			set_variable = { BH3_UD_mode = 3 }
+			BH3_UD_apply = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_debug_keys = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0

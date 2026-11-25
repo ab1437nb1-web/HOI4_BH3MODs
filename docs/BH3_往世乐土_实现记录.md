@@ -323,3 +323,44 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 - **+150 政治点**：抬高当前档位，测试 201/202/203 的随政治点变化
 - **-150 政治点**：降低档位，累积消耗量，测试 211 的终末余音
 - 每次调试决议都会立即调用一次 BH3_ER_gold_daily，不需要等日结
+
+---
+
+## 7. 统一额外伤害接口（unit_damage，2026-11-25）
+
+所有“额外伤害 / 真伤 / 结算伤害”类刻印效果统一走 common/scripted_effects/BH3_ER_unit_damage.txt，不要各写 damage_units。
+
+### 7.1 输入
+
+| 变量 | 含义 |
+|---|---|
+| BH3_UD_mode | 1=当前州敌军（需在州作用域调用） 2=敌国全体陆军 3=敌国海军 4=陆军+海军 |
+| BH3_UD_org | 组织度伤害比例（0~1，ratio 模式） |
+| BH3_UD_str | 兵力伤害比例（0~1） |
+| BH3_UD_calls / _total_org / _total_str | 调试计数与累计量 |
+
+### 7.2 调用
+
+BH3_UD_begin = yes
+set_variable = { BH3_UD_mode = 2 }
+set_variable = { BH3_UD_org = 0.05 }
+set_variable = { BH3_UD_str = 0.05 }
+BH3_UD_apply = yes
+
+也可用封装：BH3_UD_hit_enemy_army / BH3_UD_hit_enemy_navy / BH3_UD_hit_current_state。
+
+### 7.3 约定
+
+- 统一 ratio = yes：按部队当前总组织/兵力比例扣除，天然无视防御，不需要再叠穿透；
+- limit 统一为 is_enemy = ROOT，因此调用前 ROOT 必须是我方国家（决议、事件、on_action 都满足）；
+- 州模式必须在 state 作用域内调用（every_state / 州决议）；
+- 接口自带 clamp（0~1），调用方传错值不会打出负数/超量；
+- 伤害是“即时结算”，不进入战斗流程，所以可以打出边界外的效果，数值要小（一般 0.01~0.05）。
+
+### 7.4 调试
+
+调试组新增：
+- 【调试】额外伤害：敌国陆军 -5% 组织/兵力
+- 【调试】额外伤害：敌国海军 -5% 组织/兵力
+
+点一下就能验证接口是否生效（看敌方部队组织度）。

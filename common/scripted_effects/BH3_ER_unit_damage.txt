@@ -1,0 +1,98 @@
+# ============================================================================
+# 往事乐土 · 统一额外伤害接口（unit_damage / BH3_UD）
+# 所有“额外伤害 / 真伤 / 结算伤害”类刻印效果都必须走这里，不要直接写 damage_units。
+#
+# 用法（国家作用域）：
+#   BH3_UD_begin = yes              # 重置输入
+#   set_variable = { BH3_UD_org = 0.05 }   # 组织度伤害比例（0~1，ratio 模式）
+#   set_variable = { BH3_UD_str = 0.05 }   # 兵力伤害比例（0~1）
+#   set_variable = { BH3_UD_mode = 2 }     # 1=当前州敌军 2=敌国全体陆军 3=敌国海军 4=陆军+海军
+#   BH3_UD_apply = yes              # 执行
+#
+# 说明：
+#   - 统一使用 ratio = yes（按部队当前总组织/兵力比例扣除），天然无视防御；
+#   - limt 统一为 is_enemy = ROOT，所以调用前 ROOT 必须是“我方国家”；
+#   - 州模式（mode 1）需要在 state 作用域内调用（every_state / 州决议等）。
+# ============================================================================
+
+BH3_UD_begin = {
+	set_variable = { BH3_UD_org = 0 }
+	set_variable = { BH3_UD_str = 0 }
+	set_variable = { BH3_UD_mode = 2 }
+	set_variable = { BH3_UD_calls = 0 }
+}
+
+# 核心：按输入变量执行一次伤害
+BH3_UD_apply = {
+	clamp_variable = { var = BH3_UD_org min = 0 max = 1 }
+	clamp_variable = { var = BH3_UD_str min = 0 max = 1 }
+
+	if = {
+		limit = { check_variable = { BH3_UD_mode = 1 } }
+		damage_units = {
+			state = THIS
+			limit = { is_enemy = ROOT }
+			org_damage = BH3_UD_org
+			str_damage = BH3_UD_str
+			ratio = yes
+			army = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { BH3_UD_mode = 2 } }
+		damage_units = {
+			limit = { is_enemy = ROOT }
+			org_damage = BH3_UD_org
+			str_damage = BH3_UD_str
+			ratio = yes
+			army = yes
+		}
+	}
+	else_if = {
+		limit = { check_variable = { BH3_UD_mode = 3 } }
+		damage_units = {
+			limit = { is_enemy = ROOT }
+			org_damage = BH3_UD_org
+			str_damage = BH3_UD_str
+			ratio = yes
+			navy = yes
+		}
+	}
+	else = {
+		limit = { check_variable = { BH3_UD_mode = 4 } }
+		damage_units = {
+			limit = { is_enemy = ROOT }
+			org_damage = BH3_UD_org
+			str_damage = BH3_UD_str
+			ratio = yes
+			army = yes
+			navy = yes
+		}
+	}
+
+	add_to_variable = { BH3_UD_calls = 1 }
+	add_to_variable = { BH3_UD_total_org = BH3_UD_org }
+	add_to_variable = { BH3_UD_total_str = BH3_UD_str }
+}
+
+# ---------- 便捷封装（供刻印效果调用） ----------
+# 对敌国全体陆军造成一次比例伤害（ratio 模式）
+BH3_UD_hit_enemy_army = {
+	BH3_UD_begin = yes
+	set_variable = { BH3_UD_mode = 2 }
+	BH3_UD_apply = yes
+}
+
+# 对敌国海军造成一次比例伤害
+BH3_UD_hit_enemy_navy = {
+	BH3_UD_begin = yes
+	set_variable = { BH3_UD_mode = 3 }
+	BH3_UD_apply = yes
+}
+
+# 对当前州（state 作用域）内的敌军造成一次比例伤害
+BH3_UD_hit_current_state = {
+	BH3_UD_begin = yes
+	set_variable = { BH3_UD_mode = 1 }
+	BH3_UD_apply = yes
+}
