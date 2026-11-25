@@ -495,6 +495,10 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_gold_pp = 0 }
 			set_variable = { BH3_ER_gold_maj = 0 }
 			set_variable = { BH3_ER_gold_min = 0 }
+			set_variable = { BH3_ER_gold_umel = 0 }
+			set_variable = { BH3_ER_gold_ucmp = 0 }
+			set_variable = { BH3_ER_gold_uart = 0 }
+			set_variable = { BH3_ER_gold_uarm = 0 }
 			set_variable = { BH3_ER_gold_aria_timer = 0 }
 			set_variable = { BH3_ER_gold_aria_on = 0 }
 		}

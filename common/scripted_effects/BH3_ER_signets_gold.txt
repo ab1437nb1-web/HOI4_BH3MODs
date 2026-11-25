@@ -130,11 +130,27 @@ BH3_ER_gold_recalc = {
 
 	# ---- 对主要/次要国家攻击 ----
 	set_variable = { BH3_ER_gold_maj = 0 }
-	if = { limit = { has_country_flag = BH3_ER_own_gold_208 } add_to_variable = { BH3_ER_gold_maj = 0.15 } }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_210 } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_214 } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
-	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
 	set_variable = { BH3_ER_gold_min = BH3_ER_gold_maj }
+
+	# ---- 易伤乘区：各兵种攻击加成（208 沉醉 + 咏叹沉醉） ----
+	set_variable = { BH3_ER_gold_umel = 0 }
+	set_variable = { BH3_ER_gold_ucmp = 0 }
+	set_variable = { BH3_ER_gold_uart = 0 }
+	set_variable = { BH3_ER_gold_uarm = 0 }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_208 } 
+		add_to_variable = { BH3_ER_gold_umel = 0.15 }
+		add_to_variable = { BH3_ER_gold_ucmp = 0.15 }
+		add_to_variable = { BH3_ER_gold_uart = 0.15 }
+		add_to_variable = { BH3_ER_gold_uarm = 0.15 }
+	}
+	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } }
+		add_to_variable = { BH3_ER_gold_umel = 0.15 }
+		add_to_variable = { BH3_ER_gold_ucmp = 0.15 }
+		add_to_variable = { BH3_ER_gold_uart = 0.15 }
+		add_to_variable = { BH3_ER_gold_uarm = 0.15 }
+	}
 }
 
 # ---------- 授予（只设标记；数值由 daily 重算） ----------

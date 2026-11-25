@@ -269,6 +269,15 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 
 救世 DM 因此新增 BH3_ER_dlv_maj / BH3_ER_dlv_min 两个变量与对应 DM 字段。
 
+**易伤乘区（敌人受到的全伤害提高）统一映射为“各兵种攻击加成”：**
+
+- modifier_army_sub_unit_category_ValkyrieMeele_attack_factor（近战）
+- modifier_army_sub_unit_category_ValkyrieComprehensive_attack_factor（综合）
+- modifier_army_sub_unit_category_ValkyrieArtillery_attack_factor（炮击）
+- modifier_army_sub_unit_category_ValkyrieArmor_attack_factor（装甲）
+
+以后所有“敌人受到伤害提高 / 易伤 / 沉醉”类效果都按这 4 个兵种分类给攻击加成，不再用对主要/次要国家攻击。若日志报 unknown modifier，可退回 modifier_army_sub_unit_category_AllValkyrie_attack_factor（已验证可用）。
+
 
 ## 6. 第二组刻印：黄金（Gold，2026-11-25 第二版）
 
@@ -286,7 +295,8 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 | BH3_ER_gold_bucket / _prev | 当前/上次政治点档位（25 点一档） |
 | BH3_ER_gold_gain | 累计回复的政治点 |
 | BH3_ER_gold_spend | 累计消耗的政治点 |
-| BH3_ER_gold_atk / _def / _pp / _maj / _min | 输出给 DM 的最终数值 |
+| BH3_ER_gold_atk / _def / _pp / _maj / _min | 输出给 DM 的最终数值（穿透/降防走 _maj/_min） |
+| BH3_ER_gold_umel / _ucmp / _uart / _uarm | 易伤乘区：四个兵种分类的攻击加成 |
 | BH3_ER_gold_aria_timer / _on | 咏叹限时加成的剩余天数/是否生效 |
 
 ### 6.3 14 枚刻印
@@ -299,8 +309,8 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 | 204 | 果林的宣叙 | 普通 | pp +2% |
 | 205 | 美酒的宣叙 | 普通 | pp +5% |
 | 206 | 宝玉的宣叙 | 普通 | pp +3%，授予时一次性 +50 政治点 |
-| 207 | 黄金的咏叹 | 核心Ⅰ | 累计回复每 100 点 → 3 天限时对主要/次要国家攻击各 +20% |
-| 208 | 丰壤的咏叹 | 增幅 | 对主要/次要国家攻击各 +15% |
+| 207 | 黄金的咏叹 | 核心Ⅰ | 累计回复每 100 点 → 3 天限时：各兵种攻击 +15%（雷鸣+沉醉） |
+| 208 | 丰壤的咏叹 | 增幅 | 易伤乘区：各兵种攻击 +15% |
 | 209 | 生命的咏叹 | 增幅 | pp +5% |
 | 210 | 黎明的咏叹 | 增幅 | 对主要/次要国家攻击各 +20% |
 | 211 | 黄金的余音 | 核心Ⅱ | atk += 累计消耗 × 0.2%（上限 160%） |
