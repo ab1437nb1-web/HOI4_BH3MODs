@@ -94,14 +94,14 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_201 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.003 }
-		clamp_variable = { var = gt min = 0 max = 0.6 }
+		clamp_variable = { var = gt min = 0 max = 1.5 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_202 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 0.5 }
+		clamp_variable = { var = gt min = 0 max = 1.25 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 	if = {
@@ -112,7 +112,7 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_211 }
 		set_temp_variable = { gt = BH3_ER_gold_spend }
 		multiply_variable = { gt = 0.002 }
-		clamp_variable = { var = gt min = 0 max = 0.6 }
+		clamp_variable = { var = gt min = 0 max = 0.8 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 
@@ -122,7 +122,7 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_203 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 0.4 }
+		clamp_variable = { var = gt min = 0 max = 1.6 }
 		add_to_variable = { BH3_ER_gold_def = gt }
 	}
 
@@ -145,12 +145,12 @@ BH3_ER_gold_recalc = {
 	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } } add_to_variable = { BH3_ER_gold_usp = 0.15 } }
 
 	# ---- 最终兜底 clamp：防止变量异常导致修正爆炸 ----
-	clamp_variable = { var = BH3_ER_gold_atk min = 0 max = 3.0 }
-	clamp_variable = { var = BH3_ER_gold_def min = 0 max = 1.5 }
-	clamp_variable = { var = BH3_ER_gold_maj min = 0 max = 1.5 }
-	clamp_variable = { var = BH3_ER_gold_min min = 0 max = 1.5 }
-	clamp_variable = { var = BH3_ER_gold_usp min = 0 max = 0.6 }
-	clamp_variable = { var = BH3_ER_gold_pp min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_gold_atk min = 0 max = 6.0 }
+	clamp_variable = { var = BH3_ER_gold_def min = 0 max = 3.0 }
+	clamp_variable = { var = BH3_ER_gold_maj min = 0 max = 3.0 }
+	clamp_variable = { var = BH3_ER_gold_min min = 0 max = 3.0 }
+	clamp_variable = { var = BH3_ER_gold_usp min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_gold_pp min = 0 max = 1.0 }
 }
 
 # ---------- 授予（只设标记；数值由 daily 重算） ----------
