@@ -467,6 +467,51 @@ BH3_ER_debug_group = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# 黄金：把当前数值档位写入 game.log（诊断用，搜索 BH3GOLD）
+	BH3_ER_dbg_gold_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			log = "BH3GOLD begin"
+			if = { limit = { has_country_flag = BH3_ER_dm_added } log = "BH3GOLD dm_flag=yes" }
+			else = { log = "BH3GOLD dm_flag=no" }
+			if = { limit = { has_country_flag = BH3_ER_own_gold_201 } log = "BH3GOLD own201=yes" }
+			if = { limit = { has_country_flag = BH3_ER_own_gold_202 } log = "BH3GOLD own202=yes" }
+			if = { limit = { has_country_flag = BH3_ER_own_gold_203 } log = "BH3GOLD own203=yes" }
+			if = { limit = { has_country_flag = BH3_ER_own_gold_211 } log = "BH3GOLD own211=yes" }
+			if = { limit = { has_political_power > 499 } log = "BH3GOLD pp_gt500" }
+			else_if = { limit = { has_political_power > 249 } log = "BH3GOLD pp_250_499" }
+			else_if = { limit = { has_political_power > 99 } log = "BH3GOLD pp_100_249" }
+			else = { log = "BH3GOLD pp_lt100" }
+			if = { limit = { check_variable = { BH3_ER_gold_atk > 2.0 } } log = "BH3GOLD atk_gt200pct" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_atk > 1.0 } } log = "BH3GOLD atk_100_200pct" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_atk > 0.5 } } log = "BH3GOLD atk_50_100pct" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_atk > 0.0 } } log = "BH3GOLD atk_0_50pct" }
+			else = { log = "BH3GOLD atk_0" }
+			if = { limit = { check_variable = { BH3_ER_gold_def > 1.0 } } log = "BH3GOLD def_gt100pct" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_def > 0.4 } } log = "BH3GOLD def_40_100pct" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_def > 0.0 } } log = "BH3GOLD def_0_40pct" }
+			else = { log = "BH3GOLD def_0" }
+			if = { limit = { check_variable = { BH3_ER_gold_gain > 999 } } log = "BH3GOLD gain_gt999" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_gain > 99 } } log = "BH3GOLD gain_100_999" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_gain > 0 } } log = "BH3GOLD gain_1_99" }
+			else = { log = "BH3GOLD gain_0" }
+			if = { limit = { check_variable = { BH3_ER_gold_spend > 999 } } log = "BH3GOLD spend_gt999" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_spend > 99 } } log = "BH3GOLD spend_100_999" }
+			else_if = { limit = { check_variable = { BH3_ER_gold_spend > 0 } } log = "BH3GOLD spend_1_99" }
+			else = { log = "BH3GOLD spend_0" }
+			if = { limit = { political_power_daily > 10 } log = "BH3GOLD pp_daily_gt10" }
+			else_if = { limit = { political_power_daily > 3 } log = "BH3GOLD pp_daily_3_10" }
+			else_if = { limit = { political_power_daily > 1 } log = "BH3GOLD pp_daily_1_3" }
+			else = { log = "BH3GOLD pp_daily_lt1" }
+			log = "BH3GOLD end"
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_gold_pp_add = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0

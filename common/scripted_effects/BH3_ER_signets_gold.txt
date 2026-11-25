@@ -84,46 +84,50 @@ BH3_ER_gold_daily = {
 }
 
 # 重算输出变量（DM 直接读这些变量）
+# 用政治点阈值直接累加，避免 档位*25 的中间变量出错
 BH3_ER_gold_recalc = {
-	set_variable = { BH3_ER_gold_pp_approx = BH3_ER_gold_bucket }
-	multiply_variable = { BH3_ER_gold_pp_approx = 25 }
-
-	# ---- 全伤害 ----
+	# ---- 全伤害（201：每 100 政治点 +30%，上限 150%） ----
 	set_variable = { BH3_ER_gold_atk = 0 }
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_201 }
-		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
-		multiply_variable = { gt = 0.003 }
-		clamp_variable = { var = gt min = 0 max = 1.5 }
-		add_to_variable = { BH3_ER_gold_atk = gt }
+		if = { limit = { has_political_power > 49 } add_to_variable = { BH3_ER_gold_atk = 0.15 } }
+		if = { limit = { has_political_power > 99 } add_to_variable = { BH3_ER_gold_atk = 0.30 } }
+		if = { limit = { has_political_power > 199 } add_to_variable = { BH3_ER_gold_atk = 0.30 } }
+		if = { limit = { has_political_power > 299 } add_to_variable = { BH3_ER_gold_atk = 0.30 } }
+		if = { limit = { has_political_power > 399 } add_to_variable = { BH3_ER_gold_atk = 0.30 } }
+		if = { limit = { has_political_power > 499 } add_to_variable = { BH3_ER_gold_atk = 0.15 } }
 	}
+	# ---- 202：每 100 政治点 +25%，上限 125% ----
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_202 }
-		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
-		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 1.25 }
-		add_to_variable = { BH3_ER_gold_atk = gt }
+		if = { limit = { has_political_power > 99 } add_to_variable = { BH3_ER_gold_atk = 0.25 } }
+		if = { limit = { has_political_power > 199 } add_to_variable = { BH3_ER_gold_atk = 0.25 } }
+		if = { limit = { has_political_power > 299 } add_to_variable = { BH3_ER_gold_atk = 0.25 } }
+		if = { limit = { has_political_power > 399 } add_to_variable = { BH3_ER_gold_atk = 0.25 } }
+		if = { limit = { has_political_power > 499 } add_to_variable = { BH3_ER_gold_atk = 0.25 } }
 	}
-	if = {
-		limit = { has_country_flag = BH3_ER_own_gold_213 }
-		add_to_variable = { BH3_ER_gold_atk = 0.15 }
-	}
+	if = { limit = { has_country_flag = BH3_ER_own_gold_213 } add_to_variable = { BH3_ER_gold_atk = 0.15 } }
+
+	# ---- 211：累计消耗，每 100 点 +20%，上限 160% ----
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_211 }
-		set_temp_variable = { gt = BH3_ER_gold_spend }
-		multiply_variable = { gt = 0.002 }
-		clamp_variable = { var = gt min = 0 max = 0.8 }
-		add_to_variable = { BH3_ER_gold_atk = gt }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 99 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 199 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 299 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 399 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 499 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 599 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 699 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
+		if = { limit = { check_variable = { BH3_ER_gold_spend > 799 } } add_to_variable = { BH3_ER_gold_atk = 0.2 } }
 	}
 
-	# ---- 防御（203） ----
+	# ---- 防御（203：每 100 政治点 +25%，上限 80%） ----
 	set_variable = { BH3_ER_gold_def = 0 }
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_203 }
-		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
-		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 1.6 }
-		add_to_variable = { BH3_ER_gold_def = gt }
+		if = { limit = { has_political_power > 99 } add_to_variable = { BH3_ER_gold_def = 0.25 } }
+		if = { limit = { has_political_power > 199 } add_to_variable = { BH3_ER_gold_def = 0.25 } }
+		if = { limit = { has_political_power > 299 } add_to_variable = { BH3_ER_gold_def = 0.25 } }
 	}
 
 	# ---- 政治点获取 ----
@@ -139,18 +143,10 @@ BH3_ER_gold_recalc = {
 	if = { limit = { has_country_flag = BH3_ER_own_gold_214 } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
 	set_variable = { BH3_ER_gold_min = BH3_ER_gold_maj }
 
-	# ---- 易伤乘区：特种攻击（208 沉醉 + 咏叹沉醉） ----
+	# ---- 易伤乘区：特种攻击 ----
 	set_variable = { BH3_ER_gold_usp = 0 }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_208 } add_to_variable = { BH3_ER_gold_usp = 0.15 } }
 	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } } add_to_variable = { BH3_ER_gold_usp = 0.15 } }
-
-	# ---- 最终兜底 clamp：防止变量异常导致修正爆炸 ----
-	clamp_variable = { var = BH3_ER_gold_atk min = 0 max = 6.0 }
-	clamp_variable = { var = BH3_ER_gold_def min = 0 max = 3.0 }
-	clamp_variable = { var = BH3_ER_gold_maj min = 0 max = 3.0 }
-	clamp_variable = { var = BH3_ER_gold_min min = 0 max = 3.0 }
-	clamp_variable = { var = BH3_ER_gold_usp min = 0 max = 1.0 }
-	clamp_variable = { var = BH3_ER_gold_pp min = 0 max = 1.0 }
 }
 
 # ---------- 授予（只设标记；数值由 daily 重算） ----------

@@ -55,9 +55,13 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_sts_stack = 0 }
 	set_variable = { BH3_ER_sts_force_cd = 10 }
 	set_variable = { BH3_ER_sts_mori = 0 }
-	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
-	add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
-	add_dynamic_modifier = { modifier = BH3_ER_dm_sts }
+	if = {
+		limit = { NOT = { has_country_flag = BH3_ER_dm_added } }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_sts }
+		set_country_flag = BH3_ER_dm_added
+	}
 
 	set_variable = { BH3_ER_shop_45 = 0 }
 	set_variable = { BH3_ER_shop_89 = 0 }

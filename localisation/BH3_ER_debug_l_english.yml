@@ -86,3 +86,5 @@
  BH3_ER_dbg_gold_bucket_250_desc:0 "Sets the bracket directly and recalcs, bypassing the PP read."
  BH3_ER_dbg_gold_bucket_500:0 "[DEBUG] Gold: recalc at 500 PP"
  BH3_ER_dbg_gold_bucket_500_desc:0 "Sets the bracket directly and recalcs."
+ BH3_ER_dbg_gold_log:0 "[DEBUG] Gold: write values to game.log"
+ BH3_ER_dbg_gold_log_desc:0 "Writes BH3GOLD markers into game.log for diagnostics."
