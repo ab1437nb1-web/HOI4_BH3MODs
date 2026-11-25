@@ -94,10 +94,6 @@ equipments = {
 		module_count_limit = {
 			category = BH3_ValkyrieAir_SpecialMod
 			count < 2
-			module_count_limit = {
-				category = BH3_ValkyrieAir_TheDivineKeys
-				count < 2
-			}
 		}
 	}
 

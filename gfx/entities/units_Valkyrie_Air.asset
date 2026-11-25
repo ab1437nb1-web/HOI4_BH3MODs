@@ -49,7 +49,7 @@ entity = {
 
 entity = {
 	name = "BH3_ValkyrieAir_3_entity"
-	pdxmesh = "Kiana_HerrscherofVoid_pdx"
+	pdxmesh = "Kiana_HerrscherofVoid_Body_pdx"
 
 	state = { name = "fire" animation = "Attack1" animation_blend_time = 0.1 animation_speed = 1.0 looping = no next_state = "fire" }
 	state = { name = "bomb" animation = "Move" animation_blend_time = 0.1 animation_speed = 0.7 looping = no next_state = "bomb" }

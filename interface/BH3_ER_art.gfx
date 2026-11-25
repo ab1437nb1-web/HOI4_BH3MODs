@@ -6,6 +6,42 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/flawless_key.png"
 	}
 
+	# 刻印抽取：传送门风格卡片
+	spriteType = {
+		name = "GFX_BH3_ER_portal_card"
+		texturefile = "gfx/interface/elysianrealm/portal_card.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_1"
+		texturefile = "gfx/interface/elysianrealm/signet_Savior.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_2"
+		texturefile = "gfx/interface/elysianrealm/signet_Setsuna.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_3"
+		texturefile = "gfx/interface/elysianrealm/signet_Fusheng.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_4"
+		texturefile = "gfx/interface/elysianrealm/signet_Kosma.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_5"
+		texturefile = "gfx/interface/elysianrealm/signet_Gold.png"
+	}
+
+	spriteType = {
+		name = "GFX_BH3_ER_signet_6"
+		texturefile = "gfx/interface/elysianrealm/signet_Bodhi.png"
+	}
+
 	# 往事乐土主界面背景（深色 + 无瑕之钥）
 	spriteType = {
 		name = "GFX_BH3_ER_bg"

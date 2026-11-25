@@ -98,3 +98,11 @@
 1. **common/scripted_effects 的子目录不加载**：放在 BH3_ER_signets/ 里的效果全部报 “Unknown effect-type”，按钮点了没反应。解法：文件放根目录，用前缀命名（BH3_ER_signets_*.txt）。
 2. **决议的 allowed 块不接受 has_country_flag / is_debug**：报 “Token ... is not supported within the allowed trigger”。解法：allowed 只写 always = yes，真正的条件全部放 visible；调试决议靠 visible 里的 is_debug 控制显示。
 3. **决议分类必须单独定义在 common/decisions/categories/**：把 category 定义写进 decisions 文件会报 “Unknown category”，且后续决议全部 “Unexpected token”。测试 mod 已按这个规则拆分。
+
+
+---
+
+## 10. 脚本环境补充
+
+1. **不要在 %TEMP% 里建 enum.py / re.py / glob.py / types.py 这类文件**：python 脚本所在目录是 sys.path[0]，会遮蔽标准库，报 “partially initialized module 'glob' has no attribute 'glob'”。脚本名统一加前缀（zz_ 之类）或用独立目录。
+2. 引擎日志里的 “not in script_enum_*” 属于**文档性枚举提示**，只要不是 “Value does not belong to designated Script EnumType”，一般不影响实际效果，不必逐个改。

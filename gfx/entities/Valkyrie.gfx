@@ -381,7 +381,7 @@ objectTypes = {
 ########### Kiana_HerrscherofVoid ###########
 	### Old ####
 	# pdxmesh = {
-	# 	name = "Kiana_HerrscherofVoid_pdx"
+	# 	name = "Kiana_HerrscherofVoid_Body_pdx"
 	# 	file = "gfx/models/units/HerrscherKiana/Kiana_HerrscherofVoid.mesh"
 
 	# 	animation = { id = "Idle1"	type = "Kiana_HerrscherofVoid_Idle1_animation"}

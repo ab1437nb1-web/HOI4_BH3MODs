@@ -145,3 +145,24 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 - 6 个候选按钮是硬编码的，扩到 12 系 × 14 枚（168）时需要改成“按系分池 + 动态渲染”（或每系一页）；
 - 目前不做重复保护：同一刻印抽到第二次仍会给精神（已有时跳过加精神，但计数仍 +1）；
 - 权重目前是均等 1/6，正式版要按稀有度/是否已持有加权。
+
+
+### 2.6 传送门风格刻印卡片与重排版（2026-11-25）
+
+- 新增 sprite：GFX_BH3_ER_portal_card（400x90 PNG 卡片：紫黑底、左侧圆形图标槽、竖向光柱、紫色描边）
+- 新增 6 个刻印图标 sprite：GFX_BH3_ER_signet_1..6（复用 elysianrealm/signet_*.png：救世= Savior、刹那= Setsuna、浮生= Fusheng、旭光= Kosma、黄金= Gold、天慧= Bodhi）
+- 抽取候选改成 6 张卡片，2 列 x 3 行（x=540/960，y=160/275/390），卡片左侧用 iconType 叠 64px 刻印图标（scale 0.5）
+- 左列按钮整体上移：推进 150 / 双倍 205 / 商店 260/315/370 / 英桀 425 / 抽取 480 / 放弃 535
+- 背景重做：无瑕之钥缩小到右侧边缘、透明度 38%，避免与卡片抢视线
+
+### 2.7 历史 bug 修复（2026-11-25）
+
+| 文件 | 问题 | 处理 |
+|---|---|---|
+| common/units/equipment/BH3_ValkyrieAir.txt | module_count_limit 里嵌套 module_count_limit 导致解析错误 | 删除嵌套块 |
+| common/doctrines/subdoctrines/land/BH3_valkyrie_subdoctrines.txt | has_doctrine = bh3_sd_refined，该学说不存在 | 删除该 available 块（原本就没有实际作用） |
+| common/scripted_effects/BH3_createleader_scripted_effects.txt | create_corps_commander 内的 can_be_captured 不是合法字段（138 处） | 全部删除 |
+| common/decisions/BH3_TheDivineKeys_decisions.txt | productivity_growth_modifier / expected_mil_modifier / energy_gain_multiplier 不是合法 modifier；change_influence_percentage 不是合法 effect | 删除这些无效行（它们本来就不生效） |
+| gfx/entities/*（4 个文件） | 引用已废弃的 Kiana_HerrscherofVoid_pdx | 改为重做后的 Kiana_HerrscherofVoid_Body_pdx |
+
+另：日志里大量 “not in script_enum_equipment_bonus_type” 是引擎的**文档性提示**（原文说 enum 只用于文档），不影响装备加成生效，未处理。
