@@ -82,3 +82,7 @@
  BH3_ER_dbg_sts_dodge:0 "Trigger one limit dodge"
  BH3_ER_dbg_sts_sakura:0 "Trigger Sakura Curtain"
  BH3_ER_dbg_sts_gouge:0 "Trigger Karma Gouge"
+ BH3_ER_dbg_gold_bucket_250:0 "[DEBUG] Gold: recalc at 250 PP"
+ BH3_ER_dbg_gold_bucket_250_desc:0 "Sets the bracket directly and recalcs, bypassing the PP read."
+ BH3_ER_dbg_gold_bucket_500:0 "[DEBUG] Gold: recalc at 500 PP"
+ BH3_ER_dbg_gold_bucket_500_desc:0 "Sets the bracket directly and recalcs."

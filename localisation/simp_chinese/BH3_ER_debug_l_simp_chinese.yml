@@ -82,3 +82,7 @@
  BH3_ER_dbg_sts_dodge:0 "触发一次极限闪避"
  BH3_ER_dbg_sts_sakura:0 "触发樱幕结界"
  BH3_ER_dbg_sts_gouge:0 "触发业狩"
+ BH3_ER_dbg_gold_bucket_250:0 "【调试】黄金：按 250 政治点重算"
+ BH3_ER_dbg_gold_bucket_250_desc:0 "直接设定档位并重算，绕过政治点读取。"
+ BH3_ER_dbg_gold_bucket_500:0 "【调试】黄金：按 500 政治点重算"
+ BH3_ER_dbg_gold_bucket_500_desc:0 "直接设定档位并重算。"

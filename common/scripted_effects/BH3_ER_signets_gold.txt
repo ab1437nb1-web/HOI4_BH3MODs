@@ -5,36 +5,36 @@
 
 BH3_ER_gold_daily = {
 	set_variable = { BH3_ER_gold_bucket = 0 }
-	if = { limit = { political_power > 24 } set_variable = { BH3_ER_gold_bucket = 1 } }
-	if = { limit = { political_power > 49 } set_variable = { BH3_ER_gold_bucket = 2 } }
-	if = { limit = { political_power > 74 } set_variable = { BH3_ER_gold_bucket = 3 } }
-	if = { limit = { political_power > 99 } set_variable = { BH3_ER_gold_bucket = 4 } }
-	if = { limit = { political_power > 124 } set_variable = { BH3_ER_gold_bucket = 5 } }
-	if = { limit = { political_power > 149 } set_variable = { BH3_ER_gold_bucket = 6 } }
-	if = { limit = { political_power > 174 } set_variable = { BH3_ER_gold_bucket = 7 } }
-	if = { limit = { political_power > 199 } set_variable = { BH3_ER_gold_bucket = 8 } }
-	if = { limit = { political_power > 224 } set_variable = { BH3_ER_gold_bucket = 9 } }
-	if = { limit = { political_power > 249 } set_variable = { BH3_ER_gold_bucket = 10 } }
-	if = { limit = { political_power > 274 } set_variable = { BH3_ER_gold_bucket = 11 } }
-	if = { limit = { political_power > 299 } set_variable = { BH3_ER_gold_bucket = 12 } }
-	if = { limit = { political_power > 324 } set_variable = { BH3_ER_gold_bucket = 13 } }
-	if = { limit = { political_power > 349 } set_variable = { BH3_ER_gold_bucket = 14 } }
-	if = { limit = { political_power > 374 } set_variable = { BH3_ER_gold_bucket = 15 } }
-	if = { limit = { political_power > 399 } set_variable = { BH3_ER_gold_bucket = 16 } }
-	if = { limit = { political_power > 424 } set_variable = { BH3_ER_gold_bucket = 17 } }
-	if = { limit = { political_power > 449 } set_variable = { BH3_ER_gold_bucket = 18 } }
-	if = { limit = { political_power > 474 } set_variable = { BH3_ER_gold_bucket = 19 } }
-	if = { limit = { political_power > 499 } set_variable = { BH3_ER_gold_bucket = 20 } }
-	if = { limit = { political_power > 524 } set_variable = { BH3_ER_gold_bucket = 21 } }
-	if = { limit = { political_power > 549 } set_variable = { BH3_ER_gold_bucket = 22 } }
-	if = { limit = { political_power > 574 } set_variable = { BH3_ER_gold_bucket = 23 } }
-	if = { limit = { political_power > 599 } set_variable = { BH3_ER_gold_bucket = 24 } }
-	if = { limit = { political_power > 624 } set_variable = { BH3_ER_gold_bucket = 25 } }
-	if = { limit = { political_power > 649 } set_variable = { BH3_ER_gold_bucket = 26 } }
-	if = { limit = { political_power > 674 } set_variable = { BH3_ER_gold_bucket = 27 } }
-	if = { limit = { political_power > 699 } set_variable = { BH3_ER_gold_bucket = 28 } }
-	if = { limit = { political_power > 724 } set_variable = { BH3_ER_gold_bucket = 29 } }
-	if = { limit = { political_power > 749 } set_variable = { BH3_ER_gold_bucket = 30 } }
+	if = { limit = { has_political_power > 24 } set_variable = { BH3_ER_gold_bucket = 1 } }
+	if = { limit = { has_political_power > 49 } set_variable = { BH3_ER_gold_bucket = 2 } }
+	if = { limit = { has_political_power > 74 } set_variable = { BH3_ER_gold_bucket = 3 } }
+	if = { limit = { has_political_power > 99 } set_variable = { BH3_ER_gold_bucket = 4 } }
+	if = { limit = { has_political_power > 124 } set_variable = { BH3_ER_gold_bucket = 5 } }
+	if = { limit = { has_political_power > 149 } set_variable = { BH3_ER_gold_bucket = 6 } }
+	if = { limit = { has_political_power > 174 } set_variable = { BH3_ER_gold_bucket = 7 } }
+	if = { limit = { has_political_power > 199 } set_variable = { BH3_ER_gold_bucket = 8 } }
+	if = { limit = { has_political_power > 224 } set_variable = { BH3_ER_gold_bucket = 9 } }
+	if = { limit = { has_political_power > 249 } set_variable = { BH3_ER_gold_bucket = 10 } }
+	if = { limit = { has_political_power > 274 } set_variable = { BH3_ER_gold_bucket = 11 } }
+	if = { limit = { has_political_power > 299 } set_variable = { BH3_ER_gold_bucket = 12 } }
+	if = { limit = { has_political_power > 324 } set_variable = { BH3_ER_gold_bucket = 13 } }
+	if = { limit = { has_political_power > 349 } set_variable = { BH3_ER_gold_bucket = 14 } }
+	if = { limit = { has_political_power > 374 } set_variable = { BH3_ER_gold_bucket = 15 } }
+	if = { limit = { has_political_power > 399 } set_variable = { BH3_ER_gold_bucket = 16 } }
+	if = { limit = { has_political_power > 424 } set_variable = { BH3_ER_gold_bucket = 17 } }
+	if = { limit = { has_political_power > 449 } set_variable = { BH3_ER_gold_bucket = 18 } }
+	if = { limit = { has_political_power > 474 } set_variable = { BH3_ER_gold_bucket = 19 } }
+	if = { limit = { has_political_power > 499 } set_variable = { BH3_ER_gold_bucket = 20 } }
+	if = { limit = { has_political_power > 524 } set_variable = { BH3_ER_gold_bucket = 21 } }
+	if = { limit = { has_political_power > 549 } set_variable = { BH3_ER_gold_bucket = 22 } }
+	if = { limit = { has_political_power > 574 } set_variable = { BH3_ER_gold_bucket = 23 } }
+	if = { limit = { has_political_power > 599 } set_variable = { BH3_ER_gold_bucket = 24 } }
+	if = { limit = { has_political_power > 624 } set_variable = { BH3_ER_gold_bucket = 25 } }
+	if = { limit = { has_political_power > 649 } set_variable = { BH3_ER_gold_bucket = 26 } }
+	if = { limit = { has_political_power > 674 } set_variable = { BH3_ER_gold_bucket = 27 } }
+	if = { limit = { has_political_power > 699 } set_variable = { BH3_ER_gold_bucket = 28 } }
+	if = { limit = { has_political_power > 724 } set_variable = { BH3_ER_gold_bucket = 29 } }
+	if = { limit = { has_political_power > 749 } set_variable = { BH3_ER_gold_bucket = 30 } }
 
 	# 累计回复 / 累计消耗（用档位差近似）
 	if = {
@@ -94,14 +94,14 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_201 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.003 }
-		clamp_variable = { var = gt min = 0 max = 1.5 }
+		clamp_variable = { var = gt min = 0 max = 0.6 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 	if = {
 		limit = { has_country_flag = BH3_ER_own_gold_202 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 1.25 }
+		clamp_variable = { var = gt min = 0 max = 0.5 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 	if = {
@@ -112,7 +112,7 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_211 }
 		set_temp_variable = { gt = BH3_ER_gold_spend }
 		multiply_variable = { gt = 0.002 }
-		clamp_variable = { var = gt min = 0 max = 1.6 }
+		clamp_variable = { var = gt min = 0 max = 0.6 }
 		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
 
@@ -122,7 +122,7 @@ BH3_ER_gold_recalc = {
 		limit = { has_country_flag = BH3_ER_own_gold_203 }
 		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
 		multiply_variable = { gt = 0.0025 }
-		clamp_variable = { var = gt min = 0 max = 0.8 }
+		clamp_variable = { var = gt min = 0 max = 0.4 }
 		add_to_variable = { BH3_ER_gold_def = gt }
 	}
 
@@ -143,6 +143,14 @@ BH3_ER_gold_recalc = {
 	set_variable = { BH3_ER_gold_usp = 0 }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_208 } add_to_variable = { BH3_ER_gold_usp = 0.15 } }
 	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } } add_to_variable = { BH3_ER_gold_usp = 0.15 } }
+
+	# ---- 最终兜底 clamp：防止变量异常导致修正爆炸 ----
+	clamp_variable = { var = BH3_ER_gold_atk min = 0 max = 3.0 }
+	clamp_variable = { var = BH3_ER_gold_def min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_gold_maj min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_gold_min min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_gold_usp min = 0 max = 0.6 }
+	clamp_variable = { var = BH3_ER_gold_pp min = 0 max = 0.5 }
 }
 
 # ---------- 授予（只设标记；数值由 daily 重算） ----------
@@ -315,3 +323,9 @@ BH3_ER_grant_214 = {
 		set_variable = { BH3_ER_c3 = 0 }
 	}
 
+
+# 调试：直接按档位重算（绕过政治点读取）
+BH3_ER_gold_debug_bucket = {
+	set_variable = { BH3_ER_gold_bucket = BH3_ER_gold_debug_bucket_value }
+	BH3_ER_gold_recalc = yes
+}

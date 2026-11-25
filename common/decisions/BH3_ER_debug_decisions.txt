@@ -440,6 +440,33 @@ BH3_ER_debug_group = {
 	}
 
 
+
+	# 黄金：绕过政治点读取，直接按档位重算（诊断用）
+	BH3_ER_dbg_gold_bucket_250 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_gold_bucket = 10 }
+			BH3_ER_gold_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_bucket_500 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_gold_bucket = 20 }
+			BH3_ER_gold_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_gold_pp_add = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
