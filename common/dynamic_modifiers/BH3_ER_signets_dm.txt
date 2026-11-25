@@ -26,9 +26,6 @@ BH3_ER_dm_gold = {
 	political_power_gain = BH3_ER_gold_pp
 	army_attack_against_major_factor = BH3_ER_gold_maj
 	army_attack_against_minor_factor = BH3_ER_gold_min
-	# 易伤乘区 → 各兵种攻击加成
-	modifier_army_sub_unit_category_ValkyrieMeele_attack_factor = BH3_ER_gold_umel
-	modifier_army_sub_unit_category_ValkyrieComprehensive_attack_factor = BH3_ER_gold_ucmp
-	modifier_army_sub_unit_category_ValkyrieArtillery_attack_factor = BH3_ER_gold_uart
-	modifier_army_sub_unit_category_ValkyrieArmor_attack_factor = BH3_ER_gold_uarm
+	# 易伤乘区 → 特种攻击（原版词条 special_forces_attack_factor）
+	special_forces_attack_factor = BH3_ER_gold_usp
 }
