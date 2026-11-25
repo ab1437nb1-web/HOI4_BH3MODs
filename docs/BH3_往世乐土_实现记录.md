@@ -88,3 +88,11 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 
 - 若 _visible 触发器在某些版本不生效，按钮会常显但点击被守卫拦下（不会误操作）。
 - 背景是 PNG sprite（本 mod 已验证可行）；如某版本不吃 PNG，可改用同名 dds。
+
+
+### 2.4 右上角层数提示（2026-11-25 追加）
+
+- 位置：ER 窗口右上角（x=960, y=18，右对齐），显示“第 N / 17 层（层类型）”
+- 实现：18 个静态 instantTextBoxType（BH3_ER_badge_0..17），由 scripted_gui 的 BH3_ER_badge_N_visible 触发器按 BH3_ER_floor 精确匹配切换
+- 为什么不用时间触发器：玩家可能在暂停状态下点击，日结类触发器不会执行；按钮 _click 执行后 scripted_gui 会立即重算该窗口元素状态，所以暂停时也能即时变化
+- 旧的左侧 BH3_ER_floor_text（defined_text）已移除，避免两处显示不一致

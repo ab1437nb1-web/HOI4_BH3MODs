@@ -1125,14 +1125,202 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# 右上角层数提示：18 个静态文本，由 scripted_gui 的 _visible 触发器切换（点击即更新，不依赖时间）
 		instantTextBoxType = {
-			name = "BH3_ER_floor_text"
-			position = { x = 110 y = 128 }
+			name = "BH3_ER_badge_0"
+			position = { x = 960 y = 18 }
 			font = "hoi_16mbs"
-			text = "BH3_ER_floor_text"
-			maxWidth = 620
+			text = "BH3_ER_floor_0"
+			maxWidth = 340
 			maxHeight = 30
-			format = left
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_1"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_1"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_2"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_2"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_3"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_3"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_4"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_4"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_5"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_5"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_6"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_6"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_7"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_7"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_8"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_8"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_9"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_9"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_10"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_10"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_11"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_11"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_12"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_12"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_13"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_13"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_14"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_14"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_15"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_15"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_16"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_16"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_badge_17"
+			position = { x = 960 y = 18 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_floor_17"
+			maxWidth = 340
+			maxHeight = 30
+			format = right
 			alwaystransparent = yes
 		}
 

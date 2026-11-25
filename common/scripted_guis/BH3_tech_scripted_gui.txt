@@ -145,6 +145,60 @@ scripted_gui = {
 			BH3_ER_final_btn_visible = {
 				check_variable = { BH3_ER_floor = 17 }
 			}
+			BH3_ER_badge_0_visible = {
+				check_variable = { BH3_ER_floor = 0 }
+			}
+			BH3_ER_badge_1_visible = {
+				check_variable = { BH3_ER_floor = 1 }
+			}
+			BH3_ER_badge_2_visible = {
+				check_variable = { BH3_ER_floor = 2 }
+			}
+			BH3_ER_badge_3_visible = {
+				check_variable = { BH3_ER_floor = 3 }
+			}
+			BH3_ER_badge_4_visible = {
+				check_variable = { BH3_ER_floor = 4 }
+			}
+			BH3_ER_badge_5_visible = {
+				check_variable = { BH3_ER_floor = 5 }
+			}
+			BH3_ER_badge_6_visible = {
+				check_variable = { BH3_ER_floor = 6 }
+			}
+			BH3_ER_badge_7_visible = {
+				check_variable = { BH3_ER_floor = 7 }
+			}
+			BH3_ER_badge_8_visible = {
+				check_variable = { BH3_ER_floor = 8 }
+			}
+			BH3_ER_badge_9_visible = {
+				check_variable = { BH3_ER_floor = 9 }
+			}
+			BH3_ER_badge_10_visible = {
+				check_variable = { BH3_ER_floor = 10 }
+			}
+			BH3_ER_badge_11_visible = {
+				check_variable = { BH3_ER_floor = 11 }
+			}
+			BH3_ER_badge_12_visible = {
+				check_variable = { BH3_ER_floor = 12 }
+			}
+			BH3_ER_badge_13_visible = {
+				check_variable = { BH3_ER_floor = 13 }
+			}
+			BH3_ER_badge_14_visible = {
+				check_variable = { BH3_ER_floor = 14 }
+			}
+			BH3_ER_badge_15_visible = {
+				check_variable = { BH3_ER_floor = 15 }
+			}
+			BH3_ER_badge_16_visible = {
+				check_variable = { BH3_ER_floor = 16 }
+			}
+			BH3_ER_badge_17_visible = {
+				check_variable = { BH3_ER_floor = 17 }
+			}
 		}
 	}
 
