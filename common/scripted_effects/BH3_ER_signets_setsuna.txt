@@ -63,10 +63,11 @@ BH3_ER_setsuna_dodge = {
 		set_variable = { BH3_ER_sts_charge = 1 }
 	}
 
-	# 自定义冷却：默认 10 天；藤 9 天；菊 5 天
+	# 自定义冷却：默认 10 天；藤 -1、菊 -5，可累加（两者都有 = 4 天）
 	set_variable = { BH3_ER_sts_cd = 10 }
-	if = { limit = { has_country_flag = BH3_ER_own_sts_305 } set_variable = { BH3_ER_sts_cd = 9 } }
-	if = { limit = { has_country_flag = BH3_ER_own_sts_304 } set_variable = { BH3_ER_sts_cd = 5 } }
+	if = { limit = { has_country_flag = BH3_ER_own_sts_305 } subtract_from_variable = { BH3_ER_sts_cd = 1 } }
+	if = { limit = { has_country_flag = BH3_ER_own_sts_304 } subtract_from_variable = { BH3_ER_sts_cd = 5 } }
+	if = { limit = { check_variable = { BH3_ER_sts_cd < 1 } } set_variable = { BH3_ER_sts_cd = 1 } }
 }
 
 # 樱幕结界（核心I）
