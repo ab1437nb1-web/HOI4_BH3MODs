@@ -39,8 +39,24 @@ BH3_ER_init_run = {
 	set_variable = { BH3_UD_calls = 0 }
 	set_variable = { BH3_ER_gold_aria_timer = 0 }
 	set_variable = { BH3_ER_gold_aria_on = 0 }
+	set_variable = { BH3_ER_sts_atk = 0 }
+	set_variable = { BH3_ER_sts_spd = 0 }
+	set_variable = { BH3_ER_sts_usp = 0 }
+	set_variable = { BH3_ER_sts_maj = 0 }
+	set_variable = { BH3_ER_sts_min = 0 }
+	set_variable = { BH3_ER_sts_w_atk = 0 }
+	set_variable = { BH3_ER_sts_w_spd = 0 }
+	set_variable = { BH3_ER_sts_w_usp = 0 }
+	set_variable = { BH3_ER_sts_w_on = 0 }
+	set_variable = { BH3_ER_sts_window = 0 }
+	set_variable = { BH3_ER_sts_cd = 0 }
+	set_variable = { BH3_ER_sts_gouge_cd = 0 }
+	set_variable = { BH3_ER_sts_dodge = 0 }
+	set_variable = { BH3_ER_sts_charge = 0 }
+	set_variable = { BH3_ER_sts_stack = 0 }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
+	add_dynamic_modifier = { modifier = BH3_ER_dm_sts }
 
 	set_variable = { BH3_ER_shop_45 = 0 }
 	set_variable = { BH3_ER_shop_89 = 0 }

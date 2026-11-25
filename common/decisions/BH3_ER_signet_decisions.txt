@@ -50,4 +50,66 @@ BH3_ER_signet_group = {
 	}
 
 
+
+	# 刹那：极限闪避（自定义冷却）
+	BH3_ER_setsuna_dodge_decision = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			OR = {
+				has_country_flag = BH3_ER_own_sts_301
+				has_country_flag = BH3_ER_own_sts_302
+				has_country_flag = BH3_ER_own_sts_303
+				has_country_flag = BH3_ER_own_sts_304
+				has_country_flag = BH3_ER_own_sts_305
+				has_country_flag = BH3_ER_own_sts_306
+				has_country_flag = BH3_ER_own_sts_307
+				has_country_flag = BH3_ER_own_sts_311
+			}
+		}
+		available = {
+			has_war = yes
+			check_variable = { BH3_ER_sts_cd = 0 }
+		}
+		complete_effect = {
+			BH3_ER_setsuna_dodge = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 刹那：樱幕结界（核心I，累计 3 次闪避后）
+	BH3_ER_setsuna_sakura_decision = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			has_country_flag = BH3_ER_own_sts_307
+			check_variable = { BH3_ER_sts_charge = 1 }
+		}
+		available = { check_variable = { BH3_ER_sts_charge = 1 } }
+		complete_effect = {
+			BH3_ER_setsuna_sakura = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 刹那：业狩（核心II，10 天冷却）
+	BH3_ER_setsuna_gouge_decision = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			has_country_flag = BH3_ER_own_sts_311
+		}
+		available = { check_variable = { BH3_ER_sts_gouge_cd = 0 } }
+		complete_effect = {
+			BH3_ER_setsuna_gouge = yes
+			set_variable = { BH3_ER_sts_gouge_cd = 10 }
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

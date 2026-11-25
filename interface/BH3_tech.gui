@@ -1437,6 +1437,14 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		iconType = {
+			name = "BH3_ER_slot_1_icon_sts"
+			position = { x = 610 y = 216 }
+			spriteType = "GFX_BH3_ER_series_sts"
+			scale = 0.62
+			alwaystransparent = yes
+		}
+
 		instantTextBoxType = {
 			name = "BH3_ER_slot_1_label"
 			position = { x = 560 y = 490 }
@@ -1472,6 +1480,14 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		iconType = {
+			name = "BH3_ER_slot_2_icon_sts"
+			position = { x = 840 y = 216 }
+			spriteType = "GFX_BH3_ER_series_sts"
+			scale = 0.62
+			alwaystransparent = yes
+		}
+
 		instantTextBoxType = {
 			name = "BH3_ER_slot_2_label"
 			position = { x = 790 y = 490 }
@@ -1503,6 +1519,14 @@ guiTypes = {
 			name = "BH3_ER_slot_3_icon_gold"
 			position = { x = 1070 y = 216 }
 			spriteType = "GFX_BH3_ER_series_gold"
+			scale = 0.62
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "BH3_ER_slot_3_icon_sts"
+			position = { x = 1070 y = 216 }
+			spriteType = "GFX_BH3_ER_series_sts"
 			scale = 0.62
 			alwaystransparent = yes
 		}

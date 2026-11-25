@@ -29,3 +29,13 @@ BH3_ER_dm_gold = {
 	# 易伤乘区 → 特种攻击（原版词条 special_forces_attack_factor）
 	special_forces_attack_factor = BH3_ER_gold_usp
 }
+
+BH3_ER_dm_sts = {
+	enable = { always = yes }
+
+	army_attack_factor = BH3_ER_sts_atk
+	army_speed_factor = BH3_ER_sts_spd
+	special_forces_attack_factor = BH3_ER_sts_usp
+	army_attack_against_major_factor = BH3_ER_sts_maj
+	army_attack_against_minor_factor = BH3_ER_sts_min
+}

@@ -22,6 +22,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/signet_Gold.png"
 	}
 
+	spriteType = {
+		name = "GFX_BH3_ER_series_sts"
+		texturefile = "gfx/interface/elysianrealm/signet_Setsuna.png"
+	}
+
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
 		name = "GFX_BH3_ER_portal_tile"

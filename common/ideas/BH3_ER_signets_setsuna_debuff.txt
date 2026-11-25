@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+
+		# 刹那·樱上幕：樱幕结界（对敌方施加的限时负面）
+		BH3_ER_setsuna_freeze = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_speed_factor = -0.9
+				breakthrough_factor = -0.3
+				army_attack_factor = -0.25
+			}
+		}
+	}
+}
