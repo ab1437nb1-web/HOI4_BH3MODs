@@ -50,11 +50,11 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_sts_w_on = 0 }
 	set_variable = { BH3_ER_sts_window = 0 }
 	set_variable = { BH3_ER_sts_cd = 0 }
-	set_variable = { BH3_ER_sts_gouge_cd = 0 }
 	set_variable = { BH3_ER_sts_dodge = 0 }
 	set_variable = { BH3_ER_sts_charge = 0 }
 	set_variable = { BH3_ER_sts_stack = 0 }
 	set_variable = { BH3_ER_sts_force_cd = 10 }
+	set_variable = { BH3_ER_sts_mori = 0 }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_sts }

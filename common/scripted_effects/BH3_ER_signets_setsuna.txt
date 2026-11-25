@@ -36,18 +36,26 @@ BH3_ER_setsuna_dodge = {
 		add_political_power = 12
 	}
 
-	# 核心II：3 次闪避触发业狩（一瞬森罗）
+	# 核心II：闪避后自动触发业狩
+	if = {
+		limit = { has_country_flag = BH3_ER_own_sts_311 }
+		BH3_ER_setsuna_gouge = yes
+	}
+	# 一瞬森罗：每 3 次闪避额外追加一次业狩
 	if = {
 		limit = {
 			has_country_flag = BH3_ER_own_sts_311
 			has_country_flag = BH3_ER_own_sts_312
-			check_variable = { BH3_ER_sts_dodge > 2 }
 		}
-		set_variable = { BH3_ER_sts_dodge = 0 }
-		BH3_ER_setsuna_gouge = yes
+		add_to_variable = { BH3_ER_sts_mori = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_sts_mori > 2 } }
+			set_variable = { BH3_ER_sts_mori = 0 }
+			BH3_ER_setsuna_gouge = yes
+		}
 	}
 	# 核心I：3 次闪避解锁樱幕结界
-	else_if = {
+	if = {
 		limit = {
 			has_country_flag = BH3_ER_own_sts_307
 			check_variable = { BH3_ER_sts_dodge > 2 }
@@ -87,9 +95,9 @@ BH3_ER_setsuna_sakura = {
 
 	if = {
 		limit = { has_country_flag = BH3_ER_own_sts_308 }
-		# 雨四光：重置必杀技决议冷却（指挥官技能无脚本重置接口）
+		# 雨四光：重置必杀技决议冷却；另给 20 指挥点数代表刷新武器技能
 		remove_decision_on_cooldown = BH3_ER_ult_dlv
-		add_political_power = 30
+		add_command_power = 20
 	}
 }
 
@@ -136,10 +144,6 @@ BH3_ER_setsuna_daily = {
 	if = {
 		limit = { check_variable = { BH3_ER_sts_cd > 0 } }
 		subtract_from_variable = { BH3_ER_sts_cd = 1 }
-	}
-	if = {
-		limit = { check_variable = { BH3_ER_sts_gouge_cd > 0 } }
-		subtract_from_variable = { BH3_ER_sts_gouge_cd = 1 }
 	}
 	# 核心II：瞬心 → 每 10 天强制触发一次极限闪避
 	if = {

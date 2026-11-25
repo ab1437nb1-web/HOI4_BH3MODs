@@ -83,8 +83,6 @@
  BH3_ER_setsuna_freeze_desc:0 "Enemy debuff from Sakura Curtain: speed and attack reduced."
  BH3_ER_setsuna_sakura_decision:0 "Setsuna: Sakura Curtain"
  BH3_ER_setsuna_sakura_decision_desc:0 "Available after 3 dodges with Core I: freezes enemies for 3 days (5 with Boar-Deer-Butterfly) and deals damage via BH3_UD."
- BH3_ER_setsuna_gouge_decision:0 "Setsuna: Karma Gouge"
- BH3_ER_setsuna_gouge_decision_desc:0 "Core II: deals damage via BH3_UD, stacks damage with Myriad Darkness. 10-day cooldown."
  BH3_ER_signet_301:0 "Riotous Bloom: Plum"
  BH3_ER_signet_301_desc:0 "Riotous Bloom: Plum"
  BH3_ER_signet_302:0 "Riotous Bloom: Maple"

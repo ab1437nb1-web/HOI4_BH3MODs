@@ -83,8 +83,6 @@
  BH3_ER_setsuna_freeze_desc:0 "樱幕结界对敌方施加的负面：速度与攻击下降。"
  BH3_ER_setsuna_sakura_decision:0 "刹那：樱幕结界"
  BH3_ER_setsuna_sakura_decision_desc:0 "拥有核心I并累计 3 次闪避后可用：冻结敌方 3 天（有猪鹿蝶则 5 天），并通过 BH3_UD 结算伤害。"
- BH3_ER_setsuna_gouge_decision:0 "刹那：业狩"
- BH3_ER_setsuna_gouge_decision_desc:0 "核心II：通过 BH3_UD 造成伤害，万象无明可叠层。冷却 10 天。"
  BH3_ER_signet_301:0 "缭乱百花「梅」"
  BH3_ER_signet_301_desc:0 "触发极限闪避后，攻击速度和移动速度提高 40%，持续 8 秒"
  BH3_ER_signet_302:0 "缭乱百花「红叶」"
