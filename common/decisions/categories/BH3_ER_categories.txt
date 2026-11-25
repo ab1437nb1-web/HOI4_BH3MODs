@@ -1,19 +1,19 @@
 BH3_ElysianRealm_floor_group = {
-	icon = GFX_BH3_ER_FlawlessKey_icon
+	icon = GFX_BH3_ER_icon_small
 	priority = 99990
 	allowed = { always = yes }
 	visible = { has_country_flag = BH3_ElysianRealm_unlocked }
 }
 
 BH3_ER_debug_group = {
-	icon = GFX_BH3_ER_FlawlessKey_icon
+	icon = GFX_BH3_ER_icon_small
 	priority = 99989
 	allowed = { always = yes }
 	visible = { is_debug = yes }
 }
 
 BH3_ER_signet_group = {
-	icon = GFX_BH3_ER_FlawlessKey_icon
+	icon = GFX_BH3_ER_icon_small
 	priority = 99988
 	allowed = { always = yes }
 	visible = { has_country_flag = BH3_ElysianRealm_unlocked }

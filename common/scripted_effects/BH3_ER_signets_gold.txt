@@ -1,0 +1,236 @@
+# 往事乐土·黄金：能量（政治点）体系
+# 变量：BH3_ER_gold_atk / _def / _pp / _maj / _min（常驻累加）
+# 窗口：BH3_ER_gold_window（天数）+ BH3_ER_gold_w_*（窗口期间临时加值，到期扣回）
+
+# 核心I：咏叹（消耗 50 政治点，7 天窗口）
+BH3_ER_gold_aria = {
+	if = {
+		limit = { check_variable = { BH3_ER_gold_w_on = 0 } }
+		add_to_variable = { BH3_ER_gold_atk = 0.30 }
+		add_to_variable = { BH3_ER_gold_maj = 0.20 }
+		add_to_variable = { BH3_ER_gold_min = 0.20 }
+		set_variable = { BH3_ER_gold_w_atk = 0.30 }
+		set_variable = { BH3_ER_gold_w_maj = 0.20 }
+		set_variable = { BH3_ER_gold_w_min = 0.20 }
+		set_variable = { BH3_ER_gold_w_on = 1 }
+	}
+	set_variable = { BH3_ER_gold_window = 7 }
+}
+
+# 核心II：余音（消耗 100 政治点，14 天窗口）
+BH3_ER_gold_echo = {
+	if = {
+		limit = { check_variable = { BH3_ER_gold_w_on = 0 } }
+		add_to_variable = { BH3_ER_gold_atk = 0.50 }
+		add_to_variable = { BH3_ER_gold_maj = 0.30 }
+		add_to_variable = { BH3_ER_gold_min = 0.30 }
+		set_variable = { BH3_ER_gold_w_atk = 0.50 }
+		set_variable = { BH3_ER_gold_w_maj = 0.30 }
+		set_variable = { BH3_ER_gold_w_min = 0.30 }
+		set_variable = { BH3_ER_gold_w_on = 1 }
+	}
+	set_variable = { BH3_ER_gold_window = 14 }
+}
+
+# 窗口到期：把临时加值扣回
+BH3_ER_gold_window_end = {
+	if = {
+		limit = { check_variable = { BH3_ER_gold_w_on = 1 } }
+		subtract_from_variable = { BH3_ER_gold_atk = BH3_ER_gold_w_atk }
+		subtract_from_variable = { BH3_ER_gold_maj = BH3_ER_gold_w_maj }
+		subtract_from_variable = { BH3_ER_gold_min = BH3_ER_gold_w_min }
+		set_variable = { BH3_ER_gold_w_on = 0 }
+		set_variable = { BH3_ER_gold_w_atk = 0 }
+		set_variable = { BH3_ER_gold_w_maj = 0 }
+		set_variable = { BH3_ER_gold_w_min = 0 }
+	}
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_201 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_201 } }
+			set_country_flag = BH3_ER_own_gold_201
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_atk = 0.3 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_202 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_202 } }
+			set_country_flag = BH3_ER_own_gold_202
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_atk = 0.25 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_203 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_203 } }
+			set_country_flag = BH3_ER_own_gold_203
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_def = 0.25 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_204 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_204 } }
+			set_country_flag = BH3_ER_own_gold_204
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_pp = 0.02 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_205 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_205 } }
+			set_country_flag = BH3_ER_own_gold_205
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_pp = 0.05 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_206 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_206 } }
+			set_country_flag = BH3_ER_own_gold_206
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_political_power = 50
+			add_to_variable = { BH3_ER_gold_pp = 0.03 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_207 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_207 } }
+			set_country_flag = BH3_ER_own_gold_207
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_maj = 0.15 }
+			add_to_variable = { BH3_ER_gold_min = 0.15 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_208 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_208 } }
+			set_country_flag = BH3_ER_own_gold_208
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_maj = 0.15 }
+			add_to_variable = { BH3_ER_gold_min = 0.15 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_209 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_209 } }
+			set_country_flag = BH3_ER_own_gold_209
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_pp = 0.05 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_210 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_210 } }
+			set_country_flag = BH3_ER_own_gold_210
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_maj = 0.2 }
+			add_to_variable = { BH3_ER_gold_min = 0.2 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_211 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_211 } }
+			set_country_flag = BH3_ER_own_gold_211
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_atk = 0.2 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_212 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_212 } }
+			set_country_flag = BH3_ER_own_gold_212
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_pp = 0.1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_213 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_213 } }
+			set_country_flag = BH3_ER_own_gold_213
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_atk = 0.15 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_214 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_gold_214 } }
+			set_country_flag = BH3_ER_own_gold_214
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_gold_maj = 0.2 }
+			add_to_variable = { BH3_ER_gold_min = 0.2 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

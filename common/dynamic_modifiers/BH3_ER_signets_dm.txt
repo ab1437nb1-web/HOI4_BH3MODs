@@ -14,4 +14,16 @@ BH3_ER_dm_dlv = {
 	army_defence_factor = BH3_ER_dlv_def
 	breakthrough_factor = BH3_ER_dlv_bth
 	army_org_regain = BH3_ER_dlv_org
+	army_attack_against_major_factor = BH3_ER_dlv_maj
+	army_attack_against_minor_factor = BH3_ER_dlv_min
+}
+
+BH3_ER_dm_gold = {
+	enable = { always = yes }
+
+	army_attack_factor = BH3_ER_gold_atk
+	army_defence_factor = BH3_ER_gold_def
+	political_power_gain = BH3_ER_gold_pp
+	army_attack_against_major_factor = BH3_ER_gold_maj
+	army_attack_against_minor_factor = BH3_ER_gold_min
 }

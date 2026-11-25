@@ -2,7 +2,7 @@ BH3_ER_signet_group = {
 
 	# 救世：开启必杀技（原作“必杀技”触发）
 	BH3_ER_ult_dlv = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 50
 		allowed = { always = yes }
 		visible = {
@@ -33,7 +33,7 @@ BH3_ER_signet_group = {
 
 	# 救世：进入救世之战（核心Ⅱ）
 	BH3_ER_dlv_war_state = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -45,6 +45,40 @@ BH3_ER_signet_group = {
 		days_re_enable = 60
 		complete_effect = {
 			BH3_ER_dlv_war = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 黄金：咏叹（核心I，消耗 50 政治点）
+	BH3_ER_gold_aria = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 50
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			has_country_flag = BH3_ER_own_gold_207
+		}
+		available = { has_war = yes }
+		days_re_enable = 30
+		complete_effect = {
+			BH3_ER_gold_aria = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 黄金：余音（核心II，消耗 100 政治点）
+	BH3_ER_gold_echo = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 100
+		allowed = { always = yes }
+		visible = {
+			has_war = yes
+			has_country_flag = BH3_ER_own_gold_211
+		}
+		available = { has_war = yes }
+		days_re_enable = 60
+		complete_effect = {
+			BH3_ER_gold_echo = yes
 		}
 		ai_will_do = { factor = 0 }
 	}

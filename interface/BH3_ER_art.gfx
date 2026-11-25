@@ -6,6 +6,22 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/flawless_key.png"
 	}
 
+	# 决议/分类用的小图标（64x64）
+	spriteType = {
+		name = "GFX_BH3_ER_icon_small"
+		texturefile = "gfx/interface/elysianrealm/flawless_key_small.png"
+	}
+
+	# 各系徽记（传送门候选槽用）
+	spriteType = {
+		name = "GFX_BH3_ER_series_dlv"
+		texturefile = "gfx/interface/elysianrealm/signet_Savior.png"
+	}
+	spriteType = {
+		name = "GFX_BH3_ER_series_gold"
+		texturefile = "gfx/interface/elysianrealm/signet_Gold.png"
+	}
+
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
 		name = "GFX_BH3_ER_portal_tile"

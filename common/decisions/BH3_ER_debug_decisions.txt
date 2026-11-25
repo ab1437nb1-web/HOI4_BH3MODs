@@ -2,7 +2,7 @@ BH3_ER_debug_group = {
 
 	# ---------- 总控：展开/收起 12 系测试 ----------
 	BH3_ER_dbg_series_1 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -17,7 +17,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_2 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -32,7 +32,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_3 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -47,7 +47,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_4 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -62,7 +62,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_5 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -77,7 +77,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_6 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -92,7 +92,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_7 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -107,7 +107,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_8 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -122,7 +122,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_9 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -137,7 +137,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_10 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -152,7 +152,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_11 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -167,7 +167,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_series_12 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -182,7 +182,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_close = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = {
@@ -198,7 +198,7 @@ BH3_ER_debug_group = {
 
 	# ---------- 救世：测试决议（核心Ⅰ/Ⅱ及其增幅互斥） ----------
 	BH3_ER_dbg_dlv_normal = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -215,7 +215,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_dlv_core1 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -252,7 +252,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_dlv_core2 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -289,7 +289,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_dlv_clear = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -323,7 +323,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_dlv_ult = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -335,7 +335,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_dlv_ult40 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
@@ -346,9 +346,158 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# ---------- 黄金：测试决议（核心Ⅰ/Ⅱ互斥） ----------
+	BH3_ER_dbg_gold_normal = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_grant_201 = yes
+			BH3_ER_grant_202 = yes
+			BH3_ER_grant_203 = yes
+			BH3_ER_grant_204 = yes
+			BH3_ER_grant_205 = yes
+			BH3_ER_grant_206 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_core1 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_211 }
+				clr_country_flag = BH3_ER_own_gold_211
+				subtract_from_variable = { BH3_ER_gold_atk = 0.2 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_212 }
+				clr_country_flag = BH3_ER_own_gold_212
+				subtract_from_variable = { BH3_ER_gold_pp = 0.1 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_213 }
+				clr_country_flag = BH3_ER_own_gold_213
+				subtract_from_variable = { BH3_ER_gold_atk = 0.15 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_214 }
+				clr_country_flag = BH3_ER_own_gold_214
+				subtract_from_variable = { BH3_ER_gold_maj = 0.2 }
+				subtract_from_variable = { BH3_ER_gold_min = 0.2 }
+			}
+			BH3_ER_grant_207 = yes
+			BH3_ER_grant_208 = yes
+			BH3_ER_grant_209 = yes
+			BH3_ER_grant_210 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_core2 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_207 }
+				clr_country_flag = BH3_ER_own_gold_207
+				subtract_from_variable = { BH3_ER_gold_maj = 0.15 }
+				subtract_from_variable = { BH3_ER_gold_min = 0.15 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_208 }
+				clr_country_flag = BH3_ER_own_gold_208
+				subtract_from_variable = { BH3_ER_gold_maj = 0.15 }
+				subtract_from_variable = { BH3_ER_gold_min = 0.15 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_209 }
+				clr_country_flag = BH3_ER_own_gold_209
+				subtract_from_variable = { BH3_ER_gold_pp = 0.05 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_gold_210 }
+				clr_country_flag = BH3_ER_own_gold_210
+				subtract_from_variable = { BH3_ER_gold_maj = 0.2 }
+				subtract_from_variable = { BH3_ER_gold_min = 0.2 }
+			}
+			BH3_ER_grant_211 = yes
+			BH3_ER_grant_212 = yes
+			BH3_ER_grant_213 = yes
+			BH3_ER_grant_214 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_clear = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_gold_201
+			clr_country_flag = BH3_ER_own_gold_202
+			clr_country_flag = BH3_ER_own_gold_203
+			clr_country_flag = BH3_ER_own_gold_204
+			clr_country_flag = BH3_ER_own_gold_205
+			clr_country_flag = BH3_ER_own_gold_206
+			clr_country_flag = BH3_ER_own_gold_207
+			clr_country_flag = BH3_ER_own_gold_208
+			clr_country_flag = BH3_ER_own_gold_209
+			clr_country_flag = BH3_ER_own_gold_210
+			clr_country_flag = BH3_ER_own_gold_211
+			clr_country_flag = BH3_ER_own_gold_212
+			clr_country_flag = BH3_ER_own_gold_213
+			clr_country_flag = BH3_ER_own_gold_214
+			set_variable = { BH3_ER_gold_atk = 0 }
+			set_variable = { BH3_ER_gold_def = 0 }
+			set_variable = { BH3_ER_gold_pp = 0 }
+			set_variable = { BH3_ER_gold_maj = 0 }
+			set_variable = { BH3_ER_gold_min = 0 }
+			set_variable = { BH3_ER_gold_window = 0 }
+			BH3_ER_gold_window_end = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_aria = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_gold_aria = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_echo = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_gold_echo = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	# ---------- 其余 11 系：占位（未实装） ----------
 	BH3_ER_dbg_placeholder_2 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 2 } }
@@ -357,7 +506,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_3 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
@@ -365,17 +514,8 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	BH3_ER_dbg_placeholder_4 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
-		available = { always = no }
-		ai_will_do = { factor = 0 }
-	}
-
 	BH3_ER_dbg_placeholder_5 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
@@ -384,7 +524,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_6 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 6 } }
@@ -393,7 +533,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_7 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 7 } }
@@ -402,7 +542,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_8 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 8 } }
@@ -411,7 +551,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_9 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 9 } }
@@ -420,7 +560,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_10 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 10 } }
@@ -429,7 +569,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_11 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
@@ -438,7 +578,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_dbg_placeholder_12 = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
@@ -448,7 +588,7 @@ BH3_ER_debug_group = {
 
 	# ---------- 通用调试 ----------
 	BH3_ER_debug_unlock = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { NOT = { has_country_flag = BH3_ElysianRealm_unlocked } }
@@ -461,7 +601,7 @@ BH3_ER_debug_group = {
 	}
 
 	BH3_ER_debug_keys = {
-		icon = GFX_BH3_ER_FlawlessKey_icon
+		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { is_debug = yes }

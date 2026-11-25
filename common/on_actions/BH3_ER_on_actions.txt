@@ -12,6 +12,17 @@ on_actions = {
 			}
 			every_country = {
 				limit = {
+					has_variable = BH3_ER_gold_window
+					check_variable = { BH3_ER_gold_window > 0 }
+				}
+				subtract_from_variable = { BH3_ER_gold_window = 1 }
+				if = {
+					limit = { check_variable = { BH3_ER_gold_window = 0 } }
+					BH3_ER_gold_window_end = yes
+				}
+			}
+			every_country = {
+				limit = {
 					has_country_flag = BH3_ElysianRealm_unlocked
 					NOT = { has_variable = BH3_ER_floor }
 				}
