@@ -6,6 +6,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/flawless_key.png"
 	}
 
+	# 往事乐土主界面背景（深色 + 无瑕之钥）
+	spriteType = {
+		name = "GFX_BH3_ER_bg"
+		texturefile = "gfx/interface/elysianrealm/er_bg.png"
+	}
+
 	# 大图版本（GUI 展示用）
 	spriteType = {
 		name = "GFX_BH3_ER_FlawlessKey_big"

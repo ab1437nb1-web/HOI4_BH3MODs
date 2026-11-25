@@ -1091,7 +1091,7 @@ guiTypes = {
 		}	
 	}
 
-	############ 往事乐土界面（2026-11-24：既有实现已整体移除，仅保留入口窗口，内容待重写）############
+	############ 往事乐土界面（2026-11-25：层数 GUI 第一版）############
 	# __BH3_ER_MENU_BEGIN__
 	containerWindowType = {
 		name = "BH3_ER_menu"
@@ -1101,14 +1101,13 @@ guiTypes = {
 
 		background = {
 			name = "Background"
-			quadTextureSprite ="GFX_BH3_tech_menu_bg"
+			quadTextureSprite = "GFX_BH3_ER_bg"
 		}
 
-		# 返回主菜单（与科技菜单 X 钮行为一致）
 		buttonType = {
 			name = "BH3_ER_menu_x_btn"
 			position = { x = -60 y = 0 }
-			quadTextureSprite ="GFX_BH3_return_btn"
+			quadTextureSprite = "GFX_BH3_return_btn"
 			shortcut = "ESCAPE"
 			Orientation = "UPPER_RIGHT"
 			clicksound = BH3_Click_X
@@ -1117,34 +1116,89 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "BH3_ER_menu_title"
-			position = { x = 485 y = 89 }
+			position = { x = 110 y = 78 }
 			font = "hoi_30header"
 			text = "BH3_ER_menu_title"
-			maxWidth = 340
+			maxWidth = 620
 			maxHeight = 40
 			format = left
 			alwaystransparent = yes
 		}
 
-		# 当前层数（由 BH3_ER_floor 变量驱动，见 scripted_localisation）
 		instantTextBoxType = {
 			name = "BH3_ER_floor_text"
-			position = { x = 485 y = 140 }
+			position = { x = 110 y = 128 }
 			font = "hoi_16mbs"
 			text = "BH3_ER_floor_text"
-			maxWidth = 420
+			maxWidth = 620
 			maxHeight = 30
 			format = left
 			alwaystransparent = yes
 		}
 
-		# 无瑕之钥图标（装饰）
-		iconType = {
-			position = { x = 880 y = 120 }
-			name = "icon_BH3_ER_key"
-			spriteType = "GFX_BH3_ER_FlawlessKey_icon"
-			scale = 0.8
+		instantTextBoxType = {
+			name = "BH3_ER_cost_hint"
+			position = { x = 110 y = 162 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_cost_hint"
+			maxWidth = 660
+			maxHeight = 60
+			format = left
 			alwaystransparent = yes
+		}
+
+		buttonType = {
+			name = "BH3_ER_advance_btn"
+			position = { x = 110 y = 235 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_advance_btn_tt"
+			buttonText = "BH3_ER_advance_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_double_btn"
+			position = { x = 110 y = 295 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_double_btn_tt"
+			buttonText = "BH3_ER_double_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_shop45_btn"
+			position = { x = 110 y = 355 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_shop45_btn_tt"
+			buttonText = "BH3_ER_shop45_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_shop89_btn"
+			position = { x = 110 y = 415 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_shop89_btn_tt"
+			buttonText = "BH3_ER_shop89_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_shop1314_btn"
+			position = { x = 110 y = 475 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_shop1314_btn_tt"
+			buttonText = "BH3_ER_shop1314_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "BH3_ER_final_btn"
+			position = { x = 110 y = 535 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_final_btn_tt"
+			buttonText = "BH3_ER_final_btn_text"
+			buttonFont = "hoi_16mbs"
 		}
 	}
 	# __BH3_ER_MENU_END__

@@ -18,6 +18,7 @@ scripted_gui = {
 			}
 			# 作战学说入口已暂时移除（学说系统将按精通度学说重置）；其点击 effect 一并移除
 			BH3_main_menu_er_btn_click = {
+				set_country_flag = BH3_main_menu_open
 				set_country_flag = BH3_ER_menu_open
 				clr_country_flag = BH3_tech_menu_open
 				clr_country_flag = BH3_Valkyrie_Doctrine_on
@@ -30,7 +31,7 @@ scripted_gui = {
 		}
 	}
 
-	############ 往事乐土界面（2026-11-24：既有实现已整体移除，仅保留入口，内容待重写）############
+	############ 往事乐土界面（2026-11-25：层数 GUI 第一版）############
 	BH3_ER_menu = {
 		context_type = player_context
 		window_name = "BH3_ER_menu"
@@ -41,6 +42,108 @@ scripted_gui = {
 			BH3_ER_menu_x_btn_click = {
 				clr_country_flag = BH3_ER_menu_open
 				set_country_flag = BH3_main_menu_open
+			}
+			BH3_ER_advance_btn_click = {
+				if = {
+					limit = {
+						check_variable = { BH3_ER_floor < 17 }
+						has_equipment = { BH3_FlawlessKey_equipment > 99 }
+					}
+					add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+					add_to_variable = { BH3_ER_floor = 1 }
+					BH3_ER_enter_floor = yes
+				}
+			}
+			BH3_ER_double_btn_click = {
+				if = {
+					limit = { check_variable = { BH3_ER_double_pending = 1 } }
+					add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+					set_variable = { BH3_ER_double_pending = 0 }
+					add_to_variable = { BH3_ER_signets = 1 }
+				}
+			}
+			BH3_ER_shop45_btn_click = {
+				if = {
+					limit = {
+						check_variable = { BH3_ER_shop_45 = 0 }
+						OR = {
+							check_variable = { BH3_ER_floor = 4 }
+							check_variable = { BH3_ER_floor = 5 }
+						}
+					}
+					set_variable = { BH3_ER_shop_45 = 1 }
+					set_country_flag = BH3_ER_shop_open_45
+				}
+			}
+			BH3_ER_shop89_btn_click = {
+				if = {
+					limit = {
+						check_variable = { BH3_ER_shop_89 = 0 }
+						OR = {
+							check_variable = { BH3_ER_floor = 8 }
+							check_variable = { BH3_ER_floor = 9 }
+						}
+					}
+					set_variable = { BH3_ER_shop_89 = 1 }
+					set_country_flag = BH3_ER_shop_open_89
+				}
+			}
+			BH3_ER_shop1314_btn_click = {
+				if = {
+					limit = {
+						check_variable = { BH3_ER_shop_1314 = 0 }
+						OR = {
+							check_variable = { BH3_ER_floor = 13 }
+							check_variable = { BH3_ER_floor = 14 }
+						}
+					}
+					set_variable = { BH3_ER_shop_1314 = 1 }
+					set_country_flag = BH3_ER_shop_open_1314
+				}
+			}
+			BH3_ER_final_btn_click = {
+				if = {
+					limit = { check_variable = { BH3_ER_floor = 17 } }
+					set_country_flag = BH3_ER_final_challenge
+				}
+			}
+		}
+		triggers = {
+			BH3_ER_advance_btn_visible = {
+				check_variable = { BH3_ER_floor < 17 }
+			}
+			BH3_ER_advance_btn_enabled = {
+				has_equipment = { BH3_FlawlessKey_equipment > 99 }
+			}
+			BH3_ER_double_btn_visible = {
+				check_variable = { BH3_ER_double_pending = 1 }
+			}
+			BH3_ER_double_btn_enabled = {
+				has_equipment = { BH3_FlawlessKey_equipment > 99 }
+			}
+			BH3_ER_shop45_btn_visible = {
+				check_variable = { BH3_ER_shop_45 = 0 }
+				OR = {
+					check_variable = { BH3_ER_floor = 4 }
+					check_variable = { BH3_ER_floor = 5 }
+				}
+			}
+			BH3_ER_shop89_btn_visible = {
+				check_variable = { BH3_ER_shop_89 = 0 }
+				OR = {
+					check_variable = { BH3_ER_floor = 8 }
+					check_variable = { BH3_ER_floor = 9 }
+				}
+			}
+			BH3_ER_shop1314_btn_visible = {
+				check_variable = { BH3_ER_shop_1314 = 0 }
+				OR = {
+					check_variable = { BH3_ER_floor = 13 }
+					check_variable = { BH3_ER_floor = 14 }
+				}
+			}
+			BH3_ER_final_btn_visible = {
+				check_variable = { BH3_ER_floor = 17 }
 			}
 		}
 	}
