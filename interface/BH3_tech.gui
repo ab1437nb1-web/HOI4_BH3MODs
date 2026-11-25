@@ -1408,111 +1408,165 @@ guiTypes = {
 			buttonFont = "hoi_16mbs"
 		}
 
-		# 传送门风格刻印卡片 1
+		# 传送门 1（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_1_btn"
-			position = { x = 540 y = 160 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 520 y = 55 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_1_btn_tt"
-			buttonText = "BH3_ER_signet_1"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_1_icon"
-			position = { x = 560 y = 173 }
+			position = { x = 580 y = 148 }
 			spriteType = "GFX_BH3_ER_signet_1"
-			scale = 0.5
+			scale = 0.62
 			alwaystransparent = yes
 		}
 
-		# 传送门风格刻印卡片 2
+		instantTextBoxType = {
+			name = "BH3_ER_pick_1_label"
+			position = { x = 520 y = 347 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_1"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 传送门 2（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_2_btn"
-			position = { x = 960 y = 160 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 740 y = 55 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_2_btn_tt"
-			buttonText = "BH3_ER_signet_2"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_2_icon"
-			position = { x = 980 y = 173 }
+			position = { x = 800 y = 148 }
 			spriteType = "GFX_BH3_ER_signet_2"
-			scale = 0.5
+			scale = 0.62
 			alwaystransparent = yes
 		}
 
-		# 传送门风格刻印卡片 3
+		instantTextBoxType = {
+			name = "BH3_ER_pick_2_label"
+			position = { x = 740 y = 347 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_2"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 传送门 3（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_3_btn"
-			position = { x = 540 y = 275 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 960 y = 55 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_3_btn_tt"
-			buttonText = "BH3_ER_signet_3"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_3_icon"
-			position = { x = 560 y = 288 }
+			position = { x = 1020 y = 148 }
 			spriteType = "GFX_BH3_ER_signet_3"
-			scale = 0.5
+			scale = 0.62
 			alwaystransparent = yes
 		}
 
-		# 传送门风格刻印卡片 4
+		instantTextBoxType = {
+			name = "BH3_ER_pick_3_label"
+			position = { x = 960 y = 347 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_3"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 传送门 4（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_4_btn"
-			position = { x = 960 y = 275 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 520 y = 368 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_4_btn_tt"
-			buttonText = "BH3_ER_signet_4"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_4_icon"
-			position = { x = 980 y = 288 }
+			position = { x = 580 y = 461 }
 			spriteType = "GFX_BH3_ER_signet_4"
-			scale = 0.5
+			scale = 0.62
 			alwaystransparent = yes
 		}
 
-		# 传送门风格刻印卡片 5
+		instantTextBoxType = {
+			name = "BH3_ER_pick_4_label"
+			position = { x = 520 y = 660 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_4"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 传送门 5（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_5_btn"
-			position = { x = 540 y = 390 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 740 y = 368 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_5_btn_tt"
-			buttonText = "BH3_ER_signet_5"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_5_icon"
-			position = { x = 560 y = 403 }
+			position = { x = 800 y = 461 }
 			spriteType = "GFX_BH3_ER_signet_5"
-			scale = 0.5
+			scale = 0.62
 			alwaystransparent = yes
 		}
 
-		# 传送门风格刻印卡片 6
+		instantTextBoxType = {
+			name = "BH3_ER_pick_5_label"
+			position = { x = 740 y = 660 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_5"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
+			alwaystransparent = yes
+		}
+
+		# 传送门 6（竖向柱子 + 刻印图标）
 		buttonType = {
 			name = "BH3_ER_pick_6_btn"
-			position = { x = 960 y = 390 }
-			spriteType = "GFX_BH3_ER_portal_card"
+			position = { x = 960 y = 368 }
+			spriteType = "GFX_BH3_ER_portal_tile"
 			pdx_tooltip = "BH3_ER_pick_6_btn_tt"
-			buttonText = "BH3_ER_signet_6"
-			buttonFont = "hoi_16mbs"
 		}
 
 		iconType = {
 			name = "BH3_ER_pick_6_icon"
-			position = { x = 980 y = 403 }
+			position = { x = 1020 y = 461 }
 			spriteType = "GFX_BH3_ER_signet_6"
-			scale = 0.5
+			scale = 0.62
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "BH3_ER_pick_6_label"
+			position = { x = 960 y = 660 }
+			font = "hoi_16mbs"
+			text = "BH3_ER_signet_6"
+			maxWidth = 200
+			maxHeight = 26
+			format = center
 			alwaystransparent = yes
 		}
 	}

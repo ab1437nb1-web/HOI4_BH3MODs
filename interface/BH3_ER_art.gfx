@@ -8,8 +8,8 @@ spriteTypes = {
 
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
-		name = "GFX_BH3_ER_portal_card"
-		texturefile = "gfx/interface/elysianrealm/portal_card.png"
+		name = "GFX_BH3_ER_portal_tile"
+		texturefile = "gfx/interface/elysianrealm/portal_tile.png"
 	}
 
 	spriteType = {

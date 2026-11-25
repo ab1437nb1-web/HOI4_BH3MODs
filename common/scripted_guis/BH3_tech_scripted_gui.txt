@@ -278,6 +278,54 @@ scripted_gui = {
 					check_variable = { BH3_ER_c3 = 6 }
 				}
 			}
+			BH3_ER_pick_1_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 1 }
+					check_variable = { BH3_ER_c2 = 1 }
+					check_variable = { BH3_ER_c3 = 1 }
+				}
+			}
+			BH3_ER_pick_2_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 2 }
+					check_variable = { BH3_ER_c2 = 2 }
+					check_variable = { BH3_ER_c3 = 2 }
+				}
+			}
+			BH3_ER_pick_3_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 3 }
+					check_variable = { BH3_ER_c2 = 3 }
+					check_variable = { BH3_ER_c3 = 3 }
+				}
+			}
+			BH3_ER_pick_4_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 4 }
+					check_variable = { BH3_ER_c2 = 4 }
+					check_variable = { BH3_ER_c3 = 4 }
+				}
+			}
+			BH3_ER_pick_5_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 5 }
+					check_variable = { BH3_ER_c2 = 5 }
+					check_variable = { BH3_ER_c3 = 5 }
+				}
+			}
+			BH3_ER_pick_6_label_visible = {
+				check_variable = { BH3_ER_offer = 1 }
+				OR = {
+					check_variable = { BH3_ER_c1 = 6 }
+					check_variable = { BH3_ER_c2 = 6 }
+					check_variable = { BH3_ER_c3 = 6 }
+				}
+			}
 		}
 	}
 
