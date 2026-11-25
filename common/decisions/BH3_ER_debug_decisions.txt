@@ -21,22 +21,20 @@ BH3_ER_debug_group = {
 		visible = { is_debug = yes }
 		available = { always = yes }
 		complete_effect = {
-			set_country_flag = BH3_ER_own_dlv_101
-			set_country_flag = BH3_ER_own_dlv_102
-			set_country_flag = BH3_ER_own_dlv_103
-			set_country_flag = BH3_ER_own_dlv_104
-			set_country_flag = BH3_ER_own_dlv_105
-			set_country_flag = BH3_ER_own_dlv_106
-			set_country_flag = BH3_ER_own_dlv_107
-			set_country_flag = BH3_ER_own_dlv_108
-			set_country_flag = BH3_ER_own_dlv_109
-			set_country_flag = BH3_ER_own_dlv_110
-			set_country_flag = BH3_ER_own_dlv_111
-			set_country_flag = BH3_ER_own_dlv_112
-			set_country_flag = BH3_ER_own_dlv_113
-			set_country_flag = BH3_ER_own_dlv_114
-			set_variable = { BH3_ER_dlv_n = 6 }
-			set_variable = { BH3_ER_signets = 14 }
+			BH3_ER_grant_101 = yes
+			BH3_ER_grant_102 = yes
+			BH3_ER_grant_103 = yes
+			BH3_ER_grant_104 = yes
+			BH3_ER_grant_105 = yes
+			BH3_ER_grant_106 = yes
+			BH3_ER_grant_107 = yes
+			BH3_ER_grant_108 = yes
+			BH3_ER_grant_109 = yes
+			BH3_ER_grant_110 = yes
+			BH3_ER_grant_111 = yes
+			BH3_ER_grant_112 = yes
+			BH3_ER_grant_113 = yes
+			BH3_ER_grant_114 = yes
 		}
 		ai_will_do = { factor = 0 }
 	}
@@ -65,6 +63,10 @@ BH3_ER_debug_group = {
 			clr_country_flag = BH3_ER_own_dlv_114
 			set_variable = { BH3_ER_dlv_n = 0 }
 			set_variable = { BH3_ER_signets = 0 }
+			set_variable = { BH3_ER_dlv_atk = 0 }
+			set_variable = { BH3_ER_dlv_bth = 0 }
+			set_variable = { BH3_ER_dlv_def = 0 }
+			set_variable = { BH3_ER_dlv_org = 0 }
 			set_variable = { BH3_ER_dlv_window = 0 }
 			set_variable = { BH3_ER_dlv_ult_count = 0 }
 			clr_country_flag = BH3_ER_dlv_permanent
