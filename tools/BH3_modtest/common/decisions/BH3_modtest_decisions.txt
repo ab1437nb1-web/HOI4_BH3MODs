@@ -113,4 +113,47 @@ BH3_modtest_category = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# 对照 A：不带 location 的 damage_units（看是否完全无效）
+	BH3_test_ud_literal_global = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { has_war = yes }
+		complete_effect = {
+			damage_units = {
+				limit = { has_war_with = ROOT }
+				org_damage = 0.05
+				str_damage = 0.05
+				ratio = yes
+				army = yes
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 对照 B：遍历敌国州，state = THIS 的 damage_units
+	BH3_test_ud_literal_every = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { has_war = yes }
+		complete_effect = {
+			every_enemy_country = {
+				every_owned_state = {
+					damage_units = {
+						state = THIS
+						limit = { has_war_with = ROOT }
+						org_damage = 0.05
+						str_damage = 0.05
+						ratio = yes
+						army = yes
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

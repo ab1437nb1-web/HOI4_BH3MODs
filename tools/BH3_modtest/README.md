@@ -176,3 +176,18 @@
 2. 技能版本是否生效 → 检验 one_time_effect 是否支持 scripted effect 调用、以及它所在作用域是否为国家（不是国家的话需要换写法）。
 
 如果技能版本报错，日志里会看到 one_time_effect 下的 unexpected token 或 unknown effect，把 error.log 对应行发出来即可。
+
+
+## v5（2026-11-25 晚）：修复 unit_damage 解析错误并加对照实验
+
+日志确认两个解析级错误：
+1. is_enemy 不是合法触发器（1.19）→ 改为 has_war_with = ROOT
+2. else = { limit = ... } 非法 → 改为 else_if
+
+同时对照组：
+- BH3_test_ud_literal_global：damage_units 不带 location（A）
+- BH3_test_ud_literal_every：遍历敌国州、state = THIS（B）
+- BH3_test_ud_army：接口调用（mode 2，内部就是 B 的写法）
+- 技能 BH3_test_ability_ud：one_time_effect 里调接口
+
+请分别点 A/B/接口/技能，记录哪些能让敌方掉组织/兵力。

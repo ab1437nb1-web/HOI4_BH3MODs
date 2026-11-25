@@ -40,3 +40,7 @@
  BH3_test_ud_navy_desc:0 "Calls BH3_UD_apply with mode 3, ratio 5%."
  ABILITY_BH3_TEST_UD:0 "TEST: Unit damage (ability)"
  ABILITY_BH3_TEST_UD_DESC:0 "Commander ability that calls BH3_UD_apply from one_time_effect (mode 2, 5%)."
+ BH3_test_ud_literal_global:0 "TEST: damage_units literal (no location)"
+ BH3_test_ud_literal_global_desc:0 "Direct damage_units with limit has_war_with = ROOT, no state location. Control A."
+ BH3_test_ud_literal_every:0 "TEST: damage_units literal (per state)"
+ BH3_test_ud_literal_every_desc:0 "every_enemy_country -> every_owned_state -> damage_units state = THIS. Control B."

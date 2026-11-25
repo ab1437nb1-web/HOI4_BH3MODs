@@ -40,3 +40,7 @@
  BH3_test_ud_navy_desc:0 "以 mode 3、比例 5% 调用 BH3_UD_apply。"
  ABILITY_BH3_TEST_UD:0 "测试：额外伤害（指挥官技能）"
  ABILITY_BH3_TEST_UD_DESC:0 "在 one_time_effect 中调用 BH3_UD_apply（mode 2，5%）。"
+ BH3_test_ud_literal_global:0 "测试：damage_units 字面量（不带 location）"
+ BH3_test_ud_literal_global_desc:0 "直接 damage_units + limit has_war_with = ROOT，不指定州。对照 A。"
+ BH3_test_ud_literal_every:0 "测试：damage_units 字面量（逐州）"
+ BH3_test_ud_literal_every_desc:0 "every_enemy_country → every_owned_state → damage_units state = THIS。对照 B。"

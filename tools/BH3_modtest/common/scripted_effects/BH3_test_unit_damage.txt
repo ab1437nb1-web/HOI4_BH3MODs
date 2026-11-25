@@ -11,7 +11,7 @@
 #
 # 说明：
 #   - 统一使用 ratio = yes（按部队当前总组织/兵力比例扣除），天然无视防御；
-#   - limt 统一为 is_enemy = ROOT，所以调用前 ROOT 必须是“我方国家”；
+#   - limt 统一为 has_war_with = ROOT，所以调用前 ROOT 必须是“我方国家”；
 #   - 州模式（mode 1）需要在 state 作用域内调用（every_state / 州决议等）。
 # ============================================================================
 
@@ -43,7 +43,7 @@ BH3_UD_apply = {
 		limit = { check_variable = { BH3_UD_mode = 1 } }
 		damage_units = {
 			state = THIS
-			limit = { is_enemy = ROOT }
+			limit = { has_war_with = ROOT }
 			org_damage = BH3_UD_org
 			str_damage = BH3_UD_str
 			ratio = yes
@@ -52,28 +52,33 @@ BH3_UD_apply = {
 	}
 	else_if = {
 		limit = { check_variable = { BH3_UD_mode = 2 } }
-		damage_units = {
-			limit = { is_enemy = ROOT }
-			org_damage = BH3_UD_org
-			str_damage = BH3_UD_str
-			ratio = yes
-			army = yes
+		every_enemy_country = {
+			every_owned_state = {
+				damage_units = {
+					state = THIS
+					limit = { has_war_with = ROOT }
+					org_damage = BH3_UD_org
+					str_damage = BH3_UD_str
+					ratio = yes
+					army = yes
+				}
+			}
 		}
 	}
 	else_if = {
 		limit = { check_variable = { BH3_UD_mode = 3 } }
 		damage_units = {
-			limit = { is_enemy = ROOT }
+			limit = { has_war_with = ROOT }
 			org_damage = BH3_UD_org
 			str_damage = BH3_UD_str
 			ratio = yes
 			navy = yes
 		}
 	}
-	else = {
+	else_if = {
 		limit = { check_variable = { BH3_UD_mode = 4 } }
 		damage_units = {
-			limit = { is_enemy = ROOT }
+			limit = { has_war_with = ROOT }
 			org_damage = BH3_UD_org
 			str_damage = BH3_UD_str
 			ratio = yes
