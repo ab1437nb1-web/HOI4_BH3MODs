@@ -81,8 +81,6 @@
 
  BH3_ER_setsuna_freeze:0 "刹那：樱幕冻结"
  BH3_ER_setsuna_freeze_desc:0 "樱幕结界对敌方施加的负面：速度与攻击下降。"
- BH3_ER_setsuna_dodge_decision:0 "刹那：极限闪避"
- BH3_ER_setsuna_dodge_decision_desc:0 "触发极限闪避：开启 8 天窗口、累计核心计数，并进入冷却（10 / 9 / 5 天）。"
  BH3_ER_setsuna_sakura_decision:0 "刹那：樱幕结界"
  BH3_ER_setsuna_sakura_decision_desc:0 "拥有核心I并累计 3 次闪避后可用：冻结敌方 3 天（有猪鹿蝶则 5 天），并通过 BH3_UD 结算伤害。"
  BH3_ER_setsuna_gouge_decision:0 "刹那：业狩"

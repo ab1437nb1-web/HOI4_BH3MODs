@@ -87,6 +87,8 @@ BH3_ER_setsuna_sakura = {
 
 	if = {
 		limit = { has_country_flag = BH3_ER_own_sts_308 }
+		# 雨四光：重置必杀技决议冷却（指挥官技能无脚本重置接口）
+		remove_decision_on_cooldown = BH3_ER_ult_dlv
 		add_political_power = 30
 	}
 }
@@ -118,6 +120,19 @@ BH3_ER_setsuna_gouge = {
 
 # 每日：冷却与窗口计时
 BH3_ER_setsuna_daily = {
+	# 自动触发：战争中有部队时，每天 10% 概率极限闪避（冷却 0 才判定）
+	if = {
+		limit = {
+			has_war = yes
+			num_divisions > 0
+			check_variable = { BH3_ER_sts_cd = 0 }
+		}
+		random_list = {
+			10 = { BH3_ER_setsuna_dodge = yes }
+			90 = { set_temp_variable = { sts_roll = 0 } }
+		}
+	}
+
 	if = {
 		limit = { check_variable = { BH3_ER_sts_cd > 0 } }
 		subtract_from_variable = { BH3_ER_sts_cd = 1 }
@@ -125,6 +140,19 @@ BH3_ER_setsuna_daily = {
 	if = {
 		limit = { check_variable = { BH3_ER_sts_gouge_cd > 0 } }
 		subtract_from_variable = { BH3_ER_sts_gouge_cd = 1 }
+	}
+	# 核心II：瞬心 → 每 10 天强制触发一次极限闪避
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_sts_311
+			check_variable = { BH3_ER_sts_force_cd > 0 }
+		}
+		subtract_from_variable = { BH3_ER_sts_force_cd = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_sts_force_cd = 0 } }
+			set_variable = { BH3_ER_sts_force_cd = 10 }
+			BH3_ER_setsuna_dodge = yes
+		}
 	}
 	if = {
 		limit = { check_variable = { BH3_ER_sts_window > 0 } }

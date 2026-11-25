@@ -81,8 +81,6 @@
 
  BH3_ER_setsuna_freeze:0 "Setsuna: Frozen in Time"
  BH3_ER_setsuna_freeze_desc:0 "Enemy debuff from Sakura Curtain: speed and attack reduced."
- BH3_ER_setsuna_dodge_decision:0 "Setsuna: Limit Dodge"
- BH3_ER_setsuna_dodge_decision_desc:0 "Trigger a limit dodge: opens the 8-day window, builds core counters, sets cooldown (10 / 9 / 5 days)."
  BH3_ER_setsuna_sakura_decision:0 "Setsuna: Sakura Curtain"
  BH3_ER_setsuna_sakura_decision_desc:0 "Available after 3 dodges with Core I: freezes enemies for 3 days (5 with Boar-Deer-Butterfly) and deals damage via BH3_UD."
  BH3_ER_setsuna_gouge_decision:0 "Setsuna: Karma Gouge"

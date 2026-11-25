@@ -156,4 +156,43 @@ BH3_modtest_category = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# v7：决议冷却重置实验（供“雨四光”参考）
+	BH3_test_cd_source = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		days_re_enable = 30
+		complete_effect = {
+			set_country_flag = BH3_test_cd_fired
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_cd_reset = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			remove_decision_on_cooldown = BH3_test_cd_source
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# v7：尝试用同一效果重置“指挥官技能”冷却（预期可能无效）
+	BH3_test_ability_cd_reset = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			remove_decision_on_cooldown = BH3_test_ability_gated
+		}
+		ai_will_do = { factor = 0 }
+	}
 }
