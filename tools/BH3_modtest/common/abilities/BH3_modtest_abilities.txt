@@ -91,4 +91,23 @@ ability = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# v4：指挥官技能里调用统一额外伤害接口（one_time_effect）
+	BH3_test_ability_ud = {
+		name = ABILITY_BH3_TEST_UD
+		desc = ABILITY_BH3_TEST_UD_DESC
+		type = army_leader
+		cost = 0.05
+		duration = 24
+		cooldown = 168
+		allowed = { always = yes }
+		one_time_effect = {
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_mode = 2 }
+			set_variable = { BH3_UD_org = 0.05 }
+			set_variable = { BH3_UD_str = 0.05 }
+			BH3_UD_apply = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

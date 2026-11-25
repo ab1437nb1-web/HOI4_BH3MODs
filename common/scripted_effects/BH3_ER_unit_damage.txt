@@ -20,6 +20,18 @@ BH3_UD_begin = {
 	set_variable = { BH3_UD_str = 0 }
 	set_variable = { BH3_UD_mode = 2 }
 	set_variable = { BH3_UD_calls = 0 }
+	if = {
+		limit = { NOT = { has_variable = BH3_UD_total_org } }
+		set_variable = { BH3_UD_total_org = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = BH3_UD_total_str } }
+		set_variable = { BH3_UD_total_str = 0 }
+	}
+	if = {
+		limit = { NOT = { has_variable = BH3_UD_calls_total } }
+		set_variable = { BH3_UD_calls_total = 0 }
+	}
 }
 
 # 核心：按输入变量执行一次伤害

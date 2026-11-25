@@ -79,4 +79,38 @@ BH3_modtest_category = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# v4：统一额外伤害接口测试（mode 2，敌国全体陆军 -5% 组织/兵力）
+	BH3_test_ud_army = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { has_war = yes }
+		complete_effect = {
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_mode = 2 }
+			set_variable = { BH3_UD_org = 0.05 }
+			set_variable = { BH3_UD_str = 0.05 }
+			BH3_UD_apply = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# v4：统一额外伤害接口测试（mode 3，敌国海军 -5%）
+	BH3_test_ud_navy = {
+		icon = GFX_decision_oil
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { has_war = yes }
+		complete_effect = {
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_mode = 3 }
+			set_variable = { BH3_UD_org = 0.05 }
+			set_variable = { BH3_UD_str = 0.05 }
+			BH3_UD_apply = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

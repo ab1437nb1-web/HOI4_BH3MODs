@@ -162,3 +162,17 @@
 - allowed = { OWNER = { has_idea = ... } } 能否动态控制技能的出现；
 - duration 是否以小时为单位（24 = 1 天）；
 - cooldown 是否以小时为单位（168 = 7 天），以及冷却期间按钮不可点。
+
+
+## v4（2026-11-25）：统一额外伤害接口 unit_damage 验证
+
+新增内容：
+- common/scripted_effects/BH3_test_unit_damage.txt：与主 mod 相同的 BH3_UD 接口（BH3_UD_begin / BH3_UD_apply + 三个封装）
+- 决议：BH3_test_ud_army（mode 2，敌国陆军 -5%）、BH3_test_ud_navy（mode 3，海军 -5%）
+- 指挥官技能：BH3_test_ability_ud（one_time_effect 里调用接口，mode 2，5%）
+
+验证点：
+1. 决议版本是否真的扣敌方组织/兵力 → 检验 damage_units 是否接受变量参数、limit = { is_enemy = ROOT } 是否成立；
+2. 技能版本是否生效 → 检验 one_time_effect 是否支持 scripted effect 调用、以及它所在作用域是否为国家（不是国家的话需要换写法）。
+
+如果技能版本报错，日志里会看到 one_time_effect 下的 unexpected token 或 unknown effect，把 error.log 对应行发出来即可。
