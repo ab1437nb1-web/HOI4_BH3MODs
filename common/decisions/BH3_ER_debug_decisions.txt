@@ -439,6 +439,32 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	BH3_ER_dbg_gold_pp_add = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			add_political_power = 150
+			BH3_ER_gold_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_gold_pp_sub = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = yes }
+		complete_effect = {
+			add_political_power = -150
+			BH3_ER_gold_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_gold_clear = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
@@ -460,40 +486,22 @@ BH3_ER_debug_group = {
 			clr_country_flag = BH3_ER_own_gold_212
 			clr_country_flag = BH3_ER_own_gold_213
 			clr_country_flag = BH3_ER_own_gold_214
+			set_variable = { BH3_ER_gold_bucket = 0 }
+			set_variable = { BH3_ER_gold_prev = 0 }
+			set_variable = { BH3_ER_gold_gain = 0 }
+			set_variable = { BH3_ER_gold_spend = 0 }
 			set_variable = { BH3_ER_gold_atk = 0 }
 			set_variable = { BH3_ER_gold_def = 0 }
 			set_variable = { BH3_ER_gold_pp = 0 }
 			set_variable = { BH3_ER_gold_maj = 0 }
 			set_variable = { BH3_ER_gold_min = 0 }
-			set_variable = { BH3_ER_gold_window = 0 }
-			BH3_ER_gold_window_end = yes
+			set_variable = { BH3_ER_gold_aria_timer = 0 }
+			set_variable = { BH3_ER_gold_aria_on = 0 }
 		}
 		ai_will_do = { factor = 0 }
 	}
 
-	BH3_ER_dbg_gold_aria = {
-		icon = GFX_BH3_ER_icon_small
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
-		available = { always = yes }
-		complete_effect = {
-			BH3_ER_gold_aria = yes
-		}
-		ai_will_do = { factor = 0 }
-	}
 
-	BH3_ER_dbg_gold_echo = {
-		icon = GFX_BH3_ER_icon_small
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
-		available = { always = yes }
-		complete_effect = {
-			BH3_ER_gold_echo = yes
-		}
-		ai_will_do = { factor = 0 }
-	}
 
 	# ---------- 其余 11 系：占位（未实装） ----------
 	BH3_ER_dbg_placeholder_2 = {

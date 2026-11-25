@@ -50,10 +50,6 @@
  BH3_ER_signet_113_desc:0 "Resolve of the Deliverer"
  BH3_ER_signet_114:0 "Triumph of the Deliverer"
  BH3_ER_signet_114_desc:0 "Triumph of the Deliverer"
- BH3_ER_gold_aria:0 "Aria of Gold (50 PP)"
- BH3_ER_gold_aria_desc:0 "Costs 50 political power (energy). Grants a 7-day window: attack +30%, attack vs major/minor +20%. Cooldown 30 days."
- BH3_ER_gold_echo:0 "Echo of Gold (100 PP)"
- BH3_ER_gold_echo_desc:0 "Costs 100 political power. Grants a 14-day window: attack +50%, attack vs major/minor +30%. Cooldown 60 days."
  BH3_ER_signet_201:0 "Recitative of Paradise"
  BH3_ER_signet_201_desc:0 "Recitative of Paradise"
  BH3_ER_signet_202:0 "Recitative of the Stream"
@@ -82,3 +78,4 @@
  BH3_ER_signet_213_desc:0 "Echo of the Keening Wind"
  BH3_ER_signet_214:0 "Echo of the Silent Night"
  BH3_ER_signet_214_desc:0 "Echo of the Silent Night"
+

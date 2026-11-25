@@ -1,58 +1,148 @@
-# 往事乐土·黄金：能量（政治点）体系
-# 变量：BH3_ER_gold_atk / _def / _pp / _maj / _min（常驻累加）
-# 窗口：BH3_ER_gold_window（天数）+ BH3_ER_gold_w_*（窗口期间临时加值，到期扣回）
+# 往事乐土·黄金：能量（政治点）体系（2026-11-25 第二版）
+# 普通：按当前政治点给动态修正（每 25 点一档，日结近似）
+# 核心I：累计回复 100 政治点触发一次 3 天限时加成
+# 核心II：按累计消耗政治点换算终末余音增伤
 
-# 核心I：咏叹（消耗 50 政治点，7 天窗口）
-BH3_ER_gold_aria = {
+BH3_ER_gold_daily = {
+	set_variable = { BH3_ER_gold_bucket = 0 }
+	if = { limit = { political_power > 24 } set_variable = { BH3_ER_gold_bucket = 1 } }
+	if = { limit = { political_power > 49 } set_variable = { BH3_ER_gold_bucket = 2 } }
+	if = { limit = { political_power > 74 } set_variable = { BH3_ER_gold_bucket = 3 } }
+	if = { limit = { political_power > 99 } set_variable = { BH3_ER_gold_bucket = 4 } }
+	if = { limit = { political_power > 124 } set_variable = { BH3_ER_gold_bucket = 5 } }
+	if = { limit = { political_power > 149 } set_variable = { BH3_ER_gold_bucket = 6 } }
+	if = { limit = { political_power > 174 } set_variable = { BH3_ER_gold_bucket = 7 } }
+	if = { limit = { political_power > 199 } set_variable = { BH3_ER_gold_bucket = 8 } }
+	if = { limit = { political_power > 224 } set_variable = { BH3_ER_gold_bucket = 9 } }
+	if = { limit = { political_power > 249 } set_variable = { BH3_ER_gold_bucket = 10 } }
+	if = { limit = { political_power > 274 } set_variable = { BH3_ER_gold_bucket = 11 } }
+	if = { limit = { political_power > 299 } set_variable = { BH3_ER_gold_bucket = 12 } }
+	if = { limit = { political_power > 324 } set_variable = { BH3_ER_gold_bucket = 13 } }
+	if = { limit = { political_power > 349 } set_variable = { BH3_ER_gold_bucket = 14 } }
+	if = { limit = { political_power > 374 } set_variable = { BH3_ER_gold_bucket = 15 } }
+	if = { limit = { political_power > 399 } set_variable = { BH3_ER_gold_bucket = 16 } }
+	if = { limit = { political_power > 424 } set_variable = { BH3_ER_gold_bucket = 17 } }
+	if = { limit = { political_power > 449 } set_variable = { BH3_ER_gold_bucket = 18 } }
+	if = { limit = { political_power > 474 } set_variable = { BH3_ER_gold_bucket = 19 } }
+	if = { limit = { political_power > 499 } set_variable = { BH3_ER_gold_bucket = 20 } }
+	if = { limit = { political_power > 524 } set_variable = { BH3_ER_gold_bucket = 21 } }
+	if = { limit = { political_power > 549 } set_variable = { BH3_ER_gold_bucket = 22 } }
+	if = { limit = { political_power > 574 } set_variable = { BH3_ER_gold_bucket = 23 } }
+	if = { limit = { political_power > 599 } set_variable = { BH3_ER_gold_bucket = 24 } }
+	if = { limit = { political_power > 624 } set_variable = { BH3_ER_gold_bucket = 25 } }
+	if = { limit = { political_power > 649 } set_variable = { BH3_ER_gold_bucket = 26 } }
+	if = { limit = { political_power > 674 } set_variable = { BH3_ER_gold_bucket = 27 } }
+	if = { limit = { political_power > 699 } set_variable = { BH3_ER_gold_bucket = 28 } }
+	if = { limit = { political_power > 724 } set_variable = { BH3_ER_gold_bucket = 29 } }
+	if = { limit = { political_power > 749 } set_variable = { BH3_ER_gold_bucket = 30 } }
+
+	# 累计回复 / 累计消耗（用档位差近似）
 	if = {
-		limit = { check_variable = { BH3_ER_gold_w_on = 0 } }
-		add_to_variable = { BH3_ER_gold_atk = 0.30 }
-		add_to_variable = { BH3_ER_gold_maj = 0.20 }
-		add_to_variable = { BH3_ER_gold_min = 0.20 }
-		set_variable = { BH3_ER_gold_w_atk = 0.30 }
-		set_variable = { BH3_ER_gold_w_maj = 0.20 }
-		set_variable = { BH3_ER_gold_w_min = 0.20 }
-		set_variable = { BH3_ER_gold_w_on = 1 }
+		limit = { check_variable = { BH3_ER_gold_bucket > BH3_ER_gold_prev } }
+		set_temp_variable = { gd = BH3_ER_gold_bucket }
+		subtract_from_variable = { gd = BH3_ER_gold_prev }
+		multiply_variable = { gd = 25 }
+		add_to_variable = { BH3_ER_gold_gain = gd }
 	}
-	set_variable = { BH3_ER_gold_window = 7 }
+	else_if = {
+		limit = { check_variable = { BH3_ER_gold_bucket < BH3_ER_gold_prev } }
+		set_temp_variable = { gd = BH3_ER_gold_prev }
+		subtract_from_variable = { gd = BH3_ER_gold_bucket }
+		multiply_variable = { gd = 25 }
+		add_to_variable = { BH3_ER_gold_spend = gd }
+	}
+	set_variable = { BH3_ER_gold_prev = BH3_ER_gold_bucket }
+
+	# 咏叹限时加成倒计时
+	if = {
+		limit = { check_variable = { BH3_ER_gold_aria_timer > 0 } }
+		subtract_from_variable = { BH3_ER_gold_aria_timer = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_gold_aria_timer = 0 } }
+			set_variable = { BH3_ER_gold_aria_on = 0 }
+		}
+	}
+
+	# 累计回复达到 100 → 雷鸣 + 沉醉（限时 3 天）
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_gold_207
+			check_variable = { BH3_ER_gold_gain > 99 }
+		}
+		subtract_from_variable = { BH3_ER_gold_gain = 100 }
+		set_variable = { BH3_ER_gold_aria_timer = 3 }
+		set_variable = { BH3_ER_gold_aria_on = 1 }
+	}
+
+	BH3_ER_gold_recalc = yes
 }
 
-# 核心II：余音（消耗 100 政治点，14 天窗口）
-BH3_ER_gold_echo = {
+# 重算输出变量（DM 直接读这些变量）
+BH3_ER_gold_recalc = {
+	set_variable = { BH3_ER_gold_pp_approx = BH3_ER_gold_bucket }
+	multiply_variable = { BH3_ER_gold_pp_approx = 25 }
+
+	# ---- 全伤害 ----
+	set_variable = { BH3_ER_gold_atk = 0 }
 	if = {
-		limit = { check_variable = { BH3_ER_gold_w_on = 0 } }
-		add_to_variable = { BH3_ER_gold_atk = 0.50 }
-		add_to_variable = { BH3_ER_gold_maj = 0.30 }
-		add_to_variable = { BH3_ER_gold_min = 0.30 }
-		set_variable = { BH3_ER_gold_w_atk = 0.50 }
-		set_variable = { BH3_ER_gold_w_maj = 0.30 }
-		set_variable = { BH3_ER_gold_w_min = 0.30 }
-		set_variable = { BH3_ER_gold_w_on = 1 }
+		limit = { has_country_flag = BH3_ER_own_gold_201 }
+		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
+		multiply_variable = { gt = 0.003 }
+		clamp_variable = { var = gt min = 0 max = 1.5 }
+		add_to_variable = { BH3_ER_gold_atk = gt }
 	}
-	set_variable = { BH3_ER_gold_window = 14 }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_gold_202 }
+		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
+		multiply_variable = { gt = 0.0025 }
+		clamp_variable = { var = gt min = 0 max = 1.25 }
+		add_to_variable = { BH3_ER_gold_atk = gt }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_gold_213 }
+		add_to_variable = { BH3_ER_gold_atk = 0.15 }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_gold_211 }
+		set_temp_variable = { gt = BH3_ER_gold_spend }
+		multiply_variable = { gt = 0.002 }
+		clamp_variable = { var = gt min = 0 max = 1.6 }
+		add_to_variable = { BH3_ER_gold_atk = gt }
+	}
+
+	# ---- 防御（203） ----
+	set_variable = { BH3_ER_gold_def = 0 }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_gold_203 }
+		set_temp_variable = { gt = BH3_ER_gold_pp_approx }
+		multiply_variable = { gt = 0.0025 }
+		clamp_variable = { var = gt min = 0 max = 0.8 }
+		add_to_variable = { BH3_ER_gold_def = gt }
+	}
+
+	# ---- 政治点获取 ----
+	set_variable = { BH3_ER_gold_pp = 0 }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_204 } add_to_variable = { BH3_ER_gold_pp = 0.02 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_205 } add_to_variable = { BH3_ER_gold_pp = 0.05 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_206 } add_to_variable = { BH3_ER_gold_pp = 0.03 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_209 } add_to_variable = { BH3_ER_gold_pp = 0.05 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_212 } add_to_variable = { BH3_ER_gold_pp = 0.10 } }
+
+	# ---- 对主要/次要国家攻击 ----
+	set_variable = { BH3_ER_gold_maj = 0 }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_208 } add_to_variable = { BH3_ER_gold_maj = 0.15 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_210 } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
+	if = { limit = { has_country_flag = BH3_ER_own_gold_214 } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
+	if = { limit = { check_variable = { BH3_ER_gold_aria_on = 1 } } add_to_variable = { BH3_ER_gold_maj = 0.20 } }
+	set_variable = { BH3_ER_gold_min = BH3_ER_gold_maj }
 }
 
-# 窗口到期：把临时加值扣回
-BH3_ER_gold_window_end = {
-	if = {
-		limit = { check_variable = { BH3_ER_gold_w_on = 1 } }
-		subtract_from_variable = { BH3_ER_gold_atk = BH3_ER_gold_w_atk }
-		subtract_from_variable = { BH3_ER_gold_maj = BH3_ER_gold_w_maj }
-		subtract_from_variable = { BH3_ER_gold_min = BH3_ER_gold_w_min }
-		set_variable = { BH3_ER_gold_w_on = 0 }
-		set_variable = { BH3_ER_gold_w_atk = 0 }
-		set_variable = { BH3_ER_gold_w_maj = 0 }
-		set_variable = { BH3_ER_gold_w_min = 0 }
-	}
-}
-
-# ---------- 授予 ----------
+# ---------- 授予（只设标记；数值由 daily 重算） ----------
 BH3_ER_grant_201 = {
 		if = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_201 } }
 			set_country_flag = BH3_ER_own_gold_201
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_atk = 0.3 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -65,7 +155,6 @@ BH3_ER_grant_202 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_202 } }
 			set_country_flag = BH3_ER_own_gold_202
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_atk = 0.25 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -78,7 +167,6 @@ BH3_ER_grant_203 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_203 } }
 			set_country_flag = BH3_ER_own_gold_203
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_def = 0.25 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -91,7 +179,6 @@ BH3_ER_grant_204 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_204 } }
 			set_country_flag = BH3_ER_own_gold_204
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_pp = 0.02 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -104,7 +191,6 @@ BH3_ER_grant_205 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_205 } }
 			set_country_flag = BH3_ER_own_gold_205
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_pp = 0.05 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -118,7 +204,6 @@ BH3_ER_grant_206 = {
 			set_country_flag = BH3_ER_own_gold_206
 			add_to_variable = { BH3_ER_signets = 1 }
 			add_political_power = 50
-			add_to_variable = { BH3_ER_gold_pp = 0.03 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -131,8 +216,6 @@ BH3_ER_grant_207 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_207 } }
 			set_country_flag = BH3_ER_own_gold_207
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_maj = 0.15 }
-			add_to_variable = { BH3_ER_gold_min = 0.15 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -145,8 +228,6 @@ BH3_ER_grant_208 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_208 } }
 			set_country_flag = BH3_ER_own_gold_208
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_maj = 0.15 }
-			add_to_variable = { BH3_ER_gold_min = 0.15 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -159,7 +240,6 @@ BH3_ER_grant_209 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_209 } }
 			set_country_flag = BH3_ER_own_gold_209
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_pp = 0.05 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -172,8 +252,6 @@ BH3_ER_grant_210 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_210 } }
 			set_country_flag = BH3_ER_own_gold_210
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_maj = 0.2 }
-			add_to_variable = { BH3_ER_gold_min = 0.2 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -186,7 +264,6 @@ BH3_ER_grant_211 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_211 } }
 			set_country_flag = BH3_ER_own_gold_211
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_atk = 0.2 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -199,7 +276,6 @@ BH3_ER_grant_212 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_212 } }
 			set_country_flag = BH3_ER_own_gold_212
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_pp = 0.1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -212,7 +288,6 @@ BH3_ER_grant_213 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_213 } }
 			set_country_flag = BH3_ER_own_gold_213
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_atk = 0.15 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -225,8 +300,6 @@ BH3_ER_grant_214 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_gold_214 } }
 			set_country_flag = BH3_ER_own_gold_214
 			add_to_variable = { BH3_ER_signets = 1 }
-			add_to_variable = { BH3_ER_gold_maj = 0.2 }
-			add_to_variable = { BH3_ER_gold_min = 0.2 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }

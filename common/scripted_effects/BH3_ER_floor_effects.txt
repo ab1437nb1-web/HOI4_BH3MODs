@@ -19,20 +19,22 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_dlv_org = 0 }
 	set_variable = { BH3_ER_dlv_maj = 0 }
 	set_variable = { BH3_ER_dlv_min = 0 }
+	set_variable = { BH3_ER_dlv_window = 0 }
+	set_variable = { BH3_ER_dlv_ult_count = 0 }
+	set_variable = { BH3_ER_dbg_open = 0 }
+	clr_country_flag = BH3_ER_dlv_permanent
+	set_variable = { BH3_ER_gold_bucket = 0 }
+	set_variable = { BH3_ER_gold_prev = 0 }
+	set_variable = { BH3_ER_gold_gain = 0 }
+	set_variable = { BH3_ER_gold_spend = 0 }
+	set_variable = { BH3_ER_gold_pp_approx = 0 }
 	set_variable = { BH3_ER_gold_atk = 0 }
 	set_variable = { BH3_ER_gold_def = 0 }
 	set_variable = { BH3_ER_gold_pp = 0 }
 	set_variable = { BH3_ER_gold_maj = 0 }
 	set_variable = { BH3_ER_gold_min = 0 }
-	set_variable = { BH3_ER_gold_window = 0 }
-	set_variable = { BH3_ER_gold_w_on = 0 }
-	set_variable = { BH3_ER_gold_w_atk = 0 }
-	set_variable = { BH3_ER_gold_w_maj = 0 }
-	set_variable = { BH3_ER_gold_w_min = 0 }
-	set_variable = { BH3_ER_dlv_window = 0 }
-	set_variable = { BH3_ER_dlv_ult_count = 0 }
-	set_variable = { BH3_ER_dbg_open = 0 }
-	clr_country_flag = BH3_ER_dlv_permanent
+	set_variable = { BH3_ER_gold_aria_timer = 0 }
+	set_variable = { BH3_ER_gold_aria_on = 0 }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
 	add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
 
