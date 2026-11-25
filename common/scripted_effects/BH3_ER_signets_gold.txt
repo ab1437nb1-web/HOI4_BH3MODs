@@ -74,6 +74,17 @@ BH3_ER_gold_daily = {
 		set_variable = { BH3_ER_gold_aria_on = 1 }
 	}
 
+	# 美酒的宣叙（205）：固定量每日政治点加成（0.5/天，用累加器凑整数 PP，避免小数被吞）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_gold_205 }
+		add_to_variable = { BH3_ER_gold_pp_frac = 0.5 }
+		if = {
+			limit = { check_variable = { BH3_ER_gold_pp_frac > 0.999 } }
+			subtract_from_variable = { BH3_ER_gold_pp_frac = 1 }
+			add_political_power = 1
+		}
+	}
+
 	BH3_ER_gold_recalc = yes
 }
 
@@ -123,7 +134,6 @@ BH3_ER_gold_recalc = {
 	# ---- 政治点获取 ----
 	set_variable = { BH3_ER_gold_pp = 0 }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_204 } add_to_variable = { BH3_ER_gold_pp = 0.02 } }
-	if = { limit = { has_country_flag = BH3_ER_own_gold_205 } add_to_variable = { BH3_ER_gold_pp = 0.05 } }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_206 } add_to_variable = { BH3_ER_gold_pp = 0.03 } }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_209 } add_to_variable = { BH3_ER_gold_pp = 0.05 } }
 	if = { limit = { has_country_flag = BH3_ER_own_gold_212 } add_to_variable = { BH3_ER_gold_pp = 0.10 } }
