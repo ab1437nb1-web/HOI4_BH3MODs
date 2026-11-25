@@ -1,24 +1,207 @@
 BH3_ER_debug_group = {
 
-	BH3_ER_debug_unlock = {
+	# ---------- 总控：展开/收起 12 系测试 ----------
+	BH3_ER_dbg_series_1 = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { NOT = { has_country_flag = BH3_ElysianRealm_unlocked } }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 1 } }
+		}
 		available = { always = yes }
 		complete_effect = {
-			set_country_flag = BH3_ElysianRealm_unlocked
-			BH3_ER_init_run = yes
+			set_variable = { BH3_ER_dbg_open = 1 }
 		}
 		ai_will_do = { factor = 0 }
 	}
 
-	# 测试：直接获得全部救世刻印
-	BH3_ER_dbg_grant_dlv = {
+	BH3_ER_dbg_series_2 = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { is_debug = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 2 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 2 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_3 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 3 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 3 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_4 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 4 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 4 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_5 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 5 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 5 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_6 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 6 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 6 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_7 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 7 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 7 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_8 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 8 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 8 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_9 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 9 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 9 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_10 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 10 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 10 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_11 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 11 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 11 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_series_12 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 12 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 12 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_close = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			is_debug = yes
+			NOT = { check_variable = { BH3_ER_dbg_open = 0 } }
+		}
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_dbg_open = 0 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 救世：测试决议（核心Ⅰ/Ⅱ及其增幅互斥） ----------
+	BH3_ER_dbg_dlv_normal = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
 		available = { always = yes }
 		complete_effect = {
 			BH3_ER_grant_101 = yes
@@ -27,10 +210,76 @@ BH3_ER_debug_group = {
 			BH3_ER_grant_104 = yes
 			BH3_ER_grant_105 = yes
 			BH3_ER_grant_106 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_dlv_core1 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
+		available = { always = yes }
+		complete_effect = {
+			# 核心Ⅱ组互斥：先清掉
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_111 }
+				clr_country_flag = BH3_ER_own_dlv_111
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_112 }
+				clr_country_flag = BH3_ER_own_dlv_112
+				subtract_from_variable = { BH3_ER_dlv_atk = 0.21 }
+				subtract_from_variable = { BH3_ER_dlv_bth = 0.18 }
+				subtract_from_variable = { BH3_ER_dlv_def = 0.18 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_113 }
+				clr_country_flag = BH3_ER_own_dlv_113
+				subtract_from_variable = { BH3_ER_dlv_atk = 0.5 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_114 }
+				clr_country_flag = BH3_ER_own_dlv_114
+				subtract_from_variable = { BH3_ER_dlv_bth = 0.5 }
+			}
 			BH3_ER_grant_107 = yes
 			BH3_ER_grant_108 = yes
 			BH3_ER_grant_109 = yes
 			BH3_ER_grant_110 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_dlv_core2 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
+		available = { always = yes }
+		complete_effect = {
+			# 核心Ⅰ组互斥：先清掉
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_107 }
+				clr_country_flag = BH3_ER_own_dlv_107
+				subtract_from_variable = { BH3_ER_dlv_atk = 0.17 }
+				subtract_from_variable = { BH3_ER_dlv_bth = 0.15 }
+				subtract_from_variable = { BH3_ER_dlv_def = 0.15 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_108 }
+				clr_country_flag = BH3_ER_own_dlv_108
+				subtract_from_variable = { BH3_ER_dlv_atk = 0.2 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_109 }
+				clr_country_flag = BH3_ER_own_dlv_109
+				subtract_from_variable = { BH3_ER_dlv_atk = 0.14 }
+			}
+			if = {
+				limit = { has_country_flag = BH3_ER_own_dlv_110 }
+				clr_country_flag = BH3_ER_own_dlv_110
+			}
 			BH3_ER_grant_111 = yes
 			BH3_ER_grant_112 = yes
 			BH3_ER_grant_113 = yes
@@ -39,12 +288,11 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# 测试：清空全部救世刻印与窗口状态
-	BH3_ER_dbg_clear_dlv = {
+	BH3_ER_dbg_dlv_clear = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { is_debug = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
 		available = { always = yes }
 		complete_effect = {
 			clr_country_flag = BH3_ER_own_dlv_101
@@ -74,12 +322,11 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# 测试：立即触发一次必杀技窗口
-	BH3_ER_dbg_ult = {
+	BH3_ER_dbg_dlv_ult = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { is_debug = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
 		available = { always = yes }
 		complete_effect = {
 			BH3_ER_dlv_ult = yes
@@ -87,12 +334,11 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# 测试：把必杀技累计次数设为 40（解锁核心II决议）
-	BH3_ER_dbg_ult40 = {
+	BH3_ER_dbg_dlv_ult40 = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { is_debug = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 1 } }
 		available = { always = yes }
 		complete_effect = {
 			set_variable = { BH3_ER_dlv_ult_count = 40 }
@@ -100,15 +346,116 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# 测试：查看窗口剩余天数
-	BH3_ER_dbg_window_info = {
+	# ---------- 其余 11 系：占位（未实装） ----------
+	BH3_ER_dbg_placeholder_2 = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { is_debug = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 2 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_3 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_4 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 4 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_5 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_6 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 6 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_7 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 7 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_8 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 8 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_9 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 9 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_10 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 10 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_11 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_placeholder_12 = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 通用调试 ----------
+	BH3_ER_debug_unlock = {
+		icon = GFX_BH3_ER_FlawlessKey_icon
+		cost = 0
+		allowed = { always = yes }
+		visible = { NOT = { has_country_flag = BH3_ElysianRealm_unlocked } }
 		available = { always = yes }
 		complete_effect = {
-			BH3_ER_dlv_ult = yes
+			set_country_flag = BH3_ElysianRealm_unlocked
+			BH3_ER_init_run = yes
 		}
 		ai_will_do = { factor = 0 }
 	}
@@ -117,7 +464,7 @@ BH3_ER_debug_group = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
 		allowed = { always = yes }
-		visible = { always = yes }
+		visible = { is_debug = yes }
 		available = { always = yes }
 		complete_effect = {
 			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = 500 }

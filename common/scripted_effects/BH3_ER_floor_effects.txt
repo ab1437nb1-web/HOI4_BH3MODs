@@ -19,6 +19,7 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_dlv_org = 0 }
 	set_variable = { BH3_ER_dlv_window = 0 }
 	set_variable = { BH3_ER_dlv_ult_count = 0 }
+	set_variable = { BH3_ER_dbg_open = 0 }
 	clr_country_flag = BH3_ER_dlv_permanent
 	add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
 
