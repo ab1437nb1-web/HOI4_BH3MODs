@@ -191,3 +191,10 @@
 - 技能 BH3_test_ability_ud：one_time_effect 里调接口
 
 请分别点 A/B/接口/技能，记录哪些能让敌方掉组织/兵力。
+
+
+## 测试结论（v6）
+
+- 不带 location 的 damage_units 完全无效
+- 逐州写法（every_enemy_country → every_owned_state → state = THIS）生效
+- 接口因此统一改为逐州；mode 3/4 同样逐州（海军按港口/沿海州结算）

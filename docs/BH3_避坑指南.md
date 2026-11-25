@@ -106,3 +106,15 @@
 
 1. **不要在 %TEMP% 里建 enum.py / re.py / glob.py / types.py 这类文件**：python 脚本所在目录是 sys.path[0]，会遮蔽标准库，报 “partially initialized module 'glob' has no attribute 'glob'”。脚本名统一加前缀（zz_ 之类）或用独立目录。
 2. 引擎日志里的 “not in script_enum_*” 属于**文档性枚举提示**，只要不是 “Value does not belong to designated Script EnumType”，一般不影响实际效果，不必逐个改。
+
+
+---
+
+## 11. damage_units 实测约束（2026-11-25）
+
+- 必须给 location：damage_units 只在 state / province / region 指定时生效；在国家作用域里不写 location 完全无效（对照实验 A 无效、B 逐州生效）
+- 标准写法：every_enemy_country → every_owned_state → damage_units { state = THIS limit = { has_war_with = ROOT } ... }
+- is_enemy 不是合法触发器，用 has_war_with = ROOT
+- else 块里不能带 limit，多分支要用 else_if
+- 变量参数（org_damage = 变量）可用
+- 统一 ratio = yes，按当前组织/兵力比例扣，天然无视防御

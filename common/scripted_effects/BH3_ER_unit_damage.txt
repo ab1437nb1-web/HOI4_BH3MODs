@@ -67,23 +67,33 @@ BH3_UD_apply = {
 	}
 	else_if = {
 		limit = { check_variable = { BH3_UD_mode = 3 } }
-		damage_units = {
-			limit = { has_war_with = ROOT }
-			org_damage = BH3_UD_org
-			str_damage = BH3_UD_str
-			ratio = yes
-			navy = yes
+		every_enemy_country = {
+			every_owned_state = {
+				damage_units = {
+					state = THIS
+					limit = { has_war_with = ROOT }
+					org_damage = BH3_UD_org
+					str_damage = BH3_UD_str
+					ratio = yes
+					navy = yes
+				}
+			}
 		}
 	}
 	else_if = {
 		limit = { check_variable = { BH3_UD_mode = 4 } }
-		damage_units = {
-			limit = { has_war_with = ROOT }
-			org_damage = BH3_UD_org
-			str_damage = BH3_UD_str
-			ratio = yes
-			army = yes
-			navy = yes
+		every_enemy_country = {
+			every_owned_state = {
+				damage_units = {
+					state = THIS
+					limit = { has_war_with = ROOT }
+					org_damage = BH3_UD_org
+					str_damage = BH3_UD_str
+					ratio = yes
+					army = yes
+					navy = yes
+				}
+			}
 		}
 	}
 

@@ -349,13 +349,17 @@ BH3_UD_apply = yes
 
 也可用封装：BH3_UD_hit_enemy_army / BH3_UD_hit_enemy_navy / BH3_UD_hit_current_state。
 
-### 7.3 约定
+### 7.3 约定（2026-11-25 实测确认）
 
-- 统一 ratio = yes：按部队当前总组织/兵力比例扣除，天然无视防御，不需要再叠穿透；
-- limit 统一为 has_war_with = ROOT（1.19 没有 is_enemy 触发器），因此调用前 ROOT 必须是我方国家（决议、事件、on_action 都满足）；
-- 州模式必须在 state 作用域内调用（every_state / 州决议）；
-- 接口自带 clamp（0~1），调用方传错值不会打出负数/超量；
-- 伤害是“即时结算”，不进入战斗流程，所以可以打出边界外的效果，数值要小（一般 0.01~0.05）。
+- damage_units 必须有 location（州）：不带 state / province / region 时完全不生效（对照实验 A 无效、B 有效）
+- 标准写法：every_enemy_country → every_owned_state → damage_units { state = THIS ... }
+- is_enemy 不是 1.19 的合法触发器，统一用 has_war_with = ROOT
+- else 块里不能带 limit，必须用 else_if
+- 统一 ratio = yes：按部队当前总组织/兵力比例扣除，天然无视防御
+- 变量参数（org_damage = BH3_UD_org）可用，接口实测生效
+- 海军只能在港口/沿海州结算，mode 3/4 同样是逐州写法
+- 接口自带 clamp（0~1）
+- 伤害是“即时结算”，不进入战斗流程，数值要小（一般 0.01~0.05）
 
 ### 7.4 调试
 
