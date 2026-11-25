@@ -118,3 +118,76 @@
 - else 块里不能带 limit，多分支要用 else_if
 - 变量参数（org_damage = 变量）可用
 - 统一 ratio = yes，按当前组织/兵力比例扣，天然无视防御
+
+---
+
+## 12. 数值系统与动态修正（2026-11-26 黄金事件复盘）
+
+这次“高政治点攻防异常”非常典型，按排查顺序记录。
+
+### 12.1 症状与真因
+
+| 症状 | 真因 |
+|---|---|
+| 政治点不足 100 时攻击已 +625%、防御 +500% | 旧存档里同一个动态修正被重复 add 了多次；每个实例都读取同一组变量，于是翻倍叠加 |
+| 政治点 +100%（设计只有 +20%） | 同一原因：0.20 乘 5 个实例 |
+| 日志报 Unknown trigger-type: political_power | 正确触发器是 has_political_power（is_enemy 也不存在，用 has_war_with） |
+| 清空黄金刻印后立刻回落到 +25%/+200% | 说明那 600%/300% 就是黄金 DM 的叠加值，不是别家系统 |
+
+识别特征：数值恰好等于你设的安全上限（当初 atk 3.0 / def 3.0 的 clamp），几乎可以断定是“多实例叠加”或“变量被反复累加”。
+
+### 12.2 add_dynamic_modifier 必须防重复
+
+- HOI4 的 add_dynamic_modifier 不会因为同名而自动去重，重复调用就会叠加。
+- 用一个国家旗标保护：
+
+    if = { limit = { NOT = { has_country_flag = BH3_ER_dm_added } }
+        add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
+        set_country_flag = BH3_ER_dm_added
+    }
+
+- 旧存档里已经叠加的 DM，靠脚本只能 remove_dynamic_modifier 再重加；所以给调试组留一个「重建动态修正」按钮。
+
+### 12.3 少用中间变量管线
+
+一开始的实现是：政治点 → 30 个阈值 if → bucket → 乘 25 → 临时变量 gt → multiply/clamp → 输出变量。
+层级越多，任何一步写错（触发器名、变量复制、clamp）都会让结果失真且难以定位。
+
+改成直接按阈值累加后：
+
+    set_variable = { BH3_ER_gold_atk = 0 }
+    if = { limit = { has_political_power > 99 } add_to_variable = { BH3_ER_gold_atk = 0.15 } }
+    if = { limit = { has_political_power > 199 } add_to_variable = { BH3_ER_gold_atk = 0.30 } }
+
+可读、可核对、无中间态。
+
+### 12.4 触发器名要查文档，不要凭记忆
+
+- 政治点：has_political_power（不是 political_power）
+- 交战：has_war_with（不是 is_enemy）
+- 每日政治点：political_power_daily
+- 变量里没有“读取国家数值”的通用接口，所以阈值触发是唯一可靠手段
+
+### 12.5 没有办法打印变量时，用 log 标记
+
+HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 game.log 写标记，再用 if 分档：
+
+    if = { limit = { check_variable = { BH3_ER_gold_atk > 1.0 } } log = "BH3GOLD atk_100_200pct" }
+    else = { log = "BH3GOLD atk_lt100pct" }
+
+配合调试决议（点一次输出一段），就能在不改游戏 UI 的情况下读到变量所在区间。
+这次就是靠 BH3GOLD 日志确认“重建后数值完全正常”。
+
+### 12.6 录像排障
+
+- 有 mp4 但没 ffmpeg 时，可以 pip install imageio imageio-ffmpeg，然后用 imageio.get_reader(path) 按帧号取图，比 WPF MediaPlayer 稳定。
+- 逐帧对比“点按钮前/后”的数值，能直接算出某个系统贡献了多少。
+
+### 12.7 检查清单（以后写数值系统先过一遍）
+
+1. 所有 add_dynamic_modifier 是否都有旗标保护？
+2. 触发器名是否在 triggers_documentation.md 里查过？
+3. 有没有 else 块里塞 limit？（必须 else_if）
+4. 输出变量是否每次 recalc 都先归零再累加？
+5. 数值是否被安全 clamp 兜底？上限值是否和“疑似叠加值”重合（重合就先查叠加，别急着调 clamp）？
+6. 是否留了 log 诊断决议和“重建 DM”调试按钮？
