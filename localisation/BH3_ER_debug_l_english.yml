@@ -88,3 +88,5 @@
  BH3_ER_dbg_gold_bucket_500_desc:0 "Sets the bracket directly and recalcs."
  BH3_ER_dbg_gold_log:0 "[DEBUG] Gold: write values to game.log"
  BH3_ER_dbg_gold_log_desc:0 "Writes BH3GOLD markers into game.log for diagnostics."
+ BH3_ER_dbg_rebuild_dm:0 "[DEBUG] Rebuild dynamic modifiers"
+ BH3_ER_dbg_rebuild_dm_desc:0 "Removes and re-adds the signet dynamic modifiers, fixing stacked duplicates in old saves."

@@ -807,6 +807,26 @@ BH3_ER_debug_group = {
 	}
 
 	# ---------- 通用调试 ----------
+
+	# 黄金/通用：重建动态修正（清掉重复叠加的 DM 再挂一次）
+	BH3_ER_dbg_rebuild_dm = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			remove_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
+			remove_dynamic_modifier = { modifier = BH3_ER_dm_gold }
+			remove_dynamic_modifier = { modifier = BH3_ER_dm_sts }
+			clr_country_flag = BH3_ER_dm_added
+			add_dynamic_modifier = { modifier = BH3_ER_dm_dlv }
+			add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
+			add_dynamic_modifier = { modifier = BH3_ER_dm_sts }
+			set_country_flag = BH3_ER_dm_added
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_debug_unlock = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
