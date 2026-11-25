@@ -102,13 +102,15 @@ ER 主界面（BH3_ER_menu）现在是完整面板：
 
 ## 3. 刻印获取机制（2026-11-25 第一版）
 
-### 3.1 文件夹约定
+### 3.1 文件位置（2026-11-25 实测修正）
 
-刻印的实际生效位置：common/scripted_effects/BH3_ER_signets/
+**HOI4 1.19 不加载 common/scripted_effects 的子目录**——已实测：放在子目录里的效果全部报 Unknown effect-type。
 
-- 每个系一个文件（将来 12 个文件），文件名形如 01_deliverance.txt、02_setsuna.txt …
-- 目前只有 00_test_pool.txt：6 个测试刻印（1~6），用于验证抽取、授予、与层数/商店联动
-- 若游戏日志报 unknown effect BH3_ER_roll_offer，说明该版本不加载 scripted_effects 的子目录，把文件上移一层即可（内容不用改）
+因此刻印文件直接放在 common/scripted_effects/ 根目录，用统一前缀区分：
+
+- 命名约定：BH3_ER_signets_<系名或编号>.txt（将来 12 系 = 12 个文件）
+- 当前：BH3_ER_signets_00_test_pool.txt（6 个测试刻印 + 抽取/放弃/授予效果）
+- 子目录方案作废，不要再新建 BH3_ER_signets/ 这类目录放脚本
 
 ### 3.2 变量
 

@@ -102,20 +102,20 @@ BH3_decisions_group = {
 						}
 						icon = "GFX_SchicksalValkyrieMeele_Research_medium"
 						model = "BH3_ValkyrieAir_0_entity"
-						# 起步空中装备：每型 100 架（2 个 50 架联队）
-						add_equipment_to_stockpile = {
-							producer = ROOT
-							type = BH3_ValkyrieAir_ala_0
-							amount = 100
-							variant_name = "远程空战型女武神装甲"
-						}
-						add_equipment_to_stockpile = {
-							producer = ROOT
-							type = BH3_ValkyrieAir_ala_0
-							amount = 100
-							variant_name = "近战空战型女武神装甲"
-						}
 					}
+				# 起步空中装备：每型 100 架（2 个 50 架联队）
+				add_equipment_to_stockpile = {
+					producer = ROOT
+					type = BH3_ValkyrieAir_ala_0
+					amount = 100
+					variant_name = "远程空战型女武神装甲"
+				}
+				add_equipment_to_stockpile = {
+					producer = ROOT
+					type = BH3_ValkyrieAir_ala_0
+					amount = 100
+					variant_name = "近战空战型女武神装甲"
+				}
 
 
 			}

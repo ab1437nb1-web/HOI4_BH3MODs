@@ -3,7 +3,7 @@ BH3_ER_debug_group = {
 	BH3_ER_debug_unlock = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
-		allowed = { is_debug = yes }
+		allowed = { always = yes }
 		visible = { NOT = { has_country_flag = BH3_ElysianRealm_unlocked } }
 		available = { always = yes }
 		complete_effect = {
@@ -16,7 +16,7 @@ BH3_ER_debug_group = {
 	BH3_ER_debug_keys = {
 		icon = GFX_BH3_ER_FlawlessKey_icon
 		cost = 0
-		allowed = { is_debug = yes }
+		allowed = { always = yes }
 		visible = { always = yes }
 		available = { always = yes }
 		complete_effect = {

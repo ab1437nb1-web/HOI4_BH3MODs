@@ -87,3 +87,14 @@
 - 逻辑先用决议验证，通过后再搬进 GUI（GUI 调试成本高很多）。
 - 没有 ffmpeg 时可用 WPF MediaPlayer + RenderTargetBitmap 抽帧看录屏。
 - 不要用 add_ideas 去测“可能无效”的修饰符——工具本身会误导结论。
+
+
+---
+
+## 9. 实测补充（2026-11-25 运行日志）
+
+以下三条是这次跑游戏后从 error.log 确认的，属于硬约束：
+
+1. **common/scripted_effects 的子目录不加载**：放在 BH3_ER_signets/ 里的效果全部报 “Unknown effect-type”，按钮点了没反应。解法：文件放根目录，用前缀命名（BH3_ER_signets_*.txt）。
+2. **决议的 allowed 块不接受 has_country_flag / is_debug**：报 “Token ... is not supported within the allowed trigger”。解法：allowed 只写 always = yes，真正的条件全部放 visible；调试决议靠 visible 里的 is_debug 控制显示。
+3. **决议分类必须单独定义在 common/decisions/categories/**：把 category 定义写进 decisions 文件会报 “Unknown category”，且后续决议全部 “Unexpected token”。测试 mod 已按这个规则拆分。

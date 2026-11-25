@@ -1,10 +1,4 @@
 BH3_modtest_category = {
-	icon = generic_research
-	priority = 1000
-
-	allowed = { always = yes }
-	visible = { always = yes }
-
 	BH3_test_add_immune = {
 		icon = GFX_decision_oil
 		cost = 0

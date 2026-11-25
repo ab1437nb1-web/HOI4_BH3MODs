@@ -8,6 +8,6 @@ BH3_ElysianRealm_floor_group = {
 BH3_ER_debug_group = {
 	icon = GFX_BH3_ER_FlawlessKey_icon
 	priority = 99989
-	allowed = { is_debug = yes }
+	allowed = { always = yes }
 	visible = { is_debug = yes }
 }

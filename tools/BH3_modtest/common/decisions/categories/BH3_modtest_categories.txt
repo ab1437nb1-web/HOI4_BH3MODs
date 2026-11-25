@@ -1,0 +1,6 @@
+BH3_modtest_category = {
+	icon = generic_research
+	priority = 1000
+	allowed = { always = yes }
+	visible = { always = yes }
+}
