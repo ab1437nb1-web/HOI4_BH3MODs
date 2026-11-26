@@ -9,11 +9,11 @@ ability = {
 		type = army_leader
 		cost = 0.02
 		duration = 24
-		cooldown = 72
+		cooldown = 24
 		allowed = {
 			is_leading_army_group = no
 			is_border_war = no
-			OWNER = { check_variable = { BH3_ER_fs_guard_timer > 0 } }
+			OWNER = { check_variable = { BH3_ER_fs_charges > 0 } }
 		}
 		unit_modifiers = {
 			str_damage_multiplier = -1.0

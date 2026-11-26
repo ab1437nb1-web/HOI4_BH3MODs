@@ -815,6 +815,8 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_fs_charge = 0 }
 			set_variable = { BH3_ER_fs_mem = 0 }
 			set_variable = { BH3_ER_fs_guard_timer = 0 }
+			set_variable = { BH3_ER_fs_charges = 0 }
+			set_variable = { BH3_ER_fs_guard_tick = 0 }
 			clr_country_flag = BH3_ER_fs_wake_used
 			BH3_ER_fs_recalc = yes
 		}
@@ -839,7 +841,8 @@ BH3_ER_debug_group = {
 			else = { log = "BH3FS norm_0" }
 			if = { limit = { check_variable = { BH3_ER_fs_charge > 0 } } log = "BH3FS charge_gt0" }
 			if = { limit = { check_variable = { BH3_ER_fs_mem > 0 } } log = "BH3FS mem_gt0" }
-			if = { limit = { check_variable = { BH3_ER_fs_guard_timer > 0 } } log = "BH3FS guard_ready" }
+			if = { limit = { check_variable = { BH3_ER_fs_charges > 2 } } log = "BH3FS guard_charges_gt2" }
+			else_if = { limit = { check_variable = { BH3_ER_fs_charges > 0 } } log = "BH3FS guard_charges_1_2" }
 			if = { limit = { check_variable = { BH3_ER_fs_atk > 1.0 } } log = "BH3FS atk_gt100pct" }
 			else_if = { limit = { check_variable = { BH3_ER_fs_atk > 0.3 } } log = "BH3FS atk_30_100pct" }
 			else = { log = "BH3FS atk_lt30pct" }
@@ -868,7 +871,8 @@ BH3_ER_debug_group = {
 		visible = { check_variable = { BH3_ER_dbg_open = 6 } }
 		available = { always = yes }
 		complete_effect = {
-			set_variable = { BH3_ER_fs_guard_timer = 7 }
+			set_variable = { BH3_ER_fs_charges = 3 }
+			set_variable = { BH3_ER_fs_guard_tick = 0 }
 		}
 		ai_will_do = { factor = 0 }
 	}
