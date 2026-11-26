@@ -18,6 +18,7 @@ on_actions = {
 				BH3_ER_fs_daily = yes
 				if = { limit = { check_variable = { BH3_ER_surr_delta > 0 } } BH3_ER_az_on_loss = yes }
 				BH3_ER_az_daily = yes
+				BH3_ER_bd_daily = yes
 			}
 			every_country = {
 				limit = {

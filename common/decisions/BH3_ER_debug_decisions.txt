@@ -1047,16 +1047,126 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# ---------- 其余 11 系：占位（未实装） ----------
-	BH3_ER_dbg_placeholder_3 = {
+
+	# ---------- 天慧：测试决议 ----------
+	BH3_ER_dbg_bd_normal = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
-		available = { always = no }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_grant_601 = yes
+			BH3_ER_grant_602 = yes
+			BH3_ER_grant_603 = yes
+			BH3_ER_grant_604 = yes
+			BH3_ER_grant_605 = yes
+			BH3_ER_grant_606 = yes
+		}
 		ai_will_do = { factor = 0 }
 	}
 
+	BH3_ER_dbg_bd_core1 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_bd_611
+			clr_country_flag = BH3_ER_own_bd_612
+			clr_country_flag = BH3_ER_own_bd_613
+			clr_country_flag = BH3_ER_own_bd_614
+			BH3_ER_grant_607 = yes
+			BH3_ER_grant_608 = yes
+			BH3_ER_grant_609 = yes
+			BH3_ER_grant_610 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_bd_core2 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_bd_607
+			clr_country_flag = BH3_ER_own_bd_608
+			clr_country_flag = BH3_ER_own_bd_609
+			clr_country_flag = BH3_ER_own_bd_610
+			BH3_ER_grant_611 = yes
+			BH3_ER_grant_612 = yes
+			BH3_ER_grant_613 = yes
+			BH3_ER_grant_614 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_bd_clear = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_bd_601
+			clr_country_flag = BH3_ER_own_bd_602
+			clr_country_flag = BH3_ER_own_bd_603
+			clr_country_flag = BH3_ER_own_bd_604
+			clr_country_flag = BH3_ER_own_bd_605
+			clr_country_flag = BH3_ER_own_bd_606
+			clr_country_flag = BH3_ER_own_bd_607
+			clr_country_flag = BH3_ER_own_bd_608
+			clr_country_flag = BH3_ER_own_bd_609
+			clr_country_flag = BH3_ER_own_bd_610
+			clr_country_flag = BH3_ER_own_bd_611
+			clr_country_flag = BH3_ER_own_bd_612
+			clr_country_flag = BH3_ER_own_bd_613
+			clr_country_flag = BH3_ER_own_bd_614
+			set_variable = { BH3_ER_bd_combo = 0 }
+			set_variable = { BH3_ER_bd_eye_tier = 0 }
+			BH3_ER_bd_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_bd_combo = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_bd_combo = 150 }
+			BH3_ER_bd_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_bd_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_bd_recalc = yes
+			log = "BH3BD begin"
+			if = { limit = { check_variable = { BH3_ER_bd_combo > 149 } } log = "BH3BD combo_150" }
+			else_if = { limit = { check_variable = { BH3_ER_bd_combo > 99 } } log = "BH3BD combo_100_149" }
+			else_if = { limit = { check_variable = { BH3_ER_bd_combo > 59 } } log = "BH3BD combo_60_99" }
+			else = { log = "BH3BD combo_lt60" }
+			if = { limit = { check_variable = { BH3_ER_bd_eye_tier > 1 } } log = "BH3BD eye_tier_2" }
+			else_if = { limit = { check_variable = { BH3_ER_bd_eye_tier > 0 } } log = "BH3BD eye_tier_1" }
+			else = { log = "BH3BD eye_tier_0" }
+			log = "BH3BD end"
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 其余 11 系：占位（未实装） ----------
 	BH3_ER_dbg_placeholder_7 = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0

@@ -37,6 +37,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/signet_Kalpas.png"
 	}
 
+	spriteType = {
+		name = "GFX_BH3_ER_series_bd"
+		texturefile = "gfx/interface/elysianrealm/signet_Bodhi.png"
+	}
+
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
 		name = "GFX_BH3_ER_portal_tile"
