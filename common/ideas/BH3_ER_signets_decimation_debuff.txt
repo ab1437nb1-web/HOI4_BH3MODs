@@ -2,12 +2,13 @@ ideas = {
 	country = {
 
 		# 鏖灭：燃血代价（自身受到投降倾向惩罚，代表消耗生命 / 压血）
+		# 参考原版法国「混乱的政府」：surrender_limit = -0.5 表示投降界限降低（更容易投降）
 		BH3_ER_az_bloodloss = {
 			allowed = { always = yes }
 			picture = ENG_generic_1
 			modifier = {
-				surrender_limit = 0.02
-				war_support_factor = -0.02
+				surrender_limit = -0.05
+				stability_factor = -0.01
 			}
 		}
 	}

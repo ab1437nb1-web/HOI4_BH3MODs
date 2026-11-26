@@ -596,12 +596,12 @@ BH3_UD_apply = yes
 
 原作里“消耗自身血量”“生命无法超过 18%”在 HOI4 用**给自己上投降倾向 debuff** 实现：
 
-- 新增国家精神「鏖灭：燃血代价」BH3_ER_az_bloodloss：surrender_limit +0.02、war_support_factor -0.02
+- 新增国家精神「鏖灭：燃血代价」BH3_ER_az_bloodloss：**surrender_limit = -0.05**（投降界限降低 = 更易投降，方向与原版法国「混乱的政府」一致）、stability_factor -0.01
 - 510 燃血解放释放时：附加 30 天「燃血代价」
 - 511 压血：每天刷新 7 天「燃血代价」；同时把 BH3_ER_az_lost 强制抬到 ≥82（等价生命 ≤18%）
 
 **保护（因为投降倾向不线性，不能放任自压）**：
 1. 只有 surrender_progress < 25% 时才施加/刷新 debuff
 2. surrender_progress > 50% 时立刻 remove_ideas 移除 debuff（安全阀）
-3. debuff 数值很小（surrender_limit +0.02）且是限时精神，最多叠加一层
+3. debuff 数值很小（surrender_limit -0.05）且是限时精神，最多叠加一层
 4. 其余低生命判定不受影响，可按 lost 连续计算（501/502/503/509 都是线性换算）
