@@ -126,8 +126,7 @@ BH3_ER_dm_db = {
 BH3_ER_dm_st = {
 	enable = { always = yes }
 
-	army_attack_factor = BH3_ER_st_army
-	air_attack_factor = BH3_ER_st_air
-	naval_damage_factor = BH3_ER_st_navy
-	breakthrough_factor = BH3_ER_st_bth
+	# 繁星红：自身 buff（对特定国家的攻击）
+	army_attack_against_major_factor = BH3_ER_st_redatk
+	army_attack_against_minor_factor = BH3_ER_st_redatk
 }

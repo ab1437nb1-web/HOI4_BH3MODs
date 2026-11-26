@@ -1,44 +1,90 @@
 ideas = {
 	country = {
 
-		# 色相调和（三军协同窗口）
-		BH3_ER_st_harmony = {
+		# ---- 敌方颜料（红/黄/蓝）----
+		BH3_ER_st_enemy_red = {
 			allowed = { always = yes }
 			picture = ENG_generic_1
 			modifier = {
-				army_attack_factor = 0.10
-				air_attack_factor = 0.10
-				naval_damage_factor = 0.10
+				army_defence_factor = -0.10
 			}
 		}
 
-		# 红+黄：火焰（穿透/空攻）
-		BH3_ER_st_pen = {
+		BH3_ER_st_enemy_yellow = {
 			allowed = { always = yes }
 			picture = ENG_generic_2
 			modifier = {
-				breakthrough_factor = 0.20
-				air_attack_factor = 0.10
+				air_defence_factor = -0.10
+				air_agility_factor = -0.05
 			}
 		}
 
-		# 蓝+黄：叶子（海空）
-		BH3_ER_st_wave = {
+		BH3_ER_st_enemy_blue = {
 			allowed = { always = yes }
 			picture = ENG_generic_3
 			modifier = {
-				naval_damage_factor = 0.10
-				air_attack_factor = 0.10
+				naval_defense_factor = -0.10
+				navy_visibility = 0.10
 			}
 		}
 
-		# 红+黄 的敌方标记（橙）
-		BH3_ER_st_orange_mark = {
+		# ---- 混色 debuff（两色组合）----
+		BH3_ER_st_mark_rb = {
 			allowed = { always = yes }
 			picture = ENG_generic_1
 			modifier = {
+				army_defence_factor = -0.15
+				naval_defense_factor = -0.15
+			}
+		}
+
+		BH3_ER_st_mark_ry = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				army_defence_factor = -0.15
+				air_defence_factor = -0.15
+			}
+		}
+
+		BH3_ER_st_mark_by = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				naval_defense_factor = -0.15
+				air_defence_factor = -0.15
+			}
+		}
+
+		# 核心II 色相调和 / 核心I 颜色数
+		BH3_ER_st_mark_mix = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_defence_factor = -0.10
+				air_defence_factor = -0.10
+				naval_defense_factor = -0.10
+			}
+		}
+
+		# 三色齐备 / 1112~1114 的额外压制
+		BH3_ER_st_mark_total = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				army_defence_factor = -0.20
 				air_defence_factor = -0.20
 				naval_defense_factor = -0.20
+			}
+		}
+
+		# ---- 自身窗口（对特定国家的攻击）----
+		BH3_ER_st_window = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				army_attack_against_major_factor = 0.20
+				army_attack_against_minor_factor = 0.20
 			}
 		}
 	}

@@ -110,19 +110,13 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_st_red = 0 }
 	set_variable = { BH3_ER_st_yellow = 0 }
 	set_variable = { BH3_ER_st_blue = 0 }
-	set_variable = { BH3_ER_st_purple = 0 }
-	set_variable = { BH3_ER_st_green = 0 }
-	set_variable = { BH3_ER_st_orange = 0 }
 	set_variable = { BH3_ER_st_stack = 0 }
 	set_variable = { BH3_ER_st_dur = 8 }
 	set_variable = { BH3_ER_st_pp_cd = 0 }
 	set_variable = { BH3_ER_st_p1 = 0 }
 	set_variable = { BH3_ER_st_p2 = 0 }
 	set_variable = { BH3_ER_st_p3 = 0 }
-	set_variable = { BH3_ER_st_army = 0 }
-	set_variable = { BH3_ER_st_air = 0 }
-	set_variable = { BH3_ER_st_navy = 0 }
-	set_variable = { BH3_ER_st_bth = 0 }
+	set_variable = { BH3_ER_st_redatk = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }

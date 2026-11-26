@@ -1786,9 +1786,6 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_st_red = 0 }
 			set_variable = { BH3_ER_st_yellow = 0 }
 			set_variable = { BH3_ER_st_blue = 0 }
-			set_variable = { BH3_ER_st_purple = 0 }
-			set_variable = { BH3_ER_st_green = 0 }
-			set_variable = { BH3_ER_st_orange = 0 }
 			set_variable = { BH3_ER_st_stack = 0 }
 			BH3_ER_st_recalc = yes
 		}
@@ -1822,12 +1819,9 @@ BH3_ER_debug_group = {
 			if = { limit = { check_variable = { BH3_ER_st_red > 0 } } log = "BH3ST red_on" }
 			if = { limit = { check_variable = { BH3_ER_st_yellow > 0 } } log = "BH3ST yellow_on" }
 			if = { limit = { check_variable = { BH3_ER_st_blue > 0 } } log = "BH3ST blue_on" }
-			if = { limit = { check_variable = { BH3_ER_st_purple > 0 } } log = "BH3ST purple_on" }
-			if = { limit = { check_variable = { BH3_ER_st_green > 0 } } log = "BH3ST green_on" }
-			if = { limit = { check_variable = { BH3_ER_st_orange > 0 } } log = "BH3ST orange_on" }
-			if = { limit = { check_variable = { BH3_ER_st_army > 0.3 } } log = "BH3ST army_gt30pct" }
-			else_if = { limit = { check_variable = { BH3_ER_st_army > 0 } } log = "BH3ST army_1_30pct" }
-			else = { log = "BH3ST army_0" }
+			if = { limit = { check_variable = { BH3_ER_st_redatk > 0.3 } } log = "BH3ST redatk_gt30pct" }
+			else_if = { limit = { check_variable = { BH3_ER_st_redatk > 0 } } log = "BH3ST redatk_1_30pct" }
+			else = { log = "BH3ST redatk_0" }
 			log = "BH3ST end"
 		}
 		ai_will_do = { factor = 0 }
