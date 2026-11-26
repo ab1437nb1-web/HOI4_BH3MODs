@@ -1,20 +1,14 @@
-on_nuke_drop = {
-	effect = {
-		set_global_flag = BH3_test_nuke_drop_global
-		# 如果这次核打击的目标国带有测试旗标，额外记录
-		if = {
-			limit = {
-				FROM = {
-					owner = { has_country_flag = BH3_test_ability_flag_fired }
-				}
-			}
-			set_global_flag = BH3_test_nuke_marked_target
+on_actions = {
+
+	on_nuke_drop = {
+		effect = {
+			set_global_flag = BH3_test_nuke_drop_global
 		}
 	}
-}
 
-on_paradrop = {
-	effect = {
-		set_global_flag = BH3_test_paradrop_global
+	on_paradrop = {
+		effect = {
+			set_global_flag = BH3_test_paradrop_global
+		}
 	}
 }

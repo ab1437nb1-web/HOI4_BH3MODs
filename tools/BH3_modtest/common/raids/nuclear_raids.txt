@@ -147,17 +147,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }
@@ -364,17 +384,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }
@@ -549,17 +589,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }
@@ -778,17 +838,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }
@@ -1007,17 +1087,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }
@@ -1194,17 +1294,37 @@ types = {
 					#start_reference = 50
 					reference = 100
 				}
-			
-				BH3_test_invuln_block = {
+							BH3_test_t_actor = {
 					formula = {
 						base = 0
 						modifier = {
-							has_country_flag = BH3_test_ability_flag_fired
+							has_country_flag = BH3_test_t_actor
 							add = 1
 						}
 					}
-					weight = -1.0
-					can_actor_affect = no
+					weight = -5.0
+					can_actor_affect = yes
+				}
+				BH3_test_t_target = {
+					formula = {
+						base = 0
+						modifier = {
+							has_country_flag = BH3_test_t_target
+							add = 1
+						}
+					}
+					weight = -5.0
+					can_target_affect = yes
+				}
+				BH3_test_t_from = {
+					formula = {
+						base = 0
+						modifier = {
+							FROM = { has_country_flag = BH3_test_t_from }
+							add = 1
+						}
+					}
+					weight = -5.0
 					can_target_affect = yes
 				}
 }

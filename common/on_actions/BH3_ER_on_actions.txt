@@ -34,22 +34,22 @@ on_actions = {
 			}
 		}
 	}
-}
 
-# 核袭击拦截：目标国打开拦截窗口时，被炸方（FROM 的 owner）消耗 1 次无敌储存
-on_nuke_drop = {
-	effect = {
-		if = {
-			limit = {
-				FROM = {
-					owner = { has_country_flag = BH3_ER_fs_invuln_active }
+	# 核袭击拦截：目标国打开拦截窗口时，被炸方（FROM 的 owner）消耗 1 次无敌储存
+	on_nuke_drop = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						owner = { has_country_flag = BH3_ER_fs_invuln_active }
+					}
 				}
-			}
-			FROM = {
-				owner = {
-					if = {
-						limit = { check_variable = { BH3_ER_fs_charges > 0 } }
-						subtract_from_variable = { BH3_ER_fs_charges = 1 }
+				FROM = {
+					owner = {
+						if = {
+							limit = { check_variable = { BH3_ER_fs_charges > 0 } }
+							subtract_from_variable = { BH3_ER_fs_charges = 1 }
+						}
 					}
 				}
 			}

@@ -219,3 +219,20 @@
 - 测试完可用「【测试】重置钩子旗标」清干净
 
 > 注意：所有脚本 .txt（abilities/decisions/on_actions/raids/effects/ideas）必须是无 BOM 的 UTF-8；本地化 .yml 才需要 BOM。
+
+### 实验E（成功率修正作用域）：三个变体
+
+为了确认 raid 的 success 公式里 has_country_flag 到底读哪个国家，测试 mod 的 nuclear_raids.txt 现在给每种核打击加了 3 个修正：
+
+- scope A：can_actor_affect = yes + 自身旗标 BH3_test_t_actor（决策「作用域A」给自身打旗标）
+- scope B：can_target_affect = yes + 敌国旗标 BH3_test_t_target（决策「作用域B」给敌国打旗标）
+- scope C：can_target_affect = yes + FROM = { has_country_flag = BH3_test_t_from }（决策「作用域C」给敌国打旗标）
+
+每个都是 weight = -5.0，只要生效就必然失败。
+
+测试方法：一次只开一个旗标（用「清除作用域旗标」重置），然后对敌国发动核打击 2~3 次：
+
+- A 生效（失败）→ 公式读取发动国
+- B 生效 → 公式读取目标国（这是我们需要的，浮生拦截就能用目标国旗标）
+- C 生效 → 可以用 FROM 指向目标国
+- 三个都不生效 → success 公式可能不接受 has_country_flag 这类触发器，需要换数值变量方案
