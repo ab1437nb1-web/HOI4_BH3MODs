@@ -16,6 +16,8 @@ BH3_ER_ds_recalc = {
 	set_variable = { BH3_ER_ds_enc = 0 }
 	set_variable = { BH3_ER_ds_agi = 0 }
 	set_variable = { BH3_ER_ds_det = 0 }
+	set_variable = { BH3_ER_ds_cap = 0 }
+	set_variable = { BH3_ER_ds_leak = 0 }
 	set_variable = { BH3_ER_ds_stab = 0 }
 	set_variable = { BH3_ER_ds_ws = 0 }
 
@@ -62,6 +64,10 @@ BH3_ER_ds_recalc = {
 		multiply_variable = { ds_t = 0.02 }
 		add_to_variable = { BH3_ER_ds_ind = ds_t }
 		add_to_variable = { BH3_ER_ds_res = 0.05 }
+		# 苦修：反间谍三件套（发现几率 / 被捕几率 / 减少情报泄露）
+		add_to_variable = { BH3_ER_ds_det = 0.05 }
+		add_to_variable = { BH3_ER_ds_cap = 0.03 }
+		subtract_from_variable = { BH3_ER_ds_leak = 2 }
 		# 708：苦修额外产能但增加消费品负担
 		if = {
 			limit = { has_country_flag = BH3_ER_own_ds_708 }
@@ -89,6 +95,14 @@ BH3_ER_ds_recalc = {
 		set_temp_variable = { ds_t = BH3_ER_ds_stack }
 		multiply_variable = { ds_t = 0.01 }
 		add_to_variable = { BH3_ER_ds_det = ds_t }
+		# 敌方特工被捕率（每层 +1%）
+		set_temp_variable = { ds_t = BH3_ER_ds_stack }
+		multiply_variable = { ds_t = 0.01 }
+		add_to_variable = { BH3_ER_ds_cap = ds_t }
+		# 减少泄露给他国的民政情报（每层 -0.5）
+		set_temp_variable = { ds_t = BH3_ER_ds_stack }
+		multiply_variable = { ds_t = 0.5 }
+		subtract_from_variable = { BH3_ER_ds_leak = ds_t }
 	}
 
 	# 714 戒罚窗口
@@ -117,7 +131,9 @@ BH3_ER_ds_recalc = {
 	clamp_variable = { var = BH3_ER_ds_res min = 0 max = 1.0 }
 	clamp_variable = { var = BH3_ER_ds_enc min = 0 max = 1.0 }
 	clamp_variable = { var = BH3_ER_ds_agi min = 0 max = 0.5 }
-	clamp_variable = { var = BH3_ER_ds_det min = 0 max = 0.1 }
+	clamp_variable = { var = BH3_ER_ds_det min = 0 max = 0.15 }
+	clamp_variable = { var = BH3_ER_ds_cap min = 0 max = 0.1 }
+	clamp_variable = { var = BH3_ER_ds_leak min = -10 max = 0 }
 	clamp_variable = { var = BH3_ER_ds_stab min = -0.3 max = 0.5 }
 	clamp_variable = { var = BH3_ER_ds_ws min = -0.3 max = 0.5 }
 	clamp_variable = { var = BH3_ER_ds_cons min = -0.2 max = 0.3 }

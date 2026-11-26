@@ -83,6 +83,8 @@ BH3_ER_dm_ds = {
 	encryption_factor = BH3_ER_ds_enc
 	intelligence_agency_defense = BH3_ER_ds_agi
 	enemy_operative_detection_chance = BH3_ER_ds_det
+	enemy_operative_capture_chance_factor = BH3_ER_ds_cap
+	civilian_intel_to_others = BH3_ER_ds_leak
 	stability_factor = BH3_ER_ds_stab
 	war_support_factor = BH3_ER_ds_ws
 }

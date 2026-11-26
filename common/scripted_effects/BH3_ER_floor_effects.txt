@@ -73,6 +73,8 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_ds_enc = 0 }
 	set_variable = { BH3_ER_ds_agi = 0 }
 	set_variable = { BH3_ER_ds_det = 0 }
+	set_variable = { BH3_ER_ds_cap = 0 }
+	set_variable = { BH3_ER_ds_leak = 0 }
 	set_variable = { BH3_ER_ds_stab = 0 }
 	set_variable = { BH3_ER_ds_ws = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
