@@ -137,6 +137,14 @@ BH3_ER_fs_daily = {
 		BH3_ER_fs_hit = yes
 	}
 
+	# 拦截窗口（技能使用后 2 天）：期间敌国袭击成功率被压到 0
+	if = {
+		limit = { check_variable = { BH3_ER_fs_invuln_days > 0 } }
+		set_country_flag = BH3_ER_fs_invuln_active
+		subtract_from_variable = { BH3_ER_fs_invuln_days = 1 }
+	}
+	else = { clr_country_flag = BH3_ER_fs_invuln_active }
+
 	BH3_ER_fs_recalc = yes
 }
 

@@ -112,7 +112,7 @@
  BH3_ER_signet_314:0 "刹那一刀「万象无明」"
  BH3_ER_signet_314_desc:0 "每释放一次业狩，后续业狩伤害递增，最多 8 层"
  ABILITY_BH3_ER_FS_INVINCIBLE:0 "浮生：无敌"
- ABILITY_BH3_ER_FS_INVINCIBLE_DESC:0 "短时间陆战无敌（受到陆战伤害 -100%）。在抵消受击后可用。"
+ ABILITY_BH3_ER_FS_INVINCIBLE_DESC:0 "消耗 1 次无敌储存：陆战近无敌（受到陆战伤害 -100%），并开启 2 天的拦截窗口，使敌方对你的袭击强制失败。"
  BH3_ER_signet_401:0 "行路漫漫"
  BH3_ER_signet_401_desc:0 "每秒提高 1.0% 全伤害，最多 40 层，受到伤害时减少 10 层"
  BH3_ER_signet_402:0 "日月蹉跎"

@@ -531,6 +531,25 @@ BH3_UD_apply = yes
 - 413 不再按每次抵消延长无敌时间，改为直接提高存储上限（对应“浮生系时间不再延长”的调整）
 - 技能 allowed = charges > 0
 
+
+### 9.9 无敌拦截袭击（第一版，2026-11-26）
+
+实现思路（技能触发路线已验证可行：one_time_effect 可以执行国家效果）：
+
+1. **技能消耗**：浮生技能加 one_time_effect —— 消耗 1 次无敌储存（BH3_ER_fs_charges -1），设置 BH3_ER_fs_invuln_days = 2，并立刻置旗标 BH3_ER_fs_invuln_active
+2. **窗口维护**：每日检查 invuln_days，>0 时保持旗标、递减；归零清除旗标
+3. **袭击失败**：在 raid 定义的 success 公式里加入自定义成功率修正（can_target_affect = yes）——目标国带 BH3_ER_fs_invuln_active 时 success 概率 -100%
+4. **拦截扣费**：on_nuke_drop 里对“被炸方”（FROM 的 owner）扣 1 次无敌储存
+
+覆盖范围（第一版）：
+- 原版 6 种核打击（覆盖 common/raids/nuclear_raids.txt）
+- 本 mod 的 BH3 核打击（BH3_nuclear_raids.txt）
+
+限制与待验证：
+- 空袭 / 伞兵 / 海军陆战队 / 陆地渗透袭击尚未覆盖（需要整份覆盖对应文件，约 220KB）
+- “失败的空袭是否仍触发 on_nuke_drop”尚未实测：若不触发，则拦截本身不扣费，届时可改成“展开窗口时预付 1 次”
+- 调试：浮生调试组「模拟使用无敌技能」「关闭拦截窗口」，可不用真技能直接测拦截
+
 ---
 
 ## 10. 第五组刻印：鏖灭（Decimation，2026-11-26）

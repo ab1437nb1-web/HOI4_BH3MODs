@@ -19,6 +19,17 @@ ability = {
 			str_damage_multiplier = -1.0
 			org_damage_multiplier = -1.0
 		}
+		# 使用技能：消耗 1 次无敌储存，并开启 2 天的拦截窗口（挡袭击）
+		one_time_effect = {
+			OWNER = {
+				if = {
+					limit = { check_variable = { BH3_ER_fs_charges > 0 } }
+					subtract_from_variable = { BH3_ER_fs_charges = 1 }
+				}
+				set_variable = { BH3_ER_fs_invuln_days = 2 }
+				set_country_flag = BH3_ER_fs_invuln_active
+			}
+		}
 		ai_will_do = { factor = 0 }
 	}
 }

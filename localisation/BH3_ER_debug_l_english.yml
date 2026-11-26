@@ -153,3 +153,7 @@
  BH3_ER_dbg_st_clear:0 "Clear Stars signets and colours"
  BH3_ER_dbg_st_paint:0 "Paint red, blue and yellow now"
  BH3_ER_dbg_st_log:0 "Write Stars values to game.log"
+ BH3_ER_dbg_fs_invuln:0 "[DEBUG] Vicissitude: simulate using invincibility (1 charge)"
+ BH3_ER_dbg_fs_invuln_desc:0 "Spends 1 charge and opens the 2-day raid interception window."
+ BH3_ER_dbg_fs_invuln_off:0 "[DEBUG] Vicissitude: close interception window"
+ BH3_ER_dbg_fs_invuln_off_desc:0 "Closes the interception window immediately."
