@@ -48,8 +48,12 @@ BH3_ER_fs_hit = {
 		limit = { has_country_flag = BH3_ER_own_fs_411 check_variable = { BH3_ER_fs_mem > 0 } }
 		subtract_from_variable = { BH3_ER_fs_mem = 1 }
 		set_variable = { BH3_ER_fs_guard_timer = 2 }
-		# 如羽随风：抵消后回复 15 能量（政治点）
-		if = { limit = { has_country_flag = BH3_ER_own_fs_413 } add_political_power = 15 }
+		# 如羽随风：抵消后回复 15 能量并延长无敌窗口 1 天
+		if = {
+			limit = { has_country_flag = BH3_ER_own_fs_413 }
+			add_political_power = 15
+			add_to_variable = { BH3_ER_fs_guard_timer = 1 }
+		}
 		# 怎堪梦醒：失去全部回忆时恢复 1 层（每场战斗一次）
 		if = {
 			limit = {
@@ -255,6 +259,7 @@ BH3_ER_grant_410 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_fs_410 } }
 			set_country_flag = BH3_ER_own_fs_410
 			add_to_variable = { BH3_ER_signets = 1 }
+			set_variable = { BH3_ER_fs_max = 60 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -305,6 +310,7 @@ BH3_ER_grant_414 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_fs_414 } }
 			set_country_flag = BH3_ER_own_fs_414
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_fs_max = 20 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }

@@ -821,6 +821,34 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# 浮生：把数值写入日志（诊断用，搜索 BH3FS）
+	BH3_ER_dbg_fs_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 6 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_fs_recalc = yes
+			log = "BH3FS begin"
+			if = { limit = { check_variable = { BH3_ER_fs_norm > 59 } } log = "BH3FS norm_gt60" }
+			else_if = { limit = { check_variable = { BH3_ER_fs_norm > 39 } } log = "BH3FS norm_40_60" }
+			else_if = { limit = { check_variable = { BH3_ER_fs_norm > 19 } } log = "BH3FS norm_20_40" }
+			else_if = { limit = { check_variable = { BH3_ER_fs_norm > 0 } } log = "BH3FS norm_1_20" }
+			else = { log = "BH3FS norm_0" }
+			if = { limit = { check_variable = { BH3_ER_fs_charge > 0 } } log = "BH3FS charge_gt0" }
+			if = { limit = { check_variable = { BH3_ER_fs_mem > 0 } } log = "BH3FS mem_gt0" }
+			if = { limit = { check_variable = { BH3_ER_fs_guard_timer > 0 } } log = "BH3FS guard_ready" }
+			if = { limit = { check_variable = { BH3_ER_fs_atk > 1.0 } } log = "BH3FS atk_gt100pct" }
+			else_if = { limit = { check_variable = { BH3_ER_fs_atk > 0.3 } } log = "BH3FS atk_30_100pct" }
+			else = { log = "BH3FS atk_lt30pct" }
+			if = { limit = { check_variable = { BH3_ER_surr_hp < 50 } } log = "BH3FS hp_lt50" }
+			else = { log = "BH3FS hp_ge50" }
+			log = "BH3FS end"
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_fs_hit = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
