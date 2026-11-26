@@ -9,6 +9,7 @@
 | 坑 | 现象 | 正确做法 |
 |---|---|---|
 | PowerShell 5.1 读取无 BOM 的 UTF-8 脚本 | 中文路径变成乱码、Test-Path 找不到文件 | 脚本存 UTF-8 with BOM；或路径放环境变量 |
+| 给**脚本 .txt**（abilities/decisions/effects 等）加 BOM | 整份文件不加载：技能消失、决议组消失，且日志不一定报错 | 脚本 .txt 一律**无 BOM**（UTF-8）；只有本地化 .yml 需要 BOM |
 | HOI4 本地化 .yml 无 BOM | 文本不生效、界面显示 key | .yml 一律 UTF-8 BOM + l_english: 头 |
 | Python 文本模式写文件（Windows） | 整个文件 LF→CRLF，GUI 出现 2281 行大 diff | 用 open(...,'wb') 写字节，或 newline='' |
 | 仓库 .gitattributes 是 * -text | git 不做换行转换，字节即内容 | 改完看 git show --stat，行数异常=换行事故 |

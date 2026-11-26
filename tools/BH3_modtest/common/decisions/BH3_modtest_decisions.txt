@@ -1,4 +1,4 @@
-﻿BH3_modtest_category = {
+BH3_modtest_category = {
 	BH3_test_add_immune = {
 		icon = GFX_decision_oil
 		cost = 0
