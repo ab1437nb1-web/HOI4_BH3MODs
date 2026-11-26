@@ -47,12 +47,12 @@ BH3_ER_fs_hit = {
 	if = {
 		limit = { has_country_flag = BH3_ER_own_fs_411 check_variable = { BH3_ER_fs_mem > 0 } }
 		subtract_from_variable = { BH3_ER_fs_mem = 1 }
-		if = { limit = { check_variable = { BH3_ER_fs_charges < 6 } } add_to_variable = { BH3_ER_fs_charges = 1 } }
+		if = { limit = { check_variable = { BH3_ER_fs_charges < BH3_ER_fs_charge_cap } } add_to_variable = { BH3_ER_fs_charges = 1 } }
 		# 如羽随风：抵消后回复 15 能量并延长无敌窗口 1 天
 		if = {
 			limit = { has_country_flag = BH3_ER_own_fs_413 }
 			add_political_power = 15
-			if = { limit = { check_variable = { BH3_ER_fs_charges < 6 } } add_to_variable = { BH3_ER_fs_charges = 1 } }
+			if = { limit = { check_variable = { BH3_ER_fs_charges < BH3_ER_fs_charge_cap } } add_to_variable = { BH3_ER_fs_charges = 1 } }
 		}
 		# 怎堪梦醒：失去全部回忆时恢复 1 层（每场战斗一次）
 		if = {
@@ -66,10 +66,11 @@ BH3_ER_fs_hit = {
 			set_variable = { BH3_ER_fs_mem = 1 }
 		}
 	}
-	# 其次用【战士的决意】抵消（核心I）并反伤
+	# 其次用【战士的决意】抵消（核心I）并反伤；抵消本身也等价于短暂无敌，因此同样存 1 次无敌
 	else_if = {
 		limit = { has_country_flag = BH3_ER_own_fs_407 check_variable = { BH3_ER_fs_charge > 0 } }
 		subtract_from_variable = { BH3_ER_fs_charge = 1 }
+		if = { limit = { check_variable = { BH3_ER_fs_charges < BH3_ER_fs_charge_cap } } add_to_variable = { BH3_ER_fs_charges = 1 } }
 		BH3_UD_begin = yes
 		set_variable = { BH3_UD_mode = 2 }
 		set_temp_variable = { fs_power = BH3_ER_fs_charge }
@@ -121,16 +122,6 @@ BH3_ER_fs_daily = {
 		}
 	}
 
-	# 无敌储存次数：每 5 天自然消耗 1 次（上限 6 次）
-	if = {
-		limit = { check_variable = { BH3_ER_fs_charges > 0 } }
-		add_to_variable = { BH3_ER_fs_guard_tick = 1 }
-		if = {
-			limit = { check_variable = { BH3_ER_fs_guard_tick > 4 } }
-			set_variable = { BH3_ER_fs_guard_tick = 0 }
-			subtract_from_variable = { BH3_ER_fs_charges = 1 }
-		}
-	}
 
 	# 受击判定：投降倾向上升（= 生命值下降）即判定受击，每档 5% 一次，单日最多 3 次
 	if = {
@@ -277,6 +268,7 @@ BH3_ER_grant_411 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_fs_411 } }
 			set_country_flag = BH3_ER_own_fs_411
 			add_to_variable = { BH3_ER_signets = 1 }
+			set_variable = { BH3_ER_fs_charge_cap = 6 }
 			set_variable = { BH3_ER_fs_mem = 6 }
 			set_variable = { BH3_ER_fs_norm = BH3_ER_fs_max }
 		}
@@ -303,6 +295,7 @@ BH3_ER_grant_413 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_fs_413 } }
 			set_country_flag = BH3_ER_own_fs_413
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_fs_charge_cap = 3 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }

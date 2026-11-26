@@ -816,6 +816,7 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_fs_mem = 0 }
 			set_variable = { BH3_ER_fs_guard_timer = 0 }
 			set_variable = { BH3_ER_fs_charges = 0 }
+			set_variable = { BH3_ER_fs_charge_cap = 3 }
 			set_variable = { BH3_ER_fs_guard_tick = 0 }
 			clr_country_flag = BH3_ER_fs_wake_used
 			BH3_ER_fs_recalc = yes
@@ -872,6 +873,7 @@ BH3_ER_debug_group = {
 		available = { always = yes }
 		complete_effect = {
 			set_variable = { BH3_ER_fs_charges = 3 }
+			if = { limit = { check_variable = { BH3_ER_fs_charge_cap < 3 } } set_variable = { BH3_ER_fs_charge_cap = 3 } }
 			set_variable = { BH3_ER_fs_guard_tick = 0 }
 		}
 		ai_will_do = { factor = 0 }
