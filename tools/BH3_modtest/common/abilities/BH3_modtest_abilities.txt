@@ -1,4 +1,4 @@
-﻿ability = {
+ability = {
 
 	# 测试组：-100% 受伤（本次要验证的写法，放在 unit_modifiers 里）
 	BH3_test_ability_immune = {
@@ -6,7 +6,7 @@
 		desc = ABILITY_BH3_TEST_IMMUNE_DESC
 		type = army_leader
 		cost = 0
-		duration = 8760
+		duration = 168
 		allowed = { always = yes }
 		unit_modifiers = {
 			str_damage_multiplier = -1.0
@@ -21,7 +21,7 @@
 		desc = ABILITY_BH3_TEST_HALF_DESC
 		type = army_leader
 		cost = 0
-		duration = 8760
+		duration = 168
 		allowed = { always = yes }
 		unit_modifiers = {
 			str_damage_multiplier = -0.5
@@ -36,7 +36,7 @@
 		desc = ABILITY_BH3_TEST_STR_ONLY_DESC
 		type = army_leader
 		cost = 0
-		duration = 8760
+		duration = 168
 		allowed = { always = yes }
 		unit_modifiers = {
 			str_damage_multiplier = -1.0
@@ -50,7 +50,7 @@
 		desc = ABILITY_BH3_TEST_ORG_ONLY_DESC
 		type = army_leader
 		cost = 0
-		duration = 8760
+		duration = 168
 		allowed = { always = yes }
 		unit_modifiers = {
 			org_damage_multiplier = -1.0
@@ -64,7 +64,7 @@
 		desc = ABILITY_BH3_TEST_DOUBLE_DESC
 		type = army_leader
 		cost = 0
-		duration = 8760
+		duration = 168
 		allowed = { always = yes }
 		unit_modifiers = {
 			str_damage_multiplier = 1.0

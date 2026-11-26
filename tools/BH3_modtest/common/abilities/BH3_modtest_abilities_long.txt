@@ -1,0 +1,45 @@
+ability = {
+
+	# 长窗口测试（365 天）：单独文件，避免影响上面的常规测试技能
+	BH3_test_ability_immune_long = {
+		name = ABILITY_BH3_TEST_IMMUNE_LONG
+		desc = ABILITY_BH3_TEST_IMMUNE_LONG_DESC
+		type = army_leader
+		cost = 0
+		duration = 8760
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -1.0
+			org_damage_multiplier = -1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_ability_half_long = {
+		name = ABILITY_BH3_TEST_HALF_LONG
+		desc = ABILITY_BH3_TEST_HALF_LONG_DESC
+		type = army_leader
+		cost = 0
+		duration = 8760
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -0.5
+			org_damage_multiplier = -0.5
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_test_ability_double_long = {
+		name = ABILITY_BH3_TEST_DOUBLE_LONG
+		desc = ABILITY_BH3_TEST_DOUBLE_LONG_DESC
+		type = army_leader
+		cost = 0
+		duration = 8760
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = 1.0
+			org_damage_multiplier = 1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

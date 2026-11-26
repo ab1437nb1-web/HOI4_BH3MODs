@@ -199,4 +199,4 @@
 - 逐州写法（every_enemy_country → every_owned_state → state = THIS）生效
 - 接口因此统一改为逐州；mode 3/4 同样逐州（海军按港口/沿海州结算）
 
-> 2026-11-26：测试技能的 duration 已统一改为 8760 小时（365 天），便于在同一次技能生效期内连续做多种袭击/伤害测试。
+> 2026-11-26：新增 BH3_modtest_abilities_long.txt，提供 365 天时长的免疫/半伤/双伤测试技能（immune_long / half_long / double_long）；原技能保持 168 小时不变。
