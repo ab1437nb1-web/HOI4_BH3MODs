@@ -1,0 +1,402 @@
+# 往事乐土·旭光：撕裂叠层 → 海军/空军体系（2026-11-26 第一版）
+# 撕裂记在 BH3_ER_db_rend（上限 70，1006 提到 100），按档位给敌国挂限时国家精神：
+#   T1 >=10 / T2 >=25 / T3 >=50 / T4 >=70 层：敌方海军可见度上升、空军速度下降
+# 我方收益走 DM BH3_ER_dm_db（naval_damage_factor / air_attack_factor）
+# 核心II 自身撕裂：额外增伤，代价是自身海军可见度上升、空军速度下降
+# 变量：
+#   BH3_ER_db_rend / BH3_ER_db_selfrend / BH3_ER_db_cap
+#   BH3_ER_db_tier（敌方已挂档位）/ BH3_ER_db_burst（恶相尽灭计时）/ BH3_ER_db_restore_t（恶戾尽诛计时）
+#   BH3_ER_db_nav / _air / _vis / _spd 输出给 DM
+
+BH3_ER_db_recalc = {
+	set_variable = { BH3_ER_db_nav = 0 }
+	set_variable = { BH3_ER_db_air = 0 }
+	set_variable = { BH3_ER_db_vis = 0 }
+	set_variable = { BH3_ER_db_spd = 0 }
+
+	# 1001 爪：撕裂每层提升我方海伤/空攻
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1001 }
+		set_temp_variable = { db_t = BH3_ER_db_rend }
+		multiply_variable = { db_t = 0.004 }
+		clamp_variable = { var = db_t min = 0 max = 0.28 }
+		add_to_variable = { BH3_ER_db_nav = db_t }
+		set_temp_variable = { db_t = BH3_ER_db_rend }
+		multiply_variable = { db_t = 0.003 }
+		clamp_variable = { var = db_t min = 0 max = 0.21 }
+		add_to_variable = { BH3_ER_db_air = db_t }
+	}
+	# 1008 英雄：额外穿透（折算为空海增伤）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1008 }
+		set_temp_variable = { db_t = BH3_ER_db_rend }
+		multiply_variable = { db_t = 0.002 }
+		clamp_variable = { var = db_t min = 0 max = 0.5 }
+		add_to_variable = { BH3_ER_db_nav = db_t }
+		set_temp_variable = { db_t = BH3_ER_db_rend }
+		multiply_variable = { db_t = 0.001 }
+		clamp_variable = { var = db_t min = 0 max = 0.25 }
+		add_to_variable = { BH3_ER_db_air = db_t }
+	}
+	# 1010 宿诺：撕裂每层提高我方全伤害（折算空海）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1010 }
+		set_temp_variable = { db_t = BH3_ER_db_rend }
+		multiply_variable = { db_t = 0.003 }
+		clamp_variable = { var = db_t min = 0 max = 0.4 }
+		add_to_variable = { BH3_ER_db_nav = db_t }
+		add_to_variable = { BH3_ER_db_air = db_t }
+	}
+
+	# 核心II 长夜孤悬：自身撕裂
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1011 }
+		set_variable = { BH3_ER_db_selfrend = BH3_ER_db_rend }
+		# 增伤：每层 +1.5%（合 0.004 与 0.003 之外的附加）
+		set_temp_variable = { db_t = BH3_ER_db_selfrend }
+		multiply_variable = { db_t = 0.004 }
+		clamp_variable = { var = db_t min = 0 max = 0.35 }
+		add_to_variable = { BH3_ER_db_nav = db_t }
+		set_temp_variable = { db_t = BH3_ER_db_selfrend }
+		multiply_variable = { db_t = 0.003 }
+		clamp_variable = { var = db_t min = 0 max = 0.25 }
+		add_to_variable = { BH3_ER_db_air = db_t }
+		# 代价：海军可见度上升、空军速度下降
+		set_temp_variable = { db_t = BH3_ER_db_selfrend }
+		multiply_variable = { db_t = 0.003 }
+		clamp_variable = { var = db_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_db_vis = db_t }
+		set_temp_variable = { db_t = BH3_ER_db_selfrend }
+		multiply_variable = { db_t = -0.003 }
+		clamp_variable = { var = db_t min = -0.2 max = 0 }
+		add_to_variable = { BH3_ER_db_spd = db_t }
+	}
+	# 1012 黎明：补偿（减少可见度代价、提高增伤）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1012 check_variable = { BH3_ER_db_selfrend > 0 } }
+		subtract_from_variable = { BH3_ER_db_vis = 0.1 }
+		add_to_variable = { BH3_ER_db_spd = 0.1 }
+		add_to_variable = { BH3_ER_db_nav = 0.3 }
+		add_to_variable = { BH3_ER_db_air = 0.2 }
+	}
+	# 1014 本念：每层自身撕裂再 +1.5%（空海各半）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1014 check_variable = { BH3_ER_db_selfrend > 0 } }
+		set_temp_variable = { db_t = BH3_ER_db_selfrend }
+		multiply_variable = { db_t = 0.003 }
+		clamp_variable = { var = db_t min = 0 max = 0.3 }
+		add_to_variable = { BH3_ER_db_nav = db_t }
+		add_to_variable = { BH3_ER_db_air = db_t }
+	}
+
+	clamp_variable = { var = BH3_ER_db_nav min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_db_air min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_db_vis min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_db_spd min = -0.5 max = 0.2 }
+}
+
+# 敌方撕裂档位刷新
+BH3_ER_db_apply_tier = {
+	if = {
+		limit = { check_variable = { BH3_ER_db_rend > 69 } }
+		set_variable = { BH3_ER_db_tier = 4 }
+		every_enemy_country = {
+			add_timed_idea = { idea = BH3_ER_db_enemy_t4 days = 30 }
+			remove_ideas = BH3_ER_db_enemy_t1
+			remove_ideas = BH3_ER_db_enemy_t2
+			remove_ideas = BH3_ER_db_enemy_t3
+		}
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_db_rend > 49 } }
+		set_variable = { BH3_ER_db_tier = 3 }
+		every_enemy_country = {
+			add_timed_idea = { idea = BH3_ER_db_enemy_t3 days = 30 }
+			remove_ideas = BH3_ER_db_enemy_t1
+			remove_ideas = BH3_ER_db_enemy_t2
+			remove_ideas = BH3_ER_db_enemy_t4
+		}
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_db_rend > 24 } }
+		set_variable = { BH3_ER_db_tier = 2 }
+		every_enemy_country = {
+			add_timed_idea = { idea = BH3_ER_db_enemy_t2 days = 30 }
+			remove_ideas = BH3_ER_db_enemy_t1
+			remove_ideas = BH3_ER_db_enemy_t3
+			remove_ideas = BH3_ER_db_enemy_t4
+		}
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_db_rend > 9 } }
+		set_variable = { BH3_ER_db_tier = 1 }
+		every_enemy_country = {
+			add_timed_idea = { idea = BH3_ER_db_enemy_t1 days = 30 }
+			remove_ideas = BH3_ER_db_enemy_t2
+			remove_ideas = BH3_ER_db_enemy_t3
+			remove_ideas = BH3_ER_db_enemy_t4
+		}
+	}
+	else = {
+		set_variable = { BH3_ER_db_tier = 0 }
+		every_enemy_country = {
+			remove_ideas = BH3_ER_db_enemy_t1
+			remove_ideas = BH3_ER_db_enemy_t2
+			remove_ideas = BH3_ER_db_enemy_t3
+			remove_ideas = BH3_ER_db_enemy_t4
+		}
+	}
+	# 1004 眼：额外削弱
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1004 check_variable = { BH3_ER_db_tier > 0 } }
+		every_enemy_country = { add_timed_idea = { idea = BH3_ER_db_enemy_eye days = 30 } }
+	}
+}
+
+# 核心I：恶相尽灭
+BH3_ER_db_burst = {
+	every_enemy_country = { add_timed_idea = { idea = BH3_ER_db_enemy_t4 days = 10 } }
+	add_timed_idea = { idea = BH3_ER_db_annihilate days = 5 }
+	if = { limit = { has_country_flag = BH3_ER_own_db_1009 } add_political_power = 5 }
+	if = {
+		limit = { check_variable = { BH3_ER_db_rend > 19 } }
+		subtract_from_variable = { BH3_ER_db_rend = 20 }
+	}
+	else = { set_variable = { BH3_ER_db_rend = 0 } }
+	BH3_ER_db_recalc = yes
+}
+
+# 每日
+BH3_ER_db_daily = {
+	# 撕裂上限
+	set_variable = { BH3_ER_db_cap = 70 }
+	if = { limit = { has_country_flag = BH3_ER_own_db_1006 } set_variable = { BH3_ER_db_cap = 100 } }
+
+	# 1001：每天 +1 层
+	if = { limit = { has_country_flag = BH3_ER_own_db_1001 } add_to_variable = { BH3_ER_db_rend = 1 } }
+	# 1002：每 5 天 +10
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1002 }
+		add_to_variable = { BH3_ER_db_g1 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_db_g1 > 3 } }
+			set_variable = { BH3_ER_db_g1 = 0 }
+			add_to_variable = { BH3_ER_db_rend = 10 }
+			if = { limit = { has_country_flag = BH3_ER_own_db_1005 } add_political_power = 10 }
+		}
+	}
+	# 1003：每 7 天 +15
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1003 }
+		add_to_variable = { BH3_ER_db_g2 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_db_g2 > 5 } }
+			set_variable = { BH3_ER_db_g2 = 0 }
+			add_to_variable = { BH3_ER_db_rend = 15 }
+			if = { limit = { has_country_flag = BH3_ER_own_db_1005 } add_political_power = 10 }
+		}
+	}
+
+	if = {
+		limit = { check_variable = { BH3_ER_db_rend > BH3_ER_db_cap } }
+		set_variable = { BH3_ER_db_rend = BH3_ER_db_cap }
+	}
+
+	# 敌方档位
+	BH3_ER_db_apply_tier = yes
+
+	# 核心I：撕裂 >=10 每 5 天恶相尽灭
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1007 check_variable = { BH3_ER_db_rend > 9 } }
+		add_to_variable = { BH3_ER_db_burst = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_db_burst > 3 } }
+			set_variable = { BH3_ER_db_burst = 0 }
+			BH3_ER_db_burst = yes
+		}
+	}
+
+	# 核心II：每 10 天恶戾尽诛（自身撕裂时）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_db_1013 check_variable = { BH3_ER_db_rend > 0 } }
+		add_to_variable = { BH3_ER_db_restore_t = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_db_restore_t > 8 } }
+			set_variable = { BH3_ER_db_restore_t = 0 }
+			every_enemy_country = { add_timed_idea = { idea = BH3_ER_db_enemy_t4 days = 10 } }
+			add_timed_idea = { idea = BH3_ER_db_restore days = 8 }
+		}
+	}
+
+	BH3_ER_db_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_1001 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1001 } }
+			set_country_flag = BH3_ER_own_db_1001
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1002 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1002 } }
+			set_country_flag = BH3_ER_own_db_1002
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1003 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1003 } }
+			set_country_flag = BH3_ER_own_db_1003
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1004 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1004 } }
+			set_country_flag = BH3_ER_own_db_1004
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1005 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1005 } }
+			set_country_flag = BH3_ER_own_db_1005
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1006 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1006 } }
+			set_country_flag = BH3_ER_own_db_1006
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1007 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1007 } }
+			set_country_flag = BH3_ER_own_db_1007
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1008 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1008 } }
+			set_country_flag = BH3_ER_own_db_1008
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1009 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1009 } }
+			set_country_flag = BH3_ER_own_db_1009
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1010 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1010 } }
+			set_country_flag = BH3_ER_own_db_1010
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1011 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1011 } }
+			set_country_flag = BH3_ER_own_db_1011
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1012 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1012 } }
+			set_country_flag = BH3_ER_own_db_1012
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1013 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1013 } }
+			set_country_flag = BH3_ER_own_db_1013
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1014 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_db_1014 } }
+			set_country_flag = BH3_ER_own_db_1014
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

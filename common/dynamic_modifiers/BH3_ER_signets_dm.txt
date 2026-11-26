@@ -113,3 +113,12 @@ BH3_ER_dm_if = {
 	production_oil_factor = BH3_ER_if_oil
 	trade_opinion_factor = BH3_ER_if_opin
 }
+
+BH3_ER_dm_db = {
+	enable = { always = yes }
+
+	naval_damage_factor = BH3_ER_db_nav
+	air_attack_factor = BH3_ER_db_air
+	navy_visibility = BH3_ER_db_vis
+	air_maximum_speed_factor = BH3_ER_db_spd
+}

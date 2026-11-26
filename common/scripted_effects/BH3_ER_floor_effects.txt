@@ -95,6 +95,18 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_if_ind = 0 }
 	set_variable = { BH3_ER_if_oil = 0 }
 	set_variable = { BH3_ER_if_opin = 0 }
+	set_variable = { BH3_ER_db_rend = 0 }
+	set_variable = { BH3_ER_db_selfrend = 0 }
+	set_variable = { BH3_ER_db_cap = 70 }
+	set_variable = { BH3_ER_db_tier = 0 }
+	set_variable = { BH3_ER_db_burst = 0 }
+	set_variable = { BH3_ER_db_restore_t = 0 }
+	set_variable = { BH3_ER_db_g1 = 0 }
+	set_variable = { BH3_ER_db_g2 = 0 }
+	set_variable = { BH3_ER_db_nav = 0 }
+	set_variable = { BH3_ER_db_air = 0 }
+	set_variable = { BH3_ER_db_vis = 0 }
+	set_variable = { BH3_ER_db_spd = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }
@@ -140,6 +152,7 @@ BH3_ER_init_run = {
 		add_dynamic_modifier = { modifier = BH3_ER_dm_ds }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_hx }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_if }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_db }
 		set_country_flag = BH3_ER_dm_added
 	}
 

@@ -1,0 +1,71 @@
+ideas = {
+	country = {
+
+		# 敌方撕裂档位：海军可见度上升（更容易被发现）、空军速度下降
+		BH3_ER_db_enemy_t1 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				navy_visibility = 0.10
+				air_maximum_speed_factor = -0.10
+			}
+		}
+
+		BH3_ER_db_enemy_t2 = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				navy_visibility = 0.20
+				air_maximum_speed_factor = -0.20
+			}
+		}
+
+		BH3_ER_db_enemy_t3 = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				navy_visibility = 0.30
+				air_maximum_speed_factor = -0.30
+			}
+		}
+
+		BH3_ER_db_enemy_t4 = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				navy_visibility = 0.40
+				air_maximum_speed_factor = -0.40
+			}
+		}
+
+		# 1004 俯视邪渊之「眼」：额外一层空海削弱
+		BH3_ER_db_enemy_eye = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				navy_visibility = 0.05
+				air_maximum_speed_factor = -0.05
+			}
+		}
+
+		# 核心I 恶相尽灭（我方窗口）
+		BH3_ER_db_annihilate = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				naval_damage_factor = 0.25
+				air_attack_factor = 0.25
+			}
+		}
+
+		# 1013 抉择：恶戾尽诛后的防御恢复
+		BH3_ER_db_restore = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				navy_visibility = -0.10
+				air_maximum_speed_factor = 0.10
+			}
+		}
+	}
+}

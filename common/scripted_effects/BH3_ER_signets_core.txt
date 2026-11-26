@@ -1,4 +1,4 @@
-# 抽取：已实装九系（101-114 / 201-214 / 301-314 / 401-414 / 501-514 / 601-614 / 701-714 / 801-814 / 901-914）
+# 抽取：已实装十系（101-114 … 901-914 / 1001-1014）
 BH3_ER_roll_offer = {
 	if = {
 		limit = {
@@ -133,6 +133,20 @@ BH3_ER_roll_offer = {
 			10 = { set_variable = { BH3_ER_c1 = 912 } }
 			10 = { set_variable = { BH3_ER_c1 = 913 } }
 			10 = { set_variable = { BH3_ER_c1 = 914 } }
+			10 = { set_variable = { BH3_ER_c1 = 1001 } }
+			10 = { set_variable = { BH3_ER_c1 = 1002 } }
+			10 = { set_variable = { BH3_ER_c1 = 1003 } }
+			10 = { set_variable = { BH3_ER_c1 = 1004 } }
+			10 = { set_variable = { BH3_ER_c1 = 1005 } }
+			10 = { set_variable = { BH3_ER_c1 = 1006 } }
+			10 = { set_variable = { BH3_ER_c1 = 1007 } }
+			10 = { set_variable = { BH3_ER_c1 = 1008 } }
+			10 = { set_variable = { BH3_ER_c1 = 1009 } }
+			10 = { set_variable = { BH3_ER_c1 = 1010 } }
+			10 = { set_variable = { BH3_ER_c1 = 1011 } }
+			10 = { set_variable = { BH3_ER_c1 = 1012 } }
+			10 = { set_variable = { BH3_ER_c1 = 1013 } }
+			10 = { set_variable = { BH3_ER_c1 = 1014 } }
 		}
 		random_list = {
 			10 = { set_variable = { BH3_ER_c2 = 101 } }
@@ -261,6 +275,20 @@ BH3_ER_roll_offer = {
 			10 = { set_variable = { BH3_ER_c2 = 912 } }
 			10 = { set_variable = { BH3_ER_c2 = 913 } }
 			10 = { set_variable = { BH3_ER_c2 = 914 } }
+			10 = { set_variable = { BH3_ER_c2 = 1001 } }
+			10 = { set_variable = { BH3_ER_c2 = 1002 } }
+			10 = { set_variable = { BH3_ER_c2 = 1003 } }
+			10 = { set_variable = { BH3_ER_c2 = 1004 } }
+			10 = { set_variable = { BH3_ER_c2 = 1005 } }
+			10 = { set_variable = { BH3_ER_c2 = 1006 } }
+			10 = { set_variable = { BH3_ER_c2 = 1007 } }
+			10 = { set_variable = { BH3_ER_c2 = 1008 } }
+			10 = { set_variable = { BH3_ER_c2 = 1009 } }
+			10 = { set_variable = { BH3_ER_c2 = 1010 } }
+			10 = { set_variable = { BH3_ER_c2 = 1011 } }
+			10 = { set_variable = { BH3_ER_c2 = 1012 } }
+			10 = { set_variable = { BH3_ER_c2 = 1013 } }
+			10 = { set_variable = { BH3_ER_c2 = 1014 } }
 		}
 		if = {
 			limit = { check_variable = { BH3_ER_c2 = BH3_ER_c1 } }
@@ -766,6 +794,62 @@ BH3_ER_roll_offer = {
 			}
 			if = {
 				limit = { check_variable = { BH3_ER_c2 = 914 } }
+				set_variable = { BH3_ER_c2 = 1001 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1001 } }
+				set_variable = { BH3_ER_c2 = 1002 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1002 } }
+				set_variable = { BH3_ER_c2 = 1003 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1003 } }
+				set_variable = { BH3_ER_c2 = 1004 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1004 } }
+				set_variable = { BH3_ER_c2 = 1005 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1005 } }
+				set_variable = { BH3_ER_c2 = 1006 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1006 } }
+				set_variable = { BH3_ER_c2 = 1007 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1007 } }
+				set_variable = { BH3_ER_c2 = 1008 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1008 } }
+				set_variable = { BH3_ER_c2 = 1009 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1009 } }
+				set_variable = { BH3_ER_c2 = 1010 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1010 } }
+				set_variable = { BH3_ER_c2 = 1011 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1011 } }
+				set_variable = { BH3_ER_c2 = 1012 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1012 } }
+				set_variable = { BH3_ER_c2 = 1013 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1013 } }
+				set_variable = { BH3_ER_c2 = 1014 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c2 = 1014 } }
 				set_variable = { BH3_ER_c2 = 101 }
 			}
 		}
@@ -896,6 +980,20 @@ BH3_ER_roll_offer = {
 			10 = { set_variable = { BH3_ER_c3 = 912 } }
 			10 = { set_variable = { BH3_ER_c3 = 913 } }
 			10 = { set_variable = { BH3_ER_c3 = 914 } }
+			10 = { set_variable = { BH3_ER_c3 = 1001 } }
+			10 = { set_variable = { BH3_ER_c3 = 1002 } }
+			10 = { set_variable = { BH3_ER_c3 = 1003 } }
+			10 = { set_variable = { BH3_ER_c3 = 1004 } }
+			10 = { set_variable = { BH3_ER_c3 = 1005 } }
+			10 = { set_variable = { BH3_ER_c3 = 1006 } }
+			10 = { set_variable = { BH3_ER_c3 = 1007 } }
+			10 = { set_variable = { BH3_ER_c3 = 1008 } }
+			10 = { set_variable = { BH3_ER_c3 = 1009 } }
+			10 = { set_variable = { BH3_ER_c3 = 1010 } }
+			10 = { set_variable = { BH3_ER_c3 = 1011 } }
+			10 = { set_variable = { BH3_ER_c3 = 1012 } }
+			10 = { set_variable = { BH3_ER_c3 = 1013 } }
+			10 = { set_variable = { BH3_ER_c3 = 1014 } }
 		}
 		if = {
 			limit = { check_variable = { BH3_ER_c3 = BH3_ER_c1 } }
@@ -1401,6 +1499,62 @@ BH3_ER_roll_offer = {
 			}
 			if = {
 				limit = { check_variable = { BH3_ER_c3 = 914 } }
+				set_variable = { BH3_ER_c3 = 1001 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1001 } }
+				set_variable = { BH3_ER_c3 = 1002 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1002 } }
+				set_variable = { BH3_ER_c3 = 1003 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1003 } }
+				set_variable = { BH3_ER_c3 = 1004 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1004 } }
+				set_variable = { BH3_ER_c3 = 1005 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1005 } }
+				set_variable = { BH3_ER_c3 = 1006 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1006 } }
+				set_variable = { BH3_ER_c3 = 1007 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1007 } }
+				set_variable = { BH3_ER_c3 = 1008 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1008 } }
+				set_variable = { BH3_ER_c3 = 1009 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1009 } }
+				set_variable = { BH3_ER_c3 = 1010 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1010 } }
+				set_variable = { BH3_ER_c3 = 1011 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1011 } }
+				set_variable = { BH3_ER_c3 = 1012 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1012 } }
+				set_variable = { BH3_ER_c3 = 1013 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1013 } }
+				set_variable = { BH3_ER_c3 = 1014 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1014 } }
 				set_variable = { BH3_ER_c3 = 101 }
 			}
 		}
@@ -1908,6 +2062,62 @@ BH3_ER_roll_offer = {
 			}
 			if = {
 				limit = { check_variable = { BH3_ER_c3 = 914 } }
+				set_variable = { BH3_ER_c3 = 1001 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1001 } }
+				set_variable = { BH3_ER_c3 = 1002 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1002 } }
+				set_variable = { BH3_ER_c3 = 1003 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1003 } }
+				set_variable = { BH3_ER_c3 = 1004 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1004 } }
+				set_variable = { BH3_ER_c3 = 1005 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1005 } }
+				set_variable = { BH3_ER_c3 = 1006 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1006 } }
+				set_variable = { BH3_ER_c3 = 1007 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1007 } }
+				set_variable = { BH3_ER_c3 = 1008 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1008 } }
+				set_variable = { BH3_ER_c3 = 1009 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1009 } }
+				set_variable = { BH3_ER_c3 = 1010 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1010 } }
+				set_variable = { BH3_ER_c3 = 1011 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1011 } }
+				set_variable = { BH3_ER_c3 = 1012 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1012 } }
+				set_variable = { BH3_ER_c3 = 1013 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1013 } }
+				set_variable = { BH3_ER_c3 = 1014 }
+			}
+			if = {
+				limit = { check_variable = { BH3_ER_c3 = 1014 } }
 				set_variable = { BH3_ER_c3 = 101 }
 			}
 		}
@@ -2620,6 +2830,62 @@ BH3_ER_grant_c1 = {
 		limit = { check_variable = { BH3_ER_c1 = 914 } }
 		BH3_ER_grant_914 = yes
 	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1001 } }
+		BH3_ER_grant_1001 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1002 } }
+		BH3_ER_grant_1002 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1003 } }
+		BH3_ER_grant_1003 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1004 } }
+		BH3_ER_grant_1004 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1005 } }
+		BH3_ER_grant_1005 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1006 } }
+		BH3_ER_grant_1006 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1007 } }
+		BH3_ER_grant_1007 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1008 } }
+		BH3_ER_grant_1008 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1009 } }
+		BH3_ER_grant_1009 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1010 } }
+		BH3_ER_grant_1010 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1011 } }
+		BH3_ER_grant_1011 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1012 } }
+		BH3_ER_grant_1012 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1013 } }
+		BH3_ER_grant_1013 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c1 = 1014 } }
+		BH3_ER_grant_1014 = yes
+	}
 }
 BH3_ER_grant_c2 = {
 	if = {
@@ -3126,6 +3392,62 @@ BH3_ER_grant_c2 = {
 		limit = { check_variable = { BH3_ER_c2 = 914 } }
 		BH3_ER_grant_914 = yes
 	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1001 } }
+		BH3_ER_grant_1001 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1002 } }
+		BH3_ER_grant_1002 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1003 } }
+		BH3_ER_grant_1003 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1004 } }
+		BH3_ER_grant_1004 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1005 } }
+		BH3_ER_grant_1005 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1006 } }
+		BH3_ER_grant_1006 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1007 } }
+		BH3_ER_grant_1007 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1008 } }
+		BH3_ER_grant_1008 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1009 } }
+		BH3_ER_grant_1009 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1010 } }
+		BH3_ER_grant_1010 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1011 } }
+		BH3_ER_grant_1011 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1012 } }
+		BH3_ER_grant_1012 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1013 } }
+		BH3_ER_grant_1013 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c2 = 1014 } }
+		BH3_ER_grant_1014 = yes
+	}
 }
 BH3_ER_grant_c3 = {
 	if = {
@@ -3631,5 +3953,61 @@ BH3_ER_grant_c3 = {
 	else_if = {
 		limit = { check_variable = { BH3_ER_c3 = 914 } }
 		BH3_ER_grant_914 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1001 } }
+		BH3_ER_grant_1001 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1002 } }
+		BH3_ER_grant_1002 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1003 } }
+		BH3_ER_grant_1003 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1004 } }
+		BH3_ER_grant_1004 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1005 } }
+		BH3_ER_grant_1005 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1006 } }
+		BH3_ER_grant_1006 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1007 } }
+		BH3_ER_grant_1007 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1008 } }
+		BH3_ER_grant_1008 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1009 } }
+		BH3_ER_grant_1009 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1010 } }
+		BH3_ER_grant_1010 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1011 } }
+		BH3_ER_grant_1011 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1012 } }
+		BH3_ER_grant_1012 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1013 } }
+		BH3_ER_grant_1013 = yes
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_c3 = 1014 } }
+		BH3_ER_grant_1014 = yes
 	}
 }
