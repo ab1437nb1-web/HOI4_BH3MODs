@@ -198,3 +198,5 @@
 - 不带 location 的 damage_units 完全无效
 - 逐州写法（every_enemy_country → every_owned_state → state = THIS）生效
 - 接口因此统一改为逐州；mode 3/4 同样逐州（海军按港口/沿海州结算）
+
+> 2026-11-26：测试技能的 duration 已统一改为 8760 小时（365 天），便于在同一次技能生效期内连续做多种袭击/伤害测试。
