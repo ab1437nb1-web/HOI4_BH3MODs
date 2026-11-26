@@ -52,6 +52,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/signet_Spiral.png"
 	}
 
+	spriteType = {
+		name = "GFX_BH3_ER_series_if"
+		texturefile = "gfx/interface/elysianrealm/signet_Mobius.png"
+	}
+
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
 		name = "GFX_BH3_ER_portal_tile"

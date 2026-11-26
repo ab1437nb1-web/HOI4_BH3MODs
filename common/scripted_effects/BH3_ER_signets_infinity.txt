@@ -1,0 +1,300 @@
+# 往事乐土·无限：资源获取体系（2026-11-26 第一版）
+# 设计：核心与资源获取相关——减少资源短缺惩罚、降低贸易成本、周期性能源注入、石油增产
+# 变量：
+#   BH3_ER_if_stacks  拟态层数（0~5，每 3 天 +1）
+#   BH3_ER_if_prog    转移进度（0~100，核心II，每天 +20）
+#   BH3_ER_if_short / _trade / _tcost / _ind / _oil 输出给 DM
+
+BH3_ER_if_recalc = {
+	set_variable = { BH3_ER_if_short = 0 }
+	set_variable = { BH3_ER_if_trade = 0 }
+	set_variable = { BH3_ER_if_tcost = 0 }
+	set_variable = { BH3_ER_if_ind = 0 }
+	set_variable = { BH3_ER_if_oil = 0 }
+
+	# 901 利齿的「V」：资源短缺惩罚下降
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_901 }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = -0.05 }
+		add_to_variable = { BH3_ER_if_short = if_t }
+	}
+	# 902 缠环的「P」：资源进口加成
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_902 }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = 0.03 }
+		add_to_variable = { BH3_ER_if_trade = if_t }
+	}
+	# 903 静默的「B」：产能（资源转化）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_903 }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = 0.02 }
+		add_to_variable = { BH3_ER_if_ind = if_t }
+	}
+	# 904 吻毒的「E」：石油增产
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_904 }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = 0.05 }
+		add_to_variable = { BH3_ER_if_oil = if_t }
+	}
+	# 905 栖影的「C」：贸易成本下降
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_905 }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = -0.02 }
+		add_to_variable = { BH3_ER_if_tcost = if_t }
+	}
+
+	clamp_variable = { var = BH3_ER_if_short min = -0.5 max = 0 }
+	clamp_variable = { var = BH3_ER_if_trade min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_if_tcost min = -0.5 max = 0 }
+	clamp_variable = { var = BH3_ER_if_ind min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_if_oil min = 0 max = 1.0 }
+}
+
+# 核心I：思维同化（拟态层满 5 时刷新 8 天窗口）
+BH3_ER_if_assim = {
+	add_timed_idea = { idea = BH3_ER_if_assim days = 8 }
+	if = { limit = { has_country_flag = BH3_ER_own_if_908 } add_timed_idea = { idea = BH3_ER_if_assim_short days = 8 } }
+	if = { limit = { has_country_flag = BH3_ER_own_if_909 } add_timed_idea = { idea = BH3_ER_if_assim_trade days = 8 } }
+	if = { limit = { has_country_flag = BH3_ER_own_if_910 } add_timed_idea = { idea = BH3_ER_if_assim_oil days = 8 } }
+	BH3_ER_if_recalc = yes
+}
+
+# 核心II：意识同步（转移进度满 100）
+BH3_ER_if_sync_fire = {
+	# 噬界者的影袭：资源注入（随机 3 个州 +5 钢）
+	random_owned_state = { add_resource = { type = steel amount = 5 } }
+	random_owned_state = { add_resource = { type = steel amount = 5 } }
+	random_owned_state = { add_resource = { type = oil amount = 3 } }
+
+	set_temp_variable = { if_days = 12 }
+	if = { limit = { has_country_flag = BH3_ER_own_if_912 } set_temp_variable = { if_days = 18 } }
+	add_timed_idea = { idea = BH3_ER_if_sync days = if_days }
+	if = { limit = { has_country_flag = BH3_ER_own_if_913 } add_timed_idea = { idea = BH3_ER_if_sync_ind days = if_days } }
+	if = { limit = { has_country_flag = BH3_ER_own_if_914 } add_timed_idea = { idea = BH3_ER_if_sync_trade days = if_days } }
+	set_variable = { BH3_ER_if_prog = 0 }
+	BH3_ER_if_recalc = yes
+}
+
+# 每日
+BH3_ER_if_daily = {
+	# 拟态层：每 3 天 +1，上限 5
+	add_to_variable = { BH3_ER_if_tick = 1 }
+	if = {
+		limit = { check_variable = { BH3_ER_if_tick > 2 } }
+		set_variable = { BH3_ER_if_tick = 0 }
+		if = { limit = { check_variable = { BH3_ER_if_stacks < 5 } } add_to_variable = { BH3_ER_if_stacks = 1 } }
+	}
+
+	# 906 黯瞳的「T」：每 5 天一次资源注入
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_906 }
+		add_to_variable = { BH3_ER_if_gift = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_if_gift > 4 } }
+			set_variable = { BH3_ER_if_gift = 0 }
+			random_owned_state = { add_resource = { type = steel amount = 2 } }
+			random_owned_state = { add_resource = { type = oil amount = 2 } }
+		}
+	}
+
+	# 核心I：层满 5 刷新同化
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_907 check_variable = { BH3_ER_if_stacks > 4 } }
+		BH3_ER_if_assim = yes
+	}
+
+	# 核心II：转移进度 +20/天
+	if = {
+		limit = { has_country_flag = BH3_ER_own_if_911 check_variable = { BH3_ER_if_prog > 99 } }
+		BH3_ER_if_sync_fire = yes
+	}
+	else_if = {
+		limit = { has_country_flag = BH3_ER_own_if_911 }
+		add_to_variable = { BH3_ER_if_prog = 20 }
+		# 912：同步期间进度更快（每 3 天额外 +15）
+		if = {
+			limit = {
+				has_country_flag = BH3_ER_own_if_912
+				has_idea = BH3_ER_if_sync
+			}
+			add_to_variable = { BH3_ER_if_prog = 15 }
+		}
+	}
+
+	BH3_ER_if_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_901 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_901 } }
+			set_country_flag = BH3_ER_own_if_901
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_902 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_902 } }
+			set_country_flag = BH3_ER_own_if_902
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_903 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_903 } }
+			set_country_flag = BH3_ER_own_if_903
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_904 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_904 } }
+			set_country_flag = BH3_ER_own_if_904
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_905 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_905 } }
+			set_country_flag = BH3_ER_own_if_905
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_906 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_906 } }
+			set_country_flag = BH3_ER_own_if_906
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_907 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_907 } }
+			set_country_flag = BH3_ER_own_if_907
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_908 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_908 } }
+			set_country_flag = BH3_ER_own_if_908
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_909 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_909 } }
+			set_country_flag = BH3_ER_own_if_909
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_910 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_910 } }
+			set_country_flag = BH3_ER_own_if_910
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_911 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_911 } }
+			set_country_flag = BH3_ER_own_if_911
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_912 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_912 } }
+			set_country_flag = BH3_ER_own_if_912
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_913 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_913 } }
+			set_country_flag = BH3_ER_own_if_913
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_914 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_if_914 } }
+			set_country_flag = BH3_ER_own_if_914
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

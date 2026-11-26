@@ -221,6 +221,18 @@ scripted_gui = {
 			BH3_ER_cancel_draw_btn_visible = {
 				check_variable = { BH3_ER_offer = 1 }
 			}
+			BH3_ER_slot_1_icon_if_visible = {
+				check_variable = { BH3_ER_c1 > 900 }
+				check_variable = { BH3_ER_c1 < 915 }
+			}
+			BH3_ER_slot_2_icon_if_visible = {
+				check_variable = { BH3_ER_c2 > 900 }
+				check_variable = { BH3_ER_c2 < 915 }
+			}
+			BH3_ER_slot_3_icon_if_visible = {
+				check_variable = { BH3_ER_c3 > 900 }
+				check_variable = { BH3_ER_c3 < 915 }
+			}
 			BH3_ER_slot_1_icon_hx_visible = {
 				check_variable = { BH3_ER_c1 > 800 }
 				check_variable = { BH3_ER_c1 < 815 }

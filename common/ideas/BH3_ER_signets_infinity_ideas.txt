@@ -1,0 +1,69 @@
+ideas = {
+	country = {
+
+		# 核心I 思维同化
+		BH3_ER_if_assim = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_lack_of_resource_penalty_factor = -0.10
+			}
+		}
+
+		# 908 死亡的「X」：同化期间储备惩罚进一步下降
+		BH3_ER_if_assim_short = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+
+		# 909 未知的「X」：同化期间贸易成本
+		BH3_ER_if_assim_trade = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				resource_trade_cost_bonus_per_factory = 0.10
+			}
+		}
+
+		# 910 新生的「X」：同化期间石油
+		BH3_ER_if_assim_oil = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				production_oil_factor = 0.10
+			}
+		}
+
+		# 核心II 意识同步
+		BH3_ER_if_sync = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				industrial_capacity_factory = 0.20
+				production_oil_factor = 0.20
+			}
+		}
+
+		# 913 不灭的「M」
+		BH3_ER_if_sync_ind = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		# 914 崩落的「M」
+		BH3_ER_if_sync_trade = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				resource_trade_cost_bonus_per_factory = 0.10
+			}
+		}
+	}
+}

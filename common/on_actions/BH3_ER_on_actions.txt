@@ -21,6 +21,7 @@ on_actions = {
 				BH3_ER_bd_daily = yes
 				BH3_ER_ds_daily = yes
 				BH3_ER_hx_daily = yes
+				BH3_ER_if_daily = yes
 			}
 			every_country = {
 				limit = {

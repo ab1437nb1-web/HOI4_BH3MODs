@@ -85,6 +85,9 @@ BH3_ER_dm_ds = {
 	enemy_operative_detection_chance = BH3_ER_ds_det
 	enemy_operative_capture_chance_factor = BH3_ER_ds_cap
 	civilian_intel_to_others = BH3_ER_ds_leak
+	army_intel_to_others = BH3_ER_ds_leak
+	navy_intel_to_others = BH3_ER_ds_leak
+	airforce_intel_to_others = BH3_ER_ds_leak
 	stability_factor = BH3_ER_ds_stab
 	war_support_factor = BH3_ER_ds_ws
 }
@@ -98,4 +101,14 @@ BH3_ER_dm_hx = {
 	special_project_facility_supply_consumption_factor = BH3_ER_hx_fac
 	line_change_production_efficiency_factor = BH3_ER_hx_line
 	production_factory_start_efficiency_factor = BH3_ER_hx_start
+}
+
+BH3_ER_dm_if = {
+	enable = { always = yes }
+
+	production_lack_of_resource_penalty_factor = BH3_ER_if_short
+	resource_trade_cost_bonus_per_factory = BH3_ER_if_trade
+	trade_cost_for_target_factor = BH3_ER_if_tcost
+	industrial_capacity_factory = BH3_ER_if_ind
+	production_oil_factor = BH3_ER_if_oil
 }
