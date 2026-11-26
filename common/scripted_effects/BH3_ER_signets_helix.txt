@@ -1,0 +1,284 @@
+# 往事乐土·螺旋：生产效率 / 专项计划速度体系（2026-11-26 第一版）
+# 设计：去掉原作“武器技”触发，改为「幕」计数（BH3_ER_hx_act，0~6）每日推进，
+#       满 6 时按核心释放【惊奇魔术】（核心I）或【特型武装】（核心II）
+# 变量：
+#   BH3_ER_hx_act    幕计数（0~6）
+#   BH3_ER_hx_stacks 最终幕累计层数（0~10，每层 +6% 生产效率）
+#   BH3_ER_hx_prod / _max / _sps / _fac / _line / _start 输出给 DM
+
+BH3_ER_hx_recalc = {
+	set_variable = { BH3_ER_hx_prod = 0 }
+	set_variable = { BH3_ER_hx_max = 0 }
+	set_variable = { BH3_ER_hx_sps = 0 }
+	set_variable = { BH3_ER_hx_fac = 0 }
+	set_variable = { BH3_ER_hx_line = 0 }
+	set_variable = { BH3_ER_hx_start = 0 }
+
+	# 801 第一幕：生产效率获取
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_801 }
+		set_temp_variable = { hx_t = BH3_ER_hx_act }
+		multiply_variable = { hx_t = 0.02 }
+		add_to_variable = { BH3_ER_hx_prod = hx_t }
+	}
+	# 802 第二幕：生产效率上限
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_802 }
+		set_temp_variable = { hx_t = BH3_ER_hx_act }
+		multiply_variable = { hx_t = 0.02 }
+		add_to_variable = { BH3_ER_hx_max = hx_t }
+	}
+	# 803 第三幕：专项计划速度
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_803 }
+		set_temp_variable = { hx_t = BH3_ER_hx_act }
+		multiply_variable = { hx_t = 0.02 }
+		add_to_variable = { BH3_ER_hx_sps = hx_t }
+	}
+	# 804 第四幕：专项计划设施补给消耗
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_804 }
+		set_temp_variable = { hx_t = BH3_ER_hx_act }
+		multiply_variable = { hx_t = -0.02 }
+		add_to_variable = { BH3_ER_hx_fac = hx_t }
+	}
+	# 805 第五幕：换线效率
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_805 }
+		set_temp_variable = { hx_t = BH3_ER_hx_act }
+		multiply_variable = { hx_t = 0.03 }
+		add_to_variable = { BH3_ER_hx_line = hx_t }
+	}
+	# 806 第六幕：初始生产效率
+	if = { limit = { has_country_flag = BH3_ER_own_hx_806 } add_to_variable = { BH3_ER_hx_start = 0.05 } }
+
+	# 最终幕：每层 +6% 生产效率（上限 60%）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_810 check_variable = { BH3_ER_hx_stacks > 0 } }
+		set_temp_variable = { hx_t = BH3_ER_hx_stacks }
+		multiply_variable = { hx_t = 0.06 }
+		clamp_variable = { var = hx_t min = 0 max = 0.6 }
+		add_to_variable = { BH3_ER_hx_prod = hx_t }
+	}
+
+	clamp_variable = { var = BH3_ER_hx_prod min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_hx_max min = 0 max = 0.6 }
+	clamp_variable = { var = BH3_ER_hx_sps min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_hx_fac min = -0.6 max = 0 }
+	clamp_variable = { var = BH3_ER_hx_line min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_hx_start min = 0 max = 0.3 }
+}
+
+# 核心I：惊奇魔术（幕满 6）
+BH3_ER_hx_magic_fire = {
+	add_timed_idea = { idea = BH3_ER_hx_magic days = 10 }
+	if = { limit = { has_country_flag = BH3_ER_own_hx_808 } add_timed_idea = { idea = BH3_ER_hx_extra days = 10 } }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_809 }
+		add_political_power = -5
+		add_timed_idea = { idea = BH3_ER_hx_pen days = 6 }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_810 check_variable = { BH3_ER_hx_stacks < 10 } }
+		add_to_variable = { BH3_ER_hx_stacks = 1 }
+	}
+	BH3_ER_hx_recalc = yes
+}
+
+# 核心II：特型武装（幕满 6）
+BH3_ER_hx_arm_fire = {
+	add_timed_idea = { idea = BH3_ER_hx_arm days = 6 }
+	if = { limit = { has_country_flag = BH3_ER_own_hx_812 } add_timed_idea = { idea = BH3_ER_hx_arm_strong days = 6 } }
+	if = { limit = { has_country_flag = BH3_ER_own_hx_813 } add_timed_idea = { idea = BH3_ER_hx_gfield days = 6 } }
+	if = { limit = { has_country_flag = BH3_ER_own_hx_814 } add_timed_idea = { idea = BH3_ER_hx_legend days = 6 } }
+	BH3_ER_hx_recalc = yes
+}
+
+# 每日推进一幕
+BH3_ER_hx_daily = {
+	add_to_variable = { BH3_ER_hx_act = 1 }
+	if = { limit = { check_variable = { BH3_ER_hx_act > 6 } } set_variable = { BH3_ER_hx_act = 6 } }
+
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_807 check_variable = { BH3_ER_hx_act > 5 } }
+		BH3_ER_hx_magic_fire = yes
+		set_variable = { BH3_ER_hx_act = 0 }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_hx_811 check_variable = { BH3_ER_hx_act > 5 } }
+		BH3_ER_hx_arm_fire = yes
+		set_variable = { BH3_ER_hx_act = 0 }
+	}
+
+	BH3_ER_hx_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_801 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_801 } }
+			set_country_flag = BH3_ER_own_hx_801
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_802 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_802 } }
+			set_country_flag = BH3_ER_own_hx_802
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_803 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_803 } }
+			set_country_flag = BH3_ER_own_hx_803
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_804 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_804 } }
+			set_country_flag = BH3_ER_own_hx_804
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_805 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_805 } }
+			set_country_flag = BH3_ER_own_hx_805
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_806 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_806 } }
+			set_country_flag = BH3_ER_own_hx_806
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_807 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_807 } }
+			set_country_flag = BH3_ER_own_hx_807
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_808 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_808 } }
+			set_country_flag = BH3_ER_own_hx_808
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_809 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_809 } }
+			set_country_flag = BH3_ER_own_hx_809
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_810 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_810 } }
+			set_country_flag = BH3_ER_own_hx_810
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_811 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_811 } }
+			set_country_flag = BH3_ER_own_hx_811
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_812 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_812 } }
+			set_country_flag = BH3_ER_own_hx_812
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_813 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_813 } }
+			set_country_flag = BH3_ER_own_hx_813
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_814 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_hx_814 } }
+			set_country_flag = BH3_ER_own_hx_814
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

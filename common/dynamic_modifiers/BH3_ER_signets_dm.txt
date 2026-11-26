@@ -88,3 +88,14 @@ BH3_ER_dm_ds = {
 	stability_factor = BH3_ER_ds_stab
 	war_support_factor = BH3_ER_ds_ws
 }
+
+BH3_ER_dm_hx = {
+	enable = { always = yes }
+
+	production_factory_efficiency_gain_factor = BH3_ER_hx_prod
+	production_factory_max_efficiency_factor = BH3_ER_hx_max
+	special_project_speed_factor = BH3_ER_hx_sps
+	special_project_facility_supply_consumption_factor = BH3_ER_hx_fac
+	line_change_production_efficiency_factor = BH3_ER_hx_line
+	production_factory_start_efficiency_factor = BH3_ER_hx_start
+}

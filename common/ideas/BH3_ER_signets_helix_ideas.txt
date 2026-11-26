@@ -1,0 +1,69 @@
+ideas = {
+	country = {
+
+		# 核心I 惊奇魔术（10 天）
+		BH3_ER_hx_magic = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.25
+				special_project_speed_factor = 0.25
+			}
+		}
+
+		# 808 第七幕：魔术追加生产效率
+		BH3_ER_hx_extra = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+
+		# 809 第八幕：消耗能量换取专项计划速度
+		BH3_ER_hx_pen = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				special_project_speed_factor = 0.35
+			}
+		}
+
+		# 核心II 特型武装（6 天）
+		BH3_ER_hx_arm = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				special_project_speed_factor = 0.20
+				special_project_facility_supply_consumption_factor = -0.20
+			}
+		}
+
+		# 812 木偶剧：强化特型武装
+		BH3_ER_hx_arm_strong = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				special_project_speed_factor = 0.30
+			}
+		}
+
+		# 813 严肃剧：引力场
+		BH3_ER_hx_gfield = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				special_project_speed_factor = 0.30
+			}
+		}
+
+		# 814 传奇剧：额外产能
+		BH3_ER_hx_legend = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.20
+			}
+		}
+	}
+}
