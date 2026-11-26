@@ -1705,16 +1705,135 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# ---------- 其余 11 系：占位（未实装） ----------
-	BH3_ER_dbg_placeholder_11 = {
+
+	# ---------- 繁星：测试决议 ----------
+	BH3_ER_dbg_st_normal = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
-		available = { always = no }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_grant_1101 = yes
+			BH3_ER_grant_1102 = yes
+			BH3_ER_grant_1103 = yes
+			BH3_ER_grant_1104 = yes
+			BH3_ER_grant_1105 = yes
+			BH3_ER_grant_1106 = yes
+		}
 		ai_will_do = { factor = 0 }
 	}
 
+	BH3_ER_dbg_st_core1 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_st_1111
+			clr_country_flag = BH3_ER_own_st_1112
+			clr_country_flag = BH3_ER_own_st_1113
+			clr_country_flag = BH3_ER_own_st_1114
+			BH3_ER_grant_1107 = yes
+			BH3_ER_grant_1108 = yes
+			BH3_ER_grant_1109 = yes
+			BH3_ER_grant_1110 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_st_core2 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_st_1107
+			clr_country_flag = BH3_ER_own_st_1108
+			clr_country_flag = BH3_ER_own_st_1109
+			clr_country_flag = BH3_ER_own_st_1110
+			BH3_ER_grant_1111 = yes
+			BH3_ER_grant_1112 = yes
+			BH3_ER_grant_1113 = yes
+			BH3_ER_grant_1114 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_st_clear = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_st_1101
+			clr_country_flag = BH3_ER_own_st_1102
+			clr_country_flag = BH3_ER_own_st_1103
+			clr_country_flag = BH3_ER_own_st_1104
+			clr_country_flag = BH3_ER_own_st_1105
+			clr_country_flag = BH3_ER_own_st_1106
+			clr_country_flag = BH3_ER_own_st_1107
+			clr_country_flag = BH3_ER_own_st_1108
+			clr_country_flag = BH3_ER_own_st_1109
+			clr_country_flag = BH3_ER_own_st_1110
+			clr_country_flag = BH3_ER_own_st_1111
+			clr_country_flag = BH3_ER_own_st_1112
+			clr_country_flag = BH3_ER_own_st_1113
+			clr_country_flag = BH3_ER_own_st_1114
+			set_variable = { BH3_ER_st_red = 0 }
+			set_variable = { BH3_ER_st_yellow = 0 }
+			set_variable = { BH3_ER_st_blue = 0 }
+			set_variable = { BH3_ER_st_purple = 0 }
+			set_variable = { BH3_ER_st_green = 0 }
+			set_variable = { BH3_ER_st_orange = 0 }
+			set_variable = { BH3_ER_st_stack = 0 }
+			BH3_ER_st_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_st_paint = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_st_dur = 8 }
+			BH3_ER_st_paint_red = yes
+			BH3_ER_st_paint_blue = yes
+			BH3_ER_st_paint_yellow = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_st_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 11 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_st_recalc = yes
+			log = "BH3ST begin"
+			if = { limit = { check_variable = { BH3_ER_st_red > 0 } } log = "BH3ST red_on" }
+			if = { limit = { check_variable = { BH3_ER_st_yellow > 0 } } log = "BH3ST yellow_on" }
+			if = { limit = { check_variable = { BH3_ER_st_blue > 0 } } log = "BH3ST blue_on" }
+			if = { limit = { check_variable = { BH3_ER_st_purple > 0 } } log = "BH3ST purple_on" }
+			if = { limit = { check_variable = { BH3_ER_st_green > 0 } } log = "BH3ST green_on" }
+			if = { limit = { check_variable = { BH3_ER_st_orange > 0 } } log = "BH3ST orange_on" }
+			if = { limit = { check_variable = { BH3_ER_st_army > 0.3 } } log = "BH3ST army_gt30pct" }
+			else_if = { limit = { check_variable = { BH3_ER_st_army > 0 } } log = "BH3ST army_1_30pct" }
+			else = { log = "BH3ST army_0" }
+			log = "BH3ST end"
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 其余 11 系：占位（未实装） ----------
 	BH3_ER_dbg_placeholder_12 = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0

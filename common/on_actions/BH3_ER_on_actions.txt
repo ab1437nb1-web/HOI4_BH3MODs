@@ -23,6 +23,7 @@ on_actions = {
 				BH3_ER_hx_daily = yes
 				BH3_ER_if_daily = yes
 				BH3_ER_db_daily = yes
+				BH3_ER_st_daily = yes
 			}
 			every_country = {
 				limit = {

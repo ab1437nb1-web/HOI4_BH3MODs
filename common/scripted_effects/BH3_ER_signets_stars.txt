@@ -1,0 +1,399 @@
+# 往事乐土·繁星：红/黄/蓝三色 → 陆/海/空协同（2026-11-26 第一版）
+# 颜色：红=陆军、黄=空军、蓝=海军
+# 变量：
+#   BH3_ER_st_red / _yellow / _blue   三色油墨剩余天数（>0 = 激活）
+#   BH3_ER_st_purple / _green / _orange 自身混色（紫=红+蓝、绿=黄+蓝、橙=红+黄）
+#   BH3_ER_st_stack  1104 叠加（0~4）/ BH3_ER_st_dur 油墨持续天数
+#   BH3_ER_st_army / _air / _navy / _bth 输出给 DM
+
+BH3_ER_st_recalc = {
+	set_variable = { BH3_ER_st_army = 0 }
+	set_variable = { BH3_ER_st_air = 0 }
+	set_variable = { BH3_ER_st_navy = 0 }
+	set_variable = { BH3_ER_st_bth = 0 }
+
+	# 三色基础
+	if = { limit = { check_variable = { BH3_ER_st_red > 0 } } add_to_variable = { BH3_ER_st_army = 0.05 } }
+	if = { limit = { check_variable = { BH3_ER_st_yellow > 0 } } add_to_variable = { BH3_ER_st_air = 0.05 } }
+	if = { limit = { check_variable = { BH3_ER_st_blue > 0 } } add_to_variable = { BH3_ER_st_navy = 0.05 } }
+
+	# 1104 黑色：每次染色叠一层
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1104 check_variable = { BH3_ER_st_stack > 0 } }
+		set_temp_variable = { st_t = BH3_ER_st_stack }
+		multiply_variable = { st_t = 0.02 }
+		add_to_variable = { BH3_ER_st_army = st_t }
+		add_to_variable = { BH3_ER_st_air = st_t }
+		add_to_variable = { BH3_ER_st_navy = st_t }
+	}
+
+	# 核心I 1107：场上颜色数 1/2/3 种 → 三军 +10%/20%/50%
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1107 }
+		set_temp_variable = { st_colors = 0 }
+		if = { limit = { check_variable = { BH3_ER_st_red > 0 } } add_to_variable = { st_colors = 1 } }
+		if = { limit = { check_variable = { BH3_ER_st_yellow > 0 } } add_to_variable = { st_colors = 1 } }
+		if = { limit = { check_variable = { BH3_ER_st_blue > 0 } } add_to_variable = { st_colors = 1 } }
+		set_temp_variable = { st_t = 0.1 }
+		if = { limit = { check_variable = { st_colors > 1 } } set_temp_variable = { st_t = 0.2 } }
+		if = { limit = { check_variable = { st_colors > 2 } } set_temp_variable = { st_t = 0.5 } }
+		if = { limit = { check_variable = { st_colors > 0 } }
+			add_to_variable = { BH3_ER_st_army = st_t }
+			add_to_variable = { BH3_ER_st_air = st_t }
+			add_to_variable = { BH3_ER_st_navy = st_t }
+		}
+	}
+
+	# 1108 红+蓝（野花）：陆海协同
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_st_1108
+			check_variable = { BH3_ER_st_red > 0 }
+			check_variable = { BH3_ER_st_blue > 0 }
+		}
+		add_to_variable = { BH3_ER_st_army = 0.10 }
+		add_to_variable = { BH3_ER_st_navy = 0.10 }
+	}
+	# 1109 红+黄（火焰）：陆军突破 + 空军攻击
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_st_1109
+			check_variable = { BH3_ER_st_red > 0 }
+			check_variable = { BH3_ER_st_yellow > 0 }
+		}
+		add_to_variable = { BH3_ER_st_bth = 0.15 }
+	}
+	# 1110 蓝+黄（叶子）：海空协同
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_st_1110
+			check_variable = { BH3_ER_st_blue > 0 }
+			check_variable = { BH3_ER_st_yellow > 0 }
+		}
+		add_to_variable = { BH3_ER_st_navy = 0.10 }
+		add_to_variable = { BH3_ER_st_air = 0.10 }
+	}
+
+	# 自身混色
+	if = {
+		limit = { check_variable = { BH3_ER_st_purple > 0 } }
+		add_to_variable = { BH3_ER_st_army = 0.075 }
+		add_to_variable = { BH3_ER_st_navy = 0.075 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_st_green > 0 } }
+		add_to_variable = { BH3_ER_st_air = 0.075 }
+		add_to_variable = { BH3_ER_st_navy = 0.075 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_st_orange > 0 } }
+		add_to_variable = { BH3_ER_st_army = 0.075 }
+		add_to_variable = { BH3_ER_st_air = 0.075 }
+	}
+
+	clamp_variable = { var = BH3_ER_st_army min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_st_air min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_st_navy min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_st_bth min = 0 max = 1.0 }
+}
+
+# ---------- 染色 ----------
+BH3_ER_st_paint_red = {
+	set_variable = { BH3_ER_st_red = BH3_ER_st_dur }
+	if = { limit = { has_country_flag = BH3_ER_own_st_1104 check_variable = { BH3_ER_st_stack < 4 } } add_to_variable = { BH3_ER_st_stack = 1 } }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1105 check_variable = { BH3_ER_st_pp_cd = 0 } }
+		add_political_power = 12
+		set_variable = { BH3_ER_st_pp_cd = 5 }
+	}
+	# 红+蓝
+	if = {
+		limit = { check_variable = { BH3_ER_st_blue > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1108 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1112 } set_variable = { BH3_ER_st_purple = 15 } }
+	}
+	# 红+黄
+	if = {
+		limit = { check_variable = { BH3_ER_st_yellow > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1109 } add_timed_idea = { idea = BH3_ER_st_pen days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = {
+			limit = { has_country_flag = BH3_ER_own_st_1114 }
+			set_variable = { BH3_ER_st_orange = 15 }
+			every_enemy_country = { add_timed_idea = { idea = BH3_ER_st_orange_mark days = 10 } }
+		}
+	}
+	BH3_ER_st_recalc = yes
+}
+
+BH3_ER_st_paint_blue = {
+	set_variable = { BH3_ER_st_blue = BH3_ER_st_dur }
+	if = { limit = { has_country_flag = BH3_ER_own_st_1104 check_variable = { BH3_ER_st_stack < 4 } } add_to_variable = { BH3_ER_st_stack = 1 } }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1105 check_variable = { BH3_ER_st_pp_cd = 0 } }
+		add_political_power = 12
+		set_variable = { BH3_ER_st_pp_cd = 5 }
+	}
+	# 蓝+红
+	if = {
+		limit = { check_variable = { BH3_ER_st_red > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1108 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1112 } set_variable = { BH3_ER_st_purple = 15 } }
+	}
+	# 蓝+黄
+	if = {
+		limit = { check_variable = { BH3_ER_st_yellow > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1110 } add_timed_idea = { idea = BH3_ER_st_wave days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1113 } set_variable = { BH3_ER_st_green = 15 } }
+	}
+	BH3_ER_st_recalc = yes
+}
+
+BH3_ER_st_paint_yellow = {
+	set_variable = { BH3_ER_st_yellow = BH3_ER_st_dur }
+	if = { limit = { has_country_flag = BH3_ER_own_st_1104 check_variable = { BH3_ER_st_stack < 4 } } add_to_variable = { BH3_ER_st_stack = 1 } }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1105 check_variable = { BH3_ER_st_pp_cd = 0 } }
+		add_political_power = 12
+		set_variable = { BH3_ER_st_pp_cd = 5 }
+	}
+	# 黄+红
+	if = {
+		limit = { check_variable = { BH3_ER_st_red > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1109 } add_timed_idea = { idea = BH3_ER_st_pen days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = {
+			limit = { has_country_flag = BH3_ER_own_st_1114 }
+			set_variable = { BH3_ER_st_orange = 15 }
+			every_enemy_country = { add_timed_idea = { idea = BH3_ER_st_orange_mark days = 10 } }
+		}
+	}
+	# 黄+蓝
+	if = {
+		limit = { check_variable = { BH3_ER_st_blue > 0 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1110 } add_timed_idea = { idea = BH3_ER_st_wave days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1111 } add_timed_idea = { idea = BH3_ER_st_harmony days = 5 } }
+		if = { limit = { has_country_flag = BH3_ER_own_st_1113 } set_variable = { BH3_ER_st_green = 15 } }
+	}
+	BH3_ER_st_recalc = yes
+}
+
+# 每日
+BH3_ER_st_daily = {
+	# 油墨持续
+	set_variable = { BH3_ER_st_dur = 8 }
+	if = { limit = { has_country_flag = BH3_ER_own_st_1106 } add_to_variable = { BH3_ER_st_dur = 5 } }
+
+	# 计时器衰减
+	if = { limit = { check_variable = { BH3_ER_st_red > 0 } } subtract_from_variable = { BH3_ER_st_red = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_yellow > 0 } } subtract_from_variable = { BH3_ER_st_yellow = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_blue > 0 } } subtract_from_variable = { BH3_ER_st_blue = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_purple > 0 } } subtract_from_variable = { BH3_ER_st_purple = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_green > 0 } } subtract_from_variable = { BH3_ER_st_green = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_orange > 0 } } subtract_from_variable = { BH3_ER_st_orange = 1 } }
+	if = { limit = { check_variable = { BH3_ER_st_pp_cd > 0 } } subtract_from_variable = { BH3_ER_st_pp_cd = 1 } }
+
+	# 染色事件
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1101 }
+		add_to_variable = { BH3_ER_st_p1 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_st_p1 > 2 } }
+			set_variable = { BH3_ER_st_p1 = 0 }
+			BH3_ER_st_paint_red = yes
+		}
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1102 }
+		add_to_variable = { BH3_ER_st_p2 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_st_p2 > 3 } }
+			set_variable = { BH3_ER_st_p2 = 0 }
+			BH3_ER_st_paint_blue = yes
+		}
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_st_1103 }
+		add_to_variable = { BH3_ER_st_p3 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_st_p3 > 4 } }
+			set_variable = { BH3_ER_st_p3 = 0 }
+			BH3_ER_st_paint_yellow = yes
+		}
+	}
+
+	BH3_ER_st_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_1101 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1101 } }
+			set_country_flag = BH3_ER_own_st_1101
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1102 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1102 } }
+			set_country_flag = BH3_ER_own_st_1102
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1103 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1103 } }
+			set_country_flag = BH3_ER_own_st_1103
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1104 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1104 } }
+			set_country_flag = BH3_ER_own_st_1104
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1105 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1105 } }
+			set_country_flag = BH3_ER_own_st_1105
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1106 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1106 } }
+			set_country_flag = BH3_ER_own_st_1106
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1107 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1107 } }
+			set_country_flag = BH3_ER_own_st_1107
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1108 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1108 } }
+			set_country_flag = BH3_ER_own_st_1108
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1109 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1109 } }
+			set_country_flag = BH3_ER_own_st_1109
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1110 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1110 } }
+			set_country_flag = BH3_ER_own_st_1110
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1111 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1111 } }
+			set_country_flag = BH3_ER_own_st_1111
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1112 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1112 } }
+			set_country_flag = BH3_ER_own_st_1112
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1113 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1113 } }
+			set_country_flag = BH3_ER_own_st_1113
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1114 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_st_1114 } }
+			set_country_flag = BH3_ER_own_st_1114
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

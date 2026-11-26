@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+
+		# 色相调和（三军协同窗口）
+		BH3_ER_st_harmony = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				army_attack_factor = 0.10
+				air_attack_factor = 0.10
+				naval_damage_factor = 0.10
+			}
+		}
+
+		# 红+黄：火焰（穿透/空攻）
+		BH3_ER_st_pen = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				breakthrough_factor = 0.20
+				air_attack_factor = 0.10
+			}
+		}
+
+		# 蓝+黄：叶子（海空）
+		BH3_ER_st_wave = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				naval_damage_factor = 0.10
+				air_attack_factor = 0.10
+			}
+		}
+
+		# 红+黄 的敌方标记（橙）
+		BH3_ER_st_orange_mark = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				air_defence_factor = -0.20
+				naval_defense_factor = -0.20
+			}
+		}
+	}
+}
