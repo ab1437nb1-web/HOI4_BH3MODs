@@ -994,6 +994,33 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# 鏖灭：强制模拟生命值为 40 / 100（只对当前这次重算有效，次日会被投降度覆盖）
+	BH3_ER_dbg_az_hp40 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_surr_hp = 40 }
+			BH3_ER_az_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_hp100 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_surr_hp = 100 }
+			BH3_ER_az_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_dbg_az_log = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0

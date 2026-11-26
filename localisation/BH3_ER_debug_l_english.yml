@@ -110,3 +110,7 @@
  BH3_ER_dbg_az_loss:0 "Trigger one life loss"
  BH3_ER_dbg_az_full:0 "Fill burn charges (both cores)"
  BH3_ER_dbg_az_log:0 "Write Decimation values to game.log"
+ BH3_ER_dbg_az_hp40:0 "[DEBUG] Decimation: simulate 40 HP"
+ BH3_ER_dbg_az_hp40_desc:0 "Forces BH3_ER_surr_hp = 40 and recalculates (until next daily tick)."
+ BH3_ER_dbg_az_hp100:0 "[DEBUG] Decimation: simulate 100 HP"
+ BH3_ER_dbg_az_hp100_desc:0 "Forces BH3_ER_surr_hp = 100 and recalculates."

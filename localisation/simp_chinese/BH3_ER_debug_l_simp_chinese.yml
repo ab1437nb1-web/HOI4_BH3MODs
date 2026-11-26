@@ -110,3 +110,7 @@
  BH3_ER_dbg_az_loss:0 "触发一次生命下降"
  BH3_ER_dbg_az_full:0 "直接充满燃血充能"
  BH3_ER_dbg_az_log:0 "鏖灭数值写入日志"
+ BH3_ER_dbg_az_hp40:0 "【调试】鏖灭：模拟 40 生命"
+ BH3_ER_dbg_az_hp40_desc:0 "强制 BH3_ER_surr_hp = 40 并重算（次日会被投降度覆盖）。"
+ BH3_ER_dbg_az_hp100:0 "【调试】鏖灭：模拟满生命"
+ BH3_ER_dbg_az_hp100_desc:0 "强制 BH3_ER_surr_hp = 100 并重算。"
