@@ -744,7 +744,7 @@ BH3_UD_apply = yes
 按要求把核心与资源获取绑定：
 
 - 拟态层数 BH3_ER_if_stacks（0~5），每 3 天 +1，代表召唤物/协同者数量
-- 产出走 DM BH3_ER_dm_if：production_lack_of_resource_penalty_factor / resource_trade_cost_bonus_per_factory（每座工厂可交易的资源数量）/ trade_opinion_factor（贸易协定好感系数）/ trade_cost_for_target_factor（目标国贸易成本）/ industrial_capacity_factory / production_oil_factor
+- 产出走 DM BH3_ER_dm_if：production_lack_of_resource_penalty_factor / resource_trade_cost_bonus_per_factory（每座工厂可交易的资源数量，**整数加成**，与原版德国经济国策同类词条一致）/ trade_opinion_factor（贸易协定好感系数，百分比）/ trade_cost_for_target_factor（目标国贸易成本，百分比）/ industrial_capacity_factory / production_oil_factor
 - 资源注入用 random_owned_state 加 add_resource，覆盖原版全部 7 种资源（oil/aluminium/rubber/tungsten/steel/chromium/coal）
 - 核心I【思维同化】：拟态满 5 → 8 天窗口（产能 +15%、短缺惩罚 -10%）
 - 核心II【意识同步】：转移进度每天 +20，满 100 → 随机州资源注入 + 12/18 天窗口（产能 +20%、石油 +20%）
@@ -756,19 +756,19 @@ BH3_UD_apply = yes
 | ID | 名称 | 类型 | HOI4 效果 |
 |---|---|---|---|
 | 901 | 利齿的「V」 | 普通 | 每层拟态：资源短缺惩罚 -5%（上限 -25%） |
-| 902 | 缠环的「P」 | 普通 | 每层拟态：每座工厂可交易的资源数量 +3%（上限 +15%） |
+| 902 | 缠环的「P」 | 普通 | 拟态 2 层起每座工厂可多交易 1 份资源，4 层起 +2（整数加成，上限 +2） |
 | 903 | 静默的「B」 | 普通 | 每层拟态：产能 +2%、贸易协定好感系数 +4%（上限 +20%） |
 | 904 | 吻毒的「E」 | 普通 | 每层拟态：石油产出 +5%（上限 +25%） |
 | 905 | 栖影的「C」 | 普通 | 每层拟态：目标国贸易成本 -2%（上限 -10%） |
 | 906 | 黯瞳的「T」 | 普通 | 每 5 天 2 份随机资源（7 种之一，+4/份，注入随机州） |
 | 907 | 无限的「X」 | 核心Ⅰ | 拟态满 5 → 思维同化（8 天） |
 | 908 | 死亡的「X」 | 增幅 | 同化期间短缺惩罚再 -5% |
-| 909 | 未知的「X」 | 增幅 | 同化期间资源进口效率 +10% |
+| 909 | 未知的「X」 | 增幅 | 同化期间每座工厂可多交易 1 份资源 |
 | 910 | 新生的「X」 | 增幅 | 同化期间石油产出 +10% |
 | 911 | 无限的「M」 | 核心Ⅱ | 转移进度 +20/天，满 100% → 意识同步（随机注入 4 份 7 种资源 + 12 天窗口） |
 | 912 | 代祭的「M」 | 增幅 | 同步窗口延长至 18 天，同步期间进度额外 +15/天 |
 | 913 | 不灭的「M」 | 增幅 | 同步期间产能再 +10% |
-| 914 | 崩落的「M」 | 增幅 | 同步期间资源进口效率 +10% |
+| 914 | 崩落的「M」 | 增幅 | 同步期间每座工厂可多交易 1 份资源 |
 
 ### 14.3 调试
 
