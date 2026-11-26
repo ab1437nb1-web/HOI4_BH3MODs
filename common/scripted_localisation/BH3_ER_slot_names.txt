@@ -169,6 +169,62 @@ defined_text = {
 		localization_key = BH3_ER_signet_314
 	}
 	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 401 } }
+		localization_key = BH3_ER_signet_401
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 402 } }
+		localization_key = BH3_ER_signet_402
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 403 } }
+		localization_key = BH3_ER_signet_403
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 404 } }
+		localization_key = BH3_ER_signet_404
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 405 } }
+		localization_key = BH3_ER_signet_405
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 406 } }
+		localization_key = BH3_ER_signet_406
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 407 } }
+		localization_key = BH3_ER_signet_407
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 408 } }
+		localization_key = BH3_ER_signet_408
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 409 } }
+		localization_key = BH3_ER_signet_409
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 410 } }
+		localization_key = BH3_ER_signet_410
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 411 } }
+		localization_key = BH3_ER_signet_411
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 412 } }
+		localization_key = BH3_ER_signet_412
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 413 } }
+		localization_key = BH3_ER_signet_413
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c1 = 414 } }
+		localization_key = BH3_ER_signet_414
+	}
+	text = {
 		localization_key = BH3_ER_signet_none
 	}
 }
@@ -344,6 +400,62 @@ defined_text = {
 		localization_key = BH3_ER_signet_314
 	}
 	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 401 } }
+		localization_key = BH3_ER_signet_401
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 402 } }
+		localization_key = BH3_ER_signet_402
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 403 } }
+		localization_key = BH3_ER_signet_403
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 404 } }
+		localization_key = BH3_ER_signet_404
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 405 } }
+		localization_key = BH3_ER_signet_405
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 406 } }
+		localization_key = BH3_ER_signet_406
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 407 } }
+		localization_key = BH3_ER_signet_407
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 408 } }
+		localization_key = BH3_ER_signet_408
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 409 } }
+		localization_key = BH3_ER_signet_409
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 410 } }
+		localization_key = BH3_ER_signet_410
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 411 } }
+		localization_key = BH3_ER_signet_411
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 412 } }
+		localization_key = BH3_ER_signet_412
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 413 } }
+		localization_key = BH3_ER_signet_413
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c2 = 414 } }
+		localization_key = BH3_ER_signet_414
+	}
+	text = {
 		localization_key = BH3_ER_signet_none
 	}
 }
@@ -517,6 +629,62 @@ defined_text = {
 	text = {
 		trigger = { check_variable = { BH3_ER_c3 = 314 } }
 		localization_key = BH3_ER_signet_314
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 401 } }
+		localization_key = BH3_ER_signet_401
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 402 } }
+		localization_key = BH3_ER_signet_402
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 403 } }
+		localization_key = BH3_ER_signet_403
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 404 } }
+		localization_key = BH3_ER_signet_404
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 405 } }
+		localization_key = BH3_ER_signet_405
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 406 } }
+		localization_key = BH3_ER_signet_406
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 407 } }
+		localization_key = BH3_ER_signet_407
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 408 } }
+		localization_key = BH3_ER_signet_408
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 409 } }
+		localization_key = BH3_ER_signet_409
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 410 } }
+		localization_key = BH3_ER_signet_410
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 411 } }
+		localization_key = BH3_ER_signet_411
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 412 } }
+		localization_key = BH3_ER_signet_412
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 413 } }
+		localization_key = BH3_ER_signet_413
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_c3 = 414 } }
+		localization_key = BH3_ER_signet_414
 	}
 	text = {
 		localization_key = BH3_ER_signet_none

@@ -1,0 +1,309 @@
+# 往事乐土·浮生：无伤叠层体系（2026-11-26 第一版）
+# 变量：
+#   BH3_ER_fs_norm / _max  普通刻印叠加层（默认 40 上限；410 -> 60；414 -> +20）
+#   BH3_ER_fs_charge       核心I【战士的决意】层数（0~6）
+#   BH3_ER_fs_mem          核心II【战士的回忆】层数（0~6）
+#   BH3_ER_fs_guard_timer  无敌可用窗口（天，供指挥官技能 allowed 判定）
+# 输出：DM 的 atk/def/bth/maj/min
+
+BH3_ER_fs_recalc = {
+	set_variable = { BH3_ER_fs_atk = 0 }
+	set_variable = { BH3_ER_fs_def = 0 }
+	set_variable = { BH3_ER_fs_bth = 0 }
+	set_variable = { BH3_ER_fs_maj = 0 }
+	set_variable = { BH3_ER_fs_min = 0 }
+
+	# 普通刻印：每层数值
+	if = { limit = { has_country_flag = BH3_ER_own_fs_401 } add_to_variable = { BH3_ER_fs_atk = 0.01 } }
+	if = { limit = { has_country_flag = BH3_ER_own_fs_402 } add_to_variable = { BH3_ER_fs_bth = 0.008 } }
+	if = { limit = { has_country_flag = BH3_ER_own_fs_403 } add_to_variable = { BH3_ER_fs_def = 0.008 } }
+	if = { limit = { has_country_flag = BH3_ER_own_fs_404 } add_to_variable = { BH3_ER_fs_maj = 0.006 } }
+	if = { limit = { has_country_flag = BH3_ER_own_fs_405 } add_to_variable = { BH3_ER_fs_def = 0.008 } }
+	if = { limit = { has_country_flag = BH3_ER_own_fs_406 } add_to_variable = { BH3_ER_fs_maj = 0.01 } }
+
+	# 乘以层数
+	multiply_variable = { BH3_ER_fs_atk = BH3_ER_fs_norm }
+	multiply_variable = { BH3_ER_fs_def = BH3_ER_fs_norm }
+	multiply_variable = { BH3_ER_fs_bth = BH3_ER_fs_norm }
+	multiply_variable = { BH3_ER_fs_maj = BH3_ER_fs_norm }
+	set_variable = { BH3_ER_fs_min = BH3_ER_fs_maj }
+
+	# 凡尘总总：全伤害减免的 80% 转为全伤害加成
+	if = { limit = { has_country_flag = BH3_ER_own_fs_412 } add_to_variable = { BH3_ER_fs_atk = { value = BH3_ER_fs_def multiply = 0.8 } } }
+
+	# 兜底
+	clamp_variable = { var = BH3_ER_fs_atk min = 0 max = 6.0 }
+	clamp_variable = { var = BH3_ER_fs_def min = 0 max = 6.0 }
+	clamp_variable = { var = BH3_ER_fs_bth min = 0 max = 4.0 }
+	clamp_variable = { var = BH3_ER_fs_maj min = 0 max = 4.0 }
+	clamp_variable = { var = BH3_ER_fs_min min = 0 max = 4.0 }
+}
+
+# 受击结算
+BH3_ER_fs_hit = {
+	add_to_variable = { BH3_ER_fs_hits = 1 }
+
+	# 优先用【战士的回忆】抵消（核心II）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_fs_411 check_variable = { BH3_ER_fs_mem > 0 } }
+		subtract_from_variable = { BH3_ER_fs_mem = 1 }
+		set_variable = { BH3_ER_fs_guard_timer = 2 }
+		# 如羽随风：抵消后回复 15 能量（政治点）
+		if = { limit = { has_country_flag = BH3_ER_own_fs_413 } add_political_power = 15 }
+		# 怎堪梦醒：失去全部回忆时恢复 1 层（每场战斗一次）
+		if = {
+			limit = {
+				check_variable = { BH3_ER_fs_mem = 0 }
+				has_country_flag = BH3_ER_own_fs_414
+				NOT = { has_country_flag = BH3_ER_fs_wake_used }
+			}
+			set_country_flag = BH3_ER_fs_wake_used
+			subtract_from_variable = { BH3_ER_fs_max = 10 }
+			set_variable = { BH3_ER_fs_mem = 1 }
+		}
+	}
+	# 其次用【战士的决意】抵消（核心I）并反伤
+	else_if = {
+		limit = { has_country_flag = BH3_ER_own_fs_407 check_variable = { BH3_ER_fs_charge > 0 } }
+		subtract_from_variable = { BH3_ER_fs_charge = 1 }
+		BH3_UD_begin = yes
+		set_variable = { BH3_UD_mode = 2 }
+		set_temp_variable = { fs_power = BH3_ER_fs_charge }
+		multiply_variable = { fs_power = 0.03 }
+		clamp_variable = { var = fs_power min = 0.01 max = 0.18 }
+		set_variable = { BH3_UD_org = fs_power }
+		set_variable = { BH3_UD_str = fs_power }
+		BH3_UD_apply = yes
+	}
+
+	# 普通层受击 -10
+	if = {
+		limit = { check_variable = { BH3_ER_fs_norm > 9 } }
+		subtract_from_variable = { BH3_ER_fs_norm = 10 }
+	}
+	else_if = { set_variable = { BH3_ER_fs_norm = 0 } }
+
+	BH3_ER_fs_recalc = yes
+}
+
+# 每日：叠层、决意充能、受击判定
+BH3_ER_fs_daily = {
+	# 战士的回忆：持有期间普通层立即满层
+	if = {
+		limit = { has_country_flag = BH3_ER_own_fs_411 check_variable = { BH3_ER_fs_mem > 0 } }
+		set_variable = { BH3_ER_fs_norm = BH3_ER_fs_max }
+	}
+	else = {
+		# 正常叠层：+1（拥有 409 时每层决意额外 +1）
+		set_temp_variable = { fs_gain = 1 }
+		if = {
+			limit = { has_country_flag = BH3_ER_own_fs_409 }
+			add_to_variable = { fs_gain = BH3_ER_fs_charge }
+		}
+		add_to_variable = { BH3_ER_fs_norm = fs_gain }
+		if = {
+			limit = { check_variable = { BH3_ER_fs_norm > BH3_ER_fs_max } }
+			set_variable = { BH3_ER_fs_norm = BH3_ER_fs_max }
+		}
+	}
+
+	# 核心I：每 10 秒 1 层决意（此处按天 +1；410 且普通层 30+ 时再快）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_fs_407 check_variable = { BH3_ER_fs_charge < 6 } }
+		add_to_variable = { BH3_ER_fs_charge = 1 }
+		if = {
+			limit = { has_country_flag = BH3_ER_own_fs_410 check_variable = { BH3_ER_fs_norm > 29 } check_variable = { BH3_ER_fs_charge < 6 } }
+			add_to_variable = { BH3_ER_fs_charge = 1 }
+		}
+	}
+
+	# 无敌窗口倒计时
+	if = {
+		limit = { check_variable = { BH3_ER_fs_guard_timer > 0 } }
+		subtract_from_variable = { BH3_ER_fs_guard_timer = 1 }
+	}
+
+	# 受击判定：战争期间每天 30% 概率
+	if = {
+		limit = { has_war = yes }
+		random_list = {
+			30 = { BH3_ER_fs_hit = yes }
+			70 = { set_temp_variable = { fs_roll = 0 } }
+		}
+	}
+
+	BH3_ER_fs_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_401 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_401 } }
+			set_country_flag = BH3_ER_own_fs_401
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_402 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_402 } }
+			set_country_flag = BH3_ER_own_fs_402
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_403 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_403 } }
+			set_country_flag = BH3_ER_own_fs_403
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_404 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_404 } }
+			set_country_flag = BH3_ER_own_fs_404
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_405 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_405 } }
+			set_country_flag = BH3_ER_own_fs_405
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_406 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_406 } }
+			set_country_flag = BH3_ER_own_fs_406
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_407 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_407 } }
+			set_country_flag = BH3_ER_own_fs_407
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_408 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_408 } }
+			set_country_flag = BH3_ER_own_fs_408
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_fs_charge = 3 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_409 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_409 } }
+			set_country_flag = BH3_ER_own_fs_409
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_410 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_410 } }
+			set_country_flag = BH3_ER_own_fs_410
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_411 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_411 } }
+			set_country_flag = BH3_ER_own_fs_411
+			add_to_variable = { BH3_ER_signets = 1 }
+			set_variable = { BH3_ER_fs_mem = 6 }
+			set_variable = { BH3_ER_fs_norm = BH3_ER_fs_max }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_412 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_412 } }
+			set_country_flag = BH3_ER_own_fs_412
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_413 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_413 } }
+			set_country_flag = BH3_ER_own_fs_413
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_414 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_fs_414 } }
+			set_country_flag = BH3_ER_own_fs_414
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

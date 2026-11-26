@@ -1,0 +1,24 @@
+ability = {
+
+	# 浮生：无敌窗口（受击抵消后可用；unit_modifiers 的伤害倍率实测有效）
+	BH3_ER_fs_invincible = {
+		name = ABILITY_BH3_ER_FS_INVINCIBLE
+		desc = ABILITY_BH3_ER_FS_INVINCIBLE_DESC
+		icon = GFX_ability_chi_force_attack
+		sound_effect = command_power_ability_offensive
+		type = army_leader
+		cost = 0.02
+		duration = 24
+		cooldown = 72
+		allowed = {
+			is_leading_army_group = no
+			is_border_war = no
+			OWNER = { check_variable = { BH3_ER_fs_guard_timer > 0 } }
+		}
+		unit_modifiers = {
+			str_damage_multiplier = -1.0
+			org_damage_multiplier = -1.0
+		}
+		ai_will_do = { factor = 0 }
+	}
+}

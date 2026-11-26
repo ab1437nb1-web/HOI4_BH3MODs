@@ -27,6 +27,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/elysianrealm/signet_Setsuna.png"
 	}
 
+	spriteType = {
+		name = "GFX_BH3_ER_series_fs"
+		texturefile = "gfx/interface/elysianrealm/signet_Fusheng.png"
+	}
+
 	# 刻印抽取：传送门风格卡片
 	spriteType = {
 		name = "GFX_BH3_ER_portal_tile"

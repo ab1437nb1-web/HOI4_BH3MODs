@@ -39,3 +39,13 @@ BH3_ER_dm_sts = {
 	army_attack_against_major_factor = BH3_ER_sts_maj
 	army_attack_against_minor_factor = BH3_ER_sts_min
 }
+
+BH3_ER_dm_fs = {
+	enable = { always = yes }
+
+	army_attack_factor = BH3_ER_fs_atk
+	army_defence_factor = BH3_ER_fs_def
+	breakthrough_factor = BH3_ER_fs_bth
+	army_attack_against_major_factor = BH3_ER_fs_maj
+	army_attack_against_minor_factor = BH3_ER_fs_min
+}
