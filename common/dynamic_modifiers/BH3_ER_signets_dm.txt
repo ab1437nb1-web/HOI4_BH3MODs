@@ -122,3 +122,12 @@ BH3_ER_dm_db = {
 	navy_visibility = BH3_ER_db_vis
 	air_maximum_speed_factor = BH3_ER_db_spd
 }
+
+BH3_ER_dm_st = {
+	enable = { always = yes }
+
+	army_attack_factor = BH3_ER_st_army
+	air_attack_factor = BH3_ER_st_air
+	naval_damage_factor = BH3_ER_st_navy
+	breakthrough_factor = BH3_ER_st_bth
+}
