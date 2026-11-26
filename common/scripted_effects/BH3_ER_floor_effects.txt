@@ -40,6 +40,18 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_fs_bth = 0 }
 	set_variable = { BH3_ER_fs_maj = 0 }
 	set_variable = { BH3_ER_fs_min = 0 }
+	set_variable = { BH3_ER_az_charge = 0 }
+	set_variable = { BH3_ER_az_yi = 0 }
+	set_variable = { BH3_ER_az_usp_timer = 0 }
+	set_variable = { BH3_ER_az_burn_timer = 0 }
+	set_variable = { BH3_ER_az_lost = 0 }
+	set_variable = { BH3_ER_az_atk = 0 }
+	set_variable = { BH3_ER_az_def = 0 }
+	set_variable = { BH3_ER_az_bth = 0 }
+	set_variable = { BH3_ER_az_maj = 0 }
+	set_variable = { BH3_ER_az_min = 0 }
+	set_variable = { BH3_ER_az_org = 0 }
+	set_variable = { BH3_ER_az_usp = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }
@@ -80,6 +92,7 @@ BH3_ER_init_run = {
 		add_dynamic_modifier = { modifier = BH3_ER_dm_gold }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_sts }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_fs }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_az }
 		set_country_flag = BH3_ER_dm_added
 	}
 

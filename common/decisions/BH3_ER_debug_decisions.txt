@@ -879,21 +879,153 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
+
+	# ---------- 鏖灭：测试决议 ----------
+	BH3_ER_dbg_az_normal = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_grant_501 = yes
+			BH3_ER_grant_502 = yes
+			BH3_ER_grant_503 = yes
+			BH3_ER_grant_504 = yes
+			BH3_ER_grant_505 = yes
+			BH3_ER_grant_506 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_core1 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_az_511
+			clr_country_flag = BH3_ER_own_az_512
+			clr_country_flag = BH3_ER_own_az_513
+			clr_country_flag = BH3_ER_own_az_514
+			set_variable = { BH3_ER_az_yi = 0 }
+			BH3_ER_grant_507 = yes
+			BH3_ER_grant_508 = yes
+			BH3_ER_grant_509 = yes
+			BH3_ER_grant_510 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_core2 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_az_507
+			clr_country_flag = BH3_ER_own_az_508
+			clr_country_flag = BH3_ER_own_az_509
+			clr_country_flag = BH3_ER_own_az_510
+			set_variable = { BH3_ER_az_charge = 0 }
+			BH3_ER_grant_511 = yes
+			BH3_ER_grant_512 = yes
+			BH3_ER_grant_513 = yes
+			BH3_ER_grant_514 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_clear = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_az_501
+			clr_country_flag = BH3_ER_own_az_502
+			clr_country_flag = BH3_ER_own_az_503
+			clr_country_flag = BH3_ER_own_az_504
+			clr_country_flag = BH3_ER_own_az_505
+			clr_country_flag = BH3_ER_own_az_506
+			clr_country_flag = BH3_ER_own_az_507
+			clr_country_flag = BH3_ER_own_az_508
+			clr_country_flag = BH3_ER_own_az_509
+			clr_country_flag = BH3_ER_own_az_510
+			clr_country_flag = BH3_ER_own_az_511
+			clr_country_flag = BH3_ER_own_az_512
+			clr_country_flag = BH3_ER_own_az_513
+			clr_country_flag = BH3_ER_own_az_514
+			set_variable = { BH3_ER_az_charge = 0 }
+			set_variable = { BH3_ER_az_yi = 0 }
+			set_variable = { BH3_ER_az_usp_timer = 0 }
+			set_variable = { BH3_ER_az_burn_timer = 0 }
+			BH3_ER_az_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_loss = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_az_on_loss = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_full = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_az_charge = 1000 }
+			set_variable = { BH3_ER_az_yi = 1800 }
+			BH3_ER_az_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_az_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_az_recalc = yes
+			log = "BH3AZ begin"
+			if = { limit = { check_variable = { BH3_ER_az_lost > 49 } } log = "BH3AZ lost_gt50" }
+			else_if = { limit = { check_variable = { BH3_ER_az_lost > 19 } } log = "BH3AZ lost_20_50" }
+			else = { log = "BH3AZ lost_lt20" }
+			if = { limit = { check_variable = { BH3_ER_az_charge > 999 } } log = "BH3AZ charge_full" }
+			else_if = { limit = { check_variable = { BH3_ER_az_charge > 0 } } log = "BH3AZ charge_mid" }
+			else = { log = "BH3AZ charge_0" }
+			if = { limit = { check_variable = { BH3_ER_az_yi > 1499 } } log = "BH3AZ yi_gt1500" }
+			else_if = { limit = { check_variable = { BH3_ER_az_yi > 0 } } log = "BH3AZ yi_mid" }
+			else = { log = "BH3AZ yi_0" }
+			if = { limit = { check_variable = { BH3_ER_az_atk > 0.5 } } log = "BH3AZ atk_gt50pct" }
+			else_if = { limit = { check_variable = { BH3_ER_az_atk > 0.0 } } log = "BH3AZ atk_1_50pct" }
+			else = { log = "BH3AZ atk_0" }
+			log = "BH3AZ end"
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 	# ---------- 其余 11 系：占位（未实装） ----------
 	BH3_ER_dbg_placeholder_3 = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 3 } }
-		available = { always = no }
-		ai_will_do = { factor = 0 }
-	}
-
-	BH3_ER_dbg_placeholder_5 = {
-		icon = GFX_BH3_ER_icon_small
-		cost = 0
-		allowed = { always = yes }
-		visible = { check_variable = { BH3_ER_dbg_open = 5 } }
 		available = { always = no }
 		ai_will_do = { factor = 0 }
 	}

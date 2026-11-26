@@ -1,0 +1,321 @@
+# 往事乐土·鏖灭：低生命/燃血体系（2026-11-26 第一版）
+# 生命值代理：BH3_ER_surr_hp（100 = 满血，0 = 濒临投降），来源于投降倾向分档
+# 注意：surrender_progress 不随领土线性变化，所有阈值都留了安全余量
+# 变量：
+#   BH3_ER_az_charge 核心I【燃血解放】充能（0~1000，满则自动释放）
+#   BH3_ER_az_yi     核心II【燃血狱衣】充能（0~1800，512/513/514 各 +500 上限）
+#   BH3_ER_az_usp_timer 无妄的易伤窗口（天）
+#   BH3_ER_az_burn_timer 千钧的燃血窗口（天）
+
+BH3_ER_az_recalc = {
+	set_variable = { BH3_ER_az_atk = 0 }
+	set_variable = { BH3_ER_az_def = 0 }
+	set_variable = { BH3_ER_az_bth = 0 }
+	set_variable = { BH3_ER_az_maj = 0 }
+	set_variable = { BH3_ER_az_min = 0 }
+	set_variable = { BH3_ER_az_org = 0 }
+	set_variable = { BH3_ER_az_usp = 0 }
+
+	# 生命值代理（安全余量：hp 0~100，按 10 点一档使用）
+	set_variable = { BH3_ER_az_lost = 100 }
+	subtract_from_variable = { BH3_ER_az_lost = BH3_ER_surr_hp }
+	clamp_variable = { var = BH3_ER_az_lost min = 0 max = 100 }
+
+	# 501 剑锋：每损失 10 点 +5% 全伤害（上限 60%）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_501 }
+		set_temp_variable = { az_t = BH3_ER_az_lost }
+		multiply_variable = { az_t = 0.005 }
+		clamp_variable = { var = az_t min = 0 max = 0.6 }
+		add_to_variable = { BH3_ER_az_atk = az_t }
+	}
+	# 502 赤骨：每损失 10 点 +4% 突破（上限 50%）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_502 }
+		set_temp_variable = { az_t = BH3_ER_az_lost }
+		multiply_variable = { az_t = 0.004 }
+		clamp_variable = { var = az_t min = 0 max = 0.5 }
+		add_to_variable = { BH3_ER_az_bth = az_t }
+	}
+	# 503 狂信：每损失 10 点 +4% 防御（上限 40%）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_503 }
+		set_temp_variable = { az_t = BH3_ER_az_lost }
+		multiply_variable = { az_t = 0.004 }
+		clamp_variable = { var = az_t min = 0 max = 0.4 }
+		add_to_variable = { BH3_ER_az_def = az_t }
+	}
+	# 504 命路：生命上限 +25% → 组织度 +6%
+	if = { limit = { has_country_flag = BH3_ER_own_az_504 } add_to_variable = { BH3_ER_az_org = 0.06 } }
+
+	# 509 一人：生命低于对手（用 lost>30 近似）时 +15% 攻击
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_509 check_variable = { BH3_ER_az_lost > 30 } }
+		add_to_variable = { BH3_ER_az_atk = 0.15 }
+	}
+
+	# 505 无妄：受击后易伤窗口（特种攻击 +25%）
+	if = {
+		limit = { check_variable = { BH3_ER_az_usp_timer > 0 } }
+		add_to_variable = { BH3_ER_az_usp = 0.25 }
+	}
+
+	# 核心II：燃血狱衣（超过 1500 才有额外效果）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_512 check_variable = { BH3_ER_az_yi > 1499 } }
+		add_to_variable = { BH3_ER_az_def = 0.2 }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_513 check_variable = { BH3_ER_az_yi > 1499 } }
+		add_to_variable = { BH3_ER_az_atk = 0.2 }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_514 check_variable = { BH3_ER_az_yi > 1499 } }
+		add_to_variable = { BH3_ER_az_maj = 0.5 }
+		add_to_variable = { BH3_ER_az_min = 0.25 }
+	}
+
+	# 兜底
+	clamp_variable = { var = BH3_ER_az_atk min = 0 max = 3.0 }
+	clamp_variable = { var = BH3_ER_az_def min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_az_bth min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_az_maj min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_az_min min = 0 max = 2.0 }
+	clamp_variable = { var = BH3_ER_az_org min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_az_usp min = 0 max = 0.6 }
+}
+
+# 生命下降时触发（由 surrendur delta 或调试调用）
+BH3_ER_az_on_loss = {
+	# 505 无妄：易伤窗口 3 天
+	if = { limit = { has_country_flag = BH3_ER_own_az_505 } set_variable = { BH3_ER_az_usp_timer = 3 } }
+	# 506 唯神：回复政治点
+	if = { limit = { has_country_flag = BH3_ER_own_az_506 } add_political_power = 10 }
+	# 508 非人：燃血解放充能 +300
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_508 }
+		add_to_variable = { BH3_ER_az_charge = 300 }
+		if = { limit = { check_variable = { BH3_ER_az_charge > 1000 } } set_variable = { BH3_ER_az_charge = 1000 } }
+	}
+	BH3_ER_az_recalc = yes
+}
+
+# 每日
+BH3_ER_az_daily = {
+	# 核心I：燃血解放充能 +10/天，并随生命损失加速
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_507 }
+		add_to_variable = { BH3_ER_az_charge = 10 }
+		set_temp_variable = { az_t = BH3_ER_az_lost }
+		multiply_variable = { az_t = 0.3 }
+		add_to_variable = { BH3_ER_az_charge = az_t }
+		# 满 1000 自动释放
+		if = {
+			limit = { check_variable = { BH3_ER_az_charge > 999 } }
+			set_variable = { BH3_ER_az_charge = 0 }
+			BH3_UD_begin = yes
+			set_variable = { BH3_UD_mode = 2 }
+			if = {
+				limit = { has_country_flag = BH3_ER_own_az_510 }
+				set_variable = { BH3_UD_org = 0.16 }
+				set_variable = { BH3_UD_str = 0.16 }
+				set_variable = { BH3_ER_az_burn_timer = 5 }
+			}
+			else = {
+				set_variable = { BH3_UD_org = 0.12 }
+				set_variable = { BH3_UD_str = 0.12 }
+			}
+			BH3_UD_apply = yes
+		}
+	}
+
+	# 核心II：燃血狱衣充能 +30/天
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_511 }
+		add_to_variable = { BH3_ER_az_yi = 30 }
+		set_temp_variable = { az_cap = 1800 }
+		if = { limit = { has_country_flag = BH3_ER_own_az_512 } add_to_variable = { az_cap = 500 } }
+		if = { limit = { has_country_flag = BH3_ER_own_az_513 } add_to_variable = { az_cap = 500 } }
+		if = { limit = { has_country_flag = BH3_ER_own_az_514 } add_to_variable = { az_cap = 500 } }
+		if = {
+			limit = { check_variable = { BH3_ER_az_yi > az_cap } }
+			set_variable = { BH3_ER_az_yi = az_cap }
+		}
+	}
+
+	# 计时器
+	if = { limit = { check_variable = { BH3_ER_az_usp_timer > 0 } } subtract_from_variable = { BH3_ER_az_usp_timer = 1 } }
+	if = { limit = { check_variable = { BH3_ER_az_burn_timer > 0 } } subtract_from_variable = { BH3_ER_az_burn_timer = 1 } }
+
+	BH3_ER_az_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_501 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_501 } }
+			set_country_flag = BH3_ER_own_az_501
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_502 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_502 } }
+			set_country_flag = BH3_ER_own_az_502
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_503 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_503 } }
+			set_country_flag = BH3_ER_own_az_503
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_504 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_504 } }
+			set_country_flag = BH3_ER_own_az_504
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_505 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_505 } }
+			set_country_flag = BH3_ER_own_az_505
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_506 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_506 } }
+			set_country_flag = BH3_ER_own_az_506
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_507 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_507 } }
+			set_country_flag = BH3_ER_own_az_507
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_508 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_508 } }
+			set_country_flag = BH3_ER_own_az_508
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_509 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_509 } }
+			set_country_flag = BH3_ER_own_az_509
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_510 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_510 } }
+			set_country_flag = BH3_ER_own_az_510
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_511 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_511 } }
+			set_country_flag = BH3_ER_own_az_511
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_512 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_512 } }
+			set_country_flag = BH3_ER_own_az_512
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_513 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_513 } }
+			set_country_flag = BH3_ER_own_az_513
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_514 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_az_514 } }
+			set_country_flag = BH3_ER_own_az_514
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
