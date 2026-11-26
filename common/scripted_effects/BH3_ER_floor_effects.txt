@@ -94,6 +94,7 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_if_tcost = 0 }
 	set_variable = { BH3_ER_if_ind = 0 }
 	set_variable = { BH3_ER_if_oil = 0 }
+	set_variable = { BH3_ER_if_opin = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }

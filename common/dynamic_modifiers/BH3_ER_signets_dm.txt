@@ -111,4 +111,5 @@ BH3_ER_dm_if = {
 	trade_cost_for_target_factor = BH3_ER_if_tcost
 	industrial_capacity_factory = BH3_ER_if_ind
 	production_oil_factor = BH3_ER_if_oil
+	trade_opinion_factor = BH3_ER_if_opin
 }

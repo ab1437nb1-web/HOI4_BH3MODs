@@ -5,12 +5,26 @@
 #   BH3_ER_if_prog    转移进度（0~100，核心II，每天 +20）
 #   BH3_ER_if_short / _trade / _tcost / _ind / _oil 输出给 DM
 
+# 随机获取 7 种资源之一（oil / aluminium / rubber / tungsten / steel / chromium / coal）
+BH3_ER_if_gift = {
+	random_list = {
+		15 = { random_owned_state = { add_resource = { type = oil amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = aluminium amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = rubber amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = tungsten amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = steel amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = chromium amount = 4 } } }
+		15 = { random_owned_state = { add_resource = { type = coal amount = 4 } } }
+	}
+}
+
 BH3_ER_if_recalc = {
 	set_variable = { BH3_ER_if_short = 0 }
 	set_variable = { BH3_ER_if_trade = 0 }
 	set_variable = { BH3_ER_if_tcost = 0 }
 	set_variable = { BH3_ER_if_ind = 0 }
 	set_variable = { BH3_ER_if_oil = 0 }
+	set_variable = { BH3_ER_if_opin = 0 }
 
 	# 901 利齿的「V」：资源短缺惩罚下降
 	if = {
@@ -26,12 +40,15 @@ BH3_ER_if_recalc = {
 		multiply_variable = { if_t = 0.03 }
 		add_to_variable = { BH3_ER_if_trade = if_t }
 	}
-	# 903 静默的「B」：产能（资源转化）
+	# 903 静默的「B」：产能（资源转化）+ 贸易好感（贸易影响力）
 	if = {
 		limit = { has_country_flag = BH3_ER_own_if_903 }
 		set_temp_variable = { if_t = BH3_ER_if_stacks }
 		multiply_variable = { if_t = 0.02 }
 		add_to_variable = { BH3_ER_if_ind = if_t }
+		set_temp_variable = { if_t = BH3_ER_if_stacks }
+		multiply_variable = { if_t = 0.04 }
+		add_to_variable = { BH3_ER_if_opin = if_t }
 	}
 	# 904 吻毒的「E」：石油增产
 	if = {
@@ -53,6 +70,7 @@ BH3_ER_if_recalc = {
 	clamp_variable = { var = BH3_ER_if_tcost min = -0.5 max = 0 }
 	clamp_variable = { var = BH3_ER_if_ind min = 0 max = 1.0 }
 	clamp_variable = { var = BH3_ER_if_oil min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_if_opin min = 0 max = 0.5 }
 }
 
 # 核心I：思维同化（拟态层满 5 时刷新 8 天窗口）
@@ -66,10 +84,11 @@ BH3_ER_if_assim = {
 
 # 核心II：意识同步（转移进度满 100）
 BH3_ER_if_sync_fire = {
-	# 噬界者的影袭：资源注入（随机 3 个州 +5 钢）
-	random_owned_state = { add_resource = { type = steel amount = 5 } }
-	random_owned_state = { add_resource = { type = steel amount = 5 } }
-	random_owned_state = { add_resource = { type = oil amount = 3 } }
+	# 噬界者的影袭：从 7 种资源中随机注入 4 次
+	BH3_ER_if_gift = yes
+	BH3_ER_if_gift = yes
+	BH3_ER_if_gift = yes
+	BH3_ER_if_gift = yes
 
 	set_temp_variable = { if_days = 12 }
 	if = { limit = { has_country_flag = BH3_ER_own_if_912 } set_temp_variable = { if_days = 18 } }
@@ -97,8 +116,8 @@ BH3_ER_if_daily = {
 		if = {
 			limit = { check_variable = { BH3_ER_if_gift > 4 } }
 			set_variable = { BH3_ER_if_gift = 0 }
-			random_owned_state = { add_resource = { type = steel amount = 2 } }
-			random_owned_state = { add_resource = { type = oil amount = 2 } }
+			BH3_ER_if_gift = yes
+			BH3_ER_if_gift = yes
 		}
 	}
 
