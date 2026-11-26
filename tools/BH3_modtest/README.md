@@ -200,3 +200,13 @@
 - 接口因此统一改为逐州；mode 3/4 同样逐州（海军按港口/沿海州结算）
 
 > 2026-11-26：新增 BH3_modtest_abilities_long.txt，提供 365 天时长的免疫/半伤/双伤测试技能（immune_long / half_long / double_long）；原技能保持 168 小时不变。
+
+## 袭击拦截实验（2026-11-26）
+
+目标：验证「浮生无敌」能否真正让敌方对己方的袭击变成重大失败。
+
+- 实验A（技能能否置旗标）：技能 BH3_test_ability_flag 的 one_time_effect 尝试设置 BH3_test_ability_flag_fired；若决策「【测试】检测到技能旗标」出现，说明可行。
+- 实验B（旗标能否压掉袭击成功率）：覆盖了原版 common/raids/nuclear_raids.txt，给 6 种核打击的 success 公式加了自定义成功率修正：
+  - 目标国持有 BH3_test_ability_flag_fired 时，success 概率 -100%
+  - 触发条件用 can_target_affect = yes，即由被袭击方（目标国）提供
+- 用法：决策「给所有敌国打上无敌标记」→ 对该敌国发动核打击 → 期望结果必为失败/重大失败；再点「清除无敌标记」→ 打击恢复正常随机结果。

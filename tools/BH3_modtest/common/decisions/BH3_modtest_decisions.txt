@@ -1,4 +1,4 @@
-BH3_modtest_category = {
+﻿BH3_modtest_category = {
 	BH3_test_add_immune = {
 		icon = GFX_decision_oil
 		cost = 0
@@ -194,5 +194,59 @@ BH3_modtest_category = {
 			remove_decision_on_cooldown = BH3_test_ability_gated
 		}
 		ai_will_do = { factor = 0 }
+	}
+
+	# 实验A 检查：只有技能 one_time_effect 成功置旗标时才可见
+	BH3_test_flag_check = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = {
+			has_country_flag = BH3_test_ability_flag_fired
+		}
+		available = { always = yes }
+		complete_effect = {
+			log = "BH3TEST ability_flag=yes (one_time_effect works)"
+		}
+	}
+
+	# 实验B 准备：给所有敌国打上“无敌标记”，再向其发射核打击，应强制重大失败
+	BH3_test_mark_enemies = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			every_enemy_country = { set_country_flag = BH3_test_ability_flag_fired }
+		}
+	}
+
+	BH3_test_clear_marks = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_test_ability_flag_fired
+			every_enemy_country = { clr_country_flag = BH3_test_ability_flag_fired }
+		}
+	}
+
+	BH3_test_flag_log = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			if = { limit = { has_country_flag = BH3_test_ability_flag_fired } log = "BH3TEST self_flag=yes" }
+			else = { log = "BH3TEST self_flag=no" }
+			every_enemy_country = {
+				if = { limit = { has_country_flag = BH3_test_ability_flag_fired } log = "BH3TEST enemy_flag=yes" }
+				else = { log = "BH3TEST enemy_flag=no" }
+			}
+		}
 	}
 }

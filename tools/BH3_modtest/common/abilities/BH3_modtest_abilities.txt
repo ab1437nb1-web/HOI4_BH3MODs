@@ -110,4 +110,21 @@ ability = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# 实验A：验证 one_time_effect 能否执行国家效果（设置旗标）
+	BH3_test_ability_flag = {
+		name = ABILITY_BH3_TEST_FLAG
+		desc = ABILITY_BH3_TEST_FLAG_DESC
+		type = army_leader
+		cost = 0
+		duration = 168
+		allowed = { always = yes }
+		unit_modifiers = {
+			str_damage_multiplier = -0.5
+		}
+		one_time_effect = {
+			OWNER = { set_country_flag = BH3_test_ability_flag_fired }
+		}
+		ai_will_do = { factor = 0 }
+	}
 }
