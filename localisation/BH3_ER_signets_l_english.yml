@@ -169,3 +169,5 @@
  BH3_ER_signet_513_desc:0 "Burn Body, Bone, Heart, Soul"
  BH3_ER_signet_514:0 "Homeland, Old Country, Old Friends, Old Acquaintance"
  BH3_ER_signet_514_desc:0 "Homeland, Old Country, Old Friends, Old Acquaintance"
+ BH3_ER_az_bloodloss:0 "Decimation: Blood Price"
+ BH3_ER_az_bloodloss_desc:0 "Self-inflicted surrender pressure from burning blood (represents HP consumed by 燃血解放 / 压血)."

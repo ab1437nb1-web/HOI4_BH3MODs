@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+
+		# 鏖灭：燃血代价（自身受到投降倾向惩罚，代表消耗生命 / 压血）
+		BH3_ER_az_bloodloss = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				surrender_limit = 0.02
+				war_support_factor = -0.02
+			}
+		}
+	}
+}

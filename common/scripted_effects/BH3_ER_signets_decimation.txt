@@ -48,10 +48,20 @@ BH3_ER_az_recalc = {
 	# 504 命路：生命上限 +25% → 组织度 +6%
 	if = { limit = { has_country_flag = BH3_ER_own_az_504 } add_to_variable = { BH3_ER_az_org = 0.06 } }
 
+	# 511 鏖兵：压血——生命被压制到 18% 以下，等价于 lost >= 82
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_511 check_variable = { BH3_ER_az_lost < 82 } }
+		set_variable = { BH3_ER_az_lost = 82 }
+	}
+
 	# 509 一人：生命低于对手（用 lost>30 近似）时 +15% 攻击
 	if = {
 		limit = { has_country_flag = BH3_ER_own_az_509 check_variable = { BH3_ER_az_lost > 30 } }
-		add_to_variable = { BH3_ER_az_atk = 0.15 }
+		set_temp_variable = { az_t = BH3_ER_az_lost }
+		subtract_from_variable = { az_t = 30 }
+		multiply_variable = { az_t = 0.003 }
+		clamp_variable = { var = az_t min = 0 max = 0.3 }
+		add_to_variable = { BH3_ER_az_atk = az_t }
 	}
 
 	# 505 无妄：受击后易伤窗口（特种攻击 +25%）
@@ -120,6 +130,11 @@ BH3_ER_az_daily = {
 				set_variable = { BH3_UD_org = 0.16 }
 				set_variable = { BH3_UD_str = 0.16 }
 				set_variable = { BH3_ER_az_burn_timer = 5 }
+				# 千钧：额外消耗 20% 当前生命（用投降倾向 debuff 表示），带保护：投降倾向高时不施加
+				if = {
+					limit = { surrender_progress < 0.25 }
+					add_timed_idea = { idea = BH3_ER_az_bloodloss days = 30 }
+				}
 			}
 			else = {
 				set_variable = { BH3_UD_org = 0.12 }
@@ -140,6 +155,20 @@ BH3_ER_az_daily = {
 		if = {
 			limit = { check_variable = { BH3_ER_az_yi > az_cap } }
 			set_variable = { BH3_ER_az_yi = az_cap }
+		}
+	}
+
+	# 511 压血：投降倾向 debuff（7 天一刷新）；带保护：
+	#   投降倾向 < 25% 才施加；> 50% 时立刻移除，避免被自己压到投降
+	if = {
+		limit = { has_country_flag = BH3_ER_own_az_511 }
+		if = {
+			limit = { surrender_progress < 0.25 }
+			add_timed_idea = { idea = BH3_ER_az_bloodloss days = 7 }
+		}
+		if = {
+			limit = { surrender_progress > 0.50 }
+			remove_ideas = BH3_ER_az_bloodloss
 		}
 	}
 
