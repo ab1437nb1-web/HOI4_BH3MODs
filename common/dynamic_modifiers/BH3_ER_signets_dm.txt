@@ -73,3 +73,14 @@ BH3_ER_dm_bd = {
 	air_defence_factor = BH3_ER_bd_airdef
 	naval_defense_factor = BH3_ER_bd_navdef
 }
+
+BH3_ER_dm_ds = {
+	enable = { always = yes }
+
+	industrial_capacity_factory = BH3_ER_ds_ind
+	consumer_goods_factor = BH3_ER_ds_cons
+	research_speed_factor = BH3_ER_ds_res
+	decryption_power_factor = BH3_ER_ds_dec
+	stability_factor = BH3_ER_ds_stab
+	war_support_factor = BH3_ER_ds_ws
+}

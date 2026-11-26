@@ -1,0 +1,423 @@
+# 往事乐土·戒律：规诫计数 → 产能/情报体系（2026-11-26 第一版）
+# 锚点：稳定度与战争支持度（has_stability / has_war_support > 0.4 时产能/情报收益完整，否则减半）
+# 变量：
+#   BH3_ER_ds_counter 规诫计数（0~200）
+#   BH3_ER_ds_owned   已拥有戒律刻印数（核心I 每枚 +2% 产能）
+#   BH3_ER_ds_stack   核心II 罪愆层数（0~7）
+#   BH3_ER_ds_free_runs  706 QTE 的免衰减天数
+#   BH3_ER_ds_timer     核心II 5 天触发计时
+#   BH3_ER_ds_ban_timer 714 戒罚窗口
+#   BH3_ER_ds_ind / _cons / _res / _dec / _stab / _ws 输出给 DM
+
+BH3_ER_ds_recalc = {
+	set_variable = { BH3_ER_ds_ind = 0 }
+	set_variable = { BH3_ER_ds_cons = 0 }
+	set_variable = { BH3_ER_ds_res = 0 }
+	set_variable = { BH3_ER_ds_dec = 0 }
+	set_variable = { BH3_ER_ds_stab = 0 }
+	set_variable = { BH3_ER_ds_ws = 0 }
+
+	# 701 其一：产能随规诫
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_701 }
+		set_temp_variable = { ds_t = BH3_ER_ds_counter }
+		multiply_variable = { ds_t = 0.0015 }
+		clamp_variable = { var = ds_t min = 0 max = 0.3 }
+		add_to_variable = { BH3_ER_ds_ind = ds_t }
+	}
+	# 702 其二：消费品系数随规诫下降
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_702 }
+		set_temp_variable = { ds_t = BH3_ER_ds_counter }
+		multiply_variable = { ds_t = -0.0005 }
+		clamp_variable = { var = ds_t min = -0.1 max = 0 }
+		add_to_variable = { BH3_ER_ds_cons = ds_t }
+	}
+	# 703 其三：科研随规诫
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_703 }
+		set_temp_variable = { ds_t = BH3_ER_ds_counter }
+		multiply_variable = { ds_t = 0.001 }
+		clamp_variable = { var = ds_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_ds_res = ds_t }
+	}
+	# 704 其四：解密随规诫
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_704 }
+		set_temp_variable = { ds_t = BH3_ER_ds_counter }
+		multiply_variable = { ds_t = 0.001 }
+		clamp_variable = { var = ds_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_ds_dec = ds_t }
+	}
+
+	# 核心I 苦修：规诫 ≥120
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_707 check_variable = { BH3_ER_ds_counter > 119 } }
+		add_to_variable = { BH3_ER_ds_stab = 0.1 }
+		add_to_variable = { BH3_ER_ds_ws = 0.1 }
+		add_to_variable = { BH3_ER_ds_ind = 0.15 }
+		set_temp_variable = { ds_t = BH3_ER_ds_owned }
+		multiply_variable = { ds_t = 0.02 }
+		add_to_variable = { BH3_ER_ds_ind = ds_t }
+		add_to_variable = { BH3_ER_ds_res = 0.05 }
+		# 708：苦修额外产能但增加消费品负担
+		if = {
+			limit = { has_country_flag = BH3_ER_own_ds_708 }
+			add_to_variable = { BH3_ER_ds_ind = 0.1 }
+			add_to_variable = { BH3_ER_ds_cons = 0.05 }
+		}
+		# 710：苦修科研
+		if = { limit = { has_country_flag = BH3_ER_own_ds_710 } add_to_variable = { BH3_ER_ds_res = 0.2 } }
+	}
+
+	# 核心II 罪愆层数
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_711 check_variable = { BH3_ER_ds_counter > 149 } }
+		set_temp_variable = { ds_t = BH3_ER_ds_stack }
+		multiply_variable = { ds_t = 0.1 }
+		add_to_variable = { BH3_ER_ds_ind = ds_t }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_713 check_variable = { BH3_ER_ds_stack > 0 } }
+		set_temp_variable = { ds_t = BH3_ER_ds_stack }
+		multiply_variable = { ds_t = 0.03 }
+		add_to_variable = { BH3_ER_ds_dec = ds_t }
+	}
+
+	# 714 戒罚窗口
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_714 check_variable = { BH3_ER_ds_ban_timer > 0 } }
+		add_to_variable = { BH3_ER_ds_stab = 0.05 }
+		add_to_variable = { BH3_ER_ds_ws = 0.05 }
+	}
+
+	# 锚点：稳定度/战争支持度不足时收益减半
+	set_temp_variable = { ds_gate = 1 }
+	if = {
+		limit = {
+			has_country_flag = BH3_ER_own_ds_701
+			NOT = { has_stability > 0.4 }
+			NOT = { has_war_support > 0.4 }
+		}
+		set_temp_variable = { ds_gate = 0.5 }
+	}
+	multiply_variable = { BH3_ER_ds_ind = ds_gate }
+	multiply_variable = { BH3_ER_ds_res = ds_gate }
+	multiply_variable = { BH3_ER_ds_dec = ds_gate }
+
+	clamp_variable = { var = BH3_ER_ds_ind min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_ds_res min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_ds_dec min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_ds_stab min = -0.3 max = 0.5 }
+	clamp_variable = { var = BH3_ER_ds_ws min = -0.3 max = 0.5 }
+	clamp_variable = { var = BH3_ER_ds_cons min = -0.2 max = 0.3 }
+}
+
+# 706 QTE：40 天内规诫不再减少
+BH3_ER_ds_qte = {
+	set_variable = { BH3_ER_ds_free_runs = 40 }
+	add_timed_idea = { idea = BH3_ER_ds_qte days = 40 }
+}
+
+# 核心II 触发：罪愆如山
+BH3_ER_ds_trigger = {
+	if = { limit = { check_variable = { BH3_ER_ds_stack < 7 } } add_to_variable = { BH3_ER_ds_stack = 1 } }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_712 }
+		every_enemy_country = { add_timed_idea = { idea = BH3_ER_ds_penalty_strong days = 10 } }
+	}
+	else = {
+		every_enemy_country = { add_timed_idea = { idea = BH3_ER_ds_penalty days = 10 } }
+	}
+	if = { limit = { has_country_flag = BH3_ER_own_ds_714 } set_variable = { BH3_ER_ds_ban_timer = 8 } }
+	BH3_ER_ds_recalc = yes
+}
+
+# 每日
+BH3_ER_ds_daily = {
+	# 规诫 +5/天
+	add_to_variable = { BH3_ER_ds_counter = 5 }
+
+	# 战争期间衰减 10/天（706 QTE 期间冻结）
+	if = {
+		limit = { has_war = yes }
+		if = {
+			limit = { check_variable = { BH3_ER_ds_free_runs > 0 } }
+			subtract_from_variable = { BH3_ER_ds_free_runs = 1 }
+		}
+		else = {
+			if = {
+				limit = { check_variable = { BH3_ER_ds_counter > 9 } }
+				subtract_from_variable = { BH3_ER_ds_counter = 10 }
+				# 705：每次减少规诫时对敌施加产能惩罚
+				if = {
+					limit = { has_country_flag = BH3_ER_own_ds_705 }
+					every_enemy_country = { add_timed_idea = { idea = BH3_ER_ds_penalty days = 5 } }
+				}
+			}
+			else = { set_variable = { BH3_ER_ds_counter = 0 } }
+		}
+	}
+
+	# 709：下限 80
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_709 check_variable = { BH3_ER_ds_counter < 80 } }
+		set_variable = { BH3_ER_ds_counter = 80 }
+	}
+	if = { limit = { check_variable = { BH3_ER_ds_counter > 200 } } set_variable = { BH3_ER_ds_counter = 200 } }
+
+	# 核心II：每 5 天，规诫 >150 触发罪愆
+	if = {
+		limit = { has_country_flag = BH3_ER_own_ds_711 }
+		add_to_variable = { BH3_ER_ds_timer = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_ds_timer > 4 } }
+			set_variable = { BH3_ER_ds_timer = 0 }
+			if = { limit = { check_variable = { BH3_ER_ds_counter > 150 } } BH3_ER_ds_trigger = yes }
+		}
+	}
+
+	if = { limit = { check_variable = { BH3_ER_ds_ban_timer > 0 } } subtract_from_variable = { BH3_ER_ds_ban_timer = 1 } }
+
+	BH3_ER_ds_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_701 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_701 } }
+			set_country_flag = BH3_ER_own_ds_701
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_702 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_702 } }
+			set_country_flag = BH3_ER_own_ds_702
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_703 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_703 } }
+			set_country_flag = BH3_ER_own_ds_703
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_704 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_704 } }
+			set_country_flag = BH3_ER_own_ds_704
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_705 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_705 } }
+			set_country_flag = BH3_ER_own_ds_705
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_706 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_706 } }
+			set_country_flag = BH3_ER_own_ds_706
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_707 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_707 } }
+			set_country_flag = BH3_ER_own_ds_707
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_708 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_708 } }
+			set_country_flag = BH3_ER_own_ds_708
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_709 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_709 } }
+			set_country_flag = BH3_ER_own_ds_709
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_710 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_710 } }
+			set_country_flag = BH3_ER_own_ds_710
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_711 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_711 } }
+			set_country_flag = BH3_ER_own_ds_711
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_712 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_712 } }
+			set_country_flag = BH3_ER_own_ds_712
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_713 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_713 } }
+			set_country_flag = BH3_ER_own_ds_713
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_714 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_ds_714 } }
+			set_country_flag = BH3_ER_own_ds_714
+			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_ds_owned = 1 }
+			if = {
+				limit = { check_variable = { BH3_ER_ds_owned > 14 } }
+				set_variable = { BH3_ER_ds_owned = 14 }
+			}
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

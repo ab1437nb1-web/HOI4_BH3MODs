@@ -1,0 +1,34 @@
+ideas = {
+	country = {
+
+		# 706 QTE 触发后的窗口（自身）
+		BH3_ER_ds_qte = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				industrial_capacity_factory = 0.20
+				research_speed_factor = 0.10
+			}
+		}
+
+		# 核心II 罪愆如山：对敌产能/情报惩罚
+		BH3_ER_ds_penalty = {
+			allowed = { always = yes }
+			picture = ENG_generic_2
+			modifier = {
+				industrial_capacity_factory = -0.20
+				decryption_power_factor = -0.15
+			}
+		}
+
+		# 712 强化版惩罚
+		BH3_ER_ds_penalty_strong = {
+			allowed = { always = yes }
+			picture = ENG_generic_3
+			modifier = {
+				industrial_capacity_factory = -0.26
+				decryption_power_factor = -0.20
+			}
+		}
+	}
+}
