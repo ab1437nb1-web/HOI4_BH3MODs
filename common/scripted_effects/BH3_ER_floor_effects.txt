@@ -28,6 +28,10 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_fs_mem = 0 }
 	set_variable = { BH3_ER_fs_guard_timer = 0 }
 	set_variable = { BH3_ER_fs_hits = 0 }
+	set_variable = { BH3_ER_surr_tier = 0 }
+	set_variable = { BH3_ER_surr_prev = 0 }
+	set_variable = { BH3_ER_surr_delta = 0 }
+	set_variable = { BH3_ER_surr_hp = 100 }
 	set_variable = { BH3_ER_fs_atk = 0 }
 	set_variable = { BH3_ER_fs_def = 0 }
 	set_variable = { BH3_ER_fs_bth = 0 }

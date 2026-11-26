@@ -1,0 +1,40 @@
+# 投降倾向（surrender_progress）追踪：把投降度当生命值用
+# 每 5% 一档（0~20），BH3_ER_surr_delta = 今日上升的档数（受击判定）
+# 供浮生（受击）与将来的鏖灭（低血量）使用
+
+BH3_ER_surr_daily = {
+	set_variable = { BH3_ER_surr_prev = BH3_ER_surr_tier }
+	set_variable = { BH3_ER_surr_tier = 0 }
+	if = { limit = { surrender_progress > 0.049 } set_variable = { BH3_ER_surr_tier = 1 } }
+	if = { limit = { surrender_progress > 0.099 } set_variable = { BH3_ER_surr_tier = 2 } }
+	if = { limit = { surrender_progress > 0.149 } set_variable = { BH3_ER_surr_tier = 3 } }
+	if = { limit = { surrender_progress > 0.199 } set_variable = { BH3_ER_surr_tier = 4 } }
+	if = { limit = { surrender_progress > 0.249 } set_variable = { BH3_ER_surr_tier = 5 } }
+	if = { limit = { surrender_progress > 0.299 } set_variable = { BH3_ER_surr_tier = 6 } }
+	if = { limit = { surrender_progress > 0.349 } set_variable = { BH3_ER_surr_tier = 7 } }
+	if = { limit = { surrender_progress > 0.399 } set_variable = { BH3_ER_surr_tier = 8 } }
+	if = { limit = { surrender_progress > 0.449 } set_variable = { BH3_ER_surr_tier = 9 } }
+	if = { limit = { surrender_progress > 0.499 } set_variable = { BH3_ER_surr_tier = 10 } }
+	if = { limit = { surrender_progress > 0.549 } set_variable = { BH3_ER_surr_tier = 11 } }
+	if = { limit = { surrender_progress > 0.599 } set_variable = { BH3_ER_surr_tier = 12 } }
+	if = { limit = { surrender_progress > 0.649 } set_variable = { BH3_ER_surr_tier = 13 } }
+	if = { limit = { surrender_progress > 0.699 } set_variable = { BH3_ER_surr_tier = 14 } }
+	if = { limit = { surrender_progress > 0.749 } set_variable = { BH3_ER_surr_tier = 15 } }
+	if = { limit = { surrender_progress > 0.799 } set_variable = { BH3_ER_surr_tier = 16 } }
+	if = { limit = { surrender_progress > 0.849 } set_variable = { BH3_ER_surr_tier = 17 } }
+	if = { limit = { surrender_progress > 0.899 } set_variable = { BH3_ER_surr_tier = 18 } }
+	if = { limit = { surrender_progress > 0.949 } set_variable = { BH3_ER_surr_tier = 19 } }
+	if = { limit = { surrender_progress > 0.999 } set_variable = { BH3_ER_surr_tier = 20 } }
+
+	if = { limit = { check_variable = { BH3_ER_surr_tier > BH3_ER_surr_prev } }
+		set_variable = { BH3_ER_surr_delta = BH3_ER_surr_tier }
+		subtract_from_variable = { BH3_ER_surr_delta = BH3_ER_surr_prev }
+	}
+	else = { set_variable = { BH3_ER_surr_delta = 0 } }
+
+	# 生命值代理：100 - 5 乘档位（0=满血，100=濒临投降）
+	set_variable = { BH3_ER_surr_hp = 100 }
+	set_temp_variable = { surr_loss = BH3_ER_surr_tier }
+	multiply_variable = { surr_loss = 5 }
+	subtract_from_variable = { BH3_ER_surr_hp = surr_loss }
+}

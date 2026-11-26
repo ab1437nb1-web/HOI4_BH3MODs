@@ -96,3 +96,7 @@
  BH3_ER_dbg_fs_clear:0 "清空浮生刻印与状态"
  BH3_ER_dbg_fs_hit:0 "触发一次受击（消耗一层）"
  BH3_ER_dbg_fs_guard:0 "让无敌可用 7 天"
+ BH3_ER_dbg_surr_update:0 "【调试】重算投降度并判定受击"
+ BH3_ER_dbg_surr_update_desc:0 "执行投降度追踪与浮生受击判定。"
+ BH3_ER_dbg_surr_log:0 "【调试】投降度写入日志"
+ BH3_ER_dbg_surr_log_desc:0 "向 game.log 写入 BH3SURR 标记。"

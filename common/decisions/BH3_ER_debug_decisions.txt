@@ -939,6 +939,45 @@ BH3_ER_debug_group = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# 浮生/通用：重算投降度并执行受击判定
+	BH3_ER_dbg_surr_update = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_surr_daily = yes
+			BH3_ER_fs_daily = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 浮生/通用：把投降度档位写入日志
+	BH3_ER_dbg_surr_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { is_debug = yes }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_surr_daily = yes
+			log = "BH3SURR begin"
+			if = { limit = { check_variable = { BH3_ER_surr_tier > 14 } } log = "BH3SURR tier_gt70pct" }
+			else_if = { limit = { check_variable = { BH3_ER_surr_tier > 9 } } log = "BH3SURR tier_50_70pct" }
+			else_if = { limit = { check_variable = { BH3_ER_surr_tier > 4 } } log = "BH3SURR tier_25_50pct" }
+			else_if = { limit = { check_variable = { BH3_ER_surr_tier > 0 } } log = "BH3SURR tier_1_25pct" }
+			else = { log = "BH3SURR tier_0" }
+			if = { limit = { check_variable = { BH3_ER_surr_delta > 2 } } log = "BH3SURR delta_gt2" }
+			else_if = { limit = { check_variable = { BH3_ER_surr_delta > 0 } } log = "BH3SURR delta_1_2" }
+			else = { log = "BH3SURR delta_0" }
+			if = { limit = { check_variable = { BH3_ER_fs_charge > 0 } } log = "BH3SURR charge_gt0" }
+			if = { limit = { check_variable = { BH3_ER_fs_mem > 0 } } log = "BH3SURR mem_gt0" }
+			log = "BH3SURR end"
+		}
+		ai_will_do = { factor = 0 }
+	}
 	BH3_ER_debug_unlock = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
