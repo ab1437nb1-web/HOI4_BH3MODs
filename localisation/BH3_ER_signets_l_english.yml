@@ -112,7 +112,7 @@
  BH3_ER_signet_314:0 "Setsuna: Myriad Darkness"
  BH3_ER_signet_314_desc:0 "Setsuna: Myriad Darkness"
  ABILITY_BH3_ER_FS_INVINCIBLE:0 "Vicissitude: Invincibility"
- ABILITY_BH3_ER_FS_INVINCIBLE_DESC:0 "Grants a short invincibility window (damage taken -100%). Available after a charge absorbs a hit."
+ ABILITY_BH3_ER_FS_INVINCIBLE_DESC:0 "Grants a short window of near-invincibility in land combat (land damage taken -100%). Available after a charge absorbs a hit."
  BH3_ER_signet_401:0 "Long Is the Road"
  BH3_ER_signet_401_desc:0 "Long Is the Road"
  BH3_ER_signet_402:0 "Days and Months Slip By"
