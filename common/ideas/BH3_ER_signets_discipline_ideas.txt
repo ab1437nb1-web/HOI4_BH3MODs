@@ -17,7 +17,7 @@ ideas = {
 			picture = ENG_generic_2
 			modifier = {
 				industrial_capacity_factory = -0.20
-				decryption_power_factor = -0.15
+				intel_network_gain_factor = -0.20
 			}
 		}
 
@@ -27,7 +27,7 @@ ideas = {
 			picture = ENG_generic_3
 			modifier = {
 				industrial_capacity_factory = -0.26
-				decryption_power_factor = -0.20
+				intel_network_gain_factor = -0.25
 			}
 		}
 	}

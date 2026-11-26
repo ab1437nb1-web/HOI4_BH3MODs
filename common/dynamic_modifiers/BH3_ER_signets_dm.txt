@@ -80,7 +80,9 @@ BH3_ER_dm_ds = {
 	industrial_capacity_factory = BH3_ER_ds_ind
 	consumer_goods_factor = BH3_ER_ds_cons
 	research_speed_factor = BH3_ER_ds_res
-	decryption_power_factor = BH3_ER_ds_dec
+	encryption_factor = BH3_ER_ds_enc
+	intelligence_agency_defense = BH3_ER_ds_agi
+	enemy_operative_detection_chance = BH3_ER_ds_det
 	stability_factor = BH3_ER_ds_stab
 	war_support_factor = BH3_ER_ds_ws
 }

@@ -13,7 +13,9 @@ BH3_ER_ds_recalc = {
 	set_variable = { BH3_ER_ds_ind = 0 }
 	set_variable = { BH3_ER_ds_cons = 0 }
 	set_variable = { BH3_ER_ds_res = 0 }
-	set_variable = { BH3_ER_ds_dec = 0 }
+	set_variable = { BH3_ER_ds_enc = 0 }
+	set_variable = { BH3_ER_ds_agi = 0 }
+	set_variable = { BH3_ER_ds_det = 0 }
 	set_variable = { BH3_ER_ds_stab = 0 }
 	set_variable = { BH3_ER_ds_ws = 0 }
 
@@ -41,13 +43,13 @@ BH3_ER_ds_recalc = {
 		clamp_variable = { var = ds_t min = 0 max = 0.2 }
 		add_to_variable = { BH3_ER_ds_res = ds_t }
 	}
-	# 704 其四：解密随规诫
+	# 704 其四：加密随规诫（防御性情报：反间谍与加密）
 	if = {
 		limit = { has_country_flag = BH3_ER_own_ds_704 }
 		set_temp_variable = { ds_t = BH3_ER_ds_counter }
 		multiply_variable = { ds_t = 0.001 }
 		clamp_variable = { var = ds_t min = 0 max = 0.2 }
-		add_to_variable = { BH3_ER_ds_dec = ds_t }
+		add_to_variable = { BH3_ER_ds_enc = ds_t }
 	}
 
 	# 核心I 苦修：规诫 ≥120
@@ -79,9 +81,14 @@ BH3_ER_ds_recalc = {
 	}
 	if = {
 		limit = { has_country_flag = BH3_ER_own_ds_713 check_variable = { BH3_ER_ds_stack > 0 } }
+		# 反间谍机构防御
 		set_temp_variable = { ds_t = BH3_ER_ds_stack }
 		multiply_variable = { ds_t = 0.03 }
-		add_to_variable = { BH3_ER_ds_dec = ds_t }
+		add_to_variable = { BH3_ER_ds_agi = ds_t }
+		# 敌方特工侦测率（每层 +1%，上限 +7%）
+		set_temp_variable = { ds_t = BH3_ER_ds_stack }
+		multiply_variable = { ds_t = 0.01 }
+		add_to_variable = { BH3_ER_ds_det = ds_t }
 	}
 
 	# 714 戒罚窗口
@@ -103,11 +110,14 @@ BH3_ER_ds_recalc = {
 	}
 	multiply_variable = { BH3_ER_ds_ind = ds_gate }
 	multiply_variable = { BH3_ER_ds_res = ds_gate }
-	multiply_variable = { BH3_ER_ds_dec = ds_gate }
+	multiply_variable = { BH3_ER_ds_enc = ds_gate }
+	multiply_variable = { BH3_ER_ds_agi = ds_gate }
 
 	clamp_variable = { var = BH3_ER_ds_ind min = 0 max = 1.0 }
 	clamp_variable = { var = BH3_ER_ds_res min = 0 max = 1.0 }
-	clamp_variable = { var = BH3_ER_ds_dec min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_ds_enc min = 0 max = 1.0 }
+	clamp_variable = { var = BH3_ER_ds_agi min = 0 max = 0.5 }
+	clamp_variable = { var = BH3_ER_ds_det min = 0 max = 0.1 }
 	clamp_variable = { var = BH3_ER_ds_stab min = -0.3 max = 0.5 }
 	clamp_variable = { var = BH3_ER_ds_ws min = -0.3 max = 0.5 }
 	clamp_variable = { var = BH3_ER_ds_cons min = -0.2 max = 0.3 }
