@@ -249,4 +249,41 @@
 			}
 		}
 	}
+
+	# 实验D：检查 on_nuke_drop / on_paradrop 是否在“袭击失败”时仍然触发
+	BH3_test_nuke_drop_check = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { has_global_flag = BH3_test_nuke_drop_global }
+		available = { always = yes }
+		complete_effect = {
+			if = { limit = { has_global_flag = BH3_test_nuke_marked_target } log = "BH3TEST nuke_drop_marked_target=yes" }
+			else = { log = "BH3TEST nuke_drop_marked_target=no" }
+		}
+	}
+
+	BH3_test_paradrop_check = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { has_global_flag = BH3_test_paradrop_global }
+		available = { always = yes }
+		complete_effect = {
+			log = "BH3TEST paradrop_hook_fired"
+		}
+	}
+
+	BH3_test_reset_hooks = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			clr_global_flag = BH3_test_nuke_drop_global
+			clr_global_flag = BH3_test_nuke_marked_target
+			clr_global_flag = BH3_test_paradrop_global
+		}
+	}
 }
