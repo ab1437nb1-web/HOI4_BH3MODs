@@ -208,3 +208,9 @@ HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 gam
 - text 正确写法：context_aware_text = "[定义名]"
 - tooltip 正确写法：context_aware_tooltip = "静态loc_key"，静态 key 的值写成 [定义名]（holder 中转）
 - GUI 图标/按钮都用 name 区分，脚本化 GUI 的 <元素名>_visible 触发缺失时元素会常驻显示，新增图标务必逐槽补 visible 条件
+
+## 15. 本地化文件不能出现真实换行
+
+- HOI4 loc 每行必须是一条完整条目（KEY:0 “文本”），文本里的换行必须写成转义反斜杠 n
+- 若脚本生成 loc 时写成真实换行，整条 loc 会失效（游戏内显示 key 或空白）
+- 全角空格（U+3000）在游戏字体中会显示为问号，分隔符请用中文逗号
