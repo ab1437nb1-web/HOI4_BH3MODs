@@ -329,4 +329,39 @@ BH3_modtest_category = {
 			}
 		}
 	}
+
+	# 实验F：CIC（经济产能盈余）能否被脚本读取
+	BH3_test_cic_add = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			add_cic = 500
+			log = "BH3TEST cic_added_500"
+		}
+	}
+
+	BH3_test_cic_check_variable = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { cic > 0 } }
+		available = { always = yes }
+		complete_effect = { log = "BH3TEST cic_variable_readable=yes" }
+	}
+
+	BH3_test_cic_log = {
+		icon = GFX_decision_generic_political_discourse
+		cost = 0
+		allowed = { always = yes }
+		visible = { always = yes }
+		available = { always = yes }
+		complete_effect = {
+			if = { limit = { check_variable = { cic > 0 } } log = "BH3TEST cic_gt0" }
+			else = { log = "BH3TEST cic_lt1_or_unreadable" }
+			if = { limit = { check_variable = { cic > 499 } } log = "BH3TEST cic_gt499" }
+		}
+	}
 }
