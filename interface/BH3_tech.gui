@@ -1394,7 +1394,7 @@ guiTypes = {
 			name = "BH3_ER_draw_btn"
 			position = { x = 90 y = 480 }
 			spriteType = "GFX_BH3_Intro_400x50_btn"
-			context_aware_tooltip = "BH3_ER_draw_btn_tip_holder"
+			pdx_tooltip = "BH3_ER_draw_btn_tip_holder"
 			buttonText = "BH3_ER_draw_btn_text"
 			buttonFont = "hoi_16mbs"
 		}
@@ -1418,7 +1418,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_btn"
 			position = { x = 560 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			context_aware_tooltip = "BH3_ER_slot_1_tip_holder"
+			pdx_tooltip = "BH3_ER_slot_1_tip_holder"
 		}
 
 		iconType = {
@@ -1518,12 +1518,122 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "BH3_ER_slot_1_label"
-			position = { x = 560 y = 490 }
+			name = "BH3_ER_slot_1_label_dlv"
+			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "[BH3_ER_slot_1_name]"
-			maxWidth = 200
-			maxHeight = 30
+			context_aware_text = "BH3_ER_serlabel_dlv"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_gold"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_gold"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_sts"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_sts"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_fs"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_fs"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_az"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_az"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_bd"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_bd"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_ds"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_ds"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_hx"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_hx"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_if"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_if"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_db"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_db"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_st"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_st"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_1_label_rv"
+			position = { x = 560 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_rv"
+			maxWidth = 230
+			maxHeight = 34
 			format = center
 			alwaystransparent = yes
 		}
@@ -1533,7 +1643,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_btn"
 			position = { x = 790 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			context_aware_tooltip = "BH3_ER_slot_2_tip_holder"
+			pdx_tooltip = "BH3_ER_slot_2_tip_holder"
 		}
 
 		iconType = {
@@ -1633,12 +1743,122 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "BH3_ER_slot_2_label"
-			position = { x = 790 y = 490 }
+			name = "BH3_ER_slot_2_label_dlv"
+			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "[BH3_ER_slot_2_name]"
-			maxWidth = 200
-			maxHeight = 30
+			context_aware_text = "BH3_ER_serlabel_dlv"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_gold"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_gold"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_sts"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_sts"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_fs"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_fs"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_az"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_az"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_bd"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_bd"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_ds"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_ds"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_hx"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_hx"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_if"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_if"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_db"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_db"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_st"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_st"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_2_label_rv"
+			position = { x = 790 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_rv"
+			maxWidth = 230
+			maxHeight = 34
 			format = center
 			alwaystransparent = yes
 		}
@@ -1648,7 +1868,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_btn"
 			position = { x = 1020 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			context_aware_tooltip = "BH3_ER_slot_3_tip_holder"
+			pdx_tooltip = "BH3_ER_slot_3_tip_holder"
 		}
 
 		iconType = {
@@ -1748,12 +1968,122 @@ guiTypes = {
 		}
 
 		instantTextBoxType = {
-			name = "BH3_ER_slot_3_label"
-			position = { x = 1020 y = 490 }
+			name = "BH3_ER_slot_3_label_dlv"
+			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "[BH3_ER_slot_3_name]"
-			maxWidth = 200
-			maxHeight = 30
+			context_aware_text = "BH3_ER_serlabel_dlv"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_gold"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_gold"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_sts"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_sts"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_fs"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_fs"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_az"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_az"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_bd"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_bd"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_ds"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_ds"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_hx"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_hx"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_if"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_if"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_db"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_db"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_st"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_st"
+			maxWidth = 230
+			maxHeight = 34
+			format = center
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "BH3_ER_slot_3_label_rv"
+			position = { x = 1020 y = 488 }
+			font = "hoi_16mbs"
+			context_aware_text = "BH3_ER_serlabel_rv"
+			maxWidth = 230
+			maxHeight = 34
 			format = center
 			alwaystransparent = yes
 		}

@@ -983,3 +983,19 @@ BH3_UD_apply = yes
 - 抽卡按钮 tooltip：同理走 BH3_ER_draw_btn_tip_holder
 - tooltip 文本加入颜色：§Y 名称、§T 系列、§G 进度行；格式向女武神科技界面（原版科技 tooltip 风格）靠拢
 - 图标问题：GFX_BH3_ER_series_st（繁星）精灵未定义，已补；同时补齐各槽位的 dlv 图标可见条件（之前缺失导致 救世 图标常驻）
+
+### 18.6 悬停提示修复（2026-11-27 三次，依据 error.log）
+
+error.log 两条关键报错：
+
+- Scoped text used in instant text box ... but no scoped localizer found
+  → GUI 的 context_aware_text 里写 [定义名] 不成立；它要的是“作用域本地化器”，不是 defined_text
+- Trying to do scoped tooltip localization on GUI type BH3_ER_slot_N_btn ... that doesn't support it
+  → buttonType 不支持 context_aware_tooltip
+
+改法：
+
+- 候选名标签：不再用动态文本框，改为每个槽位 12 个“系列标签”文本框（context_aware_text = 静态 key BH3_ER_serlabel_系列，值里带 [?变量|0] 动态数字），并用 scripted GUI 的 _visible 按候选 ID 区间显示
+- tooltip：按钮改回 pdx_tooltip = BH3_ER_slot_N_tip_holder（静态 key），其 loc 值为 [BH3_ER_slot_N_tip]；defined_text 在 loc 值里可以被解析（原版 AST 选举界面同款）
+- tooltip 文本保留 §Y/§T/§G 颜色与 [?变量|0] 动态数字
+- 若 pdx_tooltip 仍不显示，则改为“每个候选 ID 一个隐形覆盖 iconType + 静态 tooltip”的兜底方案（504 个元素）

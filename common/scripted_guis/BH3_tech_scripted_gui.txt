@@ -348,6 +348,150 @@ scripted_gui = {
 				check_variable = { BH3_ER_c1 > 100 }
 				check_variable = { BH3_ER_c1 < 115 }
 			}
+			BH3_ER_slot_1_label_dlv_visible = {
+				check_variable = { BH3_ER_c1 > 101 }
+				check_variable = { BH3_ER_c1 < 115 }
+			}
+			BH3_ER_slot_1_label_gold_visible = {
+				check_variable = { BH3_ER_c1 > 201 }
+				check_variable = { BH3_ER_c1 < 215 }
+			}
+			BH3_ER_slot_1_label_sts_visible = {
+				check_variable = { BH3_ER_c1 > 301 }
+				check_variable = { BH3_ER_c1 < 315 }
+			}
+			BH3_ER_slot_1_label_fs_visible = {
+				check_variable = { BH3_ER_c1 > 401 }
+				check_variable = { BH3_ER_c1 < 415 }
+			}
+			BH3_ER_slot_1_label_az_visible = {
+				check_variable = { BH3_ER_c1 > 501 }
+				check_variable = { BH3_ER_c1 < 515 }
+			}
+			BH3_ER_slot_1_label_bd_visible = {
+				check_variable = { BH3_ER_c1 > 601 }
+				check_variable = { BH3_ER_c1 < 615 }
+			}
+			BH3_ER_slot_1_label_ds_visible = {
+				check_variable = { BH3_ER_c1 > 701 }
+				check_variable = { BH3_ER_c1 < 715 }
+			}
+			BH3_ER_slot_1_label_hx_visible = {
+				check_variable = { BH3_ER_c1 > 801 }
+				check_variable = { BH3_ER_c1 < 815 }
+			}
+			BH3_ER_slot_1_label_if_visible = {
+				check_variable = { BH3_ER_c1 > 901 }
+				check_variable = { BH3_ER_c1 < 915 }
+			}
+			BH3_ER_slot_1_label_db_visible = {
+				check_variable = { BH3_ER_c1 > 1001 }
+				check_variable = { BH3_ER_c1 < 1015 }
+			}
+			BH3_ER_slot_1_label_st_visible = {
+				check_variable = { BH3_ER_c1 > 1101 }
+				check_variable = { BH3_ER_c1 < 1115 }
+			}
+			BH3_ER_slot_1_label_rv_visible = {
+				check_variable = { BH3_ER_c1 > 1201 }
+				check_variable = { BH3_ER_c1 < 1215 }
+			}
+			BH3_ER_slot_2_label_dlv_visible = {
+				check_variable = { BH3_ER_c2 > 101 }
+				check_variable = { BH3_ER_c2 < 115 }
+			}
+			BH3_ER_slot_2_label_gold_visible = {
+				check_variable = { BH3_ER_c2 > 201 }
+				check_variable = { BH3_ER_c2 < 215 }
+			}
+			BH3_ER_slot_2_label_sts_visible = {
+				check_variable = { BH3_ER_c2 > 301 }
+				check_variable = { BH3_ER_c2 < 315 }
+			}
+			BH3_ER_slot_2_label_fs_visible = {
+				check_variable = { BH3_ER_c2 > 401 }
+				check_variable = { BH3_ER_c2 < 415 }
+			}
+			BH3_ER_slot_2_label_az_visible = {
+				check_variable = { BH3_ER_c2 > 501 }
+				check_variable = { BH3_ER_c2 < 515 }
+			}
+			BH3_ER_slot_2_label_bd_visible = {
+				check_variable = { BH3_ER_c2 > 601 }
+				check_variable = { BH3_ER_c2 < 615 }
+			}
+			BH3_ER_slot_2_label_ds_visible = {
+				check_variable = { BH3_ER_c2 > 701 }
+				check_variable = { BH3_ER_c2 < 715 }
+			}
+			BH3_ER_slot_2_label_hx_visible = {
+				check_variable = { BH3_ER_c2 > 801 }
+				check_variable = { BH3_ER_c2 < 815 }
+			}
+			BH3_ER_slot_2_label_if_visible = {
+				check_variable = { BH3_ER_c2 > 901 }
+				check_variable = { BH3_ER_c2 < 915 }
+			}
+			BH3_ER_slot_2_label_db_visible = {
+				check_variable = { BH3_ER_c2 > 1001 }
+				check_variable = { BH3_ER_c2 < 1015 }
+			}
+			BH3_ER_slot_2_label_st_visible = {
+				check_variable = { BH3_ER_c2 > 1101 }
+				check_variable = { BH3_ER_c2 < 1115 }
+			}
+			BH3_ER_slot_2_label_rv_visible = {
+				check_variable = { BH3_ER_c2 > 1201 }
+				check_variable = { BH3_ER_c2 < 1215 }
+			}
+			BH3_ER_slot_3_label_dlv_visible = {
+				check_variable = { BH3_ER_c3 > 101 }
+				check_variable = { BH3_ER_c3 < 115 }
+			}
+			BH3_ER_slot_3_label_gold_visible = {
+				check_variable = { BH3_ER_c3 > 201 }
+				check_variable = { BH3_ER_c3 < 215 }
+			}
+			BH3_ER_slot_3_label_sts_visible = {
+				check_variable = { BH3_ER_c3 > 301 }
+				check_variable = { BH3_ER_c3 < 315 }
+			}
+			BH3_ER_slot_3_label_fs_visible = {
+				check_variable = { BH3_ER_c3 > 401 }
+				check_variable = { BH3_ER_c3 < 415 }
+			}
+			BH3_ER_slot_3_label_az_visible = {
+				check_variable = { BH3_ER_c3 > 501 }
+				check_variable = { BH3_ER_c3 < 515 }
+			}
+			BH3_ER_slot_3_label_bd_visible = {
+				check_variable = { BH3_ER_c3 > 601 }
+				check_variable = { BH3_ER_c3 < 615 }
+			}
+			BH3_ER_slot_3_label_ds_visible = {
+				check_variable = { BH3_ER_c3 > 701 }
+				check_variable = { BH3_ER_c3 < 715 }
+			}
+			BH3_ER_slot_3_label_hx_visible = {
+				check_variable = { BH3_ER_c3 > 801 }
+				check_variable = { BH3_ER_c3 < 815 }
+			}
+			BH3_ER_slot_3_label_if_visible = {
+				check_variable = { BH3_ER_c3 > 901 }
+				check_variable = { BH3_ER_c3 < 915 }
+			}
+			BH3_ER_slot_3_label_db_visible = {
+				check_variable = { BH3_ER_c3 > 1001 }
+				check_variable = { BH3_ER_c3 < 1015 }
+			}
+			BH3_ER_slot_3_label_st_visible = {
+				check_variable = { BH3_ER_c3 > 1101 }
+				check_variable = { BH3_ER_c3 < 1115 }
+			}
+			BH3_ER_slot_3_label_rv_visible = {
+				check_variable = { BH3_ER_c3 > 1201 }
+				check_variable = { BH3_ER_c3 < 1215 }
+			}
 			BH3_ER_slot_1_icon_dlv_visible = {
 				check_variable = { BH3_ER_c1 > 100 }
 				check_variable = { BH3_ER_c1 < 115 }
