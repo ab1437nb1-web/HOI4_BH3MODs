@@ -1908,9 +1908,8 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_rv_coin = 0 }
 			set_variable = { BH3_ER_rv_stack = 0 }
 			set_variable = { BH3_ER_rv_stack_days = 0 }
-			clr_country_flag = BH3_ER_rv_occ_1
-			clr_country_flag = BH3_ER_rv_occ_2
-			clr_country_flag = BH3_ER_rv_occ_3
+			set_variable = { BH3_ER_rv_occupy = 0 }
+			set_variable = { BH3_ER_rv_occ_tick = 0 }
 			BH3_ER_rv_recalc = yes
 		}
 		ai_will_do = { factor = 0 }

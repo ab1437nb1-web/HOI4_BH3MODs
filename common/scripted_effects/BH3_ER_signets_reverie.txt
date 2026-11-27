@@ -208,23 +208,38 @@ BH3_ER_rv_daily = {
 	}
 
 
-	# 装备造价压制（真实 equipment_bonus）：档位只由“民工调动”决定
+	# 造价压制与民工调动：全自动循环（参考梅芙券的定期推进 + 动态修正写法）
+	# 每天按空梦之币阈值决定目标占用 0/3/6/10 个民工，每 5 天推进/回退一档
 	if = {
 		limit = { has_country_flag = BH3_ER_own_rv_1201 }
-		set_temp_variable = { rv_cost_tier = 0 }
-		if = { limit = { has_country_flag = BH3_ER_rv_occ_1 } set_temp_variable = { rv_cost_tier = 2 } }
-		if = { limit = { has_country_flag = BH3_ER_rv_occ_2 } set_temp_variable = { rv_cost_tier = 3 } }
-		if = { limit = { has_country_flag = BH3_ER_rv_occ_3 } set_temp_variable = { rv_cost_tier = 4 } }
+		set_temp_variable = { rv_occ_target = 0 }
+		if = { limit = { check_variable = { BH3_ER_rv_coin > 749 } } set_temp_variable = { rv_occ_target = 10 } }
+		else_if = { limit = { check_variable = { BH3_ER_rv_coin > 499 } } set_temp_variable = { rv_occ_target = 6 } }
+		else_if = { limit = { check_variable = { BH3_ER_rv_coin > 249 } } set_temp_variable = { rv_occ_target = 3 } }
 
-		remove_ideas = BH3_ER_rv_cost_1
-		remove_ideas = BH3_ER_rv_cost_2
-		remove_ideas = BH3_ER_rv_cost_3
-		remove_ideas = BH3_ER_rv_cost_4
-		if = { limit = { check_variable = { rv_cost_tier = 4 } } add_timed_idea = { idea = BH3_ER_rv_cost_4 days = 10 } }
-		else_if = { limit = { check_variable = { rv_cost_tier = 3 } } add_timed_idea = { idea = BH3_ER_rv_cost_3 days = 10 } }
-		else_if = { limit = { check_variable = { rv_cost_tier = 2 } } add_timed_idea = { idea = BH3_ER_rv_cost_2 days = 10 } }
-		else_if = { limit = { check_variable = { rv_cost_tier = 1 } } add_timed_idea = { idea = BH3_ER_rv_cost_1 days = 10 } }
+		add_to_variable = { BH3_ER_rv_occ_tick = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_occ_tick > 4 } }
+			set_variable = { BH3_ER_rv_occ_tick = 0 }
+			set_variable = { BH3_ER_rv_occupy = rv_occ_target }
+		}
 	}
+	else = { set_variable = { BH3_ER_rv_occupy = 0 } }
+
+	# 造价档位 = 由占用数量决定
+	set_temp_variable = { rv_cost_tier = 0 }
+	if = { limit = { check_variable = { BH3_ER_rv_occupy > 8 } } set_temp_variable = { rv_cost_tier = 4 } }
+	else_if = { limit = { check_variable = { BH3_ER_rv_occupy > 5 } } set_temp_variable = { rv_cost_tier = 3 } }
+	else_if = { limit = { check_variable = { BH3_ER_rv_occupy > 0 } } set_temp_variable = { rv_cost_tier = 2 } }
+
+	remove_ideas = BH3_ER_rv_cost_1
+	remove_ideas = BH3_ER_rv_cost_2
+	remove_ideas = BH3_ER_rv_cost_3
+	remove_ideas = BH3_ER_rv_cost_4
+	if = { limit = { check_variable = { rv_cost_tier = 4 } } add_timed_idea = { idea = BH3_ER_rv_cost_4 days = 10 } }
+	else_if = { limit = { check_variable = { rv_cost_tier = 3 } } add_timed_idea = { idea = BH3_ER_rv_cost_3 days = 10 } }
+	else_if = { limit = { check_variable = { rv_cost_tier = 2 } } add_timed_idea = { idea = BH3_ER_rv_cost_2 days = 10 } }
+	else_if = { limit = { check_variable = { rv_cost_tier = 1 } } add_timed_idea = { idea = BH3_ER_rv_cost_1 days = 10 } }
 
 	BH3_ER_rv_recalc = yes
 }
