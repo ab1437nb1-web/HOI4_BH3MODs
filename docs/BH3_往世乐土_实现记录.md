@@ -1019,3 +1019,10 @@ error.log 两条关键报错：
   - 多个系列同时满足时仍按固定顺序，每次选择登记一个
 - 顺带修复：候选槽标签之前用 context_aware_text 引起大量 “Scoped text … no scoped localizer found” 报错
   - 标签改为纯静态 key（BH3_ER_sername_系列），只显示系列名；进度信息放在 tooltip 里
+
+### 18.9 核心事件找不到文件（2026-11-27 最终修复）
+
+- 存档与 error.log 显示：Tried to trigger non-existant event: BH3_ER_core.3（每天重复 —— 说明条件判定与每日派发都正常，只是事件没注册）
+- 根因：事件文件放错目录。HOI4 的事件必须放在 mod 根目录的 events/ 下，common/events/ 不会被读取
+- 修法：BH3_ER_core_events.txt 从 common/events/ 移动到 events/
+- 附注：日志里 daily 反复触发也反证 BH3_ER_norm_sts 计数正常（刹那普通≥3 判定成立）

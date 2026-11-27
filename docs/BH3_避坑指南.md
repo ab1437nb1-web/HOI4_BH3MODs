@@ -220,3 +220,9 @@ HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 gam
 - scripted_guis 的 effects 里写 country_event 不会生效（原版 0 处使用）
 - 正确做法：click effect 里只设变量/旗标，on_daily 检查后由 on_actions 发事件
 - 同类限制：GUI 的 text 里写带 [ ?变量 ] 的 context_aware_text 会报 scoped localizer 错误；需要动态文字的，用“每个取值一个静态元素 + _visible 切换”
+
+## 17. 事件文件必须放在 mod 根目录 events/
+
+- HOI4 的 country_event / news_event 文件只从 mod 根目录的 events/ 读取
+- 放到 common/events/ 不会报解析错误，但事件 id 不存在；触发时报 “Tried to trigger non-existant event: xxx”
+- 排查事件不触发时，先去 error.log 搜 “non-existant event”
