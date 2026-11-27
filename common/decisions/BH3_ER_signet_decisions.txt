@@ -89,4 +89,18 @@ BH3_ER_signet_group = {
 
 
 
+	# 往事乐土：刻印效果总览（信息决议，点击不会产生任何实际效果）
+	BH3_ER_overview_tips = {
+		icon = GFX_BH3_ER_icon_small
+		priority = 50
+		allowed = { always = yes }
+		available = { always = yes }
+		visible = { has_country_flag = BH3_ElysianRealm_unlocked }
+		fire_only_once = no
+		complete_effect = {
+			custom_effect_tooltip = BH3_ER_overview_TT
+		}
+		ai_will_do = { factor = 0 }
+	}
+
 }
