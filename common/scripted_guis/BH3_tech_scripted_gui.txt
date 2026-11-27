@@ -115,12 +115,15 @@ scripted_gui = {
 			}
 			BH3_ER_slot_1_btn_click = {
 				BH3_ER_grant_c1 = yes
+				BH3_ER_core_check = yes
 			}
 			BH3_ER_slot_2_btn_click = {
 				BH3_ER_grant_c2 = yes
+				BH3_ER_core_check = yes
 			}
 			BH3_ER_slot_3_btn_click = {
 				BH3_ER_grant_c3 = yes
+				BH3_ER_core_check = yes
 			}
 		}
 		triggers = {

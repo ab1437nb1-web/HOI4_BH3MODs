@@ -1,1087 +1,585 @@
 # 刻印抽取：候选合法性过滤 + 重抽 + 核心可获取状态（自动生成，勿手改）
 
+# 核心刻印（x07 / x11）不进抽取池：通过选择刻印后触发的事件获得
+
 BH3_ER_cand_ok = {
 	set_variable = { BH3_ER_cand_ok = 0 }
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 101 } NOT = { has_country_flag = BH3_ER_own_dlv_101 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 102 } NOT = { has_country_flag = BH3_ER_own_dlv_102 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 103 } NOT = { has_country_flag = BH3_ER_own_dlv_103 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 104 } NOT = { has_country_flag = BH3_ER_own_dlv_104 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 105 } NOT = { has_country_flag = BH3_ER_own_dlv_105 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 106 } NOT = { has_country_flag = BH3_ER_own_dlv_106 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 107 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_107 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_111 }
-				check_variable = { BH3_ER_norm_dlv > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 108 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_108 }
-				has_country_flag = BH3_ER_own_dlv_107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 109 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_109 }
-				has_country_flag = BH3_ER_own_dlv_107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 110 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_110 }
-				has_country_flag = BH3_ER_own_dlv_107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 111 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_111 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_107 }
-				check_variable = { BH3_ER_norm_dlv > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 112 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_112 }
-				has_country_flag = BH3_ER_own_dlv_111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 113 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_113 }
-				has_country_flag = BH3_ER_own_dlv_111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 114 }
-				NOT = { has_country_flag = BH3_ER_own_dlv_114 }
-				has_country_flag = BH3_ER_own_dlv_111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 201 } NOT = { has_country_flag = BH3_ER_own_gold_201 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 202 } NOT = { has_country_flag = BH3_ER_own_gold_202 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 203 } NOT = { has_country_flag = BH3_ER_own_gold_203 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 204 } NOT = { has_country_flag = BH3_ER_own_gold_204 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 205 } NOT = { has_country_flag = BH3_ER_own_gold_205 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 206 } NOT = { has_country_flag = BH3_ER_own_gold_206 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 207 }
-				NOT = { has_country_flag = BH3_ER_own_gold_207 }
-				NOT = { has_country_flag = BH3_ER_own_gold_211 }
-				check_variable = { BH3_ER_norm_gold > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 208 }
-				NOT = { has_country_flag = BH3_ER_own_gold_208 }
-				has_country_flag = BH3_ER_own_gold_207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 209 }
-				NOT = { has_country_flag = BH3_ER_own_gold_209 }
-				has_country_flag = BH3_ER_own_gold_207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 210 }
-				NOT = { has_country_flag = BH3_ER_own_gold_210 }
-				has_country_flag = BH3_ER_own_gold_207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 211 }
-				NOT = { has_country_flag = BH3_ER_own_gold_211 }
-				NOT = { has_country_flag = BH3_ER_own_gold_207 }
-				check_variable = { BH3_ER_norm_gold > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 212 }
-				NOT = { has_country_flag = BH3_ER_own_gold_212 }
-				has_country_flag = BH3_ER_own_gold_211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 213 }
-				NOT = { has_country_flag = BH3_ER_own_gold_213 }
-				has_country_flag = BH3_ER_own_gold_211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 214 }
-				NOT = { has_country_flag = BH3_ER_own_gold_214 }
-				has_country_flag = BH3_ER_own_gold_211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 301 } NOT = { has_country_flag = BH3_ER_own_sts_301 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 302 } NOT = { has_country_flag = BH3_ER_own_sts_302 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 303 } NOT = { has_country_flag = BH3_ER_own_sts_303 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 304 } NOT = { has_country_flag = BH3_ER_own_sts_304 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 305 } NOT = { has_country_flag = BH3_ER_own_sts_305 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 306 } NOT = { has_country_flag = BH3_ER_own_sts_306 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 307 }
-				NOT = { has_country_flag = BH3_ER_own_sts_307 }
-				NOT = { has_country_flag = BH3_ER_own_sts_311 }
-				check_variable = { BH3_ER_norm_sts > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 308 }
-				NOT = { has_country_flag = BH3_ER_own_sts_308 }
-				has_country_flag = BH3_ER_own_sts_307
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 309 }
-				NOT = { has_country_flag = BH3_ER_own_sts_309 }
-				has_country_flag = BH3_ER_own_sts_307
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 310 }
-				NOT = { has_country_flag = BH3_ER_own_sts_310 }
-				has_country_flag = BH3_ER_own_sts_307
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 311 }
-				NOT = { has_country_flag = BH3_ER_own_sts_311 }
-				NOT = { has_country_flag = BH3_ER_own_sts_307 }
-				check_variable = { BH3_ER_norm_sts > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 312 }
-				NOT = { has_country_flag = BH3_ER_own_sts_312 }
-				has_country_flag = BH3_ER_own_sts_311
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 313 }
-				NOT = { has_country_flag = BH3_ER_own_sts_313 }
-				has_country_flag = BH3_ER_own_sts_311
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 314 }
-				NOT = { has_country_flag = BH3_ER_own_sts_314 }
-				has_country_flag = BH3_ER_own_sts_311
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 401 } NOT = { has_country_flag = BH3_ER_own_fs_401 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 402 } NOT = { has_country_flag = BH3_ER_own_fs_402 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 403 } NOT = { has_country_flag = BH3_ER_own_fs_403 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 404 } NOT = { has_country_flag = BH3_ER_own_fs_404 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 405 } NOT = { has_country_flag = BH3_ER_own_fs_405 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 406 } NOT = { has_country_flag = BH3_ER_own_fs_406 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 407 }
-				NOT = { has_country_flag = BH3_ER_own_fs_407 }
-				NOT = { has_country_flag = BH3_ER_own_fs_411 }
-				check_variable = { BH3_ER_norm_fs > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 408 }
-				NOT = { has_country_flag = BH3_ER_own_fs_408 }
-				has_country_flag = BH3_ER_own_fs_407
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 409 }
-				NOT = { has_country_flag = BH3_ER_own_fs_409 }
-				has_country_flag = BH3_ER_own_fs_407
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 410 }
-				NOT = { has_country_flag = BH3_ER_own_fs_410 }
-				has_country_flag = BH3_ER_own_fs_407
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 411 }
-				NOT = { has_country_flag = BH3_ER_own_fs_411 }
-				NOT = { has_country_flag = BH3_ER_own_fs_407 }
-				check_variable = { BH3_ER_norm_fs > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 412 }
-				NOT = { has_country_flag = BH3_ER_own_fs_412 }
-				has_country_flag = BH3_ER_own_fs_411
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 413 }
-				NOT = { has_country_flag = BH3_ER_own_fs_413 }
-				has_country_flag = BH3_ER_own_fs_411
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 414 }
-				NOT = { has_country_flag = BH3_ER_own_fs_414 }
-				has_country_flag = BH3_ER_own_fs_411
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 501 } NOT = { has_country_flag = BH3_ER_own_az_501 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 502 } NOT = { has_country_flag = BH3_ER_own_az_502 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 503 } NOT = { has_country_flag = BH3_ER_own_az_503 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 504 } NOT = { has_country_flag = BH3_ER_own_az_504 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 505 } NOT = { has_country_flag = BH3_ER_own_az_505 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 506 } NOT = { has_country_flag = BH3_ER_own_az_506 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 507 }
-				NOT = { has_country_flag = BH3_ER_own_az_507 }
-				NOT = { has_country_flag = BH3_ER_own_az_511 }
-				check_variable = { BH3_ER_norm_az > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 508 }
-				NOT = { has_country_flag = BH3_ER_own_az_508 }
-				has_country_flag = BH3_ER_own_az_507
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 509 }
-				NOT = { has_country_flag = BH3_ER_own_az_509 }
-				has_country_flag = BH3_ER_own_az_507
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 510 }
-				NOT = { has_country_flag = BH3_ER_own_az_510 }
-				has_country_flag = BH3_ER_own_az_507
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 511 }
-				NOT = { has_country_flag = BH3_ER_own_az_511 }
-				NOT = { has_country_flag = BH3_ER_own_az_507 }
-				check_variable = { BH3_ER_norm_az > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 512 }
-				NOT = { has_country_flag = BH3_ER_own_az_512 }
-				has_country_flag = BH3_ER_own_az_511
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 513 }
-				NOT = { has_country_flag = BH3_ER_own_az_513 }
-				has_country_flag = BH3_ER_own_az_511
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 514 }
-				NOT = { has_country_flag = BH3_ER_own_az_514 }
-				has_country_flag = BH3_ER_own_az_511
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 601 } NOT = { has_country_flag = BH3_ER_own_bd_601 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 602 } NOT = { has_country_flag = BH3_ER_own_bd_602 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 603 } NOT = { has_country_flag = BH3_ER_own_bd_603 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 604 } NOT = { has_country_flag = BH3_ER_own_bd_604 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 605 } NOT = { has_country_flag = BH3_ER_own_bd_605 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 606 } NOT = { has_country_flag = BH3_ER_own_bd_606 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 607 }
-				NOT = { has_country_flag = BH3_ER_own_bd_607 }
-				NOT = { has_country_flag = BH3_ER_own_bd_611 }
-				check_variable = { BH3_ER_norm_bd > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 608 }
-				NOT = { has_country_flag = BH3_ER_own_bd_608 }
-				has_country_flag = BH3_ER_own_bd_607
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 609 }
-				NOT = { has_country_flag = BH3_ER_own_bd_609 }
-				has_country_flag = BH3_ER_own_bd_607
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 610 }
-				NOT = { has_country_flag = BH3_ER_own_bd_610 }
-				has_country_flag = BH3_ER_own_bd_607
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 611 }
-				NOT = { has_country_flag = BH3_ER_own_bd_611 }
-				NOT = { has_country_flag = BH3_ER_own_bd_607 }
-				check_variable = { BH3_ER_norm_bd > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 612 }
-				NOT = { has_country_flag = BH3_ER_own_bd_612 }
-				has_country_flag = BH3_ER_own_bd_611
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 613 }
-				NOT = { has_country_flag = BH3_ER_own_bd_613 }
-				has_country_flag = BH3_ER_own_bd_611
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 614 }
-				NOT = { has_country_flag = BH3_ER_own_bd_614 }
-				has_country_flag = BH3_ER_own_bd_611
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 701 } NOT = { has_country_flag = BH3_ER_own_ds_701 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 702 } NOT = { has_country_flag = BH3_ER_own_ds_702 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 703 } NOT = { has_country_flag = BH3_ER_own_ds_703 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 704 } NOT = { has_country_flag = BH3_ER_own_ds_704 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 705 } NOT = { has_country_flag = BH3_ER_own_ds_705 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 706 } NOT = { has_country_flag = BH3_ER_own_ds_706 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 707 }
-				NOT = { has_country_flag = BH3_ER_own_ds_707 }
-				NOT = { has_country_flag = BH3_ER_own_ds_711 }
-				check_variable = { BH3_ER_norm_ds > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 708 }
-				NOT = { has_country_flag = BH3_ER_own_ds_708 }
-				has_country_flag = BH3_ER_own_ds_707
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 709 }
-				NOT = { has_country_flag = BH3_ER_own_ds_709 }
-				has_country_flag = BH3_ER_own_ds_707
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 710 }
-				NOT = { has_country_flag = BH3_ER_own_ds_710 }
-				has_country_flag = BH3_ER_own_ds_707
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 711 }
-				NOT = { has_country_flag = BH3_ER_own_ds_711 }
-				NOT = { has_country_flag = BH3_ER_own_ds_707 }
-				check_variable = { BH3_ER_norm_ds > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 712 }
-				NOT = { has_country_flag = BH3_ER_own_ds_712 }
-				has_country_flag = BH3_ER_own_ds_711
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 713 }
-				NOT = { has_country_flag = BH3_ER_own_ds_713 }
-				has_country_flag = BH3_ER_own_ds_711
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 714 }
-				NOT = { has_country_flag = BH3_ER_own_ds_714 }
-				has_country_flag = BH3_ER_own_ds_711
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 801 } NOT = { has_country_flag = BH3_ER_own_hx_801 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 802 } NOT = { has_country_flag = BH3_ER_own_hx_802 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 803 } NOT = { has_country_flag = BH3_ER_own_hx_803 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 804 } NOT = { has_country_flag = BH3_ER_own_hx_804 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 805 } NOT = { has_country_flag = BH3_ER_own_hx_805 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 806 } NOT = { has_country_flag = BH3_ER_own_hx_806 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 807 }
-				NOT = { has_country_flag = BH3_ER_own_hx_807 }
-				NOT = { has_country_flag = BH3_ER_own_hx_811 }
-				check_variable = { BH3_ER_norm_hx > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 808 }
-				NOT = { has_country_flag = BH3_ER_own_hx_808 }
-				has_country_flag = BH3_ER_own_hx_807
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 809 }
-				NOT = { has_country_flag = BH3_ER_own_hx_809 }
-				has_country_flag = BH3_ER_own_hx_807
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 810 }
-				NOT = { has_country_flag = BH3_ER_own_hx_810 }
-				has_country_flag = BH3_ER_own_hx_807
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 811 }
-				NOT = { has_country_flag = BH3_ER_own_hx_811 }
-				NOT = { has_country_flag = BH3_ER_own_hx_807 }
-				check_variable = { BH3_ER_norm_hx > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 812 }
-				NOT = { has_country_flag = BH3_ER_own_hx_812 }
-				has_country_flag = BH3_ER_own_hx_811
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 813 }
-				NOT = { has_country_flag = BH3_ER_own_hx_813 }
-				has_country_flag = BH3_ER_own_hx_811
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 814 }
-				NOT = { has_country_flag = BH3_ER_own_hx_814 }
-				has_country_flag = BH3_ER_own_hx_811
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 901 } NOT = { has_country_flag = BH3_ER_own_if_901 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 902 } NOT = { has_country_flag = BH3_ER_own_if_902 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 903 } NOT = { has_country_flag = BH3_ER_own_if_903 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 904 } NOT = { has_country_flag = BH3_ER_own_if_904 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 905 } NOT = { has_country_flag = BH3_ER_own_if_905 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 906 } NOT = { has_country_flag = BH3_ER_own_if_906 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 907 }
-				NOT = { has_country_flag = BH3_ER_own_if_907 }
-				NOT = { has_country_flag = BH3_ER_own_if_911 }
-				check_variable = { BH3_ER_norm_if > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 908 }
-				NOT = { has_country_flag = BH3_ER_own_if_908 }
-				has_country_flag = BH3_ER_own_if_907
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 909 }
-				NOT = { has_country_flag = BH3_ER_own_if_909 }
-				has_country_flag = BH3_ER_own_if_907
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 910 }
-				NOT = { has_country_flag = BH3_ER_own_if_910 }
-				has_country_flag = BH3_ER_own_if_907
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 911 }
-				NOT = { has_country_flag = BH3_ER_own_if_911 }
-				NOT = { has_country_flag = BH3_ER_own_if_907 }
-				check_variable = { BH3_ER_norm_if > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 912 }
-				NOT = { has_country_flag = BH3_ER_own_if_912 }
-				has_country_flag = BH3_ER_own_if_911
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 913 }
-				NOT = { has_country_flag = BH3_ER_own_if_913 }
-				has_country_flag = BH3_ER_own_if_911
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 914 }
-				NOT = { has_country_flag = BH3_ER_own_if_914 }
-				has_country_flag = BH3_ER_own_if_911
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1001 } NOT = { has_country_flag = BH3_ER_own_db_1001 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1002 } NOT = { has_country_flag = BH3_ER_own_db_1002 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1003 } NOT = { has_country_flag = BH3_ER_own_db_1003 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1004 } NOT = { has_country_flag = BH3_ER_own_db_1004 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1005 } NOT = { has_country_flag = BH3_ER_own_db_1005 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1006 } NOT = { has_country_flag = BH3_ER_own_db_1006 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1007 }
-				NOT = { has_country_flag = BH3_ER_own_db_1007 }
-				NOT = { has_country_flag = BH3_ER_own_db_1011 }
-				check_variable = { BH3_ER_norm_db > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1008 }
-				NOT = { has_country_flag = BH3_ER_own_db_1008 }
-				has_country_flag = BH3_ER_own_db_1007
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1009 }
-				NOT = { has_country_flag = BH3_ER_own_db_1009 }
-				has_country_flag = BH3_ER_own_db_1007
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1010 }
-				NOT = { has_country_flag = BH3_ER_own_db_1010 }
-				has_country_flag = BH3_ER_own_db_1007
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1011 }
-				NOT = { has_country_flag = BH3_ER_own_db_1011 }
-				NOT = { has_country_flag = BH3_ER_own_db_1007 }
-				check_variable = { BH3_ER_norm_db > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1012 }
-				NOT = { has_country_flag = BH3_ER_own_db_1012 }
-				has_country_flag = BH3_ER_own_db_1011
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1013 }
-				NOT = { has_country_flag = BH3_ER_own_db_1013 }
-				has_country_flag = BH3_ER_own_db_1011
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1014 }
-				NOT = { has_country_flag = BH3_ER_own_db_1014 }
-				has_country_flag = BH3_ER_own_db_1011
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1101 } NOT = { has_country_flag = BH3_ER_own_st_1101 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1102 } NOT = { has_country_flag = BH3_ER_own_st_1102 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1103 } NOT = { has_country_flag = BH3_ER_own_st_1103 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1104 } NOT = { has_country_flag = BH3_ER_own_st_1104 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1105 } NOT = { has_country_flag = BH3_ER_own_st_1105 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1106 } NOT = { has_country_flag = BH3_ER_own_st_1106 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1107 }
-				NOT = { has_country_flag = BH3_ER_own_st_1107 }
-				NOT = { has_country_flag = BH3_ER_own_st_1111 }
-				check_variable = { BH3_ER_norm_st > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1108 }
-				NOT = { has_country_flag = BH3_ER_own_st_1108 }
-				has_country_flag = BH3_ER_own_st_1107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1109 }
-				NOT = { has_country_flag = BH3_ER_own_st_1109 }
-				has_country_flag = BH3_ER_own_st_1107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1110 }
-				NOT = { has_country_flag = BH3_ER_own_st_1110 }
-				has_country_flag = BH3_ER_own_st_1107
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1111 }
-				NOT = { has_country_flag = BH3_ER_own_st_1111 }
-				NOT = { has_country_flag = BH3_ER_own_st_1107 }
-				check_variable = { BH3_ER_norm_st > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1112 }
-				NOT = { has_country_flag = BH3_ER_own_st_1112 }
-				has_country_flag = BH3_ER_own_st_1111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1113 }
-				NOT = { has_country_flag = BH3_ER_own_st_1113 }
-				has_country_flag = BH3_ER_own_st_1111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1114 }
-				NOT = { has_country_flag = BH3_ER_own_st_1114 }
-				has_country_flag = BH3_ER_own_st_1111
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1201 } NOT = { has_country_flag = BH3_ER_own_rv_1201 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1202 } NOT = { has_country_flag = BH3_ER_own_rv_1202 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1203 } NOT = { has_country_flag = BH3_ER_own_rv_1203 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1204 } NOT = { has_country_flag = BH3_ER_own_rv_1204 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1205 } NOT = { has_country_flag = BH3_ER_own_rv_1205 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = { check_variable = { BH3_ER_cand_id = 1206 } NOT = { has_country_flag = BH3_ER_own_rv_1206 } }
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1207 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1207 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1211 }
-				check_variable = { BH3_ER_norm_rv > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1208 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1208 }
-				has_country_flag = BH3_ER_own_rv_1207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1209 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1209 }
-				has_country_flag = BH3_ER_own_rv_1207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1210 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1210 }
-				has_country_flag = BH3_ER_own_rv_1207
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1211 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1211 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1207 }
-				check_variable = { BH3_ER_norm_rv > 2 }
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1212 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1212 }
-				has_country_flag = BH3_ER_own_rv_1211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1213 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1213 }
-				has_country_flag = BH3_ER_own_rv_1211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
-		if = {
-			limit = {
-				check_variable = { BH3_ER_cand_id = 1214 }
-				NOT = { has_country_flag = BH3_ER_own_rv_1214 }
-				has_country_flag = BH3_ER_own_rv_1211
-			}
-			set_variable = { BH3_ER_cand_ok = 1 }
-		}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 101 } NOT = { has_country_flag = BH3_ER_own_dlv_101 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 102 } NOT = { has_country_flag = BH3_ER_own_dlv_102 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 103 } NOT = { has_country_flag = BH3_ER_own_dlv_103 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 104 } NOT = { has_country_flag = BH3_ER_own_dlv_104 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 105 } NOT = { has_country_flag = BH3_ER_own_dlv_105 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 106 } NOT = { has_country_flag = BH3_ER_own_dlv_106 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 108 } NOT = { has_country_flag = BH3_ER_own_dlv_108 } has_country_flag = BH3_ER_own_dlv_107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 109 } NOT = { has_country_flag = BH3_ER_own_dlv_109 } has_country_flag = BH3_ER_own_dlv_107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 110 } NOT = { has_country_flag = BH3_ER_own_dlv_110 } has_country_flag = BH3_ER_own_dlv_107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 112 } NOT = { has_country_flag = BH3_ER_own_dlv_112 } has_country_flag = BH3_ER_own_dlv_111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 113 } NOT = { has_country_flag = BH3_ER_own_dlv_113 } has_country_flag = BH3_ER_own_dlv_111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 114 } NOT = { has_country_flag = BH3_ER_own_dlv_114 } has_country_flag = BH3_ER_own_dlv_111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 201 } NOT = { has_country_flag = BH3_ER_own_gold_201 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 202 } NOT = { has_country_flag = BH3_ER_own_gold_202 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 203 } NOT = { has_country_flag = BH3_ER_own_gold_203 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 204 } NOT = { has_country_flag = BH3_ER_own_gold_204 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 205 } NOT = { has_country_flag = BH3_ER_own_gold_205 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 206 } NOT = { has_country_flag = BH3_ER_own_gold_206 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 208 } NOT = { has_country_flag = BH3_ER_own_gold_208 } has_country_flag = BH3_ER_own_gold_207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 209 } NOT = { has_country_flag = BH3_ER_own_gold_209 } has_country_flag = BH3_ER_own_gold_207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 210 } NOT = { has_country_flag = BH3_ER_own_gold_210 } has_country_flag = BH3_ER_own_gold_207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 212 } NOT = { has_country_flag = BH3_ER_own_gold_212 } has_country_flag = BH3_ER_own_gold_211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 213 } NOT = { has_country_flag = BH3_ER_own_gold_213 } has_country_flag = BH3_ER_own_gold_211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 214 } NOT = { has_country_flag = BH3_ER_own_gold_214 } has_country_flag = BH3_ER_own_gold_211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 301 } NOT = { has_country_flag = BH3_ER_own_sts_301 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 302 } NOT = { has_country_flag = BH3_ER_own_sts_302 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 303 } NOT = { has_country_flag = BH3_ER_own_sts_303 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 304 } NOT = { has_country_flag = BH3_ER_own_sts_304 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 305 } NOT = { has_country_flag = BH3_ER_own_sts_305 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 306 } NOT = { has_country_flag = BH3_ER_own_sts_306 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 308 } NOT = { has_country_flag = BH3_ER_own_sts_308 } has_country_flag = BH3_ER_own_sts_307 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 309 } NOT = { has_country_flag = BH3_ER_own_sts_309 } has_country_flag = BH3_ER_own_sts_307 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 310 } NOT = { has_country_flag = BH3_ER_own_sts_310 } has_country_flag = BH3_ER_own_sts_307 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 312 } NOT = { has_country_flag = BH3_ER_own_sts_312 } has_country_flag = BH3_ER_own_sts_311 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 313 } NOT = { has_country_flag = BH3_ER_own_sts_313 } has_country_flag = BH3_ER_own_sts_311 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 314 } NOT = { has_country_flag = BH3_ER_own_sts_314 } has_country_flag = BH3_ER_own_sts_311 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 401 } NOT = { has_country_flag = BH3_ER_own_fs_401 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 402 } NOT = { has_country_flag = BH3_ER_own_fs_402 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 403 } NOT = { has_country_flag = BH3_ER_own_fs_403 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 404 } NOT = { has_country_flag = BH3_ER_own_fs_404 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 405 } NOT = { has_country_flag = BH3_ER_own_fs_405 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 406 } NOT = { has_country_flag = BH3_ER_own_fs_406 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 408 } NOT = { has_country_flag = BH3_ER_own_fs_408 } has_country_flag = BH3_ER_own_fs_407 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 409 } NOT = { has_country_flag = BH3_ER_own_fs_409 } has_country_flag = BH3_ER_own_fs_407 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 410 } NOT = { has_country_flag = BH3_ER_own_fs_410 } has_country_flag = BH3_ER_own_fs_407 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 412 } NOT = { has_country_flag = BH3_ER_own_fs_412 } has_country_flag = BH3_ER_own_fs_411 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 413 } NOT = { has_country_flag = BH3_ER_own_fs_413 } has_country_flag = BH3_ER_own_fs_411 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 414 } NOT = { has_country_flag = BH3_ER_own_fs_414 } has_country_flag = BH3_ER_own_fs_411 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 501 } NOT = { has_country_flag = BH3_ER_own_az_501 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 502 } NOT = { has_country_flag = BH3_ER_own_az_502 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 503 } NOT = { has_country_flag = BH3_ER_own_az_503 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 504 } NOT = { has_country_flag = BH3_ER_own_az_504 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 505 } NOT = { has_country_flag = BH3_ER_own_az_505 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 506 } NOT = { has_country_flag = BH3_ER_own_az_506 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 508 } NOT = { has_country_flag = BH3_ER_own_az_508 } has_country_flag = BH3_ER_own_az_507 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 509 } NOT = { has_country_flag = BH3_ER_own_az_509 } has_country_flag = BH3_ER_own_az_507 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 510 } NOT = { has_country_flag = BH3_ER_own_az_510 } has_country_flag = BH3_ER_own_az_507 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 512 } NOT = { has_country_flag = BH3_ER_own_az_512 } has_country_flag = BH3_ER_own_az_511 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 513 } NOT = { has_country_flag = BH3_ER_own_az_513 } has_country_flag = BH3_ER_own_az_511 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 514 } NOT = { has_country_flag = BH3_ER_own_az_514 } has_country_flag = BH3_ER_own_az_511 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 601 } NOT = { has_country_flag = BH3_ER_own_bd_601 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 602 } NOT = { has_country_flag = BH3_ER_own_bd_602 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 603 } NOT = { has_country_flag = BH3_ER_own_bd_603 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 604 } NOT = { has_country_flag = BH3_ER_own_bd_604 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 605 } NOT = { has_country_flag = BH3_ER_own_bd_605 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 606 } NOT = { has_country_flag = BH3_ER_own_bd_606 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 608 } NOT = { has_country_flag = BH3_ER_own_bd_608 } has_country_flag = BH3_ER_own_bd_607 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 609 } NOT = { has_country_flag = BH3_ER_own_bd_609 } has_country_flag = BH3_ER_own_bd_607 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 610 } NOT = { has_country_flag = BH3_ER_own_bd_610 } has_country_flag = BH3_ER_own_bd_607 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 612 } NOT = { has_country_flag = BH3_ER_own_bd_612 } has_country_flag = BH3_ER_own_bd_611 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 613 } NOT = { has_country_flag = BH3_ER_own_bd_613 } has_country_flag = BH3_ER_own_bd_611 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 614 } NOT = { has_country_flag = BH3_ER_own_bd_614 } has_country_flag = BH3_ER_own_bd_611 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 701 } NOT = { has_country_flag = BH3_ER_own_ds_701 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 702 } NOT = { has_country_flag = BH3_ER_own_ds_702 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 703 } NOT = { has_country_flag = BH3_ER_own_ds_703 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 704 } NOT = { has_country_flag = BH3_ER_own_ds_704 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 705 } NOT = { has_country_flag = BH3_ER_own_ds_705 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 706 } NOT = { has_country_flag = BH3_ER_own_ds_706 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 708 } NOT = { has_country_flag = BH3_ER_own_ds_708 } has_country_flag = BH3_ER_own_ds_707 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 709 } NOT = { has_country_flag = BH3_ER_own_ds_709 } has_country_flag = BH3_ER_own_ds_707 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 710 } NOT = { has_country_flag = BH3_ER_own_ds_710 } has_country_flag = BH3_ER_own_ds_707 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 712 } NOT = { has_country_flag = BH3_ER_own_ds_712 } has_country_flag = BH3_ER_own_ds_711 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 713 } NOT = { has_country_flag = BH3_ER_own_ds_713 } has_country_flag = BH3_ER_own_ds_711 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 714 } NOT = { has_country_flag = BH3_ER_own_ds_714 } has_country_flag = BH3_ER_own_ds_711 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 801 } NOT = { has_country_flag = BH3_ER_own_hx_801 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 802 } NOT = { has_country_flag = BH3_ER_own_hx_802 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 803 } NOT = { has_country_flag = BH3_ER_own_hx_803 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 804 } NOT = { has_country_flag = BH3_ER_own_hx_804 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 805 } NOT = { has_country_flag = BH3_ER_own_hx_805 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 806 } NOT = { has_country_flag = BH3_ER_own_hx_806 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 808 } NOT = { has_country_flag = BH3_ER_own_hx_808 } has_country_flag = BH3_ER_own_hx_807 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 809 } NOT = { has_country_flag = BH3_ER_own_hx_809 } has_country_flag = BH3_ER_own_hx_807 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 810 } NOT = { has_country_flag = BH3_ER_own_hx_810 } has_country_flag = BH3_ER_own_hx_807 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 812 } NOT = { has_country_flag = BH3_ER_own_hx_812 } has_country_flag = BH3_ER_own_hx_811 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 813 } NOT = { has_country_flag = BH3_ER_own_hx_813 } has_country_flag = BH3_ER_own_hx_811 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 814 } NOT = { has_country_flag = BH3_ER_own_hx_814 } has_country_flag = BH3_ER_own_hx_811 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 901 } NOT = { has_country_flag = BH3_ER_own_if_901 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 902 } NOT = { has_country_flag = BH3_ER_own_if_902 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 903 } NOT = { has_country_flag = BH3_ER_own_if_903 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 904 } NOT = { has_country_flag = BH3_ER_own_if_904 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 905 } NOT = { has_country_flag = BH3_ER_own_if_905 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 906 } NOT = { has_country_flag = BH3_ER_own_if_906 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 908 } NOT = { has_country_flag = BH3_ER_own_if_908 } has_country_flag = BH3_ER_own_if_907 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 909 } NOT = { has_country_flag = BH3_ER_own_if_909 } has_country_flag = BH3_ER_own_if_907 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 910 } NOT = { has_country_flag = BH3_ER_own_if_910 } has_country_flag = BH3_ER_own_if_907 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 912 } NOT = { has_country_flag = BH3_ER_own_if_912 } has_country_flag = BH3_ER_own_if_911 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 913 } NOT = { has_country_flag = BH3_ER_own_if_913 } has_country_flag = BH3_ER_own_if_911 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 914 } NOT = { has_country_flag = BH3_ER_own_if_914 } has_country_flag = BH3_ER_own_if_911 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1001 } NOT = { has_country_flag = BH3_ER_own_db_1001 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1002 } NOT = { has_country_flag = BH3_ER_own_db_1002 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1003 } NOT = { has_country_flag = BH3_ER_own_db_1003 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1004 } NOT = { has_country_flag = BH3_ER_own_db_1004 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1005 } NOT = { has_country_flag = BH3_ER_own_db_1005 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1006 } NOT = { has_country_flag = BH3_ER_own_db_1006 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1008 } NOT = { has_country_flag = BH3_ER_own_db_1008 } has_country_flag = BH3_ER_own_db_1007 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1009 } NOT = { has_country_flag = BH3_ER_own_db_1009 } has_country_flag = BH3_ER_own_db_1007 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1010 } NOT = { has_country_flag = BH3_ER_own_db_1010 } has_country_flag = BH3_ER_own_db_1007 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1012 } NOT = { has_country_flag = BH3_ER_own_db_1012 } has_country_flag = BH3_ER_own_db_1011 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1013 } NOT = { has_country_flag = BH3_ER_own_db_1013 } has_country_flag = BH3_ER_own_db_1011 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1014 } NOT = { has_country_flag = BH3_ER_own_db_1014 } has_country_flag = BH3_ER_own_db_1011 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1101 } NOT = { has_country_flag = BH3_ER_own_st_1101 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1102 } NOT = { has_country_flag = BH3_ER_own_st_1102 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1103 } NOT = { has_country_flag = BH3_ER_own_st_1103 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1104 } NOT = { has_country_flag = BH3_ER_own_st_1104 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1105 } NOT = { has_country_flag = BH3_ER_own_st_1105 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1106 } NOT = { has_country_flag = BH3_ER_own_st_1106 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1108 } NOT = { has_country_flag = BH3_ER_own_st_1108 } has_country_flag = BH3_ER_own_st_1107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1109 } NOT = { has_country_flag = BH3_ER_own_st_1109 } has_country_flag = BH3_ER_own_st_1107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1110 } NOT = { has_country_flag = BH3_ER_own_st_1110 } has_country_flag = BH3_ER_own_st_1107 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1112 } NOT = { has_country_flag = BH3_ER_own_st_1112 } has_country_flag = BH3_ER_own_st_1111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1113 } NOT = { has_country_flag = BH3_ER_own_st_1113 } has_country_flag = BH3_ER_own_st_1111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1114 } NOT = { has_country_flag = BH3_ER_own_st_1114 } has_country_flag = BH3_ER_own_st_1111 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1201 } NOT = { has_country_flag = BH3_ER_own_rv_1201 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1202 } NOT = { has_country_flag = BH3_ER_own_rv_1202 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1203 } NOT = { has_country_flag = BH3_ER_own_rv_1203 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1204 } NOT = { has_country_flag = BH3_ER_own_rv_1204 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1205 } NOT = { has_country_flag = BH3_ER_own_rv_1205 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1206 } NOT = { has_country_flag = BH3_ER_own_rv_1206 } }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1208 } NOT = { has_country_flag = BH3_ER_own_rv_1208 } has_country_flag = BH3_ER_own_rv_1207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1209 } NOT = { has_country_flag = BH3_ER_own_rv_1209 } has_country_flag = BH3_ER_own_rv_1207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1210 } NOT = { has_country_flag = BH3_ER_own_rv_1210 } has_country_flag = BH3_ER_own_rv_1207 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1212 } NOT = { has_country_flag = BH3_ER_own_rv_1212 } has_country_flag = BH3_ER_own_rv_1211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1213 } NOT = { has_country_flag = BH3_ER_own_rv_1213 } has_country_flag = BH3_ER_own_rv_1211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
+	if = {
+		limit = { check_variable = { BH3_ER_cand_id = 1214 } NOT = { has_country_flag = BH3_ER_own_rv_1214 } has_country_flag = BH3_ER_own_rv_1211 }
+		set_variable = { BH3_ER_cand_ok = 1 }
+	}
 }
 
 BH3_ER_roll_one = {
@@ -1092,11 +590,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 104 } }
 		10 = { set_variable = { BH3_ER_cand_id = 105 } }
 		10 = { set_variable = { BH3_ER_cand_id = 106 } }
-		10 = { set_variable = { BH3_ER_cand_id = 107 } }
 		10 = { set_variable = { BH3_ER_cand_id = 108 } }
 		10 = { set_variable = { BH3_ER_cand_id = 109 } }
 		10 = { set_variable = { BH3_ER_cand_id = 110 } }
-		10 = { set_variable = { BH3_ER_cand_id = 111 } }
 		10 = { set_variable = { BH3_ER_cand_id = 112 } }
 		10 = { set_variable = { BH3_ER_cand_id = 113 } }
 		10 = { set_variable = { BH3_ER_cand_id = 114 } }
@@ -1106,11 +602,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 204 } }
 		10 = { set_variable = { BH3_ER_cand_id = 205 } }
 		10 = { set_variable = { BH3_ER_cand_id = 206 } }
-		10 = { set_variable = { BH3_ER_cand_id = 207 } }
 		10 = { set_variable = { BH3_ER_cand_id = 208 } }
 		10 = { set_variable = { BH3_ER_cand_id = 209 } }
 		10 = { set_variable = { BH3_ER_cand_id = 210 } }
-		10 = { set_variable = { BH3_ER_cand_id = 211 } }
 		10 = { set_variable = { BH3_ER_cand_id = 212 } }
 		10 = { set_variable = { BH3_ER_cand_id = 213 } }
 		10 = { set_variable = { BH3_ER_cand_id = 214 } }
@@ -1120,11 +614,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 304 } }
 		10 = { set_variable = { BH3_ER_cand_id = 305 } }
 		10 = { set_variable = { BH3_ER_cand_id = 306 } }
-		10 = { set_variable = { BH3_ER_cand_id = 307 } }
 		10 = { set_variable = { BH3_ER_cand_id = 308 } }
 		10 = { set_variable = { BH3_ER_cand_id = 309 } }
 		10 = { set_variable = { BH3_ER_cand_id = 310 } }
-		10 = { set_variable = { BH3_ER_cand_id = 311 } }
 		10 = { set_variable = { BH3_ER_cand_id = 312 } }
 		10 = { set_variable = { BH3_ER_cand_id = 313 } }
 		10 = { set_variable = { BH3_ER_cand_id = 314 } }
@@ -1134,11 +626,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 404 } }
 		10 = { set_variable = { BH3_ER_cand_id = 405 } }
 		10 = { set_variable = { BH3_ER_cand_id = 406 } }
-		10 = { set_variable = { BH3_ER_cand_id = 407 } }
 		10 = { set_variable = { BH3_ER_cand_id = 408 } }
 		10 = { set_variable = { BH3_ER_cand_id = 409 } }
 		10 = { set_variable = { BH3_ER_cand_id = 410 } }
-		10 = { set_variable = { BH3_ER_cand_id = 411 } }
 		10 = { set_variable = { BH3_ER_cand_id = 412 } }
 		10 = { set_variable = { BH3_ER_cand_id = 413 } }
 		10 = { set_variable = { BH3_ER_cand_id = 414 } }
@@ -1148,11 +638,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 504 } }
 		10 = { set_variable = { BH3_ER_cand_id = 505 } }
 		10 = { set_variable = { BH3_ER_cand_id = 506 } }
-		10 = { set_variable = { BH3_ER_cand_id = 507 } }
 		10 = { set_variable = { BH3_ER_cand_id = 508 } }
 		10 = { set_variable = { BH3_ER_cand_id = 509 } }
 		10 = { set_variable = { BH3_ER_cand_id = 510 } }
-		10 = { set_variable = { BH3_ER_cand_id = 511 } }
 		10 = { set_variable = { BH3_ER_cand_id = 512 } }
 		10 = { set_variable = { BH3_ER_cand_id = 513 } }
 		10 = { set_variable = { BH3_ER_cand_id = 514 } }
@@ -1162,11 +650,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 604 } }
 		10 = { set_variable = { BH3_ER_cand_id = 605 } }
 		10 = { set_variable = { BH3_ER_cand_id = 606 } }
-		10 = { set_variable = { BH3_ER_cand_id = 607 } }
 		10 = { set_variable = { BH3_ER_cand_id = 608 } }
 		10 = { set_variable = { BH3_ER_cand_id = 609 } }
 		10 = { set_variable = { BH3_ER_cand_id = 610 } }
-		10 = { set_variable = { BH3_ER_cand_id = 611 } }
 		10 = { set_variable = { BH3_ER_cand_id = 612 } }
 		10 = { set_variable = { BH3_ER_cand_id = 613 } }
 		10 = { set_variable = { BH3_ER_cand_id = 614 } }
@@ -1176,11 +662,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 704 } }
 		10 = { set_variable = { BH3_ER_cand_id = 705 } }
 		10 = { set_variable = { BH3_ER_cand_id = 706 } }
-		10 = { set_variable = { BH3_ER_cand_id = 707 } }
 		10 = { set_variable = { BH3_ER_cand_id = 708 } }
 		10 = { set_variable = { BH3_ER_cand_id = 709 } }
 		10 = { set_variable = { BH3_ER_cand_id = 710 } }
-		10 = { set_variable = { BH3_ER_cand_id = 711 } }
 		10 = { set_variable = { BH3_ER_cand_id = 712 } }
 		10 = { set_variable = { BH3_ER_cand_id = 713 } }
 		10 = { set_variable = { BH3_ER_cand_id = 714 } }
@@ -1190,11 +674,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 804 } }
 		10 = { set_variable = { BH3_ER_cand_id = 805 } }
 		10 = { set_variable = { BH3_ER_cand_id = 806 } }
-		10 = { set_variable = { BH3_ER_cand_id = 807 } }
 		10 = { set_variable = { BH3_ER_cand_id = 808 } }
 		10 = { set_variable = { BH3_ER_cand_id = 809 } }
 		10 = { set_variable = { BH3_ER_cand_id = 810 } }
-		10 = { set_variable = { BH3_ER_cand_id = 811 } }
 		10 = { set_variable = { BH3_ER_cand_id = 812 } }
 		10 = { set_variable = { BH3_ER_cand_id = 813 } }
 		10 = { set_variable = { BH3_ER_cand_id = 814 } }
@@ -1204,11 +686,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 904 } }
 		10 = { set_variable = { BH3_ER_cand_id = 905 } }
 		10 = { set_variable = { BH3_ER_cand_id = 906 } }
-		10 = { set_variable = { BH3_ER_cand_id = 907 } }
 		10 = { set_variable = { BH3_ER_cand_id = 908 } }
 		10 = { set_variable = { BH3_ER_cand_id = 909 } }
 		10 = { set_variable = { BH3_ER_cand_id = 910 } }
-		10 = { set_variable = { BH3_ER_cand_id = 911 } }
 		10 = { set_variable = { BH3_ER_cand_id = 912 } }
 		10 = { set_variable = { BH3_ER_cand_id = 913 } }
 		10 = { set_variable = { BH3_ER_cand_id = 914 } }
@@ -1218,11 +698,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 1004 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1005 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1006 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1007 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1008 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1009 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1010 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1011 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1012 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1013 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1014 } }
@@ -1232,11 +710,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 1104 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1105 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1106 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1107 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1108 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1109 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1110 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1111 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1112 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1113 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1114 } }
@@ -1246,11 +722,9 @@ BH3_ER_roll_one = {
 		10 = { set_variable = { BH3_ER_cand_id = 1204 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1205 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1206 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1207 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1208 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1209 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1210 } }
-		10 = { set_variable = { BH3_ER_cand_id = 1211 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1212 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1213 } }
 		10 = { set_variable = { BH3_ER_cand_id = 1214 } }
@@ -1258,7 +732,7 @@ BH3_ER_roll_one = {
 	BH3_ER_cand_ok = yes
 }
 
-# 本轮是否可能抽出核心刻印（某系普通 >=3 且该系两组核心都还没有）
+# 是否有系列已满足核心事件条件（普通 >=3 且两组核心都未拥有）
 BH3_ER_update_core_ready = {
 	set_variable = { BH3_ER_core_ready = 0 }
 	if = {
