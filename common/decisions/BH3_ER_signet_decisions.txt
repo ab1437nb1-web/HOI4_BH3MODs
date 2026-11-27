@@ -86,7 +86,7 @@ BH3_ER_signet_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# 空梦：调动民工（参考原版德国“国家劳动服务倡议”的写法：长决议 + modifier = { civilian_factory_use = N }）
+	# 空梦：调动民工（长决议 + modifier = civilian_factory_use；链式升级，参考德国梅芙券的层级推进思路）
 	BH3_ER_rv_occupy_3 = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0.1
@@ -103,65 +103,68 @@ BH3_ER_signet_group = {
 		}
 		available = { always = yes }
 		days_remove = 60
-		fire_only_once = no
-		modifier = {
-			civilian_factory_use = 3
-		}
+		modifier = { civilian_factory_use = 3 }
 		select_effect = { set_country_flag = BH3_ER_rv_occ_1 }
 		remove_effect = { clr_country_flag = BH3_ER_rv_occ_1 }
+		cancel_trigger = { NOT = { has_country_flag = BH3_ER_rv_occ_1 } }
 		cancel_effect = { clr_country_flag = BH3_ER_rv_occ_1 }
 		ai_will_do = { factor = 0 }
 	}
 
 	BH3_ER_rv_occupy_6 = {
 		icon = GFX_BH3_ER_icon_small
-		cost = 0.1
+		cost = 0.15
 		allowed = { always = yes }
-		visible = {
-			has_country_flag = BH3_ER_own_rv_1201
-			NOT = {
-				OR = {
-					has_country_flag = BH3_ER_rv_occ_1
-					has_country_flag = BH3_ER_rv_occ_2
-					has_country_flag = BH3_ER_rv_occ_3
-				}
-			}
-		}
+		visible = { has_country_flag = BH3_ER_rv_occ_1 }
 		available = { always = yes }
 		days_remove = 60
-		fire_only_once = no
-		modifier = {
-			civilian_factory_use = 6
+		modifier = { civilian_factory_use = 6 }
+		select_effect = {
+			set_country_flag = BH3_ER_rv_occ_2
+			clr_country_flag = BH3_ER_rv_occ_1
 		}
-		select_effect = { set_country_flag = BH3_ER_rv_occ_2 }
 		remove_effect = { clr_country_flag = BH3_ER_rv_occ_2 }
+		cancel_trigger = { NOT = { has_country_flag = BH3_ER_rv_occ_2 } }
 		cancel_effect = { clr_country_flag = BH3_ER_rv_occ_2 }
 		ai_will_do = { factor = 0 }
 	}
 
 	BH3_ER_rv_occupy_10 = {
 		icon = GFX_BH3_ER_icon_small
-		cost = 0.1
+		cost = 0.2
+		allowed = { always = yes }
+		visible = { has_country_flag = BH3_ER_rv_occ_2 }
+		available = { always = yes }
+		days_remove = 60
+		modifier = { civilian_factory_use = 10 }
+		select_effect = {
+			set_country_flag = BH3_ER_rv_occ_3
+			clr_country_flag = BH3_ER_rv_occ_2
+		}
+		remove_effect = { clr_country_flag = BH3_ER_rv_occ_3 }
+		cancel_trigger = { NOT = { has_country_flag = BH3_ER_rv_occ_3 } }
+		cancel_effect = { clr_country_flag = BH3_ER_rv_occ_3 }
+		ai_will_do = { factor = 0 }
+	}
+
+	# 空梦：解除民工调动
+	BH3_ER_rv_release = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
 		allowed = { always = yes }
 		visible = {
-			has_country_flag = BH3_ER_own_rv_1201
-			NOT = {
-				OR = {
-					has_country_flag = BH3_ER_rv_occ_1
-					has_country_flag = BH3_ER_rv_occ_2
-					has_country_flag = BH3_ER_rv_occ_3
-				}
+			OR = {
+				has_country_flag = BH3_ER_rv_occ_1
+				has_country_flag = BH3_ER_rv_occ_2
+				has_country_flag = BH3_ER_rv_occ_3
 			}
 		}
 		available = { always = yes }
-		days_remove = 60
-		fire_only_once = no
-		modifier = {
-			civilian_factory_use = 10
+		complete_effect = {
+			clr_country_flag = BH3_ER_rv_occ_1
+			clr_country_flag = BH3_ER_rv_occ_2
+			clr_country_flag = BH3_ER_rv_occ_3
 		}
-		select_effect = { set_country_flag = BH3_ER_rv_occ_3 }
-		remove_effect = { clr_country_flag = BH3_ER_rv_occ_3 }
-		cancel_effect = { clr_country_flag = BH3_ER_rv_occ_3 }
 		ai_will_do = { factor = 0 }
 	}
 }

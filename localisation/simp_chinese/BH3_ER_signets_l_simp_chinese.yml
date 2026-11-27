@@ -475,3 +475,5 @@
  BH3_ER_rv_occupy_6_desc:0 "持续 60 天的决议：占用 6 个民用工厂，造价压制至少 III 档。"
  BH3_ER_rv_occupy_10:0 "空梦：调动 10 个民工"
  BH3_ER_rv_occupy_10_desc:0 "持续 60 天的决议：占用 10 个民用工厂，造价压制 IV 档。"
+ BH3_ER_rv_release:0 "空梦：结束民工调动"
+ BH3_ER_rv_release_desc:0 "取消正在进行的民工调动决议，释放被占用的民用工厂。"

@@ -475,3 +475,5 @@
  BH3_ER_rv_occupy_6_desc:0 "Ongoing decision (60 days): 6 civilian factories are occupied, production-cost tier at least III."
  BH3_ER_rv_occupy_10:0 "Reverie: Redirect 10 Civilian Factories"
  BH3_ER_rv_occupy_10_desc:0 "Ongoing decision (60 days): 10 civilian factories are occupied, production-cost tier IV."
+ BH3_ER_rv_release:0 "Reverie: End Factory Redirection"
+ BH3_ER_rv_release_desc:0 "Cancels the ongoing factory redirection and frees the civilian factories."
