@@ -207,6 +207,33 @@ BH3_ER_rv_daily = {
 		}
 	}
 
+
+	# 装备造价压制（真实 equipment_bonus）：币 + 贵宾层数决定档位
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1201 }
+		set_temp_variable = { rv_cost_power = BH3_ER_rv_coin }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_stack > 0 } }
+			set_temp_variable = { rv_stack_power = BH3_ER_rv_stack }
+			multiply_variable = { rv_stack_power = 100 }
+			add_to_variable = { rv_cost_power = rv_stack_power }
+		}
+		set_temp_variable = { rv_cost_tier = 0 }
+		if = { limit = { check_variable = { rv_cost_power > 999 } } set_temp_variable = { rv_cost_tier = 4 } }
+		else_if = { limit = { check_variable = { rv_cost_power > 749 } } set_temp_variable = { rv_cost_tier = 3 } }
+		else_if = { limit = { check_variable = { rv_cost_power > 499 } } set_temp_variable = { rv_cost_tier = 2 } }
+		else_if = { limit = { check_variable = { rv_cost_power > 249 } } set_temp_variable = { rv_cost_tier = 1 } }
+
+		remove_ideas = BH3_ER_rv_cost_1
+		remove_ideas = BH3_ER_rv_cost_2
+		remove_ideas = BH3_ER_rv_cost_3
+		remove_ideas = BH3_ER_rv_cost_4
+		if = { limit = { check_variable = { rv_cost_tier = 4 } } add_timed_idea = { idea = BH3_ER_rv_cost_4 days = 10 } }
+		else_if = { limit = { check_variable = { rv_cost_tier = 3 } } add_timed_idea = { idea = BH3_ER_rv_cost_3 days = 10 } }
+		else_if = { limit = { check_variable = { rv_cost_tier = 2 } } add_timed_idea = { idea = BH3_ER_rv_cost_2 days = 10 } }
+		else_if = { limit = { check_variable = { rv_cost_tier = 1 } } add_timed_idea = { idea = BH3_ER_rv_cost_1 days = 10 } }
+	}
+
 	BH3_ER_rv_recalc = yes
 }
 

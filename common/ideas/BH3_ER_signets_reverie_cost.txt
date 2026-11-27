@@ -1,0 +1,2821 @@
+ideas = {
+	country = {
+
+		# 空梦：装备造价压制（第 1 档）
+		BH3_ER_rv_cost_1 = {
+			allowed = { always = no }
+			removal_cost = -1
+			equipment_bonus = {
+				AbyssFlower_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BH3_FlawlessKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BH3_ValkyrieAir_ala = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BH3_ValkyrieArmor_classis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BeinalesiBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BeinalesiBHS_air2ground_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				BeinalesiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				FenghuangDown_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherErosion_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherErosion_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherFlamescion_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherFlamescion_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherHuman_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherHuman_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherReason_Bronya_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherReason_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherRebirth_Seele_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherRebirth_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherThunder_Mei_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherThunder_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherVoid_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				HerrscherVoid_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				JianisaBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				JizoMitama_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				JudgementofShamash_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				OathofJudah_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				QishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				SchicksalValkyrieArtillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				SchicksalValkyrieMeele_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				SevenThundersofRetribution_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ShengdianBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				SishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				StarofEden_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ThousandKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				TujinBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				TujinBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Bronya_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Bronya_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Bronya_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Bronya_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Bronya_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Eden_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Eden_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Eden_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Eden_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Fuka_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Fuka_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Fuka_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Fuka_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Kiana_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Kiana_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Kiana_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Kiana_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Kiana_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Mei_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Mei_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Mei_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Mei_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Mei_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_RitaRossweisse_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_RitaRossweisse_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_RitaRossweisse_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_RitaRossweisse_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_SeeleBlack_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_SeeleBlack_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_SeeleBlack_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Seele_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Seele_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Seele_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Seele_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaLunar_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaLunar_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaLunar_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaLunar_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Theresa_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Theresa_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Theresa_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_Theresa_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ValkyrieSoldier_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Eden_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Fuka_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Valkyrie_Theresa_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				Void_Archives_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ZhancheBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				amphibious_mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				armored_car_at_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				armored_support_vehicle = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ballistic_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				explosive_ammo_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				floating_harbor_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				gw_armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				gw_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				helicopter_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				land_cruiser_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				modern_battleship = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				modern_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				modern_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				mothership_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				motorbike_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				motorized_rocket_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				nuclear_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				nuclear_missile_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				repair_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				rocket_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				rocket_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				sam_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				self_propelled_super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_carrier_conversion_bb = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_carrier_conversion_ca = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_carrier_modern = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_carrier_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser_coastal_defense_ship = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser_modern_aa = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser_panzerschiff = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_heavy_modern = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_pre_dreadnought = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_submarine = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				strat_bomber_intercontinental_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				super_heavy_railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				super_heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				support_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				train_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.05
+				}
+			}
+		}
+
+		# 空梦：装备造价压制（第 2 档）
+		BH3_ER_rv_cost_2 = {
+			allowed = { always = no }
+			removal_cost = -1
+			equipment_bonus = {
+				AbyssFlower_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BH3_FlawlessKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BH3_ValkyrieAir_ala = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BH3_ValkyrieArmor_classis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BeinalesiBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BeinalesiBHS_air2ground_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				BeinalesiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				FenghuangDown_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherErosion_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherErosion_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherFlamescion_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherFlamescion_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherHuman_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherHuman_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherReason_Bronya_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherReason_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherRebirth_Seele_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherRebirth_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherThunder_Mei_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherThunder_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherVoid_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				HerrscherVoid_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				JianisaBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				JizoMitama_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				JudgementofShamash_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				OathofJudah_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				QishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				SchicksalValkyrieArtillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				SchicksalValkyrieMeele_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				SevenThundersofRetribution_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ShengdianBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				SishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				StarofEden_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ThousandKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				TujinBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				TujinBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Bronya_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Bronya_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Bronya_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Bronya_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Bronya_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Eden_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Eden_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Eden_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Eden_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Fuka_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Fuka_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Fuka_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Fuka_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Kiana_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Kiana_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Kiana_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Kiana_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Kiana_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Mei_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Mei_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Mei_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Mei_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Mei_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_RitaRossweisse_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_RitaRossweisse_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_RitaRossweisse_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_RitaRossweisse_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_SeeleBlack_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_SeeleBlack_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_SeeleBlack_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Seele_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Seele_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Seele_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Seele_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaLunar_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaLunar_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaLunar_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaLunar_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Theresa_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Theresa_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Theresa_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_Theresa_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ValkyrieSoldier_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Eden_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Fuka_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Valkyrie_Theresa_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				Void_Archives_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ZhancheBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				amphibious_mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				armored_car_at_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				armored_support_vehicle = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ballistic_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				explosive_ammo_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				floating_harbor_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				gw_armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				gw_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				helicopter_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				land_cruiser_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				modern_battleship = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				modern_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				modern_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				mothership_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				motorbike_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				motorized_rocket_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				nuclear_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				nuclear_missile_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				repair_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				rocket_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				rocket_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				sam_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				self_propelled_super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_carrier_conversion_bb = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_carrier_conversion_ca = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_carrier_modern = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_carrier_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser_coastal_defense_ship = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser_modern_aa = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser_panzerschiff = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_heavy_modern = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_pre_dreadnought = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_submarine = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				strat_bomber_intercontinental_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				super_heavy_railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				super_heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				support_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				train_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		# 空梦：装备造价压制（第 3 档）
+		BH3_ER_rv_cost_3 = {
+			allowed = { always = no }
+			removal_cost = -1
+			equipment_bonus = {
+				AbyssFlower_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BH3_FlawlessKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BH3_ValkyrieAir_ala = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BH3_ValkyrieArmor_classis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BeinalesiBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BeinalesiBHS_air2ground_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				BeinalesiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				FenghuangDown_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherErosion_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherErosion_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherFlamescion_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherFlamescion_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherHuman_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherHuman_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherReason_Bronya_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherReason_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherRebirth_Seele_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherRebirth_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherThunder_Mei_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherThunder_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherVoid_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				HerrscherVoid_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				JianisaBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				JizoMitama_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				JudgementofShamash_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				OathofJudah_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				QishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				SchicksalValkyrieArtillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				SchicksalValkyrieMeele_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				SevenThundersofRetribution_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ShengdianBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				SishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				StarofEden_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ThousandKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				TujinBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				TujinBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Bronya_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Bronya_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Bronya_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Bronya_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Bronya_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Eden_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Eden_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Eden_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Eden_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Fuka_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Fuka_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Fuka_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Fuka_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Kiana_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Kiana_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Kiana_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Kiana_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Kiana_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Mei_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Mei_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Mei_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Mei_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Mei_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_RitaRossweisse_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_RitaRossweisse_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_RitaRossweisse_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_RitaRossweisse_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_SeeleBlack_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_SeeleBlack_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_SeeleBlack_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Seele_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Seele_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Seele_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Seele_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaLunar_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaLunar_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaLunar_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaLunar_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Theresa_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Theresa_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Theresa_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_Theresa_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ValkyrieSoldier_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Eden_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Fuka_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Valkyrie_Theresa_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				Void_Archives_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ZhancheBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				amphibious_mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				armored_car_at_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				armored_support_vehicle = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ballistic_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				explosive_ammo_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				floating_harbor_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				gw_armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				gw_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				helicopter_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				land_cruiser_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				modern_battleship = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				modern_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				modern_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				mothership_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				motorbike_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				motorized_rocket_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				nuclear_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				nuclear_missile_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				repair_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				rocket_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				rocket_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				sam_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				self_propelled_super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_carrier_conversion_bb = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_carrier_conversion_ca = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_carrier_modern = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_carrier_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_cruiser_coastal_defense_ship = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_cruiser_modern_aa = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_cruiser_panzerschiff = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_heavy_modern = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_pre_dreadnought = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_submarine = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				strat_bomber_intercontinental_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				super_heavy_railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				super_heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				support_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				train_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+			}
+		}
+
+		# 空梦：装备造价压制（第 4 档）
+		BH3_ER_rv_cost_4 = {
+			allowed = { always = no }
+			removal_cost = -1
+			equipment_bonus = {
+				AbyssFlower_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BH3_FlawlessKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BH3_ValkyrieAir_ala = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BH3_ValkyrieArmor_classis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BeinalesiBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BeinalesiBHS_air2ground_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				BeinalesiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				FenghuangDown_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherErosion_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherErosion_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherFlamescion_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherFlamescion_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherHuman_Elysia_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherHuman_Elysia_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherReason_Bronya_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherReason_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherRebirth_Seele_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherRebirth_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherThunder_Mei_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherThunder_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherVoid_Kiana_Air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				HerrscherVoid_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				JianisaBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				JizoMitama_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				JudgementofShamash_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				OathofJudah_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				QishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				SchicksalValkyrieArtillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				SchicksalValkyrieMeele_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				SevenThundersofRetribution_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ShengdianBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				SishiBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				StarofEden_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ThousandKey_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				TujinBHS_air2air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				TujinBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_BiankaDurandalAtaegina_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Bronya_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Bronya_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Bronya_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Bronya_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Bronya_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Eden_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Eden_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Eden_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Eden_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Fuka_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Fuka_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Fuka_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Fuka_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Kiana_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Kiana_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Kiana_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Kiana_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Kiana_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Mei_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Mei_B_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Mei_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Mei_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Mei_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_RitaRossweisse_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_RitaRossweisse_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_RitaRossweisse_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_RitaRossweisse_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_SeeleBlack_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_SeeleBlack_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_SeeleBlack_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Seele_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Seele_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Seele_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Seele_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaLunar_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaLunar_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaLunar_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaLunar_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_TheresaStarlitAstrologos_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Theresa_A_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Theresa_SSS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Theresa_SS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_Theresa_S_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ValkyrieSoldier_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Bronya_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Eden_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Fuka_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Kiana_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Mei_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Seele_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Valkyrie_Theresa_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				Void_Archives_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ZhancheBHS_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				amphibious_mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				amphibious_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				anti_air_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				anti_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				armored_car_at_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				armored_support_vehicle = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ballistic_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				explosive_ammo_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				floating_harbor_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				guided_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				gw_armored_car_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				gw_tank_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				helicopter_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				land_cruiser_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				large_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				mechanized_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				modern_battleship = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				modern_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				modern_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				mothership_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				motorbike_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				motorized_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				motorized_rocket_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				nuclear_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				nuclear_missile_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				repair_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				rocket_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				rocket_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				sam_missile_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				self_propelled_super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_carrier_conversion_bb = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_carrier_conversion_ca = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_carrier_modern = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_carrier_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_cruiser = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_cruiser_coastal_defense_ship = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_cruiser_modern_aa = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_cruiser_panzerschiff = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_cruiser_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_escort_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_fleet_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_heavy = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_heavy_modern = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_light = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_mega_carrier = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_midget_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_nuclear_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_pre_dreadnought = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_submarine = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				strat_bomber_intercontinental_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				super_heavy_artillery_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				super_heavy_railway_gun_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				super_heavy_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				support_ship_hull = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				train_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				transport_plane_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+		}
+
+	}
+}
