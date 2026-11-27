@@ -130,21 +130,14 @@ BH3_ER_if_daily = {
 		BH3_ER_if_assim = yes
 	}
 
-	# 核心II：转移进度 +20/天
+	# core II 911: monthly settlement (once per 30 days, aligned with other monthly checks)
 	if = {
-		limit = { has_country_flag = BH3_ER_own_if_911 check_variable = { BH3_ER_if_prog > 99 } }
-		BH3_ER_if_sync_fire = yes
-	}
-	else_if = {
 		limit = { has_country_flag = BH3_ER_own_if_911 }
-		add_to_variable = { BH3_ER_if_prog = 20 }
-		# 912：同步期间进度更快（每 3 天额外 +15）
+		add_to_variable = { BH3_ER_if_mday = 1 }
 		if = {
-			limit = {
-				has_country_flag = BH3_ER_own_if_912
-				has_idea = BH3_ER_if_sync
-			}
-			add_to_variable = { BH3_ER_if_prog = 15 }
+			limit = { check_variable = { BH3_ER_if_mday > 29 } }
+			set_variable = { BH3_ER_if_mday = 0 }
+			BH3_ER_if_sync_fire = yes
 		}
 	}
 

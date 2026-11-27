@@ -226,3 +226,10 @@ HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 gam
 - HOI4 的 country_event / news_event 文件只从 mod 根目录的 events/ 读取
 - 放到 common/events/ 不会报解析错误，但事件 id 不存在；触发时报 “Tried to trigger non-existant event: xxx”
 - 排查事件不触发时，先去 error.log 搜 “non-existant event”
+
+## 18. 抽取池与商店的底层门控
+
+- 任何会消耗刻印池的新系统（商店、事件奖励等）在出牌前必须调用 BH3_ER_count_pool 并用 scripted trigger 检查：
+  - BH3_ER_pool_safe_for_shop：池子至少还剩 4 枚才允许继续消耗
+  - BH3_ER_pool_has_signet：池子非空
+- 抽取侧已有兜底：池子为空时发无瑕之钥，规则抽不到时放宽为任意未拥有，保证抽卡层永远有结果

@@ -8,6 +8,12 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_double_pending = 0 }
 	set_variable = { BH3_ER_signets = 0 }
 	set_variable = { BH3_ER_draws = 0 }
+	set_variable = { BH3_ER_pool_left = 0 }
+	set_variable = { BH3_ER_draw_fallback = 0 }
+	set_variable = { BH3_ER_cand_free = 0 }
+	set_variable = { BH3_ER_c1_ser = 0 }
+	set_variable = { BH3_ER_c2_ser = 0 }
+	set_variable = { BH3_ER_c3_ser = 0 }
 	set_variable = { BH3_ER_cand_id = 0 }
 	set_variable = { BH3_ER_cand_ok = 0 }
 	set_variable = { BH3_ER_slot_ok = 0 }
@@ -93,6 +99,7 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_if_stacks = 0 }
 	set_variable = { BH3_ER_if_prog = 0 }
 	set_variable = { BH3_ER_if_tick = 0 }
+	set_variable = { BH3_ER_if_mday = 0 }
 	set_variable = { BH3_ER_if_gift = 0 }
 	set_variable = { BH3_ER_if_short = 0 }
 	set_variable = { BH3_ER_if_trade = 0 }

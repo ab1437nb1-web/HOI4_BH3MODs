@@ -1,0 +1,19 @@
+# 商店系统底层门控：任何消耗刻印池的逻辑（商店/事件等）在使用前必须检查这里
+# BH3_ER_count_pool 会重算 BH3_ER_pool_left（可抽取的未拥有非核心刻印数）
+
+BH3_ER_pool_has_signet = {
+	check_variable = { BH3_ER_pool_left > 0 }
+}
+
+# 商店出牌前的最低保留量：至少留 4 枚给后续抽取层
+BH3_ER_pool_safe_for_shop = {
+	check_variable = { BH3_ER_pool_left > 3 }
+}
+
+# 抽取层保底：只要池子非空就必须能抽出东西
+BH3_ER_draw_layer_guaranteed = {
+	OR = {
+		check_variable = { BH3_ER_pool_left > 0 }
+		check_variable = { BH3_ER_draw_fallback = 1 }
+	}
+}
