@@ -184,6 +184,8 @@ BH3_ER_grant_301 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_301 } }
 			set_country_flag = BH3_ER_own_sts_301
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -196,6 +198,8 @@ BH3_ER_grant_302 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_302 } }
 			set_country_flag = BH3_ER_own_sts_302
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -208,6 +212,8 @@ BH3_ER_grant_303 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_303 } }
 			set_country_flag = BH3_ER_own_sts_303
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -220,6 +226,8 @@ BH3_ER_grant_304 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_304 } }
 			set_country_flag = BH3_ER_own_sts_304
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -232,6 +240,8 @@ BH3_ER_grant_305 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_305 } }
 			set_country_flag = BH3_ER_own_sts_305
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -244,6 +254,8 @@ BH3_ER_grant_306 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_306 } }
 			set_country_flag = BH3_ER_own_sts_306
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
+			add_to_variable = { BH3_ER_norm_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -256,6 +268,7 @@ BH3_ER_grant_307 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_307 } }
 			set_country_flag = BH3_ER_own_sts_307
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 			add_to_variable = { BH3_ER_sts_maj = 0.35 }
 			add_to_variable = { BH3_ER_sts_min = 0.2 }
 		}
@@ -270,6 +283,7 @@ BH3_ER_grant_308 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_308 } }
 			set_country_flag = BH3_ER_own_sts_308
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -282,6 +296,7 @@ BH3_ER_grant_309 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_309 } }
 			set_country_flag = BH3_ER_own_sts_309
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 			add_to_variable = { BH3_ER_sts_usp = 0.15 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
@@ -295,6 +310,7 @@ BH3_ER_grant_310 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_310 } }
 			set_country_flag = BH3_ER_own_sts_310
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -307,6 +323,7 @@ BH3_ER_grant_311 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_311 } }
 			set_country_flag = BH3_ER_own_sts_311
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 			add_to_variable = { BH3_ER_sts_maj = 0.35 }
 			add_to_variable = { BH3_ER_sts_min = 0.2 }
 		}
@@ -321,6 +338,7 @@ BH3_ER_grant_312 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_312 } }
 			set_country_flag = BH3_ER_own_sts_312
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -333,6 +351,7 @@ BH3_ER_grant_313 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_313 } }
 			set_country_flag = BH3_ER_own_sts_313
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }
@@ -345,6 +364,7 @@ BH3_ER_grant_314 = {
 			limit = { NOT = { has_country_flag = BH3_ER_own_sts_314 } }
 			set_country_flag = BH3_ER_own_sts_314
 			add_to_variable = { BH3_ER_signets = 1 }
+			add_to_variable = { BH3_ER_cnt_sts = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
 		set_variable = { BH3_ER_c1 = 0 }

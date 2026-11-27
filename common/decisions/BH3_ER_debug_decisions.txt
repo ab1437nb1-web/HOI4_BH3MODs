@@ -1908,6 +1908,31 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_rv_coin = 0 }
 			set_variable = { BH3_ER_rv_stack = 0 }
 			set_variable = { BH3_ER_rv_stack_days = 0 }
+			set_variable = { BH3_ER_cnt_dlv = 0 }
+			set_variable = { BH3_ER_norm_dlv = 0 }
+			set_variable = { BH3_ER_cnt_gold = 0 }
+			set_variable = { BH3_ER_norm_gold = 0 }
+			set_variable = { BH3_ER_cnt_sts = 0 }
+			set_variable = { BH3_ER_norm_sts = 0 }
+			set_variable = { BH3_ER_cnt_fs = 0 }
+			set_variable = { BH3_ER_norm_fs = 0 }
+			set_variable = { BH3_ER_cnt_az = 0 }
+			set_variable = { BH3_ER_norm_az = 0 }
+			set_variable = { BH3_ER_cnt_bd = 0 }
+			set_variable = { BH3_ER_norm_bd = 0 }
+			set_variable = { BH3_ER_cnt_ds = 0 }
+			set_variable = { BH3_ER_norm_ds = 0 }
+			set_variable = { BH3_ER_cnt_hx = 0 }
+			set_variable = { BH3_ER_norm_hx = 0 }
+			set_variable = { BH3_ER_cnt_if = 0 }
+			set_variable = { BH3_ER_norm_if = 0 }
+			set_variable = { BH3_ER_cnt_db = 0 }
+			set_variable = { BH3_ER_norm_db = 0 }
+			set_variable = { BH3_ER_cnt_st = 0 }
+			set_variable = { BH3_ER_norm_st = 0 }
+			set_variable = { BH3_ER_cnt_rv = 0 }
+			set_variable = { BH3_ER_norm_rv = 0 }
+
 			set_variable = { BH3_ER_rv_occupy = 0 }
 			set_variable = { BH3_ER_rv_occ_tick = 0 }
 			BH3_ER_rv_recalc = yes
