@@ -147,6 +147,7 @@ BH3_ER_dm_rv = {
 
 BH3_ER_dm_rv_occ = {
 	enable = { always = yes }
+	icon = GFX_BH3_ER_icon_small
 
 	# 空梦：自动调动的民工数量（变量驱动，参考德国梅芙券动态修正写法）
 	civilian_factory_use = BH3_ER_rv_occupy

@@ -469,3 +469,5 @@
  BH3_ER_rv_cost_3_desc:0 "原版与本 mod 的全部装备生产造价 -15%。"
  BH3_ER_rv_cost_4:0 "空梦：造价压制 IV"
  BH3_ER_rv_cost_4_desc:0 "原版与本 mod 的全部装备生产造价 -20%。"
+ BH3_ER_dm_rv_occ:0 "空梦：民工调动"
+ BH3_ER_dm_rv_occ_desc:0 "空梦造价压制循环当前占用的民用工厂数量。"

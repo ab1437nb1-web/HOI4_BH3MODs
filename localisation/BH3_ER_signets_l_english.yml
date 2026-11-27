@@ -469,3 +469,5 @@
  BH3_ER_rv_cost_3_desc:0 "All vanilla and mod equipment: production cost -15%."
  BH3_ER_rv_cost_4:0 "Reverie: Cost Suppression IV"
  BH3_ER_rv_cost_4_desc:0 "All vanilla and mod equipment: production cost -20%."
+ BH3_ER_dm_rv_occ:0 "Reverie: Civilian Factory Redirection"
+ BH3_ER_dm_rv_occ_desc:0 "Civilian factories currently redirected by the Reverie cost-suppression cycle."
