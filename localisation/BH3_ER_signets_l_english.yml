@@ -20,8 +20,6 @@
  BH3_ER_slot_3_btn_tt:0 "Choose the right candidate."
  BH3_ER_draw_btn_text:0 "Draw a signet"
  BH3_ER_draw_btn_tt:0 "Consume one draw to reveal three Deliverance signets."
- BH3_ER_cancel_draw_btn_text:0 "Cancel the draw"
- BH3_ER_cancel_draw_btn_tt:0 "Refund the draw and clear the candidates."
 
  BH3_ER_setsuna_freeze:0 "Setsuna: Frozen in Time"
  BH3_ER_setsuna_freeze_desc:0 "Enemy debuff from Sakura Curtain: speed and attack reduced."
@@ -1408,3 +1406,5 @@ With 1/2/3 VIP stacks, trigger a 5-day production windfall every 15/10/5 days.
  BH3_ER_refresh_tip_25600:0 "Refresh candidates (costs §Y25600§! Flawless Keys)\nReroll the three candidates (always different series).\nCost doubles each time; resets after picking a signet."
  BH3_ER_refresh_tip_51200:0 "Refresh candidates (costs §Y51200§! Flawless Keys)\nReroll the three candidates (always different series).\nCost doubles each time; resets after picking a signet."
  BH3_ER_refresh_tip_102400:0 "Refresh candidates (costs §Y102400§! Flawless Keys)\nReroll the three candidates (always different series).\nCost doubles each time; resets after picking a signet."
+ BH3_ER_cancel_draw_btn_text:0 "Abandon draw (+100 keys, next layer)"
+ BH3_ER_cancel_draw_btn_tt:0 "Abandon this draw: gain 100 Flawless Keys and advance directly to the next layer (skipping the signet pick)."

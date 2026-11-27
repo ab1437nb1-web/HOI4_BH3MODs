@@ -111,7 +111,7 @@ scripted_gui = {
 				BH3_ER_roll_offer = yes
 			}
 			BH3_ER_cancel_draw_btn_click = {
-				BH3_ER_cancel_offer = yes
+				BH3_ER_abandon_draw = yes
 			}
 			BH3_ER_refresh_btn_click = {
 				BH3_ER_refresh_offer = yes

@@ -1078,3 +1078,11 @@ error.log 两条关键报错：
 - 变量：BH3_ER_shop_refresh_count / BH3_ER_shop_refresh_cost
 - 效果：BH3_ER_shop_refresh（检查 BH3_ER_can_shop_refresh 后扣币并翻倍费用，TODO 处接入商店补货）、BH3_ER_shop_refresh_reset（重置为 100）
 - 3000 币上限下，从满币开始最多连续刷新 4 次（100+200+400+800=1500；第 5 次需 1600，需期间补币）——天然限制商店刷新次数
+
+### 18.11 放弃本次抽取改为跳过层（2026-11-27）
+
+- 旧逻辑：BH3_ER_cancel_offer 会返还 BH3_ER_draws = 1，导致同一层可无限免费重抽
+- 新逻辑：按钮改为「放弃本次抽取（+100 无瑕之钥，进入下一层）」
+  - BH3_ER_abandon_draw：获得 100 无瑕之钥，清空候选与刷新计数，然后扣除 100（进入下一层的费用）并 BH3_ER_floor += 1、调用 BH3_ER_enter_floor
+  - 净效果：放弃不消耗额外资源，但会跳过本层刻印选择直接前进；不再返还抽卡次数
+  - 17 层（最终挑战）时只返还 100 无瑕之钥、不前进

@@ -20,8 +20,6 @@
  BH3_ER_slot_3_btn_tt:0 "选择右侧候选刻印。"
  BH3_ER_draw_btn_text:0 "抽取刻印"
  BH3_ER_draw_btn_tt:0 "消耗一次抽取机会，展示三枚「救世」刻印。"
- BH3_ER_cancel_draw_btn_text:0 "放弃本次抽取"
- BH3_ER_cancel_draw_btn_tt:0 "退还这次抽取机会，清空当前候选。"
 
  BH3_ER_setsuna_freeze:0 "刹那：樱幕冻结"
  BH3_ER_setsuna_freeze_desc:0 "樱幕结界对敌方施加的负面：速度与攻击下降。"
@@ -736,3 +734,5 @@
  BH3_ER_refresh_tip_25600:0 "刷新候选（消耗 §Y25600§! 无瑕之钥）\n随机重新抽取三个不同系列的候选刻印。\n费用逐次翻倍；选取刻印后重置。"
  BH3_ER_refresh_tip_51200:0 "刷新候选（消耗 §Y51200§! 无瑕之钥）\n随机重新抽取三个不同系列的候选刻印。\n费用逐次翻倍；选取刻印后重置。"
  BH3_ER_refresh_tip_102400:0 "刷新候选（消耗 §Y102400§! 无瑕之钥）\n随机重新抽取三个不同系列的候选刻印。\n费用逐次翻倍；选取刻印后重置。"
+ BH3_ER_cancel_draw_btn_text:0 "放弃本次抽取（+100 无瑕之钥，进入下一层）"
+ BH3_ER_cancel_draw_btn_tt:0 "放弃本次抽取：获得 100 无瑕之钥，并直接进入下一层（跳过这次刻印选择）。"

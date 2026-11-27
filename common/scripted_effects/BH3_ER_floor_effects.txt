@@ -214,6 +214,26 @@ BH3_ER_init_run = {
 }
 
 # 进入新一层的结算：普通层给 1 枚刻印（占位计数），并标记层类型
+BH3_ER_abandon_draw = {
+	if = {
+		limit = { check_variable = { BH3_ER_offer = 1 } }
+		# 放弃本次抽取：+100 无瑕之钥（刚好抵消进入下一层的 100 消耗），并直接进入下一层
+		add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = 100 }
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_floor < 17 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+			add_to_variable = { BH3_ER_floor = 1 }
+			BH3_ER_enter_floor = yes
+		}
+	}
+}
+
 BH3_ER_enter_floor = {
 	set_variable = { BH3_ER_double_pending = 0 }
 	clr_country_flag = BH3_ER_boss_floor
