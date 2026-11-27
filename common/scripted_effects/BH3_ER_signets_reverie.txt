@@ -223,10 +223,10 @@ BH3_ER_rv_daily = {
 		else_if = { limit = { check_variable = { rv_cost_power > 749 } } set_temp_variable = { rv_cost_tier = 3 } }
 		else_if = { limit = { check_variable = { rv_cost_power > 499 } } set_temp_variable = { rv_cost_tier = 2 } }
 		else_if = { limit = { check_variable = { rv_cost_power > 249 } } set_temp_variable = { rv_cost_tier = 1 } }
-		# 占用民工：3/6/10 个民生工厂（civilian_factory_use）→ 至少 2/3/4 档
-		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_1 check_variable = { rv_cost_tier < 2 } } set_temp_variable = { rv_cost_tier = 2 } }
-		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_2 check_variable = { rv_cost_tier < 3 } } set_temp_variable = { rv_cost_tier = 3 } }
-		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_3 check_variable = { rv_cost_tier < 4 } } set_temp_variable = { rv_cost_tier = 4 } }
+		# 调动民工（长决议进行中）：3/6/10 个民用工厂被占用 → 至少 2/3/4 档
+		if = { limit = { has_country_flag = BH3_ER_rv_occ_1 check_variable = { rv_cost_tier < 2 } } set_temp_variable = { rv_cost_tier = 2 } }
+		if = { limit = { has_country_flag = BH3_ER_rv_occ_2 check_variable = { rv_cost_tier < 3 } } set_temp_variable = { rv_cost_tier = 3 } }
+		if = { limit = { has_country_flag = BH3_ER_rv_occ_3 check_variable = { rv_cost_tier < 4 } } set_temp_variable = { rv_cost_tier = 4 } }
 
 		remove_ideas = BH3_ER_rv_cost_1
 		remove_ideas = BH3_ER_rv_cost_2
