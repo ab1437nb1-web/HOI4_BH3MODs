@@ -18,8 +18,7 @@ ideas = {
 		allowed = { always = yes }
 		picture = ENG_generic_2
 		modifier = {
-			consumer_goods_factor = 0.03
-			industrial_capacity_factory = -0.02
+			civilian_factory_use = 3
 		}
 	}
 
@@ -27,8 +26,7 @@ ideas = {
 		allowed = { always = yes }
 		picture = ENG_generic_2
 		modifier = {
-			consumer_goods_factor = 0.06
-			industrial_capacity_factory = -0.04
+			civilian_factory_use = 6
 		}
 	}
 
@@ -36,8 +34,7 @@ ideas = {
 		allowed = { always = yes }
 		picture = ENG_generic_2
 		modifier = {
-			consumer_goods_factor = 0.10
-			industrial_capacity_factory = -0.06
+			civilian_factory_use = 10
 		}
 	}
 }

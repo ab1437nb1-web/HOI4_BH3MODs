@@ -1908,6 +1908,9 @@ BH3_ER_debug_group = {
 			set_variable = { BH3_ER_rv_coin = 0 }
 			set_variable = { BH3_ER_rv_stack = 0 }
 			set_variable = { BH3_ER_rv_stack_days = 0 }
+			remove_ideas = BH3_ER_rv_occupy_idea_1
+			remove_ideas = BH3_ER_rv_occupy_idea_2
+			remove_ideas = BH3_ER_rv_occupy_idea_3
 			BH3_ER_rv_recalc = yes
 		}
 		ai_will_do = { factor = 0 }

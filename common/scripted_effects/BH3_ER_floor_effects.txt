@@ -133,8 +133,6 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_rv_c2m = 0 }
 	set_variable = { BH3_ER_rv_cons = 0 }
 	set_variable = { BH3_ER_rv_civ = 0 }
-	set_variable = { BH3_ER_rv_hold = 0 }
-	set_variable = { BH3_ER_rv_hold_days = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }

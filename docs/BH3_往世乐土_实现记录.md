@@ -893,23 +893,12 @@ BH3_UD_apply = yes
 - **真实造价减少**：参考原版持续国策“空军生产”的写法，用 idea 的 equipment_bonus + build_cost_ic 实现（覆盖原版与本 mod 全部 174 种装备）
   - 4 档国家精神：造价 -5% / -10% / -15% / -20%，每日按“币 + 贵宾层数×100”的档位挂最高一档（10 天有效）
   - equipment_bonus 是 idea 专属字段，动态修饰符不支持，所以用 4 档限时精神代替变量缩放
-- 代价改为真实消耗“经济产能盈余”（CIC bank）：
-  - 每日按档位 add_cic -30/-60/-90/-120（归零由引擎钳制）
-  - 新增一组决议「占用 3/6/10 个民工」：即时 add_cic +300/+600/+1000，并获得 1/2/3 级“盈余支撑”（持续 30 天），期间挂上消费品上升、民用产出下降的代价精神
-  - 档位取 max(币档位, 盈余支撑档位)：支撑 1/2/3 → 至少 2/3/4 档
-  - 经测试确认：CIC 余额无法被脚本读取（check_variable = { cic > 0 } 恒为假），因此“无盈余自动移除”用“支撑 30 天到期/币档位下降”近似；国际市场卖装备获得的 CIC 会被每日消耗掉
-- 代价：币 > 0 时消费品系数 +3%、民用工厂产出 -2%（民工产能被抽走）
-- 收益走 DM BH3_ER_dm_rv：
-  - production_factory_efficiency_gain_factor（效率获取）
-  - production_factory_max_efficiency_factor（效率上限）
-  - production_factory_start_efficiency_factor（起步效率）
-  - line_change_production_efficiency_factor（换线效率）
-  - equipment_conversion_speed（装备转换速度）
-  - refit_ic_cost（改装造价，负值）
-  - conversion_cost_civ_to_mil_factor（民转军成本，负值）
-  - consumer_goods_factor / industrial_capacity_factory（代价项）
-- 核心Ⅰ【空集】：币 ≥500 → 普通刻印加成 ×1.25；≥1000 → ×1.5
-- 核心Ⅱ【空幻】：消费 200 币换 1 层【贵宾待遇】（上限 4 层，持续 4 天），每层 +5% 生产/转换效率
+- 代价改为**占用固定数量的民用工厂**（参考原版德国“国家劳动服务倡议”的 civilian_factory_use 写法）：
+  - 3 个限时精神：civilian_factory_use = 3 / 6 / 10
+  - 决议「占用 3/6/10 个民工」→ 挂对应精神 60 天，期间这些民用工厂不可用；造价压制至少提升到 2/3/4 档
+  - 决议「解除民工占用」→ 立即移除
+  - 造价档位 = max(币档位, 占用档位)；占用精神到期后自然回落
+  - 曾尝试用 CIC（经济产能盈余）支付，但测试确认 CIC 余额无法被脚本读取，故放弃该方案
 
 ### 17.2 14 枚刻印
 
@@ -940,5 +929,6 @@ BH3_UD_apply = yes
 
 - 造价减少用 idea 的 equipment_bonus（build_cost_ic）实现，覆盖原版与本 mod 共 174 种装备；生产效率/转换速度等作为辅助
 - 造价档位用 4 个静态精神分档（-5%/-10%/-15%/-20%），因为 equipment_bonus 不支持变量
+- 占用的代价直接用 civilian_factory_use（原版德国国家劳动服务倡议同款写法），不再用消费品系数近似
 - “商店/银币”改为每日自动积累与自动采购（核心Ⅱ），不引入新 UI
 - 民工产能代价用消费品系数与民用工厂产出表示

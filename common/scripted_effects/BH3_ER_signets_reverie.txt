@@ -223,15 +223,10 @@ BH3_ER_rv_daily = {
 		else_if = { limit = { check_variable = { rv_cost_power > 749 } } set_temp_variable = { rv_cost_tier = 3 } }
 		else_if = { limit = { check_variable = { rv_cost_power > 499 } } set_temp_variable = { rv_cost_tier = 2 } }
 		else_if = { limit = { check_variable = { rv_cost_power > 249 } } set_temp_variable = { rv_cost_tier = 1 } }
-		# 占用民工提供的盈余支撑：hold 1/2/3 → 至少 2/3/4 档
-		if = { limit = { check_variable = { BH3_ER_rv_hold > 0 } check_variable = { rv_cost_tier < 2 } } set_temp_variable = { rv_cost_tier = 2 } }
-		if = { limit = { check_variable = { BH3_ER_rv_hold > 1 } check_variable = { rv_cost_tier < 3 } } set_temp_variable = { rv_cost_tier = 3 } }
-		if = { limit = { check_variable = { BH3_ER_rv_hold > 2 } check_variable = { rv_cost_tier < 4 } } set_temp_variable = { rv_cost_tier = 4 } }
-		# 真实消耗 CIC 经济产能盈余（读不到余额，归零由引擎钳制）
-		if = { limit = { check_variable = { rv_cost_tier = 4 } } add_cic = -120 }
-		else_if = { limit = { check_variable = { rv_cost_tier = 3 } } add_cic = -90 }
-		else_if = { limit = { check_variable = { rv_cost_tier = 2 } } add_cic = -60 }
-		else_if = { limit = { check_variable = { rv_cost_tier = 1 } } add_cic = -30 }
+		# 占用民工：3/6/10 个民生工厂（civilian_factory_use）→ 至少 2/3/4 档
+		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_1 check_variable = { rv_cost_tier < 2 } } set_temp_variable = { rv_cost_tier = 2 } }
+		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_2 check_variable = { rv_cost_tier < 3 } } set_temp_variable = { rv_cost_tier = 3 } }
+		if = { limit = { has_idea = BH3_ER_rv_occupy_idea_3 check_variable = { rv_cost_tier < 4 } } set_temp_variable = { rv_cost_tier = 4 } }
 
 		remove_ideas = BH3_ER_rv_cost_1
 		remove_ideas = BH3_ER_rv_cost_2
@@ -241,19 +236,6 @@ BH3_ER_rv_daily = {
 		else_if = { limit = { check_variable = { rv_cost_tier = 3 } } add_timed_idea = { idea = BH3_ER_rv_cost_3 days = 10 } }
 		else_if = { limit = { check_variable = { rv_cost_tier = 2 } } add_timed_idea = { idea = BH3_ER_rv_cost_2 days = 10 } }
 		else_if = { limit = { check_variable = { rv_cost_tier = 1 } } add_timed_idea = { idea = BH3_ER_rv_cost_1 days = 10 } }
-	}
-
-	# 占用民工的持续时间
-	if = {
-		limit = { check_variable = { BH3_ER_rv_hold_days > 0 } }
-		subtract_from_variable = { BH3_ER_rv_hold_days = 1 }
-		if = {
-			limit = { check_variable = { BH3_ER_rv_hold_days = 0 } }
-			set_variable = { BH3_ER_rv_hold = 0 }
-			remove_ideas = BH3_ER_rv_occupy_idea_1
-			remove_ideas = BH3_ER_rv_occupy_idea_2
-			remove_ideas = BH3_ER_rv_occupy_idea_3
-		}
 	}
 
 	BH3_ER_rv_recalc = yes
