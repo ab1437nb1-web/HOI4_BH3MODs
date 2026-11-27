@@ -1008,3 +1008,14 @@ error.log 两条关键报错：
 - 修复全角空格在游戏字体里显示为问号的问题，统一改用中文逗号
 - 英文 loc 的名称保留英文，描述在缺失时回退为记录文本（待后续人工翻译）
 - 踩坑：生成 loc 时把换行写成真实换行符会导致整条 loc 失效，必须写转义反斜杠 n；已在避坑指南记录
+
+### 18.8 核心事件不触发的原因与修法（2026-11-27）
+
+- 现象：集齐 3 枚普通后选择刻印，核心事件不弹出
+- 排查：接线无误（点击 → grant → core_check → country_event），但原版 scripted_guis 里 country_event 使用次数为 0
+- 结论：scripted GUI 的 effects 上下文里直接 country_event 不会生效
+- 修法：点击时只登记 BH3_ER_core_pending = 1..12；on_daily 里 BH3_ER_core_fire 检查 pending 与条件后发事件并清零
+  - 代价：事件最多延迟 1 天弹出
+  - 多个系列同时满足时仍按固定顺序，每次选择登记一个
+- 顺带修复：候选槽标签之前用 context_aware_text 引起大量 “Scoped text … no scoped localizer found” 报错
+  - 标签改为纯静态 key（BH3_ER_sername_系列），只显示系列名；进度信息放在 tooltip 里

@@ -26,6 +26,7 @@ on_actions = {
 				BH3_ER_st_daily = yes
 				BH3_ER_rv_daily = yes
 				BH3_ER_update_core_ready = yes
+				BH3_ER_core_fire = yes
 			}
 			every_country = {
 				limit = {

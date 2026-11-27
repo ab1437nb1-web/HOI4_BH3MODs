@@ -1521,7 +1521,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_dlv"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_dlv"
+			text = "BH3_ER_sername_dlv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1531,7 +1531,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_gold"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_gold"
+			text = "BH3_ER_sername_gold"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1541,7 +1541,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_sts"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_sts"
+			text = "BH3_ER_sername_sts"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1551,7 +1551,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_fs"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_fs"
+			text = "BH3_ER_sername_fs"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1561,7 +1561,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_az"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_az"
+			text = "BH3_ER_sername_az"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1571,7 +1571,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_bd"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_bd"
+			text = "BH3_ER_sername_bd"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1581,7 +1581,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_ds"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_ds"
+			text = "BH3_ER_sername_ds"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1591,7 +1591,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_hx"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_hx"
+			text = "BH3_ER_sername_hx"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1601,7 +1601,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_if"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_if"
+			text = "BH3_ER_sername_if"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1611,7 +1611,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_db"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_db"
+			text = "BH3_ER_sername_db"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1621,7 +1621,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_st"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_st"
+			text = "BH3_ER_sername_st"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1631,7 +1631,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label_rv"
 			position = { x = 560 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_rv"
+			text = "BH3_ER_sername_rv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1746,7 +1746,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_dlv"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_dlv"
+			text = "BH3_ER_sername_dlv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1756,7 +1756,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_gold"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_gold"
+			text = "BH3_ER_sername_gold"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1766,7 +1766,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_sts"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_sts"
+			text = "BH3_ER_sername_sts"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1776,7 +1776,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_fs"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_fs"
+			text = "BH3_ER_sername_fs"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1786,7 +1786,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_az"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_az"
+			text = "BH3_ER_sername_az"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1796,7 +1796,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_bd"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_bd"
+			text = "BH3_ER_sername_bd"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1806,7 +1806,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_ds"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_ds"
+			text = "BH3_ER_sername_ds"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1816,7 +1816,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_hx"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_hx"
+			text = "BH3_ER_sername_hx"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1826,7 +1826,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_if"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_if"
+			text = "BH3_ER_sername_if"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1836,7 +1836,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_db"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_db"
+			text = "BH3_ER_sername_db"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1846,7 +1846,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_st"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_st"
+			text = "BH3_ER_sername_st"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1856,7 +1856,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label_rv"
 			position = { x = 790 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_rv"
+			text = "BH3_ER_sername_rv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1971,7 +1971,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_dlv"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_dlv"
+			text = "BH3_ER_sername_dlv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1981,7 +1981,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_gold"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_gold"
+			text = "BH3_ER_sername_gold"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -1991,7 +1991,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_sts"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_sts"
+			text = "BH3_ER_sername_sts"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2001,7 +2001,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_fs"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_fs"
+			text = "BH3_ER_sername_fs"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2011,7 +2011,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_az"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_az"
+			text = "BH3_ER_sername_az"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2021,7 +2021,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_bd"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_bd"
+			text = "BH3_ER_sername_bd"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2031,7 +2031,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_ds"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_ds"
+			text = "BH3_ER_sername_ds"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2041,7 +2041,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_hx"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_hx"
+			text = "BH3_ER_sername_hx"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2051,7 +2051,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_if"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_if"
+			text = "BH3_ER_sername_if"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2061,7 +2061,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_db"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_db"
+			text = "BH3_ER_sername_db"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2071,7 +2071,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_st"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_st"
+			text = "BH3_ER_sername_st"
 			maxWidth = 230
 			maxHeight = 34
 			format = center
@@ -2081,7 +2081,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label_rv"
 			position = { x = 1020 y = 488 }
 			font = "hoi_16mbs"
-			context_aware_text = "BH3_ER_serlabel_rv"
+			text = "BH3_ER_sername_rv"
 			maxWidth = 230
 			maxHeight = 34
 			format = center

@@ -214,3 +214,9 @@ HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 gam
 - HOI4 loc 每行必须是一条完整条目（KEY:0 “文本”），文本里的换行必须写成转义反斜杠 n
 - 若脚本生成 loc 时写成真实换行，整条 loc 会失效（游戏内显示 key 或空白）
 - 全角空格（U+3000）在游戏字体中会显示为问号，分隔符请用中文逗号
+
+## 16. scripted GUI 里不能直接发国家事件
+
+- scripted_guis 的 effects 里写 country_event 不会生效（原版 0 处使用）
+- 正确做法：click effect 里只设变量/旗标，on_daily 检查后由 on_actions 发事件
+- 同类限制：GUI 的 text 里写带 [ ?变量 ] 的 context_aware_text 会报 scoped localizer 错误；需要动态文字的，用“每个取值一个静态元素 + _visible 切换”

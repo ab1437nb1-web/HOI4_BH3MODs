@@ -12,6 +12,7 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_cand_ok = 0 }
 	set_variable = { BH3_ER_slot_ok = 0 }
 	set_variable = { BH3_ER_core_ready = 0 }
+	set_variable = { BH3_ER_core_pending = 0 }
 	set_variable = { BH3_ER_offer = 0 }
 	set_variable = { BH3_ER_c1 = 0 }
 	set_variable = { BH3_ER_c2 = 0 }

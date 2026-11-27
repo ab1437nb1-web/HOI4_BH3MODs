@@ -1,4 +1,4 @@
-# 选择刻印后检查是否触发核心事件（只在“选择候选”动作里调用，商店购买不调用）
+# 选择刻印后登记核心事件；事件由 on_daily 触发（scripted GUI 里直接 country_event 实测不生效）
 
 BH3_ER_core_check = {
 	if = {
@@ -7,7 +7,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_dlv_111 }
 			check_variable = { BH3_ER_norm_dlv > 2 }
 		}
-		country_event = { id = BH3_ER_core.1 days = 0 }
+		set_variable = { BH3_ER_core_pending = 1 }
 	}
 	else_if = {
 		limit = {
@@ -15,7 +15,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_gold_211 }
 			check_variable = { BH3_ER_norm_gold > 2 }
 		}
-		country_event = { id = BH3_ER_core.2 days = 0 }
+		set_variable = { BH3_ER_core_pending = 2 }
 	}
 	else_if = {
 		limit = {
@@ -23,7 +23,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_sts_311 }
 			check_variable = { BH3_ER_norm_sts > 2 }
 		}
-		country_event = { id = BH3_ER_core.3 days = 0 }
+		set_variable = { BH3_ER_core_pending = 3 }
 	}
 	else_if = {
 		limit = {
@@ -31,7 +31,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_fs_411 }
 			check_variable = { BH3_ER_norm_fs > 2 }
 		}
-		country_event = { id = BH3_ER_core.4 days = 0 }
+		set_variable = { BH3_ER_core_pending = 4 }
 	}
 	else_if = {
 		limit = {
@@ -39,7 +39,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_az_511 }
 			check_variable = { BH3_ER_norm_az > 2 }
 		}
-		country_event = { id = BH3_ER_core.5 days = 0 }
+		set_variable = { BH3_ER_core_pending = 5 }
 	}
 	else_if = {
 		limit = {
@@ -47,7 +47,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_bd_611 }
 			check_variable = { BH3_ER_norm_bd > 2 }
 		}
-		country_event = { id = BH3_ER_core.6 days = 0 }
+		set_variable = { BH3_ER_core_pending = 6 }
 	}
 	else_if = {
 		limit = {
@@ -55,7 +55,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_ds_711 }
 			check_variable = { BH3_ER_norm_ds > 2 }
 		}
-		country_event = { id = BH3_ER_core.7 days = 0 }
+		set_variable = { BH3_ER_core_pending = 7 }
 	}
 	else_if = {
 		limit = {
@@ -63,7 +63,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_hx_811 }
 			check_variable = { BH3_ER_norm_hx > 2 }
 		}
-		country_event = { id = BH3_ER_core.8 days = 0 }
+		set_variable = { BH3_ER_core_pending = 8 }
 	}
 	else_if = {
 		limit = {
@@ -71,7 +71,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_if_911 }
 			check_variable = { BH3_ER_norm_if > 2 }
 		}
-		country_event = { id = BH3_ER_core.9 days = 0 }
+		set_variable = { BH3_ER_core_pending = 9 }
 	}
 	else_if = {
 		limit = {
@@ -79,7 +79,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_db_1011 }
 			check_variable = { BH3_ER_norm_db > 2 }
 		}
-		country_event = { id = BH3_ER_core.10 days = 0 }
+		set_variable = { BH3_ER_core_pending = 10 }
 	}
 	else_if = {
 		limit = {
@@ -87,7 +87,7 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_st_1111 }
 			check_variable = { BH3_ER_norm_st > 2 }
 		}
-		country_event = { id = BH3_ER_core.11 days = 0 }
+		set_variable = { BH3_ER_core_pending = 11 }
 	}
 	else_if = {
 		limit = {
@@ -95,6 +95,130 @@ BH3_ER_core_check = {
 			NOT = { has_country_flag = BH3_ER_own_rv_1211 }
 			check_variable = { BH3_ER_norm_rv > 2 }
 		}
-		country_event = { id = BH3_ER_core.12 days = 0 }
+		set_variable = { BH3_ER_core_pending = 12 }
 	}
+}
+
+BH3_ER_core_fire = {
+	if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 1 }
+			NOT = { has_country_flag = BH3_ER_own_dlv_107 }
+			NOT = { has_country_flag = BH3_ER_own_dlv_111 }
+			check_variable = { BH3_ER_norm_dlv > 2 }
+		}
+		country_event = { id = BH3_ER_core.1 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 2 }
+			NOT = { has_country_flag = BH3_ER_own_gold_207 }
+			NOT = { has_country_flag = BH3_ER_own_gold_211 }
+			check_variable = { BH3_ER_norm_gold > 2 }
+		}
+		country_event = { id = BH3_ER_core.2 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 3 }
+			NOT = { has_country_flag = BH3_ER_own_sts_307 }
+			NOT = { has_country_flag = BH3_ER_own_sts_311 }
+			check_variable = { BH3_ER_norm_sts > 2 }
+		}
+		country_event = { id = BH3_ER_core.3 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 4 }
+			NOT = { has_country_flag = BH3_ER_own_fs_407 }
+			NOT = { has_country_flag = BH3_ER_own_fs_411 }
+			check_variable = { BH3_ER_norm_fs > 2 }
+		}
+		country_event = { id = BH3_ER_core.4 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 5 }
+			NOT = { has_country_flag = BH3_ER_own_az_507 }
+			NOT = { has_country_flag = BH3_ER_own_az_511 }
+			check_variable = { BH3_ER_norm_az > 2 }
+		}
+		country_event = { id = BH3_ER_core.5 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 6 }
+			NOT = { has_country_flag = BH3_ER_own_bd_607 }
+			NOT = { has_country_flag = BH3_ER_own_bd_611 }
+			check_variable = { BH3_ER_norm_bd > 2 }
+		}
+		country_event = { id = BH3_ER_core.6 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 7 }
+			NOT = { has_country_flag = BH3_ER_own_ds_707 }
+			NOT = { has_country_flag = BH3_ER_own_ds_711 }
+			check_variable = { BH3_ER_norm_ds > 2 }
+		}
+		country_event = { id = BH3_ER_core.7 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 8 }
+			NOT = { has_country_flag = BH3_ER_own_hx_807 }
+			NOT = { has_country_flag = BH3_ER_own_hx_811 }
+			check_variable = { BH3_ER_norm_hx > 2 }
+		}
+		country_event = { id = BH3_ER_core.8 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 9 }
+			NOT = { has_country_flag = BH3_ER_own_if_907 }
+			NOT = { has_country_flag = BH3_ER_own_if_911 }
+			check_variable = { BH3_ER_norm_if > 2 }
+		}
+		country_event = { id = BH3_ER_core.9 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 10 }
+			NOT = { has_country_flag = BH3_ER_own_db_1007 }
+			NOT = { has_country_flag = BH3_ER_own_db_1011 }
+			check_variable = { BH3_ER_norm_db > 2 }
+		}
+		country_event = { id = BH3_ER_core.10 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 11 }
+			NOT = { has_country_flag = BH3_ER_own_st_1107 }
+			NOT = { has_country_flag = BH3_ER_own_st_1111 }
+			check_variable = { BH3_ER_norm_st > 2 }
+		}
+		country_event = { id = BH3_ER_core.11 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	else_if = {
+		limit = {
+			check_variable = { BH3_ER_core_pending = 12 }
+			NOT = { has_country_flag = BH3_ER_own_rv_1207 }
+			NOT = { has_country_flag = BH3_ER_own_rv_1211 }
+			check_variable = { BH3_ER_norm_rv > 2 }
+		}
+		country_event = { id = BH3_ER_core.12 days = 0 }
+		set_variable = { BH3_ER_core_pending = 0 }
+	}
+	set_variable = { BH3_ER_core_pending = 0 }
 }
