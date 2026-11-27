@@ -1394,7 +1394,7 @@ guiTypes = {
 			name = "BH3_ER_draw_btn"
 			position = { x = 90 y = 480 }
 			spriteType = "GFX_BH3_Intro_400x50_btn"
-			pdx_tooltip = "BH3_ER_draw_btn_tip"
+			context_aware_tooltip = "BH3_ER_draw_btn_tip_holder"
 			buttonText = "BH3_ER_draw_btn_text"
 			buttonFont = "hoi_16mbs"
 		}
@@ -1418,7 +1418,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_btn"
 			position = { x = 560 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			pdx_tooltip = "BH3_ER_slot_1_tip"
+			context_aware_tooltip = "BH3_ER_slot_1_tip_holder"
 		}
 
 		iconType = {
@@ -1521,7 +1521,7 @@ guiTypes = {
 			name = "BH3_ER_slot_1_label"
 			position = { x = 560 y = 490 }
 			font = "hoi_16mbs"
-			text = "BH3_ER_slot_1_name"
+			context_aware_text = "[BH3_ER_slot_1_name]"
 			maxWidth = 200
 			maxHeight = 30
 			format = center
@@ -1533,7 +1533,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_btn"
 			position = { x = 790 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			pdx_tooltip = "BH3_ER_slot_2_tip"
+			context_aware_tooltip = "BH3_ER_slot_2_tip_holder"
 		}
 
 		iconType = {
@@ -1636,7 +1636,7 @@ guiTypes = {
 			name = "BH3_ER_slot_2_label"
 			position = { x = 790 y = 490 }
 			font = "hoi_16mbs"
-			text = "BH3_ER_slot_2_name"
+			context_aware_text = "[BH3_ER_slot_2_name]"
 			maxWidth = 200
 			maxHeight = 30
 			format = center
@@ -1648,7 +1648,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_btn"
 			position = { x = 1020 y = 55 }
 			spriteType = "GFX_BH3_ER_portal_tile"
-			pdx_tooltip = "BH3_ER_slot_3_tip"
+			context_aware_tooltip = "BH3_ER_slot_3_tip_holder"
 		}
 
 		iconType = {
@@ -1751,7 +1751,7 @@ guiTypes = {
 			name = "BH3_ER_slot_3_label"
 			position = { x = 1020 y = 490 }
 			font = "hoi_16mbs"
-			text = "BH3_ER_slot_3_name"
+			context_aware_text = "[BH3_ER_slot_3_name]"
 			maxWidth = 200
 			maxHeight = 30
 			format = center

@@ -971,3 +971,15 @@ BH3_UD_apply = yes
 - 触发后弹出国家事件（每系一个，fire_only_once）：两个选项分别为该系核心Ⅰ / 核心Ⅱ
 - 多个系列同时满足时，按救世→黄金→刹那→…→空梦的顺序，每次选择后触发一个
 - 抽卡按钮 tooltip 改为提示“核心刻印获取：已就绪 / 尚未就绪”，不再表示抽取池里能抽到核心
+
+### 18.5 悬停提示修复（2026-11-27 二次）
+
+实测发现第一版悬停提示无效，原因与修法：
+
+- 脚本化本地化（defined_text）不能直接写进 GUI 的 text / pdx_tooltip，否则界面显示原始 key（例如 BH3_ER_slot_1_name）
+- 正确写法：text 用 context_aware_text = "[defined_text名]"；tooltip 用 context_aware_tooltip 指向一个静态 loc key，该 key 的值再写 [defined_text名]，形成 holder 中转
+- 候选名标签：text = BH3_ER_slot_N_name → context_aware_text = "[BH3_ER_slot_N_name]"
+- 槽位 tooltip：pdx_tooltip → context_aware_tooltip = BH3_ER_slot_N_tip_holder（loc 值为 [BH3_ER_slot_N_tip]）
+- 抽卡按钮 tooltip：同理走 BH3_ER_draw_btn_tip_holder
+- tooltip 文本加入颜色：§Y 名称、§T 系列、§G 进度行；格式向女武神科技界面（原版科技 tooltip 风格）靠拢
+- 图标问题：GFX_BH3_ER_series_st（繁星）精灵未定义，已补；同时补齐各槽位的 dlv 图标可见条件（之前缺失导致 救世 图标常驻）

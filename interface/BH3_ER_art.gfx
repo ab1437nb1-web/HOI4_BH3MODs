@@ -63,6 +63,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_BH3_ER_series_st"
+		texturefile = "gfx/interface/elysianrealm/signet_Griseo.png"
+	}
+
+	spriteType = {
 		name = "GFX_BH3_ER_series_rv"
 		texturefile = "gfx/interface/elysianrealm/signet_Pardofelis.png"
 	}

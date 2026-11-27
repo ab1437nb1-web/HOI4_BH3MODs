@@ -201,3 +201,10 @@ HOI4 没有“读取变量并显示”的接口，但可以用 log 效果往 gam
 - 不影响：核导弹袭击、战略轰炸等特殊打击；测试时它们照常生效
 - 因此“无敌类”效果在描述里要写清楚是“陆战无敌/受到陆战伤害 -100%”，不要写成泛指的“免疫一切伤害”
 - 测试方法论：单次随机事件（袭击成功/失败、判定命中）不能作为结论依据；至少重复 3~5 次或对比多组样本再下结论
+
+## 14. GUI 里的脚本化本地化（defined_text）
+
+- defined_text 不能直接用于 GUI 的 text= 或 pdx_tooltip=，会显示原始 key
+- text 正确写法：context_aware_text = "[定义名]"
+- tooltip 正确写法：context_aware_tooltip = "静态loc_key"，静态 key 的值写成 [定义名]（holder 中转）
+- GUI 图标/按钮都用 name 区分，脚本化 GUI 的 <元素名>_visible 触发缺失时元素会常驻显示，新增图标务必逐槽补 visible 条件
