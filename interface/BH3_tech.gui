@@ -1400,6 +1400,15 @@ guiTypes = {
 		}
 
 		buttonType = {
+			name = "BH3_ER_refresh_btn"
+			position = { x = 90 y = 590 }
+			spriteType = "GFX_BH3_Intro_400x50_btn"
+			pdx_tooltip = "BH3_ER_refresh_tip_holder"
+			buttonText = "BH3_ER_refresh_btn_text"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
 			name = "BH3_ER_cancel_draw_btn"
 			position = { x = 90 y = 535 }
 			spriteType = "GFX_BH3_Intro_400x50_btn"

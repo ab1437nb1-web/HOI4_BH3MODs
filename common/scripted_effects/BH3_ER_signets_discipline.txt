@@ -227,6 +227,8 @@ BH3_ER_grant_701 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -246,6 +248,8 @@ BH3_ER_grant_702 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -265,6 +269,8 @@ BH3_ER_grant_703 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -284,6 +290,8 @@ BH3_ER_grant_704 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -303,6 +311,8 @@ BH3_ER_grant_705 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -322,6 +332,8 @@ BH3_ER_grant_706 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -340,6 +352,8 @@ BH3_ER_grant_707 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -358,6 +372,8 @@ BH3_ER_grant_708 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -376,6 +392,8 @@ BH3_ER_grant_709 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -394,6 +412,8 @@ BH3_ER_grant_710 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -412,6 +432,8 @@ BH3_ER_grant_711 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -430,6 +452,8 @@ BH3_ER_grant_712 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -448,6 +472,8 @@ BH3_ER_grant_713 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -466,6 +492,8 @@ BH3_ER_grant_714 = {
 			}
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }

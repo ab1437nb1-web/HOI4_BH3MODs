@@ -9,6 +9,10 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_signets = 0 }
 	set_variable = { BH3_ER_draws = 0 }
 	set_variable = { BH3_ER_pool_left = 0 }
+	set_variable = { BH3_ER_refresh_count = 0 }
+	set_variable = { BH3_ER_refresh_cost = 100 }
+	set_variable = { BH3_ER_shop_refresh_count = 0 }
+	set_variable = { BH3_ER_shop_refresh_cost = 100 }
 	set_variable = { BH3_ER_draw_fallback = 0 }
 	set_variable = { BH3_ER_cand_free = 0 }
 	set_variable = { BH3_ER_c1_ser = 0 }
@@ -20,6 +24,8 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_core_ready = 0 }
 	set_variable = { BH3_ER_core_pending = 0 }
 	set_variable = { BH3_ER_offer = 0 }
+	set_variable = { BH3_ER_refresh_count = 0 }
+	set_variable = { BH3_ER_refresh_cost = 100 }
 	set_variable = { BH3_ER_c1 = 0 }
 	set_variable = { BH3_ER_c2 = 0 }
 	set_variable = { BH3_ER_c3 = 0 }

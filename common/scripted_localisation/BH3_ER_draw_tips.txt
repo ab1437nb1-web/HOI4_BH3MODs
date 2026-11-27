@@ -2045,3 +2045,58 @@ defined_text = {
 		localization_key = BH3_ER_core_ready_no
 	}
 }
+
+defined_text = {
+	name = BH3_ER_refresh_tip
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 0 } }
+		localization_key = BH3_ER_refresh_tip_free
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 1 } }
+		localization_key = BH3_ER_refresh_tip_100
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 2 } }
+		localization_key = BH3_ER_refresh_tip_200
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 3 } }
+		localization_key = BH3_ER_refresh_tip_400
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 4 } }
+		localization_key = BH3_ER_refresh_tip_800
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 5 } }
+		localization_key = BH3_ER_refresh_tip_1600
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 6 } }
+		localization_key = BH3_ER_refresh_tip_3200
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 7 } }
+		localization_key = BH3_ER_refresh_tip_6400
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 8 } }
+		localization_key = BH3_ER_refresh_tip_12800
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 9 } }
+		localization_key = BH3_ER_refresh_tip_25600
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 10 } }
+		localization_key = BH3_ER_refresh_tip_51200
+	}
+	text = {
+		trigger = { check_variable = { BH3_ER_refresh_count = 11 } }
+		localization_key = BH3_ER_refresh_tip_102400
+	}
+	text = {
+		localization_key = BH3_ER_refresh_tip_max
+	}
+}

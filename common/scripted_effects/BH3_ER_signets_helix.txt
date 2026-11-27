@@ -123,6 +123,8 @@ BH3_ER_grant_801 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -137,6 +139,8 @@ BH3_ER_grant_802 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -151,6 +155,8 @@ BH3_ER_grant_803 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -165,6 +171,8 @@ BH3_ER_grant_804 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -179,6 +187,8 @@ BH3_ER_grant_805 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -193,6 +203,8 @@ BH3_ER_grant_806 = {
 			add_to_variable = { BH3_ER_norm_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -206,6 +218,8 @@ BH3_ER_grant_807 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -219,6 +233,8 @@ BH3_ER_grant_808 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -232,6 +248,8 @@ BH3_ER_grant_809 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -245,6 +263,8 @@ BH3_ER_grant_810 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -258,6 +278,8 @@ BH3_ER_grant_811 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -271,6 +293,8 @@ BH3_ER_grant_812 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -284,6 +308,8 @@ BH3_ER_grant_813 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }
@@ -297,6 +323,8 @@ BH3_ER_grant_814 = {
 			add_to_variable = { BH3_ER_cnt_hx = 1 }
 		}
 		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
 		set_variable = { BH3_ER_c1 = 0 }
 		set_variable = { BH3_ER_c2 = 0 }
 		set_variable = { BH3_ER_c3 = 0 }

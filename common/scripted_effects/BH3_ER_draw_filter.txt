@@ -1,6 +1,5 @@
-# Signet draw: candidate filter, series helper, pool counting, retry+fallback (auto-generated)
+# Signet draw: filter, series helper, pool guard, retry + fallback, refresh costs (auto-generated)
 
-# candidate legality by type
 BH3_ER_cand_ok = {
 	set_variable = { BH3_ER_cand_ok = 0 }
 	if = {
@@ -581,7 +580,6 @@ BH3_ER_cand_ok = {
 	}
 }
 
-# candidate not owned (fallback layer, ignores type rules)
 BH3_ER_cand_free = {
 	set_variable = { BH3_ER_cand_free = 0 }
 	if = {
@@ -1162,7 +1160,6 @@ BH3_ER_cand_free = {
 	}
 }
 
-# series index of candidate (1..12)
 BH3_ER_set_cand_ser = {
 	set_temp_variable = { BH3_ER_cand_ser = 0 }
 	if = {
@@ -1215,7 +1212,6 @@ BH3_ER_set_cand_ser = {
 	}
 }
 
-# drawable pool size (non-core, unowned)
 BH3_ER_count_pool = {
 	set_variable = { BH3_ER_pool_left = 0 }
 	if = {
@@ -1796,7 +1792,6 @@ BH3_ER_count_pool = {
 	}
 }
 
-# roll one candidate uniformly over non-core ids, then evaluate legality + series
 BH3_ER_roll_one = {
 	random_list = {
 		10 = { set_variable = { BH3_ER_cand_id = 101 } }
@@ -1949,7 +1944,6 @@ BH3_ER_roll_one = {
 	BH3_ER_set_cand_ser = yes
 }
 
-# whether any series satisfies core-event conditions (normals>=3, neither core owned)
 BH3_ER_update_core_ready = {
 	set_variable = { BH3_ER_core_ready = 0 }
 	if = {
@@ -2050,649 +2044,838 @@ BH3_ER_update_core_ready = {
 	}
 }
 
+BH3_ER_roll_candidates = {
+	set_variable = { BH3_ER_draw_fallback = 0 }
+	BH3_ER_count_pool = yes
+	if = {
+		limit = { check_variable = { BH3_ER_pool_left = 0 } }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+		set_variable = { BH3_ER_draw_fallback = 1 }
+	}
+	else = {
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c1 = 0 } set_variable = { BH3_ER_c1_ser = 0 } }
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c2 = 0 } set_variable = { BH3_ER_c2_ser = 0 } }
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c3 = 0 } set_variable = { BH3_ER_c3_ser = 0 } }
+		# fallback: relax to any unowned (still distinct series)
+		if = { limit = { check_variable = { BH3_ER_c1 = 0 } }
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c1 = 0 } set_variable = { BH3_ER_c1_ser = 0 } }
+		}
+		if = { limit = { check_variable = { BH3_ER_c2 = 0 } }
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
+				set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c2 = 0 } set_variable = { BH3_ER_c2_ser = 0 } }
+		}
+		if = { limit = { check_variable = { BH3_ER_c3 = 0 } }
+		set_variable = { BH3_ER_slot_ok = 0 }
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = {
+			limit = { check_variable = { BH3_ER_slot_ok = 0 } }
+			BH3_ER_roll_one = yes
+			if = {
+				limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
+				set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
+				set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
+				set_variable = { BH3_ER_slot_ok = 1 }
+			}
+		}
+		if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c3 = 0 } set_variable = { BH3_ER_c3_ser = 0 } }
+		}
+		if = { limit = { OR = { check_variable = { BH3_ER_c1 = 0 } check_variable = { BH3_ER_c2 = 0 } check_variable = { BH3_ER_c3 = 0 } } } set_variable = { BH3_ER_draw_fallback = 1 } }
+	}
+	if = { limit = { check_variable = { BH3_ER_draw_fallback = 1 } } add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = 5 } }
+}
+
 BH3_ER_roll_offer = {
 	if = {
 		limit = { check_variable = { BH3_ER_draws > 0 } check_variable = { BH3_ER_offer = 0 } }
 		subtract_from_variable = { BH3_ER_draws = 1 }
-		set_variable = { BH3_ER_draw_fallback = 0 }
-		set_variable = { BH3_ER_slot_ok = 0 }
-		BH3_ER_count_pool = yes
+		set_variable = { BH3_ER_refresh_count = 0 }
+		set_variable = { BH3_ER_refresh_cost = 100 }
+		BH3_ER_roll_candidates = yes
+		set_variable = { BH3_ER_offer = 1 }
+	}
+}
+
+BH3_ER_refresh_offer = {
+	if = {
+		limit = { check_variable = { BH3_ER_offer = 1 } check_variable = { BH3_ER_draw_fallback = 0 } }
 		if = {
-			limit = { check_variable = { BH3_ER_pool_left = 0 } }
-			# 兜底：池子已空（商店等来源已消耗完），改为发放无瑕之钥，保证不会抽出空层
-			set_variable = { BH3_ER_c1 = 0 }
-			set_variable = { BH3_ER_c2 = 0 }
-			set_variable = { BH3_ER_c3 = 0 }
-			set_variable = { BH3_ER_offer = 1 }
-			set_variable = { BH3_ER_draw_fallback = 1 }
+			limit = { check_variable = { BH3_ER_refresh_count = 0 } }
+			# 每层第一次刷新免费
+			set_variable = { BH3_ER_refresh_count = 1 }
+			set_variable = { BH3_ER_refresh_cost = 100 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 1 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -100 }
+			set_variable = { BH3_ER_refresh_count = 2 }
+			set_variable = { BH3_ER_refresh_cost = 200 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 2 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -200 }
+			set_variable = { BH3_ER_refresh_count = 3 }
+			set_variable = { BH3_ER_refresh_cost = 400 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 3 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -400 }
+			set_variable = { BH3_ER_refresh_count = 4 }
+			set_variable = { BH3_ER_refresh_cost = 800 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 4 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -800 }
+			set_variable = { BH3_ER_refresh_count = 5 }
+			set_variable = { BH3_ER_refresh_cost = 1600 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 5 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -1600 }
+			set_variable = { BH3_ER_refresh_count = 6 }
+			set_variable = { BH3_ER_refresh_cost = 3200 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 6 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -3200 }
+			set_variable = { BH3_ER_refresh_count = 7 }
+			set_variable = { BH3_ER_refresh_cost = 6400 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 7 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -6400 }
+			set_variable = { BH3_ER_refresh_count = 8 }
+			set_variable = { BH3_ER_refresh_cost = 12800 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 8 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -12800 }
+			set_variable = { BH3_ER_refresh_count = 9 }
+			set_variable = { BH3_ER_refresh_cost = 25600 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 9 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -25600 }
+			set_variable = { BH3_ER_refresh_count = 10 }
+			set_variable = { BH3_ER_refresh_cost = 51200 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 10 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -51200 }
+			set_variable = { BH3_ER_refresh_count = 11 }
+			set_variable = { BH3_ER_refresh_cost = 102400 }
+			BH3_ER_roll_candidates = yes
+		}
+		else_if = {
+			limit = { check_variable = { BH3_ER_refresh_count = 11 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -102400 }
+			set_variable = { BH3_ER_refresh_count = 12 }
+			set_variable = { BH3_ER_refresh_cost = 204800 }
+			BH3_ER_roll_candidates = yes
 		}
 		else = {
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c1 = 0 } set_variable = { BH3_ER_c1_ser = 0 } }
-
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c2 = 0 } set_variable = { BH3_ER_c2_ser = 0 } }
-
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_ok = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c3 = 0 } set_variable = { BH3_ER_c3_ser = 0 } }
-
-			# 兜底：规则层抽不到时放宽为“任意未拥有”（仍不跨系重复）
-			if = { limit = { check_variable = { BH3_ER_c1 = 0 } }
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c1 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c1_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c1 = 0 } set_variable = { BH3_ER_c1_ser = 0 } }
-			}
-			if = { limit = { check_variable = { BH3_ER_c2 = 0 } }
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c3 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c3_ser } } }
-					set_variable = { BH3_ER_c2 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c2_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c2 = 0 } set_variable = { BH3_ER_c2_ser = 0 } }
-			}
-			if = { limit = { check_variable = { BH3_ER_c3 = 0 } }
-			set_variable = { BH3_ER_slot_ok = 0 }
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = {
-				limit = { check_variable = { BH3_ER_slot_ok = 0 } }
-				BH3_ER_roll_one = yes
-				if = {
-					limit = { check_variable = { BH3_ER_cand_free = 1 } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c1 } } NOT = { check_variable = { BH3_ER_cand_id = BH3_ER_c2 } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c1_ser } } NOT = { check_variable = { BH3_ER_cand_ser = BH3_ER_c2_ser } } }
-					set_variable = { BH3_ER_c3 = BH3_ER_cand_id }
-					set_variable = { BH3_ER_c3_ser = BH3_ER_cand_ser }
-					set_variable = { BH3_ER_slot_ok = 1 }
-				}
-			}
-			if = { limit = { check_variable = { BH3_ER_slot_ok = 0 } } set_variable = { BH3_ER_c3 = 0 } set_variable = { BH3_ER_c3_ser = 0 } }
-			}
-			set_variable = { BH3_ER_offer = 1 }
-			# 若仍有空槽（理论上仅剩极少候选时出现），标记兜底
-			if = { limit = { OR = { check_variable = { BH3_ER_c1 = 0 } check_variable = { BH3_ER_c2 = 0 } check_variable = { BH3_ER_c3 = 0 } } } set_variable = { BH3_ER_draw_fallback = 1 } }
+			add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = -204800 }
+			add_to_variable = { BH3_ER_refresh_count = 1 }
+			multiply_variable = { BH3_ER_refresh_cost = 2 }
+			BH3_ER_roll_candidates = yes
 		}
-		if = { limit = { check_variable = { BH3_ER_draw_fallback = 1 } } add_equipment_to_stockpile = { type = BH3_FlawlessKey_equipment amount = 5 } }
 	}
+}
+
+# Shop refresh：消耗空梦之币刷新商店，初始 100，每次翻倍（3000 币上限 → 实际最多约 4~5 次）
+BH3_ER_shop_refresh = {
+	if = {
+		limit = { BH3_ER_can_shop_refresh = yes }
+			if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 0 } }
+				add_to_variable = { BH3_ER_rv_coin = -100 }
+				set_variable = { BH3_ER_shop_refresh_count = 1 }
+				set_variable = { BH3_ER_shop_refresh_cost = 200 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 1 } }
+				add_to_variable = { BH3_ER_rv_coin = -200 }
+				set_variable = { BH3_ER_shop_refresh_count = 2 }
+				set_variable = { BH3_ER_shop_refresh_cost = 400 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 2 } }
+				add_to_variable = { BH3_ER_rv_coin = -400 }
+				set_variable = { BH3_ER_shop_refresh_count = 3 }
+				set_variable = { BH3_ER_shop_refresh_cost = 800 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 3 } }
+				add_to_variable = { BH3_ER_rv_coin = -800 }
+				set_variable = { BH3_ER_shop_refresh_count = 4 }
+				set_variable = { BH3_ER_shop_refresh_cost = 1600 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 4 } }
+				add_to_variable = { BH3_ER_rv_coin = -1600 }
+				set_variable = { BH3_ER_shop_refresh_count = 5 }
+				set_variable = { BH3_ER_shop_refresh_cost = 3200 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 5 } }
+				add_to_variable = { BH3_ER_rv_coin = -3200 }
+				set_variable = { BH3_ER_shop_refresh_count = 6 }
+				set_variable = { BH3_ER_shop_refresh_cost = 6400 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 6 } }
+				add_to_variable = { BH3_ER_rv_coin = -6400 }
+				set_variable = { BH3_ER_shop_refresh_count = 7 }
+				set_variable = { BH3_ER_shop_refresh_cost = 12800 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 7 } }
+				add_to_variable = { BH3_ER_rv_coin = -12800 }
+				set_variable = { BH3_ER_shop_refresh_count = 8 }
+				set_variable = { BH3_ER_shop_refresh_cost = 25600 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 8 } }
+				add_to_variable = { BH3_ER_rv_coin = -25600 }
+				set_variable = { BH3_ER_shop_refresh_count = 9 }
+				set_variable = { BH3_ER_shop_refresh_cost = 51200 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 9 } }
+				add_to_variable = { BH3_ER_rv_coin = -51200 }
+				set_variable = { BH3_ER_shop_refresh_count = 10 }
+				set_variable = { BH3_ER_shop_refresh_cost = 102400 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else_if = {
+				limit = { check_variable = { BH3_ER_shop_refresh_count = 10 } }
+				add_to_variable = { BH3_ER_rv_coin = -102400 }
+				set_variable = { BH3_ER_shop_refresh_count = 11 }
+				set_variable = { BH3_ER_shop_refresh_cost = 204800 }
+				# TODO(shop): 商店补货逻辑在此处调用
+			}
+			else = {
+				add_to_variable = { BH3_ER_rv_coin = -204800 }
+				add_to_variable = { BH3_ER_shop_refresh_count = 1 }
+				multiply_variable = { BH3_ER_shop_refresh_cost = 2 }
+			}
+		}
+}
+
+BH3_ER_shop_refresh_reset = {
+	set_variable = { BH3_ER_shop_refresh_count = 0 }
+	set_variable = { BH3_ER_shop_refresh_cost = 100 }
 }

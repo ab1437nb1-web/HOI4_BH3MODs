@@ -17,3 +17,54 @@ BH3_ER_draw_layer_guaranteed = {
 		check_variable = { BH3_ER_draw_fallback = 1 }
 	}
 }
+
+# 商店刷新是否可用：空梦之币 >= 下次刷新费用（100 起，每次翻倍）
+BH3_ER_can_shop_refresh = {
+	if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 0 } }
+		check_variable = { BH3_ER_rv_coin > 99 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 1 } }
+		check_variable = { BH3_ER_rv_coin > 199 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 2 } }
+		check_variable = { BH3_ER_rv_coin > 399 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 3 } }
+		check_variable = { BH3_ER_rv_coin > 799 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 4 } }
+		check_variable = { BH3_ER_rv_coin > 1599 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 5 } }
+		check_variable = { BH3_ER_rv_coin > 3199 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 6 } }
+		check_variable = { BH3_ER_rv_coin > 6399 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 7 } }
+		check_variable = { BH3_ER_rv_coin > 12799 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 8 } }
+		check_variable = { BH3_ER_rv_coin > 25599 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 9 } }
+		check_variable = { BH3_ER_rv_coin > 51199 }
+	}
+	else_if = {
+		limit = { check_variable = { BH3_ER_shop_refresh_count = 10 } }
+		check_variable = { BH3_ER_rv_coin > 102399 }
+	}
+	else = {
+		check_variable = { BH3_ER_rv_coin > 204799 }
+	}
+}
