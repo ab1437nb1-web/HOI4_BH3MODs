@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+
+		# 1214 要发财啦：一次生产爆发窗口
+		BH3_ER_rv_windfall = {
+			allowed = { always = yes }
+			picture = ENG_generic_1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				equipment_conversion_speed = 0.15
+				line_change_production_efficiency_factor = 0.10
+			}
+		}
+	}
+}

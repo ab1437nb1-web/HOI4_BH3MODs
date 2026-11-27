@@ -130,3 +130,17 @@ BH3_ER_dm_st = {
 	army_attack_against_major_factor = BH3_ER_st_redatk
 	army_attack_against_minor_factor = BH3_ER_st_redatk
 }
+
+BH3_ER_dm_rv = {
+	enable = { always = yes }
+
+	production_factory_efficiency_gain_factor = BH3_ER_rv_eff
+	production_factory_max_efficiency_factor = BH3_ER_rv_max
+	production_factory_start_efficiency_factor = BH3_ER_rv_start
+	line_change_production_efficiency_factor = BH3_ER_rv_line
+	equipment_conversion_speed = BH3_ER_rv_conv
+	refit_ic_cost = BH3_ER_rv_refit
+	conversion_cost_civ_to_mil_factor = BH3_ER_rv_c2m
+	consumer_goods_factor = BH3_ER_rv_cons
+	industrial_capacity_factory = BH3_ER_rv_civ
+}

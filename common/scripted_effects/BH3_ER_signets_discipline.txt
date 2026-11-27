@@ -164,17 +164,21 @@ BH3_ER_ds_daily = {
 	# 规诫 +5/天
 	add_to_variable = { BH3_ER_ds_counter = 5 }
 
-	# 战争期间衰减 10/天（706 QTE 期间冻结）
+	# 稳定度 / 战争支持度：每有一个低于 50%，规诫额外 -5/天（706 QTE 期间冻结）
 	if = {
-		limit = { has_war = yes }
+		limit = { check_variable = { BH3_ER_ds_free_runs > 0 } }
+		subtract_from_variable = { BH3_ER_ds_free_runs = 1 }
+	}
+	else = {
+		set_temp_variable = { ds_low = 0 }
+		if = { limit = { NOT = { has_stability > 0.49 } } add_to_variable = { ds_low = 1 } }
+		if = { limit = { NOT = { has_war_support > 0.49 } } add_to_variable = { ds_low = 1 } }
 		if = {
-			limit = { check_variable = { BH3_ER_ds_free_runs > 0 } }
-			subtract_from_variable = { BH3_ER_ds_free_runs = 1 }
-		}
-		else = {
+			limit = { check_variable = { ds_low > 0 } }
+			multiply_variable = { ds_low = 5 }
 			if = {
-				limit = { check_variable = { BH3_ER_ds_counter > 9 } }
-				subtract_from_variable = { BH3_ER_ds_counter = 10 }
+				limit = { check_variable = { BH3_ER_ds_counter > ds_low } }
+				subtract_from_variable = { BH3_ER_ds_counter = ds_low }
 				# 705：每次减少规诫时对敌施加产能惩罚
 				if = {
 					limit = { has_country_flag = BH3_ER_own_ds_705 }

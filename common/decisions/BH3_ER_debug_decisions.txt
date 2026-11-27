@@ -1827,16 +1827,145 @@ BH3_ER_debug_group = {
 		ai_will_do = { factor = 0 }
 	}
 
-	# ---------- 其余 11 系：占位（未实装） ----------
-	BH3_ER_dbg_placeholder_12 = {
+
+	# ---------- 空梦：测试决议 ----------
+	BH3_ER_dbg_rv_normal = {
 		icon = GFX_BH3_ER_icon_small
 		cost = 0
 		allowed = { always = yes }
 		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
-		available = { always = no }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_grant_1201 = yes
+			BH3_ER_grant_1202 = yes
+			BH3_ER_grant_1203 = yes
+			BH3_ER_grant_1204 = yes
+			BH3_ER_grant_1205 = yes
+			BH3_ER_grant_1206 = yes
+		}
 		ai_will_do = { factor = 0 }
 	}
 
+	BH3_ER_dbg_rv_core1 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_rv_1211
+			clr_country_flag = BH3_ER_own_rv_1212
+			clr_country_flag = BH3_ER_own_rv_1213
+			clr_country_flag = BH3_ER_own_rv_1214
+			BH3_ER_grant_1207 = yes
+			BH3_ER_grant_1208 = yes
+			BH3_ER_grant_1209 = yes
+			BH3_ER_grant_1210 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_rv_core2 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_rv_1207
+			clr_country_flag = BH3_ER_own_rv_1208
+			clr_country_flag = BH3_ER_own_rv_1209
+			clr_country_flag = BH3_ER_own_rv_1210
+			BH3_ER_grant_1211 = yes
+			BH3_ER_grant_1212 = yes
+			BH3_ER_grant_1213 = yes
+			BH3_ER_grant_1214 = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_rv_clear = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			clr_country_flag = BH3_ER_own_rv_1201
+			clr_country_flag = BH3_ER_own_rv_1202
+			clr_country_flag = BH3_ER_own_rv_1203
+			clr_country_flag = BH3_ER_own_rv_1204
+			clr_country_flag = BH3_ER_own_rv_1205
+			clr_country_flag = BH3_ER_own_rv_1206
+			clr_country_flag = BH3_ER_own_rv_1207
+			clr_country_flag = BH3_ER_own_rv_1208
+			clr_country_flag = BH3_ER_own_rv_1209
+			clr_country_flag = BH3_ER_own_rv_1210
+			clr_country_flag = BH3_ER_own_rv_1211
+			clr_country_flag = BH3_ER_own_rv_1212
+			clr_country_flag = BH3_ER_own_rv_1213
+			clr_country_flag = BH3_ER_own_rv_1214
+			set_variable = { BH3_ER_rv_coin = 0 }
+			set_variable = { BH3_ER_rv_stack = 0 }
+			set_variable = { BH3_ER_rv_stack_days = 0 }
+			BH3_ER_rv_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_rv_coin = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			add_to_variable = { BH3_ER_rv_coin = 500 }
+			BH3_ER_rv_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_rv_stack = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_rv_stack = 4 }
+			set_variable = { BH3_ER_rv_stack_days = 4 }
+			BH3_ER_rv_recalc = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_dbg_rv_log = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_dbg_open = 12 } }
+		available = { always = yes }
+		complete_effect = {
+			BH3_ER_rv_recalc = yes
+			log = "BH3RV begin"
+			if = { limit = { check_variable = { BH3_ER_rv_coin > 999 } } log = "BH3RV coin_gt1000" }
+			else_if = { limit = { check_variable = { BH3_ER_rv_coin > 499 } } log = "BH3RV coin_500_999" }
+			else_if = { limit = { check_variable = { BH3_ER_rv_coin > 0 } } log = "BH3RV coin_1_499" }
+			else = { log = "BH3RV coin_0" }
+			if = { limit = { check_variable = { BH3_ER_rv_boost > 1.4 } } log = "BH3RV boost_150" }
+			else_if = { limit = { check_variable = { BH3_ER_rv_boost > 1.1 } } log = "BH3RV boost_125" }
+			else = { log = "BH3RV boost_100" }
+			if = { limit = { check_variable = { BH3_ER_rv_stack > 0 } } log = "BH3RV stack_gt0" }
+			if = { limit = { check_variable = { BH3_ER_rv_eff > 0.3 } } log = "BH3RV eff_gt30pct" }
+			else_if = { limit = { check_variable = { BH3_ER_rv_eff > 0 } } log = "BH3RV eff_1_30pct" }
+			else = { log = "BH3RV eff_0" }
+			log = "BH3RV end"
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ---------- 其余 11 系：占位（未实装） ----------
 	# ---------- 通用调试 ----------
 
 	# 黄金/通用：重建动态修正（清掉重复叠加的 DM 再挂一次）

@@ -1,0 +1,381 @@
+# 往事乐土·空梦：用民工产能换取军用产出效率（2026-11-27 第一版）
+# 原版没有“装备造价”类国家修饰符，因此把“造价减少”折算为：
+#   生产效率获取/上限/起步/换线效率、装备转换速度、改装造价、以及民转军转换成本
+# 代价：消费品系数上升 + 民用工厂产出下降（民工产能被抽走）
+# 变量：
+#   BH3_ER_rv_coin     空梦之币（0~3000）
+#   BH3_ER_rv_boost    核心I 加成倍率（1.0 / 1.25 / 1.5）
+#   BH3_ER_rv_stack    核心II【贵宾待遇】层数
+#   BH3_ER_rv_stack_days 层数剩余天数
+#   BH3_ER_rv_eff / _max / _start / _line / _conv / _refit / _c2m / _cons / _civ 输出给 DM
+
+BH3_ER_rv_recalc = {
+	set_variable = { BH3_ER_rv_eff = 0 }
+	set_variable = { BH3_ER_rv_max = 0 }
+	set_variable = { BH3_ER_rv_start = 0 }
+	set_variable = { BH3_ER_rv_line = 0 }
+	set_variable = { BH3_ER_rv_conv = 0 }
+	set_variable = { BH3_ER_rv_refit = 0 }
+	set_variable = { BH3_ER_rv_c2m = 0 }
+	set_variable = { BH3_ER_rv_cons = 0 }
+	set_variable = { BH3_ER_rv_civ = 0 }
+
+	# 核心I 空集：币数档位
+	set_variable = { BH3_ER_rv_boost = 1.0 }
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1207 check_variable = { BH3_ER_rv_coin > 999 } }
+		set_variable = { BH3_ER_rv_boost = 1.5 }
+	}
+	else_if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1207 check_variable = { BH3_ER_rv_coin > 499 } }
+		set_variable = { BH3_ER_rv_boost = 1.25 }
+	}
+
+	# 基础普通刻印：每 100 币
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1201 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.004 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.3 }
+		add_to_variable = { BH3_ER_rv_eff = rv_t }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1202 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.003 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_rv_max = rv_t }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1203 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.003 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_rv_start = rv_t }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1204 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.005 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.3 }
+		add_to_variable = { BH3_ER_rv_conv = rv_t }
+	}
+
+	# 1208 / 1209：核心I 增幅追加效率与转换速度
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1208 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.002 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.2 }
+		add_to_variable = { BH3_ER_rv_eff = rv_t }
+	}
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1209 }
+		set_temp_variable = { rv_t = BH3_ER_rv_coin }
+		divide_variable = { rv_t = 100 }
+		multiply_variable = { rv_t = 0.004 }
+		multiply_variable = { rv_t = BH3_ER_rv_boost }
+		clamp_variable = { var = rv_t min = 0 max = 0.25 }
+		add_to_variable = { BH3_ER_rv_conv = rv_t }
+	}
+	# 1210：币数 ≥1000 → 改装与民转军更便宜
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1210 check_variable = { BH3_ER_rv_coin > 999 } }
+		subtract_from_variable = { BH3_ER_rv_refit = 0.2 }
+		subtract_from_variable = { BH3_ER_rv_c2m = 0.3 }
+	}
+
+	# 核心II 贵宾待遇层数
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1211 check_variable = { BH3_ER_rv_stack > 0 } }
+		set_temp_variable = { rv_t = BH3_ER_rv_stack }
+		multiply_variable = { rv_t = 0.05 }
+		add_to_variable = { BH3_ER_rv_eff = rv_t }
+		add_to_variable = { BH3_ER_rv_conv = rv_t }
+		# 1212：每层额外效率
+		if = {
+			limit = { has_country_flag = BH3_ER_own_rv_1212 }
+			set_temp_variable = { rv_t = BH3_ER_rv_stack }
+			multiply_variable = { rv_t = 0.02 }
+			add_to_variable = { BH3_ER_rv_eff = rv_t }
+		}
+	}
+
+	# 民工产能代价：只要在转化（币 > 0），就付出消费品与民用产能
+	if = {
+		limit = { check_variable = { BH3_ER_rv_coin > 0 } }
+		add_to_variable = { BH3_ER_rv_cons = 0.03 }
+		subtract_from_variable = { BH3_ER_rv_civ = 0.02 }
+	}
+
+	# 兜底
+	clamp_variable = { var = BH3_ER_rv_eff min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_rv_max min = 0 max = 0.8 }
+	clamp_variable = { var = BH3_ER_rv_start min = 0 max = 0.8 }
+	clamp_variable = { var = BH3_ER_rv_line min = 0 max = 0.8 }
+	clamp_variable = { var = BH3_ER_rv_conv min = 0 max = 1.5 }
+	clamp_variable = { var = BH3_ER_rv_refit min = -0.5 max = 0 }
+	clamp_variable = { var = BH3_ER_rv_c2m min = -0.5 max = 0 }
+	clamp_variable = { var = BH3_ER_rv_cons min = 0 max = 0.2 }
+	clamp_variable = { var = BH3_ER_rv_civ min = -0.2 max = 0 }
+}
+
+# 每日
+BH3_ER_rv_daily = {
+	# 基础积累：每天 +5 币
+	add_to_variable = { BH3_ER_rv_coin = 5 }
+	if = { limit = { check_variable = { BH3_ER_rv_coin > 3000 } } set_variable = { BH3_ER_rv_coin = 3000 } }
+
+	# 1205 行商者的哲学：每 10 天 +10% 币（上限 100）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1205 }
+		add_to_variable = { BH3_ER_rv_t1 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_t1 > 8 } }
+			set_variable = { BH3_ER_rv_t1 = 0 }
+			set_temp_variable = { rv_gain = BH3_ER_rv_coin }
+			divide_variable = { rv_gain = 10 }
+			clamp_variable = { var = rv_gain min = 0 max = 100 }
+			add_to_variable = { BH3_ER_rv_coin = rv_gain }
+		}
+	}
+	# 1206 值钱的闪闪的：每 10 天 +15 币
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1206 }
+		add_to_variable = { BH3_ER_rv_t2 = 1 }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_t2 > 8 } }
+			set_variable = { BH3_ER_rv_t2 = 0 }
+			add_to_variable = { BH3_ER_rv_coin = 15 }
+		}
+	}
+
+	# 核心II 空幻：消费 200 币换 1 层贵宾待遇（1212 改为 180）
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1211 }
+		set_temp_variable = { rv_cost = 200 }
+		if = { limit = { has_country_flag = BH3_ER_own_rv_1212 } set_temp_variable = { rv_cost = 180 } }
+		set_temp_variable = { rv_cap = 4 }
+		if = { limit = { has_country_flag = BH3_ER_own_rv_1213 } set_temp_variable = { rv_cap = 5 } }
+		if = {
+			limit = {
+				check_variable = {
+					var = BH3_ER_rv_coin
+					value = rv_cost
+					compare = greater_than_or_equals
+				}
+				check_variable = { BH3_ER_rv_stack < rv_cap }
+			}
+			subtract_from_variable = { BH3_ER_rv_coin = rv_cost }
+			add_to_variable = { BH3_ER_rv_stack = 1 }
+			set_variable = { BH3_ER_rv_stack_days = 4 }
+			if = { limit = { has_country_flag = BH3_ER_own_rv_1213 } set_variable = { BH3_ER_rv_stack_days = 6 } }
+		}
+	}
+
+	# 贵宾待遇持续时间
+	if = {
+		limit = { check_variable = { BH3_ER_rv_stack > 0 } }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_stack_days > 0 } }
+			subtract_from_variable = { BH3_ER_rv_stack_days = 1 }
+		}
+		else = { set_variable = { BH3_ER_rv_stack = 0 } }
+	}
+
+	# 1214 早晚美梦成真：按层数 15/10/5 天触发一次生产爆发
+	if = {
+		limit = { has_country_flag = BH3_ER_own_rv_1214 check_variable = { BH3_ER_rv_stack > 0 } }
+		add_to_variable = { BH3_ER_rv_t3 = 1 }
+		set_temp_variable = { rv_need = 15 }
+		if = { limit = { check_variable = { BH3_ER_rv_stack > 1 } } set_temp_variable = { rv_need = 10 } }
+		if = { limit = { check_variable = { BH3_ER_rv_stack > 2 } } set_temp_variable = { rv_need = 5 } }
+		if = {
+			limit = { check_variable = { BH3_ER_rv_t3 > rv_need } }
+			set_variable = { BH3_ER_rv_t3 = 0 }
+			add_timed_idea = { idea = BH3_ER_rv_windfall days = 5 }
+		}
+	}
+
+	BH3_ER_rv_recalc = yes
+}
+
+# ---------- 授予 ----------
+BH3_ER_grant_1201 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1201 } }
+			set_country_flag = BH3_ER_own_rv_1201
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1202 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1202 } }
+			set_country_flag = BH3_ER_own_rv_1202
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1203 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1203 } }
+			set_country_flag = BH3_ER_own_rv_1203
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1204 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1204 } }
+			set_country_flag = BH3_ER_own_rv_1204
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1205 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1205 } }
+			set_country_flag = BH3_ER_own_rv_1205
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1206 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1206 } }
+			set_country_flag = BH3_ER_own_rv_1206
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1207 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1207 } }
+			set_country_flag = BH3_ER_own_rv_1207
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1208 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1208 } }
+			set_country_flag = BH3_ER_own_rv_1208
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1209 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1209 } }
+			set_country_flag = BH3_ER_own_rv_1209
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1210 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1210 } }
+			set_country_flag = BH3_ER_own_rv_1210
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1211 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1211 } }
+			set_country_flag = BH3_ER_own_rv_1211
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1212 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1212 } }
+			set_country_flag = BH3_ER_own_rv_1212
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1213 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1213 } }
+			set_country_flag = BH3_ER_own_rv_1213
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+
+BH3_ER_grant_1214 = {
+		if = {
+			limit = { NOT = { has_country_flag = BH3_ER_own_rv_1214 } }
+			set_country_flag = BH3_ER_own_rv_1214
+			add_to_variable = { BH3_ER_signets = 1 }
+		}
+		set_variable = { BH3_ER_offer = 0 }
+		set_variable = { BH3_ER_c1 = 0 }
+		set_variable = { BH3_ER_c2 = 0 }
+		set_variable = { BH3_ER_c3 = 0 }
+	}
+

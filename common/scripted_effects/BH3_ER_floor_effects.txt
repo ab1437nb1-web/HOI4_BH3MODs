@@ -117,6 +117,22 @@ BH3_ER_init_run = {
 	set_variable = { BH3_ER_st_p2 = 0 }
 	set_variable = { BH3_ER_st_p3 = 0 }
 	set_variable = { BH3_ER_st_redatk = 0 }
+	set_variable = { BH3_ER_rv_coin = 0 }
+	set_variable = { BH3_ER_rv_boost = 1.0 }
+	set_variable = { BH3_ER_rv_stack = 0 }
+	set_variable = { BH3_ER_rv_stack_days = 0 }
+	set_variable = { BH3_ER_rv_t1 = 0 }
+	set_variable = { BH3_ER_rv_t2 = 0 }
+	set_variable = { BH3_ER_rv_t3 = 0 }
+	set_variable = { BH3_ER_rv_eff = 0 }
+	set_variable = { BH3_ER_rv_max = 0 }
+	set_variable = { BH3_ER_rv_start = 0 }
+	set_variable = { BH3_ER_rv_line = 0 }
+	set_variable = { BH3_ER_rv_conv = 0 }
+	set_variable = { BH3_ER_rv_refit = 0 }
+	set_variable = { BH3_ER_rv_c2m = 0 }
+	set_variable = { BH3_ER_rv_cons = 0 }
+	set_variable = { BH3_ER_rv_civ = 0 }
 	clr_country_flag = BH3_ER_fs_wake_used
 	clr_country_flag = BH3_ER_dlv_permanent
 	set_variable = { BH3_ER_gold_bucket = 0 }
@@ -164,6 +180,7 @@ BH3_ER_init_run = {
 		add_dynamic_modifier = { modifier = BH3_ER_dm_if }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_db }
 		add_dynamic_modifier = { modifier = BH3_ER_dm_st }
+		add_dynamic_modifier = { modifier = BH3_ER_dm_rv }
 		set_country_flag = BH3_ER_dm_added
 	}
 
