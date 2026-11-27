@@ -85,4 +85,79 @@ BH3_ER_signet_group = {
 		}
 		ai_will_do = { factor = 0 }
 	}
+
+	# 空梦：暂时占用民工换取经济产能盈余（CIC）——造价 buff 的真实消耗来源
+	BH3_ER_rv_occupy_3 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { has_country_flag = BH3_ER_own_rv_1201 }
+		available = { always = yes }
+		days_re_enable = 20
+		complete_effect = {
+			add_cic = 300
+			set_variable = { BH3_ER_rv_hold = 1 }
+			set_variable = { BH3_ER_rv_hold_days = 30 }
+			remove_ideas = BH3_ER_rv_occupy_idea_1
+			remove_ideas = BH3_ER_rv_occupy_idea_2
+			remove_ideas = BH3_ER_rv_occupy_idea_3
+			add_timed_idea = { idea = BH3_ER_rv_occupy_idea_1 days = 30 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_rv_occupy_6 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { has_country_flag = BH3_ER_own_rv_1201 }
+		available = { always = yes }
+		days_re_enable = 20
+		complete_effect = {
+			add_cic = 600
+			set_variable = { BH3_ER_rv_hold = 2 }
+			set_variable = { BH3_ER_rv_hold_days = 30 }
+			remove_ideas = BH3_ER_rv_occupy_idea_1
+			remove_ideas = BH3_ER_rv_occupy_idea_2
+			remove_ideas = BH3_ER_rv_occupy_idea_3
+			add_timed_idea = { idea = BH3_ER_rv_occupy_idea_2 days = 30 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	BH3_ER_rv_occupy_10 = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { has_country_flag = BH3_ER_own_rv_1201 }
+		available = { always = yes }
+		days_re_enable = 20
+		complete_effect = {
+			add_cic = 1000
+			set_variable = { BH3_ER_rv_hold = 3 }
+			set_variable = { BH3_ER_rv_hold_days = 30 }
+			remove_ideas = BH3_ER_rv_occupy_idea_1
+			remove_ideas = BH3_ER_rv_occupy_idea_2
+			remove_ideas = BH3_ER_rv_occupy_idea_3
+			add_timed_idea = { idea = BH3_ER_rv_occupy_idea_3 days = 30 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# 空梦：解除民工占用
+	BH3_ER_rv_release = {
+		icon = GFX_BH3_ER_icon_small
+		cost = 0
+		allowed = { always = yes }
+		visible = { check_variable = { BH3_ER_rv_hold > 0 } }
+		available = { always = yes }
+		complete_effect = {
+			set_variable = { BH3_ER_rv_hold = 0 }
+			set_variable = { BH3_ER_rv_hold_days = 0 }
+			remove_ideas = BH3_ER_rv_occupy_idea_1
+			remove_ideas = BH3_ER_rv_occupy_idea_2
+			remove_ideas = BH3_ER_rv_occupy_idea_3
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

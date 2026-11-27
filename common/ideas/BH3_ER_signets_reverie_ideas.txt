@@ -12,4 +12,32 @@ ideas = {
 			}
 		}
 	}
+
+	# 空梦：暂时占用民工（决议挂上的代价精神）
+	BH3_ER_rv_occupy_idea_1 = {
+		allowed = { always = yes }
+		picture = ENG_generic_2
+		modifier = {
+			consumer_goods_factor = 0.03
+			industrial_capacity_factory = -0.02
+		}
+	}
+
+	BH3_ER_rv_occupy_idea_2 = {
+		allowed = { always = yes }
+		picture = ENG_generic_2
+		modifier = {
+			consumer_goods_factor = 0.06
+			industrial_capacity_factory = -0.04
+		}
+	}
+
+	BH3_ER_rv_occupy_idea_3 = {
+		allowed = { always = yes }
+		picture = ENG_generic_2
+		modifier = {
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = -0.06
+		}
+	}
 }
